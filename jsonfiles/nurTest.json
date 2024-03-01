@@ -1,0 +1,12 @@
+{
+    "name": "Anna",
+    "age": 20,
+    "married": false,
+    "kids": null,
+    "hobbies": ["music","sports"],
+    "vehicle": [
+    {"type": "car", "vname":"Benz"},
+    {"type": "bike", "vname": "speedbike"}
+    ]
+
+}
