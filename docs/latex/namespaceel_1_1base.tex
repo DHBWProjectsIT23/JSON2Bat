@@ -1,0 +1,336 @@
+\doxysection{el\+::base Namespace Reference}
+\hypertarget{namespaceel_1_1base}{}\label{namespaceel_1_1base}\index{el::base@{el::base}}
+
+
+Namespace containing base/internal functionality used by Easylogging++.  
+
+
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceel_1_1base_1_1consts}{consts}}
+\begin{DoxyCompactList}\small\item\em Namespace containing constants used internally. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespaceel_1_1base_1_1debug}{debug}}
+\begin{DoxyCompactList}\small\item\em Contains some internal debugging tools like crash handler and stack tracer. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespaceel_1_1base_1_1threading}{threading}}
+\item 
+namespace \mbox{\hyperlink{namespaceel_1_1base_1_1type}{type}}
+\begin{DoxyCompactList}\small\item\em Data types used by Easylogging++. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespaceel_1_1base_1_1utils}{utils}}
+\begin{DoxyCompactList}\small\item\em Namespace containing utility functions/static classes used internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1DefaultLogBuilder}{Default\+Log\+Builder}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1DefaultLogDispatchCallback}{Default\+Log\+Dispatch\+Callback}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1HitCounter}{Hit\+Counter}}
+\begin{DoxyCompactList}\small\item\em Class that keeps record of current line hit for occasional logging. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1LogDispatcher}{Log\+Dispatcher}}
+\begin{DoxyCompactList}\small\item\em Dispatches log messages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}}
+\begin{DoxyCompactList}\small\item\em Represents log format containing flags and date format. This is used internally to start initial log. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1NoCopy}{No\+Copy}}
+\begin{DoxyCompactList}\small\item\em Internal helper class that prevent copy constructor for class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1NullWriter}{Null\+Writer}}
+\begin{DoxyCompactList}\small\item\em Writes nothing -\/ Used when certain log is disabled. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1PErrorWriter}{PError\+Writer}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1RegisteredHitCounters}{Registered\+Hit\+Counters}}
+\begin{DoxyCompactList}\small\item\em Repository for hit counters used across the application. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers}{Registered\+Loggers}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classel_1_1Loggers}{Loggers} repository. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1StaticClass}{Static\+Class}}
+\begin{DoxyCompactList}\small\item\em Internal helper class that makes all default constructors private. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1Storage}{Storage}}
+\begin{DoxyCompactList}\small\item\em Easylogging++ management storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{Subsecond\+Precision}}
+\begin{DoxyCompactList}\small\item\em A subsecond precision class containing actual width and offset of the subsecond part. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations}{Typed\+Configurations}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classel_1_1Configurations}{Configurations} with data types. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1VRegistry}{VRegistry}}
+\begin{DoxyCompactList}\small\item\em Represents registries for verbose logging. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classel_1_1base_1_1Writer}{Writer}}
+\begin{DoxyCompactList}\small\item\em Main entry point of each logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{Subsecond\+Precision}} \mbox{\hyperlink{namespaceel_1_1base_abbc234f4907eccec2673dfc6efaa5925}{Milliseconds\+Width}}
+\begin{DoxyCompactList}\small\item\em Type alias of \doxylink{classel_1_1base_1_1SubsecondPrecision}{Subsecond\+Precision}. \end{DoxyCompactList}\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespaceel_1_1base_1_1type_a620c830ead75d26b45c060c211ee2685}{base\+::type\+::fstream\+\_\+t}} $>$ \mbox{\hyperlink{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}{File\+Stream\+Ptr}}
+\item 
+typedef std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}{File\+Stream\+Ptr}} $>$ \mbox{\hyperlink{namespaceel_1_1base_a6f440ada16117d20b5b5fc75b2f3a80f}{Log\+Streams\+Reference\+Map}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespaceel_1_1base_a6f440ada16117d20b5b5fc75b2f3a80f}{base\+::\+Log\+Streams\+Reference\+Map}} $>$ \mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39}{Timestamp\+Unit}} \+: base\+::type\+::\+Enum\+Type \{ \newline
+\mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a1f14b3811ca5de688daa740d8471249e}{Microsecond}} = 0
+, \mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a988bbeeb80e7e0a6b4651aab5a76b413}{Millisecond}} = 1
+, \mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39ac22cf8376b1893dcfcef0649fe1a7d87}{Second}} = 2
+, \mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a62902641c38f3a4a8eb3212454360e24}{Minute}} = 3
+, \newline
+\mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39ab55e509c697e4cca0e1d160a7806698f}{Hour}} = 4
+, \mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a03727ac48595a24daed975559c944a44}{Day}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Enum to represent timestamp unit. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}{Format\+Flags}} \+: base\+::type\+::\+Enum\+Type \{ \newline
+\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8cf10d2341ed01492506085688270c1e}{Date\+Time}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a1bfb431e0c673464b7a57c135e5fe861}{Logger\+Id}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a0b27918290ff5323bea1e3b78a9cf04e}{File}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a4803e6b9e63dabf04de980788d6a13c4}{Line}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4
+, \newline
+\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ace5bf551379459c1c61d2a204061c455}{Location}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a86408593c34af77fdd90df932f8b5261}{Function}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8f9bfe9d1345237cb3b2b205864da075}{User}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ac2ca16d048ec66e04bca283eab048ec2}{Host}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8
+, \newline
+\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a80672412fb77a287c9c90cbacf039fc7}{Log\+Message}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 9
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a52e9b703699c35fb5be3d84511bc86b8}{Verbose\+Level}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 10
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa6d1acde6e20d49a9d81f90622732227}{App\+Name}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 11
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a693e7589872f7acd3e69d831d022d6ea}{Thread\+Id}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 12
+, \newline
+\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa0db49ba470c1c9ae2128c3470339153}{Level}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 13
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a363d6c255447a7ca6ef9c06b73a8a87d}{File\+Base}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 14
+, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a9d8794d3178b4df3b87654adbed5c846}{Level\+Short}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 15
+ \}
+\begin{DoxyCompactList}\small\item\em Format flags used to determine specifiers that are active for performance improvements. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{Dispatch\+Action}} \+: base\+::type\+::\+Enum\+Type \{ \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 1
+, \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602}{Normal\+Log}} = 2
+, \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839aa0861ec9150978a150dcefab74fad51b}{Sys\+Log}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Action to be taken for dispatching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{namespaceel_1_1base_ac727cc7769b50f434890d370614baf25}{default\+Pre\+Roll\+Out\+Callback}} (const char \texorpdfstring{$\ast$}{*}, std\+::size\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{easylogging_09_09_8h_a5155fe064b7cf0e577152f0468c85c7a}{ELPP\+\_\+\+EXPORT}} \mbox{\hyperlink{namespaceel_1_1base_1_1type_a3c34822c3825018aca1526f2289b7976}{base\+::type\+::\+Storage\+Pointer}} \mbox{\hyperlink{namespaceel_1_1base_a0ec6b7a1bd89ad58dadc10f190142018}{el\+Storage}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace containing base/internal functionality used by Easylogging++. 
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}\label{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233} 
+\index{el::base@{el::base}!FileStreamPtr@{FileStreamPtr}}
+\index{FileStreamPtr@{FileStreamPtr}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{FileStreamPtr}{FileStreamPtr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespaceel_1_1base_1_1type_a620c830ead75d26b45c060c211ee2685}{base\+::type\+::fstream\+\_\+t}}$>$ \mbox{\hyperlink{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}{el\+::base\+::\+File\+Stream\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01895}{1895}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{namespaceel_1_1base_a6f440ada16117d20b5b5fc75b2f3a80f}\label{namespaceel_1_1base_a6f440ada16117d20b5b5fc75b2f3a80f} 
+\index{el::base@{el::base}!LogStreamsReferenceMap@{LogStreamsReferenceMap}}
+\index{LogStreamsReferenceMap@{LogStreamsReferenceMap}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{LogStreamsReferenceMap}{LogStreamsReferenceMap}}
+{\footnotesize\ttfamily typedef std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}{File\+Stream\+Ptr}}$>$ \mbox{\hyperlink{namespaceel_1_1base_a6f440ada16117d20b5b5fc75b2f3a80f}{el\+::base\+::\+Log\+Streams\+Reference\+Map}}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01896}{1896}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}\label{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97} 
+\index{el::base@{el::base}!LogStreamsReferenceMapPtr@{LogStreamsReferenceMapPtr}}
+\index{LogStreamsReferenceMapPtr@{LogStreamsReferenceMapPtr}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{LogStreamsReferenceMapPtr}{LogStreamsReferenceMapPtr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespaceel_1_1base_a6f440ada16117d20b5b5fc75b2f3a80f}{base\+::\+Log\+Streams\+Reference\+Map}}$>$ \mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{el\+::base\+::\+Log\+Streams\+Reference\+Map\+Ptr}}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01897}{1897}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{namespaceel_1_1base_abbc234f4907eccec2673dfc6efaa5925}\label{namespaceel_1_1base_abbc234f4907eccec2673dfc6efaa5925} 
+\index{el::base@{el::base}!MillisecondsWidth@{MillisecondsWidth}}
+\index{MillisecondsWidth@{MillisecondsWidth}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{MillisecondsWidth}{MillisecondsWidth}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{Subsecond\+Precision}} \mbox{\hyperlink{namespaceel_1_1base_abbc234f4907eccec2673dfc6efaa5925}{el\+::base\+::\+Milliseconds\+Width}}}
+
+
+
+Type alias of \doxylink{classel_1_1base_1_1SubsecondPrecision}{Subsecond\+Precision}. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00851}{851}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}\label{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839} 
+\index{el::base@{el::base}!DispatchAction@{DispatchAction}}
+\index{DispatchAction@{DispatchAction}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{DispatchAction}{DispatchAction}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{el\+::base\+::\+Dispatch\+Action}} \+: \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Action to be taken for dispatching. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!el::base@{el::base}}\index{el::base@{el::base}!None@{None}}}\Hypertarget{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a6adf97f83acf6453d4a6a4b1070f3754}\label{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a6adf97f83acf6453d4a6a4b1070f3754} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NormalLog@{NormalLog}!el::base@{el::base}}\index{el::base@{el::base}!NormalLog@{NormalLog}}}\Hypertarget{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602}\label{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602} 
+Normal\+Log&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SysLog@{SysLog}!el::base@{el::base}}\index{el::base@{el::base}!SysLog@{SysLog}}}\Hypertarget{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839aa0861ec9150978a150dcefab74fad51b}\label{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839aa0861ec9150978a150dcefab74fad51b} 
+Sys\+Log&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02139}{2139}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00} 
+\index{el::base@{el::base}!FormatFlags@{FormatFlags}}
+\index{FormatFlags@{FormatFlags}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{FormatFlags}{FormatFlags}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}{el\+::base\+::\+Format\+Flags}} \+: \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Format flags used to determine specifiers that are active for performance improvements. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DateTime@{DateTime}!el::base@{el::base}}\index{el::base@{el::base}!DateTime@{DateTime}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8cf10d2341ed01492506085688270c1e}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8cf10d2341ed01492506085688270c1e} 
+Date\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LoggerId@{LoggerId}!el::base@{el::base}}\index{el::base@{el::base}!LoggerId@{LoggerId}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a1bfb431e0c673464b7a57c135e5fe861}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a1bfb431e0c673464b7a57c135e5fe861} 
+Logger\+Id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{File@{File}!el::base@{el::base}}\index{el::base@{el::base}!File@{File}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a0b27918290ff5323bea1e3b78a9cf04e}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a0b27918290ff5323bea1e3b78a9cf04e} 
+File&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Line@{Line}!el::base@{el::base}}\index{el::base@{el::base}!Line@{Line}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a4803e6b9e63dabf04de980788d6a13c4}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a4803e6b9e63dabf04de980788d6a13c4} 
+Line&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Location@{Location}!el::base@{el::base}}\index{el::base@{el::base}!Location@{Location}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ace5bf551379459c1c61d2a204061c455}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ace5bf551379459c1c61d2a204061c455} 
+Location&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Function@{Function}!el::base@{el::base}}\index{el::base@{el::base}!Function@{Function}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a86408593c34af77fdd90df932f8b5261}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a86408593c34af77fdd90df932f8b5261} 
+Function&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{User@{User}!el::base@{el::base}}\index{el::base@{el::base}!User@{User}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8f9bfe9d1345237cb3b2b205864da075}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8f9bfe9d1345237cb3b2b205864da075} 
+User&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Host@{Host}!el::base@{el::base}}\index{el::base@{el::base}!Host@{Host}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ac2ca16d048ec66e04bca283eab048ec2}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ac2ca16d048ec66e04bca283eab048ec2} 
+Host&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LogMessage@{LogMessage}!el::base@{el::base}}\index{el::base@{el::base}!LogMessage@{LogMessage}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a80672412fb77a287c9c90cbacf039fc7}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a80672412fb77a287c9c90cbacf039fc7} 
+Log\+Message&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VerboseLevel@{VerboseLevel}!el::base@{el::base}}\index{el::base@{el::base}!VerboseLevel@{VerboseLevel}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a52e9b703699c35fb5be3d84511bc86b8}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a52e9b703699c35fb5be3d84511bc86b8} 
+Verbose\+Level&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AppName@{AppName}!el::base@{el::base}}\index{el::base@{el::base}!AppName@{AppName}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa6d1acde6e20d49a9d81f90622732227}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa6d1acde6e20d49a9d81f90622732227} 
+App\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ThreadId@{ThreadId}!el::base@{el::base}}\index{el::base@{el::base}!ThreadId@{ThreadId}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a693e7589872f7acd3e69d831d022d6ea}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a693e7589872f7acd3e69d831d022d6ea} 
+Thread\+Id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Level@{Level}!el::base@{el::base}}\index{el::base@{el::base}!Level@{Level}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa0db49ba470c1c9ae2128c3470339153}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa0db49ba470c1c9ae2128c3470339153} 
+Level&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FileBase@{FileBase}!el::base@{el::base}}\index{el::base@{el::base}!FileBase@{FileBase}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a363d6c255447a7ca6ef9c06b73a8a87d}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a363d6c255447a7ca6ef9c06b73a8a87d} 
+File\+Base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LevelShort@{LevelShort}!el::base@{el::base}}\index{el::base@{el::base}!LevelShort@{LevelShort}}}\Hypertarget{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a9d8794d3178b4df3b87654adbed5c846}\label{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a9d8794d3178b4df3b87654adbed5c846} 
+Level\+Short&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00816}{816}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39} 
+\index{el::base@{el::base}!TimestampUnit@{TimestampUnit}}
+\index{TimestampUnit@{TimestampUnit}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{TimestampUnit}{TimestampUnit}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39}{el\+::base\+::\+Timestamp\+Unit}} \+: \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enum to represent timestamp unit. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Microsecond@{Microsecond}!el::base@{el::base}}\index{el::base@{el::base}!Microsecond@{Microsecond}}}\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a1f14b3811ca5de688daa740d8471249e}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a1f14b3811ca5de688daa740d8471249e} 
+Microsecond&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Millisecond@{Millisecond}!el::base@{el::base}}\index{el::base@{el::base}!Millisecond@{Millisecond}}}\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a988bbeeb80e7e0a6b4651aab5a76b413}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a988bbeeb80e7e0a6b4651aab5a76b413} 
+Millisecond&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Second@{Second}!el::base@{el::base}}\index{el::base@{el::base}!Second@{Second}}}\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39ac22cf8376b1893dcfcef0649fe1a7d87}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39ac22cf8376b1893dcfcef0649fe1a7d87} 
+Second&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Minute@{Minute}!el::base@{el::base}}\index{el::base@{el::base}!Minute@{Minute}}}\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a62902641c38f3a4a8eb3212454360e24}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a62902641c38f3a4a8eb3212454360e24} 
+Minute&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hour@{Hour}!el::base@{el::base}}\index{el::base@{el::base}!Hour@{Hour}}}\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39ab55e509c697e4cca0e1d160a7806698f}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39ab55e509c697e4cca0e1d160a7806698f} 
+Hour&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Day@{Day}!el::base@{el::base}}\index{el::base@{el::base}!Day@{Day}}}\Hypertarget{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a03727ac48595a24daed975559c944a44}\label{namespaceel_1_1base_a1b886858c6409097395b24b1bdf03c39a03727ac48595a24daed975559c944a44} 
+Day&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00812}{812}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceel_1_1base_ac727cc7769b50f434890d370614baf25}\label{namespaceel_1_1base_ac727cc7769b50f434890d370614baf25} 
+\index{el::base@{el::base}!defaultPreRollOutCallback@{defaultPreRollOutCallback}}
+\index{defaultPreRollOutCallback@{defaultPreRollOutCallback}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{defaultPreRollOutCallback()}{defaultPreRollOutCallback()}}
+{\footnotesize\ttfamily static void el\+::base\+::default\+Pre\+Roll\+Out\+Callback (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{,  }\item[{std\+::size\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00810}{810}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceel_1_1base_a0ec6b7a1bd89ad58dadc10f190142018}\label{namespaceel_1_1base_a0ec6b7a1bd89ad58dadc10f190142018} 
+\index{el::base@{el::base}!elStorage@{elStorage}}
+\index{elStorage@{elStorage}!el::base@{el::base}}
+\doxysubsubsection{\texorpdfstring{elStorage}{elStorage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{easylogging_09_09_8h_a5155fe064b7cf0e577152f0468c85c7a}{ELPP\+\_\+\+EXPORT}} \mbox{\hyperlink{namespaceel_1_1base_1_1type_a3c34822c3825018aca1526f2289b7976}{base\+::type\+::\+Storage\+Pointer}} el\+::base\+::el\+Storage\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,412 @@
+\doxysection{el\+::base\+::Registered\+Loggers Class Reference}
+\hypertarget{classel_1_1base_1_1RegisteredLoggers}{}\label{classel_1_1base_1_1RegisteredLoggers}\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+
+
+\doxylink{classel_1_1Loggers}{Loggers} repository.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::base\+::Registered\+Loggers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classel_1_1base_1_1RegisteredLoggers}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_ae52ec336770d33fef86f234e4e68dce5}{Registered\+Loggers}} (const \mbox{\hyperlink{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}{Log\+Builder\+Ptr}} \&default\+Log\+Builder)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_ac87ee24f4d1bb36757f6ce1e1f5a8362}{\texorpdfstring{$\sim$}{\string~}\+Registered\+Loggers}} (void)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a28e1f955ad55d89a4ae91fa74545ee4f}{set\+Default\+Configurations}} (const \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \&configurations)
+\item 
+\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a6f968ee5a2c540b58539c14c39f3a336}{default\+Configurations}} (void)
+\item 
+\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a1ca66763d892f3d2dc62926eb9dc56d3}{get}} (const std\+::string \&id, bool force\+Creation=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a62000b4c52b2383ec7f480ee0fd12586}{install\+Logger\+Registration\+Callback}} (const std\+::string \&id)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_ae72594329e082a58ba9e73462d6c5bb5}{uninstall\+Logger\+Registration\+Callback}} (const std\+::string \&id)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a5eeabc1b7805148874355e8778a384f1}{logger\+Registration\+Callback}} (const std\+::string \&id)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a4d17dc9673f6aa6216571e182097400a}{remove}} (const std\+::string \&id)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a85916925e2c53d1ebf9865625132a0be}{has}} (const std\+::string \&id)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_ad8fa8f829fdb6a03e6f5a38704811e7b}{unregister}} (\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}\&logger)
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a4a85dac9d17db44b2c409dfd6d7be160}{log\+Streams\+Reference}} (void)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_abe6fdac67d9d4c35fb48c9fd88a49c2e}{flush\+All}} (void)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_afccc4cf83c77e97cf7377513094b61a6}{set\+Default\+Log\+Builder}} (\mbox{\hyperlink{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}{Log\+Builder\+Ptr}} \&log\+Builder\+Ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{el\+::base\+::utils\+::\+Registry$<$ Logger, std\+::string $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_aa4bb56a1aff481cc6cf8979b2f2c6eca}{Registry}} (void)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_adf5e97aa801be3b93e116ad645304759}{Registry}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{Registry}} \&sr)
+\begin{DoxyCompactList}\small\item\em Copy constructor that is useful for base classes. Try to avoid this constructor, use move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{Registry}} \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_a35985bd7591b215ba259490880816746}{operator=}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{Registry}} \&sr)
+\begin{DoxyCompactList}\small\item\em Assignment operator that unregisters all the existing registries and deeply copies each of repo element. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_a79aa9dfa385e233bf619d44422f4992c}{\texorpdfstring{$\sim$}{\string~}\+Registry}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{el\+::base\+::utils\+::\+Abstract\+Registry$<$ T\+\_\+\+Ptr, Container $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_afe13c67ebd1ed1aa72845926894dffa2}{Abstract\+Registry}} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a9f468010439d491e90419f9334afcdba}{Abstract\+Registry}} (\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}} \&\&sr)
+\begin{DoxyCompactList}\small\item\em Move constructor that is useful for base classes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_ac3e648dc0caa8914f8604650f00bc94b}{operator==}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&other)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a35de8807521651c85acb26532a2623e1}{operator!=}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&other)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}} \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a82cdc3127426be6d7603c5d5b278c61c}{operator=}} (\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}} \&\&sr)
+\begin{DoxyCompactList}\small\item\em Assignment move operator. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a6ee2c4166629bb16515cc00b738dee65}{\texorpdfstring{$\sim$}{\string~}\+Abstract\+Registry}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58d0536c748633afd3f7c237b63a9a7c}{iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a4ad971b1dddff996d327452d852e55b2}{begin}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58d0536c748633afd3f7c237b63a9a7c}{iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a67c40207c171f23ad50a71db819e84f9}{end}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a3bbf19b112c067cb1a02a82b003cc7e2}{const\+\_\+iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a37f743184e808d7c0028e21e0d0898bb}{cbegin}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a3bbf19b112c067cb1a02a82b003cc7e2}{const\+\_\+iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_ad3ee081b4b25c5d77f971f949bdb9158}{cend}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual bool \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a43ff6484b778c298416c482c07a4df3f}{empty}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58a7b8ea964bdf6008701dcfb6609ca5}{size}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual Container \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_aa296265ecfb912e71c40ec4e5fdea4ea}{list}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Returns underlying container by reference. \end{DoxyCompactList}\item 
+virtual const Container \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a000765b7c25a76cf2ec211cad1515dce}{list}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Returns underlying container by constant reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a59db719b214f7118f0919846a85077bf}{acquire\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a95bb166242b9691f861274a9b8ced2d9}{release\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}} \& \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_ad265274e935408d2444cfd253f28965a}{lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a6ba6a5ee73b5668ca0e07bb3939bacf1}{unsafe\+Flush\+All}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}{Log\+Builder\+Ptr}} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_af2aad243e9df5d1aba298214996a4857}{m\+\_\+default\+Log\+Builder}}
+\item 
+\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_ac676f20bb311763d8ab50b6d1f35c8fa}{m\+\_\+default\+Configurations}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{base\+::\+Log\+Streams\+Reference\+Map\+Ptr}} \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_ade7b77a444b352c31d146eba1a6780e6}{m\+\_\+log\+Streams\+Reference}} = nullptr
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespaceel_1_1base_1_1type_ab9e009b0511ba22eed263c8ced700bb6}{base\+::type\+::\+Logger\+Registration\+Callback\+Ptr}} $>$ \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_a0ea32b9851ec2371e46541b1b2b9bf41}{m\+\_\+logger\+Registration\+Callbacks}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1RegisteredLoggers_acc1efd1b8a3fc5e0028dab98b02e550a}{el\+::base\+::\+Storage}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{el\+::base\+::utils\+::\+Registry$<$ Logger, std\+::string $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{Registry}}$<$ \mbox{\hyperlink{classel_1_1Logger}{Logger}}, std\+::string $>$\+::iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_a9302e8b6fbbeefdc861b8650bfb91939}{iterator}}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{Registry}}$<$ \mbox{\hyperlink{classel_1_1Logger}{Logger}}, std\+::string $>$\+::const\+\_\+iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_a4f61ec660fe7d1b9545281ee01803c78}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{el\+::base\+::utils\+::\+Abstract\+Registry$<$ T\+\_\+\+Ptr, Container $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+typedef Container\+::iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58d0536c748633afd3f7c237b63a9a7c}{iterator}}
+\item 
+typedef Container\+::const\+\_\+iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a3bbf19b112c067cb1a02a82b003cc7e2}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry}{el\+::base\+::utils\+::\+Registry$<$ Logger, std\+::string $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_ac40e62ddf5017beb91c28b472c9628c2}{unregister\+All}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Unregisters all the pointers from current repository. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_ab10b3dd25ff0df036e7a015635a15dee}{register\+New}} (const std\+::string \&uniq\+Key, \mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}ptr) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Registers new registry to repository. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_aab6f0ce3a99feff11add0bd8b869fcb8}{unregister}} (const std\+::string \&uniq\+Key)
+\begin{DoxyCompactList}\small\item\em Unregisters single entry mapped to specified unique key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1Registry_a5590ab2d89c20034c131fafb0d3cd7f8}{get}} (const std\+::string \&uniq\+Key)
+\begin{DoxyCompactList}\small\item\em Gets pointer from repository. If none found, nullptr is returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{el\+::base\+::utils\+::\+Abstract\+Registry$<$ T\+\_\+\+Ptr, Container $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_aaf42dab7089a9b1198e2920983ca82bb}{deep\+Copy}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&)=0
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a529677fb42e78d03c36cdea49f8877c9}{reinit\+Deep\+Copy}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&sr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_aba1e98467da50d452a30672aabb6752d}{Thread\+Safe}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a97efb9503004202402178a4d3f5940f0}{\texorpdfstring{$\sim$}{\string~}\+Thread\+Safe}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classel_1_1Loggers}{Loggers} repository. 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02347}{2347}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_ae52ec336770d33fef86f234e4e68dce5}\label{classel_1_1base_1_1RegisteredLoggers_ae52ec336770d33fef86f234e4e68dce5} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!RegisteredLoggers@{RegisteredLoggers}}
+\index{RegisteredLoggers@{RegisteredLoggers}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{RegisteredLoggers()}{RegisteredLoggers()}}
+{\footnotesize\ttfamily el\+::base\+::\+Registered\+Loggers\+::\+Registered\+Loggers (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}{Log\+Builder\+Ptr}} \&}]{default\+Log\+Builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01881}{1881}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01881}{Registered\+Loggers()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_ac87ee24f4d1bb36757f6ce1e1f5a8362}\label{classel_1_1base_1_1RegisteredLoggers_ac87ee24f4d1bb36757f6ce1e1f5a8362} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!````~RegisteredLoggers@{\texorpdfstring{$\sim$}{\string~}RegisteredLoggers}}
+\index{````~RegisteredLoggers@{\texorpdfstring{$\sim$}{\string~}RegisteredLoggers}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RegisteredLoggers()}{\string~RegisteredLoggers()}}
+{\footnotesize\ttfamily virtual el\+::base\+::\+Registered\+Loggers\+::\texorpdfstring{$\sim$}{\string~}\+Registered\+Loggers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02351}{2351}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01924}{unsafe\+Flush\+All()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a6f968ee5a2c540b58539c14c39f3a336}\label{classel_1_1base_1_1RegisteredLoggers_a6f968ee5a2c540b58539c14c39f3a336} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!defaultConfigurations@{defaultConfigurations}}
+\index{defaultConfigurations@{defaultConfigurations}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{defaultConfigurations()}{defaultConfigurations()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*} el\+::base\+::\+Registered\+Loggers\+::default\+Configurations (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02360}{2360}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_abe6fdac67d9d4c35fb48c9fd88a49c2e}\label{classel_1_1base_1_1RegisteredLoggers_abe6fdac67d9d4c35fb48c9fd88a49c2e} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!flushAll@{flushAll}}
+\index{flushAll@{flushAll}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{flushAll()}{flushAll()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Registered\+Loggers\+::flush\+All (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02397}{2397}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01924}{unsafe\+Flush\+All()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a1ca66763d892f3d2dc62926eb9dc56d3}\label{classel_1_1base_1_1RegisteredLoggers_a1ca66763d892f3d2dc62926eb9dc56d3} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!get@{get}}
+\index{get@{get}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*} el\+::base\+::\+Registered\+Loggers\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{bool}]{force\+Creation = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01887}{1887}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00667}{el\+::\+Logger\+::is\+Valid\+Id()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a85916925e2c53d1ebf9865625132a0be}\label{classel_1_1base_1_1RegisteredLoggers_a85916925e2c53d1ebf9865625132a0be} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!has@{has}}
+\index{has@{has}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Registered\+Loggers\+::has (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02384}{2384}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01887}{get()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a62000b4c52b2383ec7f480ee0fd12586}\label{classel_1_1base_1_1RegisteredLoggers_a62000b4c52b2383ec7f480ee0fd12586} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!installLoggerRegistrationCallback@{installLoggerRegistrationCallback}}
+\index{installLoggerRegistrationCallback@{installLoggerRegistrationCallback}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{installLoggerRegistrationCallback()}{installLoggerRegistrationCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool el\+::base\+::\+Registered\+Loggers\+::install\+Logger\+Registration\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02367}{2367}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a5eeabc1b7805148874355e8778a384f1}\label{classel_1_1base_1_1RegisteredLoggers_a5eeabc1b7805148874355e8778a384f1} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!loggerRegistrationCallback@{loggerRegistrationCallback}}
+\index{loggerRegistrationCallback@{loggerRegistrationCallback}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{loggerRegistrationCallback()}{loggerRegistrationCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} el\+::base\+::\+Registered\+Loggers\+::logger\+Registration\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02378}{2378}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a4a85dac9d17db44b2c409dfd6d7be160}\label{classel_1_1base_1_1RegisteredLoggers_a4a85dac9d17db44b2c409dfd6d7be160} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!logStreamsReference@{logStreamsReference}}
+\index{logStreamsReference@{logStreamsReference}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{logStreamsReference()}{logStreamsReference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}} el\+::base\+::\+Registered\+Loggers\+::log\+Streams\+Reference (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02393}{2393}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a4d17dc9673f6aa6216571e182097400a}\label{classel_1_1base_1_1RegisteredLoggers_a4d17dc9673f6aa6216571e182097400a} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!remove@{remove}}
+\index{remove@{remove}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Registered\+Loggers\+::remove (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01911}{1911}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l00741}{el\+::base\+::consts\+::k\+Default\+Logger\+Id}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02388}{unregister()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a28e1f955ad55d89a4ae91fa74545ee4f}\label{classel_1_1base_1_1RegisteredLoggers_a28e1f955ad55d89a4ae91fa74545ee4f} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!setDefaultConfigurations@{setDefaultConfigurations}}
+\index{setDefaultConfigurations@{setDefaultConfigurations}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{setDefaultConfigurations()}{setDefaultConfigurations()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Registered\+Loggers\+::set\+Default\+Configurations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \&}]{configurations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02355}{2355}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_afccc4cf83c77e97cf7377513094b61a6}\label{classel_1_1base_1_1RegisteredLoggers_afccc4cf83c77e97cf7377513094b61a6} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!setDefaultLogBuilder@{setDefaultLogBuilder}}
+\index{setDefaultLogBuilder@{setDefaultLogBuilder}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{setDefaultLogBuilder()}{setDefaultLogBuilder()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Registered\+Loggers\+::set\+Default\+Log\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}{Log\+Builder\+Ptr}} \&}]{log\+Builder\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02402}{2402}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_ae72594329e082a58ba9e73462d6c5bb5}\label{classel_1_1base_1_1RegisteredLoggers_ae72594329e082a58ba9e73462d6c5bb5} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!uninstallLoggerRegistrationCallback@{uninstallLoggerRegistrationCallback}}
+\index{uninstallLoggerRegistrationCallback@{uninstallLoggerRegistrationCallback}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{uninstallLoggerRegistrationCallback()}{uninstallLoggerRegistrationCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void el\+::base\+::\+Registered\+Loggers\+::uninstall\+Logger\+Registration\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02373}{2373}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_ad8fa8f829fdb6a03e6f5a38704811e7b}\label{classel_1_1base_1_1RegisteredLoggers_ad8fa8f829fdb6a03e6f5a38704811e7b} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!unregister@{unregister}}
+\index{unregister@{unregister}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{unregister()}{unregister()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Registered\+Loggers\+::unregister (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}\&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02388}{2388}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a6ba6a5ee73b5668ca0e07bb3939bacf1}\label{classel_1_1base_1_1RegisteredLoggers_a6ba6a5ee73b5668ca0e07bb3939bacf1} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!unsafeFlushAll@{unsafeFlushAll}}
+\index{unsafeFlushAll@{unsafeFlushAll}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{unsafeFlushAll()}{unsafeFlushAll()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Registered\+Loggers\+::unsafe\+Flush\+All (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01924}{1924}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_acc1efd1b8a3fc5e0028dab98b02e550a}\label{classel_1_1base_1_1RegisteredLoggers_acc1efd1b8a3fc5e0028dab98b02e550a} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!el::base::Storage@{el::base::Storage}}
+\index{el::base::Storage@{el::base::Storage}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{el::base::Storage}{el::base::Storage}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1base_1_1Storage}{el\+::base\+::\+Storage}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02412}{2412}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_ac676f20bb311763d8ab50b6d1f35c8fa}\label{classel_1_1base_1_1RegisteredLoggers_ac676f20bb311763d8ab50b6d1f35c8fa} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!m\_defaultConfigurations@{m\_defaultConfigurations}}
+\index{m\_defaultConfigurations@{m\_defaultConfigurations}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{m\_defaultConfigurations}{m\_defaultConfigurations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} el\+::base\+::\+Registered\+Loggers\+::m\+\_\+default\+Configurations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02409}{2409}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_af2aad243e9df5d1aba298214996a4857}\label{classel_1_1base_1_1RegisteredLoggers_af2aad243e9df5d1aba298214996a4857} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!m\_defaultLogBuilder@{m\_defaultLogBuilder}}
+\index{m\_defaultLogBuilder@{m\_defaultLogBuilder}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{m\_defaultLogBuilder}{m\_defaultLogBuilder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_ad4c4b2f7d70a4b02568a9f70724a6b39}{Log\+Builder\+Ptr}} el\+::base\+::\+Registered\+Loggers\+::m\+\_\+default\+Log\+Builder\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02408}{2408}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_a0ea32b9851ec2371e46541b1b2b9bf41}\label{classel_1_1base_1_1RegisteredLoggers_a0ea32b9851ec2371e46541b1b2b9bf41} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!m\_loggerRegistrationCallbacks@{m\_loggerRegistrationCallbacks}}
+\index{m\_loggerRegistrationCallbacks@{m\_loggerRegistrationCallbacks}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{m\_loggerRegistrationCallbacks}{m\_loggerRegistrationCallbacks}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespaceel_1_1base_1_1type_ab9e009b0511ba22eed263c8ced700bb6}{base\+::type\+::\+Logger\+Registration\+Callback\+Ptr}}$>$ el\+::base\+::\+Registered\+Loggers\+::m\+\_\+logger\+Registration\+Callbacks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02411}{2411}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredLoggers_ade7b77a444b352c31d146eba1a6780e6}\label{classel_1_1base_1_1RegisteredLoggers_ade7b77a444b352c31d146eba1a6780e6} 
+\index{el::base::RegisteredLoggers@{el::base::RegisteredLoggers}!m\_logStreamsReference@{m\_logStreamsReference}}
+\index{m\_logStreamsReference@{m\_logStreamsReference}!el::base::RegisteredLoggers@{el::base::RegisteredLoggers}}
+\doxysubsubsection{\texorpdfstring{m\_logStreamsReference}{m\_logStreamsReference}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{base\+::\+Log\+Streams\+Reference\+Map\+Ptr}} el\+::base\+::\+Registered\+Loggers\+::m\+\_\+log\+Streams\+Reference = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02410}{2410}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

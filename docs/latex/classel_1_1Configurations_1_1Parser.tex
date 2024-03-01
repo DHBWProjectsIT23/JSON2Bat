@@ -1,0 +1,199 @@
+\doxysection{el\+::Configurations\+::Parser Class Reference}
+\hypertarget{classel_1_1Configurations_1_1Parser}{}\label{classel_1_1Configurations_1_1Parser}\index{el::Configurations::Parser@{el::Configurations::Parser}}
+
+
+\doxylink{classel_1_1Configurations_1_1Parser}{Parser} used internally to parse configurations from file or text.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::Configurations\+::Parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1Configurations_1_1Parser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_ab8e266318b9feaeee4d3169e4a7ca275}{parse\+From\+File}} (const std\+::string \&\mbox{\hyperlink{classel_1_1Configurations_aa29ab5c7ca5bb27696b82e25ef38d076}{configuration\+File}}, \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}sender, \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}base=nullptr)
+\begin{DoxyCompactList}\small\item\em Parses configuration from file. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_ae4efa4823ce108eb35bc69442155a037}{parse\+From\+Text}} (const std\+::string \&configurations\+String, \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}sender, \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}base=nullptr)
+\begin{DoxyCompactList}\small\item\em Parse configurations from configuration string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_abe21625425296ecefde02d43f3ed69b5}{ignore\+Comments}} (std\+::string \texorpdfstring{$\ast$}{*}line)
+\item 
+static bool \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_ade3578dee6378620c6281b090433ce72}{is\+Level}} (const std\+::string \&line)
+\item 
+static bool \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_afbf7fb724d1a1a9f0040c966023cc04b}{is\+Comment}} (const std\+::string \&line)
+\item 
+static bool \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_a6d55cc5727c054922d479bda6624c7d3}{is\+Config}} (const std\+::string \&line)
+\item 
+static bool \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_a70e0d8b27e7c1b5dd94e6838c304a751}{parse\+Line}} (std\+::string \texorpdfstring{$\ast$}{*}line, std\+::string \texorpdfstring{$\ast$}{*}curr\+Config\+Str, std\+::string \texorpdfstring{$\ast$}{*}curr\+Level\+Str, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} \texorpdfstring{$\ast$}{*}curr\+Level, \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}conf)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1Configurations_1_1Parser_a6efe246b312d02731fb0e1d120c0331d}{el\+::\+Loggers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classel_1_1Configurations_1_1Parser}{Parser} used internally to parse configurations from file or text. 
+
+@detail This class makes use of \doxylink{classel_1_1base_1_1utils_1_1Str}{base\+::utils\+::\+Str}. You should not need this unless you are working on some tool for Easylogging++ 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01839}{1839}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1Configurations_1_1Parser_abe21625425296ecefde02d43f3ed69b5}\label{classel_1_1Configurations_1_1Parser_abe21625425296ecefde02d43f3ed69b5} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!ignoreComments@{ignoreComments}}
+\index{ignoreComments@{ignoreComments}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{ignoreComments()}{ignoreComments()}}
+{\footnotesize\ttfamily void el\+::\+Configurations\+::\+Parser\+::ignore\+Comments (\begin{DoxyParamCaption}\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00441}{441}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00105}{el\+::base\+::consts\+::k\+Configuration\+Comment}}.
+
+\Hypertarget{classel_1_1Configurations_1_1Parser_afbf7fb724d1a1a9f0040c966023cc04b}\label{classel_1_1Configurations_1_1Parser_afbf7fb724d1a1a9f0040c966023cc04b} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!isComment@{isComment}}
+\index{isComment@{isComment}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{isComment()}{isComment()}}
+{\footnotesize\ttfamily bool el\+::\+Configurations\+::\+Parser\+::is\+Comment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00464}{464}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00105}{el\+::base\+::consts\+::k\+Configuration\+Comment}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l00900}{el\+::base\+::utils\+::\+Str\+::starts\+With()}}.
+
+\Hypertarget{classel_1_1Configurations_1_1Parser_a6d55cc5727c054922d479bda6624c7d3}\label{classel_1_1Configurations_1_1Parser_a6d55cc5727c054922d479bda6624c7d3} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!isConfig@{isConfig}}
+\index{isConfig@{isConfig}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{isConfig()}{isConfig()}}
+{\footnotesize\ttfamily bool el\+::\+Configurations\+::\+Parser\+::is\+Config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00468}{468}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1Configurations_1_1Parser_ade3578dee6378620c6281b090433ce72}\label{classel_1_1Configurations_1_1Parser_ade3578dee6378620c6281b090433ce72} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!isLevel@{isLevel}}
+\index{isLevel@{isLevel}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{isLevel()}{isLevel()}}
+{\footnotesize\ttfamily bool el\+::\+Configurations\+::\+Parser\+::is\+Level (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00460}{460}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00106}{el\+::base\+::consts\+::k\+Configuration\+Level}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l00900}{el\+::base\+::utils\+::\+Str\+::starts\+With()}}.
+
+\Hypertarget{classel_1_1Configurations_1_1Parser_ab8e266318b9feaeee4d3169e4a7ca275}\label{classel_1_1Configurations_1_1Parser_ab8e266318b9feaeee4d3169e4a7ca275} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!parseFromFile@{parseFromFile}}
+\index{parseFromFile@{parseFromFile}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{parseFromFile()}{parseFromFile()}}
+{\footnotesize\ttfamily bool el\+::\+Configurations\+::\+Parser\+::parse\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{configuration\+File,  }\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{sender,  }\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{base = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses configuration from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration\+File} & Full path to configuration file \\
+\hline
+{\em sender} & Sender configurations pointer. Usually \textquotesingle{}this\textquotesingle{} is used from calling class \\
+\hline
+{\em base} & \doxylink{classel_1_1Configurations}{Configurations} to base new configuration repository off. This value is used when you want to use existing \doxylink{classel_1_1Configurations}{Configurations} to base all the values and then set rest of configuration via configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully parsed, false otherwise. You may define \textquotesingle{}\+\_\+\+STOP\+\_\+\+ON\+\_\+\+FIRSTELPP\+\_\+\+ASSERTION\textquotesingle{} to make sure you do not proceed without successful parse. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00407}{407}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00476}{parse\+Line()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00312}{el\+::\+Configurations\+::set\+From\+Base()}}, and \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a88183b946cc5f0e8c96b2e66e1c74a7e}{el\+::\+Unknown}}.
+
+\Hypertarget{classel_1_1Configurations_1_1Parser_ae4efa4823ce108eb35bc69442155a037}\label{classel_1_1Configurations_1_1Parser_ae4efa4823ce108eb35bc69442155a037} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!parseFromText@{parseFromText}}
+\index{parseFromText@{parseFromText}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{parseFromText()}{parseFromText()}}
+{\footnotesize\ttfamily bool el\+::\+Configurations\+::\+Parser\+::parse\+From\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{configurations\+String,  }\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{sender,  }\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{base = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parse configurations from configuration string. 
+
+@detail This configuration string has same syntax as configuration file contents. Make sure all the necessary new line characters are provided. You may define \textquotesingle{}\+\_\+\+STOP\+\_\+\+ON\+\_\+\+FIRSTELPP\+\_\+\+ASSERTION\textquotesingle{} to make sure you do not proceed without successful parse (This is recommended) 
+\begin{DoxyParams}{Parameters}
+{\em configurations\+String} & the configuration in plain text format \\
+\hline
+{\em sender} & Sender configurations pointer. Usually \textquotesingle{}this\textquotesingle{} is used from calling class \\
+\hline
+{\em base} & \doxylink{classel_1_1Configurations}{Configurations} to base new configuration repository off. This value is used when you want to use existing \doxylink{classel_1_1Configurations}{Configurations} to base all the values and then set rest of configuration via configuration text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully parsed, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00425}{425}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00476}{parse\+Line()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00312}{el\+::\+Configurations\+::set\+From\+Base()}}, and \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a88183b946cc5f0e8c96b2e66e1c74a7e}{el\+::\+Unknown}}.
+
+\Hypertarget{classel_1_1Configurations_1_1Parser_a70e0d8b27e7c1b5dd94e6838c304a751}\label{classel_1_1Configurations_1_1Parser_a70e0d8b27e7c1b5dd94e6838c304a751} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!parseLine@{parseLine}}
+\index{parseLine@{parseLine}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{parseLine()}{parseLine()}}
+{\footnotesize\ttfamily bool el\+::\+Configurations\+::\+Parser\+::parse\+Line (\begin{DoxyParamCaption}\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{line,  }\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{curr\+Config\+Str,  }\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{curr\+Level\+Str,  }\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} \texorpdfstring{$\ast$}{*}}]{curr\+Level,  }\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{conf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00476}{476}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00214}{el\+::\+Configuration\+Type\+Helper\+::convert\+From\+String()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00161}{el\+::\+Level\+Helper\+::convert\+From\+String()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00441}{ignore\+Comments()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00464}{is\+Comment()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00468}{is\+Config()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00460}{is\+Level()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00345}{el\+::\+Configurations\+::set()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00944}{el\+::base\+::utils\+::\+Str\+::to\+Upper()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00896}{el\+::base\+::utils\+::\+Str\+::trim()}}, and \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a88183b946cc5f0e8c96b2e66e1c74a7e}{el\+::\+Unknown}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classel_1_1Configurations_1_1Parser_a6efe246b312d02731fb0e1d120c0331d}\label{classel_1_1Configurations_1_1Parser_a6efe246b312d02731fb0e1d120c0331d} 
+\index{el::Configurations::Parser@{el::Configurations::Parser}!el::Loggers@{el::Loggers}}
+\index{el::Loggers@{el::Loggers}!el::Configurations::Parser@{el::Configurations::Parser}}
+\doxysubsubsection{\texorpdfstring{el::Loggers}{el::Loggers}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1Loggers}{el\+::\+Loggers}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01865}{1865}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

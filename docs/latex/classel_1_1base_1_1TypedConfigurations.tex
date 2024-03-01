@@ -1,0 +1,651 @@
+\doxysection{el\+::base\+::Typed\+Configurations Class Reference}
+\hypertarget{classel_1_1base_1_1TypedConfigurations}{}\label{classel_1_1base_1_1TypedConfigurations}\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+
+
+\doxylink{classel_1_1Configurations}{Configurations} with data types.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::base\+::Typed\+Configurations\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1base_1_1TypedConfigurations}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a5a6139bac3a6d2bf4be8916be240fe8a}{Typed\+Configurations}} (\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a195b460479feb67f9c9d751060448fae}{configurations}}, \mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}} log\+Streams\+Reference)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize (construct) the object off \doxylink{classel_1_1Configurations}{el\+::\+Configurations}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_ae7b346e5d32305d4957bc6c564409090}{Typed\+Configurations}} (const \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations}{Typed\+Configurations}} \&other)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a43106121731b69829ad9f6d6035b1e0b}{\texorpdfstring{$\sim$}{\string~}\+Typed\+Configurations}} (void)
+\item 
+const \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a195b460479feb67f9c9d751060448fae}{configurations}} (void) const
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a924b35df988103c737907cc7993c3c1c}{enabled}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a20b9a1bd152cad3b72b558f97de3876b}{to\+File}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+const std\+::string \& \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a6e989a8496b9e08e6e8c9ac4d3fe5b1e}{filename}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_aeaa7bf7448319bc41e4e226124288c7e}{to\+Standard\+Output}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{base\+::\+Log\+Format}} \& \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a05b8ea32f63c3246a68dbc9085b7e847}{log\+Format}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+const \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{base\+::\+Subsecond\+Precision}} \& \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a674125948caf78b836a5b4f38561c8cc}{subsecond\+Precision}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level=\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global}})
+\item 
+const \mbox{\hyperlink{namespaceel_1_1base_abbc234f4907eccec2673dfc6efaa5925}{base\+::\+Milliseconds\+Width}} \& \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_afd65ea428144f620d8514073341db670}{milliseconds\+Width}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level=\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global}})
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a0cef785df86dbfe17a27c5b78ed3e5da}{performance\+Tracking}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level=\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global}})
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_a620c830ead75d26b45c060c211ee2685}{base\+::type\+::fstream\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_af39c020c90e67b5f817f318fcb11e611}{file\+Stream}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_aa48c0568be8fd177f1d463b1e7831f75}{max\+Log\+File\+Size}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_ae8710257d7f8bc20c2183a3a4404ebaf}{log\+Flush\+Threshold}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a59db719b214f7118f0919846a85077bf}{acquire\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a95bb166242b9691f861274a9b8ced2d9}{release\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}} \& \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_ad265274e935408d2444cfd253f28965a}{lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Conf\+\_\+T $>$ }\\Conf\+\_\+T \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a0f48ab593ba7ef99aa92267ce4ed470f}{get\+Config\+By\+Val}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}conf\+Map, const char \texorpdfstring{$\ast$}{*}conf\+Name)
+\item 
+{\footnotesize template$<$typename Conf\+\_\+T $>$ }\\Conf\+\_\+T \& \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a02fb1a8e36e06817f2ce7d3952f87b72}{get\+Config\+By\+Ref}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}conf\+Map, const char \texorpdfstring{$\ast$}{*}conf\+Name)
+\item 
+{\footnotesize template$<$typename Conf\+\_\+T $>$ }\\Conf\+\_\+T \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a80b40f6bfc22f3c74c302018f30694ec}{unsafe\+Get\+Config\+By\+Val}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}conf\+Map, const char \texorpdfstring{$\ast$}{*}conf\+Name)
+\item 
+{\footnotesize template$<$typename Conf\+\_\+T $>$ }\\Conf\+\_\+T \& \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a49c58f45e78e58a362f2e3c4101ad2a6}{unsafe\+Get\+Config\+By\+Ref}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}conf\+Map, const char \texorpdfstring{$\ast$}{*}conf\+Name)
+\item 
+{\footnotesize template$<$typename Conf\+\_\+T $>$ }\\void \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_ade524012a4f3f14172dbeda9565a590c}{set\+Value}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const Conf\+\_\+T \&value, std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}conf\+Map, bool include\+Global\+Level=true)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_ac61af29d843691ac60aa34000183b2d8}{build}} (\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a195b460479feb67f9c9d751060448fae}{configurations}})
+\item 
+unsigned long \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a9fe66d8b0c001d3651bff2fc31bd2883}{get\+ULong}} (std\+::string conf\+Val)
+\item 
+std\+::string \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a38c9262f6d645459d8f22bec4d47200e}{resolve\+Filename}} (const std\+::string \&\mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a6e989a8496b9e08e6e8c9ac4d3fe5b1e}{filename}})
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a858bb6bc3328dc87a5ff31a42f16ee74}{insert\+File}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const std\+::string \&full\+Filename)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a39b254514a300352fb6e2852a93621f9}{unsafe\+Validate\+File\+Rolling}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const \mbox{\hyperlink{namespaceel_a43d2e332b3dd72843f75feb7b5fe29c1}{Pre\+Roll\+Out\+Callback}} \&pre\+Roll\+Out\+Callback)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_af371459159951b76f7f138a0580cfb3c}{validate\+File\+Rolling}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const \mbox{\hyperlink{namespaceel_a43d2e332b3dd72843f75feb7b5fe29c1}{Pre\+Roll\+Out\+Callback}} \&pre\+Roll\+Out\+Callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a92ee81552c1fc265b2ec806aab239bad}{m\+\_\+configurations}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_aeaf70ade31dfaaa155228d02a432f933}{m\+\_\+enabled\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a793d2661cac3302d3ea481a82a8e3e22}{m\+\_\+to\+File\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, std\+::string $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_ae7ecca4356bc2f58c5aedc77a499e85e}{m\+\_\+filename\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a6a9f29326783d730c2ab837db1ac6001}{m\+\_\+to\+Standard\+Output\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{base\+::\+Log\+Format}} $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a3c78e3c8365064462c0f4b770d5f6cbc}{m\+\_\+log\+Format\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{base\+::\+Subsecond\+Precision}} $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a24899186f9e022ea192d5fba3c9aac8b}{m\+\_\+subsecond\+Precision\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a56dc4da49a3f4c5e25c9a31b9da942ba}{m\+\_\+performance\+Tracking\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, \mbox{\hyperlink{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}{base\+::\+File\+Stream\+Ptr}} $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a5b5acc8c44907851d903a1f4901b8230}{m\+\_\+file\+Stream\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, std\+::size\+\_\+t $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a3064115ef39f9e73f41830693e783ae7}{m\+\_\+max\+Log\+File\+Size\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, std\+::size\+\_\+t $>$ \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a92cb884808b281d116ff8e0dec52ca94}{m\+\_\+log\+Flush\+Threshold\+Map}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}} \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a8d06e64177405a99cb0f7e7873001921}{m\+\_\+log\+Streams\+Reference}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a2fb8a2c02cbf86247f093c118bed877a}{el\+::\+Helpers}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a81bbf6fe31fab133d182efa8367304f1}{el\+::base\+::\+Message\+Builder}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a7a728edbb2761d151832daa74d5b2736}{el\+::base\+::\+Writer}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a42b1de96d584ae4fecbfc2b9aff95052}{el\+::base\+::\+Default\+Log\+Dispatch\+Callback}}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations_a9b37b28ea1c5f8f862cc89f135711d92}{el\+::base\+::\+Log\+Dispatcher}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_aba1e98467da50d452a30672aabb6752d}{Thread\+Safe}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a97efb9503004202402178a4d3f5940f0}{\texorpdfstring{$\sim$}{\string~}\+Thread\+Safe}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classel_1_1Configurations}{Configurations} with data types. 
+
+@detail \doxylink{classel_1_1Configurations}{el\+::\+Configurations} have string based values. This is whats used internally in order to read correct configurations. This is to perform faster while writing logs using correct configurations.
+
+This is thread safe and final class containing non-\/virtual destructor (means nothing should inherit this class) 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01904}{1904}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a5a6139bac3a6d2bf4be8916be240fe8a}\label{classel_1_1base_1_1TypedConfigurations_a5a6139bac3a6d2bf4be8916be240fe8a} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!TypedConfigurations@{TypedConfigurations}}
+\index{TypedConfigurations@{TypedConfigurations}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{TypedConfigurations()}{TypedConfigurations()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily el\+::base\+::\+Typed\+Configurations\+::\+Typed\+Configurations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{configurations,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}}}]{log\+Streams\+Reference }\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize (construct) the object off \doxylink{classel_1_1Configurations}{el\+::\+Configurations}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configurations} & \doxylink{classel_1_1Configurations}{Configurations} pointer/reference to base this typed configurations off. \\
+\hline
+{\em log\+Streams\+Reference} & Use ELPP-\/\texorpdfstring{$>$}{>}registered\+Loggers()-\/\texorpdfstring{$>$}{>}log\+Streams\+Reference() \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01613}{1613}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01670}{build()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01933}{m\+\_\+configurations}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_ae7b346e5d32305d4957bc6c564409090}\label{classel_1_1base_1_1TypedConfigurations_ae7b346e5d32305d4957bc6c564409090} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!TypedConfigurations@{TypedConfigurations}}
+\index{TypedConfigurations@{TypedConfigurations}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{TypedConfigurations()}{TypedConfigurations()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily el\+::base\+::\+Typed\+Configurations\+::\+Typed\+Configurations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1base_1_1TypedConfigurations}{Typed\+Configurations}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01620}{1620}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01670}{build()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01933}{m\+\_\+configurations}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a43106121731b69829ad9f6d6035b1e0b}\label{classel_1_1base_1_1TypedConfigurations_a43106121731b69829ad9f6d6035b1e0b} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!````~TypedConfigurations@{\texorpdfstring{$\sim$}{\string~}TypedConfigurations}}
+\index{````~TypedConfigurations@{\texorpdfstring{$\sim$}{\string~}TypedConfigurations}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TypedConfigurations()}{\string~TypedConfigurations()}}
+{\footnotesize\ttfamily virtual el\+::base\+::\+Typed\+Configurations\+::\texorpdfstring{$\sim$}{\string~}\+Typed\+Configurations (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01913}{1913}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_ac61af29d843691ac60aa34000183b2d8}\label{classel_1_1base_1_1TypedConfigurations_ac61af29d843691ac60aa34000183b2d8} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!build@{build}}
+\index{build@{build}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Typed\+Configurations\+::build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*}}]{configurations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01670}{1670}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01690}{el\+::\+Configuration\+::configuration\+Type()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l00810}{el\+::base\+::default\+Pre\+Roll\+Out\+Callback()}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}{el\+::\+Enabled}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a1351017ac6423911223bc19a8cb7c653}{el\+::\+Filename}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a520d0db389f362bf79ef56ca0af3dcab}{el\+::\+Format}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01724}{get\+ULong()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01778}{insert\+File()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01685}{el\+::\+Configuration\+::level()}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124ac1b4aae5c168e64292c9aa87a124ae86}{el\+::\+Log\+Flush\+Threshold}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}{el\+::\+Max\+Log\+File\+Size}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124abe9e43d200c5698cb8519daed7035874}{el\+::\+Performance\+Tracking}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a945b6ef21f66457079a6ab7b6c3459f9}{el\+::\+Subsecond\+Precision}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124acb76297988b895ca263f62728b32dbcc}{el\+::\+To\+File}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a9b9a9244b0b26da988f9af8310ab899d}{el\+::\+To\+Standard\+Output}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00896}{el\+::base\+::utils\+::\+Str\+::trim()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01815}{unsafe\+Validate\+File\+Rolling()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01695}{el\+::\+Configuration\+::value()}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a195b460479feb67f9c9d751060448fae}\label{classel_1_1base_1_1TypedConfigurations_a195b460479feb67f9c9d751060448fae} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!configurations@{configurations}}
+\index{configurations@{configurations}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{configurations()}{configurations()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classel_1_1Configurations}{Configurations}} \texorpdfstring{$\ast$}{*} el\+::base\+::\+Typed\+Configurations\+::configurations (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01916}{1916}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01933}{m\+\_\+configurations}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a924b35df988103c737907cc7993c3c1c}\label{classel_1_1base_1_1TypedConfigurations_a924b35df988103c737907cc7993c3c1c} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!enabled@{enabled}}
+\index{enabled@{enabled}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{enabled()}{enabled()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Typed\+Configurations\+::enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01626}{1626}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a6e989a8496b9e08e6e8c9ac4d3fe5b1e}\label{classel_1_1base_1_1TypedConfigurations_a6e989a8496b9e08e6e8c9ac4d3fe5b1e} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!filename@{filename}}
+\index{filename@{filename}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{filename()}{filename()}}
+{\footnotesize\ttfamily const std\+::string \& el\+::base\+::\+Typed\+Configurations\+::filename (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01634}{1634}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_af39c020c90e67b5f817f318fcb11e611}\label{classel_1_1base_1_1TypedConfigurations_af39c020c90e67b5f817f318fcb11e611} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!fileStream@{fileStream}}
+\index{fileStream@{fileStream}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{fileStream()}{fileStream()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_a620c830ead75d26b45c060c211ee2685}{base\+::type\+::fstream\+\_\+t}} \texorpdfstring{$\ast$}{*} el\+::base\+::\+Typed\+Configurations\+::file\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01658}{1658}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a02fb1a8e36e06817f2ce7d3952f87b72}\label{classel_1_1base_1_1TypedConfigurations_a02fb1a8e36e06817f2ce7d3952f87b72} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!getConfigByRef@{getConfigByRef}}
+\index{getConfigByRef@{getConfigByRef}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{getConfigByRef()}{getConfigByRef()}}
+{\footnotesize\ttfamily template$<$typename Conf\+\_\+T $>$ \\
+Conf\+\_\+T \& el\+::base\+::\+Typed\+Configurations\+::get\+Config\+By\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}}]{conf\+Map,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{conf\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01959}{1959}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a0f48ab593ba7ef99aa92267ce4ed470f}\label{classel_1_1base_1_1TypedConfigurations_a0f48ab593ba7ef99aa92267ce4ed470f} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!getConfigByVal@{getConfigByVal}}
+\index{getConfigByVal@{getConfigByVal}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{getConfigByVal()}{getConfigByVal()}}
+{\footnotesize\ttfamily template$<$typename Conf\+\_\+T $>$ \\
+Conf\+\_\+T el\+::base\+::\+Typed\+Configurations\+::get\+Config\+By\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}}]{conf\+Map,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{conf\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01953}{1953}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a9fe66d8b0c001d3651bff2fc31bd2883}\label{classel_1_1base_1_1TypedConfigurations_a9fe66d8b0c001d3651bff2fc31bd2883} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!getULong@{getULong}}
+\index{getULong@{getULong}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{getULong()}{getULong()}}
+{\footnotesize\ttfamily unsigned long el\+::base\+::\+Typed\+Configurations\+::get\+ULong (\begin{DoxyParamCaption}\item[{std\+::string}]{conf\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01724}{1724}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01069}{el\+::base\+::utils\+::\+Str\+::is\+Digit()}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l00896}{el\+::base\+::utils\+::\+Str\+::trim()}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a858bb6bc3328dc87a5ff31a42f16ee74}\label{classel_1_1base_1_1TypedConfigurations_a858bb6bc3328dc87a5ff31a42f16ee74} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!insertFile@{insertFile}}
+\index{insertFile@{insertFile}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{insertFile()}{insertFile()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Typed\+Configurations\+::insert\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const std\+::string \&}]{full\+Filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01778}{1778}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00132}{el\+::\+Level\+Helper\+::convert\+To\+String()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00778}{el\+::base\+::utils\+::\+File\+::create\+Path()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00818}{el\+::base\+::utils\+::\+File\+::extract\+Path\+From\+Filename()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l00759}{el\+::base\+::consts\+::k\+File\+Path\+Separator}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00727}{el\+::base\+::utils\+::\+File\+::new\+File\+Stream()}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l01739}{resolve\+Filename()}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_ae8710257d7f8bc20c2183a3a4404ebaf}\label{classel_1_1base_1_1TypedConfigurations_ae8710257d7f8bc20c2183a3a4404ebaf} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!logFlushThreshold@{logFlushThreshold}}
+\index{logFlushThreshold@{logFlushThreshold}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{logFlushThreshold()}{logFlushThreshold()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t el\+::base\+::\+Typed\+Configurations\+::log\+Flush\+Threshold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01666}{1666}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a05b8ea32f63c3246a68dbc9085b7e847}\label{classel_1_1base_1_1TypedConfigurations_a05b8ea32f63c3246a68dbc9085b7e847} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!logFormat@{logFormat}}
+\index{logFormat@{logFormat}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{logFormat()}{logFormat()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{base\+::\+Log\+Format}} \& el\+::base\+::\+Typed\+Configurations\+::log\+Format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01642}{1642}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_aa48c0568be8fd177f1d463b1e7831f75}\label{classel_1_1base_1_1TypedConfigurations_aa48c0568be8fd177f1d463b1e7831f75} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!maxLogFileSize@{maxLogFileSize}}
+\index{maxLogFileSize@{maxLogFileSize}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{maxLogFileSize()}{maxLogFileSize()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t el\+::base\+::\+Typed\+Configurations\+::max\+Log\+File\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01662}{1662}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_afd65ea428144f620d8514073341db670}\label{classel_1_1base_1_1TypedConfigurations_afd65ea428144f620d8514073341db670} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!millisecondsWidth@{millisecondsWidth}}
+\index{millisecondsWidth@{millisecondsWidth}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{millisecondsWidth()}{millisecondsWidth()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceel_1_1base_abbc234f4907eccec2673dfc6efaa5925}{base\+::\+Milliseconds\+Width}} \& el\+::base\+::\+Typed\+Configurations\+::milliseconds\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level = {\ttfamily \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01650}{1650}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a0cef785df86dbfe17a27c5b78ed3e5da}\label{classel_1_1base_1_1TypedConfigurations_a0cef785df86dbfe17a27c5b78ed3e5da} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!performanceTracking@{performanceTracking}}
+\index{performanceTracking@{performanceTracking}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{performanceTracking()}{performanceTracking()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Typed\+Configurations\+::performance\+Tracking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level = {\ttfamily \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01654}{1654}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a38c9262f6d645459d8f22bec4d47200e}\label{classel_1_1base_1_1TypedConfigurations_a38c9262f6d645459d8f22bec4d47200e} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!resolveFilename@{resolveFilename}}
+\index{resolveFilename@{resolveFilename}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{resolveFilename()}{resolveFilename()}}
+{\footnotesize\ttfamily std\+::string el\+::base\+::\+Typed\+Configurations\+::resolve\+Filename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01739}{1739}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01177}{el\+::base\+::utils\+::\+Date\+Time\+::get\+Date\+Time()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00059}{el\+::base\+::consts\+::k\+Date\+Time\+Format\+Specifier\+For\+Filename}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00068}{el\+::base\+::consts\+::k\+Default\+Date\+Time\+Format\+In\+Filename}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00908}{el\+::base\+::utils\+::\+Str\+::replace\+All()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00913}{el\+::base\+::utils\+::\+Str\+::replace\+All()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l00839}{el\+::base\+::\+Subsecond\+Precision\+::\+Subsecond\+Precision()}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_ade524012a4f3f14172dbeda9565a590c}\label{classel_1_1base_1_1TypedConfigurations_ade524012a4f3f14172dbeda9565a590c} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!setValue@{setValue}}
+\index{setValue@{setValue}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily template$<$typename Conf\+\_\+T $>$ \\
+void el\+::base\+::\+Typed\+Configurations\+::set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const Conf\+\_\+T \&}]{value,  }\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}}]{conf\+Map,  }\item[{bool}]{include\+Global\+Level = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01998}{1998}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a674125948caf78b836a5b4f38561c8cc}\label{classel_1_1base_1_1TypedConfigurations_a674125948caf78b836a5b4f38561c8cc} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!subsecondPrecision@{subsecondPrecision}}
+\index{subsecondPrecision@{subsecondPrecision}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{subsecondPrecision()}{subsecondPrecision()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{base\+::\+Subsecond\+Precision}} \& el\+::base\+::\+Typed\+Configurations\+::subsecond\+Precision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level = {\ttfamily \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{Level\+::\+Global}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01646}{1646}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a20b9a1bd152cad3b72b558f97de3876b}\label{classel_1_1base_1_1TypedConfigurations_a20b9a1bd152cad3b72b558f97de3876b} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!toFile@{toFile}}
+\index{toFile@{toFile}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{toFile()}{toFile()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Typed\+Configurations\+::to\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01630}{1630}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_aeaa7bf7448319bc41e4e226124288c7e}\label{classel_1_1base_1_1TypedConfigurations_aeaa7bf7448319bc41e4e226124288c7e} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!toStandardOutput@{toStandardOutput}}
+\index{toStandardOutput@{toStandardOutput}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{toStandardOutput()}{toStandardOutput()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Typed\+Configurations\+::to\+Standard\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01638}{1638}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a49c58f45e78e58a362f2e3c4101ad2a6}\label{classel_1_1base_1_1TypedConfigurations_a49c58f45e78e58a362f2e3c4101ad2a6} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!unsafeGetConfigByRef@{unsafeGetConfigByRef}}
+\index{unsafeGetConfigByRef@{unsafeGetConfigByRef}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{unsafeGetConfigByRef()}{unsafeGetConfigByRef()}}
+{\footnotesize\ttfamily template$<$typename Conf\+\_\+T $>$ \\
+Conf\+\_\+T \& el\+::base\+::\+Typed\+Configurations\+::unsafe\+Get\+Config\+By\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}}]{conf\+Map,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{conf\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01982}{1982}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{el\+::\+Global}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a80b40f6bfc22f3c74c302018f30694ec}\label{classel_1_1base_1_1TypedConfigurations_a80b40f6bfc22f3c74c302018f30694ec} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!unsafeGetConfigByVal@{unsafeGetConfigByVal}}
+\index{unsafeGetConfigByVal@{unsafeGetConfigByVal}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{unsafeGetConfigByVal()}{unsafeGetConfigByVal()}}
+{\footnotesize\ttfamily template$<$typename Conf\+\_\+T $>$ \\
+Conf\+\_\+T el\+::base\+::\+Typed\+Configurations\+::unsafe\+Get\+Config\+By\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, Conf\+\_\+T $>$ \texorpdfstring{$\ast$}{*}}]{conf\+Map,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{conf\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01965}{1965}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4cc6684df7b4a92b1dec6fce3264fac8}{el\+::\+Global}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a39b254514a300352fb6e2852a93621f9}\label{classel_1_1base_1_1TypedConfigurations_a39b254514a300352fb6e2852a93621f9} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!unsafeValidateFileRolling@{unsafeValidateFileRolling}}
+\index{unsafeValidateFileRolling@{unsafeValidateFileRolling}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{unsafeValidateFileRolling()}{unsafeValidateFileRolling()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Typed\+Configurations\+::unsafe\+Validate\+File\+Rolling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const \mbox{\hyperlink{namespaceel_a43d2e332b3dd72843f75feb7b5fe29c1}{Pre\+Roll\+Out\+Callback}} \&}]{pre\+Roll\+Out\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01815}{1815}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00751}{el\+::base\+::utils\+::\+File\+::get\+Size\+Of\+File()}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_af371459159951b76f7f138a0580cfb3c}\label{classel_1_1base_1_1TypedConfigurations_af371459159951b76f7f138a0580cfb3c} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!validateFileRolling@{validateFileRolling}}
+\index{validateFileRolling@{validateFileRolling}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{validateFileRolling()}{validateFileRolling()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Typed\+Configurations\+::validate\+File\+Rolling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const \mbox{\hyperlink{namespaceel_a43d2e332b3dd72843f75feb7b5fe29c1}{Pre\+Roll\+Out\+Callback}} \&}]{pre\+Roll\+Out\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02027}{2027}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01815}{unsafe\+Validate\+File\+Rolling()}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a42b1de96d584ae4fecbfc2b9aff95052}\label{classel_1_1base_1_1TypedConfigurations_a42b1de96d584ae4fecbfc2b9aff95052} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!el::base::DefaultLogDispatchCallback@{el::base::DefaultLogDispatchCallback}}
+\index{el::base::DefaultLogDispatchCallback@{el::base::DefaultLogDispatchCallback}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{el::base::DefaultLogDispatchCallback}{el::base::DefaultLogDispatchCallback}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1base_1_1DefaultLogDispatchCallback}{el\+::base\+::\+Default\+Log\+Dispatch\+Callback}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01949}{1949}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a9b37b28ea1c5f8f862cc89f135711d92}\label{classel_1_1base_1_1TypedConfigurations_a9b37b28ea1c5f8f862cc89f135711d92} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!el::base::LogDispatcher@{el::base::LogDispatcher}}
+\index{el::base::LogDispatcher@{el::base::LogDispatcher}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{el::base::LogDispatcher}{el::base::LogDispatcher}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1base_1_1LogDispatcher}{el\+::base\+::\+Log\+Dispatcher}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01950}{1950}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a81bbf6fe31fab133d182efa8367304f1}\label{classel_1_1base_1_1TypedConfigurations_a81bbf6fe31fab133d182efa8367304f1} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{el::base::MessageBuilder}{el::base::MessageBuilder}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{el\+::base\+::\+Message\+Builder}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01947}{1947}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a7a728edbb2761d151832daa74d5b2736}\label{classel_1_1base_1_1TypedConfigurations_a7a728edbb2761d151832daa74d5b2736} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!el::base::Writer@{el::base::Writer}}
+\index{el::base::Writer@{el::base::Writer}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{el::base::Writer}{el::base::Writer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1base_1_1Writer}{el\+::base\+::\+Writer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01948}{1948}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a2fb8a2c02cbf86247f093c118bed877a}\label{classel_1_1base_1_1TypedConfigurations_a2fb8a2c02cbf86247f093c118bed877a} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!el::Helpers@{el::Helpers}}
+\index{el::Helpers@{el::Helpers}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{el::Helpers}{el::Helpers}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1Helpers}{el\+::\+Helpers}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01946}{1946}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a92ee81552c1fc265b2ec806aab239bad}\label{classel_1_1base_1_1TypedConfigurations_a92ee81552c1fc265b2ec806aab239bad} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_configurations@{m\_configurations}}
+\index{m\_configurations@{m\_configurations}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_configurations}{m\_configurations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1Configurations}{Configurations}}\texorpdfstring{$\ast$}{*} el\+::base\+::\+Typed\+Configurations\+::m\+\_\+configurations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01933}{1933}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_aeaf70ade31dfaaa155228d02a432f933}\label{classel_1_1base_1_1TypedConfigurations_aeaf70ade31dfaaa155228d02a432f933} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_enabledMap@{m\_enabledMap}}
+\index{m\_enabledMap@{m\_enabledMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_enabledMap}{m\_enabledMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+enabled\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01934}{1934}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_ae7ecca4356bc2f58c5aedc77a499e85e}\label{classel_1_1base_1_1TypedConfigurations_ae7ecca4356bc2f58c5aedc77a499e85e} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_filenameMap@{m\_filenameMap}}
+\index{m\_filenameMap@{m\_filenameMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_filenameMap}{m\_filenameMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, std\+::string$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+filename\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01936}{1936}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a5b5acc8c44907851d903a1f4901b8230}\label{classel_1_1base_1_1TypedConfigurations_a5b5acc8c44907851d903a1f4901b8230} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_fileStreamMap@{m\_fileStreamMap}}
+\index{m\_fileStreamMap@{m\_fileStreamMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_fileStreamMap}{m\_fileStreamMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, \mbox{\hyperlink{namespaceel_1_1base_a8b10bcfd674533f8340cd8c39fbf5233}{base\+::\+File\+Stream\+Ptr}}$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+file\+Stream\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01941}{1941}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a92cb884808b281d116ff8e0dec52ca94}\label{classel_1_1base_1_1TypedConfigurations_a92cb884808b281d116ff8e0dec52ca94} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_logFlushThresholdMap@{m\_logFlushThresholdMap}}
+\index{m\_logFlushThresholdMap@{m\_logFlushThresholdMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_logFlushThresholdMap}{m\_logFlushThresholdMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, std\+::size\+\_\+t$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+log\+Flush\+Threshold\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01943}{1943}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a3c78e3c8365064462c0f4b770d5f6cbc}\label{classel_1_1base_1_1TypedConfigurations_a3c78e3c8365064462c0f4b770d5f6cbc} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_logFormatMap@{m\_logFormatMap}}
+\index{m\_logFormatMap@{m\_logFormatMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_logFormatMap}{m\_logFormatMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{base\+::\+Log\+Format}}$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+log\+Format\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01938}{1938}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a8d06e64177405a99cb0f7e7873001921}\label{classel_1_1base_1_1TypedConfigurations_a8d06e64177405a99cb0f7e7873001921} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_logStreamsReference@{m\_logStreamsReference}}
+\index{m\_logStreamsReference@{m\_logStreamsReference}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_logStreamsReference}{m\_logStreamsReference}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_aff0a4f2494ed737ffa5e45c9abb57e97}{Log\+Streams\+Reference\+Map\+Ptr}} el\+::base\+::\+Typed\+Configurations\+::m\+\_\+log\+Streams\+Reference = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01944}{1944}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a3064115ef39f9e73f41830693e783ae7}\label{classel_1_1base_1_1TypedConfigurations_a3064115ef39f9e73f41830693e783ae7} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_maxLogFileSizeMap@{m\_maxLogFileSizeMap}}
+\index{m\_maxLogFileSizeMap@{m\_maxLogFileSizeMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_maxLogFileSizeMap}{m\_maxLogFileSizeMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, std\+::size\+\_\+t$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+max\+Log\+File\+Size\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01942}{1942}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a56dc4da49a3f4c5e25c9a31b9da942ba}\label{classel_1_1base_1_1TypedConfigurations_a56dc4da49a3f4c5e25c9a31b9da942ba} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_performanceTrackingMap@{m\_performanceTrackingMap}}
+\index{m\_performanceTrackingMap@{m\_performanceTrackingMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_performanceTrackingMap}{m\_performanceTrackingMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+performance\+Tracking\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01940}{1940}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a24899186f9e022ea192d5fba3c9aac8b}\label{classel_1_1base_1_1TypedConfigurations_a24899186f9e022ea192d5fba3c9aac8b} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_subsecondPrecisionMap@{m\_subsecondPrecisionMap}}
+\index{m\_subsecondPrecisionMap@{m\_subsecondPrecisionMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_subsecondPrecisionMap}{m\_subsecondPrecisionMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, \mbox{\hyperlink{classel_1_1base_1_1SubsecondPrecision}{base\+::\+Subsecond\+Precision}}$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+subsecond\+Precision\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01939}{1939}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a793d2661cac3302d3ea481a82a8e3e22}\label{classel_1_1base_1_1TypedConfigurations_a793d2661cac3302d3ea481a82a8e3e22} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_toFileMap@{m\_toFileMap}}
+\index{m\_toFileMap@{m\_toFileMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_toFileMap}{m\_toFileMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+to\+File\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01935}{1935}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1TypedConfigurations_a6a9f29326783d730c2ab837db1ac6001}\label{classel_1_1base_1_1TypedConfigurations_a6a9f29326783d730c2ab837db1ac6001} 
+\index{el::base::TypedConfigurations@{el::base::TypedConfigurations}!m\_toStandardOutputMap@{m\_toStandardOutputMap}}
+\index{m\_toStandardOutputMap@{m\_toStandardOutputMap}!el::base::TypedConfigurations@{el::base::TypedConfigurations}}
+\doxysubsubsection{\texorpdfstring{m\_toStandardOutputMap}{m\_toStandardOutputMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}, bool$>$ el\+::base\+::\+Typed\+Configurations\+::m\+\_\+to\+Standard\+Output\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01937}{1937}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

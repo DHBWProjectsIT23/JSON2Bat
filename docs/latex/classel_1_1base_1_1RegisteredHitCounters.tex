@@ -1,0 +1,212 @@
+\doxysection{el\+::base\+::Registered\+Hit\+Counters Class Reference}
+\hypertarget{classel_1_1base_1_1RegisteredHitCounters}{}\label{classel_1_1base_1_1RegisteredHitCounters}\index{el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}}
+
+
+Repository for hit counters used across the application.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::base\+::Registered\+Hit\+Counters\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classel_1_1base_1_1RegisteredHitCounters}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1RegisteredHitCounters_a586bb8c5e2722e08a255039bb41e03fa}{validate\+EveryN}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} line\+Number, std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Validates counter for every N, i.\+e, registers new if does not exist otherwise updates original one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1RegisteredHitCounters_ad17bfabd59d2142b57282156483708ef}{validate\+AfterN}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} line\+Number, std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Validates counter for hits \texorpdfstring{$>$}{>}= N, i.\+e, registers new if does not exist otherwise updates original one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1RegisteredHitCounters_acc7e50a6b720a90714e60d2710fdfbe6}{validate\+NTimes}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} line\+Number, std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Validates counter for hits are \texorpdfstring{$<$}{<}= n, i.\+e, registers new if does not exist otherwise updates original one. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1RegisteredHitCounters_a1bb1a80d0d58dea6534ad17e123a89f4}{get\+Counter}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} line\+Number)
+\begin{DoxyCompactList}\small\item\em Gets hit counter registered at specified position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{el\+::base\+::utils\+::\+Registry\+With\+Pred$<$ base\+::\+Hit\+Counter, base\+::\+Hit\+Counter\+::\+Predicate $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_a564214aff7fdbd5370e777dd0c15e615}{Registry\+With\+Pred}} (void)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_a0e75c7daaa5fbf824b29180c7a5fd155}{Registry\+With\+Pred}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{Registry\+With\+Pred}} \&sr)
+\begin{DoxyCompactList}\small\item\em Copy constructor that is useful for base classes. Try to avoid this constructor, use move constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_ae822bdfa235ace08c1d8faa8365fd240}{\texorpdfstring{$\sim$}{\string~}\+Registry\+With\+Pred}} (void)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{Registry\+With\+Pred}} \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_af804c180ee6d0ec1b9c8acb61e0ece0f}{operator=}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{Registry\+With\+Pred}} \&sr)
+\begin{DoxyCompactList}\small\item\em Assignment operator that unregisters all the existing registries and deeply copies each of repo element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{el\+::base\+::utils\+::\+Abstract\+Registry$<$ T\+\_\+\+Ptr, Container $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_afe13c67ebd1ed1aa72845926894dffa2}{Abstract\+Registry}} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a9f468010439d491e90419f9334afcdba}{Abstract\+Registry}} (\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}} \&\&sr)
+\begin{DoxyCompactList}\small\item\em Move constructor that is useful for base classes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_ac3e648dc0caa8914f8604650f00bc94b}{operator==}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&other)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a35de8807521651c85acb26532a2623e1}{operator!=}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&other)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}} \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a82cdc3127426be6d7603c5d5b278c61c}{operator=}} (\mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}} \&\&sr)
+\begin{DoxyCompactList}\small\item\em Assignment move operator. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a6ee2c4166629bb16515cc00b738dee65}{\texorpdfstring{$\sim$}{\string~}\+Abstract\+Registry}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58d0536c748633afd3f7c237b63a9a7c}{iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a4ad971b1dddff996d327452d852e55b2}{begin}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58d0536c748633afd3f7c237b63a9a7c}{iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a67c40207c171f23ad50a71db819e84f9}{end}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a3bbf19b112c067cb1a02a82b003cc7e2}{const\+\_\+iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a37f743184e808d7c0028e21e0d0898bb}{cbegin}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a3bbf19b112c067cb1a02a82b003cc7e2}{const\+\_\+iterator}} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_ad3ee081b4b25c5d77f971f949bdb9158}{cend}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual bool \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a43ff6484b778c298416c482c07a4df3f}{empty}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58a7b8ea964bdf6008701dcfb6609ca5}{size}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual Container \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_aa296265ecfb912e71c40ec4e5fdea4ea}{list}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Returns underlying container by reference. \end{DoxyCompactList}\item 
+virtual const Container \& \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a000765b7c25a76cf2ec211cad1515dce}{list}} (void) const \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Returns underlying container by constant reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a59db719b214f7118f0919846a85077bf}{acquire\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a95bb166242b9691f861274a9b8ced2d9}{release\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}} \& \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_ad265274e935408d2444cfd253f28965a}{lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{el\+::base\+::utils\+::\+Registry\+With\+Pred$<$ base\+::\+Hit\+Counter, base\+::\+Hit\+Counter\+::\+Predicate $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{Registry\+With\+Pred}}$<$ \mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}}, \mbox{\hyperlink{classel_1_1base_1_1HitCounter_1_1Predicate}{base\+::\+Hit\+Counter\+::\+Predicate}} $>$\+::iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_a30c5e292fa792156464d0a5b3639a0b2}{iterator}}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{Registry\+With\+Pred}}$<$ \mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}}, \mbox{\hyperlink{classel_1_1base_1_1HitCounter_1_1Predicate}{base\+::\+Hit\+Counter\+::\+Predicate}} $>$\+::const\+\_\+iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_abab0428475d47d5d299df8658a39503c}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{el\+::base\+::utils\+::\+Abstract\+Registry$<$ T\+\_\+\+Ptr, Container $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+typedef Container\+::iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a58d0536c748633afd3f7c237b63a9a7c}{iterator}}
+\item 
+typedef Container\+::const\+\_\+iterator \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a3bbf19b112c067cb1a02a82b003cc7e2}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred}{el\+::base\+::utils\+::\+Registry\+With\+Pred$<$ base\+::\+Hit\+Counter, base\+::\+Hit\+Counter\+::\+Predicate $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_a66b4eca5bb71f3fa3f0737105a00890c}{unregister\+All}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Unregisters all the pointers from current repository. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_aaf1afb5a9f8bd1d99c46ac529ea16417}{unregister}} (\mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}} \texorpdfstring{$\ast$}{*}\&ptr) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_a561a5d418106a16473ff94d43a4b6b04}{register\+New}} (\mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}} \texorpdfstring{$\ast$}{*}ptr) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1utils_1_1RegistryWithPred_a0c3218784c8bdbe88dcbadf95da6b4e2}{get}} (const T \&arg1, const T2 arg2)
+\begin{DoxyCompactList}\small\item\em Gets pointer from repository with specified arguments. Arguments are passed to predicate in order to validate pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{el\+::base\+::utils\+::\+Abstract\+Registry$<$ T\+\_\+\+Ptr, Container $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_aaf42dab7089a9b1198e2920983ca82bb}{deep\+Copy}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&)=0
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry_a529677fb42e78d03c36cdea49f8877c9}{reinit\+Deep\+Copy}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1AbstractRegistry}{Abstract\+Registry}}$<$ T\+\_\+\+Ptr, Container $>$ \&sr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_aba1e98467da50d452a30672aabb6752d}{Thread\+Safe}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a97efb9503004202402178a4d3f5940f0}{\texorpdfstring{$\sim$}{\string~}\+Thread\+Safe}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repository for hit counters used across the application. 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02118}{2118}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1base_1_1RegisteredHitCounters_a1bb1a80d0d58dea6534ad17e123a89f4}\label{classel_1_1base_1_1RegisteredHitCounters_a1bb1a80d0d58dea6534ad17e123a89f4} 
+\index{el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}!getCounter@{getCounter}}
+\index{getCounter@{getCounter}!el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}}
+\doxysubsubsection{\texorpdfstring{getCounter()}{getCounter()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classel_1_1base_1_1HitCounter}{base\+::\+Hit\+Counter}} \texorpdfstring{$\ast$}{*} el\+::base\+::\+Registered\+Hit\+Counters\+::get\+Counter (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}}}]{line\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets hit counter registered at specified position. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02133}{2133}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredHitCounters_ad17bfabd59d2142b57282156483708ef}\label{classel_1_1base_1_1RegisteredHitCounters_ad17bfabd59d2142b57282156483708ef} 
+\index{el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}!validateAfterN@{validateAfterN}}
+\index{validateAfterN@{validateAfterN}!el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}}
+\doxysubsubsection{\texorpdfstring{validateAfterN()}{validateAfterN()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Registered\+Hit\+Counters\+::validate\+AfterN (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}}}]{line\+Number,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Validates counter for hits \texorpdfstring{$>$}{>}= N, i.\+e, registers new if does not exist otherwise updates original one. 
+
+\begin{DoxyReturn}{Returns}
+True if validation resulted in triggering hit. Meaning logs should be written everytime true is returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01849}{1849}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02041}{el\+::base\+::\+Hit\+Counter\+::\+Hit\+Counter()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l02087}{el\+::base\+::\+Hit\+Counter\+::hit\+Counts()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02091}{el\+::base\+::\+Hit\+Counter\+::increment()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredHitCounters_a586bb8c5e2722e08a255039bb41e03fa}\label{classel_1_1base_1_1RegisteredHitCounters_a586bb8c5e2722e08a255039bb41e03fa} 
+\index{el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}!validateEveryN@{validateEveryN}}
+\index{validateEveryN@{validateEveryN}!el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}}
+\doxysubsubsection{\texorpdfstring{validateEveryN()}{validateEveryN()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Registered\+Hit\+Counters\+::validate\+EveryN (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}}}]{line\+Number,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Validates counter for every N, i.\+e, registers new if does not exist otherwise updates original one. 
+
+\begin{DoxyReturn}{Returns}
+True if validation resulted in triggering hit. Meaning logs should be written everytime true is returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01836}{1836}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02041}{el\+::base\+::\+Hit\+Counter\+::\+Hit\+Counter()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l02087}{el\+::base\+::\+Hit\+Counter\+::hit\+Counts()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02072}{el\+::base\+::\+Hit\+Counter\+::validate\+Hit\+Counts()}}.
+
+\Hypertarget{classel_1_1base_1_1RegisteredHitCounters_acc7e50a6b720a90714e60d2710fdfbe6}\label{classel_1_1base_1_1RegisteredHitCounters_acc7e50a6b720a90714e60d2710fdfbe6} 
+\index{el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}!validateNTimes@{validateNTimes}}
+\index{validateNTimes@{validateNTimes}!el::base::RegisteredHitCounters@{el::base::RegisteredHitCounters}}
+\doxysubsubsection{\texorpdfstring{validateNTimes()}{validateNTimes()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Registered\+Hit\+Counters\+::validate\+NTimes (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}}}]{line\+Number,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Validates counter for hits are \texorpdfstring{$<$}{<}= n, i.\+e, registers new if does not exist otherwise updates original one. 
+
+\begin{DoxyReturn}{Returns}
+True if validation resulted in triggering hit. Meaning logs should be written everytime true is returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01866}{1866}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02041}{el\+::base\+::\+Hit\+Counter\+::\+Hit\+Counter()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l02087}{el\+::base\+::\+Hit\+Counter\+::hit\+Counts()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02091}{el\+::base\+::\+Hit\+Counter\+::increment()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+.TH "src/main.cpp" 3 "Wed Feb 28 2024 09:42:02" "Version 0.2.0" "jsonToBatProject" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'StartupHandler\&.hpp'\fP
+.br
+\fR#include 'easylogging++\&.h'\fP
+.br
+\fR#include <getopt\&.h>\fP
+.br
+\fR#include <iostream>\fP
+.br
+\fR#include <stdexcept>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "INITIALIZE_EASYLOGGINGPP int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "Main function\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "INITIALIZE_EASYLOGGINGPP int main (int argc, char * argv[])"
+
+.PP
+Main function\&. This is the main function for the application, The application is designed to parse a json file and create a batch file from it\&. Further more it provides a CLI to help the user to interact with the application\&.
+.PP
+\fBTodo\fP
+.RS 4
+.IP "\(bu" 2
+Remove Debug once getopt is working
+.PP
+.RE
+.PP
+.PP
+\fBBug\fP
+.RS 4
+Getopt is not working on Windows\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB34\fP of file \fBmain\&.cpp\fP\&.
+.PP
+References \fButils::StartupHandler::getOptions()\fP, and \fButils::StartupHandler::initEasyLogging()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for jsonToBatProject from the source code\&.

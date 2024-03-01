@@ -1,0 +1,138 @@
+.TH "utils::StartupHandler" 3 "Wed Feb 28 2024 09:42:02" "Version 0.2.0" "jsonToBatProject" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+utils::StartupHandler \- Handles startup task for the application\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <StartupHandler\&.hpp>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinitEasyLogging\fP ()"
+.br
+.RI "Initialize easylogging\&. "
+.ti -1c
+.RI "static std::optional< std::string > \fBgetOptions\fP (int argc, char *argv[])"
+.br
+.RI "Get options from command line\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStartupHandler\fP ()=default"
+.br
+.RI "Constructor (private) "
+.ti -1c
+.RI "\fBStartupHandler\fP (const \fBStartupHandler\fP &)=delete"
+.br
+.RI "Copy constructor (deleted) "
+.ti -1c
+.RI "\fBStartupHandler\fP & \fBoperator=\fP (const \fBStartupHandler\fP &)=delete"
+.br
+.RI "Assignment operator (deleted) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Handles startup task for the application\&. 
+
+This class provides functionality for the startup of the application\&. Currently it initializes easylogging and parses given options\&.
+.PP
+\fBNote\fP
+.RS 4
+I think this class should stay static - Simon 
+.RE
+.PP
+
+.PP
+Definition at line \fB28\fP of file \fBStartupHandler\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "utils::StartupHandler::StartupHandler ()\fR [private]\fP, \fR [default]\fP"
+
+.PP
+Constructor (private) This class should not be instantiated\&. 
+.SS "utils::StartupHandler::StartupHandler (const \fBStartupHandler\fP &)\fR [private]\fP, \fR [delete]\fP"
+
+.PP
+Copy constructor (deleted) This class should not be instantiated\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "std::optional< std::string > utils::StartupHandler::getOptions (int argc, char * argv[])\fR [static]\fP"
+
+.PP
+Get options from command line\&. This function parses the command line options and returns the filename given as an argument\&. It can hadle short, long and 'regular' arguments\&. Currently, the following options are supported:
+.IP "\(bu" 2
+-h, --help: Show help
+.IP "\(bu" 2
+-V, --version: Show version
+.IP "\(bu" 2
+--verbose: Set verbose flag
+.IP "\(bu" 2
+--brief: Unset verbose flag
+.IP "\(bu" 2
+--test: Test
+.PP
+\fBTodo\fP
+.RS 4
+.RE
+.PP
+.PP
+\fBBug\fP
+.RS 4
+Global verbose flag is not working\&.
+.RE
+.PP
+
+.PP
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP Number of arguments 
+.br
+\fIargv\fP Arguments
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns either the filename or nothing\&.
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIstd::invalid_argument\fP If more than one filename is given\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB26\fP of file \fBStartupHandler\&.cpp\fP\&.
+.PP
+References \fButils::verbose\fP\&.
+.SS "void utils::StartupHandler::initEasyLogging ()\fR [static]\fP"
+
+.PP
+Initialize easylogging\&. This function initializes easylogging with the configuration file '$SOURCE/conf/easylogging\&.conf'\&.
+.PP
+\fBTodo\fP
+.RS 4
+.IP "\(bu" 2
+Improve easylogging configuration 
+.PP
+.RE
+.PP
+
+.PP
+Definition at line \fB18\fP of file \fBStartupHandler\&.cpp\fP\&.
+.SS "\fBStartupHandler\fP & utils::StartupHandler::operator= (const \fBStartupHandler\fP &)\fR [private]\fP, \fR [delete]\fP"
+
+.PP
+Assignment operator (deleted) This class should not be instantiated\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for jsonToBatProject from the source code\&.
