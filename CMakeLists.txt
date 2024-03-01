@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.22)
 
 if (WIN32)
   message(FATAL_ERROR "This project is not supported on Windows")
