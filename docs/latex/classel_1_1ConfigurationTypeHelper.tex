@@ -1,0 +1,181 @@
+\doxysection{el\+::Configuration\+Type\+Helper Class Reference}
+\hypertarget{classel_1_1ConfigurationTypeHelper}{}\label{classel_1_1ConfigurationTypeHelper}\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+
+
+Static class that contains helper functions for \doxylink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{el\+::\+Configuration\+Type}.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::Configuration\+Type\+Helper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1ConfigurationTypeHelper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_aa53161071fee3ce3f371ab90c62d5fc2}{cast\+To\+Int}} (\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}} configuration\+Type)
+\begin{DoxyCompactList}\small\item\em Casts configuration type to int, useful for iterating through enum. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}} \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_a62301cbc966cf7e7e2a7b55cc3259996}{cast\+From\+Int}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} c)
+\begin{DoxyCompactList}\small\item\em Casts int(ushort) to configuration type, useful for iterating through enum. \end{DoxyCompactList}\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_a003555d2261066614225d6d603ccf655}{convert\+To\+String}} (\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}} configuration\+Type)
+\begin{DoxyCompactList}\small\item\em Converts configuration type to associated const char\texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}} \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_a83a46879f2cfe2b417a187d8d8623cff}{convert\+From\+String}} (const char \texorpdfstring{$\ast$}{*}config\+Str)
+\begin{DoxyCompactList}\small\item\em Converts from config\+Str to Configuration\+Type. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_a0b91c3c00c57483cbddca2748f477582}{for\+Each\+Config\+Type}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \texorpdfstring{$\ast$}{*}start\+Index, const std\+::function$<$ bool(void)$>$ \&fn)
+\begin{DoxyCompactList}\small\item\em Applies specified function to each configuration type starting from start\+Index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_ab7266e698eb32dec2da285325a66e322}{k\+Min\+Valid}} = static\+\_\+cast$<$\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}$>$(\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}{Configuration\+Type\+::\+Enabled}})
+\begin{DoxyCompactList}\small\item\em Represents minimum valid configuration type. Useful when iterating through enum. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \mbox{\hyperlink{classel_1_1ConfigurationTypeHelper_aa02f3cefb127e7eb97d7e1dd7f51a12d}{k\+Max\+Valid}} = static\+\_\+cast$<$\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}$>$(\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}{Configuration\+Type\+::\+Max\+Log\+File\+Size}})
+\begin{DoxyCompactList}\small\item\em Represents maximum valid configuration type. This is used internally and you should not need it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static class that contains helper functions for \doxylink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{el\+::\+Configuration\+Type}. 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00665}{665}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1ConfigurationTypeHelper_a62301cbc966cf7e7e2a7b55cc3259996}\label{classel_1_1ConfigurationTypeHelper_a62301cbc966cf7e7e2a7b55cc3259996} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!castFromInt@{castFromInt}}
+\index{castFromInt@{castFromInt}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{castFromInt()}{castFromInt()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}} el\+::\+Configuration\+Type\+Helper\+::cast\+From\+Int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Casts int(ushort) to configuration type, useful for iterating through enum. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00676}{676}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1ConfigurationTypeHelper_aa53161071fee3ce3f371ab90c62d5fc2}\label{classel_1_1ConfigurationTypeHelper_aa53161071fee3ce3f371ab90c62d5fc2} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!castToInt@{castToInt}}
+\index{castToInt@{castToInt}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{castToInt()}{castToInt()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} el\+::\+Configuration\+Type\+Helper\+::cast\+To\+Int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}}}]{configuration\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Casts configuration type to int, useful for iterating through enum. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00672}{672}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1ConfigurationTypeHelper_a83a46879f2cfe2b417a187d8d8623cff}\label{classel_1_1ConfigurationTypeHelper_a83a46879f2cfe2b417a187d8d8623cff} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!convertFromString@{convertFromString}}
+\index{convertFromString@{convertFromString}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{convertFromString()}{convertFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}} el\+::\+Configuration\+Type\+Helper\+::convert\+From\+String (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{config\+Str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts from config\+Str to Configuration\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+Str} & Upper case string based configuration type. Lower case is also valid but providing upper case is recommended. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00214}{214}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00197}{el\+::\+Configuration\+String\+To\+Type\+Item\+::config\+String}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00201}{el\+::config\+String\+To\+Type\+Map}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00198}{el\+::\+Configuration\+String\+To\+Type\+Item\+::config\+Type}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00958}{el\+::base\+::utils\+::\+Str\+::c\+String\+Case\+Eq()}}, and \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a88183b946cc5f0e8c96b2e66e1c74a7e}{el\+::\+Unknown}}.
+
+\Hypertarget{classel_1_1ConfigurationTypeHelper_a003555d2261066614225d6d603ccf655}\label{classel_1_1ConfigurationTypeHelper_a003555d2261066614225d6d603ccf655} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!convertToString@{convertToString}}
+\index{convertToString@{convertToString}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{convertToString()}{convertToString()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} el\+::\+Configuration\+Type\+Helper\+::convert\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124}{Configuration\+Type}}}]{configuration\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts configuration type to associated const char\texorpdfstring{$\ast$}{*}. 
+
+\begin{DoxyReturn}{Returns}
+Upper case string based configuration type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00182}{182}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}{el\+::\+Enabled}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a1351017ac6423911223bc19a8cb7c653}{el\+::\+Filename}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a520d0db389f362bf79ef56ca0af3dcab}{el\+::\+Format}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124ac1b4aae5c168e64292c9aa87a124ae86}{el\+::\+Log\+Flush\+Threshold}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}{el\+::\+Max\+Log\+File\+Size}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124abe9e43d200c5698cb8519daed7035874}{el\+::\+Performance\+Tracking}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a945b6ef21f66457079a6ab7b6c3459f9}{el\+::\+Subsecond\+Precision}}, \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124acb76297988b895ca263f62728b32dbcc}{el\+::\+To\+File}}, and \mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a9b9a9244b0b26da988f9af8310ab899d}{el\+::\+To\+Standard\+Output}}.
+
+\Hypertarget{classel_1_1ConfigurationTypeHelper_a0b91c3c00c57483cbddca2748f477582}\label{classel_1_1ConfigurationTypeHelper_a0b91c3c00c57483cbddca2748f477582} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!forEachConfigType@{forEachConfigType}}
+\index{forEachConfigType@{forEachConfigType}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{forEachConfigType()}{forEachConfigType()}}
+{\footnotesize\ttfamily void el\+::\+Configuration\+Type\+Helper\+::for\+Each\+Config\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \texorpdfstring{$\ast$}{*}}]{start\+Index,  }\item[{const std\+::function$<$ bool(void)$>$ \&}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Applies specified function to each configuration type starting from start\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Index} & initial value to start the iteration from. This is passed by pointer and is left-\/shifted so this can be used inside function (fn) to represent current configuration type. \\
+\hline
+{\em fn} & function to apply with each configuration type. This bool represent whether or not to stop iterating through configurations. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00223}{223}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l00670}{k\+Max\+Valid}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1ConfigurationTypeHelper_aa02f3cefb127e7eb97d7e1dd7f51a12d}\label{classel_1_1ConfigurationTypeHelper_aa02f3cefb127e7eb97d7e1dd7f51a12d} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!kMaxValid@{kMaxValid}}
+\index{kMaxValid@{kMaxValid}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{kMaxValid}{kMaxValid}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} el\+::\+Configuration\+Type\+Helper\+::k\+Max\+Valid = static\+\_\+cast$<$\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}$>$(\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a4b35e615142d60db6383426f051e700b}{Configuration\+Type\+::\+Max\+Log\+File\+Size}})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Represents maximum valid configuration type. This is used internally and you should not need it. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00670}{670}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1ConfigurationTypeHelper_ab7266e698eb32dec2da285325a66e322}\label{classel_1_1ConfigurationTypeHelper_ab7266e698eb32dec2da285325a66e322} 
+\index{el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}!kMinValid@{kMinValid}}
+\index{kMinValid@{kMinValid}!el::ConfigurationTypeHelper@{el::ConfigurationTypeHelper}}
+\doxysubsubsection{\texorpdfstring{kMinValid}{kMinValid}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} el\+::\+Configuration\+Type\+Helper\+::k\+Min\+Valid = static\+\_\+cast$<$\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}$>$(\mbox{\hyperlink{namespaceel_a281f5db6d6163678bc68a8b23b59e124a00d23a76e43b46dae9ec7aa9dcbebb32}{Configuration\+Type\+::\+Enabled}})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Represents minimum valid configuration type. Useful when iterating through enum. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00668}{668}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\doxysection{el\+::base\+::threading Namespace Reference}
+\hypertarget{namespaceel_1_1base_1_1threading}{}\label{namespaceel_1_1base_1_1threading}\index{el::base::threading@{el::base::threading}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceel_1_1base_1_1threading_1_1internal}{internal}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{Thread\+Safe}}
+\begin{DoxyCompactList}\small\item\em Base of thread safe class, this class is inheritable-\/only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1threading_1_1internal_1_1NoMutex}{base\+::threading\+::internal\+::\+No\+Mutex}} \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{Mutex}}
+\item 
+typedef \mbox{\hyperlink{classel_1_1base_1_1threading_1_1internal_1_1NoScopedLock}{base\+::threading\+::internal\+::\+No\+Scoped\+Lock}}$<$ \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}} $>$ \mbox{\hyperlink{namespaceel_1_1base_1_1threading_a84bb1940fe98386c8907c1f4ceac5718}{Scoped\+Lock}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ad96866979e22305488efb0c25b58e837}{get\+Current\+Thread\+Id}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}\label{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320} 
+\index{el::base::threading@{el::base::threading}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!el::base::threading@{el::base::threading}}
+\doxysubsubsection{\texorpdfstring{Mutex}{Mutex}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classel_1_1base_1_1threading_1_1internal_1_1NoMutex}{base\+::threading\+::internal\+::\+No\+Mutex}} \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{el\+::base\+::threading\+::\+Mutex}}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00998}{998}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{namespaceel_1_1base_1_1threading_a84bb1940fe98386c8907c1f4ceac5718}\label{namespaceel_1_1base_1_1threading_a84bb1940fe98386c8907c1f4ceac5718} 
+\index{el::base::threading@{el::base::threading}!ScopedLock@{ScopedLock}}
+\index{ScopedLock@{ScopedLock}!el::base::threading@{el::base::threading}}
+\doxysubsubsection{\texorpdfstring{ScopedLock}{ScopedLock}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classel_1_1base_1_1threading_1_1internal_1_1NoScopedLock}{base\+::threading\+::internal\+::\+No\+Scoped\+Lock}}$<$\mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}}$>$ \mbox{\hyperlink{namespaceel_1_1base_1_1threading_a84bb1940fe98386c8907c1f4ceac5718}{el\+::base\+::threading\+::\+Scoped\+Lock}}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l00999}{999}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceel_1_1base_1_1threading_ad96866979e22305488efb0c25b58e837}\label{namespaceel_1_1base_1_1threading_ad96866979e22305488efb0c25b58e837} 
+\index{el::base::threading@{el::base::threading}!getCurrentThreadId@{getCurrentThreadId}}
+\index{getCurrentThreadId@{getCurrentThreadId}!el::base::threading@{el::base::threading}}
+\doxysubsubsection{\texorpdfstring{getCurrentThreadId()}{getCurrentThreadId()}}
+{\footnotesize\ttfamily static std\+::string el\+::base\+::threading\+::get\+Current\+Thread\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01033}{1033}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+

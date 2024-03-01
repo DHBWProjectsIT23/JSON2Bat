@@ -1,0 +1,167 @@
+\doxysection{el\+::base\+::Message\+Builder Class Reference}
+\hypertarget{classel_1_1base_1_1MessageBuilder}{}\label{classel_1_1base_1_1MessageBuilder}\index{el::base::MessageBuilder@{el::base::MessageBuilder}}
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_ac0b1b1be970ceab13eb023ef0399ef87}{Message\+Builder}} (void)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a61729d9b620eb7b3e6ac1af69364553c}{initialize}} (\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}logger)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a70767511e88efe632394e73c948702f7}{operator$<$$<$}} (const std\+::string \&msg)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a8ad9e03d9c86d7926121aa80ae47871c}{operator$<$$<$}} (const std\+::wstring \&msg)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a8fc274c8a031e1913854d554496d737f}{operator$<$$<$}} (const wchar\+\_\+t \texorpdfstring{$\ast$}{*}msg)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a9d127456bfae28901c1cfeaf036faffd}{operator$<$$<$}} (std\+::ostream \&(\texorpdfstring{$\ast$}{*}OStream\+Mani)(std\+::ostream \&))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Iterator $>$ }\\\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a8085578487f138554c2e6c8330a98679}{write\+Iterator}} (Iterator begin\+\_\+, Iterator end\+\_\+, std\+::size\+\_\+t size\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Class $>$ }\\\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a60892fab065024cd36e76c0ee60442ae}{m\+\_\+logger}}
+\item 
+const \mbox{\hyperlink{namespaceel_1_1base_1_1type_ae9fe1ba101c2444b8cad9a2484b54907}{base\+::type\+::char\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder_a25c5389dcc4cbdb874db9d4a3514000d}{m\+\_\+container\+Log\+Separator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02862}{2862}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1base_1_1MessageBuilder_ac0b1b1be970ceab13eb023ef0399ef87}\label{classel_1_1base_1_1MessageBuilder_ac0b1b1be970ceab13eb023ef0399ef87} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!MessageBuilder@{MessageBuilder}}
+\index{MessageBuilder@{MessageBuilder}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{MessageBuilder()}{MessageBuilder()}}
+{\footnotesize\ttfamily el\+::base\+::\+Message\+Builder\+::\+Message\+Builder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02864}{2864}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l03151}{m\+\_\+container\+Log\+Separator}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l03150}{m\+\_\+logger}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a61729d9b620eb7b3e6ac1af69364553c}\label{classel_1_1base_1_1MessageBuilder_a61729d9b620eb7b3e6ac1af69364553c} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!initialize@{initialize}}
+\index{initialize@{initialize}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Message\+Builder\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}}]{logger }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l02505}{2505}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l03150}{m\+\_\+logger}}.
+
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a70767511e88efe632394e73c948702f7}\label{classel_1_1base_1_1MessageBuilder_a70767511e88efe632394e73c948702f7} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& el\+::base\+::\+Message\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02876}{2876}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a8ad9e03d9c86d7926121aa80ae47871c}\label{classel_1_1base_1_1MessageBuilder_a8ad9e03d9c86d7926121aa80ae47871c} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& el\+::base\+::\+Message\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02893}{2893}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a8fc274c8a031e1913854d554496d737f}\label{classel_1_1base_1_1MessageBuilder_a8fc274c8a031e1913854d554496d737f} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& el\+::base\+::\+Message\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l02511}{2511}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00074}{el\+::base\+::consts\+::k\+Null\+Pointer}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l03150}{m\+\_\+logger}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l02339}{el\+::\+Logger\+::stream()}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l01014}{el\+::base\+::utils\+::\+Str\+::wchar\+Ptr\+To\+Char\+Ptr()}}.
+
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a9d127456bfae28901c1cfeaf036faffd}\label{classel_1_1base_1_1MessageBuilder_a9d127456bfae28901c1cfeaf036faffd} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& el\+::base\+::\+Message\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&(\texorpdfstring{$\ast$}{*})(std\+::ostream \&)}]{OStream\+Mani }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02898}{2898}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l03150}{m\+\_\+logger}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02339}{el\+::\+Logger\+::stream()}}.
+
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a8085578487f138554c2e6c8330a98679}\label{classel_1_1base_1_1MessageBuilder_a8085578487f138554c2e6c8330a98679} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!writeIterator@{writeIterator}}
+\index{writeIterator@{writeIterator}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{writeIterator()}{writeIterator()}}
+{\footnotesize\ttfamily template$<$class Iterator $>$ \\
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{Message\+Builder}} \& el\+::base\+::\+Message\+Builder\+::write\+Iterator (\begin{DoxyParamCaption}\item[{Iterator}]{begin\+\_\+,  }\item[{Iterator}]{end\+\_\+,  }\item[{std\+::size\+\_\+t}]{size\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03154}{3154}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l00735}{el\+::base\+::consts\+::k\+Max\+Log\+Per\+Container}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l03151}{m\+\_\+container\+Log\+Separator}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l03150}{m\+\_\+logger}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02339}{el\+::\+Logger\+::stream()}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a25c5389dcc4cbdb874db9d4a3514000d}\label{classel_1_1base_1_1MessageBuilder_a25c5389dcc4cbdb874db9d4a3514000d} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!m\_containerLogSeparator@{m\_containerLogSeparator}}
+\index{m\_containerLogSeparator@{m\_containerLogSeparator}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_containerLogSeparator}{m\_containerLogSeparator}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceel_1_1base_1_1type_ae9fe1ba101c2444b8cad9a2484b54907}{base\+::type\+::char\+\_\+t}}\texorpdfstring{$\ast$}{*} el\+::base\+::\+Message\+Builder\+::m\+\_\+container\+Log\+Separator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03151}{3151}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1MessageBuilder_a60892fab065024cd36e76c0ee60442ae}\label{classel_1_1base_1_1MessageBuilder_a60892fab065024cd36e76c0ee60442ae} 
+\index{el::base::MessageBuilder@{el::base::MessageBuilder}!m\_logger@{m\_logger}}
+\index{m\_logger@{m\_logger}!el::base::MessageBuilder@{el::base::MessageBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_logger}{m\_logger}}
+{\footnotesize\ttfamily template$<$class Class $>$ \\
+\mbox{\hyperlink{classel_1_1Logger}{Logger}}\texorpdfstring{$\ast$}{*} el\+::base\+::\+Message\+Builder\+::m\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03150}{3150}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

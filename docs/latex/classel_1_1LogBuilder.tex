@@ -1,0 +1,132 @@
+\doxysection{el\+::Log\+Builder Class Reference}
+\hypertarget{classel_1_1LogBuilder}{}\label{classel_1_1LogBuilder}\index{el::LogBuilder@{el::LogBuilder}}
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::Log\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classel_1_1LogBuilder}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1LogBuilder_a3b22af8867773e50b0fdebd507ca0337}{Log\+Builder}} ()
+\item 
+virtual \mbox{\hyperlink{classel_1_1LogBuilder_ae45008e1c004367ef611b22662e7ed72}{\texorpdfstring{$\sim$}{\string~}\+Log\+Builder}} (void)
+\item 
+virtual \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \mbox{\hyperlink{classel_1_1LogBuilder_a633b373a3bb9d3e17bdd664aeba4dbc8}{build}} (const \mbox{\hyperlink{classel_1_1LogMessage}{Log\+Message}} \texorpdfstring{$\ast$}{*}log\+Message, bool append\+New\+Line) const =0
+\item 
+void \mbox{\hyperlink{classel_1_1LogBuilder_a229244f323f25bdbd7725f8bbf983a17}{convert\+To\+Colored\+Output}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \texorpdfstring{$\ast$}{*}log\+Line, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classel_1_1LogBuilder_af102ce9fe1f2018a4010480a02b57c6d}{m\+\_\+term\+Supports\+Color}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1LogBuilder_a42b1de96d584ae4fecbfc2b9aff95052}{el\+::base\+::\+Default\+Log\+Dispatch\+Callback}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Private Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1NoCopy}{el\+::base\+::\+No\+Copy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1NoCopy_a8a0bc86c5c2b921a3c5fcf6e4d2670d3}{No\+Copy}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02197}{2197}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1LogBuilder_a3b22af8867773e50b0fdebd507ca0337}\label{classel_1_1LogBuilder_a3b22af8867773e50b0fdebd507ca0337} 
+\index{el::LogBuilder@{el::LogBuilder}!LogBuilder@{LogBuilder}}
+\index{LogBuilder@{LogBuilder}!el::LogBuilder@{el::LogBuilder}}
+\doxysubsubsection{\texorpdfstring{LogBuilder()}{LogBuilder()}}
+{\footnotesize\ttfamily el\+::\+Log\+Builder\+::\+Log\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02199}{2199}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02206}{m\+\_\+term\+Supports\+Color}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l01141}{el\+::base\+::utils\+::\+OS\+::term\+Supports\+Color()}}.
+
+\Hypertarget{classel_1_1LogBuilder_ae45008e1c004367ef611b22662e7ed72}\label{classel_1_1LogBuilder_ae45008e1c004367ef611b22662e7ed72} 
+\index{el::LogBuilder@{el::LogBuilder}!````~LogBuilder@{\texorpdfstring{$\sim$}{\string~}LogBuilder}}
+\index{````~LogBuilder@{\texorpdfstring{$\sim$}{\string~}LogBuilder}!el::LogBuilder@{el::LogBuilder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LogBuilder()}{\string~LogBuilder()}}
+{\footnotesize\ttfamily virtual el\+::\+Log\+Builder\+::\texorpdfstring{$\sim$}{\string~}\+Log\+Builder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02200}{2200}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1LogBuilder_a633b373a3bb9d3e17bdd664aeba4dbc8}\label{classel_1_1LogBuilder_a633b373a3bb9d3e17bdd664aeba4dbc8} 
+\index{el::LogBuilder@{el::LogBuilder}!build@{build}}
+\index{build@{build}!el::LogBuilder@{el::LogBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} el\+::\+Log\+Builder\+::build (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1LogMessage}{Log\+Message}} \texorpdfstring{$\ast$}{*}}]{log\+Message,  }\item[{bool}]{append\+New\+Line }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classel_1_1base_1_1DefaultLogBuilder_a9ee7983bc51f1fac887806e909ecbbbd}{el\+::base\+::\+Default\+Log\+Builder}}.
+
+\Hypertarget{classel_1_1LogBuilder_a229244f323f25bdbd7725f8bbf983a17}\label{classel_1_1LogBuilder_a229244f323f25bdbd7725f8bbf983a17} 
+\index{el::LogBuilder@{el::LogBuilder}!convertToColoredOutput@{convertToColoredOutput}}
+\index{convertToColoredOutput@{convertToColoredOutput}!el::LogBuilder@{el::LogBuilder}}
+\doxysubsubsection{\texorpdfstring{convertToColoredOutput()}{convertToColoredOutput()}}
+{\footnotesize\ttfamily void el\+::\+Log\+Builder\+::convert\+To\+Colored\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{log\+Line,  }\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l00581}{581}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36aa603905470e2a5b8c13e96b579ef0dba}{el\+::\+Debug}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a902b0d55fddef6f8d651fe1035b7d4bd}{el\+::\+Error}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a882384ec38ce8d9582b57e70861730e4}{el\+::\+Fatal}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}{el\+::\+Info}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l02206}{m\+\_\+term\+Supports\+Color}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36add4ec0ac4e58f7c32a01244ae91150b1}{el\+::\+Trace}}, and \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}{el\+::\+Warning}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classel_1_1LogBuilder_a42b1de96d584ae4fecbfc2b9aff95052}\label{classel_1_1LogBuilder_a42b1de96d584ae4fecbfc2b9aff95052} 
+\index{el::LogBuilder@{el::LogBuilder}!el::base::DefaultLogDispatchCallback@{el::base::DefaultLogDispatchCallback}}
+\index{el::base::DefaultLogDispatchCallback@{el::base::DefaultLogDispatchCallback}!el::LogBuilder@{el::LogBuilder}}
+\doxysubsubsection{\texorpdfstring{el::base::DefaultLogDispatchCallback}{el::base::DefaultLogDispatchCallback}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1base_1_1DefaultLogDispatchCallback}{el\+::base\+::\+Default\+Log\+Dispatch\+Callback}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02207}{2207}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1LogBuilder_af102ce9fe1f2018a4010480a02b57c6d}\label{classel_1_1LogBuilder_af102ce9fe1f2018a4010480a02b57c6d} 
+\index{el::LogBuilder@{el::LogBuilder}!m\_termSupportsColor@{m\_termSupportsColor}}
+\index{m\_termSupportsColor@{m\_termSupportsColor}!el::LogBuilder@{el::LogBuilder}}
+\doxysubsubsection{\texorpdfstring{m\_termSupportsColor}{m\_termSupportsColor}}
+{\footnotesize\ttfamily bool el\+::\+Log\+Builder\+::m\+\_\+term\+Supports\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02206}{2206}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

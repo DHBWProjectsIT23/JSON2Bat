@@ -1,0 +1,247 @@
+\doxysection{el\+::base\+::VRegistry Class Reference}
+\hypertarget{classel_1_1base_1_1VRegistry}{}\label{classel_1_1base_1_1VRegistry}\index{el::base::VRegistry@{el::base::VRegistry}}
+
+
+Represents registries for verbose logging.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::base\+::VRegistry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1base_1_1VRegistry}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1VRegistry_ac4b36d32d3722238024480ce66c52ad0}{VRegistry}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} \mbox{\hyperlink{classel_1_1base_1_1VRegistry_aa39f3774ffc25a2ad18bb86c8c4b8b7c}{level}}, \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \texorpdfstring{$\ast$}{*}p\+Flags)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1VRegistry_aea4fb84a03363080ee2501193084f71f}{set\+Level}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} \mbox{\hyperlink{classel_1_1base_1_1VRegistry_aa39f3774ffc25a2ad18bb86c8c4b8b7c}{level}})
+\begin{DoxyCompactList}\small\item\em Sets verbose level. Accepted range is 0-\/9. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} \mbox{\hyperlink{classel_1_1base_1_1VRegistry_aa39f3774ffc25a2ad18bb86c8c4b8b7c}{level}} (void) const
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1VRegistry_a52de90db82e57827ac3d3994f70c17cf}{clear\+Modules}} (void)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1VRegistry_a65e202cc547cd11231d3ea0fb70765d0}{set\+Modules}} (const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classel_1_1base_1_1VRegistry_a9b894fe1fb857281413bf619886ab919}{modules}})
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1VRegistry_a13b725e3da8935fce5cf3c16fd3a2ff9}{allowed}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} vlevel, const char \texorpdfstring{$\ast$}{*}file)
+\item 
+const std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} $>$ \& \mbox{\hyperlink{classel_1_1base_1_1VRegistry_a9b894fe1fb857281413bf619886ab919}{modules}} (void) const
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1VRegistry_a811e62d7d016a0714b4363f47216a9da}{set\+From\+Args}} (const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1CommandLineArgs}{base\+::utils\+::\+Command\+Line\+Args}} \texorpdfstring{$\ast$}{*}command\+Line\+Args)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1VRegistry_ad7a8e939daf6b3d6b949def0a9f65a1f}{v\+Modules\+Enabled}} (void)
+\begin{DoxyCompactList}\small\item\em Whether or not v\+Modules enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a59db719b214f7118f0919846a85077bf}{acquire\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a95bb166242b9691f861274a9b8ced2d9}{release\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}} \& \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_ad265274e935408d2444cfd253f28965a}{lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} \mbox{\hyperlink{classel_1_1base_1_1VRegistry_a604df3aa599dc05433ede629d7448146}{m\+\_\+level}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1VRegistry_aaaa9259d6c6850a83a13a50c112d9b35}{m\+\_\+p\+Flags}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} $>$ \mbox{\hyperlink{classel_1_1base_1_1VRegistry_ab6abda88f00c32028eadf356fbc98fb9}{m\+\_\+modules}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_aba1e98467da50d452a30672aabb6752d}{Thread\+Safe}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a97efb9503004202402178a4d3f5940f0}{\texorpdfstring{$\sim$}{\string~}\+Thread\+Safe}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1NoCopy}{el\+::base\+::\+No\+Copy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1NoCopy_a8a0bc86c5c2b921a3c5fcf6e4d2670d3}{No\+Copy}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents registries for verbose logging. 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02417}{2417}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1base_1_1VRegistry_ac4b36d32d3722238024480ce66c52ad0}\label{classel_1_1base_1_1VRegistry_ac4b36d32d3722238024480ce66c52ad0} 
+\index{el::base::VRegistry@{el::base::VRegistry}!VRegistry@{VRegistry}}
+\index{VRegistry@{VRegistry}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{VRegistry()}{VRegistry()}}
+{\footnotesize\ttfamily el\+::base\+::\+VRegistry\+::\+VRegistry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}}}]{level,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \texorpdfstring{$\ast$}{*}}]{p\+Flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01935}{1935}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02449}{m\+\_\+level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02450}{m\+\_\+p\+Flags}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1base_1_1VRegistry_a13b725e3da8935fce5cf3c16fd3a2ff9}\label{classel_1_1base_1_1VRegistry_a13b725e3da8935fce5cf3c16fd3a2ff9} 
+\index{el::base::VRegistry@{el::base::VRegistry}!allowed@{allowed}}
+\index{allowed@{allowed}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{allowed()}{allowed()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+VRegistry\+::allowed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}}}]{vlevel,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l02019}{2019}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cbac80d746c4296fe8e99ed032f5ffef31e}{el\+::\+Allow\+Verbose\+If\+Module\+Not\+Specified}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00841}{el\+::base\+::utils\+::\+File\+::build\+Base\+Filename()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l00762}{el\+::base\+::consts\+::k\+Source\+Filename\+Max\+Length}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l02449}{m\+\_\+level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02450}{m\+\_\+p\+Flags}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_a52de90db82e57827ac3d3994f70c17cf}\label{classel_1_1base_1_1VRegistry_a52de90db82e57827ac3d3994f70c17cf} 
+\index{el::base::VRegistry@{el::base::VRegistry}!clearModules@{clearModules}}
+\index{clearModules@{clearModules}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{clearModules()}{clearModules()}}
+{\footnotesize\ttfamily void el\+::base\+::\+VRegistry\+::clear\+Modules (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02428}{2428}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_aa39f3774ffc25a2ad18bb86c8c4b8b7c}\label{classel_1_1base_1_1VRegistry_aa39f3774ffc25a2ad18bb86c8c4b8b7c} 
+\index{el::base::VRegistry@{el::base::VRegistry}!level@{level}}
+\index{level@{level}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{level()}{level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} el\+::base\+::\+VRegistry\+::level (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02424}{2424}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02449}{m\+\_\+level}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_a9b894fe1fb857281413bf619886ab919}\label{classel_1_1base_1_1VRegistry_a9b894fe1fb857281413bf619886ab919} 
+\index{el::base::VRegistry@{el::base::VRegistry}!modules@{modules}}
+\index{modules@{modules}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{modules()}{modules()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} $>$ \& el\+::base\+::\+VRegistry\+::modules (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02437}{2437}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_a811e62d7d016a0714b4363f47216a9da}\label{classel_1_1base_1_1VRegistry_a811e62d7d016a0714b4363f47216a9da} 
+\index{el::base::VRegistry@{el::base::VRegistry}!setFromArgs@{setFromArgs}}
+\index{setFromArgs@{setFromArgs}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{setFromArgs()}{setFromArgs()}}
+{\footnotesize\ttfamily void el\+::base\+::\+VRegistry\+::set\+From\+Args (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1CommandLineArgs}{base\+::utils\+::\+Command\+Line\+Args}} \texorpdfstring{$\ast$}{*}}]{command\+Line\+Args }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l02039}{2039}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01351}{el\+::base\+::utils\+::\+Command\+Line\+Args\+::get\+Param\+Value()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01356}{el\+::base\+::utils\+::\+Command\+Line\+Args\+::has\+Param()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01347}{el\+::base\+::utils\+::\+Command\+Line\+Args\+::has\+Param\+With\+Value()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00077}{el\+::base\+::consts\+::k\+Max\+Verbose\+Level}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01939}{set\+Level()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01947}{set\+Modules()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02444}{v\+Modules\+Enabled()}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_aea4fb84a03363080ee2501193084f71f}\label{classel_1_1base_1_1VRegistry_aea4fb84a03363080ee2501193084f71f} 
+\index{el::base::VRegistry@{el::base::VRegistry}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void el\+::base\+::\+VRegistry\+::set\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Sets verbose level. Accepted range is 0-\/9. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01939}{1939}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l00077}{el\+::base\+::consts\+::k\+Max\+Verbose\+Level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02449}{m\+\_\+level}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_a65e202cc547cd11231d3ea0fb70765d0}\label{classel_1_1base_1_1VRegistry_a65e202cc547cd11231d3ea0fb70765d0} 
+\index{el::base::VRegistry@{el::base::VRegistry}!setModules@{setModules}}
+\index{setModules@{setModules}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{setModules()}{setModules()}}
+{\footnotesize\ttfamily void el\+::base\+::\+VRegistry\+::set\+Modules (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{modules }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01947}{1947}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba18a8e65b84ca0cc82451b5e155d7aeb4}{el\+::\+Disable\+VModules\+Extensions}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00904}{el\+::base\+::utils\+::\+Str\+::ends\+With()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02450}{m\+\_\+p\+Flags}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_ad7a8e939daf6b3d6b949def0a9f65a1f}\label{classel_1_1base_1_1VRegistry_ad7a8e939daf6b3d6b949def0a9f65a1f} 
+\index{el::base::VRegistry@{el::base::VRegistry}!vModulesEnabled@{vModulesEnabled}}
+\index{vModulesEnabled@{vModulesEnabled}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{vModulesEnabled()}{vModulesEnabled()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+VRegistry\+::v\+Modules\+Enabled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Whether or not v\+Modules enabled. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02444}{2444}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_a2784aacd04cb7816ac1c0b20fcbf83cba22cae5066e8e0623cb90e20a18abb631}{el\+::\+Disable\+VModules}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02450}{m\+\_\+p\+Flags}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1base_1_1VRegistry_a604df3aa599dc05433ede629d7448146}\label{classel_1_1base_1_1VRegistry_a604df3aa599dc05433ede629d7448146} 
+\index{el::base::VRegistry@{el::base::VRegistry}!m\_level@{m\_level}}
+\index{m\_level@{m\_level}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{m\_level}{m\_level}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} el\+::base\+::\+VRegistry\+::m\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02449}{2449}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_ab6abda88f00c32028eadf356fbc98fb9}\label{classel_1_1base_1_1VRegistry_ab6abda88f00c32028eadf356fbc98fb9} 
+\index{el::base::VRegistry@{el::base::VRegistry}!m\_modules@{m\_modules}}
+\index{m\_modules@{m\_modules}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{m\_modules}{m\_modules}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}}$>$ el\+::base\+::\+VRegistry\+::m\+\_\+modules\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02451}{2451}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1VRegistry_aaaa9259d6c6850a83a13a50c112d9b35}\label{classel_1_1base_1_1VRegistry_aaaa9259d6c6850a83a13a50c112d9b35} 
+\index{el::base::VRegistry@{el::base::VRegistry}!m\_pFlags@{m\_pFlags}}
+\index{m\_pFlags@{m\_pFlags}!el::base::VRegistry@{el::base::VRegistry}}
+\doxysubsubsection{\texorpdfstring{m\_pFlags}{m\_pFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}}\texorpdfstring{$\ast$}{*} el\+::base\+::\+VRegistry\+::m\+\_\+p\+Flags\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02450}{2450}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

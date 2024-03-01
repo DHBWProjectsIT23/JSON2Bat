@@ -1,0 +1,136 @@
+\doxysection{el\+::Callback\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classel_1_1Callback}{}\label{classel_1_1Callback}\index{el::Callback$<$ T $>$@{el::Callback$<$ T $>$}}
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::Callback\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1Callback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1Callback_a58b0b0516f68247681a6a5da21a9d953}{Callback}} (void)
+\item 
+bool \mbox{\hyperlink{classel_1_1Callback_aab4afe42d3f4b6282e69e90efdaa8ea7}{enabled}} (void) const
+\item 
+void \mbox{\hyperlink{classel_1_1Callback_a05e68cb0b5ea4423913fa2ec4ea306b4}{set\+Enabled}} (bool \mbox{\hyperlink{classel_1_1Callback_aab4afe42d3f4b6282e69e90efdaa8ea7}{enabled}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1Callback_a8997c7971d65062c374ef24e653061be}{handle}} (const T \texorpdfstring{$\ast$}{*}handle\+Ptr)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe}{el\+::base\+::threading\+::\+Thread\+Safe}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_aba1e98467da50d452a30672aabb6752d}{Thread\+Safe}} (void)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a97efb9503004202402178a4d3f5940f0}{\texorpdfstring{$\sim$}{\string~}\+Thread\+Safe}} (void)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a59db719b214f7118f0919846a85077bf}{acquire\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_a95bb166242b9691f861274a9b8ced2d9}{release\+Lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\item 
+virtual \mbox{\hyperlink{namespaceel_1_1base_1_1threading_ab9400eb234a82878e8458a65f9774320}{base\+::threading\+::\+Mutex}} \& \mbox{\hyperlink{classel_1_1base_1_1threading_1_1ThreadSafe_ad265274e935408d2444cfd253f28965a}{lock}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classel_1_1Callback_a3034988053eff262f06a551ea68d699c}{m\+\_\+enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class el\+::\+Callback$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02144}{2144}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1Callback_a58b0b0516f68247681a6a5da21a9d953}\label{classel_1_1Callback_a58b0b0516f68247681a6a5da21a9d953} 
+\index{el::Callback$<$ T $>$@{el::Callback$<$ T $>$}!Callback@{Callback}}
+\index{Callback@{Callback}!el::Callback$<$ T $>$@{el::Callback$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classel_1_1Callback}{el\+::\+Callback}}$<$ T $>$\+::\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02146}{2146}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02157}{el\+::\+Callback$<$ T $>$\+::m\+\_\+enabled}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1Callback_aab4afe42d3f4b6282e69e90efdaa8ea7}\label{classel_1_1Callback_aab4afe42d3f4b6282e69e90efdaa8ea7} 
+\index{el::Callback$<$ T $>$@{el::Callback$<$ T $>$}!enabled@{enabled}}
+\index{enabled@{enabled}!el::Callback$<$ T $>$@{el::Callback$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enabled()}{enabled()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classel_1_1Callback}{el\+::\+Callback}}$<$ T $>$\+::enabled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02147}{2147}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02157}{el\+::\+Callback$<$ T $>$\+::m\+\_\+enabled}}.
+
+\Hypertarget{classel_1_1Callback_a8997c7971d65062c374ef24e653061be}\label{classel_1_1Callback_a8997c7971d65062c374ef24e653061be} 
+\index{el::Callback$<$ T $>$@{el::Callback$<$ T $>$}!handle@{handle}}
+\index{handle@{handle}!el::Callback$<$ T $>$@{el::Callback$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classel_1_1Callback}{el\+::\+Callback}}$<$ T $>$\+::handle (\begin{DoxyParamCaption}\item[{const T \texorpdfstring{$\ast$}{*}}]{handle\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classel_1_1LogDispatchCallback_ae6665785add9325f7b30512534ea1e9d}{el\+::\+Log\+Dispatch\+Callback}}, and \mbox{\hyperlink{classel_1_1base_1_1DefaultLogDispatchCallback_acdac30f202c245500e6d94c55eee6d95}{el\+::base\+::\+Default\+Log\+Dispatch\+Callback}}.
+
+\Hypertarget{classel_1_1Callback_a05e68cb0b5ea4423913fa2ec4ea306b4}\label{classel_1_1Callback_a05e68cb0b5ea4423913fa2ec4ea306b4} 
+\index{el::Callback$<$ T $>$@{el::Callback$<$ T $>$}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!el::Callback$<$ T $>$@{el::Callback$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classel_1_1Callback}{el\+::\+Callback}}$<$ T $>$\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02150}{2150}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l02157}{el\+::\+Callback$<$ T $>$\+::m\+\_\+enabled}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1Callback_a3034988053eff262f06a551ea68d699c}\label{classel_1_1Callback_a3034988053eff262f06a551ea68d699c} 
+\index{el::Callback$<$ T $>$@{el::Callback$<$ T $>$}!m\_enabled@{m\_enabled}}
+\index{m\_enabled@{m\_enabled}!el::Callback$<$ T $>$@{el::Callback$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_enabled}{m\_enabled}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classel_1_1Callback}{el\+::\+Callback}}$<$ T $>$\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l02157}{2157}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\end{DoxyCompactItemize}

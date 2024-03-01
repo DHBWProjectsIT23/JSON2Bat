@@ -1,0 +1,467 @@
+\doxysection{el\+::base\+::Log\+Format Class Reference}
+\hypertarget{classel_1_1base_1_1LogFormat}{}\label{classel_1_1base_1_1LogFormat}\index{el::base::LogFormat@{el::base::LogFormat}}
+
+
+Represents log format containing flags and date format. This is used internally to start initial log.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::base\+::Log\+Format\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1base_1_1LogFormat}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1LogFormat_a15469c6f25aa4a4770b1d2aeaabba145}{Log\+Format}} (void)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1LogFormat_a746a49231f1b046803dd2144ae2a2c76}{Log\+Format}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_aeacb2c9d313ce5713b3e85e03a4baab5}{level}}, const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \&\mbox{\hyperlink{classel_1_1base_1_1LogFormat_af828182c99d78bd7861f1dfde46a48f9}{format}})
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1LogFormat_a8cc88ab095024bcfb90dd3ad7208f2ef}{Log\+Format}} (const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&log\+Format)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1LogFormat_a697d52d55c6b6c6b8e6d5ceb37d66c19}{Log\+Format}} (\mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&\&log\+Format)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \& \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a3ee763fae4bb3e268374b93b457f7b9f}{operator=}} (const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&log\+Format)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a09d5b42b49f00fb37edafef1102daf0c}{\texorpdfstring{$\sim$}{\string~}\+Log\+Format}} (void)
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a31e85c6f74da6fe36d156a89a6c7fb91}{operator==}} (const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&other)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1LogFormat_ab7c1b15cfdad24cfbc6dbced8b9d66eb}{parse\+From\+Format}} (const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \&\mbox{\hyperlink{classel_1_1base_1_1LogFormat_a87a3923aaa122c54960a53992e58bd9f}{user\+Format}})
+\begin{DoxyCompactList}\small\item\em Updates format to be used while logging. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_aeacb2c9d313ce5713b3e85e03a4baab5}{level}} (void) const
+\item 
+const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \& \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a87a3923aaa122c54960a53992e58bd9f}{user\+Format}} (void) const
+\item 
+const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \& \mbox{\hyperlink{classel_1_1base_1_1LogFormat_af828182c99d78bd7861f1dfde46a48f9}{format}} (void) const
+\item 
+const std\+::string \& \mbox{\hyperlink{classel_1_1base_1_1LogFormat_ae98482dba4c976a9961230159d875602}{date\+Time\+Format}} (void) const
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_ae4fc4ce8c79267d8e50161e0f5f27e46}{flags}} (void) const
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1LogFormat_ab52a480241cd721b553f43bd75686a80}{has\+Flag}} (\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}{base\+::\+Format\+Flags}} flag) const
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1LogFormat_af0d3d0e6c080f67d3cf1bbc7ae106b49}{log}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_a74ea109bf34d1c44926837fb0830f445}{el\+::base\+::type\+::ostream\+\_\+t}} \&os) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1Loggable}{el\+::\+Loggable}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classel_1_1Loggable_a6891b802d139da4041edf9e36d38e6c4}{\texorpdfstring{$\sim$}{\string~}\+Loggable}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a966bed1ee6f8597152d08d4ed70a5855}{update\+Date\+Format}} (std\+::size\+\_\+t index, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \&curr\+Format) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Updates date time format if available in curr\+Format. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classel_1_1base_1_1LogFormat_aa3c2ddecf237d0ec3eca4b2a3a442e67}{update\+Format\+Spec}} (void) \mbox{\hyperlink{easylogging_09_09_8h_a2f812449f8d3355cf5b03ceb2ee5021b}{ELPP\+\_\+\+FINAL}}
+\begin{DoxyCompactList}\small\item\em Updates level from format. This is so that we dont have to do it at log-\/writing-\/time. It uses m\+\_\+format and m\+\_\+level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classel_1_1base_1_1LogFormat_ae55910f533a6eb3b41eb75b131e522bf}{add\+Flag}} (\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}{base\+::\+Format\+Flags}} flag)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a08d9991b9db478f2351907bb9cad76d2}{m\+\_\+level}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_aea94035d71cb2e50db42e42ab2774ac0}{m\+\_\+user\+Format}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_ae738782f79da58139056952dee34570e}{m\+\_\+format}}
+\item 
+std\+::string \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a4a11e7bb1e70f6997e628d51b232848c}{m\+\_\+date\+Time\+Format}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} \mbox{\hyperlink{classel_1_1base_1_1LogFormat_af0436f51f1cd1ababbbda3378f1541d3}{m\+\_\+flags}}
+\item 
+std\+::string \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a04d5499a575f2bed63fe634c51a7033c}{m\+\_\+current\+User}}
+\item 
+std\+::string \mbox{\hyperlink{classel_1_1base_1_1LogFormat_a2b04c55f10968f330e1a887a8bbd1876}{m\+\_\+current\+Host}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classel_1_1base_1_1LogFormat_aa78553f3fecc0d9551408dfd7aa7f737}{el\+::\+Logger}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents log format containing flags and date format. This is used internally to start initial log. 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01575}{1575}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1base_1_1LogFormat_a15469c6f25aa4a4770b1d2aeaabba145}\label{classel_1_1base_1_1LogFormat_a15469c6f25aa4a4770b1d2aeaabba145} 
+\index{el::base::LogFormat@{el::base::LogFormat}!LogFormat@{LogFormat}}
+\index{LogFormat@{LogFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{LogFormat()}{LogFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily el\+::base\+::\+Log\+Format\+::\+Log\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01430}{1430}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01128}{el\+::base\+::utils\+::\+OS\+::current\+Host()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01115}{el\+::base\+::utils\+::\+OS\+::current\+User()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{m\+\_\+current\+Host}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{m\+\_\+current\+User}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}, and \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a88183b946cc5f0e8c96b2e66e1c74a7e}{el\+::\+Unknown}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a746a49231f1b046803dd2144ae2a2c76}\label{classel_1_1base_1_1LogFormat_a746a49231f1b046803dd2144ae2a2c76} 
+\index{el::base::LogFormat@{el::base::LogFormat}!LogFormat@{LogFormat}}
+\index{LogFormat@{LogFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{LogFormat()}{LogFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily el\+::base\+::\+Log\+Format\+::\+Log\+Format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \&}]{format }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01440}{1440}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8cc_source_l01128}{el\+::base\+::utils\+::\+OS\+::current\+Host()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01115}{el\+::base\+::utils\+::\+OS\+::current\+User()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{m\+\_\+current\+Host}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{m\+\_\+current\+User}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}, and \mbox{\hyperlink{easylogging_09_09_8cc_source_l01485}{parse\+From\+Format()}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a8cc88ab095024bcfb90dd3ad7208f2ef}\label{classel_1_1base_1_1LogFormat_a8cc88ab095024bcfb90dd3ad7208f2ef} 
+\index{el::base::LogFormat@{el::base::LogFormat}!LogFormat@{LogFormat}}
+\index{LogFormat@{LogFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{LogFormat()}{LogFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily el\+::base\+::\+Log\+Format\+::\+Log\+Format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&}]{log\+Format }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01446}{1446}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{m\+\_\+current\+Host}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{m\+\_\+current\+User}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a697d52d55c6b6c6b8e6d5ceb37d66c19}\label{classel_1_1base_1_1LogFormat_a697d52d55c6b6c6b8e6d5ceb37d66c19} 
+\index{el::base::LogFormat@{el::base::LogFormat}!LogFormat@{LogFormat}}
+\index{LogFormat@{LogFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{LogFormat()}{LogFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily el\+::base\+::\+Log\+Format\+::\+Log\+Format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&\&}]{log\+Format }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01456}{1456}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{m\+\_\+current\+Host}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{m\+\_\+current\+User}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a09d5b42b49f00fb37edafef1102daf0c}\label{classel_1_1base_1_1LogFormat_a09d5b42b49f00fb37edafef1102daf0c} 
+\index{el::base::LogFormat@{el::base::LogFormat}!````~LogFormat@{\texorpdfstring{$\sim$}{\string~}LogFormat}}
+\index{````~LogFormat@{\texorpdfstring{$\sim$}{\string~}LogFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LogFormat()}{\string~LogFormat()}}
+{\footnotesize\ttfamily virtual el\+::base\+::\+Log\+Format\+::\texorpdfstring{$\sim$}{\string~}\+Log\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01582}{1582}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1base_1_1LogFormat_ae55910f533a6eb3b41eb75b131e522bf}\label{classel_1_1base_1_1LogFormat_ae55910f533a6eb3b41eb75b131e522bf} 
+\index{el::base::LogFormat@{el::base::LogFormat}!addFlag@{addFlag}}
+\index{addFlag@{addFlag}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{addFlag()}{addFlag()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Log\+Format\+::add\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}{base\+::\+Format\+Flags}}}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01626}{1626}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_ae98482dba4c976a9961230159d875602}\label{classel_1_1base_1_1LogFormat_ae98482dba4c976a9961230159d875602} 
+\index{el::base::LogFormat@{el::base::LogFormat}!dateTimeFormat@{dateTimeFormat}}
+\index{dateTimeFormat@{dateTimeFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{dateTimeFormat()}{dateTimeFormat()}}
+{\footnotesize\ttfamily const std\+::string \& el\+::base\+::\+Log\+Format\+::date\+Time\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01601}{1601}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_ae4fc4ce8c79267d8e50161e0f5f27e46}\label{classel_1_1base_1_1LogFormat_ae4fc4ce8c79267d8e50161e0f5f27e46} 
+\index{el::base::LogFormat@{el::base::LogFormat}!flags@{flags}}
+\index{flags@{flags}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} el\+::base\+::\+Log\+Format\+::flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01605}{1605}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_af828182c99d78bd7861f1dfde46a48f9}\label{classel_1_1base_1_1LogFormat_af828182c99d78bd7861f1dfde46a48f9} 
+\index{el::base::LogFormat@{el::base::LogFormat}!format@{format}}
+\index{format@{format}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \& el\+::base\+::\+Log\+Format\+::format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01597}{1597}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_ab52a480241cd721b553f43bd75686a80}\label{classel_1_1base_1_1LogFormat_ab52a480241cd721b553f43bd75686a80} 
+\index{el::base::LogFormat@{el::base::LogFormat}!hasFlag@{hasFlag}}
+\index{hasFlag@{hasFlag}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{hasFlag()}{hasFlag()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Log\+Format\+::has\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00}{base\+::\+Format\+Flags}}}]{flag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01609}{1609}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_aeacb2c9d313ce5713b3e85e03a4baab5}\label{classel_1_1base_1_1LogFormat_aeacb2c9d313ce5713b3e85e03a4baab5} 
+\index{el::base::LogFormat@{el::base::LogFormat}!level@{level}}
+\index{level@{level}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{level()}{level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} el\+::base\+::\+Log\+Format\+::level (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01589}{1589}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_af0d3d0e6c080f67d3cf1bbc7ae106b49}\label{classel_1_1base_1_1LogFormat_af0d3d0e6c080f67d3cf1bbc7ae106b49} 
+\index{el::base::LogFormat@{el::base::LogFormat}!log@{log}}
+\index{log@{log}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily virtual void el\+::base\+::\+Log\+Format\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a74ea109bf34d1c44926837fb0830f445}{el\+::base\+::type\+::ostream\+\_\+t}} \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classel_1_1Loggable_ad8a2e0ebc11e4bd00ef49fc67db3d59e}{el\+::\+Loggable}}.
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01613}{1613}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a3ee763fae4bb3e268374b93b457f7b9f}\label{classel_1_1base_1_1LogFormat_a3ee763fae4bb3e268374b93b457f7b9f} 
+\index{el::base::LogFormat@{el::base::LogFormat}!operator=@{operator=}}
+\index{operator=@{operator=}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \& el\+::base\+::\+Log\+Format\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&}]{log\+Format }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01466}{1466}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{m\+\_\+current\+Host}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{m\+\_\+current\+User}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a31e85c6f74da6fe36d156a89a6c7fb91}\label{classel_1_1base_1_1LogFormat_a31e85c6f74da6fe36d156a89a6c7fb91} 
+\index{el::base::LogFormat@{el::base::LogFormat}!operator==@{operator==}}
+\index{operator==@{operator==}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool el\+::base\+::\+Log\+Format\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1base_1_1LogFormat}{Log\+Format}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01478}{1478}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_ab7c1b15cfdad24cfbc6dbced8b9d66eb}\label{classel_1_1base_1_1LogFormat_ab7c1b15cfdad24cfbc6dbced8b9d66eb} 
+\index{el::base::LogFormat@{el::base::LogFormat}!parseFromFormat@{parseFromFormat}}
+\index{parseFromFormat@{parseFromFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{parseFromFormat()}{parseFromFormat()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Log\+Format\+::parse\+From\+Format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \&}]{user\+Format }\end{DoxyParamCaption})}
+
+
+
+Updates format to be used while logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Format} & User provided format \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01485}{1485}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01626}{add\+Flag()}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa6d1acde6e20d49a9d81f90622732227}{el\+::base\+::\+App\+Name}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8cf10d2341ed01492506085688270c1e}{el\+::base\+::\+Date\+Time}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a0b27918290ff5323bea1e3b78a9cf04e}{el\+::base\+::\+File}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a363d6c255447a7ca6ef9c06b73a8a87d}{el\+::base\+::\+File\+Base}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a86408593c34af77fdd90df932f8b5261}{el\+::base\+::\+Function}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01609}{has\+Flag()}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ac2ca16d048ec66e04bca283eab048ec2}{el\+::base\+::\+Host}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00044}{el\+::base\+::consts\+::k\+App\+Name\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00056}{el\+::base\+::consts\+::k\+Current\+Host\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00055}{el\+::base\+::consts\+::k\+Current\+User\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00049}{el\+::base\+::consts\+::k\+Date\+Time\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00051}{el\+::base\+::consts\+::k\+Log\+File\+Base\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00050}{el\+::base\+::consts\+::k\+Log\+File\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00054}{el\+::base\+::consts\+::k\+Log\+Function\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00045}{el\+::base\+::consts\+::k\+Logger\+Id\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00052}{el\+::base\+::consts\+::k\+Log\+Line\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00053}{el\+::base\+::consts\+::k\+Log\+Location\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00057}{el\+::base\+::consts\+::k\+Message\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00047}{el\+::base\+::consts\+::k\+Severity\+Level\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00048}{el\+::base\+::consts\+::k\+Severity\+Level\+Short\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00046}{el\+::base\+::consts\+::k\+Thread\+Id\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00058}{el\+::base\+::consts\+::k\+Verbose\+Level\+Format\+Specifier}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00aa0db49ba470c1c9ae2128c3470339153}{el\+::base\+::\+Level}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a9d8794d3178b4df3b87654adbed5c846}{el\+::base\+::\+Level\+Short}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a4803e6b9e63dabf04de980788d6a13c4}{el\+::base\+::\+Line}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ace5bf551379459c1c61d2a204061c455}{el\+::base\+::\+Location}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a1bfb431e0c673464b7a57c135e5fe861}{el\+::base\+::\+Logger\+Id}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a80672412fb77a287c9c90cbacf039fc7}{el\+::base\+::\+Log\+Message}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{m\+\_\+flags}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a693e7589872f7acd3e69d831d022d6ea}{el\+::base\+::\+Thread\+Id}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01535}{update\+Date\+Format()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l01562}{update\+Format\+Spec()}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8f9bfe9d1345237cb3b2b205864da075}{el\+::base\+::\+User}}, and \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a52e9b703699c35fb5be3d84511bc86b8}{el\+::base\+::\+Verbose\+Level}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a966bed1ee6f8597152d08d4ed70a5855}\label{classel_1_1base_1_1LogFormat_a966bed1ee6f8597152d08d4ed70a5855} 
+\index{el::base::LogFormat@{el::base::LogFormat}!updateDateFormat@{updateDateFormat}}
+\index{updateDateFormat@{updateDateFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{updateDateFormat()}{updateDateFormat()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Log\+Format\+::update\+Date\+Format (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \&}]{curr\+Format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates date time format if available in curr\+Format. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em index} & Index where datetime, date or time was found \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em curr\+Format} & current format that is being used to format \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01535}{1535}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8cf10d2341ed01492506085688270c1e}{el\+::base\+::\+Date\+Time}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01609}{has\+Flag()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00067}{el\+::base\+::consts\+::k\+Default\+Date\+Time\+Format}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{m\+\_\+date\+Time\+Format}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_aa3c2ddecf237d0ec3eca4b2a3a442e67}\label{classel_1_1base_1_1LogFormat_aa3c2ddecf237d0ec3eca4b2a3a442e67} 
+\index{el::base::LogFormat@{el::base::LogFormat}!updateFormatSpec@{updateFormatSpec}}
+\index{updateFormatSpec@{updateFormatSpec}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{updateFormatSpec()}{updateFormatSpec()}}
+{\footnotesize\ttfamily void el\+::base\+::\+Log\+Format\+::update\+Format\+Spec (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates level from format. This is so that we dont have to do it at log-\/writing-\/time. It uses m\+\_\+format and m\+\_\+level. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l01562}{1562}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36aa603905470e2a5b8c13e96b579ef0dba}{el\+::\+Debug}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a902b0d55fddef6f8d651fe1035b7d4bd}{el\+::\+Error}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a882384ec38ce8d9582b57e70861730e4}{el\+::\+Fatal}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01609}{has\+Flag()}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00ac2ca16d048ec66e04bca283eab048ec2}{el\+::base\+::\+Host}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a4059b0251f66a18cb56f544728796875}{el\+::\+Info}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00056}{el\+::base\+::consts\+::k\+Current\+Host\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00055}{el\+::base\+::consts\+::k\+Current\+User\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00029}{el\+::base\+::consts\+::k\+Debug\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00037}{el\+::base\+::consts\+::k\+Debug\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00031}{el\+::base\+::consts\+::k\+Error\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00039}{el\+::base\+::consts\+::k\+Error\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00032}{el\+::base\+::consts\+::k\+Fatal\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00040}{el\+::base\+::consts\+::k\+Fatal\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00028}{el\+::base\+::consts\+::k\+Info\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00036}{el\+::base\+::consts\+::k\+Info\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00047}{el\+::base\+::consts\+::k\+Severity\+Level\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00048}{el\+::base\+::consts\+::k\+Severity\+Level\+Short\+Format\+Specifier}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00035}{el\+::base\+::consts\+::k\+Trace\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00042}{el\+::base\+::consts\+::k\+Trace\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00033}{el\+::base\+::consts\+::k\+Verbose\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00041}{el\+::base\+::consts\+::k\+Verbose\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00030}{el\+::base\+::consts\+::k\+Warning\+Level\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00038}{el\+::base\+::consts\+::k\+Warning\+Level\+Short\+Log\+Value}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{m\+\_\+current\+Host}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{m\+\_\+current\+User}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{m\+\_\+format}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{m\+\_\+level}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l00924}{el\+::base\+::utils\+::\+Str\+::replace\+First\+With\+Escape()}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36add4ec0ac4e58f7c32a01244ae91150b1}{el\+::\+Trace}}, \mbox{\hyperlink{namespaceel_1_1base_a28939c5a884e67fcf12259f4b8848e00a8f9bfe9d1345237cb3b2b205864da075}{el\+::base\+::\+User}}, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36ad4a9fa383ab700c5bdd6f31cf7df0faf}{el\+::\+Verbose}}, and \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36a0eaadb4fcb48a0a0ed7bc9868be9fbaa}{el\+::\+Warning}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a87a3923aaa122c54960a53992e58bd9f}\label{classel_1_1base_1_1LogFormat_a87a3923aaa122c54960a53992e58bd9f} 
+\index{el::base::LogFormat@{el::base::LogFormat}!userFormat@{userFormat}}
+\index{userFormat@{userFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{userFormat()}{userFormat()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} \& el\+::base\+::\+Log\+Format\+::user\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01593}{1593}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{m\+\_\+user\+Format}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classel_1_1base_1_1LogFormat_aa78553f3fecc0d9551408dfd7aa7f737}\label{classel_1_1base_1_1LogFormat_aa78553f3fecc0d9551408dfd7aa7f737} 
+\index{el::base::LogFormat@{el::base::LogFormat}!el::Logger@{el::Logger}}
+\index{el::Logger@{el::Logger}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{el::Logger}{el::Logger}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classel_1_1Logger}{el\+::\+Logger}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01638}{1638}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classel_1_1base_1_1LogFormat_a2b04c55f10968f330e1a887a8bbd1876}\label{classel_1_1base_1_1LogFormat_a2b04c55f10968f330e1a887a8bbd1876} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_currentHost@{m\_currentHost}}
+\index{m\_currentHost@{m\_currentHost}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_currentHost}{m\_currentHost}}
+{\footnotesize\ttfamily std\+::string el\+::base\+::\+Log\+Format\+::m\+\_\+current\+Host\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01637}{1637}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a04d5499a575f2bed63fe634c51a7033c}\label{classel_1_1base_1_1LogFormat_a04d5499a575f2bed63fe634c51a7033c} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_currentUser@{m\_currentUser}}
+\index{m\_currentUser@{m\_currentUser}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_currentUser}{m\_currentUser}}
+{\footnotesize\ttfamily std\+::string el\+::base\+::\+Log\+Format\+::m\+\_\+current\+User\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01636}{1636}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a4a11e7bb1e70f6997e628d51b232848c}\label{classel_1_1base_1_1LogFormat_a4a11e7bb1e70f6997e628d51b232848c} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_dateTimeFormat@{m\_dateTimeFormat}}
+\index{m\_dateTimeFormat@{m\_dateTimeFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_dateTimeFormat}{m\_dateTimeFormat}}
+{\footnotesize\ttfamily std\+::string el\+::base\+::\+Log\+Format\+::m\+\_\+date\+Time\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01634}{1634}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_af0436f51f1cd1ababbbda3378f1541d3}\label{classel_1_1base_1_1LogFormat_af0436f51f1cd1ababbbda3378f1541d3} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_flags@{m\_flags}}
+\index{m\_flags@{m\_flags}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_flags}{m\_flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_aa7dbdfaaff779b8e3d338e1b31707098}{base\+::type\+::\+Enum\+Type}} el\+::base\+::\+Log\+Format\+::m\+\_\+flags\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01635}{1635}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_ae738782f79da58139056952dee34570e}\label{classel_1_1base_1_1LogFormat_ae738782f79da58139056952dee34570e} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_format@{m\_format}}
+\index{m\_format@{m\_format}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_format}{m\_format}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} el\+::base\+::\+Log\+Format\+::m\+\_\+format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01633}{1633}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_a08d9991b9db478f2351907bb9cad76d2}\label{classel_1_1base_1_1LogFormat_a08d9991b9db478f2351907bb9cad76d2} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_level@{m\_level}}
+\index{m\_level@{m\_level}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_level}{m\_level}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} el\+::base\+::\+Log\+Format\+::m\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01631}{1631}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1base_1_1LogFormat_aea94035d71cb2e50db42e42ab2774ac0}\label{classel_1_1base_1_1LogFormat_aea94035d71cb2e50db42e42ab2774ac0} 
+\index{el::base::LogFormat@{el::base::LogFormat}!m\_userFormat@{m\_userFormat}}
+\index{m\_userFormat@{m\_userFormat}!el::base::LogFormat@{el::base::LogFormat}}
+\doxysubsubsection{\texorpdfstring{m\_userFormat}{m\_userFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceel_1_1base_1_1type_a67e406cd213c231f1d135b5a4eda64b5}{base\+::type\+::string\+\_\+t}} el\+::base\+::\+Log\+Format\+::m\+\_\+user\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l01632}{1632}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}

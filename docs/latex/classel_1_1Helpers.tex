@@ -1,0 +1,321 @@
+\doxysection{el\+::Helpers Class Reference}
+\hypertarget{classel_1_1Helpers}{}\label{classel_1_1Helpers}\index{el::Helpers@{el::Helpers}}
+
+
+Static helpers for developers.  
+
+
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::Helpers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classel_1_1Helpers}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_af78fd39725281e3dddd7c0fbdc14f11f}{set\+Storage}} (\mbox{\hyperlink{namespaceel_1_1base_1_1type_a3c34822c3825018aca1526f2289b7976}{base\+::type\+::\+Storage\+Pointer}} \mbox{\hyperlink{classel_1_1Helpers_a13a5365de36b3af27660cf9b358829d3}{storage}})
+\begin{DoxyCompactList}\small\item\em Shares logging repository (\doxylink{classel_1_1base_1_1Storage}{base\+::\+Storage}) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespaceel_1_1base_1_1type_a3c34822c3825018aca1526f2289b7976}{base\+::type\+::\+Storage\+Pointer}} \mbox{\hyperlink{classel_1_1Helpers_a13a5365de36b3af27660cf9b358829d3}{storage}} ()
+\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_a68748f618a0c2840b96dc12532b09bf0}{set\+Args}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Sets application arguments and figures out whats active for logging and whats not. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_afac7a023e2c13a62d0295cf0239eb848}{set\+Args}} (int argc, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Sets application arguments and figures out whats active for logging and whats not.   \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_a315250270334214c2749398feba08863}{set\+Thread\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets thread name for current thread. Requires std\+::thread. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classel_1_1Helpers_ae19cb3baa6d8081a9e922736a384f70b}{get\+Thread\+Name}} ()
+\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_a5fd7ad6d636c28d2e706203d0c43cf8c}{install\+Pre\+Roll\+Out\+Callback}} (const \mbox{\hyperlink{namespaceel_a43d2e332b3dd72843f75feb7b5fe29c1}{Pre\+Roll\+Out\+Callback}} \&callback)
+\begin{DoxyCompactList}\small\item\em Installs pre rollout callback, this callback is triggered when log file is about to be rolled out (can be useful for backing up) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_ab829e5ed1b43bf965f5c288bc0280376}{uninstall\+Pre\+Roll\+Out\+Callback}} (void)
+\begin{DoxyCompactList}\small\item\em Uninstalls pre rollout callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{classel_1_1Helpers_a3f3e84057567a8ac568a35899318544a}{install\+Log\+Dispatch\+Callback}} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Installs post log dispatch callback, this callback is triggered when log is dispatched. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classel_1_1Helpers_ac94b44cc8d399a5842703126478300d7}{uninstall\+Log\+Dispatch\+Callback}} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Uninstalls log dispatch callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1Helpers_a948149dbbfdfcc06b8ebba81a2958171}{log\+Dispatch\+Callback}} (const std\+::string \&id)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::string \mbox{\hyperlink{classel_1_1Helpers_a8b032e32cd042ddc4fef4e814bad1082}{convert\+Template\+To\+Std\+String}} (const T \&templ)
+\begin{DoxyCompactList}\small\item\em Converts template to std\+::string -\/ useful for loggable classes to log containers within log(std\+::ostream\&) const. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1CommandLineArgs}{el\+::base\+::utils\+::\+Command\+Line\+Args}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1Helpers_aaef91d40917948280955d6bcb652d135}{command\+Line\+Args}} (void)
+\begin{DoxyCompactList}\small\item\em Returns command line arguments (pointer) provided to easylogging++. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_afb5fb896f3222fb8c628a51a05d72c32}{reserve\+Custom\+Format\+Specifiers}} (std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reserve space for custom format specifiers for performance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_aa6de15a09db4f2a6763a6652c0ea12b1}{install\+Custom\+Format\+Specifier}} (const \mbox{\hyperlink{classel_1_1CustomFormatSpecifier}{Custom\+Format\+Specifier}} \&custom\+Format\+Specifier)
+\begin{DoxyCompactList}\small\item\em Installs user defined format specifier and handler. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classel_1_1Helpers_a23ec73819c25758d604d149ad0c6b73f}{uninstall\+Custom\+Format\+Specifier}} (const char \texorpdfstring{$\ast$}{*}format\+Specifier)
+\begin{DoxyCompactList}\small\item\em Uninstalls user defined format specifier and handler. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classel_1_1Helpers_a154ce041890564d1ae5f87184e24f13d}{has\+Custom\+Format\+Specifier}} (const char \texorpdfstring{$\ast$}{*}format\+Specifier)
+\begin{DoxyCompactList}\small\item\em Returns true if custom format specifier is installed. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classel_1_1Helpers_aea3fcde8a07e6f7278574e9563d8ab6b}{validate\+File\+Rolling}} (\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}logger, \mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static helpers for developers. 
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03653}{3653}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classel_1_1Helpers_aaef91d40917948280955d6bcb652d135}\label{classel_1_1Helpers_aaef91d40917948280955d6bcb652d135} 
+\index{el::Helpers@{el::Helpers}!commandLineArgs@{commandLineArgs}}
+\index{commandLineArgs@{commandLineArgs}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{commandLineArgs()}{commandLineArgs()}}
+{\footnotesize\ttfamily static const \mbox{\hyperlink{classel_1_1base_1_1utils_1_1CommandLineArgs}{el\+::base\+::utils\+::\+Command\+Line\+Args}} \texorpdfstring{$\ast$}{*} el\+::\+Helpers\+::command\+Line\+Args (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns command line arguments (pointer) provided to easylogging++. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03757}{3757}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a8b032e32cd042ddc4fef4e814bad1082}\label{classel_1_1Helpers_a8b032e32cd042ddc4fef4e814bad1082} 
+\index{el::Helpers@{el::Helpers}!convertTemplateToStdString@{convertTemplateToStdString}}
+\index{convertTemplateToStdString@{convertTemplateToStdString}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{convertTemplateToStdString()}{convertTemplateToStdString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::string el\+::\+Helpers\+::convert\+Template\+To\+Std\+String (\begin{DoxyParamCaption}\item[{const T \&}]{templ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts template to std\+::string -\/ useful for loggable classes to log containers within log(std\+::ostream\&) const. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03737}{3737}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l01004}{el\+::base\+::threading\+::\+Thread\+Safe\+::acquire\+Lock()}}, \mbox{\hyperlink{easylogging_09_09_8cc_source_l02505}{el\+::base\+::\+Message\+Builder\+::initialize()}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l01005}{el\+::base\+::threading\+::\+Thread\+Safe\+::release\+Lock()}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02339}{el\+::\+Logger\+::stream()}}.
+
+\Hypertarget{classel_1_1Helpers_ae19cb3baa6d8081a9e922736a384f70b}\label{classel_1_1Helpers_ae19cb3baa6d8081a9e922736a384f70b} 
+\index{el::Helpers@{el::Helpers}!getThreadName@{getThreadName}}
+\index{getThreadName@{getThreadName}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{getThreadName()}{getThreadName()}}
+{\footnotesize\ttfamily static std\+::string el\+::\+Helpers\+::get\+Thread\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03675}{3675}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a154ce041890564d1ae5f87184e24f13d}\label{classel_1_1Helpers_a154ce041890564d1ae5f87184e24f13d} 
+\index{el::Helpers@{el::Helpers}!hasCustomFormatSpecifier@{hasCustomFormatSpecifier}}
+\index{hasCustomFormatSpecifier@{hasCustomFormatSpecifier}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{hasCustomFormatSpecifier()}{hasCustomFormatSpecifier()}}
+{\footnotesize\ttfamily static bool el\+::\+Helpers\+::has\+Custom\+Format\+Specifier (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{format\+Specifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns true if custom format specifier is installed. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03774}{3774}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_aa6de15a09db4f2a6763a6652c0ea12b1}\label{classel_1_1Helpers_aa6de15a09db4f2a6763a6652c0ea12b1} 
+\index{el::Helpers@{el::Helpers}!installCustomFormatSpecifier@{installCustomFormatSpecifier}}
+\index{installCustomFormatSpecifier@{installCustomFormatSpecifier}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{installCustomFormatSpecifier()}{installCustomFormatSpecifier()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::install\+Custom\+Format\+Specifier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classel_1_1CustomFormatSpecifier}{Custom\+Format\+Specifier}} \&}]{custom\+Format\+Specifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Installs user defined format specifier and handler. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03766}{3766}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a3f3e84057567a8ac568a35899318544a}\label{classel_1_1Helpers_a3f3e84057567a8ac568a35899318544a} 
+\index{el::Helpers@{el::Helpers}!installLogDispatchCallback@{installLogDispatchCallback}}
+\index{installLogDispatchCallback@{installLogDispatchCallback}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{installLogDispatchCallback()}{installLogDispatchCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static bool el\+::\+Helpers\+::install\+Log\+Dispatch\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Installs post log dispatch callback, this callback is triggered when log is dispatched. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03707}{3707}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a5fd7ad6d636c28d2e706203d0c43cf8c}\label{classel_1_1Helpers_a5fd7ad6d636c28d2e706203d0c43cf8c} 
+\index{el::Helpers@{el::Helpers}!installPreRollOutCallback@{installPreRollOutCallback}}
+\index{installPreRollOutCallback@{installPreRollOutCallback}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{installPreRollOutCallback()}{installPreRollOutCallback()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::install\+Pre\+Roll\+Out\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceel_a43d2e332b3dd72843f75feb7b5fe29c1}{Pre\+Roll\+Out\+Callback}} \&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Installs pre rollout callback, this callback is triggered when log file is about to be rolled out (can be useful for backing up) 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03698}{3698}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a948149dbbfdfcc06b8ebba81a2958171}\label{classel_1_1Helpers_a948149dbbfdfcc06b8ebba81a2958171} 
+\index{el::Helpers@{el::Helpers}!logDispatchCallback@{logDispatchCallback}}
+\index{logDispatchCallback@{logDispatchCallback}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{logDispatchCallback()}{logDispatchCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T \texorpdfstring{$\ast$}{*} el\+::\+Helpers\+::log\+Dispatch\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03716}{3716}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_afb5fb896f3222fb8c628a51a05d72c32}\label{classel_1_1Helpers_afb5fb896f3222fb8c628a51a05d72c32} 
+\index{el::Helpers@{el::Helpers}!reserveCustomFormatSpecifiers@{reserveCustomFormatSpecifiers}}
+\index{reserveCustomFormatSpecifiers@{reserveCustomFormatSpecifiers}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{reserveCustomFormatSpecifiers()}{reserveCustomFormatSpecifiers()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::reserve\+Custom\+Format\+Specifiers (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reserve space for custom format specifiers for performance. 
+
+\begin{DoxySeeAlso}{See also}
+std\+::vector\+::reserve 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03762}{3762}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a68748f618a0c2840b96dc12532b09bf0}\label{classel_1_1Helpers_a68748f618a0c2840b96dc12532b09bf0} 
+\index{el::Helpers@{el::Helpers}!setArgs@{setArgs}}
+\index{setArgs@{setArgs}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{setArgs()}{setArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::set\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets application arguments and figures out whats active for logging and whats not. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03664}{3664}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_afac7a023e2c13a62d0295cf0239eb848}\label{classel_1_1Helpers_afac7a023e2c13a62d0295cf0239eb848} 
+\index{el::Helpers@{el::Helpers}!setArgs@{setArgs}}
+\index{setArgs@{setArgs}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{setArgs()}{setArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::set\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets application arguments and figures out whats active for logging and whats not.   
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03668}{3668}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_af78fd39725281e3dddd7c0fbdc14f11f}\label{classel_1_1Helpers_af78fd39725281e3dddd7c0fbdc14f11f} 
+\index{el::Helpers@{el::Helpers}!setStorage@{setStorage}}
+\index{setStorage@{setStorage}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{setStorage()}{setStorage()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::set\+Storage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a3c34822c3825018aca1526f2289b7976}{base\+::type\+::\+Storage\+Pointer}}}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Shares logging repository (\doxylink{classel_1_1base_1_1Storage}{base\+::\+Storage}) 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03656}{3656}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a315250270334214c2749398feba08863}\label{classel_1_1Helpers_a315250270334214c2749398feba08863} 
+\index{el::Helpers@{el::Helpers}!setThreadName@{setThreadName}}
+\index{setThreadName@{setThreadName}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{setThreadName()}{setThreadName()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::set\+Thread\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets thread name for current thread. Requires std\+::thread. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03672}{3672}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a13a5365de36b3af27660cf9b358829d3}\label{classel_1_1Helpers_a13a5365de36b3af27660cf9b358829d3} 
+\index{el::Helpers@{el::Helpers}!storage@{storage}}
+\index{storage@{storage}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{storage()}{storage()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespaceel_1_1base_1_1type_a3c34822c3825018aca1526f2289b7976}{base\+::type\+::\+Storage\+Pointer}} el\+::\+Helpers\+::storage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Main storage repository 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03660}{3660}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_a23ec73819c25758d604d149ad0c6b73f}\label{classel_1_1Helpers_a23ec73819c25758d604d149ad0c6b73f} 
+\index{el::Helpers@{el::Helpers}!uninstallCustomFormatSpecifier@{uninstallCustomFormatSpecifier}}
+\index{uninstallCustomFormatSpecifier@{uninstallCustomFormatSpecifier}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{uninstallCustomFormatSpecifier()}{uninstallCustomFormatSpecifier()}}
+{\footnotesize\ttfamily static bool el\+::\+Helpers\+::uninstall\+Custom\+Format\+Specifier (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{format\+Specifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Uninstalls user defined format specifier and handler. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03770}{3770}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_ac94b44cc8d399a5842703126478300d7}\label{classel_1_1Helpers_ac94b44cc8d399a5842703126478300d7} 
+\index{el::Helpers@{el::Helpers}!uninstallLogDispatchCallback@{uninstallLogDispatchCallback}}
+\index{uninstallLogDispatchCallback@{uninstallLogDispatchCallback}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{uninstallLogDispatchCallback()}{uninstallLogDispatchCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void el\+::\+Helpers\+::uninstall\+Log\+Dispatch\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Uninstalls log dispatch callback. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03712}{3712}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_ab829e5ed1b43bf965f5c288bc0280376}\label{classel_1_1Helpers_ab829e5ed1b43bf965f5c288bc0280376} 
+\index{el::Helpers@{el::Helpers}!uninstallPreRollOutCallback@{uninstallPreRollOutCallback}}
+\index{uninstallPreRollOutCallback@{uninstallPreRollOutCallback}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{uninstallPreRollOutCallback()}{uninstallPreRollOutCallback()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::uninstall\+Pre\+Roll\+Out\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Uninstalls pre rollout callback. 
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03702}{3702}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+\Hypertarget{classel_1_1Helpers_aea3fcde8a07e6f7278574e9563d8ab6b}\label{classel_1_1Helpers_aea3fcde8a07e6f7278574e9563d8ab6b} 
+\index{el::Helpers@{el::Helpers}!validateFileRolling@{validateFileRolling}}
+\index{validateFileRolling@{validateFileRolling}!el::Helpers@{el::Helpers}}
+\doxysubsubsection{\texorpdfstring{validateFileRolling()}{validateFileRolling()}}
+{\footnotesize\ttfamily static void el\+::\+Helpers\+::validate\+File\+Rolling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}}]{logger,  }\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03777}{3777}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\end{DoxyCompactItemize}

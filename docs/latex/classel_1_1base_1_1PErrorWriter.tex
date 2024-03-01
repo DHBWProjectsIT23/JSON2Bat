@@ -1,0 +1,117 @@
+\doxysection{el\+::base\+::PError\+Writer Class Reference}
+\hypertarget{classel_1_1base_1_1PErrorWriter}{}\label{classel_1_1base_1_1PErrorWriter}\index{el::base::PErrorWriter@{el::base::PErrorWriter}}
+
+
+{\ttfamily \#include $<$easylogging++.\+h$>$}
+
+Inheritance diagram for el\+::base\+::PError\+Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classel_1_1base_1_1PErrorWriter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1PErrorWriter_a72c3ef41fd608b5f87ded491957e4c32}{PError\+Writer}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const char \texorpdfstring{$\ast$}{*}file, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} line, const char \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{base\+::\+Dispatch\+Action}} dispatch\+Action=\mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602}{base\+::\+Dispatch\+Action\+::\+Normal\+Log}}, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} verbose\+Level=0)
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1PErrorWriter_adc8b5fe696977395f0e8b0ee5d5caf60}{\texorpdfstring{$\sim$}{\string~}\+PError\+Writer}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1Writer}{el\+::base\+::\+Writer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1Writer_a50ce36cd8d9e60391da37658623a88a0}{Writer}} (\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} level, const char \texorpdfstring{$\ast$}{*}file, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} line, const char \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{base\+::\+Dispatch\+Action}} dispatch\+Action=\mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602}{base\+::\+Dispatch\+Action\+::\+Normal\+Log}}, \mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} verbose\+Level=0)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1Writer_a5eda18d17eb58ef183d6e36195003be4}{Writer}} (\mbox{\hyperlink{classel_1_1LogMessage}{Log\+Message}} \texorpdfstring{$\ast$}{*}msg, \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{base\+::\+Dispatch\+Action}} dispatch\+Action=\mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602}{base\+::\+Dispatch\+Action\+::\+Normal\+Log}})
+\item 
+virtual \mbox{\hyperlink{classel_1_1base_1_1Writer_a6db9eafd05eed680d93c7f29b786a41d}{\texorpdfstring{$\sim$}{\string~}\+Writer}} (void)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classel_1_1base_1_1Writer}{Writer}} \& \mbox{\hyperlink{classel_1_1base_1_1Writer_a3618ee88b4add54a606000535e114dff}{operator$<$$<$}} (const T \&log)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1Writer}{Writer}} \& \mbox{\hyperlink{classel_1_1base_1_1Writer_adf3bc77938f0264e9b694c7058c15640}{operator$<$$<$}} (std\+::ostream \&(\texorpdfstring{$\ast$}{*}log)(std\+::ostream \&))
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1Writer_ac518e6b23327127f63c6d26ee83ecbf9}{operator bool}} ()
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1Writer}{Writer}} \& \mbox{\hyperlink{classel_1_1base_1_1Writer_ab1678300b6c7144041e09be423821682}{construct}} (\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*}logger, bool need\+Lock=true)
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1Writer}{Writer}} \& \mbox{\hyperlink{classel_1_1base_1_1Writer_a0662aa19522d77df6e1105f35c8c367a}{construct}} (int count, const char \texorpdfstring{$\ast$}{*}logger\+Ids,...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classel_1_1base_1_1Writer}{el\+::base\+::\+Writer}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1Writer_ae687ebbee62b086f318ee4c8d1a655c4}{initialize\+Logger}} (const std\+::string \&logger\+Id, bool lookup=true, bool need\+Lock=true)
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1Writer_a692d05d209840d6ae8c2c8e0bea21d29}{process\+Dispatch}} ()
+\item 
+void \mbox{\hyperlink{classel_1_1base_1_1Writer_a1c7d90bd4e00af4e7307f5936e1b6507}{trigger\+Dispatch}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classel_1_1base_1_1Writer}{el\+::base\+::\+Writer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classel_1_1LogMessage}{Log\+Message}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1Writer_aad87d889b6ad94bcbf4fd01ca33c47d4}{m\+\_\+msg}}
+\item 
+\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}} \mbox{\hyperlink{classel_1_1base_1_1Writer_a28522bf9b05b4edcc0baf5196645d317}{m\+\_\+level}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1Writer_a1eada1175721ba11b4eb6c9515d8e2dc}{m\+\_\+file}}
+\item 
+const \mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}} \mbox{\hyperlink{classel_1_1base_1_1Writer_aae6f7c08c2617a5ba1ffc38d4eb53207}{m\+\_\+line}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1Writer_a57291e0751fe93547d9d5551fb3e8415}{m\+\_\+func}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}} \mbox{\hyperlink{classel_1_1base_1_1Writer_a335803052b6878c058a4a888279df04d}{m\+\_\+verbose\+Level}}
+\item 
+\mbox{\hyperlink{classel_1_1Logger}{Logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classel_1_1base_1_1Writer_a0fab2e9a168b7973bcca4574d05490d2}{m\+\_\+logger}}
+\item 
+bool \mbox{\hyperlink{classel_1_1base_1_1Writer_a238593eda90cf32645c4541e738bea9a}{m\+\_\+proceed}}
+\item 
+\mbox{\hyperlink{classel_1_1base_1_1MessageBuilder}{base\+::\+Message\+Builder}} \mbox{\hyperlink{classel_1_1base_1_1Writer_a63763a047d595271cb14f9a80430306b}{m\+\_\+message\+Builder}}
+\item 
+\mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{base\+::\+Dispatch\+Action}} \mbox{\hyperlink{classel_1_1base_1_1Writer_acbea5b77953cf6e39baab015e83a4100}{m\+\_\+dispatch\+Action}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classel_1_1base_1_1Writer_a9137860437510e1a26e8b0c1814c7ae7}{m\+\_\+logger\+Ids}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03251}{3251}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classel_1_1base_1_1PErrorWriter_a72c3ef41fd608b5f87ded491957e4c32}\label{classel_1_1base_1_1PErrorWriter_a72c3ef41fd608b5f87ded491957e4c32} 
+\index{el::base::PErrorWriter@{el::base::PErrorWriter}!PErrorWriter@{PErrorWriter}}
+\index{PErrorWriter@{PErrorWriter}!el::base::PErrorWriter@{el::base::PErrorWriter}}
+\doxysubsubsection{\texorpdfstring{PErrorWriter()}{PErrorWriter()}}
+{\footnotesize\ttfamily el\+::base\+::\+PError\+Writer\+::\+PError\+Writer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceel_ab0ac6091262344c52dd2d3ad099e8e36}{Level}}}]{level,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a7be44abab4288b1ea29962a059737347}{base\+::type\+::\+Line\+Number}}}]{line,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{func,  }\item[{\mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839}{base\+::\+Dispatch\+Action}}}]{dispatch\+Action = {\ttfamily \mbox{\hyperlink{namespaceel_1_1base_a3aa2563d38e47388ba242a1694fc2839a44d8ee68145a7d9849eeaa634c443602}{base\+::\+Dispatch\+Action\+::\+Normal\+Log}}},  }\item[{\mbox{\hyperlink{namespaceel_1_1base_1_1type_a379652fdd9386faa5e26bf1f2493bffa}{base\+::type\+::\+Verbose\+Level}}}]{verbose\+Level = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8h_source_l03253}{3253}} of file \mbox{\hyperlink{easylogging_09_09_8h_source}{easylogging++.\+h}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l03192}{el\+::base\+::\+Writer\+::\+Writer()}}.
+
+\Hypertarget{classel_1_1base_1_1PErrorWriter_adc8b5fe696977395f0e8b0ee5d5caf60}\label{classel_1_1base_1_1PErrorWriter_adc8b5fe696977395f0e8b0ee5d5caf60} 
+\index{el::base::PErrorWriter@{el::base::PErrorWriter}!````~PErrorWriter@{\texorpdfstring{$\sim$}{\string~}PErrorWriter}}
+\index{````~PErrorWriter@{\texorpdfstring{$\sim$}{\string~}PErrorWriter}!el::base::PErrorWriter@{el::base::PErrorWriter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PErrorWriter()}{\string~PErrorWriter()}}
+{\footnotesize\ttfamily el\+::base\+::\+PError\+Writer\+::\texorpdfstring{$\sim$}{\string~}\+PError\+Writer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{easylogging_09_09_8cc_source_l02660}{2660}} of file \mbox{\hyperlink{easylogging_09_09_8cc_source}{easylogging++.\+cc}}.
+
+
+
+References \mbox{\hyperlink{easylogging_09_09_8h_source_l03240}{el\+::base\+::\+Writer\+::m\+\_\+logger}}, \mbox{\hyperlink{easylogging_09_09_8h_source_l03241}{el\+::base\+::\+Writer\+::m\+\_\+proceed}}, and \mbox{\hyperlink{easylogging_09_09_8h_source_l02339}{el\+::\+Logger\+::stream()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8h}{easylogging++.\+h}}\item 
+lib/\mbox{\hyperlink{easylogging_09_09_8cc}{easylogging++.\+cc}}\end{DoxyCompactItemize}
