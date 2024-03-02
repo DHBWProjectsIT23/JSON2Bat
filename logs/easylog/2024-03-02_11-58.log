@@ -1,0 +1,16 @@
+2024-03-02 11:58:55,338131 Hello I am a normal output! I will also be logged!
+
+2024-03-02 11:58:55,338138 I am a log info, I won't get printed to the console automatically!
+
+2024-03-02 11:58:55,338141 I am a log info, I will get printed to the console!
+
+2024-03-02 11:58:55,338145 I am a log warning, I will get printed to the console!
+
+2024-03-02 11:58:55,338154 I am a log error, I will get printed to the console!
+
+02/03 utils::LoggingWrapper::~LoggingWrapper() I am a log debug, I will get printed to the console!
+
+2024-03-02 11:58:55,338159 Custom: I am a log with a prefix, I won't get printed to the console!
+
+2024-03-02 11:58:55,338163 Custom: I am a log with a prefix, I will get printed to the console!
+
