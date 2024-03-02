@@ -21,7 +21,8 @@ int main(int argc, char* argv[])
            << PROJECT_NAME << " v" << MAJOR_VERSION << "." << MINOR_VERSION << "."
            << PATCH_VERSION << "\n"
            << DESCRIPTION << "\n"
-           << "Authors: " << AUTHORS << "\n";
+           << "Authors: " << AUTHORS << "\n"
+           << "Documentation: " << HOMEPAGE_URL << "\n";
     OUTPUT << "\n----------\n"
            << "LoggingWrapper examples"
            << "\n----------\n";

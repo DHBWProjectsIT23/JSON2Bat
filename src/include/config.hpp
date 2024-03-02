@@ -7,4 +7,5 @@
 #define DESCRIPTION "A simple tool to convert json to batch"
 #define PROJECT_NAME "jsonToBatch"
 #define AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci"
+#define HOMEPAGE_URL "https://definitelynotsimon13.github.io/ProjectJsonToBat"
 #endif

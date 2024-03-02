@@ -8,9 +8,11 @@ Version: 0.1.1
 
 Authoren: Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 
+Documentation: https://definitelynotsimon13.github.io/ProjectJsonToBat
+
 
 <details>
-<summary>Todos:</summary>
+<summary><h2>Todos:</h2></summary>
 
 - [ ] Requirements lesen und zusammenfassen -> Max
 - [ ] "Public design" - Project Name etc...
@@ -18,7 +20,7 @@ Authoren: Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 </details>
 
 <details>
-<summary>Aktueller Plan:</summary>
+<summary><h2>Aktueller Plan:</h2></summary>
 
 - Bis Dienstag 05.03.:
     - Mit jsoncpp etc. vertraut machen -> Alle
@@ -27,14 +29,14 @@ Authoren: Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 
 </details>
 <details>
-<summary>Verantwortlichkeiten:</summary>
+<summary><h2>Verantwortlichkeiten:</h2></summary>
 
 - CMake -> Simon 
 
 </details>
 
 <details>
-<summary>Bezüglich Code Quality</summary>
+<summary><h2>Bezüglich Code Quality</h2></summary>
 
 - Kein using namespace
 - Nur main im Global Namespace
@@ -42,7 +44,7 @@ Authoren: Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 </details>
 
 <details>
-<summary>Wichtige Commands</summary>
+<summary><h2>Wichtige Commands</h2></summary>
 
 Branch wechseln
 - git checkout -b NEUERBRANCH
@@ -54,7 +56,7 @@ zum pullen
 </details>
 
 <details>
-<summary>Kurze Doxygen Übersicht</summary>
+<summary><h2>Kurze Doxygen Übersicht</h2></summary>
 
 /**
 * \brief Kurze Beschreibung
