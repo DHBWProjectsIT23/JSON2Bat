@@ -6,6 +6,12 @@ endif()
 
 set(PROJECT_NAME "jsonToBatch")
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+
 project(${PROJECT_NAME} VERSION 0.1.0)
 
 set(SOURCES
@@ -15,7 +21,8 @@ set(SOURCES
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-  ${PROJECT_SOURCE_DIR}/lib/libjsoncpp.a)
+  ${PROJECT_SOURCE_DIR}/lib/libjsoncpp.a
+  ${PROJECT_SOURCE_DIR}/lib/libLoggingWrapper.a)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
   ${PROJECT_SOURCE_DIR}/include
