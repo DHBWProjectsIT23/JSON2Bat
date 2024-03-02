@@ -69,5 +69,3 @@ zum pullen
 **/
 
 </details>
-
-test
