@@ -2,3 +2,8 @@ build
 .cache
 runDebug.sh
 myeasylog.log
+docs/html
+docs/latex
+docs/man
+docs/rtf
+logs
