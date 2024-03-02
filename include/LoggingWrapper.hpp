@@ -19,10 +19,10 @@
 #ifndef LOGANDOUT_HPP
 #define LOGANDOUT_HPP
 
+#include "easylogging++.h"
 #include <iostream>
 #include <sstream>
 #include <string>
-#include "easylogging++.h"
 namespace utils {
 
 #define LOG_INFO utils::log(utils::LogLevel::INFO, "-- ")
@@ -32,12 +32,12 @@ namespace utils {
 #define OUTPUT utils::log(utils::LogLevel::OUT, "Output: ")
 
 enum class LogLevel {
-    INFO,
-    WARNING,
-    ERROR,
-    FATAL,
-    DEBUG,
-    OUT,
+  INFO,
+  WARNING,
+  ERROR,
+  FATAL,
+  DEBUG,
+  OUT,
 };
 
 /**
@@ -47,41 +47,41 @@ enum class LogLevel {
  **/
 class LoggingWrapper {
 public:
-    LoggingWrapper(LogLevel newLevel, bool newVerbose = false)
-        : level(newLevel), verbose(newVerbose) {}
-    LoggingWrapper(const std::string &newPrefix, LogLevel newLevel,
-                   bool newVerbose = false)
+  LoggingWrapper(LogLevel newLevel, bool newVerbose = false)
+      : level(newLevel), verbose(newVerbose) {}
+  LoggingWrapper(const std::string &newPrefix, LogLevel newLevel,
+                 bool newVerbose = false)
 
-        : prefix(newPrefix), level(newLevel), verbose(newVerbose) {}
+      : prefix(newPrefix), level(newLevel), verbose(newVerbose) {}
 
-    template <typename T> LoggingWrapper &operator<<(const T &val) {
-        buffer << val;
-        return *this;
-    }
+  template <typename T> LoggingWrapper &operator<<(const T &val) {
+    buffer << val;
+    return *this;
+  }
 
-    typedef std::ostream &(*Manipulator)(std::ostream &);
-    LoggingWrapper &operator<<(Manipulator manipulator);
+  typedef std::ostream &(*Manipulator)(std::ostream &);
+  LoggingWrapper &operator<<(Manipulator manipulator);
 
-    ~LoggingWrapper();
+  ~LoggingWrapper();
 
 private:
-    std::string prefix;
-    LogLevel level;
-    std::ostringstream buffer;
-    const bool verbose;
+  std::string prefix;
+  LogLevel level;
+  std::ostringstream buffer;
+  const bool verbose;
 };
 inline LoggingWrapper log(bool verbose = false) {
-    return LoggingWrapper(LogLevel::INFO, verbose);
+  return LoggingWrapper(LogLevel::INFO, verbose);
+}
+inline LoggingWrapper log(LogLevel level) {
+  return LoggingWrapper(level, false);
 }
 inline LoggingWrapper log(const std::string &prefix, bool verbose = false) {
-    return LoggingWrapper(prefix, LogLevel::INFO, verbose);
-}
-inline LoggingWrapper log(LogLevel level, bool verbose = false) {
-    return LoggingWrapper(level, verbose);
+  return LoggingWrapper(prefix, LogLevel::INFO, verbose);
 }
 inline LoggingWrapper log(LogLevel level, const std::string &prefix,
                           bool verbose = false) {
-    return LoggingWrapper(prefix, level, verbose);
+  return LoggingWrapper(prefix, level, verbose);
 }
 } // namespace utils
 
