@@ -1,1 +1,4 @@
 build
+.cache
+runDebug.sh
+myeasylog.log
