@@ -9,6 +9,12 @@
  * to be included to allow for logging.
  * Easylogging++ will not be configured or initialised in this library.
  *
+ * Perfomance based on my not very scientific tests: 
+ * Average over 10 runs with 1.000.000 iterations each:
+ * - only Easylogging++: 1046.1 ms
+ * - easylogging++ and std::cout: 3814.24 ms
+ * - wrapper: 3643.04 ms
+ *
  * \todo
  * - More easily allow for verbosity options.
  * - Check performance -> Especially compare to std::cout.
