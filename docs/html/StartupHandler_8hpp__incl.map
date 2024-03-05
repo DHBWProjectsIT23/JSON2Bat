@@ -1,9 +1,0 @@
-<map id="src/headers/StartupHandler.hpp" name="src/headers/StartupHandler.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="28,5,232,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,73,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,34,68,72,64,67,113,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="97,79,163,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,31,132,63,127,63,127,31"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="187,79,240,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,30,190,67,186,71,142,34"/>
-</map>

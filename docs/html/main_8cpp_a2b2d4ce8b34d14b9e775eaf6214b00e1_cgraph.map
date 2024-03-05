@@ -1,7 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="Node000001" title="Main function." alt="" coords="5,46,55,72"/>
-<area shape="rect" id="Node000002" href="$classutils_1_1StartupHandler.html#a9cdd57841cee245c1a1c94b0efe6549c" title="Get options from command line." alt="" coords="103,5,241,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,51,87,43,88,48,56,56"/>
-<area shape="rect" id="Node000003" href="$classutils_1_1StartupHandler.html#ade70b280d4385f270829b177da44b169" title="Initialize easylogging." alt="" coords="103,71,241,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,62,88,69,87,75,54,67"/>
-</map>
