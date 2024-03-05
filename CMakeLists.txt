@@ -27,7 +27,7 @@ project(${PROJECT_NAME}
 
 # Generating files
 configure_file(${PROJECT_SOURCE_DIR}/conf/config.hpp.in ${PROJECT_SOURCE_DIR}/src/include/config.hpp)
-configure_file(${PROJECT_SOURCE_DIR}/conf/README.md.in ${PROJECT_SOURCE_DIR}/README.md)
+configure_file(${PROJECT_SOURCE_DIR}/conf/README.in.md ${PROJECT_SOURCE_DIR}/README.md)
 
 # Astyle will autoformat when building
 find_program(ASTYLE_EXECUTABLE NAMES astyle)
