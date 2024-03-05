@@ -10,15 +10,6 @@ Authoren: Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 
 Documentation: https://definitelynotsimon13.github.io/ProjectJsonToBat
 
-
-<details>
-<summary><h2>Todos:</h2></summary>
-
-- [ ] Requirements lesen und zusammenfassen -> Max
-- [ ] "Public design" - Project Name etc...
-
-</details>
-
 <details>
 <summary><h2>Aktueller Plan:</h2></summary>
 
@@ -44,6 +35,7 @@ Documentation: https://definitelynotsimon13.github.io/ProjectJsonToBat
 - Code Quality
 - Documentation
 
+</details>
 <details>
 <summary><h2>Bezüglich Code Quality</h2></summary>
 
