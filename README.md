@@ -36,6 +36,7 @@ Documentation: https://definitelynotsimon13.github.io/ProjectJsonToBat
 - Documentation
 
 </details>
+
 <details>
 <summary><h2>Bezüglich Code Quality</h2></summary>
 

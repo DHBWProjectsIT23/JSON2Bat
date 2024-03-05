@@ -36,6 +36,7 @@ Documentation: @PROJECT_HOMEPAGE_URL@
 - Documentation
 
 </details>
+
 <details>
 <summary><h2>Bezüglich Code Quality</h2></summary>
 
