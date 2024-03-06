@@ -60,6 +60,7 @@ endif(DOXYGEN_FOUND)
 # Add sources for the main executable
 set(SOURCES
   src/main.cpp
+  src/sources/CommandLineHandler.cpp
 )
 # Add main executable
 add_executable(${PROJECT_NAME} ${SOURCES})
