@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
 # Currently not supported on Windows
-if (WIN32)
-  message(FATAL_ERROR "This project is not supported on Windows yet.")
-endif()
 
 set(PROJECT_NAME jsonToBatch)
 
@@ -21,7 +18,7 @@ set(AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci")
 # This information is also used to generate files
 project(${PROJECT_NAME} 
   VERSION 0.1.3
-  DESCRIPTION "A simple tool to convert json to batch"
+  DESCRIPTION "A simple tool to convert json to batch."
   HOMEPAGE_URL "https://definitelynotsimon13.github.io/ProjectJsonToBat"
 )
 
@@ -74,3 +71,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
   ${PROJECT_SOURCE_DIR}/src/include
 )
 
+if (WIN32)
+  message(WARNING "This project is not supported on Windows yet.")
+  target_compile_definitions(${PROJECT_NAME} PRIVATE IS_WINDOWS)
+elseif (UNIX)
+  target_compile_definitions(${PROJECT_NAME} PRIVATE IS_UNIX)
+endif()
