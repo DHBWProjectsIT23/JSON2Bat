@@ -18,7 +18,7 @@ set(AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci")
 # Initialize the project This information is also used to generate files
 project(
   ${PROJECT_NAME}
-  VERSION 0.1.3
+  VERSION 0.1.4
   DESCRIPTION "A simple tool to convert json to batch."
   HOMEPAGE_URL "https://definitelynotsimon13.github.io/ProjectJsonToBat")
 
