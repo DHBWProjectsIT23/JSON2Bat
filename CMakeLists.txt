@@ -57,8 +57,8 @@ else(DOXYGEN_FOUND)
 endif(DOXYGEN_FOUND)
 
 # Add sources for the main executable
-set(SOURCES src/main.cpp src/sources/CommandLineHandler.cpp
-            src/sources/Utilities.cpp)
+set(SOURCES src/main.cpp src/sources/utility/CommandLineHandler.cpp
+            src/sources/utility/Utilities.cpp)
 # Add main executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
@@ -67,8 +67,10 @@ add_subdirectory(lib)
 
 # Set include directories
 target_include_directories(
-  ${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include
-                          ${PROJECT_SOURCE_DIR}/src/include)
+  ${PROJECT_NAME}
+  PRIVATE ${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src/include
+          ${PROJECT_SOURCE_DIR}/src/include/utility
+          ${PROJECT_SOURCE_DIR}/src/include/parsing)
 
 if(WIN32)
   message(WARNING "This project is not supported on Windows yet.")
