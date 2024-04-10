@@ -1,95 +1,93 @@
 #include <LoggingWrapper.hpp>
+#include <cstdlib>
 #include <jsoncpp/json.h>
 #include <vector>
 
 #include "CommandLineHandler.hpp"
+#include "Utilities.hpp"
 
 INITIALIZE_EASYLOGGINGPP
 
-namespace WIP {
-void setupEasyLogging();
-}
+/* INFO:
+ * Um logging zu verwenden:
+ * "OUTPUT << ..." statt "std::cout < ..."
+ * "DEBUG << ..." für temporäres - macht nichts anderes als Formatierung zu
+ * "LOG_INFO << ..." um bspw. den Ablauf von Prozessen zu loggen
+ * "LOG_WARNING << ..." um Warnungen zu loggen
+ * "LOG_ERROR << ..." um Fehler zu loggen bevor sie geworfen werden
+ * ändern, hiflt aber damit es auffällt, fals vergessen
+ * OUTPUT, DEBUG, WARNING und ERROR werden automatisch auch in der Konsole
+ * ausgegeben
+ * -- Der Header <LoggingWrapper> muss includiert sein --
+ */
 
 int main(int argc, char* argv[])
 {
     // Setup easylogging++
-    WIP::setupEasyLogging();
+    utilities::Utils::setupEasyLogging("conf/easylogging.conf");
 
+    // Check if any options/arguments were given
     if (argc < 2) {
         LOG_ERROR << "No options given!\n";
         cli::CommandLineHandler::printHelp();
         return 1;
     }
 
+    // Vector of all inputted file names
     std::vector<std::string> files =
                 cli::CommandLineHandler::parseArguments(argc, argv);
+
+    // Checking files
+    for (const std::string &file : files) {
+        // Checking if file exists
+        if (!utilities::Utils::checkIfFileExists(file)) {
+            LOG_ERROR << "The file \"" << file << "\" does not exist!";
+            OUTPUT << "Exiting..." << std::endl;
+            std::exit(1);
+        }
+
+        // Checking if file ends with ".json"
+        if (!utilities::Utils::checkFileEnding(file)) {
+            LOG_WARNING << "The file \"" << file
+                        << "\" does not end in \".json\"\n";
+            OUTPUT << "If the file is not in JSON Format, continuing may "
+                   "result in\nunexpected behaviour!\n";
+
+            // Asking user if they want to continue
+            if (!utilities::Utils::askToContinue()) {
+                OUTPUT << "Exiting...\n";
+                LOG_INFO << "Application ended by user Input";
+                std::exit(1);
+            }
+        }
+    }
+
+    // INFO: From here on out we can assume, that all strings in the
+    // filename vector, lead to valid files!
+    // TODO: - Remove Debug: Print inputted files
     int counter = 0;
-    OUTPUT << cli::CYAN << cli::ITALIC << "Debug - Inputted files:\n" << cli::RESET;
+    OUTPUT << cli::CYAN << cli::ITALIC << "Debug - Inputted files:\n"
+           << cli::RESET;
 
     for (const auto &file : files) {
         ++counter;
         OUTPUT << "\tFile " << counter << ": " << file << "\n";
     }
 
+    /* TODO:
+     * Check if files exist
+     */
+    /* TODO:
+     * Parse Files:
+     * take file name or vector
+     * return data object
+     * Verification?
+     */
+    /* TODO:
+     * Create Batch File:
+     * take data object and create file
+     * return ?
+     */
     LOG_INFO << "Exiting...";
     return 0;
 }
-
-/**
- * \todo Auslagern
- **/
-namespace WIP {
-/**
- * \brief Setup the easylogging++ logger
- * \todo
- * - Should be moved to a separate file
- * - Proper configuration of easylogging++
- */
-void setupEasyLogging()
-{
-    el::Configurations conf("conf/easylogging.conf");
-    el::Loggers::reconfigureAllLoggers(conf);
-}
-
-/** \note
- * Example of using the logging wrapper!
- * For some cases, I thought would be most common, there are
- * definitions/macros (OUTPUT, LOG_INFO, LOG_WARNING, LOG_ERROR, LOG_DEBUG)
- * that can be used. For other cases, the utils::log function can be used
- * directly. Possibilitys:
- * - utils::log(bool verbose = false) - Logs INFO, verbose can be set to true
- *
- * - utils::log(LogLevel level) - Logs the given level, verbose is false,
- * however only INFO can be verbose anyway, as all other always print to the
- * console
- *
- * - utils::log(comst std::string &prefix, bool verbose = false) - Logs INFO,
- *     with a custom prefix, verbose can be set to true
- *
- * - utils::log(const std::string &prefix, LogLevel level, bool verbose =
- * false) - Logs the given level, with a custom prefix, verbose can be set to
- * true
- *
- * All of the above return a std::ostream, so you can use it like e.g. a
- * normal std::cout!
- */
-void printLoggingExample()
-{
-    OUTPUT << "\n----------\n"
-           << "LoggingWrapper examples"
-           << "\n----------\n";
-    OUTPUT << "Hello I am a normal output! I will also be logged!\n";
-    LOG_INFO
-            << "I am a log info, I won't get printed to the console automatically!\n";
-    // The true defines that it is verbose - the default level is INFO
-    utils::log(true) << "I am a log info, I will get printed to the console!\n";
-    LOG_WARNING << "I am a log warning, I will get printed to the console!\n";
-    LOG_ERROR << "I am a log error, I will get printed to the console!\n";
-    LOG_DEBUG << "I am a log debug, I will get printed to the console!\n";
-    // False is the default value and can be omitted
-    utils::log("Custom: ", false)
-            << "I am a log with a prefix, I won't get printed to the console!\n";
-    utils::log("Custom: ", true)
-            << "I am a log with a prefix, I will get printed to the console!\n";
-}
-} // namespace WIP
