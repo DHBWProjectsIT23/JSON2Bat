@@ -4,7 +4,7 @@
 #define MAJOR_VERSION 0
 #define MINOR_VERSION 1
 #define PATCH_VERSION 3
-#define DESCRIPTION "A simple tool to convert json to batch"
+#define DESCRIPTION "A simple tool to convert json to batch."
 #define PROJECT_NAME "jsonToBatch"
 #define AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci"
 #define HOMEPAGE_URL "https://definitelynotsimon13.github.io/ProjectJsonToBat"

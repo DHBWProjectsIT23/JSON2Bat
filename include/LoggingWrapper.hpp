@@ -35,7 +35,7 @@ namespace utils {
 #define LOG_ERROR utils::log(utils::LogLevel::ERROR)
 #define LOG_WARNING utils::log(utils::LogLevel::WARNING)
 #define LOG_DEBUG utils::log(utils::LogLevel::DEBUG)
-#define OUTPUT utils::log(utils::LogLevel::OUT, "Output: ")
+#define OUTPUT utils::log(utils::LogLevel::OUTP,"Output: ")
 
 enum class LogLevel {
   INFO,
@@ -43,7 +43,7 @@ enum class LogLevel {
   ERROR,
   FATAL,
   DEBUG,
-  OUT,
+  OUTP,
 };
 
 /**
@@ -91,7 +91,8 @@ inline LoggingWrapper log(LogLevel level, const std::string &prefix,
 }
 } // namespace utils
 
-namespace cli {
+namespace libCli {
+#ifdef IS_UNIX
 const static std::string CLEAR_TERMINAL = "\x1b[2J";
 const static std::string RESET = "\x1b[0m";
 const static std::string BOLD = "\x1b[1m";
@@ -115,7 +116,32 @@ const static std::string MAGENTA_BG = "\x1b[45m";
 const static std::string CYAN_BG = "\x1b[46m";
 const static std::string WHITE_BG = "\x1b[47m";
 const static std::string ERROR = "\x1b[31m\x1b[1m";
+#elif IS_WINDOWS
+const static std::string CLEAR_TERMINAL = "";
+const static std::string RESET = "";
+const static std::string BOLD = "";
+const static std::string DIM = "";
+const static std::string ITALIC = "";
+const static std::string UNDERLINE = "";
+const static std::string BLINKING = "";
+const static std::string BLACK_FG = "";
+const static std::string RED_FG = "";
+const static std::string GREEN_FG = "";
+const static std::string YELLOW_FG = "";
+const static std::string BLUE_FG = "";
+const static std::string MAGENTA_FG = "";
+const static std::string CYAN_FG = "";
+const static std::string WHITE_FG = "";
+const static std::string RED_BG = "";
+const static std::string GREEN_BG = "";
+const static std::string YELLOW_BG = "";
+const static std::string BLUE_BG = "";
+const static std::string MAGENTA_BG = "";
+const static std::string CYAN_BG = "";
+const static std::string WHITE_BG = "";
+const static std::string ERROR = "";
+#endif
 
-} // namespace cli
+} // namespace libCli
 
 #endif // LOGANDOUT_HPP
