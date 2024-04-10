@@ -6,6 +6,8 @@
 #include <stdexcept>
 #include <vector>
 
+/* TODO: Add documentation ?*/
+
 namespace cli {
 void CommandLineHandler::printHelp()
 {
