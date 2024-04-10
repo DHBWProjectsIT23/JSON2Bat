@@ -25,8 +25,8 @@ class CommandLineHandler {
     ~CommandLineHandler();
 };
 
-/* TODO: 
- * - Add documentation 
+/* TODO:
+ * - Add documentation
  * - Verbose mode (need to edit LogginWrapper)
  * - Print file after completion
  * - Output file location
