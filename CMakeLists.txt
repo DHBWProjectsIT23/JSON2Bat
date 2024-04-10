@@ -57,8 +57,11 @@ else(DOXYGEN_FOUND)
 endif(DOXYGEN_FOUND)
 
 # Add sources for the main executable
-set(SOURCES src/main.cpp src/sources/utility/CommandLineHandler.cpp
-            src/sources/utility/Utilities.cpp)
+set(SOURCES
+    ${PROJECT_SOURCE_DIR}/src/main.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/utility/CommandLineHandler.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/utility/Utilities.cpp)
+
 # Add main executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
