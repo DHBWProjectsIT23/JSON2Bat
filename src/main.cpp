@@ -75,9 +75,6 @@ int main(int argc, char* argv[])
     }
 
     /* TODO:
-     * Check if files exist
-     */
-    /* TODO:
      * Parse Files:
      * take file name or vector
      * return data object
