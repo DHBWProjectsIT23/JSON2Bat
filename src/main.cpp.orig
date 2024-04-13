@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 
     // Vector of all inputted file names
     std::vector<std::string> files =
-        cli::CommandLineHandler::parseArguments(argc, argv);
+                cli::CommandLineHandler::parseArguments(argc, argv);
 
     // Checking files
     for (const std::string &file : files) {

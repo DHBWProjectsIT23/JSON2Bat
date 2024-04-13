@@ -8,7 +8,7 @@
 /* TODO: Add documentation */
 namespace cli {
 class CommandLineHandler {
-public:
+  public:
     /* TODO: Add documentation */
     static void printHelp();
     /* TODO: Add documentation */
@@ -18,7 +18,7 @@ public:
     /* TODO: Add documentation */
     static std::vector<std::string> parseArguments(int argc, char* argv[]);
 
-private:
+  private:
     /* TODO: Add documentation */
     CommandLineHandler();
     /* TODO: Add documentation */

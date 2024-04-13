@@ -1,3 +1,7 @@
+# Commands
+1. cmake -B build/Debug -S.
+
+
 # CMake
 ## Was ist CMake?
 Grob gesagt ist CMake das System, das unser Projekt konfiguriert und "baut". "Baut" ist hierbei in Anführungszeichen, da es nicht den klassichen Compiler wie bspw. gcc/g++ ersetzt. CMake stellt diesem in gewissermaßen die benötigten Anweisungen bereit, damit "komplexere" Projekte mit mehreren zu kompilierenden Dateien problemlos und konsistent gebaut werden können.
@@ -9,7 +13,6 @@ Grob gesagt ist CMake das System, das unser Projekt konfiguriert und "baut". "Ba
 cmake_minimum_required(VERSION 3.22)
 
 project(ProjectName)
-
 add_executable(ProjectName main.cpp)
 ```
 Das ist eine einfach CMakeLists.txt Datei. Diese stellt im Prinzip die Anweisung wie das Projekt aufgebaut ist bereit.

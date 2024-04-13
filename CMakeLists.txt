@@ -33,6 +33,7 @@ find_program(ASTYLE_EXECUTABLE NAMES astyle)
 if(ASTYLE_EXECUTABLE)
   add_custom_target(
     astyle
+    # TODO: Fix astyle
     COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     # COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
     #        ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
@@ -61,7 +62,10 @@ endif(DOXYGEN_FOUND)
 set(SOURCES
     ${PROJECT_SOURCE_DIR}/src/main.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/utility/CommandLineHandler.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/utility/Utilities.cpp)
+    ${PROJECT_SOURCE_DIR}/src/sources/utility/Utilities.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/parsing/BatchCreator.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/parsing/FileData.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/parsing/JSONParser.cpp)
 
 # Add main executable
 add_executable(${PROJECT_NAME} ${SOURCES})
