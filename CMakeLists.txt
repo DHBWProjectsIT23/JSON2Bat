@@ -33,8 +33,9 @@ find_program(ASTYLE_EXECUTABLE NAMES astyle)
 if(ASTYLE_EXECUTABLE)
   add_custom_target(
     astyle
-    COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
-            ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+    COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+    # COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
+    #        ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     VERBATIM)
   set_target_properties(astyle PROPERTIES EXCLUDE_FROM_ALL FALSE)
 endif()
