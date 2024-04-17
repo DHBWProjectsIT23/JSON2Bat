@@ -25,11 +25,11 @@
 #ifndef LOGANDOUT_HPP
 #define LOGANDOUT_HPP
 
-#include "easylogging++.h"
 #include <iostream>
 #include <sstream>
 #include <string>
 namespace utils {
+#include <easylogging++.h>
 
 #define LOG_INFO utils::log(utils::LogLevel::INFO, "-- ")
 #define LOG_ERROR utils::log(utils::LogLevel::ERROR)
