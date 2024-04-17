@@ -28,17 +28,21 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-namespace utils {
 #include <easylogging++.h>
+
 namespace logging {
-
-#define LOG_INFO logging::log(logging::LogLevel::INFO)
-#define LOG_ERROR logging::log(logging::LogLevel::ERROR)
-#define LOG_WARNING logging::log(logging::LogLevel::WARNING)
-#define LOG_DEBUG logging::log(logging::LogLevel::DEBUG)
-#define OUTPUT logging::log(logging::LogLevel::OUT, "Output: ")
-
 void setVerboseMode(bool mode);
+}
+
+namespace libLogging {
+
+#define LOG_INFO libLogging::log(libLogging::LogLevel::INFO)
+#define LOG_ERROR libLogging::log(libLogging::LogLevel::ERROR)
+#define LOG_WARNING libLogging::log(libLogging::LogLevel::WARNING)
+#define LOG_DEBUG libLogging::log(libLogging::LogLevel::DEBUG)
+#define OUTPUT libLogging::log(libLogging::LogLevel::OUT, "Output: ")
+
+
 enum class LogLevel {
   INFO,
   WARNING,
@@ -91,9 +95,10 @@ inline LoggingWrapper log(LogLevel level, const std::string &prefix,
                           bool verbose = false) {
   return LoggingWrapper(prefix, level, verbose);
 }
-} // namespace utils
+} // namespace libLogging
 
-namespace libCli {
+namespace libLogging {
+
 #ifdef IS_UNIX
 const static std::string CLEAR_TERMINAL = "\x1b[2J";
 const static std::string RESET = "\x1b[0m";
@@ -143,7 +148,6 @@ const static std::string CYAN_BG = "";
 const static std::string WHITE_BG = "";
 const static std::string ERROR = "";
 #endif
-
-} // namespace libCli
+} // namespace libLogging
 
 #endif // LOGANDOUT_HPP
