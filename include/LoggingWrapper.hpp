@@ -38,6 +38,7 @@ namespace logging {
 #define LOG_DEBUG logging::log(logging::LogLevel::DEBUG)
 #define OUTPUT logging::log(logging::LogLevel::OUT, "Output: ")
 
+void setVerboseMode(bool mode);
 enum class LogLevel {
   INFO,
   WARNING,
