@@ -17,36 +17,42 @@
  **/
 
 #include "LoggingWrapper.hpp"
+namespace logging {
+static bool verboseMode = false;
+void setVerboseMode(bool mode) {
+    verboseMode = mode;
+}
+}
 
-namespace utils {
+namespace libLogging {
 LoggingWrapper::~LoggingWrapper() {
     switch (this->level) {
-    case LogLevel::OUTP:
+    case LogLevel::OUT:
         std::cout << this->buffer.str();
         LOG(INFO) << this->prefix << this->buffer.str();
         break;
     case LogLevel::INFO:
-        if (this->verbose) {
-            std::cout << this->prefix << this->buffer.str();
+        if (logging::verboseMode) {
+            std::cout << libLogging::BLUE_FG << this->prefix << this->buffer.str() << std::endl << libLogging::RESET;
         }
         LOG(INFO) << this->prefix << this->buffer.str();
         break;
     case LogLevel::WARNING:
-        std::cout << libCli::YELLOW_FG << this->buffer.str() << libCli::RESET;
+        std::cout << libLogging::YELLOW_FG << this->buffer.str() << libLogging::RESET;
         LOG(WARNING) << this->prefix << this->buffer.str();
         break;
     case LogLevel::ERROR:
-        std::cerr << libCli::ERROR << this->prefix << this->buffer.str() << libCli::RESET;
+        std::cerr << libLogging::ERROR << this->prefix << this->buffer.str() << libLogging::RESET;
         LOG(ERROR) << this->prefix << this->buffer.str();
         break;
     case LogLevel::FATAL:
-        std::cerr << libCli::BLACK_FG << libCli::RED_BG << this->prefix
-                  << this->buffer.str() << libCli::RESET;
+        std::cerr << libLogging::BLACK_FG << libLogging::RED_BG << this->prefix
+                  << this->buffer.str() << libLogging::RESET;
         LOG(FATAL) << this->prefix << this->buffer.str();
         break;
     case LogLevel::DEBUG:
-        std::cout << libCli::ITALIC << libCli::CYAN_FG << this->prefix
-                  << this->buffer.str() << libCli::RESET;
+        std::cout << libLogging::ITALIC << libLogging::CYAN_FG << this->prefix
+                  << this->buffer.str() << libLogging::RESET;
         LOG(DEBUG) << this->prefix << this->buffer.str();
         break;
     }
@@ -56,4 +62,5 @@ LoggingWrapper &LoggingWrapper::operator<<(Manipulator manipulator) {
     this->buffer << manipulator;
     return *this;
 }
+
 } // namespace utils
