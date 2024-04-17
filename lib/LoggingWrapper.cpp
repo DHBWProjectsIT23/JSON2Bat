@@ -19,10 +19,8 @@
 #include "LoggingWrapper.hpp"
 namespace logging {
 static bool verboseMode = false;
-void setVerboseMode(bool mode) {
-    verboseMode = mode;
-}
-}
+void setVerboseMode(bool mode) { verboseMode = mode; }
+} // namespace logging
 
 namespace libLogging {
 LoggingWrapper::~LoggingWrapper() {
@@ -33,16 +31,20 @@ LoggingWrapper::~LoggingWrapper() {
         break;
     case LogLevel::INFO:
         if (logging::verboseMode) {
-            std::cout << libLogging::BLUE_FG << this->prefix << this->buffer.str() << std::endl << libLogging::RESET;
+            std::cout << "\e[37m"
+                      << this->prefix << this->buffer.str() << std::endl
+                      << libLogging::RESET;
         }
         LOG(INFO) << this->prefix << this->buffer.str();
         break;
     case LogLevel::WARNING:
-        std::cout << libLogging::YELLOW_FG << this->buffer.str() << libLogging::RESET;
+        std::cout << libLogging::YELLOW_FG << this->buffer.str()
+                  << libLogging::RESET;
         LOG(WARNING) << this->prefix << this->buffer.str();
         break;
     case LogLevel::ERROR:
-        std::cerr << libLogging::ERROR << this->prefix << this->buffer.str() << libLogging::RESET;
+        std::cerr << libLogging::ERROR << this->prefix << this->buffer.str()
+                  << libLogging::RESET;
         LOG(ERROR) << this->prefix << this->buffer.str();
         break;
     case LogLevel::FATAL:
@@ -57,10 +59,10 @@ LoggingWrapper::~LoggingWrapper() {
         break;
     }
 }
-LoggingWrapper &LoggingWrapper::operator<<(Manipulator manipulator) {
+LoggingWrapper& LoggingWrapper::operator<<(Manipulator manipulator) {
     manipulator(std::cout);
     this->buffer << manipulator;
     return *this;
 }
 
-} // namespace utils
+} // namespace libLogging

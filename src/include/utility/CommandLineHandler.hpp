@@ -35,6 +35,7 @@ static const struct option options[] = {
     {"help", no_argument, nullptr, 'h'},
     {"version", no_argument, nullptr, 'V'},
     {"credits", no_argument, nullptr, 'c'},
+    {"verbose", no_argument, nullptr, 0},
     nullptr
     // Brief/verbose
     // Output dir
