@@ -1,3 +1,12 @@
+/**
+ * \file main.cpp
+ * \author
+ * \brief
+ * \details
+ *
+ * \license MIT
+ * \copyright See LICENSE file
+ */
 #include <LoggingWrapper.hpp>
 #include <cstdlib>
 #include <jsoncpp/json.h>

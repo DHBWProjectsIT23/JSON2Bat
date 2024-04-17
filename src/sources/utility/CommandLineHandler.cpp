@@ -1,3 +1,13 @@
+/**
+ * \file CommandLineHandler.cpp
+ * \author Simon Blum
+ * \brief
+ * \details
+ *
+ * \copyright See the LICENSE file.
+ */
+
+
 #include "CommandLineHandler.hpp"
 #include "LoggingWrapper.hpp"
 #include "config.hpp"

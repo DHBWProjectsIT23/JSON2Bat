@@ -1,3 +1,25 @@
+/**
+ * \file CommandLineHandler.hpp
+ * \author Simon Blum
+ * \brief Responsible for the Command Line Interface.
+ * \details
+ * This file is responsible for the Command Line Interface.
+ * As such it includes things such as the
+ * CommandLineHandler class, possible options and style helpers.
+ *
+ * \copyright See the LICENSE file.
+ *
+ */
+
+/**
+ * \file
+ * \author
+ * \brief
+ * \details
+ *
+ * \copyright See the LICENSE file.
+ */
+
 #ifndef COMMANDLINEHANDLER_HPP
 #define COMMANDLINEHANDLER_HPP
 

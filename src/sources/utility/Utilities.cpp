@@ -1,3 +1,12 @@
+/**
+ * \file Utilities.cpp
+ * \author Simon Blum
+ * \brief
+ * \details
+ *
+ * \copyright See the LICENSE file.
+ */
+
 #include "Utilities.hpp"
 #include "CommandLineHandler.hpp"
 #include "config.hpp"
