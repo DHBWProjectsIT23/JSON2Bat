@@ -45,7 +45,7 @@ enum class LogLevel {
   ERROR,
   FATAL,
   DEBUG,
-  OUTP,
+  OUT,
 };
 
 /**
