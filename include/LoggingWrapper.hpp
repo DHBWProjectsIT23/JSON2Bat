@@ -30,12 +30,13 @@
 #include <string>
 namespace utils {
 #include <easylogging++.h>
+namespace logging {
 
-#define LOG_INFO utils::log(utils::LogLevel::INFO, "-- ")
-#define LOG_ERROR utils::log(utils::LogLevel::ERROR)
-#define LOG_WARNING utils::log(utils::LogLevel::WARNING)
-#define LOG_DEBUG utils::log(utils::LogLevel::DEBUG)
-#define OUTPUT utils::log(utils::LogLevel::OUTP,"Output: ")
+#define LOG_INFO logging::log(logging::LogLevel::INFO)
+#define LOG_ERROR logging::log(logging::LogLevel::ERROR)
+#define LOG_WARNING logging::log(logging::LogLevel::WARNING)
+#define LOG_DEBUG logging::log(logging::LogLevel::DEBUG)
+#define OUTPUT logging::log(logging::LogLevel::OUT, "Output: ")
 
 enum class LogLevel {
   INFO,
