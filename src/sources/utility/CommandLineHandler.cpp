@@ -3,14 +3,14 @@
 #include "config.hpp"
 #include <bits/getopt_ext.h>
 #include <cstdlib>
+#include <cstring>
 #include <stdexcept>
 #include <vector>
 
 /* TODO: Add documentation ?*/
 
 namespace cli {
-void CommandLineHandler::printHelp()
-{
+void CommandLineHandler::printHelp() {
     LOG_INFO << "Printing help message...";
     OUTPUT << BOLD << "Usage:\n"
            << RESET << "----------\n"
@@ -19,23 +19,25 @@ void CommandLineHandler::printHelp()
            << BOLD << "Options:\n"
            << RESET << "----------\n"
            << "-h, --help\t\t\tPrint this help message\n"
-           << "-v, --version\t\t\tPrint the version number\n"
+           << "-V, --version\t\t\tPrint the version number\n"
            << "-c, --credits\t\t\tPrint the credits\n\n"
-           << BOLD << "Filenames:\n"
+           << "\n"
+           << "    --verbose\t\t\tStart the application in verbose mode\n"
+           << ITALIC
+           << "          \t\t\tNote: Verbose flag should be passed first!\n\n"
+           << RESET << BOLD << "Filenames:\n"
            << RESET << "----------\n"
            << "The json files to be processed into batch files.\n"
-           << "Multiple files should be seperated by spaces!\n";
+           << "Multiple files should be seperated by spaces!\n\n";
     exit(0);
 }
-void CommandLineHandler::printVersion()
-{
+void CommandLineHandler::printVersion() {
     LOG_INFO << "Printing version number...";
-    OUTPUT << PROJECT_NAME << " v" << MAJOR_VERSION << "." << MINOR_VERSION << "."
-           << PATCH_VERSION << "\n";
+    OUTPUT << PROJECT_NAME << " v" << MAJOR_VERSION << "." << MINOR_VERSION
+           << "." << PATCH_VERSION << "\n";
     exit(0);
 }
-void CommandLineHandler::printCredits()
-{
+void CommandLineHandler::printCredits() {
     LOG_INFO << "Printing credits...";
     OUTPUT << BOLD << "Project information:\n"
            << RESET << "----------\n"
@@ -44,15 +46,15 @@ void CommandLineHandler::printCredits()
            << "\n"
            << DESCRIPTION << "\n"
            << "\n"
-           << GREEN << "Authors: " << RESET << ITALIC << AUTHORS << RESET << "\n"
+           << GREEN << "Authors: " << RESET << ITALIC << AUTHORS << RESET
+           << "\n"
            << GREEN << "Documentation: " << RESET << ITALIC << HOMEPAGE_URL
            << RESET << "\n";
     exit(0);
 }
 
 std::vector<std::string> CommandLineHandler::parseArguments(int argc,
-        char* argv[])
-{
+        char* argv[]) {
     LOG_INFO << "Parsing arguments...";
 
     while (true) {
@@ -67,7 +69,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
         switch (result) {
         case '?':
-            LOG_WARNING << "Invalid Option!\n";
+            LOG_WARNING << "Invalid Option\n";
             CommandLineHandler::printHelp();
             exit(0);
 
@@ -87,12 +89,17 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
             break;
 
         case 0:
-            LOG_INFO << "Long option without short version detected!";
+            LOG_INFO << "Long option without short version detected";
             longOption = options[optIndex];
-            LOG_INFO << "Option: " << longOption.name << " given!";
+            LOG_INFO << "Option: " << longOption.name << " given";
 
             if (longOption.has_arg == required_argument || longOption.has_arg) {
                 LOG_INFO << "  Argument: " << optarg;
+            }
+
+            if (strcmp(longOption.name, "verbose") == 0) {
+                logging::setVerboseMode(true);
+                LOG_INFO << "Verbose mode activated";
             }
 
             break;
@@ -104,7 +111,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         }
     }
 
-    LOG_INFO << "Options have been parsed!";
+    LOG_INFO << "Options have been parsed";
     LOG_INFO << "Checking for arguments...";
     std::vector<std::string> files;
 
@@ -113,7 +120,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         files.emplace_back(argv[optind++]);
     }
 
-    LOG_INFO << "Arguments and options have been parsed!";
+    LOG_INFO << "Arguments and options have been parsed";
     return files;
 }
 } // namespace cli

@@ -26,6 +26,7 @@ int main(int argc, char* argv[])
     // Setup easylogging++
     utilities::Utils::setupEasyLogging("conf/easylogging.conf");
 
+
     // Check if any options/arguments were given
     if (argc < 2) {
         LOG_ERROR << "No options given!\n";
@@ -36,6 +37,11 @@ int main(int argc, char* argv[])
     // Vector of all inputted file names
     std::vector<std::string> files =
         cli::CommandLineHandler::parseArguments(argc, argv);
+
+    if (files.empty()) {
+        LOG_ERROR << "No files were given as arguments!\n";
+        return 1;
+    }
 
     // Checking files
     for (const std::string &file : files) {
