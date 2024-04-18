@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.16)
 
 # Currently not supported on Windows
 
@@ -23,29 +23,6 @@ project(
   VERSION 0.1.5
   DESCRIPTION "A simple tool to convert json to batch."
   HOMEPAGE_URL "https://definitelynotsimon13.github.io/ProjectJsonToBat")
-
-# Check clang version
-if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    execute_process(
-        COMMAND ${CMAKE_CXX_COMPILER} --version
-        OUTPUT_VARIABLE clang_version_output
-    )
-    string(REGEX MATCH "[0-9]+\\.[0-9]+" clang_version ${clang_version_output})
-    if (clang_version VERSION_LESS "16.0")
-        message(FATAL_ERROR "Clang version ${clang_version} is not supported. Minimum version required: 16.0")
-    endif ()
-endif ()
-
-if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-    execute_process(
-        COMMAND ${CMAKE_CXX_COMPILER} --version
-        OUTPUT_VARIABLE gnu_version_output
-    )
-    string(REGEX MATCH "[0-9]+\\.[0-9]+" gnu_version ${gnu_version_output})
-    if (gnu_version VERSION_LESS "11.0")
-        message(FATAL_ERROR "Clang version ${gnu_version} is not supported. Minimum version required: 11.0")
-    endif ()
-endif ()
 
 # Configure Files
 add_subdirectory(conf)
