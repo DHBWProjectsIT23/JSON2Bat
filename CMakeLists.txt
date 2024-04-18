@@ -39,8 +39,8 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
         OUTPUT_VARIABLE gnu_version_output
     )
     string(REGEX MATCH "[0-9]+\\.[0-9]+" gnu_version ${gnu_version_output})
-    if (gnu_version VERSION_LESS "13.0")
-        message(FATAL_ERROR "Clang version ${gnu_version} is not supported. Minimum version required: 13.0")
+    if (gnu_version VERSION_LESS "11.0")
+        message(FATAL_ERROR "Clang version ${gnu_version} is not supported. Minimum version required: 11.0")
     endif ()
 endif ()
 
