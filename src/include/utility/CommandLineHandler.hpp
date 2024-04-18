@@ -99,13 +99,13 @@ private:
      * @note As all functions are static it should not be used and as such
      * is private.
      */
-    CommandLineHandler();
+    CommandLineHandler() = delete;
     /**
      * @brief The Destructor of the CommandLineHandler Class
      * @note As all functions are static it should not be used and as such
      * is private.
      */
-    ~CommandLineHandler() {}
+    ~CommandLineHandler() = delete;
 };
 
 /**
