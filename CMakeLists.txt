@@ -5,6 +5,9 @@ cmake_minimum_required(VERSION 3.22)
 set(PROJECT_NAME jsonToBatch)
 
 # Set basic CMAKE flags
+set(CMAKE_CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED true)
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -79,20 +82,18 @@ else(DOXYGEN_FOUND)
   message(STATUS "Doxygen not found, unable to build documentation")
 endif(DOXYGEN_FOUND)
 
-# Add main executable
-add_executable(${PROJECT_NAME})
 
-# Specify C++ standard
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 # Add sources for the main executable
-target_sources(${PROJECT_NAME} PRIVATE
+set(SOURCES
     ${PROJECT_SOURCE_DIR}/src/main.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/utility/CommandLineHandler.cpp
-        ${PROJECT_SOURCE_DIR}/src/sources/utility/Utils.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/utility/Utils.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/parsing/BatchCreator.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/parsing/FileData.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/parsing/JSONParser.cpp)
 
+# Add main executable
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Add subdirectories
 add_subdirectory(lib)
