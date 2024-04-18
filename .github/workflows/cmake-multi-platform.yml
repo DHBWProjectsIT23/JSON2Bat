@@ -48,7 +48,7 @@ jobs:
 
     - uses: egor-tensin/setup-clang@v1
       with:
-        version: '15'
+        version: '16'
 
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
