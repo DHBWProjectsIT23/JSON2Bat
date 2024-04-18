@@ -1,11 +1,15 @@
 /**
- * \file main.cpp
- * \author
- * \brief
- * \details
+ * @file main.cpp
+ * @author Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
+ * @date 2024-04-18
+ * @version 0.1.5
+ * @brief Contains the main function.
+ * @details
+ * The main function is responsible for connection all parts of the programm.
+ * It calls all relevant classes and finishes when everything is done.
  *
- * \license MIT
- * \copyright See LICENSE file
+ * @license GNU GPLv3
+ * @copyright See LICENSE file
  */
 #include <LoggingWrapper.hpp>
 #include <cstdlib>
@@ -13,7 +17,7 @@
 #include <vector>
 
 #include "CommandLineHandler.hpp"
-#include "Utilities.hpp"
+#include "Utils.hpp"
 
 INITIALIZE_EASYLOGGINGPP
 
@@ -23,13 +27,22 @@ INITIALIZE_EASYLOGGINGPP
  * "DEBUG << ..." für temporäres - macht nichts anderes als Formatierung zu
  * "LOG_INFO << ..." um bspw. den Ablauf von Prozessen zu loggen
  * "LOG_WARNING << ..." um Warnungen zu loggen
- * "LOG_ERROR << ..." um Fehler zu loggen bevor sie geworfen werden
- * ändern, hiflt aber damit es auffällt, fals vergessen
+ * "LOG_ERROR << ..." um Fehler zu loggen, bevor sie geworfen werden
+ * ändern, hilft aber damit es auffällt, falls vergessen
  * OUTPUT, DEBUG, WARNING und ERROR werden automatisch auch in der Konsole
  * ausgegeben
  * -- Der Header <LoggingWrapper> muss includiert sein --
  */
 
+/**
+ * @brief Main function of the program
+ * @details
+ * The main function is responsible for connection all parts of the programm.
+ * It calls all relevant classes and finishes when everything is done.
+ * @param argc The number of arguments given
+ * @param argv Th command line arguments given
+ * @return Returns 0 on success, 1 on failure
+ */
 int main(int argc, char* argv[])
 {
     // Setup easylogging++
@@ -79,26 +92,17 @@ int main(int argc, char* argv[])
 
     // INFO: From here on out we can assume, that all strings in the
     // filename vector, lead to valid files!
-    // TODO: - Remove Debug: Print inputted files
-    int counter = 0;
-    OUTPUT << cli::CYAN << cli::ITALIC << "Debug - Inputted files:\n"
-           << cli::RESET;
 
-    for (const auto &file : files) {
-        ++counter;
-        OUTPUT << "\tFile " << counter << ": " << file << "\n";
-    }
-
-    /* TODO:
-     * Parse Files:
-     * take file name or vector
-     * return data object
-     * Verification?
+    /* @TODO:
+     * - Parse Files:
+     *      - take file name or vector
+     *        return data object
+     *      - Verification?
      */
-    /* TODO:
-     * Create Batch File:
-     * take data object and create file
-     * return ?
+    /* @TODO:
+     * - Create Batch File:
+     *      - take data object and create file
+     *        return ?
      */
     LOG_INFO << "Exiting...";
     return 0;
