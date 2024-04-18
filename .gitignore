@@ -5,8 +5,9 @@ runDebug.sh
 myeasylog.log
 docs
 logs
-.orig
+*.orig
 
 # IDE's
 .vscode
 .idea
+*event-trace
