@@ -69,7 +69,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
     while (true) {
         int optIndex = -1;
-        struct option longOption{};
+        struct option longOption {};
         auto result = getopt_long(argc, argv, "hvc", options, &optIndex);
 
         if (result == -1) {

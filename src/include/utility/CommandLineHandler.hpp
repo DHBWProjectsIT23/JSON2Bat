@@ -54,7 +54,7 @@ namespace cli {
  * @see options
  */
 class CommandLineHandler {
-  public:
+public:
     /**
      * @brief Prints the help message.
      * @details
@@ -93,19 +93,19 @@ class CommandLineHandler {
      */
     static std::vector<std::string> parseArguments(int argc, char* argv[]);
 
-  private:
+private:
     /**
      * @brief The Constructor of the CommandLineHandler Class
-     * @note As all functions are private it should not be used and as such
+     * @note As all functions are static it should not be used and as such
      * is private.
      */
     CommandLineHandler();
     /**
      * @brief The Destructor of the CommandLineHandler Class
-     * @note As all functions are private it should not be used and as such
+     * @note As all functions are static it should not be used and as such
      * is private.
      */
-    ~CommandLineHandler();
+    ~CommandLineHandler() {}
 };
 
 /**
