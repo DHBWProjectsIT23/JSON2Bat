@@ -1,13 +1,19 @@
 /**
- * \file Utilities.cpp
- * \author Simon Blum
- * \brief
- * \details
+ * @file Utlities.cpp
+ * @author Simon Blum
+ * @date 2024-04-18
+ * @version 0.1.5
+ * @brief Implementation for the Utils class
+ * @details
+ * This file includes the implementation for the Utils class.
  *
- * \copyright See the LICENSE file.
+ * @see src/include/utility/Utilities.hpp
+ * @license GNU GPLv3
+ * @copyright See LICENSE file
  */
 
-#include "Utilities.hpp"
+
+#include "Utils.hpp"
 #include "CommandLineHandler.hpp"
 #include "config.hpp"
 
@@ -29,9 +35,8 @@ bool Utils::checkIfFileExists(const std::string& fileName) {
     std::ifstream file(fileName);
     return file.good();
 }
-bool Utils::checkFileEnding(const std::string& fileName) {
-    return fileName.size() >= 5 &&
-           fileName.substr(fileName.size() - 5) == ".json";
+bool Utils::checkFileEnding(const std::string_view& fileName) {
+    return fileName.size() >= 5 && fileName.ends_with(".json");
 }
 bool Utils::askToContinue(const std::string& prompt) {
     std::string userInput;
@@ -40,8 +45,7 @@ bool Utils::askToContinue(const std::string& prompt) {
 
     do {
         std::cin >> userInput;
-        std::transform(userInput.begin(), userInput.end(), userInput.begin(),
-                       ::tolower);
+        std::ranges::transform(userInput, userInput.begin(), ::tolower);
 
         if (userInput != "y" && userInput != "yes" && userInput != "n" &&
                 userInput != "no") {
