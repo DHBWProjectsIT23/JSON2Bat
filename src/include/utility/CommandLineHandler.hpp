@@ -1,25 +1,21 @@
 /**
- * \file CommandLineHandler.hpp
- * \author Simon Blum
- * \brief Responsible for the Command Line Interface.
- * \details
+ * @file CommandLineHandler.hpp
+ * @author Simon Blum
+ * @date 2024-04-18
+ * @version 0.1.5
+ * @brief Responsible for the Command Line Interface.
+ * @details
  * This file is responsible for the Command Line Interface.
  * As such it includes things such as the
  * CommandLineHandler class, possible options and style helpers.
  *
- * \copyright See the LICENSE file.
- *
+ * @see cli
+ * @see CommandLineHandler
+ * @see options
+ * @see StyleHelpers
+ * @license GNU GPLv3
+ * @copyright See LICENSE file
  */
-
-/**
- * \file
- * \author
- * \brief
- * \details
- *
- * \copyright See the LICENSE file.
- */
-
 #ifndef COMMANDLINEHANDLER_HPP
 #define COMMANDLINEHANDLER_HPP
 
@@ -27,31 +23,102 @@
 #include <string>
 #include <vector>
 
-/* TODO: Add documentation */
+/**
+ * @namespace cli
+ * @brief Includes everything regarding the CLI
+ * @details
+ * This namespace includes all the code regarding the Command Line Interface.
+ * This includes the CommandLineHandler Class, the struct for the options and
+ * helpers for Styling.
+ *
+ * @author Simon Blum
+ * @date 2024-04-18
+ * @version 0.1.5
+ *
+ * @see CommandLineHandler
+ * @see options
+ * @see StyleHelpers
+ */
 namespace cli {
+
+/**
+ * @class CommandLineHandler
+ * @brief Responsible for the Command Line Interface.
+ * @details
+ * This class is responsible for parsing the command line arguments,
+ * printing Help/Version/Credits messages and returning inputted files.
+ *
+ * @author Simon Blum
+ * @date 2024-04-18
+ * @version 0.1.5
+ * @see options
+ */
 class CommandLineHandler {
 public:
-    /* TODO: Add documentation */
-    static void printHelp();
-    /* TODO: Add documentation */
-    static void printVersion();
-    /* TODO: Add documentation */
-    static void printCredits();
-    /* TODO: Add documentation */
+    /**
+     * @brief Prints the help message.
+     * @details
+     * Prints the help message when called.
+     *
+     * @note This function ends the application.
+     */
+    [[noreturn]] static void printHelp();
+    /**
+     * @brief Prints the version message.
+     * @details
+     * Prints the version message when called.
+     *
+     * @note This function ends the application.
+     */
+    [[noreturn]] static void printVersion();
+    /**
+     * @brief Prints the credits message.
+     * @details
+     * Prints the credits message when called.
+     *
+     * @note This function ends the application.
+     *
+     * @todo Add Email
+     */
+    [[noreturn]] static void printCredits();
+    /**
+     * @brief Parses the Command Line Arguments.
+     * @details
+     * This function uses the "getopt.h" library to parse all options given
+     * and then returns all files which are given as arguments.
+     * @param argc The number of arguments given
+     * @param argv The arguments given
+     * @throws std::logic_error
+     * @return Returns a vector of strings containing all filenames.
+     */
     static std::vector<std::string> parseArguments(int argc, char* argv[]);
 
 private:
-    /* TODO: Add documentation */
-    CommandLineHandler();
-    /* TODO: Add documentation */
-    ~CommandLineHandler();
+    /**
+     * @brief The Constructor of the CommandLineHandler Class
+     * @note As all functions are static it should not be used and as such
+     * is private.
+     */
+    CommandLineHandler() = delete;
+    /**
+     * @brief The Destructor of the CommandLineHandler Class
+     * @note As all functions are static it should not be used and as such
+     * is private.
+     */
+    ~CommandLineHandler() = delete;
 };
 
-/* TODO:
- * - Add documentation
- * - Verbose mode (need to edit LogginWrapper)
- * - Print file after completion
- * - Output file location
+/**
+ * @struct options
+ * @brief The struct containing all possible options.
+ * @details
+ * This struct contains all long and short options which can be used and will be
+ * parsed using "getopt.h"
+ *
+ * @author Simon Blum
+ * @date 2024-04-18
+ * @version 0.1.5
+ * @see CommandLineHandler
  */
 static const struct option options[] = {
     {"help", no_argument, nullptr, 'h'},
@@ -63,6 +130,17 @@ static const struct option options[] = {
     // Output dir
 };
 
+/**
+ * @defgroup StyleHelpers
+ * @brief Static variables to help with CLI styling.
+ * @details
+ * A group of strings, that use escape sequences to easily style the
+ * command line interface on Unix systems.
+ * When compiling for Windows all of these strings will be empty, as escape
+ * sequences can't be used the same way.
+ *
+ * @{
+ */
 #ifdef IS_UNIX // CLI Formatting for Linux
 static const std::string CLEAR_TERMINAL = "\033[2J\033[1;1H";
 static const std::string RESET = "\033[0m";
@@ -76,7 +154,8 @@ static const std::string WHITE = "\033[0;37m";
 static const std::string BOLD = "\033[1m";
 static const std::string UNDERLINE = "\033[4m";
 static const std::string ITALIC = "\033[3m";
-#elif defined(IS_WINDOWS) // Windows doesn't support ANSI escape codes the same way
+#elif defined(                                                                 \
+    IS_WINDOWS) // Windows doesn't support ANSI escape codes the same way
 static const std::string CLEAR_TERMINAL = "";
 static const std::string RESET = "";
 static const std::string RED = "";
@@ -90,6 +169,7 @@ static const std::string BOLD = "";
 static const std::string UNDERLINE = "";
 static const std::string ITALIC = "";
 #endif
+/** @} */ // end of group StyleHelpers
 
 } // namespace cli
 

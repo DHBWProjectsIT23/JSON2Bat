@@ -31,7 +31,7 @@ LoggingWrapper::~LoggingWrapper() {
         break;
     case LogLevel::INFO:
         if (logging::verboseMode) {
-            std::cout << "\e[37m"
+            std::cout << libLogging::GRAY_FG
                       << this->prefix << this->buffer.str() << std::endl
                       << libLogging::RESET;
         }

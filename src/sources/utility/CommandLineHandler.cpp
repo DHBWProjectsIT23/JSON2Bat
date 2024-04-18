@@ -1,12 +1,14 @@
 /**
- * \file CommandLineHandler.cpp
- * \author Simon Blum
- * \brief
- * \details
+ * @file CommandLineHandler.cpp
+ * @author Simon Blum
+ * @date 2024-04-18
+ * @version 0.1.5
+ * @brief Implementation for the Command Line Interface.
  *
- * \copyright See the LICENSE file.
+ * @see src/include/utility/CommandLineHandler.hpp
+ * @license GNU GPLv3
+ * @copyright See LICENSE file
  */
-
 
 #include "CommandLineHandler.hpp"
 #include "LoggingWrapper.hpp"
@@ -16,8 +18,6 @@
 #include <cstring>
 #include <stdexcept>
 #include <vector>
-
-/* TODO: Add documentation ?*/
 
 namespace cli {
 void CommandLineHandler::printHelp() {
@@ -69,7 +69,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
     while (true) {
         int optIndex = -1;
-        struct option longOption;
+        struct option longOption {};
         auto result = getopt_long(argc, argv, "hvc", options, &optIndex);
 
         if (result == -1) {
@@ -103,7 +103,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
             longOption = options[optIndex];
             LOG_INFO << "Option: " << longOption.name << " given";
 
-            if (longOption.has_arg == required_argument || longOption.has_arg) {
+            if (longOption.has_arg) {
                 LOG_INFO << "  Argument: " << optarg;
             }
 

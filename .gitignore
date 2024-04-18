@@ -1,11 +1,13 @@
+# Ignored Projekt files
 build
 .cache
 runDebug.sh
 myeasylog.log
-docs/html
-docs/latex
-docs/man
-docs/rtf
+docs
 logs
+*.orig
+
+# IDE's
 .vscode
-.orig
+.idea
+*event-trace

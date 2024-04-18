@@ -9,7 +9,7 @@
  * to be included to allow for logging.
  * Easylogging++ will not be configured or initialised in this library.
  *
- * Perfomance based on my not very scientific tests: 
+ * Perfomance based on my not very scientific tests:
  * Average over 10 runs with 1.000.000 iterations each:
  * - only Easylogging++: 1046.1 ms
  * - easylogging++ and std::cout: 3814.24 ms
@@ -25,10 +25,10 @@
 #ifndef LOGANDOUT_HPP
 #define LOGANDOUT_HPP
 
+#include <easylogging++.h>
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <easylogging++.h>
 
 namespace logging {
 void setVerboseMode(bool mode);
@@ -42,14 +42,13 @@ namespace libLogging {
 #define LOG_DEBUG libLogging::log(libLogging::LogLevel::DEBUG)
 #define OUTPUT libLogging::log(libLogging::LogLevel::OUT, "Output: ")
 
-
 enum class LogLevel {
-  INFO,
-  WARNING,
-  ERROR,
-  FATAL,
-  DEBUG,
-  OUT,
+    INFO,
+    WARNING,
+    ERROR,
+    FATAL,
+    DEBUG,
+    OUT,
 };
 
 /**
@@ -58,42 +57,44 @@ enum class LogLevel {
  * - Automatically makes new line for cout -- Nevermind?!
  **/
 class LoggingWrapper {
-public:
-  LoggingWrapper(LogLevel newLevel, bool newVerbose = false)
-      : level(newLevel), verbose(newVerbose) {}
-  LoggingWrapper(const std::string &newPrefix, LogLevel newLevel,
-                 bool newVerbose = false)
+  public:
+    LoggingWrapper(LogLevel newLevel, bool newVerbose = false)
+        : level(newLevel), verbose(newVerbose) {}
+    LoggingWrapper(const std::string& newPrefix, LogLevel newLevel,
+                   bool newVerbose = false)
 
-      : prefix(newPrefix), level(newLevel), verbose(newVerbose) {}
+        : prefix(newPrefix), level(newLevel), verbose(newVerbose) {}
 
-  template <typename T> LoggingWrapper &operator<<(const T &val) {
-    buffer << val;
-    return *this;
-  }
+    template <typename T> LoggingWrapper& operator<<(const T& val) {
+        buffer << val;
+        return *this;
+    }
 
-  typedef std::ostream &(*Manipulator)(std::ostream &);
-  LoggingWrapper &operator<<(Manipulator manipulator);
+    typedef std::ostream& (*Manipulator)(std::ostream&);
+    LoggingWrapper& operator<<(Manipulator manipulator);
 
-  ~LoggingWrapper();
+    ~LoggingWrapper();
 
-private:
-  std::string prefix;
-  LogLevel level;
-  std::ostringstream buffer;
-  const bool verbose;
+  private:
+    LoggingWrapper(const LoggingWrapper&) = delete;
+    LoggingWrapper& operator=(const LoggingWrapper&) = delete;
+    std::string prefix;
+    LogLevel level;
+    std::ostringstream buffer;
+    const bool verbose;
 };
 inline LoggingWrapper log(bool verbose = false) {
-  return LoggingWrapper(LogLevel::INFO, verbose);
+    return LoggingWrapper(LogLevel::INFO, verbose);
 }
 inline LoggingWrapper log(LogLevel level) {
-  return LoggingWrapper(level, false);
+    return LoggingWrapper(level, false);
 }
-inline LoggingWrapper log(const std::string &prefix, bool verbose = false) {
-  return LoggingWrapper(prefix, LogLevel::INFO, verbose);
+inline LoggingWrapper log(const std::string& prefix, bool verbose = false) {
+    return LoggingWrapper(prefix, LogLevel::INFO, verbose);
 }
-inline LoggingWrapper log(LogLevel level, const std::string &prefix,
+inline LoggingWrapper log(LogLevel level, const std::string& prefix,
                           bool verbose = false) {
-  return LoggingWrapper(prefix, level, verbose);
+    return LoggingWrapper(prefix, level, verbose);
 }
 } // namespace libLogging
 
