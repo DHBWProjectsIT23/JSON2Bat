@@ -47,7 +47,7 @@ bool Utils::askToContinue(const std::string& prompt) {
         std::transform(userInput.begin(), userInput.end(), userInput.begin(), ::tolower);
 
         if (userInput != "y" && userInput != "yes" && userInput != "n" &&
-            userInput != "no") {
+                userInput != "no") {
             LOG_INFO << "Wrong user input!";
             OUTPUT << cli::ITALIC << "Please enter Y/Yes or N/No!\n"
                    << cli::RESET;
