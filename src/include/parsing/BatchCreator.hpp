@@ -1,8 +1,13 @@
 /**
- * \file BatchCreator.hpp
- * \author
- * \brief
- * \details
+ * @file
+ * @author
+ * @date
+ * @version
+ * @brief
+ * @details
  *
- * \copyright See the LICENSE file.
+ *
+ * @license GNU GPLv3
+ * @copyright See LICENSE file
  */
+
