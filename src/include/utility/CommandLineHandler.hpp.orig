@@ -1,3 +1,25 @@
+/**
+ * \file CommandLineHandler.hpp
+ * \author Simon Blum
+ * \brief Responsible for the Command Line Interface.
+ * \details
+ * This file is responsible for the Command Line Interface.
+ * As such it includes things such as the
+ * CommandLineHandler class, possible options and style helpers.
+ *
+ * \copyright See the LICENSE file.
+ * 
+ */
+
+/**
+ * \file
+ * \author
+ * \brief
+ * \details
+ *
+ * \copyright See the LICENSE file.
+ */
+
 #ifndef COMMANDLINEHANDLER_HPP
 #define COMMANDLINEHANDLER_HPP
 
@@ -8,7 +30,7 @@
 /* TODO: Add documentation */
 namespace cli {
 class CommandLineHandler {
-  public:
+public:
     /* TODO: Add documentation */
     static void printHelp();
     /* TODO: Add documentation */
@@ -18,7 +40,7 @@ class CommandLineHandler {
     /* TODO: Add documentation */
     static std::vector<std::string> parseArguments(int argc, char* argv[]);
 
-  private:
+private:
     /* TODO: Add documentation */
     CommandLineHandler();
     /* TODO: Add documentation */
@@ -35,6 +57,7 @@ static const struct option options[] = {
     {"help", no_argument, nullptr, 'h'},
     {"version", no_argument, nullptr, 'V'},
     {"credits", no_argument, nullptr, 'c'},
+    {"verbose", no_argument, nullptr, 0},
     nullptr
     // Brief/verbose
     // Output dir

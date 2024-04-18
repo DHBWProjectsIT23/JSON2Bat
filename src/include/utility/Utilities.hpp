@@ -1,3 +1,12 @@
+/**
+ * \file Utilities.hpp
+ * \author
+ * \brief
+ * \details
+ *
+ * \copyright See the LICENSE file.
+ */
+
 #include <string>
 
 namespace utilities {
