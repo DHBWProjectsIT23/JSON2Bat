@@ -12,6 +12,8 @@
  * @copyright See LICENSE file
  */
 #include <LoggingWrapper.hpp>
+#include "FileData.hpp"
+#include "JsonParser.hpp"
 #include <cstdlib>
 #include <jsoncpp/json.h>
 #include <vector>
