@@ -16,6 +16,8 @@
 #include <jsoncpp/json.h>
 #include <vector>
 
+#include "FileData.hpp"
+#include "JsonHandler.hpp"
 #include "CommandLineHandler.hpp"
 #include "Utils.hpp"
 
