@@ -1,41 +1,41 @@
 /**
- * @file
+ * @file FileData.cpp
  * @author
  * @date
  * @version
  * @brief
  * @details
  *
- *
- * @license GNU GPLv3
  * @copyright See LICENSE file
  */
 
 #include "FileData.hpp"
+#include "ErrorHandler.hpp"
 #include "LoggingWrapper.hpp"
-
-#include <stdexcept>
 
 namespace parsing {
 void FileData::setOutputFile(std::string &newOutputfile)
 {
     LOG_INFO << "Setting outputfile to...";
 
+    // If no value for key "outputfile"
     if (newOutputfile.empty()) {
-        LOG_ERROR << "Tried to set empty outputfile!";
-        throw std::invalid_argument("Outputfile cannot be empty");
+        LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
+        errors::ErrorHandler::invalidValue("outputfile",
+                                           "Outputfile can't be empty!");
     }
 
+    // If outputfile is already set
     if (!this->outputfile.empty()) {
-        LOG_ERROR << "Outputfile already set!";
-        throw std::invalid_argument("Outputfile already set");
+        LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
+        errors::ErrorHandler::invalidValue("outputfile",
+                                           "Outputfile is already set!");
     }
 
-    if (newOutputfile.find(".bat") == std::string::npos ||
-            newOutputfile.find(".bat") !=
-            newOutputfile.size() - FileData::suffixLength) {
+    // If outputfile does not end with ".bat"
+    if (!newOutputfile.ends_with(".bat")) {
         newOutputfile += ".bat";
-        LOG_WARNING << "Outputfile does not have .bat suffix, adding it now: "
+        LOG_WARNING << "Outputfile does not end with \".bat\", adding it now: "
                     << newOutputfile;
     }
 
@@ -56,8 +56,8 @@ void FileData::setApplication(const std::string &newApplication)
 void FileData::addCommand(const std::string &command)
 {
     if (command.empty()) {
-        LOG_ERROR << "Tried to add empty command to data object!";
-        throw std::invalid_argument("Command cannot be empty");
+        LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
+        errors::ErrorHandler::invalidValue("command", "Command value is empty!");
     }
 
     LOG_INFO << "Adding command: " << command << "\n";
@@ -67,10 +67,14 @@ void FileData::addCommand(const std::string &command)
 void FileData::addEnvironmentVariable(const std::string &name,
                                       const std::string &value)
 {
-    if (name.empty() || value.empty()) {
-        LOG_ERROR << "Tried to add invalid environment variable to data object!";
-        LOG_INFO << "Envirement variables have to have a name and a value!";
-        throw std::invalid_argument("Name and value cannot be empty");
+    if (name.empty()) {
+        LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
+        errors::ErrorHandler::invalidValue("name", "Name value is empty!");
+    }
+
+    if (value.empty()) {
+        LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
+        errors::ErrorHandler::invalidValue("key", "Key value is empty");
     }
 
     LOG_INFO << "Adding environment variable: " << name << "=" << value << "\n";
@@ -80,8 +84,8 @@ void FileData::addEnvironmentVariable(const std::string &name,
 void FileData::addPathValue(const std::string &pathValue)
 {
     if (pathValue.empty()) {
-        LOG_ERROR << "Tried to add empty path value to data object!";
-        throw std::invalid_argument("Path value cannot be empty");
+        LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
+        errors::ErrorHandler::invalidValue("path", "Path value is empty");
     }
 
     LOG_INFO << "Adding path value: " << pathValue << "\n";

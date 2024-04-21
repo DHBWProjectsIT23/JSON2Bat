@@ -35,7 +35,7 @@ if(ASTYLE_EXECUTABLE)
     # TODO: Fix astyle
     COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     # COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
-    #        ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+            ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     VERBATIM)
   set_target_properties(astyle PROPERTIES EXCLUDE_FROM_ALL FALSE)
 else(ASTYLE_EXECUTABLE)
@@ -67,7 +67,9 @@ set(SOURCES
     ${PROJECT_SOURCE_DIR}/src/sources/Utils.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/BatchCreator.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/FileData.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/JsonHandler.cpp)
+    ${PROJECT_SOURCE_DIR}/src/sources/JsonHandler.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/ErrorHandler.cpp
+        ${PROJECT_SOURCE_DIR}/src/sources/KeyValidator.cpp)
 
 # Add main executable
 add_executable(${PROJECT_NAME} ${SOURCES})
