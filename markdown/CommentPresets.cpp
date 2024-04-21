@@ -1,6 +1,0 @@
-# Namespace
-
-/**
-
-* @namespace
-* 
