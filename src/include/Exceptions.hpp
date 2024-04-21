@@ -14,7 +14,6 @@
 #define EXCEPTIONS_HPP
 
 #include "LoggingWrapper.hpp"
-#include <format>
 #include <string>
 #include <utility>
 
