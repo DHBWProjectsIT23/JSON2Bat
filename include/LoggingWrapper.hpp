@@ -15,10 +15,6 @@
  * - easylogging++ and std::cout: 3814.24 ms
  * - wrapper: 3643.04 ms
  *
- * \todo
- * - More easily allow for verbosity options.
- * - Check performance -> Especially compare to std::cout.
- *
  * \copyright MIT License 2024
  **/
 
@@ -52,9 +48,6 @@ enum class LogLevel {
 };
 
 /**
- * \note
- * # Bugs and Quirks
- * - Automatically makes new line for cout -- Nevermind?!
  **/
 class LoggingWrapper {
   public:

@@ -1,19 +1,20 @@
 /**
- * @file
+ * @file JsonHandler.cpp
  * @author
  * @date
  * @version
  * @brief
  * @details
  *
- *
- * @license GNU GPLv3
  * @copyright See LICENSE file
  */
 
 #include "JsonHandler.hpp"
+#include "ErrorHandler.hpp"
 #include "FileData.hpp"
+#include "KeyValidator.hpp"
 #include "LoggingWrapper.hpp"
+#include "Utils.hpp"
 
 namespace parsing {
 JsonHandler::JsonHandler(const std::string &filename)
@@ -23,31 +24,37 @@ JsonHandler::JsonHandler(const std::string &filename)
 }
 
 std::shared_ptr<Json::Value> JsonHandler::parseFile(const std::string &filename)
-const
+
 {
     LOG_INFO << "Parsing file: " << filename << "\n";
     std::ifstream file(filename);
     Json::Value newRoot;
-    Json::Reader reader;
 
-    if (!reader.parse(file, newRoot)) {
-        LOG_ERROR << "Failed to parse file: " << filename << "\n";
-        exit(1);
+    // Json::Reader.parse() returns false if parsing fails
+    if (Json::Reader reader; !reader.parse(file, newRoot)) {
+        errors::ErrorHandler::parsingError(filename);
     }
 
-    LOG_INFO << "File parsed\n";
+    // Validate keys
+    // Check for errors
+    if (auto errors = KeyValidator::getInstance().validateKeys(newRoot, filename);
+            !errors.empty()) {
+        errors::ErrorHandler::invalidKeys(errors);
+    }
+
+    LOG_INFO << "File \"" << filename << "\" has been parsed\n";
     return std::make_shared<Json::Value>(newRoot);
 }
 
-std::shared_ptr<FileData> JsonHandler::getJSONData()
+std::shared_ptr<FileData> JsonHandler::getFileData()
 {
-    LOG_INFO << "Creating JSONData object for return...\n";
-    return this->createJSONData();
+    LOG_INFO << "Creating FileData object for return...\n";
+    return this->createFileData();
 }
 
-std::shared_ptr<FileData> JsonHandler::createJSONData()
+std::shared_ptr<FileData> JsonHandler::createFileData()
 {
-    LOG_INFO << "Creating JSONData object...\n";
+    LOG_INFO << "Creating FileData object...\n";
     this->data = std::make_shared<FileData>();
     this->assignOutputFile();
     this->assignHideShell();
@@ -60,12 +67,18 @@ void JsonHandler::assignOutputFile() const
 {
     LOG_INFO << "Assigning outputfile...\n";
     std::string outputFile = this->root->get("outputfile", "").asString();
+
+    if (utilities::Utils::checkIfFileExists(outputFile)) {
+        errors::ErrorHandler::batchFileExists(outputFile);
+    }
+
     this->data->setOutputFile(outputFile);
 }
 
 void JsonHandler::assignHideShell() const
 {
     LOG_INFO << "Assigning hide shell...\n";
+    // If the 'hideshell' key is not given, it defaults to false
     bool hideShell = this->root->get("hideshell", false).asBool();
     this->data->setHideShell(hideShell);
 }
@@ -97,8 +110,9 @@ void JsonHandler::assignEntries() const
             this->assignPathValue(entry);
         }
         else {
-            LOG_ERROR << "Unknown entry type: " << entryType << "\n";
-            throw std::invalid_argument("Unknown entry type");
+            // Due to validation beforehand - this should never be reached!
+            errors::ErrorHandler::unreachableCode(
+                "Unknown entries should be caught by KeyValidator!");
         }
     }
 }
@@ -125,5 +139,3 @@ void JsonHandler::assignPathValue(const Json::Value &entry) const
     this->data->addPathValue(pathValue);
 }
 } // namespace parsing
-
-

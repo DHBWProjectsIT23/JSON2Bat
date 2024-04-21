@@ -13,7 +13,7 @@
  * @see CommandLineHandler
  * @see options
  * @see StyleHelpers
- * @license GNU GPLv3
+ *
  * @copyright See LICENSE file
  */
 #ifndef COMMANDLINEHANDLER_HPP
@@ -30,10 +30,6 @@
  * This namespace includes all the code regarding the Command Line Interface.
  * This includes the CommandLineHandler Class, the struct for the options and
  * helpers for Styling.
- *
- * @author Simon Blum
- * @date 2024-04-18
- * @version 0.1.5
  *
  * @see CommandLineHandler
  * @see options
@@ -77,8 +73,6 @@ public:
      * Prints the credits message when called.
      *
      * @note This function ends the application.
-     *
-     * @todo Add Email
      */
     [[noreturn]] static void printCredits();
     /**
@@ -92,8 +86,6 @@ public:
      * @return Returns a vector of strings containing all filenames.
      */
     static std::vector<std::string> parseArguments(int argc, char* argv[]);
-
-private:
     /**
      * @brief The Constructor of the CommandLineHandler Class
      * @note As all functions are static it should not be used and as such
@@ -115,9 +107,6 @@ private:
  * This struct contains all long and short options which can be used and will be
  * parsed using "getopt.h"
  *
- * @author Simon Blum
- * @date 2024-04-18
- * @version 0.1.5
  * @see CommandLineHandler
  */
 static const struct option options[] = {
