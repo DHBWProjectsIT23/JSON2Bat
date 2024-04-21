@@ -68,7 +68,7 @@ void CommandLineHandler::printCredits()
 }
 
 std::vector<std::string> CommandLineHandler::parseArguments(int argc,
-                                                            char* argv[])
+        char* argv[])
 {
     LOG_INFO << "Parsing arguments...";
 
@@ -83,41 +83,41 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         }
 
         switch (result) {
-            case '?':
-                LOG_WARNING << "Invalid Option\n";
-                CommandLineHandler::printHelp();
+        case '?':
+            LOG_WARNING << "Invalid Option\n";
+            CommandLineHandler::printHelp();
 
-            case 'h':
-                LOG_INFO << "Help option detected";
-                CommandLineHandler::printHelp();
+        case 'h':
+            LOG_INFO << "Help option detected";
+            CommandLineHandler::printHelp();
 
-            case 'v':
-                LOG_INFO << "Version option detected";
-                CommandLineHandler::printVersion();
+        case 'v':
+            LOG_INFO << "Version option detected";
+            CommandLineHandler::printVersion();
 
-            case 'c':
-                LOG_INFO << "Credit option detected";
-                CommandLineHandler::printCredits();
+        case 'c':
+            LOG_INFO << "Credit option detected";
+            CommandLineHandler::printCredits();
 
-            case 0:
-                LOG_INFO << "Long option without short version detected";
-                longOption = options[optIndex];
-                LOG_INFO << "Option: " << longOption.name << " given";
+        case 0:
+            LOG_INFO << "Long option without short version detected";
+            longOption = options[optIndex];
+            LOG_INFO << "Option: " << longOption.name << " given";
 
-                if (longOption.has_arg) {
-                    LOG_INFO << "  Argument: " << optarg;
-                }
+            if (longOption.has_arg) {
+                LOG_INFO << "  Argument: " << optarg;
+            }
 
-                if (strcmp(longOption.name, "verbose") == 0) {
-                    logging::setVerboseMode(true);
-                    LOG_INFO << "Verbose mode activated";
-                }
+            if (strcmp(longOption.name, "verbose") == 0) {
+                logging::setVerboseMode(true);
+                LOG_INFO << "Verbose mode activated";
+            }
 
-                break;
+            break;
 
-            default:
-                LOG_ERROR << "Default case for options reached!";
-                break;
+        default:
+            LOG_ERROR << "Default case for options reached!";
+            break;
         }
     }
 

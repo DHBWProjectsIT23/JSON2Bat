@@ -37,7 +37,7 @@ namespace errors {
  * @todo Documentation
  */
 class ErrorHandler {
-  public:
+public:
     /**
      * @brief
      * @details

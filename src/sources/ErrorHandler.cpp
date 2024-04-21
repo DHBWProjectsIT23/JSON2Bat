@@ -33,7 +33,7 @@ void ErrorHandler::invalidValue(const std::string &key,
 }
 
 void ErrorHandler::invalidKeys(
-            const std::vector<std::tuple<int, std::string>> &keys)
+    const std::vector<std::tuple<int, std::string>> &keys)
 {
     for (const auto &[line, key] : keys) {
         LOG_WARNING << "Invalid key found at line " << line << ": \"" << key

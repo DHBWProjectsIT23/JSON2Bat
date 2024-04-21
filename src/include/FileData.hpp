@@ -30,7 +30,7 @@ namespace parsing {
  * @todo Documentation
  */
 class FileData {
-  public:
+public:
     /**
      * @brief
      * @details
@@ -154,7 +154,7 @@ class FileData {
         return pathValues;
     }
 
-  private:
+private:
     std::string outputfile;
     bool hideShell;
     std::optional<std::string> application;

@@ -41,7 +41,7 @@ namespace parsing {
  * @todo Documentation
  */
 class JsonHandler {
-  public:
+public:
     /**
      * @brief
      * @details
@@ -70,7 +70,7 @@ class JsonHandler {
      */
     std::shared_ptr<FileData> getFileData();
 
-  private:
+private:
     /**
      * @brief
      * @details

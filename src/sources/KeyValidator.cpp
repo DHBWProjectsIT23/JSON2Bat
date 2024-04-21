@@ -24,13 +24,13 @@ KeyValidator &KeyValidator::getInstance()
 }
 /** @todo Documentation */
 std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
-            const Json::Value &root,
-            const std::string &filename)
+    const Json::Value &root,
+    const std::string &filename)
 {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
     for (std::vector<std::string> keys = root.getMemberNames();
-         const auto &key : keys) {
+            const auto &key : keys) {
         auto keyIterator = std::ranges::find(validKeys, key);
 
         if (keyIterator == validKeys.end()) {
@@ -46,7 +46,7 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
     }
 
     for (Json::Value entries = root.get("entries", "");
-         const auto &entry : entries) {
+            const auto &entry : entries) {
         std::vector<std::string> entryKeys = entry.getMemberNames();
         auto wrongEntries = validateEntries(filename, entryKeys);
         wrongKeys.insert(wrongKeys.end(), wrongEntries.begin(), wrongEntries.end());
@@ -58,8 +58,8 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
 
 /** @todo Documentation */
 std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
-            const std::string &filename,
-            const std::vector<std::string> &entryKeys)
+    const std::string &filename,
+    const std::vector<std::string> &entryKeys)
 {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
@@ -93,24 +93,24 @@ void KeyValidator::validateTypes(const std::string &filename,
 
     if (type == "EXE") {
         if (auto commandIterator = std::ranges::find(entryKeys, "command");
-            commandIterator == entryKeys.end()) {
+                commandIterator == entryKeys.end()) {
             errors::ErrorHandler::missingKey("command", "EXE");
         }
     }
     else if (type == "PATH") {
         if (auto pathIterator = std::ranges::find(entryKeys, "path");
-            pathIterator == entryKeys.end()) {
+                pathIterator == entryKeys.end()) {
             errors::ErrorHandler::missingKey("path", "PATH");
         }
     }
     else if (type == "ENV") {
         if (auto keyIterator = std::ranges::find(entryKeys, "key");
-            keyIterator == entryKeys.end()) {
+                keyIterator == entryKeys.end()) {
             errors::ErrorHandler::missingKey("key", "ENV");
         }
 
         if (auto valueIterator = std::ranges::find(entryKeys, "value");
-            valueIterator == entryKeys.end()) {
+                valueIterator == entryKeys.end()) {
             errors::ErrorHandler::missingKey("value", "ENV");
         }
     }
@@ -129,7 +129,7 @@ void KeyValidator::validateTypes(const std::string &filename,
 }
 
 std::optional<int> KeyValidator::getUnknownKeyLine(const std::string &filename,
-                                                   const std::string &wrongKey)
+        const std::string &wrongKey)
 {
     std::ifstream file(filename);
 

@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
 
     // Vector of all inputted file names
     std::vector<std::string> files =
-                cli::CommandLineHandler::parseArguments(argc, argv);
+        cli::CommandLineHandler::parseArguments(argc, argv);
 
     if (files.empty()) {
         LOG_ERROR << "No files were given as arguments!\n";
@@ -63,8 +63,8 @@ int main(int argc, char* argv[])
             LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
 
             if (files.size() != 1 &&
-                !utilities::Utils::askToContinue("Do you want to continue with the "
-                                                 "remaining files? (y/n) ")) {
+                    !utilities::Utils::askToContinue("Do you want to continue with the "
+                            "remaining files? (y/n) ")) {
                 // Exit if it's the only file or the user does not want to
                 // continue
                 OUTPUT << "Aborting...\n";
@@ -106,9 +106,9 @@ int main(int argc, char* argv[])
             LOG_ERROR << e.what();
 
             if (std::next(file) != files.end() &&
-                !utilities::Utils::askToContinue(
-                            "Do you want to continue with the other files? (y/n) "
-                            "")) {
+                    !utilities::Utils::askToContinue(
+                        "Do you want to continue with the other files? (y/n) "
+                        "")) {
                 OUTPUT << "Aborting...";
                 LOG_INFO << "Application ended by user Input";
                 exit(1);

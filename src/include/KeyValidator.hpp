@@ -28,7 +28,7 @@ namespace parsing {
  * @todo Documentation
  */
 class KeyValidator {
-  public:
+public:
     /**
      * @brief
      * @details
@@ -52,7 +52,7 @@ class KeyValidator {
     std::vector<std::tuple<int, std::string>>
     validateKeys(const Json::Value &root, const std::string &filename);
 
-  private:
+private:
     /**
      * @brief
      * @details
@@ -64,7 +64,7 @@ class KeyValidator {
      * @todo Documentation
      */
     static std::optional<int> getUnknownKeyLine(const std::string &filename,
-                                                const std::string &wrongKey);
+            const std::string &wrongKey);
     /**
      * @brief
      * @details
