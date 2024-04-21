@@ -96,9 +96,6 @@ inline LoggingWrapper log(LogLevel level, const std::string& prefix,
                           bool verbose = false) {
     return LoggingWrapper(prefix, level, verbose);
 }
-} // namespace libLogging
-
-namespace libLogging {
 
 #ifdef IS_UNIX
 const static std::string CLEAR_TERMINAL = "\x1b[2J";
