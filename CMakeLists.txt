@@ -63,11 +63,11 @@ endif(DOXYGEN_FOUND)
 # Add sources for the main executable
 set(SOURCES
     ${PROJECT_SOURCE_DIR}/src/main.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/utility/CommandLineHandler.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/utility/Utils.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/parsing/BatchCreator.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/parsing/FileData.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/parsing/JSONParser.cpp)
+    ${PROJECT_SOURCE_DIR}/src/sources/CommandLineHandler.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/Utils.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/BatchCreator.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/FileData.cpp
+    ${PROJECT_SOURCE_DIR}/src/sources/JsonHandler.cpp)
 
 # Add main executable
 add_executable(${PROJECT_NAME} ${SOURCES})
