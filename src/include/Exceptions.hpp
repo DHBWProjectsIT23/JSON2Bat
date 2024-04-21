@@ -38,10 +38,10 @@ namespace exceptions {
  * @todo Documentation
  */
 class CustomException : public std::exception {
-  public:
-    [[nodiscard]] const char* what() const noexcept override {
-        return "Base Exception";
-    }
+public:
+  [[nodiscard]] const char *what() const noexcept override {
+    return "Base Exception";
+  }
 };
 
 /**
@@ -54,22 +54,27 @@ class CustomException : public std::exception {
  * @todo Documentation
  */
 class ParsingException : public CustomException {
-  private:
-    const std::string file;
-    std::string message;
+private:
+  const std::string file;
+  std::string message;
 
-  public:
-    explicit ParsingException(const std::string &file) : file(file) {
-        this->message = std::format(
-                                    "Error while trying to parse \"{}\"!\n"
-                                    "There most likely is a syntax error within the \".json\" file.",
-                                    file);
-        LOG_INFO << "ParsingException: " << message;
-    }
+public:
+  explicit ParsingException(const std::string &file) : file(file) {
+    /**
+     * @note I planned to use std::format, however it seems that the
+     * required Compiler Version is not yet available in the stable Ubuntu
+     * Repo!
+     */
+    std::stringstream ss;
+    ss << "Error while trying to parse \"" << file << "\"!\n"
+       << "There most likely is a syntax error within the \".json\" file.";
+    this->message = ss.str();
+    LOG_INFO << "ParsingException: " << message;
+  }
 
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -82,19 +87,26 @@ class ParsingException : public CustomException {
  * @todo Documentation
  */
 class BatchExistsException : public CustomException {
-  private:
-    const std::string file;
-    std::string message;
+private:
+  const std::string file;
+  std::string message;
 
-  public:
-    explicit BatchExistsException(const std::string &file) : file(file) {
-        this->message = std::format("The outputfile \"{}\" already exists!", file);
-        LOG_INFO << "BatchExistsException: " << message;
-    }
+public:
+  explicit BatchExistsException(const std::string &file) : file(file) {
+    /**
+     * @note I planned to use std::format, however it seems that the
+     * required Compiler Version is not yet available in the stable Ubuntu
+     * Repo!
+     */
+    std::stringstream ss;
+    ss << "The outputfile \"" << file << "\" already exists!";
+    this->message = ss.str();
+    LOG_INFO << "BatchExistsException: " << message;
+  }
 
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -107,19 +119,26 @@ class BatchExistsException : public CustomException {
  * @todo Documentation
  */
 class InvalidValueException : public CustomException {
-  private:
-    const std::string key;
-    std::string message;
+private:
+  const std::string key;
+  std::string message;
 
-  public:
-    InvalidValueException(const std::string &key, const std::string &issue)
-        : key(key) {
-        this->message = std::format("Error at key \"{}\"! {}", key, issue);
-        LOG_INFO << "InvalidValueException: " << message;
-    }
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+public:
+  InvalidValueException(const std::string &key, const std::string &issue)
+      : key(key) {
+    /**
+     * @note I planned to use std::format, however it seems that the
+     * required Compiler Version is not yet available in the stable Ubuntu
+     * Repo!
+     */
+    std::stringstream ss;
+    ss << "Error at key \"" << key << "\"! " << issue;
+    this->message = ss.str();
+    LOG_INFO << "InvalidValueException: " << message;
+  }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -132,16 +151,14 @@ class InvalidValueException : public CustomException {
  * @todo Documentation
  */
 class InvalidKeyException : public CustomException {
-  private:
-    std::string message = "Invalid key found!";
+private:
+  std::string message = "Invalid key found!";
 
-  public:
-    InvalidKeyException() {
-        LOG_INFO << "InvalidKeyException: " << message;
-    }
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+public:
+  InvalidKeyException() { LOG_INFO << "InvalidKeyException: " << message; }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -154,19 +171,25 @@ class InvalidKeyException : public CustomException {
  * @todo Documentation
  */
 class InvalidTypeException : public CustomException {
-  private:
-    const std::string type;
-    std::string message;
+private:
+  const std::string type;
+  std::string message;
 
-  public:
-    InvalidTypeException(const std::string &type, int line) : type(type) {
-        this->message =
-                    std::format("Invalid type found at line {}: \"{}\"", line, type);
-        LOG_INFO << "InvalidTypeException: " << message;
-    }
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+public:
+  InvalidTypeException(const std::string &type, int line) : type(type) {
+    /**
+     * @note I planned to use std::format, however it seems that the
+     * required Compiler Version is not yet available in the stable Ubuntu
+     * Repo!
+     */
+    std::stringstream ss;
+    ss << "Invalid type found at line " << line << ": \"" << type << "\"";
+    this->message = ss.str();
+    LOG_INFO << "InvalidTypeException: " << message;
+  }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -179,21 +202,27 @@ class InvalidTypeException : public CustomException {
  * @todo Documentation
  */
 class MissingKeyException : public CustomException {
-  private:
-    std::string message;
-    std::string type;
-    std::string key;
+private:
+  std::string message;
+  std::string type;
+  std::string key;
 
-  public:
-    MissingKeyException(const std::string &key, const std::string &type)
-        : type(type), key(key) {
-        this->message =
-                    std::format(R"(Missing key "{}" for type "{}"!)", key, type);
-        LOG_INFO << "MissingKeyException: " << message;
-    }
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+public:
+  MissingKeyException(const std::string &key, const std::string &type)
+      : type(type), key(key) {
+    /**
+     * @note I planned to use std::format, however it seems that the
+     * required Compiler Version is not yet available in the stable Ubuntu
+     * Repo!
+     */
+    std::stringstream ss;
+    ss << "Missing key \"" << key << "\" for type \"" << type << "\"!";
+    this->message = ss.str();
+    LOG_INFO << "MissingKeyException: " << message;
+  }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -206,16 +235,14 @@ class MissingKeyException : public CustomException {
  * @todo Documentation
  */
 class MissingTypeException : public CustomException {
-  private:
-    std::string message = "Missing \"type\" key for at least one entry!";
+private:
+  std::string message = "Missing \"type\" key for at least one entry!";
 
-  public:
-    MissingTypeException() {
-        LOG_INFO << "MissingTypeException: " << message;
-    }
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+public:
+  MissingTypeException() { LOG_INFO << "MissingTypeException: " << message; }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 /**
@@ -228,17 +255,17 @@ class MissingTypeException : public CustomException {
  * @todo Documentation
  */
 class UnreachableCodeException : public CustomException {
-  private:
-    std::string message;
+private:
+  std::string message;
 
-  public:
-    explicit UnreachableCodeException(const std::string &message)
-        : message(message) {
-        LOG_INFO << "UnreachableCodeException: " << message;
-    }
-    [[nodiscard]] const char* what() const noexcept override {
-        return message.c_str();
-    }
+public:
+  explicit UnreachableCodeException(const std::string &message)
+      : message(message) {
+    LOG_INFO << "UnreachableCodeException: " << message;
+  }
+  [[nodiscard]] const char *what() const noexcept override {
+    return message.c_str();
+  }
 };
 
 } // namespace exceptions
