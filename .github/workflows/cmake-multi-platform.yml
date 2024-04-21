@@ -46,6 +46,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Install jsonlib
+      run: sudo apt install libjsoncpp-dev
+
     - name: Install Clang
       uses: egor-tensin/setup-clang@v1
       with:
