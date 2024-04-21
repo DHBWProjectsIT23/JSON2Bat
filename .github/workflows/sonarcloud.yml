@@ -4,7 +4,7 @@ on:
     branches:
       - main
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [ opened, synchronize, reopened ]
   workflow_dispatch:
 jobs:
   build:
@@ -20,26 +20,26 @@ jobs:
       - name: Install jsonlib
         run: sudo apt install libjsoncpp-dev
           
-      - name: Install Clang
-        uses: egor-tensin/setup-clang@v1
-        with:
-          version: '17'
+          #- name: Install Clang
+          #  uses: egor-tensin/setup-clang@v1
+          #  with:
+          #    version: '17'
 
-      - name: Install GCC
-        uses: egor-tensin/setup-gcc@v1.3
-        with:
-          # GCC version to install
-          version: '13'
-          
+          #- name: Install GCC
+          #  uses: egor-tensin/setup-gcc@v1.3
+          #  with:
+          #    # GCC version to install
+          #    version: '13'
+
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v2
-        
+
       - name: Run build-wrapper
         run: |
           mkdir build/Debug -p
           cmake -S . -B build/Debug
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/Debug --config Debug
-          
+
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
