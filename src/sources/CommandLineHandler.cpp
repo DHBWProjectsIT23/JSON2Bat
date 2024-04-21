@@ -6,7 +6,7 @@
  * @brief Implementation for the Command Line Interface.
  *
  * @see src/include/utility/CommandLineHandler.hpp
- * @license GNU GPLv3
+ *
  * @copyright See LICENSE file
  */
 
@@ -20,7 +20,8 @@
 #include <vector>
 
 namespace cli {
-void CommandLineHandler::printHelp() {
+void CommandLineHandler::printHelp()
+{
     LOG_INFO << "Printing help message...";
     OUTPUT << BOLD << "Usage:\n"
            << RESET << "----------\n"
@@ -41,13 +42,15 @@ void CommandLineHandler::printHelp() {
            << "Multiple files should be seperated by spaces!\n\n";
     exit(0);
 }
-void CommandLineHandler::printVersion() {
+void CommandLineHandler::printVersion()
+{
     LOG_INFO << "Printing version number...";
-    OUTPUT << PROJECT_NAME << " v" << MAJOR_VERSION << "." << MINOR_VERSION
-           << "." << PATCH_VERSION << "\n";
+    OUTPUT << PROJECT_NAME << " v" << MAJOR_VERSION << "." << MINOR_VERSION << "."
+           << PATCH_VERSION << "\n";
     exit(0);
 }
-void CommandLineHandler::printCredits() {
+void CommandLineHandler::printCredits()
+{
     LOG_INFO << "Printing credits...";
     OUTPUT << BOLD << "Project information:\n"
            << RESET << "----------\n"
@@ -56,20 +59,22 @@ void CommandLineHandler::printCredits() {
            << "\n"
            << DESCRIPTION << "\n"
            << "\n"
-           << GREEN << "Authors: " << RESET << ITALIC << AUTHORS << RESET
-           << "\n"
+           << GREEN << "Authors: " << RESET << ITALIC << AUTHORS << RESET << "\n"
            << GREEN << "Documentation: " << RESET << ITALIC << HOMEPAGE_URL
-           << RESET << "\n";
+           << RESET << GREEN << "\nContact: " << RESET << ITALIC
+           << "simon21.blum@gmail.com"
+           << "\n";
     exit(0);
 }
 
 std::vector<std::string> CommandLineHandler::parseArguments(int argc,
-        char* argv[]) {
+                                                            char* argv[])
+{
     LOG_INFO << "Parsing arguments...";
 
     while (true) {
         int optIndex = -1;
-        struct option longOption {};
+        struct option longOption = {};
         auto result = getopt_long(argc, argv, "hvc", options, &optIndex);
 
         if (result == -1) {
@@ -78,46 +83,41 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         }
 
         switch (result) {
-        case '?':
-            LOG_WARNING << "Invalid Option\n";
-            CommandLineHandler::printHelp();
-            exit(0);
+            case '?':
+                LOG_WARNING << "Invalid Option\n";
+                CommandLineHandler::printHelp();
 
-        case 'h':
-            LOG_INFO << "Help option detected";
-            CommandLineHandler::printHelp();
-            break;
+            case 'h':
+                LOG_INFO << "Help option detected";
+                CommandLineHandler::printHelp();
 
-        case 'v':
-            LOG_INFO << "Version option detected";
-            CommandLineHandler::printVersion();
-            break;
+            case 'v':
+                LOG_INFO << "Version option detected";
+                CommandLineHandler::printVersion();
 
-        case 'c':
-            LOG_INFO << "Credit option detected";
-            CommandLineHandler::printCredits();
-            break;
+            case 'c':
+                LOG_INFO << "Credit option detected";
+                CommandLineHandler::printCredits();
 
-        case 0:
-            LOG_INFO << "Long option without short version detected";
-            longOption = options[optIndex];
-            LOG_INFO << "Option: " << longOption.name << " given";
+            case 0:
+                LOG_INFO << "Long option without short version detected";
+                longOption = options[optIndex];
+                LOG_INFO << "Option: " << longOption.name << " given";
 
-            if (longOption.has_arg) {
-                LOG_INFO << "  Argument: " << optarg;
-            }
+                if (longOption.has_arg) {
+                    LOG_INFO << "  Argument: " << optarg;
+                }
 
-            if (strcmp(longOption.name, "verbose") == 0) {
-                logging::setVerboseMode(true);
-                LOG_INFO << "Verbose mode activated";
-            }
+                if (strcmp(longOption.name, "verbose") == 0) {
+                    logging::setVerboseMode(true);
+                    LOG_INFO << "Verbose mode activated";
+                }
 
-            break;
+                break;
 
-        default:
-            LOG_ERROR << "Default case for options reached!";
-            throw std::logic_error("Default case for options reached!");
-            break;
+            default:
+                LOG_ERROR << "Default case for options reached!";
+                break;
         }
     }
 

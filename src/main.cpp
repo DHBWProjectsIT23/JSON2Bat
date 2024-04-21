@@ -8,7 +8,6 @@
  * The main function is responsible for connection all parts of the programm.
  * It calls all relevant classes and finishes when everything is done.
  *
- * @license GNU GPLv3
  * @copyright See LICENSE file
  */
 #include <LoggingWrapper.hpp>
@@ -16,96 +15,110 @@
 #include <jsoncpp/json.h>
 #include <vector>
 
+#include "CommandLineHandler.hpp"
+#include "Exceptions.hpp"
 #include "FileData.hpp"
 #include "JsonHandler.hpp"
-#include "CommandLineHandler.hpp"
 #include "Utils.hpp"
 
 INITIALIZE_EASYLOGGINGPP
-
-/* INFO:
- * Um logging zu verwenden:
- * "OUTPUT << ..." statt "std::cout < ..."
- * "DEBUG << ..." für temporäres - macht nichts anderes als Formatierung zu
- * "LOG_INFO << ..." um bspw. den Ablauf von Prozessen zu loggen
- * "LOG_WARNING << ..." um Warnungen zu loggen
- * "LOG_ERROR << ..." um Fehler zu loggen, bevor sie geworfen werden
- * ändern, hilft aber damit es auffällt, falls vergessen
- * OUTPUT, DEBUG, WARNING und ERROR werden automatisch auch in der Konsole
- * ausgegeben
- * -- Der Header <LoggingWrapper> muss includiert sein --
- */
 
 /**
  * @brief Main function of the program
  * @details
  * The main function is responsible for connection all parts of the programm.
  * It calls all relevant classes and finishes when everything is done.
+ *
  * @param argc The number of arguments given
  * @param argv Th command line arguments given
+ *
  * @return Returns 0 on success, 1 on failure
+ *
+ * @todo Documentation
+ * @todo Refactoring
  */
 int main(int argc, char* argv[])
 {
-    // Setup easylogging++
     utilities::Utils::setupEasyLogging("conf/easylogging.conf");
-
 
     // Check if any options/arguments were given
     if (argc < 2) {
         LOG_ERROR << "No options given!\n";
         cli::CommandLineHandler::printHelp();
-        return 1;
     }
 
     // Vector of all inputted file names
     std::vector<std::string> files =
-        cli::CommandLineHandler::parseArguments(argc, argv);
+                cli::CommandLineHandler::parseArguments(argc, argv);
 
     if (files.empty()) {
         LOG_ERROR << "No files were given as arguments!\n";
         return 1;
     }
 
-    // Checking files
-    for (const std::string &file : files) {
-        // Checking if file exists
+    std::vector<std::string> validFiles;
+
+    for (const auto &file : files) {
         if (!utilities::Utils::checkIfFileExists(file)) {
-            LOG_ERROR << "The file \"" << file << "\" does not exist!";
-            OUTPUT << "Exiting..." << std::endl;
-            std::exit(1);
+            LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
+
+            if (files.size() != 1 &&
+                !utilities::Utils::askToContinue("Do you want to continue with the "
+                                                 "remaining files? (y/n) ")) {
+                // Exit if it's the only file or the user does not want to
+                // continue
+                OUTPUT << "Aborting...\n";
+                LOG_INFO << "Application ended by user Input";
+                exit(1);
+            }
+
+            continue;
         }
 
-        // Checking if file ends with ".json"
         if (!utilities::Utils::checkFileEnding(file)) {
-            LOG_WARNING << "The file \"" << file
-                        << "\" does not end in \".json\"\n";
+            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
             OUTPUT << "If the file is not in JSON Format, continuing may "
                    "result in\nunexpected behaviour!\n";
 
-            // Asking user if they want to continue
             if (!utilities::Utils::askToContinue()) {
-                OUTPUT << "Exiting...\n";
+                OUTPUT << "Aborting...\n";
                 LOG_INFO << "Application ended by user Input";
-                std::exit(1);
+                exit(1);
             }
+        }
+
+        validFiles.push_back(file);
+    }
+
+    // Replace the original files vector with the validFiles vector
+    files = std::move(validFiles);
+
+    for (auto file = files.begin(); file != files.end(); ++file) {
+        std::shared_ptr<parsing::FileData> fileData;
+
+        try {
+            parsing::JsonHandler jsonHandler(*file);
+            fileData = jsonHandler.getFileData();
+        }
+        catch (const exceptions::CustomException &e) {
+            OUTPUT << "\nThere has been a error while trying to parse \"" << *file
+                   << ":\n";
+            LOG_ERROR << e.what();
+
+            if (std::next(file) != files.end() &&
+                !utilities::Utils::askToContinue(
+                            "Do you want to continue with the other files? (y/n) "
+                            "")) {
+                OUTPUT << "Aborting...";
+                LOG_INFO << "Application ended by user Input";
+                exit(1);
+            }
+
+            std::cout << "\n\n";
+            continue;
         }
     }
 
-    // INFO: From here on out we can assume, that all strings in the
-    // filename vector, lead to valid files!
-
-    /* @TODO:
-     * - Parse Files:
-     *      - take file name or vector
-     *        return data object
-     *      - Verification?
-     */
-    /* @TODO:
-     * - Create Batch File:
-     *      - take data object and create file
-     *        return ?
-     */
     LOG_INFO << "Exiting...";
     return 0;
 }

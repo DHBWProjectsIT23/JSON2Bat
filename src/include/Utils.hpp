@@ -10,7 +10,7 @@
  *
  * @see utilities
  * @see Utils
- * @license GNU GPLv3
+ *
  * @copyright See LICENSE file
  */
 #ifndef UTILITIES_HPP
@@ -18,17 +18,12 @@
 
 #include <string>
 
-
 /**
  * @namespace utilities
  * @brief Includes all utilities
  * @details
  * This namespace includes the utility class with utility functions which can be
  * used throughout the project.
- *
- * @author Simon Blum
- * @date 2024-04-18
- * @version 0.1.5
  *
  * @see Utils
  */
@@ -40,13 +35,9 @@ namespace utilities {
  * @details
  * This class is responsible for handling miscellaneous utility functions
  * which be used throughout the whole project.
- *
- * @author Simon Blum
- * @date 2024-04-18
- * @version 0.1.5
  */
 class Utils {
-public:
+  public:
     /**
      * @brief Set up easylogging
      * @details
@@ -77,7 +68,7 @@ public:
     /**
      * @brief Asks if the user wants to continue
      * @details
-     * Asks the user if they want to continue and promts them for a response.
+     * Asks the user if they want to continue and prompts them for a response.
      * @param prompt (Optional) A custom prompt to be used.
      * @return Returns true if the user wants to continue and false otherwise.
      */
