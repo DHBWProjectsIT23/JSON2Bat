@@ -1,0 +1,18 @@
+.TH JsonToBat 1 22.04.2024
+
+.SH NAME
+JsonToBat \- Convert a json file into an executable batch file
+.SH SYNOPSIS
+.B JsonToBat
+[\fB\-h\fR \fIHELP\fR]
+[\fB\-\-help\fR \fIHELP\fR]
+.IR "file1 file2 ... "
+
+.SH DESCRIPTION
+.B JsonToBat
+This will be a description.
+
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+Print the help message.
