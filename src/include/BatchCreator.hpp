@@ -33,6 +33,7 @@ public:
      */
     BatchCreator(std::shared_ptr<parsing::FileData> fileData);
 
+    std::string batchFileString;
     std::shared_ptr<parsing::FileData> fileData;
 
     std::ofstream batchFile;

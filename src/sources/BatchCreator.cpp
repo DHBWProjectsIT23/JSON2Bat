@@ -16,18 +16,12 @@ BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData){
 
 }
 
-
 void BatchCreator::createBatch() {
     LOG_INFO << "Creating Batch file";
 
     this->batchFile.open(this->fileData->getOutputFile());
     this->writeStart();
     this->writeHideShell();
-    this->writeCommands();
-    this->writeEnvVariables();
-    this->writePathVariables();
-    this->writeApp();
-    this->writeEnd();
 
 }
 
