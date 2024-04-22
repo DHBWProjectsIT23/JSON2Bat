@@ -84,18 +84,18 @@ private:
     /**
      * @brief Öffnet Anwednung falls gewünscht
      * @details Öffnet Anwedung, falls unter "application" gegeben
-     * Gibt den Namen ????
+     * Wird unter dem Namen aus "outputfile" gestartet
      *
      */
-    void writeApp(); // @todo start:das gleiche wie in "outputfile" ohne ".bat"
+    void writeApp(); 
 
     /**
      * @brief Ende der Batch Datei
-     * @details Schreibt den teil der Batch Datei der immer gelich ist
+     * @details Schreibt den teil der Batch Datei der immer gleich ist
      * - setzt ECHO OFF
      *
      */
-    void writeEnd(); // brauch ich noch irgendwo einen carriage return? wenn ja wo?
+    void writeEnd();
 
  
 };
