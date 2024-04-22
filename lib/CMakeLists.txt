@@ -20,6 +20,7 @@ endif()
 
 if(WIN32)
   add_library(xgetopt ${PROJECT_SOURCE_DIR}/lib/xgetopt.c)
+  target_include_directories(xgetopt ${PROJECT_SOURCE_DIR}/include)
   target_link_libraries(${PROJECT_NAME} PRIVATE 
     ${PROJECT_SOURCE_DIR}/lib/compiled/libjsoncpp.a
     LoggingWrapper
