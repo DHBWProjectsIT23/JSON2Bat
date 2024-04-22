@@ -1,22 +1,26 @@
 /**
  * @file BatchCreator.hpp
- * @author
- * @date
+ * @author Maximilian Rodler
+ * @date 22.04.2024
  * @version
- * @brief
- * @details
+ * @brief Creates batch file
+ * @details Creates batch file from Arguments in JSON
  *
  * @copyright See LICENSE file
  */
 
 #include "BatchCreator.hpp"
-#include "LoggingWrapper.hpp" // Logs noch einfügen!!!
+#include "LoggingWrapper.hpp"
 
-BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData) {
+BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData){
 
 }
 
-void BatchCreator::writeBatch() {
+
+void BatchCreator::createBatch() {
+    LOG_INFO << "Creating Batch file";
+
+    this->batchFile.open(this->fileData->getOutputFile());
     this->writeStart();
     this->writeHideShell();
     this->writeCommands();
@@ -28,46 +32,59 @@ void BatchCreator::writeBatch() {
 }
 
 void BatchCreator::writeStart() {
-    this->batchFileString = this->batchFileString + "@ECHO OFF\nC:\\Windows\\System32\\cmd.exe ";
+    LOG_INFO << "writing Start of Batch";
+    this->batchFile << "@ECHO OFF\nC:\\Windows\\System32\\cmd.exe ";
 }
  
  void BatchCreator::writeHideShell() {
     if (this->fileData->getHideShell()){
-        this->batchFileString = this->batchFileString + "/c \n";
+        LOG_INFO << "writing hide Shell";
+        this->batchFile << "/c \n";
+
     } else {
-        this-> batchFileString = this->batchFileString + "/k \n";
+        LOG_INFO << "writing show Shell";
+        this->batchFile << "/k \n";
     }
 }
 
 void BatchCreator::writeCommands() {
-    this->batchFileString = this->batchFileString + "\"";
+    LOG_INFO << "writing Commands";
+    this->batchFile << "\"";
     for (const std::string command : this->fileData->getCommands()) {
-        this->batchFileString = this->batchFileString + command + "&& \n";
+        this->batchFile << command << "&& \n";
     }
 }
 
 void BatchCreator::writeEnvVariables() {
+    LOG_INFO << "writing Environment Variables";
     for (const std::tuple env : this->fileData->getEnvironmentVariables()) {
-        this->batchFileString += "set " + std::get<0>(env) + "=" + std::get<1>(env) + " && \n";
+        this->batchFile << "set " << std::get<0>(env) << "=" 
+                        << std::get<1>(env) << " && \n";
     }
 }
 
 void BatchCreator::writePathVariables() {
-    this->batchFileString += "set path=";
+    LOG_INFO << "writing Path Variables";
+    this->batchFile << "set path=";
     for (const std::string path : this->fileData->getPathValues()) {
-        this->batchFileString += path + ";\n";
+        this->batchFile << path << ";\n";
     }
-    this->batchFileString += "%path%";
+    this->batchFile << "%path%";
 }
 
 void BatchCreator::writeApp() {
+    std::string appName = this->fileData->getOutputFile();
     if (this->fileData->getApplication().has_value()) {
-        this->batchFileString += " && \nstart ?WAS HIER? \n" + this->fileData->getApplication().value() + "\"\n"; //start WAS?
+        LOG_INFO << "writing start Application";
+        this->batchFile << " && \nstart \"" << appName << "\" \n" 
+                        << this->fileData->getApplication().value() 
+                        << "\"\n";
     } else {
-        this->batchFileString +"\"";
+        LOG_INFO << "writing not start Application";
+        this->batchFile << "\"";
     }
 }
 
 void BatchCreator::writeEnd() {
-    this->batchFileString += "@ECHO ON";
+    this->batchFile << "@ECHO ON";
 }
