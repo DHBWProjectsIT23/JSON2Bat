@@ -1,7 +1,3 @@
-find_package(Catch2)
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(JSONCPP jsoncpp)
-
 # Add LoggingWrapper Library
  add_library(LoggingWrapper LoggingWrapper.cpp easylogging++.cc)
 
@@ -14,7 +10,18 @@ elseif(UNIX)
   target_compile_definitions(LoggingWrapper PRIVATE IS_UNIX)
 endif()
 
+
 # Linking necessary libraries
+if(UNIX)
 target_link_libraries(${PROJECT_NAME} PRIVATE
   jsoncpp
   LoggingWrapper)
+endif()
+
+if(WIN32)
+  add_library(xgetopt ${PROJECT_SOURCE_DIR}/lib/xgetopt.c)
+  target_link_libraries(${PROJECT_NAME} PRIVATE 
+    ${PROJECT_SOURCE_DIR}/lib/compiled/libjsoncpp.a
+    LoggingWrapper
+    xgetopt)
+endif()

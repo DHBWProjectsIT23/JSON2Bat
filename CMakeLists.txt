@@ -35,7 +35,7 @@ if(ASTYLE_EXECUTABLE)
     # TODO: Fix astyle
     COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     # COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
-            ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+    # ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     VERBATIM)
   set_target_properties(astyle PROPERTIES EXCLUDE_FROM_ALL FALSE)
 else(ASTYLE_EXECUTABLE)

@@ -19,7 +19,11 @@
 #ifndef COMMANDLINEHANDLER_HPP
 #define COMMANDLINEHANDLER_HPP
 
+#ifdef IS_UNIX
 #include <getopt.h>
+#elif defined(IS_WINDOWS)
+#include "xgetopt.h"
+#endif
 #include <string>
 #include <vector>
 
