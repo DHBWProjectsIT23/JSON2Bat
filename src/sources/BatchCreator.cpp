@@ -12,7 +12,7 @@
 #include "BatchCreator.hpp"
 #include "LoggingWrapper.hpp" // Logs noch einfügen!!!
 
-BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData){
+BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData) {
 
 }
 
@@ -34,7 +34,6 @@ void BatchCreator::writeStart() {
  void BatchCreator::writeHideShell() {
     if (this->fileData->getHideShell()){
         this->batchFileString = this->batchFileString + "/c \n";
-
     } else {
         this-> batchFileString = this->batchFileString + "/k \n";
     }

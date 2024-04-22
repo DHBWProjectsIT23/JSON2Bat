@@ -27,7 +27,7 @@ private:
     void writeStart();
 
     void writeHideShell();
-
+  
     void writeCommands();
 
     void writeEnvVariables();
@@ -38,5 +38,5 @@ private:
 
     void writeEnd(); // brauch ich noch irgendwo n carriage return? wenn aj wo?
 
- 
+
 };

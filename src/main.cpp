@@ -24,6 +24,23 @@
 INITIALIZE_EASYLOGGINGPP
 
 /**
+ * @brief
+ * @details
+ *
+ * @param files
+ * @return
+ */
+std::vector<std::string> validateFiles(std::vector<std::string> files);
+
+/**
+ * @brief
+ * @details
+ *
+ * @param files
+ */
+void parseFiles(std::vector<std::string> files);
+
+/**
  * @brief Main function of the program
  * @details
  * The main function is responsible for connection all parts of the programm.
@@ -37,8 +54,7 @@ INITIALIZE_EASYLOGGINGPP
  * @todo Documentation
  * @todo Refactoring
  */
-int main(int argc, char* argv[])
-{
+int main(int argc, char *argv[]) {
     utilities::Utils::setupEasyLogging("conf/easylogging.conf");
 
     // Check if any options/arguments were given
@@ -56,6 +72,15 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    // Replace the original files vector with the validFiles vector
+    files = std::move(validateFiles(files));
+    parseFiles(files);
+
+    LOG_INFO << "Exiting...";
+    return 0;
+}
+
+std::vector<std::string> validateFiles(std::vector<std::string> files) {
     std::vector<std::string> validFiles;
 
     for (const auto &file : files) {
@@ -90,17 +115,19 @@ int main(int argc, char* argv[])
         validFiles.push_back(file);
     }
 
-    // Replace the original files vector with the validFiles vector
-    files = std::move(validFiles);
+    return validFiles;
+}
+
+void parseFiles(std::vector<std::string> files) {
 
     for (auto file = files.begin(); file != files.end(); ++file) {
+
         std::shared_ptr<parsing::FileData> fileData;
 
         try {
             parsing::JsonHandler jsonHandler(*file);
             fileData = jsonHandler.getFileData();
-        }
-        catch (const exceptions::CustomException &e) {
+        } catch (const exceptions::CustomException &e) {
             OUTPUT << "\nThere has been a error while trying to parse \"" << *file
                    << ":\n";
             LOG_ERROR << e.what();
@@ -118,7 +145,4 @@ int main(int argc, char* argv[])
             continue;
         }
     }
-
-    LOG_INFO << "Exiting...";
-    return 0;
 }
