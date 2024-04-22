@@ -17,16 +17,26 @@ public:
 
     BatchCreator(std::shared_ptr<parsing::FileData> fileData);
 
-    std::string batchFileString;
     std::shared_ptr<parsing::FileData> fileData;
-    void writeBatch();
+
+    std::string batchFileString; // Noch in Datei schreiben (shared_ptr?)
+    void writeBatch(); // Datei als Rückgabewert?
 
 private:
 
     void writeStart();
 
     void writeHideShell();
+  
+    void writeCommands();
 
-    void writeCommand();
+    void writeEnvVariables();
+
+    void writePathVariables();
+
+    void writeApp(); // start "WAS"? Das gleiche wie in "outputfile" ohne ".bat"
+
+    void writeEnd(); // brauch ich noch irgendwo n carriage return? wenn aj wo?
+
 
 };
