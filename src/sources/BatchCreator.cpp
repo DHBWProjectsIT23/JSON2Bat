@@ -11,7 +11,7 @@
 
 #include "BatchCreator.hpp"
 
-BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData){
+BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData) {
 
 }
 
@@ -26,9 +26,9 @@ void BatchCreator::writeBatch() {
 void BatchCreator::writeStart() {
     this->batchFileString = this->batchFileString + "@ECHO OFF\nC:\\Windows\\System32\\cmd.exe ";
 }
- 
- void BatchCreator::writeHideShell() {
-    if (this->fileData->getHideShell()){
+
+void BatchCreator::writeHideShell() {
+    if (this->fileData->getHideShell()) {
         this->batchFileString = this->batchFileString + "/c\n";
 
     } else {

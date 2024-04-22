@@ -28,5 +28,5 @@ private:
     void writeHideShell();
 
     void writeCommand();
- 
+
 };
