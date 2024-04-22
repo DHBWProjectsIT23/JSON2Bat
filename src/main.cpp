@@ -55,94 +55,94 @@ void parseFiles(std::vector<std::string> files);
  * @todo Refactoring
  */
 int main(int argc, char *argv[]) {
-  utilities::Utils::setupEasyLogging("conf/easylogging.conf");
+    utilities::Utils::setupEasyLogging("conf/easylogging.conf");
 
-  // Check if any options/arguments were given
-  if (argc < 2) {
-    LOG_ERROR << "No options given!\n";
-    cli::CommandLineHandler::printHelp();
-  }
+    // Check if any options/arguments were given
+    if (argc < 2) {
+        LOG_ERROR << "No options given!\n";
+        cli::CommandLineHandler::printHelp();
+    }
 
-  // Vector of all inputted file names
-  std::vector<std::string> files =
-      cli::CommandLineHandler::parseArguments(argc, argv);
+    // Vector of all inputted file names
+    std::vector<std::string> files =
+        cli::CommandLineHandler::parseArguments(argc, argv);
 
-  if (files.empty()) {
-    LOG_ERROR << "No files were given as arguments!\n";
-    return 1;
-  }
+    if (files.empty()) {
+        LOG_ERROR << "No files were given as arguments!\n";
+        return 1;
+    }
 
-  // Replace the original files vector with the validFiles vector
-  files = std::move(validateFiles(files));
-  parseFiles(files);
+    // Replace the original files vector with the validFiles vector
+    files = std::move(validateFiles(files));
+    parseFiles(files);
 
-  LOG_INFO << "Exiting...";
-  return 0;
+    LOG_INFO << "Exiting...";
+    return 0;
 }
 
 std::vector<std::string> validateFiles(std::vector<std::string> files) {
-  std::vector<std::string> validFiles;
+    std::vector<std::string> validFiles;
 
-  for (const auto &file : files) {
-    if (!utilities::Utils::checkIfFileExists(file)) {
-      LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
+    for (const auto &file : files) {
+        if (!utilities::Utils::checkIfFileExists(file)) {
+            LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
 
-      if (files.size() != 1 &&
-          !utilities::Utils::askToContinue("Do you want to continue with the "
-                                           "remaining files? (y/n) ")) {
-        // Exit if it's the only file or the user does not want to
-        // continue
-        OUTPUT << "Aborting...\n";
-        LOG_INFO << "Application ended by user Input";
-        exit(1);
-      }
+            if (files.size() != 1 &&
+                    !utilities::Utils::askToContinue("Do you want to continue with the "
+                            "remaining files? (y/n) ")) {
+                // Exit if it's the only file or the user does not want to
+                // continue
+                OUTPUT << "Aborting...\n";
+                LOG_INFO << "Application ended by user Input";
+                exit(1);
+            }
 
-      continue;
+            continue;
+        }
+
+        if (!utilities::Utils::checkFileEnding(file)) {
+            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
+            OUTPUT << "If the file is not in JSON Format, continuing may "
+                   "result in\nunexpected behaviour!\n";
+
+            if (!utilities::Utils::askToContinue()) {
+                OUTPUT << "Aborting...\n";
+                LOG_INFO << "Application ended by user Input";
+                exit(1);
+            }
+        }
+
+        validFiles.push_back(file);
     }
 
-    if (!utilities::Utils::checkFileEnding(file)) {
-      LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
-      OUTPUT << "If the file is not in JSON Format, continuing may "
-                "result in\nunexpected behaviour!\n";
-
-      if (!utilities::Utils::askToContinue()) {
-        OUTPUT << "Aborting...\n";
-        LOG_INFO << "Application ended by user Input";
-        exit(1);
-      }
-    }
-
-    validFiles.push_back(file);
-  }
-
-  return validFiles;
+    return validFiles;
 }
 
 void parseFiles(std::vector<std::string> files) {
 
-  for (auto file = files.begin(); file != files.end(); ++file) {
+    for (auto file = files.begin(); file != files.end(); ++file) {
 
-    std::shared_ptr<parsing::FileData> fileData;
+        std::shared_ptr<parsing::FileData> fileData;
 
-    try {
-      parsing::JsonHandler jsonHandler(*file);
-      fileData = jsonHandler.getFileData();
-    } catch (const exceptions::CustomException &e) {
-      OUTPUT << "\nThere has been a error while trying to parse \"" << *file
-             << ":\n";
-      LOG_ERROR << e.what();
+        try {
+            parsing::JsonHandler jsonHandler(*file);
+            fileData = jsonHandler.getFileData();
+        } catch (const exceptions::CustomException &e) {
+            OUTPUT << "\nThere has been a error while trying to parse \"" << *file
+                   << ":\n";
+            LOG_ERROR << e.what();
 
-      if (std::next(file) != files.end() &&
-          !utilities::Utils::askToContinue(
-              "Do you want to continue with the other files? (y/n) "
-              "")) {
-        OUTPUT << "Aborting...";
-        LOG_INFO << "Application ended by user Input";
-        exit(1);
-      }
+            if (std::next(file) != files.end() &&
+                    !utilities::Utils::askToContinue(
+                        "Do you want to continue with the other files? (y/n) "
+                        "")) {
+                OUTPUT << "Aborting...";
+                LOG_INFO << "Application ended by user Input";
+                exit(1);
+            }
 
-      std::cout << "\n\n";
-      continue;
+            std::cout << "\n\n";
+            continue;
+        }
     }
-  }
 }

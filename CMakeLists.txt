@@ -68,7 +68,6 @@ set(SOURCES
     ${PROJECT_SOURCE_DIR}/src/sources/BatchCreator.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/FileData.cpp
     ${PROJECT_SOURCE_DIR}/src/sources/JsonHandler.cpp
-    ${PROJECT_SOURCE_DIR}/src/sources/ErrorHandler.cpp
         ${PROJECT_SOURCE_DIR}/src/sources/KeyValidator.cpp)
 
 # Add main executable
