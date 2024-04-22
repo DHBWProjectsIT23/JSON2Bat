@@ -21,7 +21,8 @@
 
 #ifdef IS_UNIX
 #include <getopt.h>
-#elif defined(IS_WINDOWS)
+#endif
+#ifdef IS_WINDOWS
 #include "xgetopt.h"
 #endif
 #include <string>
