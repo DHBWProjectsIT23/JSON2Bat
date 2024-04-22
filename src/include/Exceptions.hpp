@@ -15,7 +15,6 @@
 
 #include "LoggingWrapper.hpp"
 #include <string>
-#include <utility>
 
 /**
  * @namespace exceptions
@@ -85,13 +84,13 @@ public:
  *
  * @todo Documentation
  */
-class BatchExistsException : public CustomException {
+class FileExistsException : public CustomException {
 private:
     const std::string file;
     std::string message;
 
 public:
-    explicit BatchExistsException(const std::string &file) : file(file) {
+    explicit FileExistsException(const std::string &file) : file(file) {
         /**
          * @note I planned to use std::format, however it seems that the
          * required Compiler Version is not yet available in the stable Ubuntu
@@ -154,8 +153,12 @@ private:
     std::string message = "Invalid key found!";
 
 public:
-    InvalidKeyException() {
+    InvalidKeyException(const std::vector<std::tuple<int, std::string>> &keys) {
         LOG_INFO << "InvalidKeyException: " << message;
+        for (const auto &[line, key] : keys) {
+            LOG_WARNING << "Invalid key found at line " << line << ": \"" << key
+                        << "\"!";
+        }
     }
     [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
