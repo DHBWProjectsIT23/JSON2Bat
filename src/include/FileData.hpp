@@ -1,14 +1,13 @@
 /**
  * @file FileData.hpp
- * @author
- * @date
- * @version
- * @brief
- * @details
+ * @author Sonia Sinacci, Elena Schwartzbach
+ * @date 16.04.2024
+ * @version 0.1.5
+ * @brief This file contains the FileData class
+ *
+ * @see parsing::FileData
  *
  * @copyright See LICENSE file
- *
- * @todo Documentation
  */
 
 #ifndef FILEDATA_HPP
@@ -22,122 +21,117 @@
 namespace parsing {
 /**
  * @class FileData
- * @brief
+ * @brief This class contains all data from the json file.
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * The data from the json file is parsed by the JsonHandler and then assigned
+ * to the attributes of an instance of this class.
+ * This class also handles a part of the error handling.
  */
 class FileData {
 public:
     /**
-     * @brief
+     * @brief Setter for this->outputfile
      * @details
+     * Checks that neither the given string is empty, nor that the outputfile
+     * is already set and then assigns the newOutputfile to the instance.
      *
-     * @param newOutputfile
+     * @param newOutputfile The outputfile to be set
      *
-     * @todo Documentation
+     * @throws exceptions::InvalidValueException
      */
     void setOutputFile(std::string &newOutputfile);
 
     /**
-     * @brief
-     * @param newHideShell
-     *
-     * @todo Documentation
+     * @brief Setter for this->hideshell
+     * @param newHideShell The hideshell value to be set
      */
     void setHideShell(bool newHideShell) {
         this->hideShell = newHideShell;
     }
 
     /**
-     * @brief
+     * @brief Setter for this->application
      * @details
+     * Set's the application attribute. Return's if the given string is
+     * empty.
      *
-     * @param newApplication
-     *
-     * @todo Documentation
+     * @param newApplication THe application to be set
      */
     void setApplication(const std::string &newApplication);
 
     /**
-     * @brief
+     * @brief Adds a given command to this->commands
      * @details
+     * Makes sure, that the given command value is not empty and then add's
+     * it to the commands attribute.
      *
-     * @param command
+     * @param command The command to be added
      *
-     * @todo Documentation
+     * @throws exceptions::InvalidValueException
      */
     void addCommand(const std::string &command);
 
     /**
-     * @brief
+     * @brief Adds a given tuple to this->environmentVariables
      * @details
+     * Makes sure that neither the key nor the value is empty and then adds
+     * a tuple with both values to the environmentVariables attribute
      *
-     * @param name
-     * @param value
+     * @param name The name of the env variable
+     * @param value The value of the env variable
      *
-     * @todo Documentation
+     * @throws exceptions::InvalidValueException
      */
     void addEnvironmentVariable(const std::string &name,
                                 const std::string &value);
 
     /**
-     * @brief
+     * @brief Add's a given value to this->pathValues
      * @details
+     * Makes sure that the given value is not empty and then assigns it to
+     * the given pathValues attribute
      *
-     * @param pathValue
+     * @param pathValue The value to be added
      *
-     * @todo Documentation
+     * @throws exceptions::InvalidValueException
      */
     void addPathValue(const std::string &pathValue);
 
     /**
-     * @brief
-     * @return
-     *
-     * @todo Documentation
+     * @brief Getter for this->outputfile
+     * @return The assigned outputfile
      */
     [[nodiscard]] const std::string &getOutputFile() const {
         return outputfile;
     }
 
     /**
-     * @brief
-     * @return
-     *
-     * @todo Documentation
+     * @brief Getter for this->hideShell
+     * @return The assigned value for hideshell
      */
     [[nodiscard]] bool getHideShell() const {
         return hideShell;
     }
 
     /**
-     * @brief
-     * @return
-     *
-     * @todo Documentation
+     * @brief Getter for this->application
+     * @return The assigned application
      */
     [[nodiscard]] const std::optional<std::string> &getApplication() const {
         return application;
     }
 
     /**
-     * @brief
-     * @return
-     *
-     * @todo Documentation
+     * @brief Getter for this->commands
+     * @return The vector of assigned commands
      */
     [[nodiscard]] const std::vector<std::string> &getCommands() const {
         return commands;
     }
 
     /**
-     * @brief
-     * @return
-     *
-     * @todo Documentation
+     * @brief Getter for this->environmentVariables
+     * @return The vector of assigned env variables
      */
     [[nodiscard]] const std::vector<std::tuple<std::string, std::string>> &
     getEnvironmentVariables() const {
@@ -145,10 +139,8 @@ public:
     }
 
     /**
-     * @brief
-     * @return
-     *
-     * @todo Documentation
+     * @brief Getter for this->pathValues
+     * @return The vector of assigned pathValues
      */
     [[nodiscard]] const std::vector<std::string> &getPathValues() const {
         return pathValues;
@@ -161,7 +153,6 @@ private:
     std::vector<std::string> commands;
     std::vector<std::tuple<std::string, std::string>> environmentVariables;
     std::vector<std::string> pathValues;
-    const static int8_t suffixLength = 4;
 };
 } // namespace parsing
 
