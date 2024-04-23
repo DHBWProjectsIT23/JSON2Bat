@@ -278,9 +278,9 @@ class FailedToOpenFileException : public CustomException {
 private:
     std::string message;
 
-/** @todo Documentation*/
+    /** @todo Documentation*/
 public:
-    explicit FailedToOpenFileException(const std::string &file){
+    explicit FailedToOpenFileException(const std::string &file) {
         message = "Failed to open file: " + file;
         LOG_INFO << "FailedToOpenFileException: " << message;
     }

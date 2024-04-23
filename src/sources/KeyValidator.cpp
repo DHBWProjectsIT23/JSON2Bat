@@ -23,10 +23,10 @@ KeyValidator &KeyValidator::getInstance() {
 }
 /** @todo Documentation */
 std::vector<std::tuple<int, std::string>>
-KeyValidator::validateKeys(const Json::Value &root,
-                           const std::string &filename) {
+                                       KeyValidator::validateKeys(const Json::Value &root,
+const std::string &filename) {
     std::vector<std::tuple<int, std::string>> wrongKeys =
-        getWrongKeys(root, filename);
+            getWrongKeys(root, filename);
 
     for (Json::Value entries = root.get("entries", "");
             const auto &entry : entries) {
@@ -63,8 +63,8 @@ KeyValidator::getWrongKeys(Json::Value root, const std::string &filename) {
 
 /** @todo Documentation */
 std::vector<std::tuple<int, std::string>>
-KeyValidator::validateEntries(const std::string &filename,
-                              const std::vector<std::string> &entryKeys) {
+                                       KeyValidator::validateEntries(const std::string &filename,
+const std::vector<std::string> &entryKeys) {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
     for (const auto &key : entryKeys) {

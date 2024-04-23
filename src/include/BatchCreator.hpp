@@ -27,7 +27,7 @@ public:
     /**
      * @brief Initialisiert BatchCreator
      * @details
-     * 
+     *
      * @param filename
      *
      */
@@ -45,7 +45,7 @@ private:
      * @details Schreibt den Teil der Batch Datei der immer gleich ist.
      * - setzt ECHO off
      * - startet cmd.exe
-     * 
+     *
      */
     void writeStart();
 
@@ -86,7 +86,7 @@ private:
      * Wird unter dem Namen aus "outputfile" gestartet
      *
      */
-    void writeApp(); 
+    void writeApp();
 
     /**
      * @brief Ende der Batch Datei
@@ -96,5 +96,5 @@ private:
      */
     void writeEnd();
 
- 
+
 };
