@@ -10,19 +10,30 @@
  */
 
 #include "BatchCreator.hpp"
+#include "Exceptions.hpp"
 #include "LoggingWrapper.hpp"
 
 BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData){
-
+    LOG_INFO << "Initializing BatchCreator";
+    this->fileData = fileData;
+    this->createBatch();
 }
 
 void BatchCreator::createBatch() {
     LOG_INFO << "Creating Batch file";
 
     this->batchFile.open(this->fileData->getOutputFile());
-    this->writeStart();
-    this->writeHideShell();
-
+    if (this->batchFile.is_open()){
+        this->writeStart();
+        this->writeHideShell();
+        this->writeCommands();
+        this->writeEnvVariables();
+        this->writePathVariables();
+        this->writeApp();
+        this->writeEnd();
+    } else {
+        throw exceptions::FailedToOpenFileException(this->fileData->getOutputFile());
+    }
 }
 
 void BatchCreator::writeStart() {
@@ -44,7 +55,7 @@ void BatchCreator::writeStart() {
 void BatchCreator::writeCommands() {
     LOG_INFO << "writing Commands";
     this->batchFile << "\"";
-    for (const std::string command : this->fileData->getCommands()) {
+    for (const std::string &command : this->fileData->getCommands()) {
         this->batchFile << command << "&& \r\n";
     }
 }
@@ -60,7 +71,7 @@ void BatchCreator::writeEnvVariables() {
 void BatchCreator::writePathVariables() {
     LOG_INFO << "writing Path Variables";
     this->batchFile << "set path=";
-    for (const std::string path : this->fileData->getPathValues()) {
+    for (const std::string &path : this->fileData->getPathValues()) {
         this->batchFile << path << ";\r\n";
     }
     this->batchFile << "%path%";
