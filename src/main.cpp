@@ -20,6 +20,7 @@
 #include "FileData.hpp"
 #include "JsonHandler.hpp"
 #include "Utils.hpp"
+#include "BatchCreator.hpp"
 
 INITIALIZE_EASYLOGGINGPP
 
@@ -127,6 +128,7 @@ void parseFiles(std::vector<std::string> files) {
         try {
             parsing::JsonHandler jsonHandler(*file);
             fileData = jsonHandler.getFileData();
+            BatchCreator batchCreator(fileData);
         } catch (const exceptions::CustomException &e) {
             OUTPUT << "\nThere has been a error while trying to parse \"" << *file
                    << ":\n";

@@ -242,6 +242,21 @@ public:
     }
 };
 
+class FailedToOpenFileException : public CustomException {
+private:
+    std::string message;
+
+    /** @todo Documentation*/
+public:
+    explicit FailedToOpenFileException(const std::string &file) {
+        message = "Failed to open file: " + file;
+        LOG_INFO << "FailedToOpenFileException: " << message;
+    }
+    [[nodiscard]] const char *what() const noexcept override {
+        return message.c_str();
+    }
+};
+
 } // namespace exceptions
 
 #endif
