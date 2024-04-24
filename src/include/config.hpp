@@ -18,11 +18,12 @@
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
 #define LOG_CONFIG "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging.conf"
+#define EXECUTABLE_NAME "json2batch"
 #define MAJOR_VERSION "0"
 #define MINOR_VERSION "2"
 #define PATCH_VERSION "0"
 #define DESCRIPTION "A simple tool to convert json to batch."
-#define PROJECT_NAME "jsonToBatch"
+#define PROJECT_NAME "JSON2Batch"
 #define AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci"
 #define HOMEPAGE_URL "https://definitelynotsimon13.github.io/ProjectJsonToBat"
 #endif
