@@ -1,4 +1,4 @@
-# jsonToBatch
+# JSON2Batch
 
 
 # Build instructions
