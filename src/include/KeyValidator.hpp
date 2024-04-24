@@ -46,7 +46,7 @@ public:
      * types.
      */
     std::vector<std::tuple<int, std::string>>
-                                           validateKeys(const Json::Value &root, const std::string &filename);
+    validateKeys(const Json::Value &root, const std::string &filename);
 
 private:
     /**
@@ -89,8 +89,8 @@ private:
      * @todo Documentation
      */
     std::vector<std::tuple<int, std::string>>
-                                           validateEntries(const std::string &filename,
-                                                   const std::vector<std::string> &entryKeys);
+    validateEntries(const std::string &filename,
+                    const std::vector<std::string> &entryKeys);
 
     /**
      * @brief
@@ -106,11 +106,11 @@ private:
             const std::string &wrongKey);
 
     std::vector<std::string> validKeys = {"outputfile", "hideshell", "entries",
-                                          "application"
-                                         };
+        "application"
+    };
     std::vector<std::string> validEntryKeys = {"type", "key", "value", "path",
-                                               "command"
-                                              };
+        "command"
+    };
 };
 } // namespace parsing
 
