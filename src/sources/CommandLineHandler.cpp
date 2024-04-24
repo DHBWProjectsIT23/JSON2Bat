@@ -13,10 +13,9 @@
 #include "CommandLineHandler.hpp"
 #include "LoggingWrapper.hpp"
 #include "config.hpp"
-#include <bits/getopt_ext.h>
 #include <cstdlib>
 #include <cstring>
-#include <stdexcept>
+#include <getopt.h>
 #include <vector>
 
 namespace cli {
@@ -67,10 +66,12 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         char *argv[]) {
     LOG_INFO << "Parsing arguments...";
 
+    std::vector<std::string> files;
+
     while (true) {
         int optIndex = -1;
         struct option longOption = {};
-        auto result = getopt_long(argc, argv, "hvc", options, &optIndex);
+        auto result = getopt_long(argc, argv, "hvco:", options, &optIndex);
 
         if (result == -1) {
             LOG_INFO << "End of options reached";
@@ -93,6 +94,12 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         case 'c':
             LOG_INFO << "Credit option detected";
             CommandLineHandler::printCredits();
+
+        case 'o':
+            LOG_INFO << "Output option detected";
+            LOG_DEBUG << "Output file: " << optarg;
+            files.emplace_back(optarg);
+            break;
 
         case 0:
             LOG_INFO << "Long option without short version detected";
@@ -118,7 +125,10 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
     LOG_INFO << "Options have been parsed";
     LOG_INFO << "Checking for arguments...";
-    std::vector<std::string> files;
+
+    if(files.empty()) {
+        files.emplace_back("");
+    }
 
     while (optind < argc) {
         LOG_INFO << "Adding file: " << argv[optind];

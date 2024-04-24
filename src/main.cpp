@@ -90,6 +90,11 @@ int main(int argc, char *argv[]) {
         OUTPUT << "\t - " << file << "\n";
     }
 
+    // The first element of the vector is the output directory
+    // If the output directory is not given, there'll be an empty string
+    std::string outputDir = files[0];
+    files.erase(files.begin());
+
     // Replace the original files vector with the validFiles vector
     files = std::move(validateFiles(files));
     parseFiles(files);
