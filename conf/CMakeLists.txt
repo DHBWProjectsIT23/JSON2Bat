@@ -1,4 +1,6 @@
 # Generating files
+set(LOG_CONFIG ${PROJECT_SOURCE_DIR}/conf/easylogging.conf)
+
 configure_file(${PROJECT_SOURCE_DIR}/conf/config.in.hpp
         ${PROJECT_SOURCE_DIR}/src/include/config.hpp)
 configure_file(${PROJECT_SOURCE_DIR}/conf/README.in.md
