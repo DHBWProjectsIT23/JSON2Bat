@@ -1,0 +1,177 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Contains the main function.  
+
+
+{\ttfamily \#include $<$Logging\+Wrapper.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$jsoncpp/json.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Batch\+Creator.\+hpp"{}}\newline
+{\ttfamily \#include "{}Command\+Line\+Handler.\+hpp"{}}\newline
+{\ttfamily \#include "{}Exceptions.\+hpp"{}}\newline
+{\ttfamily \#include "{}File\+Data.\+hpp"{}}\newline
+{\ttfamily \#include "{}Json\+Handler.\+hpp"{}}\newline
+{\ttfamily \#include "{}Utils.\+hpp"{}}\newline
+{\ttfamily \#include "{}config.\+hpp"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dce/main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INITIALIZE\+\_\+\+EASYLOGGINGPP std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{main_8cpp_aad40abb24acce6a32218f42e80053e77}{validate\+Files}} (std\+::vector$<$ std\+::string $>$ files)
+\item 
+void \mbox{\hyperlink{main_8cpp_ac620aa54df822ee1879995ac38062bc0}{parse\+Files}} (std\+::vector$<$ std\+::string $>$ files)
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the main function. 
+
+\begin{DoxyAuthor}{Author}
+Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/04-\/18 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1.\+5
+\end{DoxyVersion}
+The main function is responsible for connection all parts of the programm. It calls all relevant classes and finishes when everything is done.
+
+\begin{DoxyCopyright}{Copyright}
+See LICENSE file 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function of the program. 
+
+The main function is responsible for connection all parts of the programm. It calls all relevant classes and finishes when everything is done.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of arguments given \\
+\hline
+{\em argv} & Th command line arguments given\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Documentation 
+
+Refactoring \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{config_8hpp_source_l00020}{LOG\+\_\+\+CONFIG}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00066}{cli\+::\+Command\+Line\+Handler\+::parse\+Arguments()}}, \mbox{\hyperlink{main_8cpp_source_l00139}{parse\+Files()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00023}{cli\+::\+Command\+Line\+Handler\+::print\+Help()}}, \mbox{\hyperlink{Utils_8cpp_source_l00024}{utilities\+::\+Utils\+::setup\+Easy\+Logging()}}, and \mbox{\hyperlink{main_8cpp_source_l00101}{validate\+Files()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ac620aa54df822ee1879995ac38062bc0}\label{main_8cpp_ac620aa54df822ee1879995ac38062bc0} 
+\index{main.cpp@{main.cpp}!parseFiles@{parseFiles}}
+\index{parseFiles@{parseFiles}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{parseFiles()}{parseFiles()}}
+{\footnotesize\ttfamily void parse\+Files (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{files }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Utils_8cpp_source_l00040}{utilities\+::\+Utils\+::ask\+To\+Continue()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00048}{parsing\+::\+Json\+Handler\+::get\+File\+Data()}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00032}{exceptions\+::\+Custom\+Exception\+::what()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0a/main_8cpp_ac620aa54df822ee1879995ac38062bc0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{df/d0a/main_8cpp_ac620aa54df822ee1879995ac38062bc0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_aad40abb24acce6a32218f42e80053e77}\label{main_8cpp_aad40abb24acce6a32218f42e80053e77} 
+\index{main.cpp@{main.cpp}!validateFiles@{validateFiles}}
+\index{validateFiles@{validateFiles}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{validateFiles()}{validateFiles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ validate\+Files (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{files }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Utils_8cpp_source_l00040}{utilities\+::\+Utils\+::ask\+To\+Continue()}}, \mbox{\hyperlink{Utils_8cpp_source_l00037}{utilities\+::\+Utils\+::check\+File\+Ending()}}, and \mbox{\hyperlink{Utils_8cpp_source_l00032}{utilities\+::\+Utils\+::check\+If\+File\+Exists()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{df/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{df/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_icgraph}
+\end{center}
+\end{figure}

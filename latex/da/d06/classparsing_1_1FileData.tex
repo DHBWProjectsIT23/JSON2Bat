@@ -1,0 +1,430 @@
+\doxysection{parsing\+::File\+Data Class Reference}
+\hypertarget{classparsing_1_1FileData}{}\label{classparsing_1_1FileData}\index{parsing::FileData@{parsing::FileData}}
+
+
+This class contains all data from the json file.  
+
+
+
+
+{\ttfamily \#include $<$File\+Data.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparsing_1_1FileData_a3428f3de9f6b8e63293f5dd2b7661239}{set\+Output\+File}} (std\+::string \&new\+Outputfile)
+\begin{DoxyCompactList}\small\item\em Setter for this-\/\texorpdfstring{$>$}{>}outputfile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77}{set\+Hide\+Shell}} (bool new\+Hide\+Shell)
+\begin{DoxyCompactList}\small\item\em Setter for this-\/\texorpdfstring{$>$}{>}hideshell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1FileData_aeaad2a084141933062f5c8edc24667a9}{set\+Application}} (const std\+::string \&new\+Application)
+\begin{DoxyCompactList}\small\item\em Setter for this-\/\texorpdfstring{$>$}{>}application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1FileData_a5567a691f41e1e16c07adce031dc3e3d}{add\+Command}} (const std\+::string \&command)
+\begin{DoxyCompactList}\small\item\em Adds a given command to this-\/\texorpdfstring{$>$}{>}commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1FileData_ad2e4a0d45368843ded71b54a7dc27ced}{add\+Environment\+Variable}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Adds a given tuple to this-\/\texorpdfstring{$>$}{>}environment\+Variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1FileData_ac4621697042bf1d0b1596235bf2a16a0}{add\+Path\+Value}} (const std\+::string \&path\+Value)
+\begin{DoxyCompactList}\small\item\em Add\textquotesingle{}s a given value to this-\/\texorpdfstring{$>$}{>}path\+Values. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9}{get\+Output\+File}} () const
+\begin{DoxyCompactList}\small\item\em Getter for this-\/\texorpdfstring{$>$}{>}outputfile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad}{get\+Hide\+Shell}} () const
+\begin{DoxyCompactList}\small\item\em Getter for this-\/\texorpdfstring{$>$}{>}hide\+Shell. \end{DoxyCompactList}\item 
+const std\+::optional$<$ std\+::string $>$ \& \mbox{\hyperlink{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f}{get\+Application}} () const
+\begin{DoxyCompactList}\small\item\em Getter for this-\/\texorpdfstring{$>$}{>}application. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080}{get\+Commands}} () const
+\begin{DoxyCompactList}\small\item\em Getter for this-\/\texorpdfstring{$>$}{>}commands. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::tuple$<$ std\+::string, std\+::string $>$ $>$ \& \mbox{\hyperlink{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1}{get\+Environment\+Variables}} () const
+\begin{DoxyCompactList}\small\item\em Getter for this-\/\texorpdfstring{$>$}{>}environment\+Variables. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f}{get\+Path\+Values}} () const
+\begin{DoxyCompactList}\small\item\em Getter for this-\/\texorpdfstring{$>$}{>}path\+Values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{outputfile}}
+\item 
+bool \mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hide\+Shell}}
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{application}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{commands}}
+\item 
+std\+::vector$<$ std\+::tuple$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{environment\+Variables}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{path\+Values}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class contains all data from the json file. 
+
+The data from the json file is parsed by the \doxylink{classparsing_1_1JsonHandler}{Json\+Handler} and then assigned to the attributes of an instance of this class. This class also handles a part of the error handling. 
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classparsing_1_1FileData_a5567a691f41e1e16c07adce031dc3e3d}\label{classparsing_1_1FileData_a5567a691f41e1e16c07adce031dc3e3d} 
+\index{parsing::FileData@{parsing::FileData}!addCommand@{addCommand}}
+\index{addCommand@{addCommand}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{addCommand()}{addCommand()}}
+{\footnotesize\ttfamily void parsing\+::\+File\+Data\+::add\+Command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command }\end{DoxyParamCaption})}
+
+
+
+Adds a given command to this-\/\texorpdfstring{$>$}{>}commands. 
+
+Makes sure, that the given command value is not empty and then add\textquotesingle{}s it to the commands attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to be added\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1InvalidValueException}{exceptions\+::\+Invalid\+Value\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{FileData_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{FileData_8cpp_source}{File\+Data.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00153}{commands}}.
+
+\Hypertarget{classparsing_1_1FileData_ad2e4a0d45368843ded71b54a7dc27ced}\label{classparsing_1_1FileData_ad2e4a0d45368843ded71b54a7dc27ced} 
+\index{parsing::FileData@{parsing::FileData}!addEnvironmentVariable@{addEnvironmentVariable}}
+\index{addEnvironmentVariable@{addEnvironmentVariable}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{addEnvironmentVariable()}{addEnvironmentVariable()}}
+{\footnotesize\ttfamily void parsing\+::\+File\+Data\+::add\+Environment\+Variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds a given tuple to this-\/\texorpdfstring{$>$}{>}environment\+Variables. 
+
+Makes sure that neither the key nor the value is empty and then adds a tuple with both values to the environment\+Variables attribute
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the env variable \\
+\hline
+{\em value} & The value of the env variable\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1InvalidValueException}{exceptions\+::\+Invalid\+Value\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{FileData_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{FileData_8cpp_source}{File\+Data.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00154}{environment\+Variables}}.
+
+\Hypertarget{classparsing_1_1FileData_ac4621697042bf1d0b1596235bf2a16a0}\label{classparsing_1_1FileData_ac4621697042bf1d0b1596235bf2a16a0} 
+\index{parsing::FileData@{parsing::FileData}!addPathValue@{addPathValue}}
+\index{addPathValue@{addPathValue}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{addPathValue()}{addPathValue()}}
+{\footnotesize\ttfamily void parsing\+::\+File\+Data\+::add\+Path\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+Value }\end{DoxyParamCaption})}
+
+
+
+Add\textquotesingle{}s a given value to this-\/\texorpdfstring{$>$}{>}path\+Values. 
+
+Makes sure that the given value is not empty and then assigns it to the given path\+Values attribute
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Value} & The value to be added\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1InvalidValueException}{exceptions\+::\+Invalid\+Value\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{FileData_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{FileData_8cpp_source}{File\+Data.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00155}{path\+Values}}.
+
+\Hypertarget{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f}\label{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f} 
+\index{parsing::FileData@{parsing::FileData}!getApplication@{getApplication}}
+\index{getApplication@{getApplication}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{getApplication()}{getApplication()}}
+{\footnotesize\ttfamily const std\+::optional$<$ std\+::string $>$ \& parsing\+::\+File\+Data\+::get\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for this-\/\texorpdfstring{$>$}{>}application. 
+
+\begin{DoxyReturn}{Returns}
+The assigned application 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00120}{120}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00152}{application}}.
+
+\Hypertarget{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080}\label{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080} 
+\index{parsing::FileData@{parsing::FileData}!getCommands@{getCommands}}
+\index{getCommands@{getCommands}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{getCommands()}{getCommands()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& parsing\+::\+File\+Data\+::get\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for this-\/\texorpdfstring{$>$}{>}commands. 
+
+\begin{DoxyReturn}{Returns}
+The vector of assigned commands 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00128}{128}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00153}{commands}}.
+
+\Hypertarget{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1}\label{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1} 
+\index{parsing::FileData@{parsing::FileData}!getEnvironmentVariables@{getEnvironmentVariables}}
+\index{getEnvironmentVariables@{getEnvironmentVariables}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{getEnvironmentVariables()}{getEnvironmentVariables()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::tuple$<$ std\+::string, std\+::string $>$ $>$ \& parsing\+::\+File\+Data\+::get\+Environment\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for this-\/\texorpdfstring{$>$}{>}environment\+Variables. 
+
+\begin{DoxyReturn}{Returns}
+The vector of assigned env variables 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00137}{137}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00154}{environment\+Variables}}.
+
+\Hypertarget{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad}\label{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad} 
+\index{parsing::FileData@{parsing::FileData}!getHideShell@{getHideShell}}
+\index{getHideShell@{getHideShell}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{getHideShell()}{getHideShell()}}
+{\footnotesize\ttfamily bool parsing\+::\+File\+Data\+::get\+Hide\+Shell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for this-\/\texorpdfstring{$>$}{>}hide\+Shell. 
+
+\begin{DoxyReturn}{Returns}
+The assigned value for hideshell 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00112}{112}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00151}{hide\+Shell}}.
+
+\Hypertarget{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9}\label{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9} 
+\index{parsing::FileData@{parsing::FileData}!getOutputFile@{getOutputFile}}
+\index{getOutputFile@{getOutputFile}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{getOutputFile()}{getOutputFile()}}
+{\footnotesize\ttfamily const std\+::string \& parsing\+::\+File\+Data\+::get\+Output\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for this-\/\texorpdfstring{$>$}{>}outputfile. 
+
+\begin{DoxyReturn}{Returns}
+The assigned outputfile 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00104}{104}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00150}{outputfile}}.
+
+\Hypertarget{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f}\label{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f} 
+\index{parsing::FileData@{parsing::FileData}!getPathValues@{getPathValues}}
+\index{getPathValues@{getPathValues}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{getPathValues()}{getPathValues()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& parsing\+::\+File\+Data\+::get\+Path\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for this-\/\texorpdfstring{$>$}{>}path\+Values. 
+
+\begin{DoxyReturn}{Returns}
+The vector of assigned path\+Values 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00145}{145}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00155}{path\+Values}}.
+
+\Hypertarget{classparsing_1_1FileData_aeaad2a084141933062f5c8edc24667a9}\label{classparsing_1_1FileData_aeaad2a084141933062f5c8edc24667a9} 
+\index{parsing::FileData@{parsing::FileData}!setApplication@{setApplication}}
+\index{setApplication@{setApplication}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{setApplication()}{setApplication()}}
+{\footnotesize\ttfamily void parsing\+::\+File\+Data\+::set\+Application (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Application }\end{DoxyParamCaption})}
+
+
+
+Setter for this-\/\texorpdfstring{$>$}{>}application. 
+
+Set\textquotesingle{}s the application attribute. Return\textquotesingle{}s if the given string is empty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Application} & THe application to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileData_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{FileData_8cpp_source}{File\+Data.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00152}{application}}.
+
+\Hypertarget{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77}\label{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77} 
+\index{parsing::FileData@{parsing::FileData}!setHideShell@{setHideShell}}
+\index{setHideShell@{setHideShell}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{setHideShell()}{setHideShell()}}
+{\footnotesize\ttfamily void parsing\+::\+File\+Data\+::set\+Hide\+Shell (\begin{DoxyParamCaption}\item[{bool}]{new\+Hide\+Shell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for this-\/\texorpdfstring{$>$}{>}hideshell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Hide\+Shell} & The hideshell value to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00151}{hide\+Shell}}.
+
+\Hypertarget{classparsing_1_1FileData_a3428f3de9f6b8e63293f5dd2b7661239}\label{classparsing_1_1FileData_a3428f3de9f6b8e63293f5dd2b7661239} 
+\index{parsing::FileData@{parsing::FileData}!setOutputFile@{setOutputFile}}
+\index{setOutputFile@{setOutputFile}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{setOutputFile()}{setOutputFile()}}
+{\footnotesize\ttfamily void parsing\+::\+File\+Data\+::set\+Output\+File (\begin{DoxyParamCaption}\item[{std\+::string \&}]{new\+Outputfile }\end{DoxyParamCaption})}
+
+
+
+Setter for this-\/\texorpdfstring{$>$}{>}outputfile. 
+
+Checks that neither the given string is empty, nor that the outputfile is already set and then assigns the new\+Outputfile to the instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Outputfile} & The outputfile to be set\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1InvalidValueException}{exceptions\+::\+Invalid\+Value\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{FileData_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{FileData_8cpp_source}{File\+Data.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{FileData_8hpp_source_l00150}{outputfile}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}\label{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26} 
+\index{parsing::FileData@{parsing::FileData}!application@{application}}
+\index{application@{application}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{application}{application}}
+{\footnotesize\ttfamily std\+::optional$<$std\+::string$>$ parsing\+::\+File\+Data\+::application\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00152}{152}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+\Hypertarget{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}\label{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d} 
+\index{parsing::FileData@{parsing::FileData}!commands@{commands}}
+\index{commands@{commands}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{commands}{commands}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ parsing\+::\+File\+Data\+::commands\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00153}{153}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+\Hypertarget{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}\label{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0} 
+\index{parsing::FileData@{parsing::FileData}!environmentVariables@{environmentVariables}}
+\index{environmentVariables@{environmentVariables}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{environmentVariables}{environmentVariables}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::tuple$<$std\+::string, std\+::string$>$ $>$ parsing\+::\+File\+Data\+::environment\+Variables\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00154}{154}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+\Hypertarget{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}\label{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478} 
+\index{parsing::FileData@{parsing::FileData}!hideShell@{hideShell}}
+\index{hideShell@{hideShell}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{hideShell}{hideShell}}
+{\footnotesize\ttfamily bool parsing\+::\+File\+Data\+::hide\+Shell\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00151}{151}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+\Hypertarget{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}\label{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf} 
+\index{parsing::FileData@{parsing::FileData}!outputfile@{outputfile}}
+\index{outputfile@{outputfile}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{outputfile}{outputfile}}
+{\footnotesize\ttfamily std\+::string parsing\+::\+File\+Data\+::outputfile\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00150}{150}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+\Hypertarget{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}\label{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b} 
+\index{parsing::FileData@{parsing::FileData}!pathValues@{pathValues}}
+\index{pathValues@{pathValues}!parsing::FileData@{parsing::FileData}}
+\doxysubsubsection{\texorpdfstring{pathValues}{pathValues}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ parsing\+::\+File\+Data\+::path\+Values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileData_8hpp_source_l00155}{155}} of file \mbox{\hyperlink{FileData_8hpp_source}{File\+Data.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{FileData_8hpp}{File\+Data.\+hpp}}\item 
+src/sources/\mbox{\hyperlink{FileData_8cpp}{File\+Data.\+cpp}}\end{DoxyCompactItemize}

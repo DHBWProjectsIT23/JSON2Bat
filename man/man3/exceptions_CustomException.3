@@ -1,0 +1,46 @@
+.TH "exceptions::CustomException" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+exceptions::CustomException \- Base class for all custom exceptions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exceptions\&.hpp>\fP
+.PP
+Inherits std::exception\&.
+.PP
+Inherited by \fBexceptions::FailedToOpenFileException\fP, \fBexceptions::FileExistsException\fP, \fBexceptions::InvalidKeyException\fP, \fBexceptions::InvalidTypeException\fP, \fBexceptions::InvalidValueException\fP, \fBexceptions::MissingKeyException\fP, \fBexceptions::MissingTypeException\fP, \fBexceptions::ParsingException\fP, and \fBexceptions::UnreachableCodeException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base class for all custom exceptions\&. 
+
+This class is the base class which is inherited by all custom exceptions\&. It can be used to catch all exceptions that are thrown by us\&.
+.PP
+\fBSee also\fP
+.RS 4
+std::exception 
+.RE
+.PP
+
+.PP
+Definition at line \fB30\fP of file \fBExceptions\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * exceptions::CustomException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB32\fP of file \fBExceptions\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

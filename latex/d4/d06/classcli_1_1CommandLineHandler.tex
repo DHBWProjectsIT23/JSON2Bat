@@ -1,0 +1,232 @@
+\doxysection{cli\+::Command\+Line\+Handler Class Reference}
+\hypertarget{classcli_1_1CommandLineHandler}{}\label{classcli_1_1CommandLineHandler}\index{cli::CommandLineHandler@{cli::CommandLineHandler}}
+
+
+Responsible for the Command Line Interface.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Line\+Handler.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2}{Command\+Line\+Handler}} ()=delete
+\begin{DoxyCompactList}\small\item\em The Constructor of the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}{\texorpdfstring{$\sim$}{\string~}\+Command\+Line\+Handler}} ()=delete
+\begin{DoxyCompactList}\small\item\em The Destructor of the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{print\+Help}} ()
+\begin{DoxyCompactList}\small\item\em Prints the help message. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{print\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Prints the version message. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{print\+Credits}} ()
+\begin{DoxyCompactList}\small\item\em Prints the credits message. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3}{parse\+Arguments}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Parses the Command Line Arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for the Command Line Interface. 
+
+This class is responsible for parsing the command line arguments, printing Help/\+Version/\+Credits messages and returning inputted files.
+
+\begin{DoxyAuthor}{Author}
+Simon Blum 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/04-\/18 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1.\+5 
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{structoptions}{options} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{CommandLineHandler_8hpp_source}{Command\+Line\+Handler.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2}\label{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2} 
+\index{cli::CommandLineHandler@{cli::CommandLineHandler}!CommandLineHandler@{CommandLineHandler}}
+\index{CommandLineHandler@{CommandLineHandler}!cli::CommandLineHandler@{cli::CommandLineHandler}}
+\doxysubsubsection{\texorpdfstring{CommandLineHandler()}{CommandLineHandler()}}
+{\footnotesize\ttfamily cli\+::\+Command\+Line\+Handler\+::\+Command\+Line\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The Constructor of the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class. 
+
+\begin{DoxyNote}{Note}
+As all functions are static it should not be used and as such is private. 
+\end{DoxyNote}
+\Hypertarget{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}\label{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce} 
+\index{cli::CommandLineHandler@{cli::CommandLineHandler}!````~CommandLineHandler@{\texorpdfstring{$\sim$}{\string~}CommandLineHandler}}
+\index{````~CommandLineHandler@{\texorpdfstring{$\sim$}{\string~}CommandLineHandler}!cli::CommandLineHandler@{cli::CommandLineHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CommandLineHandler()}{\string~CommandLineHandler()}}
+{\footnotesize\ttfamily cli\+::\+Command\+Line\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+Command\+Line\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The Destructor of the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class. 
+
+\begin{DoxyNote}{Note}
+As all functions are static it should not be used and as such is private. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3}\label{classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3} 
+\index{cli::CommandLineHandler@{cli::CommandLineHandler}!parseArguments@{parseArguments}}
+\index{parseArguments@{parseArguments}!cli::CommandLineHandler@{cli::CommandLineHandler}}
+\doxysubsubsection{\texorpdfstring{parseArguments()}{parseArguments()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ cli\+::\+Command\+Line\+Handler\+::parse\+Arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the Command Line Arguments. 
+
+This function uses the "{}getopt.\+h"{} library to parse all options given and then returns all files which are given as arguments. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of arguments given \\
+\hline
+{\em argv} & The arguments given \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::logic\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Returns a vector of strings containing all filenames. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00050}{print\+Credits()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00023}{print\+Help()}}, and \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00044}{print\+Version()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}\label{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470} 
+\index{cli::CommandLineHandler@{cli::CommandLineHandler}!printCredits@{printCredits}}
+\index{printCredits@{printCredits}!cli::CommandLineHandler@{cli::CommandLineHandler}}
+\doxysubsubsection{\texorpdfstring{printCredits()}{printCredits()}}
+{\footnotesize\ttfamily void cli\+::\+Command\+Line\+Handler\+::print\+Credits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the credits message. 
+
+Prints the credits message when called.
+
+\begin{DoxyNote}{Note}
+This function ends the application. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{config_8hpp_source_l00027}{AUTHORS}}, \mbox{\hyperlink{config_8hpp_source_l00025}{DESCRIPTION}}, \mbox{\hyperlink{config_8hpp_source_l00028}{HOMEPAGE\+\_\+\+URL}}, \mbox{\hyperlink{config_8hpp_source_l00022}{MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00023}{MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00024}{PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00026}{PROJECT\+\_\+\+NAME}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d06/classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}\label{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960} 
+\index{cli::CommandLineHandler@{cli::CommandLineHandler}!printHelp@{printHelp}}
+\index{printHelp@{printHelp}!cli::CommandLineHandler@{cli::CommandLineHandler}}
+\doxysubsubsection{\texorpdfstring{printHelp()}{printHelp()}}
+{\footnotesize\ttfamily void cli\+::\+Command\+Line\+Handler\+::print\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the help message. 
+
+Prints the help message when called.
+
+\begin{DoxyNote}{Note}
+This function ends the application. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{config_8hpp_source_l00021}{EXECUTABLE\+\_\+\+NAME}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d06/classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}\label{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061} 
+\index{cli::CommandLineHandler@{cli::CommandLineHandler}!printVersion@{printVersion}}
+\index{printVersion@{printVersion}!cli::CommandLineHandler@{cli::CommandLineHandler}}
+\doxysubsubsection{\texorpdfstring{printVersion()}{printVersion()}}
+{\footnotesize\ttfamily void cli\+::\+Command\+Line\+Handler\+::print\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the version message. 
+
+Prints the version message when called.
+
+\begin{DoxyNote}{Note}
+This function ends the application. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{config_8hpp_source_l00022}{MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00023}{MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00024}{PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00026}{PROJECT\+\_\+\+NAME}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d06/classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{CommandLineHandler_8hpp}{Command\+Line\+Handler.\+hpp}}\item 
+src/sources/\mbox{\hyperlink{CommandLineHandler_8cpp}{Command\+Line\+Handler.\+cpp}}\end{DoxyCompactItemize}

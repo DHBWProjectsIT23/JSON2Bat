@@ -1,0 +1,143 @@
+.TH "src/main.cpp" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.cpp \- Contains the main function\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <LoggingWrapper\&.hpp>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <jsoncpp/json\&.h>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'BatchCreator\&.hpp'\fP
+.br
+\fC#include 'CommandLineHandler\&.hpp'\fP
+.br
+\fC#include 'Exceptions\&.hpp'\fP
+.br
+\fC#include 'FileData\&.hpp'\fP
+.br
+\fC#include 'JsonHandler\&.hpp'\fP
+.br
+\fC#include 'Utils\&.hpp'\fP
+.br
+\fC#include 'config\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "INITIALIZE_EASYLOGGINGPP std::vector< std::string > \fBvalidateFiles\fP (std::vector< std::string > files)"
+.br
+.ti -1c
+.RI "void \fBparseFiles\fP (std::vector< std::string > files)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "Main function of the program\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the main function\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+2024-04-18 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+0\&.1\&.5
+.RE
+.PP
+The main function is responsible for connection all parts of the programm\&. It calls all relevant classes and finishes when everything is done\&.
+.PP
+\fBCopyright\fP
+.RS 4
+See LICENSE file 
+.RE
+.PP
+
+.PP
+Definition in file \fBmain\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Main function of the program\&. The main function is responsible for connection all parts of the programm\&. It calls all relevant classes and finishes when everything is done\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP The number of arguments given 
+.br
+\fIargv\fP Th command line arguments given
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns 0 on success, 1 on failure
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Documentation 
+.PP
+Refactoring 
+.RE
+.PP
+
+.PP
+Definition at line \fB60\fP of file \fBmain\&.cpp\fP\&.
+.PP
+References \fBLOG_CONFIG\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBparseFiles()\fP, \fBcli::CommandLineHandler::printHelp()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
+.SS "void parseFiles (std::vector< std::string > files)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfiles\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB139\fP of file \fBmain\&.cpp\fP\&.
+.PP
+References \fButilities::Utils::askToContinue()\fP, \fBparsing::JsonHandler::getFileData()\fP, and \fBexceptions::CustomException::what()\fP\&.
+.SS "std::vector< std::string > validateFiles (std::vector< std::string > files)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfiles\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line \fB101\fP of file \fBmain\&.cpp\fP\&.
+.PP
+References \fButilities::Utils::askToContinue()\fP, \fButilities::Utils::checkFileEnding()\fP, and \fButilities::Utils::checkIfFileExists()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

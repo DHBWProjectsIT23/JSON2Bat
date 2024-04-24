@@ -1,0 +1,161 @@
+\doxysection{utilities\+::Utils Class Reference}
+\hypertarget{classutilities_1_1Utils}{}\label{classutilities_1_1Utils}\index{utilities::Utils@{utilities::Utils}}
+
+
+Responsible for utility function.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0}{setup\+Easy\+Logging}} (const std\+::string \&config\+File)
+\begin{DoxyCompactList}\small\item\em Set up easylogging. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4}{check\+If\+File\+Exists}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Check if a file exists. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c}{check\+File\+Ending}} (const std\+::string\+\_\+view \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Checks if the file ending is "{}.\+json"{}. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{ask\+To\+Continue}} (const std\+::string \&prompt="{}Do you want to continue? (Y/N)\textbackslash{}n"{})
+\begin{DoxyCompactList}\small\item\em Asks if the user wants to continue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for utility function. 
+
+This class is responsible for handling miscellaneous utility functions which be used throughout the whole project. 
+
+Definition at line \mbox{\hyperlink{Utils_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{Utils_8hpp_source}{Utils.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}\label{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff} 
+\index{utilities::Utils@{utilities::Utils}!askToContinue@{askToContinue}}
+\index{askToContinue@{askToContinue}!utilities::Utils@{utilities::Utils}}
+\doxysubsubsection{\texorpdfstring{askToContinue()}{askToContinue()}}
+{\footnotesize\ttfamily bool utilities\+::\+Utils\+::ask\+To\+Continue (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prompt = {\ttfamily "{}Do~you~want~to~continue?~(Y/N)\textbackslash{}n"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Asks if the user wants to continue. 
+
+Asks the user if they want to continue and prompts them for a response. 
+\begin{DoxyParams}{Parameters}
+{\em prompt} & (Optional) A custom prompt to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the user wants to continue and false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Utils_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d9e/classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c}\label{classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c} 
+\index{utilities::Utils@{utilities::Utils}!checkFileEnding@{checkFileEnding}}
+\index{checkFileEnding@{checkFileEnding}!utilities::Utils@{utilities::Utils}}
+\doxysubsubsection{\texorpdfstring{checkFileEnding()}{checkFileEnding()}}
+{\footnotesize\ttfamily bool utilities\+::\+Utils\+::check\+File\+Ending (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if the file ending is "{}.\+json"{}. 
+
+This function checks if the given file ends with "{}.\+json"{}. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The file which should be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the file ends with "{}.\+json"{} and false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Utils_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d9e/classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4}\label{classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4} 
+\index{utilities::Utils@{utilities::Utils}!checkIfFileExists@{checkIfFileExists}}
+\index{checkIfFileExists@{checkIfFileExists}!utilities::Utils@{utilities::Utils}}
+\doxysubsubsection{\texorpdfstring{checkIfFileExists()}{checkIfFileExists()}}
+{\footnotesize\ttfamily bool utilities\+::\+Utils\+::check\+If\+File\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a file exists. 
+
+This function checks if a file exists by trying to open it using fstream. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The file which should be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the file exists and false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Utils_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d9e/classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0}\label{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0} 
+\index{utilities::Utils@{utilities::Utils}!setupEasyLogging@{setupEasyLogging}}
+\index{setupEasyLogging@{setupEasyLogging}!utilities::Utils@{utilities::Utils}}
+\doxysubsubsection{\texorpdfstring{setupEasyLogging()}{setupEasyLogging()}}
+{\footnotesize\ttfamily void utilities\+::\+Utils\+::setup\+Easy\+Logging (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set up easylogging. 
+
+This function sets up the easylogging library based on the given config file. 
+\begin{DoxyParams}{Parameters}
+{\em config\+File} & The config file which is used \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Utils_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{config_8hpp_source_l00028}{HOMEPAGE\+\_\+\+URL}}, \mbox{\hyperlink{config_8hpp_source_l00022}{MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00023}{MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00024}{PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00026}{PROJECT\+\_\+\+NAME}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d6/d9e/classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{Utils_8hpp}{Utils.\+hpp}}\item 
+src/sources/\mbox{\hyperlink{Utils_8cpp}{Utils.\+cpp}}\end{DoxyCompactItemize}

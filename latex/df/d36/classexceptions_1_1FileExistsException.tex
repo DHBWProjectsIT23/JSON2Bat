@@ -1,0 +1,122 @@
+\doxysection{exceptions\+::File\+Exists\+Exception Class Reference}
+\hypertarget{classexceptions_1_1FileExistsException}{}\label{classexceptions_1_1FileExistsException}\index{exceptions::FileExistsException@{exceptions::FileExistsException}}
+
+
+Exception for an already exisiting outputfile.  
+
+
+
+
+{\ttfamily \#include $<$Exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for exceptions\+::File\+Exists\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d5/d44/classexceptions_1_1FileExistsException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for exceptions\+::File\+Exists\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d7/d27/classexceptions_1_1FileExistsException__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexceptions_1_1FileExistsException_a94fcbf77841a9bb9f1a4f994ffdf241b}{File\+Exists\+Exception}} (const std\+::string \&\mbox{\hyperlink{classexceptions_1_1FileExistsException_a0a33c75f55880e611096cefd994f8d7d}{file}})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions\+::\+Custom\+Exception}}}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classexceptions_1_1FileExistsException_a0a33c75f55880e611096cefd994f8d7d}{file}}
+\item 
+std\+::string \mbox{\hyperlink{classexceptions_1_1FileExistsException_a2959257eeb0d89151679ba126ca48e91}{message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception for an already exisiting outputfile. 
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classexceptions_1_1FileExistsException_a94fcbf77841a9bb9f1a4f994ffdf241b}\label{classexceptions_1_1FileExistsException_a94fcbf77841a9bb9f1a4f994ffdf241b} 
+\index{exceptions::FileExistsException@{exceptions::FileExistsException}!FileExistsException@{FileExistsException}}
+\index{FileExistsException@{FileExistsException}!exceptions::FileExistsException@{exceptions::FileExistsException}}
+\doxysubsubsection{\texorpdfstring{FileExistsException()}{FileExistsException()}}
+{\footnotesize\ttfamily exceptions\+::\+File\+Exists\+Exception\+::\+File\+Exists\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\begin{DoxyNote}{Note}
+I planned to use std\+::format, however it seems that the required Compiler Version is not yet available in the stable Ubuntu Repo!
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00075}{75}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00071}{file}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00072}{message}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138}\label{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138} 
+\index{exceptions::FileExistsException@{exceptions::FileExistsException}!what@{what}}
+\index{what@{what}!exceptions::FileExistsException@{exceptions::FileExistsException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} exceptions\+::\+File\+Exists\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00087}{87}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00072}{message}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classexceptions_1_1FileExistsException_a0a33c75f55880e611096cefd994f8d7d}\label{classexceptions_1_1FileExistsException_a0a33c75f55880e611096cefd994f8d7d} 
+\index{exceptions::FileExistsException@{exceptions::FileExistsException}!file@{file}}
+\index{file@{file}!exceptions::FileExistsException@{exceptions::FileExistsException}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily const std\+::string exceptions\+::\+File\+Exists\+Exception\+::file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00071}{71}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+\Hypertarget{classexceptions_1_1FileExistsException_a2959257eeb0d89151679ba126ca48e91}\label{classexceptions_1_1FileExistsException_a2959257eeb0d89151679ba126ca48e91} 
+\index{exceptions::FileExistsException@{exceptions::FileExistsException}!message@{message}}
+\index{message@{message}!exceptions::FileExistsException@{exceptions::FileExistsException}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string exceptions\+::\+File\+Exists\+Exception\+::message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{Exceptions_8hpp}{Exceptions.\+hpp}}\end{DoxyCompactItemize}

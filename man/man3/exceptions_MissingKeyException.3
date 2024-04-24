@@ -1,0 +1,91 @@
+.TH "exceptions::MissingKeyException" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+exceptions::MissingKeyException \- Exception for missing keys within entries\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exceptions\&.hpp>\fP
+.PP
+Inherits \fBexceptions::CustomException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMissingKeyException\fP (const std::string &\fBkey\fP, const std::string &\fBtype\fP)"
+.br
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBexceptions::CustomException\fP
+.in +1c
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBmessage\fP"
+.br
+.ti -1c
+.RI "std::string \fBtype\fP"
+.br
+.ti -1c
+.RI "std::string \fBkey\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Exception for missing keys within entries\&. 
+
+This exception is thrown when a key (such as 'path' or 'command') is missing from an entry\&. It also prints the type and which key it is missing\&. 
+.PP
+Definition at line \fB184\fP of file \fBExceptions\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "exceptions::MissingKeyException::MissingKeyException (const std::string & key, const std::string & type)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+I planned to use std::format, however it seems that the required Compiler Version is not yet available in the stable Ubuntu Repo!
+.RE
+.PP
+
+.PP
+Definition at line \fB191\fP of file \fBExceptions\&.hpp\fP\&.
+.PP
+References \fBkey\fP, \fBmessage\fP, and \fBtype\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * exceptions::MissingKeyException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB203\fP of file \fBExceptions\&.hpp\fP\&.
+.PP
+References \fBmessage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string exceptions::MissingKeyException::key\fC [private]\fP"
+
+.PP
+Definition at line \fB188\fP of file \fBExceptions\&.hpp\fP\&.
+.SS "std::string exceptions::MissingKeyException::message\fC [private]\fP"
+
+.PP
+Definition at line \fB186\fP of file \fBExceptions\&.hpp\fP\&.
+.SS "std::string exceptions::MissingKeyException::type\fC [private]\fP"
+
+.PP
+Definition at line \fB187\fP of file \fBExceptions\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

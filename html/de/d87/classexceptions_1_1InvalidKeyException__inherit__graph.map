@@ -1,0 +1,7 @@
+<map id="exceptions::InvalidKeyException" name="exceptions::InvalidKeyException">
+<area shape="rect" id="Node000001" title="Exception for invalid keys." alt="" coords="5,153,211,178"/>
+<area shape="rect" id="Node000002" href="$dc/d56/classexceptions_1_1CustomException.html" title="Base class for all custom exceptions." alt="" coords="13,79,203,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,120,111,152,105,152,105,120"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="58,5,158,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,46,111,79,105,79,105,46"/>
+</map>

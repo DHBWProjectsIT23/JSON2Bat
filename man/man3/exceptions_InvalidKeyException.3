@@ -1,0 +1,79 @@
+.TH "exceptions::InvalidKeyException" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+exceptions::InvalidKeyException \- Exception for invalid keys\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exceptions\&.hpp>\fP
+.PP
+Inherits \fBexceptions::CustomException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInvalidKeyException\fP (const std::vector< std::tuple< int, std::string > > &keys)"
+.br
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBexceptions::CustomException\fP
+.in +1c
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBmessage\fP = 'Invalid key found!'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Exception for invalid keys\&. 
+
+This exception is thrown when a key is found within the json file, that is not part of the valid keys\&. It will also display the name and the line of the invalid key\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBparsing::KeyValidator::validKeys\fP 
+.PP
+\fBparsing::KeyValidator::validEntryKeys\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB130\fP of file \fBExceptions\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "exceptions::InvalidKeyException::InvalidKeyException (const std::vector< std::tuple< int, std::string > > & keys)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Definition at line \fB135\fP of file \fBExceptions\&.hpp\fP\&.
+.PP
+References \fBmessage\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * exceptions::InvalidKeyException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB142\fP of file \fBExceptions\&.hpp\fP\&.
+.PP
+References \fBmessage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string exceptions::InvalidKeyException::message = 'Invalid key found!'\fC [private]\fP"
+
+.PP
+Definition at line \fB132\fP of file \fBExceptions\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

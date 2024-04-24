@@ -1,0 +1,116 @@
+\doxysection{exceptions\+::Invalid\+Key\+Exception Class Reference}
+\hypertarget{classexceptions_1_1InvalidKeyException}{}\label{classexceptions_1_1InvalidKeyException}\index{exceptions::InvalidKeyException@{exceptions::InvalidKeyException}}
+
+
+Exception for invalid keys.  
+
+
+
+
+{\ttfamily \#include $<$Exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for exceptions\+::Invalid\+Key\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{de/d87/classexceptions_1_1InvalidKeyException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for exceptions\+::Invalid\+Key\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{de/dbc/classexceptions_1_1InvalidKeyException__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexceptions_1_1InvalidKeyException_adfe58947e71f8e725968d937b9a4c778}{Invalid\+Key\+Exception}} (const std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \&keys)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions\+::\+Custom\+Exception}}}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classexceptions_1_1InvalidKeyException_aee0400fbb877f848f29e6dd508fb69a3}{message}} = "{}Invalid key found!"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception for invalid keys. 
+
+This exception is thrown when a key is found within the json file, that is not part of the valid keys. It will also display the name and the line of the invalid key.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{classparsing_1_1KeyValidator_aa5bf3a807bf4d6d9361aa086a8ac7639}{parsing\+::\+Key\+Validator\+::valid\+Keys} 
+
+\doxylink{classparsing_1_1KeyValidator_a867e9d6358cb7ec685d81ac5f6346217}{parsing\+::\+Key\+Validator\+::valid\+Entry\+Keys} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00130}{130}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classexceptions_1_1InvalidKeyException_adfe58947e71f8e725968d937b9a4c778}\label{classexceptions_1_1InvalidKeyException_adfe58947e71f8e725968d937b9a4c778} 
+\index{exceptions::InvalidKeyException@{exceptions::InvalidKeyException}!InvalidKeyException@{InvalidKeyException}}
+\index{InvalidKeyException@{InvalidKeyException}!exceptions::InvalidKeyException@{exceptions::InvalidKeyException}}
+\doxysubsubsection{\texorpdfstring{InvalidKeyException()}{InvalidKeyException()}}
+{\footnotesize\ttfamily exceptions\+::\+Invalid\+Key\+Exception\+::\+Invalid\+Key\+Exception (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \&}]{keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00135}{135}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00132}{message}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7}\label{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7} 
+\index{exceptions::InvalidKeyException@{exceptions::InvalidKeyException}!what@{what}}
+\index{what@{what}!exceptions::InvalidKeyException@{exceptions::InvalidKeyException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} exceptions\+::\+Invalid\+Key\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00142}{142}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00132}{message}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classexceptions_1_1InvalidKeyException_aee0400fbb877f848f29e6dd508fb69a3}\label{classexceptions_1_1InvalidKeyException_aee0400fbb877f848f29e6dd508fb69a3} 
+\index{exceptions::InvalidKeyException@{exceptions::InvalidKeyException}!message@{message}}
+\index{message@{message}!exceptions::InvalidKeyException@{exceptions::InvalidKeyException}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string exceptions\+::\+Invalid\+Key\+Exception\+::message = "{}Invalid key found!"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00132}{132}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{Exceptions_8hpp}{Exceptions.\+hpp}}\end{DoxyCompactItemize}

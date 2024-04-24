@@ -1,0 +1,113 @@
+.TH "utilities::Utils" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+utilities::Utils \- Responsible for utility function\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Utils\&.hpp>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBsetupEasyLogging\fP (const std::string &configFile)"
+.br
+.RI "Set up easylogging\&. "
+.ti -1c
+.RI "static bool \fBcheckIfFileExists\fP (const std::string &fileName)"
+.br
+.RI "Check if a file exists\&. "
+.ti -1c
+.RI "static bool \fBcheckFileEnding\fP (const std::string_view &fileName)"
+.br
+.RI "Checks if the file ending is '\&.json'\&. "
+.ti -1c
+.RI "static bool \fBaskToContinue\fP (const std::string &prompt='Do you want to continue? (Y/N)\\n')"
+.br
+.RI "Asks if the user wants to continue\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Responsible for utility function\&. 
+
+This class is responsible for handling miscellaneous utility functions which be used throughout the whole project\&. 
+.PP
+Definition at line \fB39\fP of file \fBUtils\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool utilities::Utils::askToContinue (const std::string & prompt = \fC'Do you want to continue? (Y/N)\\n'\fP)\fC [static]\fP"
+
+.PP
+Asks if the user wants to continue\&. Asks the user if they want to continue and prompts them for a response\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprompt\fP (Optional) A custom prompt to be used\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the user wants to continue and false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB40\fP of file \fBUtils\&.cpp\fP\&.
+.SS "bool utilities::Utils::checkFileEnding (const std::string_view & fileName)\fC [static]\fP"
+
+.PP
+Checks if the file ending is '\&.json'\&. This function checks if the given file ends with '\&.json'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP The file which should be checked\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the file ends with '\&.json' and false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fBUtils\&.cpp\fP\&.
+.SS "bool utilities::Utils::checkIfFileExists (const std::string & fileName)\fC [static]\fP"
+
+.PP
+Check if a file exists\&. This function checks if a file exists by trying to open it using fstream\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP The file which should be checked\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the file exists and false otherwise 
+.RE
+.PP
+
+.PP
+Definition at line \fB32\fP of file \fBUtils\&.cpp\fP\&.
+.SS "void utilities::Utils::setupEasyLogging (const std::string & configFile)\fC [static]\fP"
+
+.PP
+Set up easylogging\&. This function sets up the easylogging library based on the given config file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconfigFile\fP The config file which is used 
+.RE
+.PP
+
+.PP
+Definition at line \fB24\fP of file \fBUtils\&.cpp\fP\&.
+.PP
+References \fBHOMEPAGE_URL\fP, \fBMAJOR_VERSION\fP, \fBMINOR_VERSION\fP, \fBPATCH_VERSION\fP, and \fBPROJECT_NAME\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

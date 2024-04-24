@@ -1,0 +1,185 @@
+.TH "BatchCreator" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BatchCreator \- Erstellt Batch Datei\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BatchCreator\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBatchCreator\fP (std::shared_ptr< \fBparsing::FileData\fP > \fBfileData\fP)"
+.br
+.RI "Initialisiert \fBBatchCreator\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcreateBatch\fP ()"
+.br
+.RI "Setzt batch Datei zusammen\&. "
+.ti -1c
+.RI "void \fBwriteStart\fP ()"
+.br
+.RI "Anfang der Batch Datei\&. "
+.ti -1c
+.RI "void \fBwriteHideShell\fP ()"
+.br
+.RI "Sichtbarkeit Konsole\&. "
+.ti -1c
+.RI "void \fBwriteCommands\fP ()"
+.br
+.RI "Befehle ausführen\&. "
+.ti -1c
+.RI "void \fBwriteEnvVariables\fP ()"
+.br
+.RI "Umgebungsvariablen setzten\&. "
+.ti -1c
+.RI "void \fBwritePathVariables\fP ()"
+.br
+.RI "Pfade setzten\&. "
+.ti -1c
+.RI "void \fBwriteApp\fP ()"
+.br
+.RI "Öffnet Anwednung falls gewünscht\&. "
+.ti -1c
+.RI "void \fBwriteEnd\fP ()"
+.br
+.RI "Ende der Batch Datei\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::ofstream \fBbatchFile\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBparsing::FileData\fP > \fBfileData\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Erstellt Batch Datei\&. 
+
+Wandelt Elemente aus JSON-Datei in Batch-Format um
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line \fB24\fP of file \fBBatchCreator\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BatchCreator::BatchCreator (std::shared_ptr< \fBparsing::FileData\fP > fileData)"
+
+.PP
+Initialisiert \fBBatchCreator\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBcreateBatch()\fP, and \fBfileData\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void BatchCreator::createBatch ()\fC [private]\fP"
+
+.PP
+Setzt batch Datei zusammen\&. Beinhaltet Aufrufe der einzelnen Komponenten der batch Datei 
+.PP
+Definition at line \fB22\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP, \fBfileData\fP, \fBwriteApp()\fP, \fBwriteCommands()\fP, \fBwriteEnd()\fP, \fBwriteEnvVariables()\fP, \fBwriteHideShell()\fP, \fBwritePathVariables()\fP, and \fBwriteStart()\fP\&.
+.SS "void BatchCreator::writeApp ()\fC [private]\fP"
+
+.PP
+Öffnet Anwednung falls gewünscht\&. Öffnet Anwedung, falls unter 'application' gegeben Wird unter dem Namen aus 'outputfile' gestartet 
+.PP
+Definition at line \fB81\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP, and \fBfileData\fP\&.
+.SS "void BatchCreator::writeCommands ()\fC [private]\fP"
+
+.PP
+Befehle ausführen\&. Führt Befehle aus: Zu finden unter 'EXE' als 'command' 
+.PP
+Definition at line \fB56\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP, and \fBfileData\fP\&.
+.SS "void BatchCreator::writeEnd ()\fC [private]\fP"
+
+.PP
+Ende der Batch Datei\&. Schreibt den teil der Batch Datei der immer gleich ist
+.IP "\(bu" 2
+setzt ECHO OFF 
+.PP
+
+.PP
+Definition at line \fB94\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP\&.
+.SS "void BatchCreator::writeEnvVariables ()\fC [private]\fP"
+
+.PP
+Umgebungsvariablen setzten\&. Setzt Umgebungsvariablen aus 'ENV' nach folgender Syntax: Eintrag unter 'key' = Eintrag unter 'value' 
+.PP
+Definition at line \fB64\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP, and \fBfileData\fP\&.
+.SS "void BatchCreator::writeHideShell ()\fC [private]\fP"
+
+.PP
+Sichtbarkeit Konsole\&. Zeigt bzw\&. versteckt Konsolenausgabe 
+.PP
+Definition at line \fB45\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP, and \fBfileData\fP\&.
+.SS "void BatchCreator::writePathVariables ()\fC [private]\fP"
+
+.PP
+Pfade setzten\&. Verknüpft die unter 'PATH' angegebenen Pfade mit dem Systempfad Setzt Pfad 
+.PP
+Definition at line \fB72\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP, and \fBfileData\fP\&.
+.SS "void BatchCreator::writeStart ()\fC [private]\fP"
+
+.PP
+Anfang der Batch Datei\&. Schreibt den Teil der Batch Datei der immer gleich ist\&.
+.IP "\(bu" 2
+setzt ECHO off
+.IP "\(bu" 2
+startet cmd\&.exe 
+.PP
+
+.PP
+Definition at line \fB40\fP of file \fBBatchCreator\&.cpp\fP\&.
+.PP
+References \fBbatchFile\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::ofstream BatchCreator::batchFile\fC [private]\fP"
+
+.PP
+Definition at line \fB39\fP of file \fBBatchCreator\&.hpp\fP\&.
+.SS "std::shared_ptr<\fBparsing::FileData\fP> BatchCreator::fileData\fC [private]\fP"
+
+.PP
+Definition at line \fB41\fP of file \fBBatchCreator\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

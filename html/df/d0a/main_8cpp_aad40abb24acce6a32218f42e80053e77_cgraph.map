@@ -1,0 +1,9 @@
+<map id="validateFiles" name="validateFiles">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,100,88"/>
+<area shape="rect" id="Node000002" href="$d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="148,5,336,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,60,147,41,174,33,176,38,148,46,92,65"/>
+<area shape="rect" id="Node000003" href="$d6/d9e/classutilities_1_1Utils.html#a1917c71b03a2a1bdf80a9ea6e544e86c" title="Checks if the file ending is &quot;.json&quot;." alt="" coords="163,55,321,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,73,147,73,147,78,100,78"/>
+<area shape="rect" id="Node000004" href="$d6/d9e/classutilities_1_1Utils.html#a54995db8d1b951ac391ee881ddff2dc4" title="Check if a file exists." alt="" coords="170,121,314,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="93,86,167,112,165,117,91,91"/>
+</map>

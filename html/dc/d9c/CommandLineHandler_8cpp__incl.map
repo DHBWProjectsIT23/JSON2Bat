@@ -1,0 +1,24 @@
+<map id="src/sources/CommandLineHandler.cpp" name="src/sources/CommandLineHandler.cpp">
+<area shape="rect" id="Node000001" title="Implementation for the Command Line Interface." alt="" coords="412,5,658,31"/>
+<area shape="rect" id="Node000002" href="$d2/d5f/CommandLineHandler_8hpp.html" title="Responsible for the Command Line Interface." alt="" coords="24,79,198,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,34,199,78,198,73,462,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="196,153,253,178"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="434,34,332,53,290,66,262,81,251,93,242,108,231,138,226,136,237,105,247,90,259,77,288,61,331,48,433,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="272,79,411,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="503,34,390,76,388,71,501,29"/>
+<area shape="rect" id="Node000007" href="$d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="435,79,515,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="527,33,497,69,493,65,523,30"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="538,79,655,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="547,29,578,65,574,69,543,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="679,79,738,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="565,29,666,70,664,75,563,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="762,79,823,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="579,29,748,76,747,81,578,34"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="847,79,924,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="599,29,832,76,831,81,598,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,73,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,107,64,143,60,140,97,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="96,153,150,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="116,104,121,137,116,138,110,105"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="132,103,194,142,191,146,129,107"/>
+</map>

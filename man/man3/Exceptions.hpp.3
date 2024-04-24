@@ -1,0 +1,97 @@
+.TH "src/include/Exceptions.hpp" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/include/Exceptions.hpp \- Contains all the custom exceptions used in the project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'LoggingWrapper\&.hpp'\fP
+.br
+\fC#include <string>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBexceptions::CustomException\fP"
+.br
+.RI "Base class for all custom exceptions\&. "
+.ti -1c
+.RI "class \fBexceptions::ParsingException\fP"
+.br
+.RI "Exception for syntax errors within the json file\&. "
+.ti -1c
+.RI "class \fBexceptions::FileExistsException\fP"
+.br
+.RI "Exception for an already exisiting outputfile\&. "
+.ti -1c
+.RI "class \fBexceptions::InvalidValueException\fP"
+.br
+.RI "Exception for an ivalid (usually empty) value field\&. "
+.ti -1c
+.RI "class \fBexceptions::InvalidKeyException\fP"
+.br
+.RI "Exception for invalid keys\&. "
+.ti -1c
+.RI "class \fBexceptions::InvalidTypeException\fP"
+.br
+.RI "Exception for invalid types\&. "
+.ti -1c
+.RI "class \fBexceptions::MissingKeyException\fP"
+.br
+.RI "Exception for missing keys within entries\&. "
+.ti -1c
+.RI "class \fBexceptions::MissingTypeException\fP"
+.br
+.RI "Exception for missing types of entries\&. "
+.ti -1c
+.RI "class \fBexceptions::UnreachableCodeException\fP"
+.br
+.RI "Exception for when the application reaches code it shouldn't reach\&. "
+.ti -1c
+.RI "class \fBexceptions::FailedToOpenFileException\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBexceptions\fP"
+.br
+.RI "Namespace used for customized exceptions\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains all the custom exceptions used in the project\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Simon Blum 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+23\&.04\&.2024 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+0\&.1\&.6 
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+See LICENSE file 
+.RE
+.PP
+
+.PP
+Definition in file \fBExceptions\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

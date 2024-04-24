@@ -1,0 +1,124 @@
+\doxysection{exceptions\+::Invalid\+Type\+Exception Class Reference}
+\hypertarget{classexceptions_1_1InvalidTypeException}{}\label{classexceptions_1_1InvalidTypeException}\index{exceptions::InvalidTypeException@{exceptions::InvalidTypeException}}
+
+
+Exception for invalid types.  
+
+
+
+
+{\ttfamily \#include $<$Exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for exceptions\+::Invalid\+Type\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d1/ddd/classexceptions_1_1InvalidTypeException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for exceptions\+::Invalid\+Type\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d0/d3f/classexceptions_1_1InvalidTypeException__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a3e98ad18bde51d272895d6b33bb19a5e}{Invalid\+Type\+Exception}} (const std\+::string \&\mbox{\hyperlink{classexceptions_1_1InvalidTypeException_afc6b917f989d6d60fdf9225a56951ab1}{type}}, int line)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions\+::\+Custom\+Exception}}}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classexceptions_1_1InvalidTypeException_afc6b917f989d6d60fdf9225a56951ab1}{type}}
+\item 
+std\+::string \mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1b800c57ec70982fdf45d4016b4aafdc}{message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception for invalid types. 
+
+This exception is thrown when the value of the "{}type"{} field within the entries is invalid (not "{}\+EXE"{}, "{}\+PATH"{}, "{}\+ENV"{}). It also prints the type and the line of the invalid type. 
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00155}{155}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classexceptions_1_1InvalidTypeException_a3e98ad18bde51d272895d6b33bb19a5e}\label{classexceptions_1_1InvalidTypeException_a3e98ad18bde51d272895d6b33bb19a5e} 
+\index{exceptions::InvalidTypeException@{exceptions::InvalidTypeException}!InvalidTypeException@{InvalidTypeException}}
+\index{InvalidTypeException@{InvalidTypeException}!exceptions::InvalidTypeException@{exceptions::InvalidTypeException}}
+\doxysubsubsection{\texorpdfstring{InvalidTypeException()}{InvalidTypeException()}}
+{\footnotesize\ttfamily exceptions\+::\+Invalid\+Type\+Exception\+::\+Invalid\+Type\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+I planned to use std\+::format, however it seems that the required Compiler Version is not yet available in the stable Ubuntu Repo!
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00161}{161}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00158}{message}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00157}{type}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7}\label{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7} 
+\index{exceptions::InvalidTypeException@{exceptions::InvalidTypeException}!what@{what}}
+\index{what@{what}!exceptions::InvalidTypeException@{exceptions::InvalidTypeException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} exceptions\+::\+Invalid\+Type\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00172}{172}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00158}{message}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classexceptions_1_1InvalidTypeException_a1b800c57ec70982fdf45d4016b4aafdc}\label{classexceptions_1_1InvalidTypeException_a1b800c57ec70982fdf45d4016b4aafdc} 
+\index{exceptions::InvalidTypeException@{exceptions::InvalidTypeException}!message@{message}}
+\index{message@{message}!exceptions::InvalidTypeException@{exceptions::InvalidTypeException}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string exceptions\+::\+Invalid\+Type\+Exception\+::message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00158}{158}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+\Hypertarget{classexceptions_1_1InvalidTypeException_afc6b917f989d6d60fdf9225a56951ab1}\label{classexceptions_1_1InvalidTypeException_afc6b917f989d6d60fdf9225a56951ab1} 
+\index{exceptions::InvalidTypeException@{exceptions::InvalidTypeException}!type@{type}}
+\index{type@{type}!exceptions::InvalidTypeException@{exceptions::InvalidTypeException}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily const std\+::string exceptions\+::\+Invalid\+Type\+Exception\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00157}{157}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{Exceptions_8hpp}{Exceptions.\+hpp}}\end{DoxyCompactItemize}

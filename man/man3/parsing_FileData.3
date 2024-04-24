@@ -1,0 +1,326 @@
+.TH "parsing::FileData" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+parsing::FileData \- This class contains all data from the json file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FileData\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetOutputFile\fP (std::string &newOutputfile)"
+.br
+.RI "Setter for this->outputfile\&. "
+.ti -1c
+.RI "void \fBsetHideShell\fP (bool newHideShell)"
+.br
+.RI "Setter for this->hideshell\&. "
+.ti -1c
+.RI "void \fBsetApplication\fP (const std::string &newApplication)"
+.br
+.RI "Setter for this->application\&. "
+.ti -1c
+.RI "void \fBaddCommand\fP (const std::string &command)"
+.br
+.RI "Adds a given command to this->commands\&. "
+.ti -1c
+.RI "void \fBaddEnvironmentVariable\fP (const std::string &name, const std::string &value)"
+.br
+.RI "Adds a given tuple to this->environmentVariables\&. "
+.ti -1c
+.RI "void \fBaddPathValue\fP (const std::string &pathValue)"
+.br
+.RI "Add's a given value to this->pathValues\&. "
+.ti -1c
+.RI "const std::string & \fBgetOutputFile\fP () const"
+.br
+.RI "Getter for this->outputfile\&. "
+.ti -1c
+.RI "bool \fBgetHideShell\fP () const"
+.br
+.RI "Getter for this->hideShell\&. "
+.ti -1c
+.RI "const std::optional< std::string > & \fBgetApplication\fP () const"
+.br
+.RI "Getter for this->application\&. "
+.ti -1c
+.RI "const std::vector< std::string > & \fBgetCommands\fP () const"
+.br
+.RI "Getter for this->commands\&. "
+.ti -1c
+.RI "const std::vector< std::tuple< std::string, std::string > > & \fBgetEnvironmentVariables\fP () const"
+.br
+.RI "Getter for this->environmentVariables\&. "
+.ti -1c
+.RI "const std::vector< std::string > & \fBgetPathValues\fP () const"
+.br
+.RI "Getter for this->pathValues\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBoutputfile\fP"
+.br
+.ti -1c
+.RI "bool \fBhideShell\fP"
+.br
+.ti -1c
+.RI "std::optional< std::string > \fBapplication\fP"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBcommands\fP"
+.br
+.ti -1c
+.RI "std::vector< std::tuple< std::string, std::string > > \fBenvironmentVariables\fP"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBpathValues\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class contains all data from the json file\&. 
+
+The data from the json file is parsed by the \fBJsonHandler\fP and then assigned to the attributes of an instance of this class\&. This class also handles a part of the error handling\&. 
+.PP
+Definition at line \fB30\fP of file \fBFileData\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void parsing::FileData::addCommand (const std::string & command)"
+
+.PP
+Adds a given command to this->commands\&. Makes sure, that the given command value is not empty and then add's it to the commands attribute\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The command to be added
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::InvalidValueException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB55\fP of file \fBFileData\&.cpp\fP\&.
+.PP
+References \fBcommands\fP\&.
+.SS "void parsing::FileData::addEnvironmentVariable (const std::string & name, const std::string & value)"
+
+.PP
+Adds a given tuple to this->environmentVariables\&. Makes sure that neither the key nor the value is empty and then adds a tuple with both values to the environmentVariables attribute
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the env variable 
+.br
+\fIvalue\fP The value of the env variable
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::InvalidValueException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB66\fP of file \fBFileData\&.cpp\fP\&.
+.PP
+References \fBenvironmentVariables\fP\&.
+.SS "void parsing::FileData::addPathValue (const std::string & pathValue)"
+
+.PP
+Add's a given value to this->pathValues\&. Makes sure that the given value is not empty and then assigns it to the given pathValues attribute
+.PP
+\fBParameters\fP
+.RS 4
+\fIpathValue\fP The value to be added
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::InvalidValueException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB83\fP of file \fBFileData\&.cpp\fP\&.
+.PP
+References \fBpathValues\fP\&.
+.SS "const std::optional< std::string > & parsing::FileData::getApplication () const\fC [inline]\fP"
+
+.PP
+Getter for this->application\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The assigned application 
+.RE
+.PP
+
+.PP
+Definition at line \fB120\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBapplication\fP\&.
+.SS "const std::vector< std::string > & parsing::FileData::getCommands () const\fC [inline]\fP"
+
+.PP
+Getter for this->commands\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The vector of assigned commands 
+.RE
+.PP
+
+.PP
+Definition at line \fB128\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBcommands\fP\&.
+.SS "const std::vector< std::tuple< std::string, std::string > > & parsing::FileData::getEnvironmentVariables () const\fC [inline]\fP"
+
+.PP
+Getter for this->environmentVariables\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The vector of assigned env variables 
+.RE
+.PP
+
+.PP
+Definition at line \fB137\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBenvironmentVariables\fP\&.
+.SS "bool parsing::FileData::getHideShell () const\fC [inline]\fP"
+
+.PP
+Getter for this->hideShell\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The assigned value for hideshell 
+.RE
+.PP
+
+.PP
+Definition at line \fB112\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBhideShell\fP\&.
+.SS "const std::string & parsing::FileData::getOutputFile () const\fC [inline]\fP"
+
+.PP
+Getter for this->outputfile\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The assigned outputfile 
+.RE
+.PP
+
+.PP
+Definition at line \fB104\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBoutputfile\fP\&.
+.SS "const std::vector< std::string > & parsing::FileData::getPathValues () const\fC [inline]\fP"
+
+.PP
+Getter for this->pathValues\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The vector of assigned pathValues 
+.RE
+.PP
+
+.PP
+Definition at line \fB145\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBpathValues\fP\&.
+.SS "void parsing::FileData::setApplication (const std::string & newApplication)"
+
+.PP
+Setter for this->application\&. Set's the application attribute\&. Return's if the given string is empty\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fInewApplication\fP THe application to be set 
+.RE
+.PP
+
+.PP
+Definition at line \fB44\fP of file \fBFileData\&.cpp\fP\&.
+.PP
+References \fBapplication\fP\&.
+.SS "void parsing::FileData::setHideShell (bool newHideShell)\fC [inline]\fP"
+
+.PP
+Setter for this->hideshell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewHideShell\fP The hideshell value to be set 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBFileData\&.hpp\fP\&.
+.PP
+References \fBhideShell\fP\&.
+.SS "void parsing::FileData::setOutputFile (std::string & newOutputfile)"
+
+.PP
+Setter for this->outputfile\&. Checks that neither the given string is empty, nor that the outputfile is already set and then assigns the newOutputfile to the instance\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fInewOutputfile\fP The outputfile to be set
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::InvalidValueException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBFileData\&.cpp\fP\&.
+.PP
+References \fBoutputfile\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::optional<std::string> parsing::FileData::application\fC [private]\fP"
+
+.PP
+Definition at line \fB152\fP of file \fBFileData\&.hpp\fP\&.
+.SS "std::vector<std::string> parsing::FileData::commands\fC [private]\fP"
+
+.PP
+Definition at line \fB153\fP of file \fBFileData\&.hpp\fP\&.
+.SS "std::vector<std::tuple<std::string, std::string> > parsing::FileData::environmentVariables\fC [private]\fP"
+
+.PP
+Definition at line \fB154\fP of file \fBFileData\&.hpp\fP\&.
+.SS "bool parsing::FileData::hideShell\fC [private]\fP"
+
+.PP
+Definition at line \fB151\fP of file \fBFileData\&.hpp\fP\&.
+.SS "std::string parsing::FileData::outputfile\fC [private]\fP"
+
+.PP
+Definition at line \fB150\fP of file \fBFileData\&.hpp\fP\&.
+.SS "std::vector<std::string> parsing::FileData::pathValues\fC [private]\fP"
+
+.PP
+Definition at line \fB155\fP of file \fBFileData\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

@@ -1,0 +1,511 @@
+\doxysection{parsing\+::Json\+Handler Class Reference}
+\hypertarget{classparsing_1_1JsonHandler}{}\label{classparsing_1_1JsonHandler}\index{parsing::JsonHandler@{parsing::JsonHandler}}
+
+
+This file reads all data from the json file.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Handler.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparsing_1_1JsonHandler_aebaf4ed7a0dcca8082a648e2ef17f367}{Json\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Constructor without arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparsing_1_1JsonHandler_a678af0a2e0668f9e47b14dfdb4d954e4}{Json\+Handler}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{File\+Data}} $>$ \mbox{\hyperlink{classparsing_1_1JsonHandler_a1556262084d8fc4f75c25ec8344180b7}{get\+File\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the data from the json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_a5a3ad5a6d39261a60bfd1f1ee827a378}{assign\+Output\+File}} () const
+\begin{DoxyCompactList}\small\item\em Assigns the outputfile to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_a525768e8f0f99da0aec60bc2ebfabdf6}{assign\+Hide\+Shell}} () const
+\begin{DoxyCompactList}\small\item\em Assigns the hideshell value to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_a6c3c29dc32baa0d2391bab88f48113ab}{assign\+Application}} () const
+\begin{DoxyCompactList}\small\item\em Assigns application to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_ac4477431b9d1cf1d19eaa1b60066c9f7}{assign\+Entries}} () const
+\begin{DoxyCompactList}\small\item\em Assigns entries to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_a07f65d3a7c307cc78416fa5eaaf32301}{assign\+Command}} (const Json\+::\+Value \&entry) const
+\begin{DoxyCompactList}\small\item\em Assigns an command to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_a12eaca263d111378d01254a5ec54a011}{assign\+Environment\+Variable}} (const Json\+::\+Value \&entry) const
+\begin{DoxyCompactList}\small\item\em Assigns an environment\+Variable to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparsing_1_1JsonHandler_af760051928630de9de67760cfd70fa4e}{assign\+Path\+Value}} (const Json\+::\+Value \&entry) const
+\begin{DoxyCompactList}\small\item\em Assigns a path value to this-\/\texorpdfstring{$>$}{>}data. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{File\+Data}} $>$ \mbox{\hyperlink{classparsing_1_1JsonHandler_a9e765c81ea918e5eb84811ac929d8f24}{create\+File\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Creates the \doxylink{classparsing_1_1FileData}{File\+Data} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ Json\+::\+Value $>$ \mbox{\hyperlink{classparsing_1_1JsonHandler_a9a56ef8d2c4f19e714e61b5bf33cf5bd}{parse\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Parses the given json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ Json\+::\+Value $>$ \mbox{\hyperlink{classparsing_1_1JsonHandler_a457c12a64b46f26efbdef10d808870d0}{root}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{File\+Data}} $>$ \mbox{\hyperlink{classparsing_1_1JsonHandler_a2164f1fd6acacc76f06f766bd455934e}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file reads all data from the json file. 
+
+This file uses the jsoncpp library to parse all data from a json file, validate it to some degree.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://github.com/open-source-parsers/jsoncpp}{\texttt{ https\+://github.\+com/open-\/source-\/parsers/jsoncpp}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classparsing_1_1JsonHandler_aebaf4ed7a0dcca8082a648e2ef17f367}\label{classparsing_1_1JsonHandler_aebaf4ed7a0dcca8082a648e2ef17f367} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!JsonHandler@{JsonHandler}}
+\index{JsonHandler@{JsonHandler}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{JsonHandler()}{JsonHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily parsing\+::\+Json\+Handler\+::\+Json\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor without arguments. 
+
+This constructor can be used to initialise an instance in an outer scope and then assign it values from an inner scope. 
+
+Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
+
+\Hypertarget{classparsing_1_1JsonHandler_a678af0a2e0668f9e47b14dfdb4d954e4}\label{classparsing_1_1JsonHandler_a678af0a2e0668f9e47b14dfdb4d954e4} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!JsonHandler@{JsonHandler}}
+\index{JsonHandler@{JsonHandler}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{JsonHandler()}{JsonHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily parsing\+::\+Json\+Handler\+::\+Json\+Handler (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor. 
+
+This constructor calls this-\/\texorpdfstring{$>$}{>}\doxylink{classparsing_1_1JsonHandler_a9a56ef8d2c4f19e714e61b5bf33cf5bd}{parse\+File()} when called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the json file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00025}{parse\+File()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00152}{root}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a678af0a2e0668f9e47b14dfdb4d954e4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classparsing_1_1JsonHandler_a6c3c29dc32baa0d2391bab88f48113ab}\label{classparsing_1_1JsonHandler_a6c3c29dc32baa0d2391bab88f48113ab} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignApplication@{assignApplication}}
+\index{assignApplication@{assignApplication}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignApplication()}{assignApplication()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns application to this-\/\texorpdfstring{$>$}{>}data. 
+
+Retrieves the value of the application key from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and defaults to an empty string. 
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00152}{root}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a6c3c29dc32baa0d2391bab88f48113ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a07f65d3a7c307cc78416fa5eaaf32301}\label{classparsing_1_1JsonHandler_a07f65d3a7c307cc78416fa5eaaf32301} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignCommand@{assignCommand}}
+\index{assignCommand@{assignCommand}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignCommand()}{assignCommand()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Command (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{entry }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns an command to this-\/\texorpdfstring{$>$}{>}data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The entry with the command \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a07f65d3a7c307cc78416fa5eaaf32301_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_ac4477431b9d1cf1d19eaa1b60066c9f7}\label{classparsing_1_1JsonHandler_ac4477431b9d1cf1d19eaa1b60066c9f7} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignEntries@{assignEntries}}
+\index{assignEntries@{assignEntries}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignEntries()}{assignEntries()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Entries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns entries to this-\/\texorpdfstring{$>$}{>}data. 
+
+Goes through each of the entries from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and calls the relevant method depending on it\textquotesingle{}s type. All "{}type"{} keys should be valid by this point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & Json\+::\+Value containing an array with entries\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1UnreachableCodeException}{exceptions\+::\+Unreachable\+Code\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00111}{assign\+Command()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00117}{assign\+Environment\+Variable()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00124}{assign\+Path\+Value()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00152}{root}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_ac4477431b9d1cf1d19eaa1b60066c9f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_ac4477431b9d1cf1d19eaa1b60066c9f7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a12eaca263d111378d01254a5ec54a011}\label{classparsing_1_1JsonHandler_a12eaca263d111378d01254a5ec54a011} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignEnvironmentVariable@{assignEnvironmentVariable}}
+\index{assignEnvironmentVariable@{assignEnvironmentVariable}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignEnvironmentVariable()}{assignEnvironmentVariable()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Environment\+Variable (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{entry }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns an environment\+Variable to this-\/\texorpdfstring{$>$}{>}data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The entry with the environment\+Variable \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a12eaca263d111378d01254a5ec54a011_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a525768e8f0f99da0aec60bc2ebfabdf6}\label{classparsing_1_1JsonHandler_a525768e8f0f99da0aec60bc2ebfabdf6} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignHideShell@{assignHideShell}}
+\index{assignHideShell@{assignHideShell}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignHideShell()}{assignHideShell()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Hide\+Shell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns the hideshell value to this-\/\texorpdfstring{$>$}{>}data. 
+
+Retrieves the value of the hideshell key from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and defaults to negative. 
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00152}{root}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a525768e8f0f99da0aec60bc2ebfabdf6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a5a3ad5a6d39261a60bfd1f1ee827a378}\label{classparsing_1_1JsonHandler_a5a3ad5a6d39261a60bfd1f1ee827a378} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignOutputFile@{assignOutputFile}}
+\index{assignOutputFile@{assignOutputFile}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignOutputFile()}{assignOutputFile()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Output\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns the outputfile to this-\/\texorpdfstring{$>$}{>}data. 
+
+Retrieves the outputfile from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and makes sure, that the file doesn\textquotesingle{}t already exist.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1FileExistsException}{exceptions\+::\+File\+Exists\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Utils_8cpp_source_l00032}{utilities\+::\+Utils\+::check\+If\+File\+Exists()}}, \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00152}{root}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{d5/da0/classparsing_1_1JsonHandler_a5a3ad5a6d39261a60bfd1f1ee827a378_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a5a3ad5a6d39261a60bfd1f1ee827a378_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_af760051928630de9de67760cfd70fa4e}\label{classparsing_1_1JsonHandler_af760051928630de9de67760cfd70fa4e} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!assignPathValue@{assignPathValue}}
+\index{assignPathValue@{assignPathValue}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{assignPathValue()}{assignPathValue()}}
+{\footnotesize\ttfamily void parsing\+::\+Json\+Handler\+::assign\+Path\+Value (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{entry }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assigns a path value to this-\/\texorpdfstring{$>$}{>}data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The entry with the path value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00124}{124}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_af760051928630de9de67760cfd70fa4e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a9e765c81ea918e5eb84811ac929d8f24}\label{classparsing_1_1JsonHandler_a9e765c81ea918e5eb84811ac929d8f24} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!createFileData@{createFileData}}
+\index{createFileData@{createFileData}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{createFileData()}{createFileData()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{File\+Data}} $>$ parsing\+::\+Json\+Handler\+::create\+File\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates the \doxylink{classparsing_1_1FileData}{File\+Data} instance. 
+
+Instantiates the \doxylink{classparsing_1_1FileData}{File\+Data} instance, calls all nessecary functions and returns a shared pointer to it.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created instance of \doxylink{classparsing_1_1FileData}{File\+Data} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00081}{assign\+Application()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00087}{assign\+Entries()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00074}{assign\+Hide\+Shell()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00063}{assign\+Output\+File()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{data}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a9e765c81ea918e5eb84811ac929d8f24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a9e765c81ea918e5eb84811ac929d8f24_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a1556262084d8fc4f75c25ec8344180b7}\label{classparsing_1_1JsonHandler_a1556262084d8fc4f75c25ec8344180b7} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!getFileData@{getFileData}}
+\index{getFileData@{getFileData}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{getFileData()}{getFileData()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{File\+Data}} $>$ parsing\+::\+Json\+Handler\+::get\+File\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the data from the json file. 
+
+This method calls this-\/\texorpdfstring{$>$}{>}\doxylink{classparsing_1_1JsonHandler_a9e765c81ea918e5eb84811ac929d8f24}{create\+File\+Data()} needed to retrieve the values from the Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and then returns a shared pointer to the created \doxylink{classparsing_1_1FileData}{File\+Data} object.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{classparsing_1_1FileData}{File\+Data} Object with the parsed data from json 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00053}{create\+File\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a1556262084d8fc4f75c25ec8344180b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da0/classparsing_1_1JsonHandler_a1556262084d8fc4f75c25ec8344180b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classparsing_1_1JsonHandler_a9a56ef8d2c4f19e714e61b5bf33cf5bd}\label{classparsing_1_1JsonHandler_a9a56ef8d2c4f19e714e61b5bf33cf5bd} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!parseFile@{parseFile}}
+\index{parseFile@{parseFile}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ Json\+::\+Value $>$ parsing\+::\+Json\+Handler\+::parse\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Parses the given json file. 
+
+This method first creates a new Json\+::\+Value instance and then tries to parse the given json file. It then validates the keys of the instance using the \doxylink{classparsing_1_1KeyValidator}{Key\+Validator} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file wich should be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the Json\+::\+Value instance
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{classparsing_1_1KeyValidator_a8a3ffe788064f6b32be35870aeeb792c}{Key\+Validator\+::validate\+Keys()}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1ParsingException}{exceptions\+::\+Parsing\+Exception}} & \\
+\hline
+{\em \doxylink{classexceptions_1_1InvalidKeyException}{exceptions\+::\+Invalid\+Key\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00019}{parsing\+::\+Key\+Validator\+::get\+Instance()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{d5/da0/classparsing_1_1JsonHandler_a9a56ef8d2c4f19e714e61b5bf33cf5bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{d5/da0/classparsing_1_1JsonHandler_a9a56ef8d2c4f19e714e61b5bf33cf5bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classparsing_1_1JsonHandler_a2164f1fd6acacc76f06f766bd455934e}\label{classparsing_1_1JsonHandler_a2164f1fd6acacc76f06f766bd455934e} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!data@{data}}
+\index{data@{data}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparsing_1_1FileData}{File\+Data}}$>$ parsing\+::\+Json\+Handler\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00153}{153}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
+
+\Hypertarget{classparsing_1_1JsonHandler_a457c12a64b46f26efbdef10d808870d0}\label{classparsing_1_1JsonHandler_a457c12a64b46f26efbdef10d808870d0} 
+\index{parsing::JsonHandler@{parsing::JsonHandler}!root@{root}}
+\index{root@{root}!parsing::JsonHandler@{parsing::JsonHandler}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Json\+::\+Value$>$ parsing\+::\+Json\+Handler\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00152}{152}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{JsonHandler_8hpp}{Json\+Handler.\+hpp}}\item 
+src/sources/\mbox{\hyperlink{JsonHandler_8cpp}{Json\+Handler.\+cpp}}\end{DoxyCompactItemize}

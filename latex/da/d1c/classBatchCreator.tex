@@ -1,0 +1,345 @@
+\doxysection{Batch\+Creator Class Reference}
+\hypertarget{classBatchCreator}{}\label{classBatchCreator}\index{BatchCreator@{BatchCreator}}
+
+
+Erstellt Batch Datei.  
+
+
+
+
+{\ttfamily \#include $<$Batch\+Creator.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBatchCreator_ad2fe34f5fef34f26763558bc9c9949a3}{Batch\+Creator}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{parsing\+::\+File\+Data}} $>$ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{file\+Data}})
+\begin{DoxyCompactList}\small\item\em Initialisiert \doxylink{classBatchCreator}{Batch\+Creator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBatchCreator_a2225babf16a473ba6722238c19d785ae}{create\+Batch}} ()
+\begin{DoxyCompactList}\small\item\em Setzt batch Datei zusammen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_a569f0d36a66f1546b78d681feb173fb3}{write\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Anfang der Batch Datei. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_a8f55e4cb7fddb3e07f09265b176ee9f8}{write\+Hide\+Shell}} ()
+\begin{DoxyCompactList}\small\item\em Sichtbarkeit Konsole. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_a0542bada30314da34e0fe17870c6cb7d}{write\+Commands}} ()
+\begin{DoxyCompactList}\small\item\em Befehle ausführen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_a8562e9f76baf6700787772c209b1e1d5}{write\+Env\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Umgebungsvariablen setzten. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_a8a20d3481a594eca8919ea3f24270bfe}{write\+Path\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Pfade setzten. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_ab3f5a63b795d0ce553b618e5b317c7bc}{write\+App}} ()
+\begin{DoxyCompactList}\small\item\em Öffnet Anwednung falls gewünscht. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatchCreator_a85b2442f045f1c91f09d776c5c7db8f2}{write\+End}} ()
+\begin{DoxyCompactList}\small\item\em Ende der Batch Datei. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ofstream \mbox{\hyperlink{classBatchCreator_a98e00674d0c75c2cab313832a0e1d5fa}{batch\+File}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{parsing\+::\+File\+Data}} $>$ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{file\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Erstellt Batch Datei. 
+
+Wandelt Elemente aus JSON-\/\+Datei in Batch-\/\+Format um
+
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBatchCreator_ad2fe34f5fef34f26763558bc9c9949a3}\label{classBatchCreator_ad2fe34f5fef34f26763558bc9c9949a3} 
+\index{BatchCreator@{BatchCreator}!BatchCreator@{BatchCreator}}
+\index{BatchCreator@{BatchCreator}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{BatchCreator()}{BatchCreator()}}
+{\footnotesize\ttfamily Batch\+Creator\+::\+Batch\+Creator (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{parsing\+::\+File\+Data}} $>$}]{file\+Data }\end{DoxyParamCaption})}
+
+
+
+Initialisiert \doxylink{classBatchCreator}{Batch\+Creator}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8cpp_source_l00022}{create\+Batch()}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_ad2fe34f5fef34f26763558bc9c9949a3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBatchCreator_a2225babf16a473ba6722238c19d785ae}\label{classBatchCreator_a2225babf16a473ba6722238c19d785ae} 
+\index{BatchCreator@{BatchCreator}!createBatch@{createBatch}}
+\index{createBatch@{createBatch}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{createBatch()}{createBatch()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::create\+Batch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Setzt batch Datei zusammen. 
+
+Beinhaltet Aufrufe der einzelnen Komponenten der batch Datei 
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00081}{write\+App()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00056}{write\+Commands()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00094}{write\+End()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00064}{write\+Env\+Variables()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00045}{write\+Hide\+Shell()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00072}{write\+Path\+Variables()}}, and \mbox{\hyperlink{BatchCreator_8cpp_source_l00040}{write\+Start()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a2225babf16a473ba6722238c19d785ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a2225babf16a473ba6722238c19d785ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_ab3f5a63b795d0ce553b618e5b317c7bc}\label{classBatchCreator_ab3f5a63b795d0ce553b618e5b317c7bc} 
+\index{BatchCreator@{BatchCreator}!writeApp@{writeApp}}
+\index{writeApp@{writeApp}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeApp()}{writeApp()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Öffnet Anwednung falls gewünscht. 
+
+Öffnet Anwedung, falls unter "{}application"{} gegeben Wird unter dem Namen aus "{}outputfile"{} gestartet 
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_ab3f5a63b795d0ce553b618e5b317c7bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_a0542bada30314da34e0fe17870c6cb7d}\label{classBatchCreator_a0542bada30314da34e0fe17870c6cb7d} 
+\index{BatchCreator@{BatchCreator}!writeCommands@{writeCommands}}
+\index{writeCommands@{writeCommands}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeCommands()}{writeCommands()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Befehle ausführen. 
+
+Führt Befehle aus\+: Zu finden unter "{}\+EXE"{} als "{}command"{} 
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a0542bada30314da34e0fe17870c6cb7d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_a85b2442f045f1c91f09d776c5c7db8f2}\label{classBatchCreator_a85b2442f045f1c91f09d776c5c7db8f2} 
+\index{BatchCreator@{BatchCreator}!writeEnd@{writeEnd}}
+\index{writeEnd@{writeEnd}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeEnd()}{writeEnd()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ende der Batch Datei. 
+
+Schreibt den teil der Batch Datei der immer gleich ist
+\begin{DoxyItemize}
+\item setzt ECHO OFF 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a85b2442f045f1c91f09d776c5c7db8f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_a8562e9f76baf6700787772c209b1e1d5}\label{classBatchCreator_a8562e9f76baf6700787772c209b1e1d5} 
+\index{BatchCreator@{BatchCreator}!writeEnvVariables@{writeEnvVariables}}
+\index{writeEnvVariables@{writeEnvVariables}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeEnvVariables()}{writeEnvVariables()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+Env\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Umgebungsvariablen setzten. 
+
+Setzt Umgebungsvariablen aus "{}\+ENV"{} nach folgender Syntax\+: Eintrag unter "{}key"{} = Eintrag unter "{}value"{} 
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a8562e9f76baf6700787772c209b1e1d5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_a8f55e4cb7fddb3e07f09265b176ee9f8}\label{classBatchCreator_a8f55e4cb7fddb3e07f09265b176ee9f8} 
+\index{BatchCreator@{BatchCreator}!writeHideShell@{writeHideShell}}
+\index{writeHideShell@{writeHideShell}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeHideShell()}{writeHideShell()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+Hide\+Shell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sichtbarkeit Konsole. 
+
+Zeigt bzw. versteckt Konsolenausgabe 
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a8f55e4cb7fddb3e07f09265b176ee9f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_a8a20d3481a594eca8919ea3f24270bfe}\label{classBatchCreator_a8a20d3481a594eca8919ea3f24270bfe} 
+\index{BatchCreator@{BatchCreator}!writePathVariables@{writePathVariables}}
+\index{writePathVariables@{writePathVariables}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writePathVariables()}{writePathVariables()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+Path\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pfade setzten. 
+
+Verknüpft die unter "{}\+PATH"{} angegebenen Pfade mit dem Systempfad Setzt Pfad 
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a8a20d3481a594eca8919ea3f24270bfe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBatchCreator_a569f0d36a66f1546b78d681feb173fb3}\label{classBatchCreator_a569f0d36a66f1546b78d681feb173fb3} 
+\index{BatchCreator@{BatchCreator}!writeStart@{writeStart}}
+\index{writeStart@{writeStart}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeStart()}{writeStart()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Anfang der Batch Datei. 
+
+Schreibt den Teil der Batch Datei der immer gleich ist.
+\begin{DoxyItemize}
+\item setzt ECHO off
+\item startet cmd.\+exe 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a569f0d36a66f1546b78d681feb173fb3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBatchCreator_a98e00674d0c75c2cab313832a0e1d5fa}\label{classBatchCreator_a98e00674d0c75c2cab313832a0e1d5fa} 
+\index{BatchCreator@{BatchCreator}!batchFile@{batchFile}}
+\index{batchFile@{batchFile}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{batchFile}{batchFile}}
+{\footnotesize\ttfamily std\+::ofstream Batch\+Creator\+::batch\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+
+\Hypertarget{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}\label{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2} 
+\index{BatchCreator@{BatchCreator}!fileData@{fileData}}
+\index{fileData@{fileData}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{fileData}{fileData}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparsing_1_1FileData}{parsing\+::\+File\+Data}}$>$ Batch\+Creator\+::file\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{BatchCreator_8hpp}{Batch\+Creator.\+hpp}}\item 
+src/sources/\mbox{\hyperlink{BatchCreator_8cpp}{Batch\+Creator.\+cpp}}\end{DoxyCompactItemize}

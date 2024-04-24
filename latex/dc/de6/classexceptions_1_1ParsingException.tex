@@ -1,0 +1,122 @@
+\doxysection{exceptions\+::Parsing\+Exception Class Reference}
+\hypertarget{classexceptions_1_1ParsingException}{}\label{classexceptions_1_1ParsingException}\index{exceptions::ParsingException@{exceptions::ParsingException}}
+
+
+Exception for syntax errors within the json file.  
+
+
+
+
+{\ttfamily \#include $<$Exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for exceptions\+::Parsing\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d9/d0b/classexceptions_1_1ParsingException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for exceptions\+::Parsing\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{dc/d90/classexceptions_1_1ParsingException__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexceptions_1_1ParsingException_ac3b7cce2cab3371b18e3b834b0b83aad}{Parsing\+Exception}} (const std\+::string \&\mbox{\hyperlink{classexceptions_1_1ParsingException_af94c6543ac42256ca52c4d2c9765f5fa}{file}})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions\+::\+Custom\+Exception}}}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classexceptions_1_1ParsingException_af94c6543ac42256ca52c4d2c9765f5fa}{file}}
+\item 
+std\+::string \mbox{\hyperlink{classexceptions_1_1ParsingException_a73d7b013f463e211eec2390af4eee95d}{message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception for syntax errors within the json file. 
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classexceptions_1_1ParsingException_ac3b7cce2cab3371b18e3b834b0b83aad}\label{classexceptions_1_1ParsingException_ac3b7cce2cab3371b18e3b834b0b83aad} 
+\index{exceptions::ParsingException@{exceptions::ParsingException}!ParsingException@{ParsingException}}
+\index{ParsingException@{ParsingException}!exceptions::ParsingException@{exceptions::ParsingException}}
+\doxysubsubsection{\texorpdfstring{ParsingException()}{ParsingException()}}
+{\footnotesize\ttfamily exceptions\+::\+Parsing\+Exception\+::\+Parsing\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\begin{DoxyNote}{Note}
+I planned to use std\+::format, however it seems that the required Compiler Version is not yet available in the stable Ubuntu Repo!
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00043}{file}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00044}{message}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff}\label{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff} 
+\index{exceptions::ParsingException@{exceptions::ParsingException}!what@{what}}
+\index{what@{what}!exceptions::ParsingException@{exceptions::ParsingException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} exceptions\+::\+Parsing\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{Exceptions_8hpp_source_l00044}{message}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classexceptions_1_1ParsingException_af94c6543ac42256ca52c4d2c9765f5fa}\label{classexceptions_1_1ParsingException_af94c6543ac42256ca52c4d2c9765f5fa} 
+\index{exceptions::ParsingException@{exceptions::ParsingException}!file@{file}}
+\index{file@{file}!exceptions::ParsingException@{exceptions::ParsingException}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily const std\+::string exceptions\+::\+Parsing\+Exception\+::file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+\Hypertarget{classexceptions_1_1ParsingException_a73d7b013f463e211eec2390af4eee95d}\label{classexceptions_1_1ParsingException_a73d7b013f463e211eec2390af4eee95d} 
+\index{exceptions::ParsingException@{exceptions::ParsingException}!message@{message}}
+\index{message@{message}!exceptions::ParsingException@{exceptions::ParsingException}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string exceptions\+::\+Parsing\+Exception\+::message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Exceptions_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{Exceptions_8hpp_source}{Exceptions.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{Exceptions_8hpp}{Exceptions.\+hpp}}\end{DoxyCompactItemize}

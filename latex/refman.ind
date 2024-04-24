@@ -1,0 +1,411 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}CommandLineHandler}
+    \subitem {cli::CommandLineHandler}, \hyperpage{27}
+
+  \indexspace
+
+  \item {addCommand}
+    \subitem {parsing::FileData}, \hyperpage{36}
+  \item {addEnvironmentVariable}
+    \subitem {parsing::FileData}, \hyperpage{36}
+  \item {addPathValue}
+    \subitem {parsing::FileData}, \hyperpage{36}
+  \item {application}
+    \subitem {parsing::FileData}, \hyperpage{39}
+  \item {askToContinue}
+    \subitem {utilities::Utils}, \hyperpage{74}
+  \item {assignApplication}
+    \subitem {parsing::JsonHandler}, \hyperpage{51}
+  \item {assignCommand}
+    \subitem {parsing::JsonHandler}, \hyperpage{51}
+  \item {assignEntries}
+    \subitem {parsing::JsonHandler}, \hyperpage{52}
+  \item {assignEnvironmentVariable}
+    \subitem {parsing::JsonHandler}, \hyperpage{53}
+  \item {assignHideShell}
+    \subitem {parsing::JsonHandler}, \hyperpage{53}
+  \item {assignOutputFile}
+    \subitem {parsing::JsonHandler}, \hyperpage{54}
+  \item {assignPathValue}
+    \subitem {parsing::JsonHandler}, \hyperpage{55}
+  \item {AUTHORS}
+    \subitem {config.hpp}, \hyperpage{85}
+
+  \indexspace
+
+  \item {BatchCreator}, \hyperpage{21}
+    \subitem {BatchCreator}, \hyperpage{22}
+    \subitem {batchFile}, \hyperpage{26}
+    \subitem {createBatch}, \hyperpage{22}
+    \subitem {fileData}, \hyperpage{26}
+    \subitem {writeApp}, \hyperpage{23}
+    \subitem {writeCommands}, \hyperpage{24}
+    \subitem {writeEnd}, \hyperpage{24}
+    \subitem {writeEnvVariables}, \hyperpage{24}
+    \subitem {writeHideShell}, \hyperpage{25}
+    \subitem {writePathVariables}, \hyperpage{25}
+    \subitem {writeStart}, \hyperpage{25}
+  \item {batchFile}
+    \subitem {BatchCreator}, \hyperpage{26}
+
+  \indexspace
+
+  \item {checkFileEnding}
+    \subitem {utilities::Utils}, \hyperpage{75}
+  \item {checkIfFileExists}
+    \subitem {utilities::Utils}, \hyperpage{76}
+  \item {cli}, \hyperpage{17}
+    \subitem {options}, \hyperpage{18}
+  \item {cli::CommandLineHandler}, \hyperpage{26}
+    \subitem {\texorpdfstring{$\sim$}{\string~}CommandLineHandler}, 
+		\hyperpage{27}
+    \subitem {CommandLineHandler}, \hyperpage{27}
+    \subitem {parseArguments}, \hyperpage{28}
+    \subitem {printCredits}, \hyperpage{29}
+    \subitem {printHelp}, \hyperpage{30}
+    \subitem {printVersion}, \hyperpage{30}
+  \item {CommandLineHandler}
+    \subitem {cli::CommandLineHandler}, \hyperpage{27}
+  \item {commands}
+    \subitem {parsing::FileData}, \hyperpage{40}
+  \item {config.hpp}
+    \subitem {AUTHORS}, \hyperpage{85}
+    \subitem {DESCRIPTION}, \hyperpage{85}
+    \subitem {EXECUTABLE\_NAME}, \hyperpage{85}
+    \subitem {HOMEPAGE\_URL}, \hyperpage{85}
+    \subitem {LOG\_CONFIG}, \hyperpage{85}
+    \subitem {MAJOR\_VERSION}, \hyperpage{85}
+    \subitem {MINOR\_VERSION}, \hyperpage{85}
+    \subitem {PATCH\_VERSION}, \hyperpage{85}
+    \subitem {PROJECT\_NAME}, \hyperpage{86}
+  \item {createBatch}
+    \subitem {BatchCreator}, \hyperpage{22}
+  \item {createFileData}
+    \subitem {parsing::JsonHandler}, \hyperpage{55}
+
+  \indexspace
+
+  \item {data}
+    \subitem {parsing::JsonHandler}, \hyperpage{58}
+  \item {DESCRIPTION}
+    \subitem {config.hpp}, \hyperpage{85}
+
+  \indexspace
+
+  \item {environmentVariables}
+    \subitem {parsing::FileData}, \hyperpage{40}
+  \item {exceptions}, \hyperpage{18}
+  \item {exceptions::CustomException}, \hyperpage{31}
+    \subitem {what}, \hyperpage{32}
+  \item {exceptions::FailedToOpenFileException}, \hyperpage{33}
+    \subitem {FailedToOpenFileException}, \hyperpage{34}
+    \subitem {message}, \hyperpage{34}
+    \subitem {what}, \hyperpage{34}
+  \item {exceptions::FileExistsException}, \hyperpage{41}
+    \subitem {file}, \hyperpage{42}
+    \subitem {FileExistsException}, \hyperpage{42}
+    \subitem {message}, \hyperpage{42}
+    \subitem {what}, \hyperpage{42}
+  \item {exceptions::InvalidKeyException}, \hyperpage{43}
+    \subitem {InvalidKeyException}, \hyperpage{44}
+    \subitem {message}, \hyperpage{45}
+    \subitem {what}, \hyperpage{44}
+  \item {exceptions::InvalidTypeException}, \hyperpage{45}
+    \subitem {InvalidTypeException}, \hyperpage{46}
+    \subitem {message}, \hyperpage{47}
+    \subitem {type}, \hyperpage{47}
+    \subitem {what}, \hyperpage{46}
+  \item {exceptions::InvalidValueException}, \hyperpage{47}
+    \subitem {InvalidValueException}, \hyperpage{48}
+    \subitem {key}, \hyperpage{49}
+    \subitem {message}, \hyperpage{49}
+    \subitem {what}, \hyperpage{49}
+  \item {exceptions::MissingKeyException}, \hyperpage{65}
+    \subitem {key}, \hyperpage{67}
+    \subitem {message}, \hyperpage{67}
+    \subitem {MissingKeyException}, \hyperpage{67}
+    \subitem {type}, \hyperpage{67}
+    \subitem {what}, \hyperpage{67}
+  \item {exceptions::MissingTypeException}, \hyperpage{68}
+    \subitem {message}, \hyperpage{69}
+    \subitem {MissingTypeException}, \hyperpage{69}
+    \subitem {what}, \hyperpage{69}
+  \item {exceptions::ParsingException}, \hyperpage{70}
+    \subitem {file}, \hyperpage{72}
+    \subitem {message}, \hyperpage{72}
+    \subitem {ParsingException}, \hyperpage{71}
+    \subitem {what}, \hyperpage{72}
+  \item {exceptions::UnreachableCodeException}, \hyperpage{72}
+    \subitem {message}, \hyperpage{74}
+    \subitem {UnreachableCodeException}, \hyperpage{73}
+    \subitem {what}, \hyperpage{74}
+  \item {EXECUTABLE\_NAME}
+    \subitem {config.hpp}, \hyperpage{85}
+
+  \indexspace
+
+  \item {FailedToOpenFileException}
+    \subitem {exceptions::FailedToOpenFileException}, \hyperpage{34}
+  \item {file}
+    \subitem {exceptions::FileExistsException}, \hyperpage{42}
+    \subitem {exceptions::ParsingException}, \hyperpage{72}
+  \item {fileData}
+    \subitem {BatchCreator}, \hyperpage{26}
+  \item {FileExistsException}
+    \subitem {exceptions::FileExistsException}, \hyperpage{42}
+
+  \indexspace
+
+  \item {getApplication}
+    \subitem {parsing::FileData}, \hyperpage{37}
+  \item {getCommands}
+    \subitem {parsing::FileData}, \hyperpage{37}
+  \item {getEnvironmentVariables}
+    \subitem {parsing::FileData}, \hyperpage{37}
+  \item {getFileData}
+    \subitem {parsing::JsonHandler}, \hyperpage{56}
+  \item {getHideShell}
+    \subitem {parsing::FileData}, \hyperpage{38}
+  \item {getInstance}
+    \subitem {parsing::KeyValidator}, \hyperpage{60}
+  \item {getOutputFile}
+    \subitem {parsing::FileData}, \hyperpage{38}
+  \item {getPathValues}
+    \subitem {parsing::FileData}, \hyperpage{38}
+  \item {getUnknownKeyLine}
+    \subitem {parsing::KeyValidator}, \hyperpage{60}
+  \item {getWrongKeys}
+    \subitem {parsing::KeyValidator}, \hyperpage{61}
+
+  \indexspace
+
+  \item {hideShell}
+    \subitem {parsing::FileData}, \hyperpage{40}
+  \item {HOMEPAGE\_URL}
+    \subitem {config.hpp}, \hyperpage{85}
+
+  \indexspace
+
+  \item {InvalidKeyException}
+    \subitem {exceptions::InvalidKeyException}, \hyperpage{44}
+  \item {InvalidTypeException}
+    \subitem {exceptions::InvalidTypeException}, \hyperpage{46}
+  \item {InvalidValueException}
+    \subitem {exceptions::InvalidValueException}, \hyperpage{48}
+
+  \indexspace
+
+  \item {JSON2Batch}, \hyperpage{1}
+  \item {JsonHandler}
+    \subitem {parsing::JsonHandler}, \hyperpage{50}
+
+  \indexspace
+
+  \item {key}
+    \subitem {exceptions::InvalidValueException}, \hyperpage{49}
+    \subitem {exceptions::MissingKeyException}, \hyperpage{67}
+
+  \indexspace
+
+  \item {LOG\_CONFIG}
+    \subitem {config.hpp}, \hyperpage{85}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{99}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{99}
+    \subitem {parseFiles}, \hyperpage{99}
+    \subitem {validateFiles}, \hyperpage{100}
+  \item {MAJOR\_VERSION}
+    \subitem {config.hpp}, \hyperpage{85}
+  \item {message}
+    \subitem {exceptions::FailedToOpenFileException}, \hyperpage{34}
+    \subitem {exceptions::FileExistsException}, \hyperpage{42}
+    \subitem {exceptions::InvalidKeyException}, \hyperpage{45}
+    \subitem {exceptions::InvalidTypeException}, \hyperpage{47}
+    \subitem {exceptions::InvalidValueException}, \hyperpage{49}
+    \subitem {exceptions::MissingKeyException}, \hyperpage{67}
+    \subitem {exceptions::MissingTypeException}, \hyperpage{69}
+    \subitem {exceptions::ParsingException}, \hyperpage{72}
+    \subitem {exceptions::UnreachableCodeException}, \hyperpage{74}
+  \item {MINOR\_VERSION}
+    \subitem {config.hpp}, \hyperpage{85}
+  \item {MissingKeyException}
+    \subitem {exceptions::MissingKeyException}, \hyperpage{67}
+  \item {MissingTypeException}
+    \subitem {exceptions::MissingTypeException}, \hyperpage{69}
+
+  \indexspace
+
+  \item {options}, \hyperpage{70}
+    \subitem {cli}, \hyperpage{18}
+  \item {outputfile}
+    \subitem {parsing::FileData}, \hyperpage{40}
+
+  \indexspace
+
+  \item {parseArguments}
+    \subitem {cli::CommandLineHandler}, \hyperpage{28}
+  \item {parseFile}
+    \subitem {parsing::JsonHandler}, \hyperpage{57}
+  \item {parseFiles}
+    \subitem {main.cpp}, \hyperpage{99}
+  \item {parsing}, \hyperpage{19}
+  \item {parsing::FileData}, \hyperpage{35}
+    \subitem {addCommand}, \hyperpage{36}
+    \subitem {addEnvironmentVariable}, \hyperpage{36}
+    \subitem {addPathValue}, \hyperpage{36}
+    \subitem {application}, \hyperpage{39}
+    \subitem {commands}, \hyperpage{40}
+    \subitem {environmentVariables}, \hyperpage{40}
+    \subitem {getApplication}, \hyperpage{37}
+    \subitem {getCommands}, \hyperpage{37}
+    \subitem {getEnvironmentVariables}, \hyperpage{37}
+    \subitem {getHideShell}, \hyperpage{38}
+    \subitem {getOutputFile}, \hyperpage{38}
+    \subitem {getPathValues}, \hyperpage{38}
+    \subitem {hideShell}, \hyperpage{40}
+    \subitem {outputfile}, \hyperpage{40}
+    \subitem {pathValues}, \hyperpage{40}
+    \subitem {setApplication}, \hyperpage{38}
+    \subitem {setHideShell}, \hyperpage{39}
+    \subitem {setOutputFile}, \hyperpage{39}
+  \item {parsing::JsonHandler}, \hyperpage{49}
+    \subitem {assignApplication}, \hyperpage{51}
+    \subitem {assignCommand}, \hyperpage{51}
+    \subitem {assignEntries}, \hyperpage{52}
+    \subitem {assignEnvironmentVariable}, \hyperpage{53}
+    \subitem {assignHideShell}, \hyperpage{53}
+    \subitem {assignOutputFile}, \hyperpage{54}
+    \subitem {assignPathValue}, \hyperpage{55}
+    \subitem {createFileData}, \hyperpage{55}
+    \subitem {data}, \hyperpage{58}
+    \subitem {getFileData}, \hyperpage{56}
+    \subitem {JsonHandler}, \hyperpage{50}
+    \subitem {parseFile}, \hyperpage{57}
+    \subitem {root}, \hyperpage{58}
+  \item {parsing::KeyValidator}, \hyperpage{58}
+    \subitem {getInstance}, \hyperpage{60}
+    \subitem {getUnknownKeyLine}, \hyperpage{60}
+    \subitem {getWrongKeys}, \hyperpage{61}
+    \subitem {validateEntries}, \hyperpage{62}
+    \subitem {validateKeys}, \hyperpage{63}
+    \subitem {validateTypes}, \hyperpage{63}
+    \subitem {validEntryKeys}, \hyperpage{64}
+    \subitem {validKeys}, \hyperpage{64}
+  \item {ParsingException}
+    \subitem {exceptions::ParsingException}, \hyperpage{71}
+  \item {PATCH\_VERSION}
+    \subitem {config.hpp}, \hyperpage{85}
+  \item {pathValues}
+    \subitem {parsing::FileData}, \hyperpage{40}
+  \item {printCredits}
+    \subitem {cli::CommandLineHandler}, \hyperpage{29}
+  \item {printHelp}
+    \subitem {cli::CommandLineHandler}, \hyperpage{30}
+  \item {printVersion}
+    \subitem {cli::CommandLineHandler}, \hyperpage{30}
+  \item {PROJECT\_NAME}
+    \subitem {config.hpp}, \hyperpage{86}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{79}
+  \item {root}
+    \subitem {parsing::JsonHandler}, \hyperpage{58}
+
+  \indexspace
+
+  \item {setApplication}
+    \subitem {parsing::FileData}, \hyperpage{38}
+  \item {setHideShell}
+    \subitem {parsing::FileData}, \hyperpage{39}
+  \item {setOutputFile}
+    \subitem {parsing::FileData}, \hyperpage{39}
+  \item {setupEasyLogging}
+    \subitem {utilities::Utils}, \hyperpage{76}
+  \item {src/include/BatchCreator.hpp}, \hyperpage{79}, \hyperpage{81}
+  \item {src/include/CommandLineHandler.hpp}, \hyperpage{81}, 
+		\hyperpage{83}
+  \item {src/include/config.hpp}, \hyperpage{83}, \hyperpage{86}
+  \item {src/include/Exceptions.hpp}, \hyperpage{86}, \hyperpage{88}
+  \item {src/include/FileData.hpp}, \hyperpage{90, 91}
+  \item {src/include/JsonHandler.hpp}, \hyperpage{92}, \hyperpage{94}
+  \item {src/include/KeyValidator.hpp}, \hyperpage{94}, \hyperpage{96}
+  \item {src/include/Utils.hpp}, \hyperpage{96, 97}
+  \item {src/main.cpp}, \hyperpage{97}, \hyperpage{101}
+  \item {src/sources/BatchCreator.cpp}, \hyperpage{103}
+  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{104}, 
+		\hyperpage{106}
+  \item {src/sources/FileData.cpp}, \hyperpage{107, 108}
+  \item {src/sources/JsonHandler.cpp}, \hyperpage{109, 110}
+  \item {src/sources/KeyValidator.cpp}, \hyperpage{111}, 
+		\hyperpage{113}
+  \item {src/sources/Utils.cpp}, \hyperpage{115, 116}
+  \item {StyleHelpers}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Todo List}, \hyperpage{3}
+  \item {type}
+    \subitem {exceptions::InvalidTypeException}, \hyperpage{47}
+    \subitem {exceptions::MissingKeyException}, \hyperpage{67}
+
+  \indexspace
+
+  \item {UnreachableCodeException}
+    \subitem {exceptions::UnreachableCodeException}, \hyperpage{73}
+  \item {utilities}, \hyperpage{19}
+  \item {utilities::Utils}, \hyperpage{74}
+    \subitem {askToContinue}, \hyperpage{74}
+    \subitem {checkFileEnding}, \hyperpage{75}
+    \subitem {checkIfFileExists}, \hyperpage{76}
+    \subitem {setupEasyLogging}, \hyperpage{76}
+
+  \indexspace
+
+  \item {validateEntries}
+    \subitem {parsing::KeyValidator}, \hyperpage{62}
+  \item {validateFiles}
+    \subitem {main.cpp}, \hyperpage{100}
+  \item {validateKeys}
+    \subitem {parsing::KeyValidator}, \hyperpage{63}
+  \item {validateTypes}
+    \subitem {parsing::KeyValidator}, \hyperpage{63}
+  \item {validEntryKeys}
+    \subitem {parsing::KeyValidator}, \hyperpage{64}
+  \item {validKeys}
+    \subitem {parsing::KeyValidator}, \hyperpage{64}
+
+  \indexspace
+
+  \item {what}
+    \subitem {exceptions::CustomException}, \hyperpage{32}
+    \subitem {exceptions::FailedToOpenFileException}, \hyperpage{34}
+    \subitem {exceptions::FileExistsException}, \hyperpage{42}
+    \subitem {exceptions::InvalidKeyException}, \hyperpage{44}
+    \subitem {exceptions::InvalidTypeException}, \hyperpage{46}
+    \subitem {exceptions::InvalidValueException}, \hyperpage{49}
+    \subitem {exceptions::MissingKeyException}, \hyperpage{67}
+    \subitem {exceptions::MissingTypeException}, \hyperpage{69}
+    \subitem {exceptions::ParsingException}, \hyperpage{72}
+    \subitem {exceptions::UnreachableCodeException}, \hyperpage{74}
+  \item {writeApp}
+    \subitem {BatchCreator}, \hyperpage{23}
+  \item {writeCommands}
+    \subitem {BatchCreator}, \hyperpage{24}
+  \item {writeEnd}
+    \subitem {BatchCreator}, \hyperpage{24}
+  \item {writeEnvVariables}
+    \subitem {BatchCreator}, \hyperpage{24}
+  \item {writeHideShell}
+    \subitem {BatchCreator}, \hyperpage{25}
+  \item {writePathVariables}
+    \subitem {BatchCreator}, \hyperpage{25}
+  \item {writeStart}
+    \subitem {BatchCreator}, \hyperpage{25}
+
+\end{theindex}

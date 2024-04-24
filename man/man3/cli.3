@@ -1,0 +1,61 @@
+.TH "cli" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cli \- Includes everything regarding the CLI\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCommandLineHandler\fP"
+.br
+.RI "Responsible for the Command Line Interface\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const struct option \fBoptions\fP []"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Includes everything regarding the CLI\&. 
+
+This namespace includes all the code regarding the Command Line Interface\&. This includes the \fBCommandLineHandler\fP Class, the struct for the options and helpers for Styling\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBCommandLineHandler\fP 
+.PP
+\fBoptions\fP 
+.PP
+\fBStyleHelpers\fP 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "const struct option cli::options[]\fC [static]\fP"
+\fBInitial value:\fP.PP
+.nf
+= {
+    {"help", no_argument, nullptr, 'h'},
+    {"version", no_argument, nullptr, 'V'},
+    {"credits", no_argument, nullptr, 'c'},
+    {"verbose", no_argument, nullptr, 0},
+    nullptr
+    
+    
+}
+.fi
+
+.PP
+Definition at line \fB112\fP of file \fBCommandLineHandler\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

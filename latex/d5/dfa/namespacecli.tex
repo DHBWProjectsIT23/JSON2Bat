@@ -1,0 +1,57 @@
+\doxysection{cli Namespace Reference}
+\hypertarget{namespacecli}{}\label{namespacecli}\index{cli@{cli}}
+
+
+Includes everything regarding the CLI.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler}}
+\begin{DoxyCompactList}\small\item\em Responsible for the Command Line Interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const struct option \mbox{\hyperlink{namespacecli_a28a7c34e9990a8cc28324ac926bb9be5}{options}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Includes everything regarding the CLI. 
+
+This namespace includes all the code regarding the Command Line Interface. This includes the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class, the struct for the options and helpers for Styling.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} 
+
+\doxylink{structoptions}{options} 
+
+\doxylink{group__StyleHelpers}{Style\+Helpers} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacecli_a28a7c34e9990a8cc28324ac926bb9be5}\label{namespacecli_a28a7c34e9990a8cc28324ac926bb9be5} 
+\index{cli@{cli}!options@{options}}
+\index{options@{options}!cli@{cli}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily const struct option cli\+::options\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}help"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'h'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}version"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'V'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}credits"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'c'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}verbose"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ 0\},}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00112}{112}} of file \mbox{\hyperlink{CommandLineHandler_8hpp_source}{Command\+Line\+Handler.\+hpp}}.
+

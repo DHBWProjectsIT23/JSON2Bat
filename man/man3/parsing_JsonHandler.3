@@ -1,0 +1,292 @@
+.TH "parsing::JsonHandler" 3 "Wed Apr 24 2024 14:55:21" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+parsing::JsonHandler \- This file reads all data from the json file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <JsonHandler\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJsonHandler\fP ()"
+.br
+.RI "Constructor without arguments\&. "
+.ti -1c
+.RI "\fBJsonHandler\fP (const std::string &filename)"
+.br
+.RI "The constructor\&. "
+.ti -1c
+.RI "std::shared_ptr< \fBFileData\fP > \fBgetFileData\fP ()"
+.br
+.RI "Retrieve the data from the json file\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBassignOutputFile\fP () const"
+.br
+.RI "Assigns the outputfile to this->data\&. "
+.ti -1c
+.RI "void \fBassignHideShell\fP () const"
+.br
+.RI "Assigns the hideshell value to this->data\&. "
+.ti -1c
+.RI "void \fBassignApplication\fP () const"
+.br
+.RI "Assigns application to this->data\&. "
+.ti -1c
+.RI "void \fBassignEntries\fP () const"
+.br
+.RI "Assigns entries to this->data\&. "
+.ti -1c
+.RI "void \fBassignCommand\fP (const Json::Value &entry) const"
+.br
+.RI "Assigns an command to this->data\&. "
+.ti -1c
+.RI "void \fBassignEnvironmentVariable\fP (const Json::Value &entry) const"
+.br
+.RI "Assigns an environmentVariable to this->data\&. "
+.ti -1c
+.RI "void \fBassignPathValue\fP (const Json::Value &entry) const"
+.br
+.RI "Assigns a path value to this->data\&. "
+.ti -1c
+.RI "std::shared_ptr< \fBFileData\fP > \fBcreateFileData\fP ()"
+.br
+.RI "Creates the \fBFileData\fP instance\&. "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::shared_ptr< Json::Value > \fBparseFile\fP (const std::string &filename)"
+.br
+.RI "Parses the given json file\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< Json::Value > \fBroot\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBFileData\fP > \fBdata\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file reads all data from the json file\&. 
+
+This file uses the jsoncpp library to parse all data from a json file, validate it to some degree\&.
+.PP
+\fBSee also\fP
+.RS 4
+https://github.com/open-source-parsers/jsoncpp 
+.RE
+.PP
+
+.PP
+Definition at line \fB45\fP of file \fBJsonHandler\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "parsing::JsonHandler::JsonHandler ()\fC [inline]\fP"
+
+.PP
+Constructor without arguments\&. This constructor can be used to initialise an instance in an outer scope and then assign it values from an inner scope\&. 
+.PP
+Definition at line \fB53\fP of file \fBJsonHandler\&.hpp\fP\&.
+.SS "parsing::JsonHandler::JsonHandler (const std::string & filename)\fC [explicit]\fP"
+
+.PP
+The constructor\&. This constructor calls this->\fBparseFile()\fP when called\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP Name of the json file 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBparseFile()\fP, and \fBroot\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void parsing::JsonHandler::assignApplication () const\fC [private]\fP"
+
+.PP
+Assigns application to this->data\&. Retrieves the value of the application key from Json::Value this->root and defaults to an empty string\&. 
+.PP
+Definition at line \fB81\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBdata\fP, and \fBroot\fP\&.
+.SS "void parsing::JsonHandler::assignCommand (const Json::Value & entry) const\fC [private]\fP"
+
+.PP
+Assigns an command to this->data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIentry\fP The entry with the command 
+.RE
+.PP
+
+.PP
+Definition at line \fB111\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBdata\fP\&.
+.SS "void parsing::JsonHandler::assignEntries () const\fC [private]\fP"
+
+.PP
+Assigns entries to this->data\&. Goes through each of the entries from Json::Value this->root and calls the relevant method depending on it's type\&. All 'type' keys should be valid by this point\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIentry\fP Json::Value containing an array with entries
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::UnreachableCodeException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB87\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBassignCommand()\fP, \fBassignEnvironmentVariable()\fP, \fBassignPathValue()\fP, and \fBroot\fP\&.
+.SS "void parsing::JsonHandler::assignEnvironmentVariable (const Json::Value & entry) const\fC [private]\fP"
+
+.PP
+Assigns an environmentVariable to this->data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIentry\fP The entry with the environmentVariable 
+.RE
+.PP
+
+.PP
+Definition at line \fB117\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBdata\fP\&.
+.SS "void parsing::JsonHandler::assignHideShell () const\fC [private]\fP"
+
+.PP
+Assigns the hideshell value to this->data\&. Retrieves the value of the hideshell key from Json::Value this->root and defaults to negative\&. 
+.PP
+Definition at line \fB74\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBdata\fP, and \fBroot\fP\&.
+.SS "void parsing::JsonHandler::assignOutputFile () const\fC [private]\fP"
+
+.PP
+Assigns the outputfile to this->data\&. Retrieves the outputfile from Json::Value this->root and makes sure, that the file doesn't already exist\&.
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::FileExistsException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fButilities::Utils::checkIfFileExists()\fP, \fBdata\fP, and \fBroot\fP\&.
+.SS "void parsing::JsonHandler::assignPathValue (const Json::Value & entry) const\fC [private]\fP"
+
+.PP
+Assigns a path value to this->data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIentry\fP The entry with the path value 
+.RE
+.PP
+
+.PP
+Definition at line \fB124\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBdata\fP\&.
+.SS "std::shared_ptr< \fBFileData\fP > parsing::JsonHandler::createFileData ()\fC [private]\fP"
+
+.PP
+Creates the \fBFileData\fP instance\&. Instantiates the \fBFileData\fP instance, calls all nessecary functions and returns a shared pointer to it\&.
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created instance of \fBFileData\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB53\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBassignApplication()\fP, \fBassignEntries()\fP, \fBassignHideShell()\fP, \fBassignOutputFile()\fP, and \fBdata\fP\&.
+.SS "std::shared_ptr< \fBFileData\fP > parsing::JsonHandler::getFileData ()"
+
+.PP
+Retrieve the data from the json file\&. This method calls this->\fBcreateFileData()\fP needed to retrieve the values from the Json::Value this->root and then returns a shared pointer to the created \fBFileData\fP object\&.
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the \fBFileData\fP Object with the parsed data from json 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBcreateFileData()\fP\&.
+.SS "std::shared_ptr< Json::Value > parsing::JsonHandler::parseFile (const std::string & filename)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Parses the given json file\&. This method first creates a new Json::Value instance and then tries to parse the given json file\&. It then validates the keys of the instance using the \fBKeyValidator\fP class\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP The name of the file wich should be parsed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A shared pointer to the Json::Value instance
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBKeyValidator::validateKeys()\fP
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::ParsingException\fP\fP 
+.br
+\fI\fBexceptions::InvalidKeyException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBJsonHandler\&.cpp\fP\&.
+.PP
+References \fBparsing::KeyValidator::getInstance()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::shared_ptr<\fBFileData\fP> parsing::JsonHandler::data\fC [private]\fP"
+
+.PP
+Definition at line \fB153\fP of file \fBJsonHandler\&.hpp\fP\&.
+.SS "std::shared_ptr<Json::Value> parsing::JsonHandler::root\fC [private]\fP"
+
+.PP
+Definition at line \fB152\fP of file \fBJsonHandler\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.
