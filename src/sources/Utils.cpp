@@ -21,8 +21,7 @@
 #include <string>
 
 namespace utilities {
-void Utils::setupEasyLogging(const std::string &configFile)
-{
+void Utils::setupEasyLogging(const std::string &configFile) {
     el::Configurations conf(configFile);
     el::Loggers::reconfigureAllLoggers(conf);
     LOG_INFO << "Running " << PROJECT_NAME << " v" << MAJOR_VERSION << "."
@@ -30,18 +29,15 @@ void Utils::setupEasyLogging(const std::string &configFile)
     LOG_INFO << "For more Information checkout " << HOMEPAGE_URL;
     LOG_INFO << "EasyLogging has been setup!";
 }
-bool Utils::checkIfFileExists(const std::string &fileName)
-{
+bool Utils::checkIfFileExists(const std::string &fileName) {
     LOG_INFO << "Checking if file \"" << fileName << "\"exists...";
     std::ifstream file(fileName);
     return file.good();
 }
-bool Utils::checkFileEnding(const std::string_view &fileName)
-{
+bool Utils::checkFileEnding(const std::string_view &fileName) {
     return fileName.size() >= 5 && fileName.ends_with(".json");
 }
-bool Utils::askToContinue(const std::string &prompt)
-{
+bool Utils::askToContinue(const std::string &prompt) {
     std::string userInput;
     LOG_INFO << "Asking for user Confirmation to continue...";
     OUTPUT << cli::BOLD << prompt << cli::RESET;

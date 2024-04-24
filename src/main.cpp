@@ -12,6 +12,7 @@
  */
 #include <LoggingWrapper.hpp>
 #include <cstdlib>
+#include <fstream>
 #include <jsoncpp/json.h>
 #include <vector>
 
@@ -21,6 +22,7 @@
 #include "FileData.hpp"
 #include "JsonHandler.hpp"
 #include "Utils.hpp"
+#include "config.hpp"
 
 INITIALIZE_EASYLOGGINGPP
 
@@ -56,7 +58,18 @@ void parseFiles(std::vector<std::string> files);
  * @todo Refactoring
  */
 int main(int argc, char *argv[]) {
-    utilities::Utils::setupEasyLogging("conf/easylogging.conf");
+    std::ifstream configFile(LOG_CONFIG);
+    if (!configFile.good()) {
+        std::cerr << cli::RED << cli::BOLD
+                  << "Fatal: Easylogging configuration file not found at:\n"
+                  << cli::RESET << cli::ITALIC << "\n\t\"" << LOG_CONFIG << "\"\n\n"
+                  << cli::RESET;
+
+        std::cout << "Aborting...\n";
+        return 1;
+    }
+
+    utilities::Utils::setupEasyLogging(LOG_CONFIG);
 
     // Check if any options/arguments were given
     if (argc < 2) {
@@ -74,7 +87,7 @@ int main(int argc, char *argv[]) {
     }
     OUTPUT << cli::BOLD << "Parsing the following files:\n" << cli::RESET;
     for (const auto &file : files) {
-        OUTPUT << "\t - " <<  file << "\n";
+        OUTPUT << "\t - " << file << "\n";
     }
 
     // Replace the original files vector with the validFiles vector
