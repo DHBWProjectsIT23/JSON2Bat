@@ -33,12 +33,19 @@ public:
      */
     BatchCreator(std::shared_ptr<parsing::FileData> fileData);
 
-    std::shared_ptr<parsing::FileData> fileData;
-
-    std::ofstream batchFile;
-    void createBatch();
 
 private:
+
+    std::ofstream batchFile;
+
+    std::shared_ptr<parsing::FileData> fileData;
+
+    /**
+     * @brief Setzt batch Datei zusammen
+     * @details Beinhaltet Aufrufe der einzelnen Komponenten der batch Datei
+     *
+     */
+    void createBatch();
 
     /**
      * @brief Anfang der Batch Datei

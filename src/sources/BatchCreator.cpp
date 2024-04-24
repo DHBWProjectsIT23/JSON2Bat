@@ -23,17 +23,16 @@ void BatchCreator::createBatch() {
     LOG_INFO << "Creating Batch file";
 
     this->batchFile.open(this->fileData->getOutputFile());
-    if (this->batchFile.is_open()) {
-        this->writeStart();
-        this->writeHideShell();
-        this->writeCommands();
-        this->writeEnvVariables();
-        this->writePathVariables();
-        this->writeApp();
-        this->writeEnd();
-    } else {
+    if (!this->batchFile.is_open()) {
         throw exceptions::FailedToOpenFileException(this->fileData->getOutputFile());
     }
+    this->writeStart();
+    this->writeHideShell();
+    this->writeCommands();
+    this->writeEnvVariables();
+    this->writePathVariables();
+    this->writeApp();
+    this->writeEnd();
 }
 
 void BatchCreator::writeStart() {
