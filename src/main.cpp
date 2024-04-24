@@ -15,12 +15,12 @@
 #include <jsoncpp/json.h>
 #include <vector>
 
+#include "BatchCreator.hpp"
 #include "CommandLineHandler.hpp"
 #include "Exceptions.hpp"
 #include "FileData.hpp"
 #include "JsonHandler.hpp"
 #include "Utils.hpp"
-#include "BatchCreator.hpp"
 
 INITIALIZE_EASYLOGGINGPP
 
@@ -72,6 +72,10 @@ int main(int argc, char *argv[]) {
         LOG_ERROR << "No files were given as arguments!\n";
         return 1;
     }
+    OUTPUT << cli::BOLD << "Parsing the following files:\n" << cli::RESET;
+    for (const auto &file : files) {
+        OUTPUT << "\t - " <<  file << "\n";
+    }
 
     // Replace the original files vector with the validFiles vector
     files = std::move(validateFiles(files));
@@ -122,9 +126,10 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
 void parseFiles(std::vector<std::string> files) {
 
     for (auto file = files.begin(); file != files.end(); ++file) {
+        OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
+               << cli::RESET;
 
         std::shared_ptr<parsing::FileData> fileData;
-
         try {
             parsing::JsonHandler jsonHandler(*file);
             fileData = jsonHandler.getFileData();
@@ -143,8 +148,9 @@ void parseFiles(std::vector<std::string> files) {
                 exit(1);
             }
 
-            std::cout << "\n\n";
+            std::cout << "\n";
             continue;
         }
     }
+    OUTPUT << cli::ITALIC << "Done with files!\n" << cli::RESET;
 }
