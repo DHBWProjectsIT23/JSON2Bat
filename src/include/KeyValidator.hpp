@@ -1,14 +1,13 @@
 /**
  * @file KeyValidator.hpp
- * @author
- * @date
- * @version
- * @brief
- * @details
+ * @author Simon Blum
+ * @date 21.04.2024
+ * @version 0.1.6
+ * @brief This file contains the KeyValidator class
+ *
+ * @see parsing::KeyValidator
  *
  * @copyright See LICENSE file
- *
- * @todo Documentation
  */
 #ifndef KEYVALIDATOR_HPP
 #define KEYVALIDATOR_HPP
@@ -18,68 +17,68 @@
 namespace parsing {
 /**
  * @class KeyValidator
- * @brief
+ * @brief Validates keys of a Json::Value object.
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This class is singleton. That way when multiple files are parsed
+ * with the application, the validKeys and validEntryKeys field only
+ * have to be allocated once.
  */
 class KeyValidator {
 public:
     /**
-     * @brief
-     * @details
+     * @brief Get the instance of this class
      *
-     * @return
-     *
-     * @todo Documentation
+     * @return Reference to the instance of this class
      */
     static KeyValidator &getInstance();
 
     /**
-     * @brief
+     * @brief Validate keys off a Json::Value object
      * @details
+     * This method goes through the MemberNames of a Json::Value object and
+     * validates, that they are part of the validKey attribute.
+     * It calls the nessecary methods to validate the keys within the
+     * entries array.
      *
-     * @param root
-     * @param filename
-     * @return
-     *
-     * @todo Documentation
+     * @param root The Json::Value object to be validated.
+     * @param filename The filename from which 'root' is from.
+     * @return A vector with tuples, containing the line and name of invalid
+     * types.
      */
     std::vector<std::tuple<int, std::string>>
     validateKeys(const Json::Value &root, const std::string &filename);
 
 private:
     /**
-     * @brief
+     * @brief Retrieve the wrong keys from a Json::Value object
      * @details
+     * This method goes through each key of the Json::Value object and makes
+     * sure it's valid.
      *
-     * @param root
-     * @param filename
+     * @param root The Json::Value object to be validated.
+     * @param filename The filename from which 'root' is from.
      *
-     * @return
+     * @return A vector with tuples, containing the line and name of invalid
+     * types.
      */
     std::vector<std::tuple<int, std::string>>
-    getWrongKeys(Json::Value root, const std::string &filename);
+    getWrongKeys(const Json::Value& root, const std::string &filename);
 
     /**
-     * @brief
+     * @brief Validates types from the entries array.
      * @details
+     * Makes sure that each type has it's according keys, needed to parse it.
      *
-     * @param filename
+     * @param filename The filename from which 'entry' is from
      * @param entry
      * @param entryKeys
-     * @return
-     *
-     * @todo Documentation
      */
     static void validateTypes(const std::string &filename,
                               const Json::Value &entry,
                               std::vector<std::string> &entryKeys);
 
     /**
-     * @brief
+     * @brief Validates that an entries 'type' key is valid
      * @details
      *
      * @param filename
