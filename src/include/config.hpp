@@ -17,9 +17,10 @@
 
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
-#define MAJOR_VERSION 0
-#define MINOR_VERSION 1
-#define PATCH_VERSION 6
+#define LOG_CONFIG "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging.conf"
+#define MAJOR_VERSION "0"
+#define MINOR_VERSION "2"
+#define PATCH_VERSION "0"
 #define DESCRIPTION "A simple tool to convert json to batch."
 #define PROJECT_NAME "jsonToBatch"
 #define AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci"

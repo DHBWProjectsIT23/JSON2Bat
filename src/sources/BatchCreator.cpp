@@ -24,7 +24,8 @@ void BatchCreator::createBatch() {
 
     this->batchFile.open(this->fileData->getOutputFile());
     if (!this->batchFile.is_open()) {
-        throw exceptions::FailedToOpenFileException(this->fileData->getOutputFile());
+        throw exceptions::FailedToOpenFileException(
+            this->fileData->getOutputFile());
     }
     this->writeStart();
     this->writeHideShell();
@@ -33,6 +34,7 @@ void BatchCreator::createBatch() {
     this->writePathVariables();
     this->writeApp();
     this->writeEnd();
+    this->batchFile.close();
 }
 
 void BatchCreator::writeStart() {
@@ -62,8 +64,8 @@ void BatchCreator::writeCommands() {
 void BatchCreator::writeEnvVariables() {
     LOG_INFO << "writing Environment Variables";
     for (const std::tuple env : this->fileData->getEnvironmentVariables()) {
-        this->batchFile << "set " << std::get<0>(env) << "="
-                        << std::get<1>(env) << " && ";
+        this->batchFile << "set " << std::get<0>(env) << "=" << std::get<1>(env)
+                        << " && ";
     }
 }
 
@@ -82,8 +84,7 @@ void BatchCreator::writeApp() {
     if (this->fileData->getApplication().has_value()) {
         LOG_INFO << "writing start Application";
         this->batchFile << " && start \"" << appName << "\" "
-                        << this->fileData->getApplication().value()
-                        << "\"\r\n";
+                        << this->fileData->getApplication().value() << "\"\r\n";
     } else {
         LOG_INFO << "writing not start Application";
         this->batchFile << "\"\r\n";
