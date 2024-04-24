@@ -20,12 +20,11 @@
 #include <vector>
 
 namespace cli {
-void CommandLineHandler::printHelp()
-{
+void CommandLineHandler::printHelp() {
     LOG_INFO << "Printing help message...";
     OUTPUT << BOLD << "Usage:\n"
            << RESET << "----------\n"
-           << "command [options] [filenames]\n"
+           << EXECUTABLE_NAME << " [options] [filenames]\n"
            << "\n"
            << BOLD << "Options:\n"
            << RESET << "----------\n"
@@ -42,15 +41,13 @@ void CommandLineHandler::printHelp()
            << "Multiple files should be seperated by spaces!\n\n";
     exit(0);
 }
-void CommandLineHandler::printVersion()
-{
+void CommandLineHandler::printVersion() {
     LOG_INFO << "Printing version number...";
     OUTPUT << PROJECT_NAME << " v" << MAJOR_VERSION << "." << MINOR_VERSION << "."
            << PATCH_VERSION << "\n";
     exit(0);
 }
-void CommandLineHandler::printCredits()
-{
+void CommandLineHandler::printCredits() {
     LOG_INFO << "Printing credits...";
     OUTPUT << BOLD << "Project information:\n"
            << RESET << "----------\n"
@@ -62,14 +59,12 @@ void CommandLineHandler::printCredits()
            << GREEN << "Authors: " << RESET << ITALIC << AUTHORS << RESET << "\n"
            << GREEN << "Documentation: " << RESET << ITALIC << HOMEPAGE_URL
            << RESET << GREEN << "\nContact: " << RESET << ITALIC
-           << "simon21.blum@gmail.com"
-           << "\n";
+           << "simon21.blum@gmail.com" << "\n";
     exit(0);
 }
 
 std::vector<std::string> CommandLineHandler::parseArguments(int argc,
-        char* argv[])
-{
+        char *argv[]) {
     LOG_INFO << "Parsing arguments...";
 
     while (true) {
