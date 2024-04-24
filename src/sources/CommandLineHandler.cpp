@@ -27,10 +27,11 @@ void CommandLineHandler::printHelp() {
            << "\n"
            << BOLD << "Options:\n"
            << RESET << "----------\n"
+           << "-o, --outdir\t [path]\t\tOutput the batch file to the given "
+           "dir\n"
            << "-h, --help\t\t\tPrint this help message\n"
            << "-V, --version\t\t\tPrint the version number\n"
            << "-c, --credits\t\t\tPrint the credits\n\n"
-           << "\n"
            << "    --verbose\t\t\tStart the application in verbose mode\n"
            << ITALIC
            << "          \t\t\tNote: Verbose flag should be passed first!\n\n"
@@ -80,7 +81,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
         switch (result) {
         case '?':
-            LOG_WARNING << "Invalid Option\n";
+            LOG_ERROR << "Invalid Option (argument)\n";
             CommandLineHandler::printHelp();
 
         case 'h':
@@ -126,7 +127,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
     LOG_INFO << "Options have been parsed";
     LOG_INFO << "Checking for arguments...";
 
-    if(files.empty()) {
+    if (files.empty()) {
         files.emplace_back("");
     }
 
