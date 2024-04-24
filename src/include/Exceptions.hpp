@@ -1,14 +1,11 @@
 /**
  * @file Exceptions.hpp
- * @author
- * @date
- * @version
- * @brief
- * @details
+ * @author Simon Blum
+ * @date 23.04.2024
+ * @version 0.1.6
+ * @brief Contains all the custom exceptions used in the project.
  *
  * @copyright See LICENSE file
- *
- * @todo Documentation
  */
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
@@ -18,22 +15,17 @@
 
 /**
  * @namespace exceptions
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Namespace used for customized exceptions
  */
 namespace exceptions {
 /**
  * @class CustomException
- * @brief
+ * @brief Base class for all custom exceptions
  * @details
+ * This class is the base class which is inherited by all custom exceptions.
+ * It can be used to catch all exceptions that are thrown by us.
  *
- * @see
- *
- * @todo Documentation
+ * @see std::exception
  */
 class CustomException : public std::exception {
 public:
@@ -44,12 +36,7 @@ public:
 
 /**
  * @class ParsingException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Exception for syntax errors within the json file.
  */
 class ParsingException : public CustomException {
 private:
@@ -76,13 +63,8 @@ public:
 };
 
 /**
- * @class BatchExistsException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @class FileExistsException
+ * @brief Exception for an already exisiting outputfile
  */
 class FileExistsException : public CustomException {
 private:
@@ -109,12 +91,7 @@ public:
 
 /**
  * @class InvalidValueException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Exception for an ivalid (usually empty) value field
  */
 class InvalidValueException : public CustomException {
 private:
@@ -141,19 +118,21 @@ public:
 
 /**
  * @class InvalidKeyException
- * @brief
+ * @brief Exception for invalid keys
  * @details
+ * This exception is thrown when a key is found within the json file,
+ * that is not part of the valid keys. It will also display the name
+ * and the line of the invalid key.
  *
- * @see
- *
- * @todo Documentation
+ * @see parsing::KeyValidator::validKeys
+ * @see parsing::KeyValidator::validEntryKeys
  */
 class InvalidKeyException : public CustomException {
 private:
     std::string message = "Invalid key found!";
 
 public:
-    InvalidKeyException(const std::vector<std::tuple<int, std::string>> &keys) {
+    explicit InvalidKeyException(const std::vector<std::tuple<int, std::string>> &keys) {
         LOG_INFO << "InvalidKeyException: " << message;
         for (const auto &[line, key] : keys) {
             LOG_WARNING << "Invalid key found at line " << line << ": \"" << key
@@ -167,12 +146,11 @@ public:
 
 /**
  * @class InvalidTypeException
- * @brief
+ * @brief Exception for invalid types.
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This exception is thrown when the value of the "type" field within the entries
+ * is invalid (not "EXE", "PATH", "ENV"). It also prints the type and the line
+ * of the invalid type.
  */
 class InvalidTypeException : public CustomException {
 private:
@@ -198,12 +176,10 @@ public:
 
 /**
  * @class MissingKeyException
- * @brief
+ * @brief Exception for missing keys within entries.
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This exception is thrown when a key (such as "path" or "command") is missing
+ * from an entry. It also prints the type and which key it is missing.
  */
 class MissingKeyException : public CustomException {
 private:
@@ -231,12 +207,9 @@ public:
 
 /**
  * @class MissingTypeException
- * @brief
+ * @brief Exception for missing types of entries
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This exception is thrown, when an entry is missing it's "type" key.
  */
 class MissingTypeException : public CustomException {
 private:
@@ -253,12 +226,7 @@ public:
 
 /**
  * @class UnreachableCodeException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Exception for when the application reaches code it shouldn't reach
  */
 class UnreachableCodeException : public CustomException {
 private:

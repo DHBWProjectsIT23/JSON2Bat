@@ -44,6 +44,7 @@ void FileData::setOutputFile(std::string &newOutputfile)
 void FileData::setApplication(const std::string &newApplication)
 {
     if (newApplication.empty()) {
+        LOG_INFO << "newApplication empty, returning";
         return;
     }
 
