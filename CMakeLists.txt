@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 # Currently not supported on Windows
 
-set(PROJECT_NAME jsonToBatch)
+set(PROJECT_NAME JSON2Batch)
+set(EXECUTABLE_NAME json2batch)
 
 # Set basic CMAKE flags
 set(CMAKE_CXX)
@@ -71,21 +72,21 @@ set(SOURCES
         ${PROJECT_SOURCE_DIR}/src/sources/KeyValidator.cpp)
 
 # Add main executable
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${EXECUTABLE_NAME} ${SOURCES})
 
 # Add subdirectories
 add_subdirectory(lib)
 
 # Set include directories
 target_include_directories(
-  ${PROJECT_NAME}
+  ${EXECUTABLE_NAME}
   PRIVATE ${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/src/include
           ${PROJECT_SOURCE_DIR}/src/include/utility
           ${PROJECT_SOURCE_DIR}/src/include/parsing)
 
 if(WIN32)
   message(WARNING "This project is not supported on Windows yet.")
-  target_compile_definitions(${PROJECT_NAME} PRIVATE IS_WINDOWS)
+  target_compile_definitions(${EXECUTABLE_NAME} PRIVATE IS_WINDOWS)
 elseif(UNIX)
-  target_compile_definitions(${PROJECT_NAME} PRIVATE IS_UNIX)
+  target_compile_definitions(${EXECUTABLE_NAME} PRIVATE IS_UNIX)
 endif()
