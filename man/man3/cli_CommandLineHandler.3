@@ -1,4 +1,4 @@
-.TH "cli::CommandLineHandler" 3 "Thu Apr 25 2024 10:54:40" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.TH "cli::CommandLineHandler" 3 "Thu Apr 25 2024 12:19:31" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -37,7 +37,7 @@ cli::CommandLineHandler \- Responsible for the Command Line Interface\&.
 .br
 .RI "Prints the credits message\&. "
 .ti -1c
-.RI "static std::vector< std::string > \fBparseArguments\fP (int argc, char *argv[])"
+.RI "static std::tuple< std::optional< std::string >, std::vector< std::string > > \fBparseArguments\fP (int argc, char *argv[])"
 .br
 .RI "Parses the Command Line Arguments\&. "
 .in -1c
@@ -69,7 +69,7 @@ Simon Blum
 .PP
 
 .PP
-Definition at line \fB52\fP of file \fBCommandLineHandler\&.hpp\fP\&.
+Definition at line \fB53\fP of file \fBCommandLineHandler\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "cli::CommandLineHandler::CommandLineHandler ()\fC [delete]\fP"
@@ -96,7 +96,7 @@ As all functions are static it should not be used and as such is private\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "std::vector< std::string > cli::CommandLineHandler::parseArguments (int argc, char * argv[])\fC [static]\fP"
+.SS "std::tuple< std::optional< std::string >, std::vector< std::string > > cli::CommandLineHandler::parseArguments (int argc, char * argv[])\fC [static]\fP"
 
 .PP
 Parses the Command Line Arguments\&. This function uses the 'getopt\&.h' library to parse all options given and then returns all files which are given as arguments\&. 
@@ -115,12 +115,17 @@ Parses the Command Line Arguments\&. This function uses the 'getopt\&.h' library
 .PP
 \fBReturns\fP
 .RS 4
-Returns a vector of strings containing all filenames\&. 
+Returns a vector of strings containing all filenames\&.
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Update documentation 
 .RE
 .PP
 
 .PP
-Definition at line \fB66\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB67\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
 References \fBprintCredits()\fP, \fBprintHelp()\fP, and \fBprintVersion()\fP\&.
 .SS "void cli::CommandLineHandler::printCredits ()\fC [static]\fP"

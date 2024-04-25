@@ -1,16 +1,7 @@
 <map id="utilities::Utils::checkIfFileExists" name="utilities::Utils::checkIfFileExists">
-<area shape="rect" id="Node000001" title="Check if a file exists." alt="" coords="803,35,947,75"/>
-<area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="613,5,755,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="787,44,755,39,756,34,788,39"/>
-<area shape="rect" id="Node000007" href="$df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77" title=" " alt="" coords="446,70,541,96"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="788,64,542,82,541,77,788,59"/>
-<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="422,5,565,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="597,28,565,28,565,23,597,23"/>
-<area shape="rect" id="Node000004" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="232,5,374,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="407,28,375,28,375,23,407,23"/>
-<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html#ac620aa54df822ee1879995ac38062bc0" title=" " alt="" coords="103,17,184,43"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="216,31,184,31,184,26,216,25"/>
-<area shape="rect" id="Node000006" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,45,55,71"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="88,46,55,54,54,49,87,41"/>
-<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="431,82,55,62,55,56,431,77"/>
+<area shape="rect" id="Node000001" title="Check if a file exists." alt="" coords="245,5,389,46"/>
+<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77" title=" " alt="" coords="103,13,197,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,28,197,28,197,23,229,23"/>
+<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
 </map>

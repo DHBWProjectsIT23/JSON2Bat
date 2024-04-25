@@ -1,4 +1,4 @@
-.TH "exceptions::InvalidTypeException" 3 "Thu Apr 25 2024 10:54:40" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.TH "exceptions::InvalidTypeException" 3 "Thu Apr 25 2024 12:19:31" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,7 +44,7 @@ Exception for invalid types\&.
 
 This exception is thrown when the value of the 'type' field within the entries is invalid (not 'EXE', 'PATH', 'ENV')\&. It also prints the type and the line of the invalid type\&. 
 .PP
-Definition at line \fB155\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB156\fP of file \fBExceptions\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "exceptions::InvalidTypeException::InvalidTypeException (const std::string & type, int line)\fC [inline]\fP"
@@ -57,7 +57,7 @@ I planned to use std::format, however it seems that the required Compiler Versio
 .PP
 
 .PP
-Definition at line \fB161\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB162\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP, and \fBtype\fP\&.
 .SH "Member Function Documentation"
@@ -65,7 +65,7 @@ References \fBmessage\fP, and \fBtype\fP\&.
 .SS "const char * exceptions::InvalidTypeException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
 
 .PP
-Definition at line \fB172\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB173\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP\&.
 .SH "Member Data Documentation"
@@ -73,11 +73,11 @@ References \fBmessage\fP\&.
 .SS "std::string exceptions::InvalidTypeException::message\fC [private]\fP"
 
 .PP
-Definition at line \fB158\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB159\fP of file \fBExceptions\&.hpp\fP\&.
 .SS "const std::string exceptions::InvalidTypeException::type\fC [private]\fP"
 
 .PP
-Definition at line \fB157\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB158\fP of file \fBExceptions\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

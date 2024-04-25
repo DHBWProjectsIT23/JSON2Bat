@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['options_0',['options',['../d1/d38/structoptions.html',1,'options'],['../d5/dfa/namespacecli.html#a28a7c34e9990a8cc28324ac926bb9be5',1,'cli::options']]],
-  ['outputfile_1',['outputfile',['../da/d06/classparsing_1_1FileData.html#a512ec5915338a9f8e1884bc5dc543abf',1,'parsing::FileData']]]
+  ['nosuchdirexception_0',['nosuchdirexception',['../d9/d05/classexceptions_1_1NoSuchDirException.html',1,'exceptions::NoSuchDirException'],['../d9/d05/classexceptions_1_1NoSuchDirException.html#a972feb989336e29c4fd5d697f1260a25',1,'exceptions::NoSuchDirException::NoSuchDirException()']]]
 ];

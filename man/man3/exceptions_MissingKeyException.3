@@ -1,4 +1,4 @@
-.TH "exceptions::MissingKeyException" 3 "Thu Apr 25 2024 10:54:40" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.TH "exceptions::MissingKeyException" 3 "Thu Apr 25 2024 12:19:31" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,7 +47,7 @@ Exception for missing keys within entries\&.
 
 This exception is thrown when a key (such as 'path' or 'command') is missing from an entry\&. It also prints the type and which key it is missing\&. 
 .PP
-Definition at line \fB184\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB185\fP of file \fBExceptions\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "exceptions::MissingKeyException::MissingKeyException (const std::string & key, const std::string & type)\fC [inline]\fP"
@@ -60,7 +60,7 @@ I planned to use std::format, however it seems that the required Compiler Versio
 .PP
 
 .PP
-Definition at line \fB191\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB192\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBkey\fP, \fBmessage\fP, and \fBtype\fP\&.
 .SH "Member Function Documentation"
@@ -68,7 +68,7 @@ References \fBkey\fP, \fBmessage\fP, and \fBtype\fP\&.
 .SS "const char * exceptions::MissingKeyException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
 
 .PP
-Definition at line \fB203\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB204\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP\&.
 .SH "Member Data Documentation"
@@ -76,15 +76,15 @@ References \fBmessage\fP\&.
 .SS "std::string exceptions::MissingKeyException::key\fC [private]\fP"
 
 .PP
-Definition at line \fB188\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB189\fP of file \fBExceptions\&.hpp\fP\&.
 .SS "std::string exceptions::MissingKeyException::message\fC [private]\fP"
 
 .PP
-Definition at line \fB186\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB187\fP of file \fBExceptions\&.hpp\fP\&.
 .SS "std::string exceptions::MissingKeyException::type\fC [private]\fP"
 
 .PP
-Definition at line \fB187\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB188\fP of file \fBExceptions\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

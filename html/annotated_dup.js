@@ -12,6 +12,7 @@ var annotated_dup =
       [ "InvalidValueException", "d8/d1c/classexceptions_1_1InvalidValueException.html", "d8/d1c/classexceptions_1_1InvalidValueException" ],
       [ "MissingKeyException", "d4/d1d/classexceptions_1_1MissingKeyException.html", "d4/d1d/classexceptions_1_1MissingKeyException" ],
       [ "MissingTypeException", "d5/d67/classexceptions_1_1MissingTypeException.html", "d5/d67/classexceptions_1_1MissingTypeException" ],
+      [ "NoSuchDirException", "d9/d05/classexceptions_1_1NoSuchDirException.html", "d9/d05/classexceptions_1_1NoSuchDirException" ],
       [ "ParsingException", "dc/de6/classexceptions_1_1ParsingException.html", "dc/de6/classexceptions_1_1ParsingException" ],
       [ "UnreachableCodeException", "d9/d52/classexceptions_1_1UnreachableCodeException.html", "d9/d52/classexceptions_1_1UnreachableCodeException" ]
     ] ],
