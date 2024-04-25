@@ -90,6 +90,11 @@ int main(int argc, char *argv[]) {
         OUTPUT << "\t - " << file << "\n";
     }
 
+    // The first element of the vector is the output directory
+    // If the output directory is not given, there'll be an empty string
+    std::string outputDir = files[0];
+    files.erase(files.begin());
+
     // Replace the original files vector with the validFiles vector
     files = std::move(validateFiles(files));
     parseFiles(files);
@@ -120,7 +125,7 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
 
         if (!utilities::Utils::checkFileEnding(file)) {
             LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
-            OUTPUT << "If the file is not in JSON Format, continuing may "
+            OUTPUT << "If the file is not in JSON format, continuing may "
                    "result in\nunexpected behaviour!\n";
 
             if (!utilities::Utils::askToContinue()) {

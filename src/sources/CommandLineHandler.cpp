@@ -13,10 +13,9 @@
 #include "CommandLineHandler.hpp"
 #include "LoggingWrapper.hpp"
 #include "config.hpp"
-#include <bits/getopt_ext.h>
 #include <cstdlib>
 #include <cstring>
-#include <stdexcept>
+#include <getopt.h>
 #include <vector>
 
 namespace cli {
@@ -28,10 +27,11 @@ void CommandLineHandler::printHelp() {
            << "\n"
            << BOLD << "Options:\n"
            << RESET << "----------\n"
+           << "-o, --outdir\t [path]\t\tOutput the batch file to the given "
+           "dir\n"
            << "-h, --help\t\t\tPrint this help message\n"
-           << "-V, --version\t\t\tPrint the version number\n"
+           << "-v, --version\t\t\tPrint the version number\n"
            << "-c, --credits\t\t\tPrint the credits\n\n"
-           << "\n"
            << "    --verbose\t\t\tStart the application in verbose mode\n"
            << ITALIC
            << "          \t\t\tNote: Verbose flag should be passed first!\n\n"
@@ -67,10 +67,12 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         char *argv[]) {
     LOG_INFO << "Parsing arguments...";
 
+    std::vector<std::string> files;
+
     while (true) {
         int optIndex = -1;
         struct option longOption = {};
-        auto result = getopt_long(argc, argv, "hvc", options, &optIndex);
+        auto result = getopt_long(argc, argv, "hvco:", options, &optIndex);
 
         if (result == -1) {
             LOG_INFO << "End of options reached";
@@ -79,7 +81,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
         switch (result) {
         case '?':
-            LOG_WARNING << "Invalid Option\n";
+            LOG_ERROR << "Invalid Option (argument)\n";
             CommandLineHandler::printHelp();
 
         case 'h':
@@ -93,6 +95,12 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
         case 'c':
             LOG_INFO << "Credit option detected";
             CommandLineHandler::printCredits();
+
+        case 'o':
+            LOG_INFO << "Output option detected";
+            LOG_DEBUG << "Output file: " << optarg;
+            files.emplace_back(optarg);
+            break;
 
         case 0:
             LOG_INFO << "Long option without short version detected";
@@ -118,7 +126,10 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
     LOG_INFO << "Options have been parsed";
     LOG_INFO << "Checking for arguments...";
-    std::vector<std::string> files;
+
+    if (files.empty()) {
+        files.emplace_back("");
+    }
 
     while (optind < argc) {
         LOG_INFO << "Adding file: " << argv[optind];

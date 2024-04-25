@@ -85,7 +85,7 @@ public:
      * @throws std::logic_error
      * @return Returns a vector of strings containing all filenames.
      */
-    static std::vector<std::string> parseArguments(int argc, char* argv[]);
+    static std::vector<std::string> parseArguments(int argc, char *argv[]);
     /**
      * @brief The Constructor of the CommandLineHandler Class
      * @note As all functions are static it should not be used and as such
@@ -111,9 +111,10 @@ public:
  */
 static const struct option options[] = {
     {"help", no_argument, nullptr, 'h'},
-    {"version", no_argument, nullptr, 'V'},
+    {"version", no_argument, nullptr, 'v'},
     {"credits", no_argument, nullptr, 'c'},
     {"verbose", no_argument, nullptr, 0},
+    {"outdir", required_argument, nullptr, 'o'},
     nullptr
     // Brief/verbose
     // Output dir
