@@ -12,6 +12,7 @@
 #include "FileData.hpp"
 #include "JsonHandler.hpp"
 #include <fstream>
+#include <sstream>
 
 /**
  * @class BatchCreator
@@ -23,7 +24,6 @@
  */
 class BatchCreator {
 public:
-
     /**
      * @brief Initialisiert BatchCreator
      * @details
@@ -33,10 +33,13 @@ public:
      */
     BatchCreator(std::shared_ptr<parsing::FileData> fileData);
 
+    /** @todo Documentation */
+    std::shared_ptr<std::stringstream> getDataStream() {
+        return dataStream;
+    }
 
 private:
-
-    std::ofstream batchFile;
+    std::shared_ptr<std::stringstream> dataStream;
 
     std::shared_ptr<parsing::FileData> fileData;
 
@@ -102,6 +105,4 @@ private:
      *
      */
     void writeEnd();
-
-
 };

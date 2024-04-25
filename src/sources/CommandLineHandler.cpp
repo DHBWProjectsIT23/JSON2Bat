@@ -63,8 +63,8 @@ void CommandLineHandler::printCredits() {
     exit(0);
 }
 
-std::tuple<std::optional<std::string>, std::vector<std::string>> CommandLineHandler::parseArguments(int argc,
-        char *argv[]) {
+std::tuple<std::optional<std::string>, std::vector<std::string>>
+CommandLineHandler::parseArguments(int argc, char *argv[]) {
     LOG_INFO << "Parsing arguments...";
 
     std::vector<std::string> files;
@@ -131,6 +131,7 @@ std::tuple<std::optional<std::string>, std::vector<std::string>> CommandLineHand
         LOG_INFO << "Adding file: " << argv[optind];
         files.emplace_back(argv[optind++]);
     }
+    LOG_DEBUG << files.size();
 
     LOG_INFO << "Arguments and options have been parsed";
     return std::make_tuple(outDir, files);

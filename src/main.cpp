@@ -41,13 +41,15 @@ std::vector<std::string> validateFiles(std::vector<std::string> files);
  *
  * @param files
  */
-void parseFiles(std::vector<std::string> files);
+void parseFiles(std::vector<std::string> files,
+                std::optional<std::string> outDir);
 
 /**
  * @brief Main function of the program
  * @details
- * The main function is responsible for connection all parts of the programm.
- * It calls all relevant classes and finishes when everything is done.
+ * The main function is responsible for connection all parts of the
+ * programm. It calls all relevant classes and finishes when everything is
+ * done.
  *
  * @param argc The number of arguments given
  * @param argv Th command line arguments given
@@ -92,14 +94,9 @@ int main(int argc, char *argv[]) {
         OUTPUT << "\t - " << file << "\n";
     }
 
-    // The first element of the vector is the output directory
-    // If the output directory is not given, there'll be an empty string
-    std::string outputDir = files[0];
-    files.erase(files.begin());
-
     // Replace the original files vector with the validFiles vector
     files = std::move(validateFiles(files));
-    parseFiles(files);
+    parseFiles(files, outDir);
 
     LOG_INFO << "Exiting...";
     return 0;
@@ -143,7 +140,8 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
     return validFiles;
 }
 
-void parseFiles(std::vector<std::string> files) {
+void parseFiles(std::vector<std::string> files,
+                std::optional<std::string> outDir) {
 
     for (auto file = files.begin(); file != files.end(); ++file) {
         OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
@@ -153,7 +151,23 @@ void parseFiles(std::vector<std::string> files) {
         try {
             parsing::JsonHandler jsonHandler(*file);
             fileData = jsonHandler.getFileData();
-            BatchCreator batchCreator(fileData);
+            BatchCreator batchCreator = BatchCreator(fileData);
+            std::shared_ptr<std::stringstream> dataStream =
+                batchCreator.getDataStream();
+            std::ofstream outFile;
+            std::string outValue;
+            if (outDir.has_value()) {
+                outValue = utilities::Utils::checkDirectory(outDir.value());
+            }
+            std::string fileName = outDir.has_value()
+                                   ? outDir.value() + fileData->getOutputFile()
+                                   : fileData->getOutputFile();
+            outFile.open(fileName);
+            if (!outFile.good()) {
+                throw exceptions::FailedToOpenFileException(fileName);
+            }
+            outFile << dataStream->str();
+            outFile.close();
         } catch (const exceptions::CustomException &e) {
             OUTPUT << "\nThere has been a error while trying to parse \"" << *file
                    << ":\n";
@@ -172,5 +186,5 @@ void parseFiles(std::vector<std::string> files) {
             continue;
         }
     }
-    OUTPUT << cli::ITALIC << "Done with files!\n" << cli::RESET;
+    OUTPUT << "Done with files!\n";
 }

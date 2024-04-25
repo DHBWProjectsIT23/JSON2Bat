@@ -64,10 +64,6 @@ void JsonHandler::assignOutputFile() const {
     LOG_INFO << "Assigning outputfile...\n";
     std::string outputFile = this->root->get("outputfile", "").asString();
 
-    if (utilities::Utils::checkIfFileExists(outputFile)) {
-        throw exceptions::FileExistsException(outputFile);
-    }
-
     this->data->setOutputFile(outputFile);
 }
 

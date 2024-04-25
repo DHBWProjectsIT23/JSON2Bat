@@ -74,6 +74,9 @@ public:
      */
     static bool
     askToContinue(const std::string &prompt = "Do you want to continue? (Y/N)\n");
+
+    /** @todo documentation */
+    static std::string &checkDirectory(std::string &directory);
 };
 } // namespace utilities
 
