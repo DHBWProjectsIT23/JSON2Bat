@@ -14,9 +14,11 @@
 
 #include "Utils.hpp"
 #include "CommandLineHandler.hpp"
+#include "Exceptions.hpp"
 #include "config.hpp"
 
 #include <LoggingWrapper.hpp>
+#include <filesystem>
 #include <fstream>
 #include <string>
 
@@ -57,5 +59,16 @@ bool Utils::askToContinue(const std::string &prompt) {
     } while (true);
 
     return userInput == "y" || userInput == "yes";
+}
+std::string &Utils::checkDirectory(std::string &directory) {
+    if (!directory.empty() && directory.back() != '/' &&
+            directory.back() != '\\') {
+        directory += '/';
+    }
+
+    if (!std::filesystem::exists(directory)) {
+        throw exceptions::NoSuchDirException(directory);
+    }
+    return directory;
 }
 } // namespace utilities

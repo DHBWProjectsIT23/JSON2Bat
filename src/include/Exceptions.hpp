@@ -132,7 +132,8 @@ private:
     std::string message = "Invalid key found!";
 
 public:
-    explicit InvalidKeyException(const std::vector<std::tuple<int, std::string>> &keys) {
+    explicit InvalidKeyException(
+        const std::vector<std::tuple<int, std::string>> &keys) {
         LOG_INFO << "InvalidKeyException: " << message;
         for (const auto &[line, key] : keys) {
             LOG_WARNING << "Invalid key found at line " << line << ": \"" << key
@@ -148,9 +149,9 @@ public:
  * @class InvalidTypeException
  * @brief Exception for invalid types.
  * @details
- * This exception is thrown when the value of the "type" field within the entries
- * is invalid (not "EXE", "PATH", "ENV"). It also prints the type and the line
- * of the invalid type.
+ * This exception is thrown when the value of the "type" field within the
+ * entries is invalid (not "EXE", "PATH", "ENV"). It also prints the type and
+ * the line of the invalid type.
  */
 class InvalidTypeException : public CustomException {
 private:
@@ -251,6 +252,21 @@ public:
     explicit FailedToOpenFileException(const std::string &file) {
         message = "Failed to open file: " + file;
         LOG_INFO << "FailedToOpenFileException: " << message;
+    }
+    [[nodiscard]] const char *what() const noexcept override {
+        return message.c_str();
+    }
+};
+
+class NoSuchDirException : public CustomException {
+private:
+    std::string message;
+
+    /** @todo Documentation*/
+public:
+    explicit NoSuchDirException(const std::string &dir) {
+        message = "No such directory: " + dir;
+        LOG_INFO << "NoSuchDirException: " << message;
     }
     [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();

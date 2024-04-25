@@ -63,11 +63,12 @@ void CommandLineHandler::printCredits() {
     exit(0);
 }
 
-std::vector<std::string> CommandLineHandler::parseArguments(int argc,
-        char *argv[]) {
+std::tuple<std::optional<std::string>, std::vector<std::string>>
+CommandLineHandler::parseArguments(int argc, char *argv[]) {
     LOG_INFO << "Parsing arguments...";
 
     std::vector<std::string> files;
+    std::optional<std::string> outDir;
 
     while (true) {
         int optIndex = -1;
@@ -98,8 +99,7 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
 
         case 'o':
             LOG_INFO << "Output option detected";
-            LOG_DEBUG << "Output file: " << optarg;
-            files.emplace_back(optarg);
+            outDir = optarg;
             break;
 
         case 0:
@@ -127,16 +127,13 @@ std::vector<std::string> CommandLineHandler::parseArguments(int argc,
     LOG_INFO << "Options have been parsed";
     LOG_INFO << "Checking for arguments...";
 
-    if (files.empty()) {
-        files.emplace_back("");
-    }
-
     while (optind < argc) {
         LOG_INFO << "Adding file: " << argv[optind];
         files.emplace_back(argv[optind++]);
     }
+    LOG_DEBUG << files.size();
 
     LOG_INFO << "Arguments and options have been parsed";
-    return files;
+    return std::make_tuple(outDir, files);
 }
 } // namespace cli

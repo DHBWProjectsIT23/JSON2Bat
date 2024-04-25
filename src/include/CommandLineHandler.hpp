@@ -20,6 +20,7 @@
 #define COMMANDLINEHANDLER_HPP
 
 #include <getopt.h>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -84,8 +85,12 @@ public:
      * @param argv The arguments given
      * @throws std::logic_error
      * @return Returns a vector of strings containing all filenames.
+     *
+     *
+     * @todo Update documentation
      */
-    static std::vector<std::string> parseArguments(int argc, char *argv[]);
+    static std::tuple<std::optional<std::string>, std::vector<std::string>>
+    parseArguments(int argc, char *argv[]);
     /**
      * @brief The Constructor of the CommandLineHandler Class
      * @note As all functions are static it should not be used and as such

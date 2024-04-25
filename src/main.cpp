@@ -41,13 +41,14 @@ std::vector<std::string> validateFiles(std::vector<std::string> files);
  *
  * @param files
  */
-void parseFiles(std::vector<std::string> files);
+void parseFiles(std::vector<std::string> files, std::string outDir);
 
 /**
  * @brief Main function of the program
  * @details
- * The main function is responsible for connection all parts of the programm.
- * It calls all relevant classes and finishes when everything is done.
+ * The main function is responsible for connection all parts of the
+ * programm. It calls all relevant classes and finishes when everything is
+ * done.
  *
  * @param argc The number of arguments given
  * @param argv Th command line arguments given
@@ -78,8 +79,19 @@ int main(int argc, char *argv[]) {
     }
 
     // Vector of all inputted file names
-    std::vector<std::string> files =
-        cli::CommandLineHandler::parseArguments(argc, argv);
+    auto arguments = cli::CommandLineHandler::parseArguments(argc, argv);
+
+    std::vector<std::string> files = std::get<1>(arguments);
+    std::optional<std::string> outDirOption = std::get<0>(arguments);
+    std::string outDir;
+    if (outDirOption.has_value()) {
+        try {
+            outDir = utilities::Utils::checkDirectory(outDirOption.value());
+        } catch (const exceptions::CustomException &e) {
+            LOG_ERROR << e.what();
+            return 1;
+        }
+    }
 
     if (files.empty()) {
         LOG_ERROR << "No files were given as arguments!\n";
@@ -90,14 +102,9 @@ int main(int argc, char *argv[]) {
         OUTPUT << "\t - " << file << "\n";
     }
 
-    // The first element of the vector is the output directory
-    // If the output directory is not given, there'll be an empty string
-    std::string outputDir = files[0];
-    files.erase(files.begin());
-
     // Replace the original files vector with the validFiles vector
     files = std::move(validateFiles(files));
-    parseFiles(files);
+    parseFiles(files, outDir);
 
     LOG_INFO << "Exiting...";
     return 0;
@@ -124,8 +131,10 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
         }
 
         if (!utilities::Utils::checkFileEnding(file)) {
-            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
-            OUTPUT << "If the file is not in JSON format, continuing may "
+
+            LOG_WARNING << "The file \"" << file
+                        << "\" does not end in \".json\"\n";
+            OUTPUT << "If the file is not in JSON Format, continuing may "
                    "result in\nunexpected behaviour!\n";
 
             if (!utilities::Utils::askToContinue()) {
@@ -141,7 +150,7 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
     return validFiles;
 }
 
-void parseFiles(std::vector<std::string> files) {
+void parseFiles(std::vector<std::string> files, std::string outDir) {
 
     for (auto file = files.begin(); file != files.end(); ++file) {
         OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
@@ -151,7 +160,17 @@ void parseFiles(std::vector<std::string> files) {
         try {
             parsing::JsonHandler jsonHandler(*file);
             fileData = jsonHandler.getFileData();
-            BatchCreator batchCreator(fileData);
+            BatchCreator batchCreator = BatchCreator(fileData);
+            std::shared_ptr<std::stringstream> dataStream =
+                batchCreator.getDataStream();
+            std::ofstream outFile;
+            std::string fileName = outDir + fileData->getOutputFile();
+            outFile.open(fileName);
+            if (!outFile.good()) {
+                throw exceptions::FailedToOpenFileException(fileName);
+            }
+            outFile << dataStream->str();
+            outFile.close();
         } catch (const exceptions::CustomException &e) {
             OUTPUT << "\nThere has been a error while trying to parse \"" << *file
                    << ":\n";
@@ -170,5 +189,5 @@ void parseFiles(std::vector<std::string> files) {
             continue;
         }
     }
-    OUTPUT << cli::ITALIC << "Done with files!\n" << cli::RESET;
+    OUTPUT << "Done with files!\n";
 }
