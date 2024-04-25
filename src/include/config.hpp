@@ -17,7 +17,7 @@
 
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
-#define LOG_CONFIG "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging.conf"
+#define LOG_CONFIG "/home/simon/1_Coding/projectJsonToBat/build/Release/config/easylogging.conf"
 #define EXECUTABLE_NAME "json2batch"
 #define MAJOR_VERSION "0"
 #define MINOR_VERSION "2"

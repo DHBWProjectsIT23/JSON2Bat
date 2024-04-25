@@ -31,14 +31,6 @@ void Utils::setupEasyLogging(const std::string &configFile) {
     LOG_INFO << "For more Information checkout " << HOMEPAGE_URL;
     LOG_INFO << "EasyLogging has been setup!";
 }
-bool Utils::checkIfFileExists(const std::string &fileName) {
-    LOG_INFO << "Checking if file \"" << fileName << "\"exists...";
-    std::ifstream file(fileName);
-    return file.good();
-}
-bool Utils::checkFileEnding(const std::string_view &fileName) {
-    return fileName.size() >= 5 && fileName.ends_with(".json");
-}
 bool Utils::askToContinue(const std::string &prompt) {
     std::string userInput;
     LOG_INFO << "Asking for user Confirmation to continue...";
@@ -71,4 +63,23 @@ std::string &Utils::checkDirectory(std::string &directory) {
     }
     return directory;
 }
+bool Utils::handleParseException(const exceptions::CustomException &e,
+                                 const std::vector<std::string>::iterator &file,
+                                 const std::vector<std::string> &files) {
+    OUTPUT << "\nThere has been a error while trying to parse \"" << *file
+           << ":\n";
+    LOG_ERROR << e.what();
+
+    if (std::next(file) != files.end() &&
+            !utilities::Utils::askToContinue(
+                "Do you want to continue with the other files? (y/n) "
+                "")) {
+        OUTPUT << "Aborting...";
+        LOG_INFO << "Application ended by user Input";
+        return false;
+    }
+    std::cout << std::endl;
+    return true;
+}
+
 } // namespace utilities
