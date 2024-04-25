@@ -1,11 +1,11 @@
-.TH "todo" 3 "Thu Apr 25 2024 17:35:57" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.TH "todo" 3 "Thu Apr 25 2024 19:29:40" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 todo \- Todo List 
 .PP
 
-.IP "\fBMember \fBBatchCreator::getDataStream\fP ()\fP" 1c
+.IP "\fBMember \fBBatchCreator::getDataStream\fP () const\fP" 1c
 Documentation  
 .IP "\fBMember \fBcli::CommandLineHandler::parseArguments\fP (int argc, char *argv[])\fP" 1c
 Update documentation  
@@ -20,9 +20,11 @@ Documentation
 Refactoring  
 .IP "\fBpage \fBMain Page\fP \fP" 1c
 Update \fBREADME\&.md\fP 
+.IP "\fBNamespace \fBparsing\fP \fP" 1c
+Document -- map/set for efficient  
 .IP "\fBMember \fBparsing::KeyValidator::getUnknownKeyLine\fP (const std::string &filename, const std::string &wrongKey)\fP" 1c
 Documentation  
-.IP "\fBMember \fBparsing::KeyValidator::validateEntries\fP (const std::string &filename, const std::vector< std::string > &entryKeys)\fP" 1c
+.IP "\fBMember \fBparsing::KeyValidator::validateEntries\fP (const std::string &filename, const std::unordered_set< std::string > &entryKeys) const\fP" 1c
 Documentation  
 .IP "\fBMember \fButilities::Utils::checkDirectory\fP (std::string &directory)\fP" 1c
 documentation 

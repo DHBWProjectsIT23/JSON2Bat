@@ -1,11 +1,11 @@
 <map id="parsing::JsonHandler::assignEntries" name="parsing::JsonHandler::assignEntries">
-<area shape="rect" id="Node000001" title="Assigns entries to this&#45;&gt;data." alt="" coords="613,5,755,46"/>
-<area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="422,5,565,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="597,28,565,28,565,23,597,23"/>
-<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="232,5,374,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,28,375,28,375,23,407,23"/>
-<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html#aefaae33c8deff99024fbb1f547364e08" title=" " alt="" coords="103,13,184,39"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,28,184,28,184,23,216,23"/>
+<area shape="rect" id="Node000001" title="Assigns entries to this&#45;&gt;data." alt="" coords="606,5,748,46"/>
+<area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="415,5,558,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="590,28,558,28,558,23,590,23"/>
+<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="225,5,367,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,28,368,28,368,23,400,23"/>
+<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html#a0f61acd0910d985bc7abe4af8c3bffe0" title=" " alt="" coords="103,13,177,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="209,28,178,28,178,23,209,23"/>
 <area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
 </map>

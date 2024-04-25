@@ -110,12 +110,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aba875f8f5a9d060b28aabd965d3a5eb0" id="r_aba875f8f5a9d060b28aabd965d3a5eb0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">setupEasyLogging</a> (const std::string &amp;configFile)</td></tr>
 <tr class="memdesc:aba875f8f5a9d060b28aabd965d3a5eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up easylogging.  <br /></td></tr>
 <tr class="separator:aba875f8f5a9d060b28aabd965d3a5eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54995db8d1b951ac391ee881ddff2dc4" id="r_a54995db8d1b951ac391ee881ddff2dc4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9e/classutilities_1_1Utils.html#a54995db8d1b951ac391ee881ddff2dc4">checkIfFileExists</a> (const std::string &amp;fileName)</td></tr>
-<tr class="memdesc:a54995db8d1b951ac391ee881ddff2dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a file exists.  <br /></td></tr>
-<tr class="separator:a54995db8d1b951ac391ee881ddff2dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1917c71b03a2a1bdf80a9ea6e544e86c" id="r_a1917c71b03a2a1bdf80a9ea6e544e86c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9e/classutilities_1_1Utils.html#a1917c71b03a2a1bdf80a9ea6e544e86c">checkFileEnding</a> (const std::string_view &amp;fileName)</td></tr>
-<tr class="memdesc:a1917c71b03a2a1bdf80a9ea6e544e86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the file ending is ".json".  <br /></td></tr>
-<tr class="separator:a1917c71b03a2a1bdf80a9ea6e544e86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ae5e5ca3f40a7c2de1667856f5e0bd" id="r_ad0ae5e5ca3f40a7c2de1667856f5e0bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">handleParseException</a> (const <a class="el" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e, const std::vector&lt; std::string &gt;::iterator &amp;file, const std::vector&lt; std::string &gt; &amp;files)</td></tr>
+<tr class="separator:ad0ae5e5ca3f40a7c2de1667856f5e0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982a6227fd42d6437eaea4b6887df4ff" id="r_a982a6227fd42d6437eaea4b6887df4ff"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">askToContinue</a> (const std::string &amp;prompt=&quot;Do you want to continue? (Y/N)\n&quot;)</td></tr>
 <tr class="memdesc:a982a6227fd42d6437eaea4b6887df4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks if the user wants to continue.  <br /></td></tr>
 <tr class="separator:a982a6227fd42d6437eaea4b6887df4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +122,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Responsible for utility function. </p>
 <p>This class is responsible for handling miscellaneous utility functions which be used throughout the whole project. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d09/Utils_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d7/d09/Utils_8hpp_source.html">Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d09/Utils_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d7/d09/Utils_8hpp_source.html">Utils.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a982a6227fd42d6437eaea4b6887df4ff" name="a982a6227fd42d6437eaea4b6887df4ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a982a6227fd42d6437eaea4b6887df4ff">&#9670;&#160;</a></span>askToContinue()</h2>
@@ -161,20 +157,20 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if the user wants to continue and false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d9e/classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff_icgraph.png" border="0" usemap="#ad6/d9e/classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff_icgraph" alt=""/></div>
 <map name="ad6/d9e/classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff_icgraph" id="ad6/d9e/classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff_icgraph">
-<area shape="rect" title="Asks if the user wants to continue." alt="" coords="245,31,433,56"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#aefaae33c8deff99024fbb1f547364e08" title=" " alt="" coords="109,5,191,31"/>
-<area shape="poly" title=" " alt="" coords="229,31,190,26,191,21,230,26"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77" title=" " alt="" coords="103,55,197,80"/>
-<area shape="poly" title=" " alt="" coords="230,60,198,64,197,59,229,55"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,31,55,56"/>
-<area shape="poly" title=" " alt="" coords="95,33,56,41,55,36,94,27"/>
-<area shape="poly" title=" " alt="" coords="87,58,55,51,56,46,88,52"/>
+<area shape="rect" title="Asks if the user wants to continue." alt="" coords="290,42,478,68"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd" title=" " alt="" coords="103,5,242,46"/>
+<area shape="poly" title=" " alt="" coords="275,43,242,38,243,33,275,37"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77" title=" " alt="" coords="125,70,220,96"/>
+<area shape="poly" title=" " alt="" coords="275,72,220,79,220,74,275,67"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,42,55,68"/>
+<area shape="poly" title=" " alt="" coords="88,46,55,53,54,47,87,41"/>
+<area shape="poly" title=" " alt="" coords="110,73,55,62,56,57,111,68"/>
 </map>
 </div>
 
@@ -205,13 +201,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>documentation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00063">63</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00055">55</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d9e/classutilities_1_1Utils_af6c551d7c70f43171ab044af7451aee4_icgraph.png" border="0" usemap="#ad6/d9e/classutilities_1_1Utils_af6c551d7c70f43171ab044af7451aee4_icgraph" alt=""/></div>
 <map name="ad6/d9e/classutilities_1_1Utils_af6c551d7c70f43171ab044af7451aee4_icgraph" id="ad6/d9e/classutilities_1_1Utils_af6c551d7c70f43171ab044af7451aee4_icgraph">
-<area shape="rect" title=" " alt="" coords="103,5,290,31"/>
+<area shape="rect" title=" " alt="" coords="301,5,488,31"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,5,253,31"/>
+<area shape="poly" title=" " alt="" coords="285,21,253,21,253,16,285,16"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -219,8 +217,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a1917c71b03a2a1bdf80a9ea6e544e86c" name="a1917c71b03a2a1bdf80a9ea6e544e86c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1917c71b03a2a1bdf80a9ea6e544e86c">&#9670;&#160;</a></span>checkFileEnding()</h2>
+<a id="ad0ae5e5ca3f40a7c2de1667856f5e0bd" name="ad0ae5e5ca3f40a7c2de1667856f5e0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ae5e5ca3f40a7c2de1667856f5e0bd">&#9670;&#160;</a></span>handleParseException()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,11 +227,27 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool utilities::Utils::checkFileEnding </td>
+          <td class="memname">bool utilities::Utils::handleParseException </td>
           <td>(</td>
-          <td class="paramtype">const std::string_view &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt;::iterator &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>files</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -243,73 +257,27 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if the file ending is ".json". </p>
-<p>This function checks if the given file ends with ".json". </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fileName</td><td>The file which should be checked. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns true if the file ends with ".json" and false otherwise. </dd></dl>
+<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00066">66</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00034">askToContinue()</a>, and <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html#l00032">exceptions::CustomException::what()</a>.</p>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/d9e/classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c_icgraph.png" border="0" usemap="#ad6/d9e/classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c_icgraph" alt=""/></div>
-<map name="ad6/d9e/classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c_icgraph" id="ad6/d9e/classutilities_1_1Utils_a1917c71b03a2a1bdf80a9ea6e544e86c_icgraph">
-<area shape="rect" title="Checks if the file ending is &quot;.json&quot;." alt="" coords="245,5,402,46"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77" title=" " alt="" coords="103,13,197,39"/>
-<area shape="poly" title=" " alt="" coords="230,28,198,28,198,23,230,23"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
-<area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
+<div class="center"><img src="../../d6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_cgraph.png" border="0" usemap="#ad6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_cgraph" alt=""/></div>
+<map name="ad6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_cgraph" id="ad6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,145,68"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="194,5,382,31"/>
+<area shape="poly" title=" " alt="" coords="145,35,178,31,178,36,146,41"/>
+<area shape="rect" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="193,55,383,96"/>
+<area shape="poly" title=" " alt="" coords="146,54,178,58,177,64,145,59"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a54995db8d1b951ac391ee881ddff2dc4" name="a54995db8d1b951ac391ee881ddff2dc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54995db8d1b951ac391ee881ddff2dc4">&#9670;&#160;</a></span>checkIfFileExists()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool utilities::Utils::checkIfFileExists </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check if a file exists. </p>
-<p>This function checks if a file exists by trying to open it using fstream. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fileName</td><td>The file which should be checked. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns true if the file exists and false otherwise </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/d9e/classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4_icgraph.png" border="0" usemap="#ad6/d9e/classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4_icgraph" alt=""/></div>
-<map name="ad6/d9e/classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4_icgraph" id="ad6/d9e/classutilities_1_1Utils_a54995db8d1b951ac391ee881ddff2dc4_icgraph">
-<area shape="rect" title="Check if a file exists." alt="" coords="245,5,389,46"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77" title=" " alt="" coords="103,13,197,39"/>
-<area shape="poly" title=" " alt="" coords="229,28,197,28,197,23,229,23"/>
+<div class="center"><img src="../../d6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_icgraph.png" border="0" usemap="#ad6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_icgraph" alt=""/></div>
+<map name="ad6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_icgraph" id="ad6/d9e/classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,242,46"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
 </map>
@@ -375,7 +343,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d96/namespaceutilities.html">utilities</a></li><li class="navelem"><a class="el" href="../../d6/d9e/classutilities_1_1Utils.html">Utils</a></li>
-    <li class="footer">Generated on Thu Apr 25 2024 17:35:57 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 19:29:40 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

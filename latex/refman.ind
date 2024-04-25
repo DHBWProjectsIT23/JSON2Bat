@@ -50,12 +50,10 @@
 
   \indexspace
 
+  \item {checkConfigFile}
+    \subitem {main.cpp}, \hyperpage{101}
   \item {checkDirectory}
     \subitem {utilities::Utils}, \hyperpage{78}
-  \item {checkFileEnding}
-    \subitem {utilities::Utils}, \hyperpage{78}
-  \item {checkIfFileExists}
-    \subitem {utilities::Utils}, \hyperpage{79}
   \item {cli}, \hyperpage{17}
     \subitem {options}, \hyperpage{18}
   \item {cli::CommandLineHandler}, \hyperpage{27}
@@ -189,6 +187,8 @@
 
   \indexspace
 
+  \item {handleParseException}
+    \subitem {utilities::Utils}, \hyperpage{78}
   \item {hideShell}
     \subitem {parsing::FileData}, \hyperpage{41}
   \item {HOMEPAGE\_URL}
@@ -225,9 +225,11 @@
   \item {main}
     \subitem {main.cpp}, \hyperpage{101}
   \item {main.cpp}
+    \subitem {checkConfigFile}, \hyperpage{101}
     \subitem {main}, \hyperpage{101}
-    \subitem {parseFiles}, \hyperpage{101}
-    \subitem {validateFiles}, \hyperpage{102}
+    \subitem {parseAndValidateArgs}, \hyperpage{102}
+    \subitem {parseFile}, \hyperpage{103}
+    \subitem {validateFiles}, \hyperpage{104}
   \item {MAJOR\_VERSION}
     \subitem {config.hpp}, \hyperpage{87}
   \item {message}
@@ -262,12 +264,13 @@
 
   \indexspace
 
+  \item {parseAndValidateArgs}
+    \subitem {main.cpp}, \hyperpage{102}
   \item {parseArguments}
     \subitem {cli::CommandLineHandler}, \hyperpage{29}
   \item {parseFile}
+    \subitem {main.cpp}, \hyperpage{103}
     \subitem {parsing::JsonHandler}, \hyperpage{58}
-  \item {parseFiles}
-    \subitem {main.cpp}, \hyperpage{101}
   \item {parsing}, \hyperpage{19}
   \item {parsing::FileData}, \hyperpage{36}
     \subitem {addCommand}, \hyperpage{37}
@@ -347,17 +350,18 @@
 		\hyperpage{85}
   \item {src/include/config.hpp}, \hyperpage{85}, \hyperpage{88}
   \item {src/include/Exceptions.hpp}, \hyperpage{88}, \hyperpage{90}
-  \item {src/include/FileData.hpp}, \hyperpage{92, 93}
+  \item {src/include/FileData.hpp}, \hyperpage{92}, \hyperpage{94}
   \item {src/include/JsonHandler.hpp}, \hyperpage{94}, \hyperpage{96}
-  \item {src/include/KeyValidator.hpp}, \hyperpage{96}, \hyperpage{98}
-  \item {src/include/Utils.hpp}, \hyperpage{98, 99}
-  \item {src/main.cpp}, \hyperpage{99}, \hyperpage{103}
-  \item {src/sources/BatchCreator.cpp}, \hyperpage{105}
-  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{107, 108}
-  \item {src/sources/FileData.cpp}, \hyperpage{109, 110}
-  \item {src/sources/JsonHandler.cpp}, \hyperpage{111, 112}
-  \item {src/sources/KeyValidator.cpp}, \hyperpage{114, 115}
-  \item {src/sources/Utils.cpp}, \hyperpage{117, 118}
+  \item {src/include/KeyValidator.hpp}, \hyperpage{97, 98}
+  \item {src/include/Utils.hpp}, \hyperpage{99, 100}
+  \item {src/main.cpp}, \hyperpage{100}, \hyperpage{105}
+  \item {src/sources/BatchCreator.cpp}, \hyperpage{107}
+  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{108}, 
+		\hyperpage{110}
+  \item {src/sources/FileData.cpp}, \hyperpage{111, 112}
+  \item {src/sources/JsonHandler.cpp}, \hyperpage{113, 114}
+  \item {src/sources/KeyValidator.cpp}, \hyperpage{116, 117}
+  \item {src/sources/Utils.cpp}, \hyperpage{118}, \hyperpage{120}
   \item {StyleHelpers}, \hyperpage{15}
 
   \indexspace
@@ -375,8 +379,7 @@
   \item {utilities::Utils}, \hyperpage{77}
     \subitem {askToContinue}, \hyperpage{77}
     \subitem {checkDirectory}, \hyperpage{78}
-    \subitem {checkFileEnding}, \hyperpage{78}
-    \subitem {checkIfFileExists}, \hyperpage{79}
+    \subitem {handleParseException}, \hyperpage{78}
     \subitem {setupEasyLogging}, \hyperpage{79}
 
   \indexspace
@@ -384,7 +387,7 @@
   \item {validateEntries}
     \subitem {parsing::KeyValidator}, \hyperpage{63}
   \item {validateFiles}
-    \subitem {main.cpp}, \hyperpage{102}
+    \subitem {main.cpp}, \hyperpage{104}
   \item {validateKeys}
     \subitem {parsing::KeyValidator}, \hyperpage{64}
   \item {validateTypes}

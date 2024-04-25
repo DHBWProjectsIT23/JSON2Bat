@@ -22,23 +22,23 @@ static \mbox{\hyperlink{classparsing_1_1KeyValidator}{Key\+Validator}} \& \mbox{
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_a4f916fe09121315f431e2f4f4516920d}{get\+Wrong\+Keys}} (const Json\+::\+Value \&root, const std\+::string \&filename)
+std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378}{get\+Wrong\+Keys}} (const Json\+::\+Value \&root, const std\+::string \&filename) const
 \begin{DoxyCompactList}\small\item\em Retrieve the wrong keys from a Json\+::\+Value object. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_a4e0735f40ba0979a668876b016c9d901}{validate\+Entries}} (const std\+::string \&filename, const std\+::vector$<$ std\+::string $>$ \&entry\+Keys)
+std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d}{validate\+Entries}} (const std\+::string \&filename, const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&entry\+Keys) const
 \begin{DoxyCompactList}\small\item\em Validates that an entries \textquotesingle{}type\textquotesingle{} key is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classparsing_1_1KeyValidator_ad3dfc438da80c9609cf342d02e1ea4d4}{validate\+Types}} (const std\+::string \&filename, const Json\+::\+Value \&entry, std\+::vector$<$ std\+::string $>$ \&entry\+Keys)
+static void \mbox{\hyperlink{classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e}{validate\+Types}} (const std\+::string \&filename, const Json\+::\+Value \&entry, const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&entry\+Keys)
 \begin{DoxyCompactList}\small\item\em Validates types from the entries array. \end{DoxyCompactList}\item 
 static std\+::optional$<$ int $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e}{get\+Unknown\+Key\+Line}} (const std\+::string \&filename, const std\+::string \&wrong\+Key)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa5bf3a807bf4d6d9361aa086a8ac7639}{valid\+Keys}}
+std\+::unordered\+\_\+set$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_ad7b96e124aad0004e0f2273094fb2633}{valid\+Keys}}
 \item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_a867e9d6358cb7ec685d81ac5f6346217}{valid\+Entry\+Keys}}
+std\+::unordered\+\_\+set$<$ std\+::string $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa4bc876b0f0e41f9ab4026174a5a3f20}{valid\+Entry\+Keys}}
 \end{DoxyCompactItemize}
 
 
@@ -47,7 +47,7 @@ Validates keys of a Json\+::\+Value object.
 
 This class is singleton. That way when multiple files are parsed with the application, the valid\+Keys and valid\+Entry\+Keys field only have to be allocated once. 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
 
 
 
@@ -67,7 +67,7 @@ Reference to the instance of this class
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -97,7 +97,7 @@ Here is the caller graph for this function\+:
 \item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Documentation \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00151}{151}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -107,11 +107,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{da/d86/classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classparsing_1_1KeyValidator_a4f916fe09121315f431e2f4f4516920d}\label{classparsing_1_1KeyValidator_a4f916fe09121315f431e2f4f4516920d} 
+\Hypertarget{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378}\label{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!getWrongKeys@{getWrongKeys}}
 \index{getWrongKeys@{getWrongKeys}!parsing::KeyValidator@{parsing::KeyValidator}}
 \doxysubsubsection{\texorpdfstring{getWrongKeys()}{getWrongKeys()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ parsing\+::\+Key\+Validator\+::get\+Wrong\+Keys (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{root,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ parsing\+::\+Key\+Validator\+::get\+Wrong\+Keys (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{root,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -131,18 +131,18 @@ A vector with tuples, containing the line and name of invalid types.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00151}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00108}{valid\+Keys}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00121}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00108}{valid\+Keys}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{da/d86/classparsing_1_1KeyValidator_a4f916fe09121315f431e2f4f4516920d_cgraph}
+\includegraphics[width=333pt]{da/d86/classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -150,14 +150,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{da/d86/classparsing_1_1KeyValidator_a4f916fe09121315f431e2f4f4516920d_icgraph}
+\includegraphics[width=330pt]{da/d86/classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classparsing_1_1KeyValidator_a4e0735f40ba0979a668876b016c9d901}\label{classparsing_1_1KeyValidator_a4e0735f40ba0979a668876b016c9d901} 
+\Hypertarget{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d}\label{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!validateEntries@{validateEntries}}
 \index{validateEntries@{validateEntries}!parsing::KeyValidator@{parsing::KeyValidator}}
 \doxysubsubsection{\texorpdfstring{validateEntries()}{validateEntries()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ parsing\+::\+Key\+Validator\+::validate\+Entries (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{entry\+Keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ parsing\+::\+Key\+Validator\+::validate\+Entries (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&}]{entry\+Keys }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -177,18 +177,18 @@ Validates that an entries \textquotesingle{}type\textquotesingle{} key is valid.
 \item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Documentation \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00151}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00111}{valid\+Entry\+Keys}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00121}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00111}{valid\+Entry\+Keys}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{da/d86/classparsing_1_1KeyValidator_a4e0735f40ba0979a668876b016c9d901_cgraph}
+\includegraphics[width=333pt]{da/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -196,7 +196,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{da/d86/classparsing_1_1KeyValidator_a4e0735f40ba0979a668876b016c9d901_icgraph}
+\includegraphics[width=330pt]{da/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classparsing_1_1KeyValidator_a8a3ffe788064f6b32be35870aeeb792c}\label{classparsing_1_1KeyValidator_a8a3ffe788064f6b32be35870aeeb792c} 
@@ -223,11 +223,11 @@ A vector with tuples, containing the line and name of invalid types.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00053}{get\+Wrong\+Keys()}}, \mbox{\hyperlink{KeyValidator_8cpp_source_l00080}{validate\+Entries()}}, and \mbox{\hyperlink{KeyValidator_8cpp_source_l00106}{validate\+Types()}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00051}{get\+Wrong\+Keys()}}, \mbox{\hyperlink{KeyValidator_8cpp_source_l00071}{validate\+Entries()}}, and \mbox{\hyperlink{KeyValidator_8cpp_source_l00092}{validate\+Types()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -237,11 +237,11 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{da/d86/classparsing_1_1KeyValidator_a8a3ffe788064f6b32be35870aeeb792c_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classparsing_1_1KeyValidator_ad3dfc438da80c9609cf342d02e1ea4d4}\label{classparsing_1_1KeyValidator_ad3dfc438da80c9609cf342d02e1ea4d4} 
+\Hypertarget{classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e}\label{classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!validateTypes@{validateTypes}}
 \index{validateTypes@{validateTypes}!parsing::KeyValidator@{parsing::KeyValidator}}
 \doxysubsubsection{\texorpdfstring{validateTypes()}{validateTypes()}}
-{\footnotesize\ttfamily void parsing\+::\+Key\+Validator\+::validate\+Types (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const Json\+::\+Value \&}]{entry,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{entry\+Keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily void parsing\+::\+Key\+Validator\+::validate\+Types (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const Json\+::\+Value \&}]{entry,  }\item[{const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&}]{entry\+Keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -260,18 +260,18 @@ Makes sure that each type has it\textquotesingle{}s according keys, needed to pa
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00151}{get\+Unknown\+Key\+Line()}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00121}{get\+Unknown\+Key\+Line()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{da/d86/classparsing_1_1KeyValidator_ad3dfc438da80c9609cf342d02e1ea4d4_cgraph}
+\includegraphics[width=333pt]{da/d86/classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -279,22 +279,22 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{da/d86/classparsing_1_1KeyValidator_ad3dfc438da80c9609cf342d02e1ea4d4_icgraph}
+\includegraphics[width=330pt]{da/d86/classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e_icgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classparsing_1_1KeyValidator_a867e9d6358cb7ec685d81ac5f6346217}\label{classparsing_1_1KeyValidator_a867e9d6358cb7ec685d81ac5f6346217} 
+\Hypertarget{classparsing_1_1KeyValidator_aa4bc876b0f0e41f9ab4026174a5a3f20}\label{classparsing_1_1KeyValidator_aa4bc876b0f0e41f9ab4026174a5a3f20} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!validEntryKeys@{validEntryKeys}}
 \index{validEntryKeys@{validEntryKeys}!parsing::KeyValidator@{parsing::KeyValidator}}
 \doxysubsubsection{\texorpdfstring{validEntryKeys}{validEntryKeys}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ parsing\+::\+Key\+Validator\+::valid\+Entry\+Keys\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$std\+::string$>$ parsing\+::\+Key\+Validator\+::valid\+Entry\+Keys\hspace{0.3cm}{\ttfamily [private]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}type"{}},\ \textcolor{stringliteral}{"{}key"{}},\ \textcolor{stringliteral}{"{}value"{}},\ \textcolor{stringliteral}{"{}path"{}},}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}command"{}}}
+\DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}type"{}},\ \textcolor{stringliteral}{"{}key"{}},\ \textcolor{stringliteral}{"{}value"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}path"{}},\ \textcolor{stringliteral}{"{}command"{}}}
 \DoxyCodeLine{\ \ \ \ \}}
 
 \end{DoxyCode}
@@ -302,16 +302,16 @@ Here is the caller graph for this function\+:
 
 Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00111}{111}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
 
-\Hypertarget{classparsing_1_1KeyValidator_aa5bf3a807bf4d6d9361aa086a8ac7639}\label{classparsing_1_1KeyValidator_aa5bf3a807bf4d6d9361aa086a8ac7639} 
+\Hypertarget{classparsing_1_1KeyValidator_ad7b96e124aad0004e0f2273094fb2633}\label{classparsing_1_1KeyValidator_ad7b96e124aad0004e0f2273094fb2633} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!validKeys@{validKeys}}
 \index{validKeys@{validKeys}!parsing::KeyValidator@{parsing::KeyValidator}}
 \doxysubsubsection{\texorpdfstring{validKeys}{validKeys}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ parsing\+::\+Key\+Validator\+::valid\+Keys\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$std\+::string$>$ parsing\+::\+Key\+Validator\+::valid\+Keys\hspace{0.3cm}{\ttfamily [private]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}outputfile"{}},\ \textcolor{stringliteral}{"{}hideshell"{}},\ \textcolor{stringliteral}{"{}entries"{}},}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}application"{}}}
+\DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}outputfile"{}},\ \textcolor{stringliteral}{"{}hideshell"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}entries"{}},\ \textcolor{stringliteral}{"{}application"{}}}
 \DoxyCodeLine{\ \ \ \ \}}
 
 \end{DoxyCode}

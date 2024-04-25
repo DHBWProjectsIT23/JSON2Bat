@@ -103,8 +103,10 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp.html','../../'); init
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;LoggingWrapper.hpp&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;jsoncpp/json.h&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d03/BatchCreator_8hpp_source.html">BatchCreator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html">CommandLineHandler.hpp</a>&quot;</code><br />
@@ -118,56 +120,61 @@ Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/dce/main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title="Contains the main function." alt="" coords="445,5,540,31"/>
-<area shape="rect" title=" " alt="" coords="511,226,650,252"/>
-<area shape="poly" title=" " alt="" coords="502,30,528,78,556,149,575,211,570,212,551,151,523,80,498,33"/>
-<area shape="rect" title=" " alt="" coords="72,79,131,105"/>
-<area shape="poly" title=" " alt="" coords="445,29,312,51,150,82,147,82,146,77,149,76,311,46,444,24"/>
-<area shape="rect" title=" " alt="" coords="165,153,230,178"/>
-<area shape="poly" title=" " alt="" coords="454,34,397,54,335,81,277,114,228,146,225,142,274,109,332,77,395,50,453,29"/>
-<area shape="rect" title=" " alt="" coords="113,226,218,252"/>
-<area shape="poly" title=" " alt="" coords="445,24,375,32,292,53,251,70,214,92,181,120,155,154,150,168,149,182,156,211,151,213,144,183,145,167,150,151,177,116,211,87,249,65,290,48,374,27,444,18"/>
-<area shape="rect" title=" " alt="" coords="365,300,422,326"/>
-<area shape="poly" title=" " alt="" coords="444,21,348,22,233,30,177,37,128,48,88,62,62,81,46,95,30,105,17,115,9,126,10,142,24,166,54,201,103,250,121,261,146,271,212,287,286,299,350,305,349,311,285,304,211,293,144,276,118,266,100,254,50,205,20,169,5,143,4,124,13,111,27,101,43,90,59,77,86,58,126,43,176,32,232,25,348,17,444,16"/>
-<area shape="rect" href="../../d1/d03/BatchCreator_8hpp.html" title="Creates batch file." alt="" coords="370,79,492,105"/>
-<area shape="poly" title=" " alt="" coords="484,33,453,69,449,65,480,29"/>
-<area shape="rect" href="../../d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="394,226,487,252"/>
-<area shape="poly" title=" " alt="" coords="499,31,505,58,510,96,510,138,499,179,486,200,469,218,465,214,481,197,494,177,505,138,505,96,500,59,493,32"/>
-<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="254,153,373,178"/>
-<area shape="poly" title=" " alt="" coords="448,34,403,52,361,81,339,109,325,139,320,137,335,106,357,77,400,48,446,29"/>
-<area shape="rect" href="../../d2/d5f/CommandLineHandler_8hpp.html" title="Responsible for the Command Line Interface." alt="" coords="674,226,849,252"/>
-<area shape="poly" title=" " alt="" coords="541,24,597,37,661,61,692,77,721,98,746,122,765,152,773,182,771,211,766,211,768,182,761,154,742,126,717,102,689,82,659,65,596,42,540,29"/>
-<area shape="rect" href="../../d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="642,153,750,178"/>
-<area shape="poly" title=" " alt="" coords="531,29,577,49,625,77,657,107,682,138,678,142,653,111,621,81,575,53,529,34"/>
-<area shape="rect" href="../../d7/d09/Utils_8hpp.html" title=" " alt="" coords="825,79,898,105"/>
-<area shape="poly" title=" " alt="" coords="541,26,808,76,811,77,810,82,806,82,540,31"/>
-<area shape="rect" href="../../d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="922,79,1001,105"/>
-<area shape="poly" title=" " alt="" coords="540,22,699,43,907,76,906,81,698,48,540,28"/>
-<area shape="poly" title=" " alt="" coords="392,108,246,152,244,147,391,103"/>
-<area shape="poly" title=" " alt="" coords="447,104,465,125,480,152,483,169,479,186,464,215,459,213,474,184,477,169,475,154,461,128,443,107"/>
-<area shape="poly" title=" " alt="" coords="412,107,348,147,345,142,410,103"/>
-<area shape="rect" title=" " alt="" coords="397,153,465,178"/>
-<area shape="poly" title=" " alt="" coords="434,105,434,137,428,137,428,105"/>
-<area shape="poly" title=" " alt="" coords="435,254,412,288,408,285,430,251"/>
-<area shape="rect" title=" " alt="" coords="446,300,506,326"/>
-<area shape="poly" title=" " alt="" coords="449,251,466,285,461,287,444,253"/>
-<area shape="rect" title=" " alt="" coords="567,300,633,326"/>
-<area shape="poly" title=" " alt="" coords="469,250,560,291,558,296,466,255"/>
-<area shape="rect" title=" " alt="" coords="839,300,892,326"/>
-<area shape="poly" title=" " alt="" coords="488,247,499,249,653,273,807,297,825,301,824,306,807,303,653,279,499,255,487,252"/>
-<area shape="poly" title=" " alt="" coords="360,176,521,219,520,224,358,181"/>
-<area shape="poly" title=" " alt="" coords="290,181,206,222,204,217,287,176"/>
-<area shape="poly" title=" " alt="" coords="336,177,407,216,404,221,334,181"/>
-<area shape="rect" title=" " alt="" coords="280,226,347,252"/>
-<area shape="poly" title=" " alt="" coords="316,179,316,211,311,211,311,179"/>
-<area shape="poly" title=" " alt="" coords="682,255,570,275,438,302,437,297,569,269,682,250"/>
-<area shape="poly" title=" " alt="" coords="735,255,643,296,641,291,733,250"/>
-<area shape="poly" title=" " alt="" coords="781,250,837,289,834,293,778,255"/>
-<area shape="rect" title=" " alt="" coords="728,300,795,326"/>
-<area shape="poly" title=" " alt="" coords="764,252,764,284,759,284,759,252"/>
-<area shape="poly" title=" " alt="" coords="678,181,614,220,611,216,675,177"/>
-<area shape="poly" title=" " alt="" coords="751,169,781,175,811,186,839,202,862,225,870,239,874,255,874,285,868,285,868,255,865,241,858,228,836,206,809,191,779,180,750,174"/>
-<area shape="poly" title=" " alt="" coords="868,105,883,167,887,210,886,252,878,286,872,284,880,252,882,210,878,168,863,106"/>
+<area shape="rect" title="Contains the main function." alt="" coords="590,5,686,31"/>
+<area shape="rect" title=" " alt="" coords="74,226,213,252"/>
+<area shape="poly" title=" " alt="" coords="590,22,529,25,455,34,377,52,338,65,302,81,258,111,218,147,186,183,162,215,158,212,182,180,215,143,254,107,299,77,336,60,375,46,454,28,529,19,590,16"/>
+<area shape="rect" title=" " alt="" coords="802,79,861,105"/>
+<area shape="poly" title=" " alt="" coords="672,29,788,72,786,77,670,34"/>
+<area shape="rect" title=" " alt="" coords="885,79,964,105"/>
+<area shape="poly" title=" " alt="" coords="687,29,870,74,869,80,685,34"/>
+<area shape="rect" title=" " alt="" coords="560,153,625,178"/>
+<area shape="poly" title=" " alt="" coords="637,32,603,138,598,137,632,31"/>
+<area shape="rect" title=" " alt="" coords="236,226,341,252"/>
+<area shape="poly" title=" " alt="" coords="590,22,512,27,467,35,420,47,374,64,331,87,294,116,264,154,260,168,261,183,273,212,268,215,256,184,254,167,260,151,290,113,328,82,372,59,418,42,466,30,512,22,589,16"/>
+<area shape="rect" title=" " alt="" coords="988,79,1037,105"/>
+<area shape="poly" title=" " alt="" coords="686,23,813,43,973,76,972,81,812,48,686,28"/>
+<area shape="rect" title=" " alt="" coords="631,300,688,326"/>
+<area shape="poly" title=" " alt="" coords="657,29,682,50,705,77,729,116,743,148,761,226,763,240,760,253,749,268,735,281,704,299,701,295,732,277,745,265,756,251,758,240,755,227,738,149,724,118,701,81,678,54,653,33"/>
+<area shape="rect" href="../../d1/d03/BatchCreator_8hpp.html" title="Creates batch file." alt="" coords="453,79,575,105"/>
+<area shape="poly" title=" " alt="" coords="618,34,549,73,547,69,616,29"/>
+<area shape="rect" href="../../d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="455,226,549,252"/>
+<area shape="poly" title=" " alt="" coords="645,31,652,59,657,98,655,140,650,161,640,180,627,192,607,203,557,223,555,218,605,198,624,187,636,177,645,159,650,139,652,98,647,60,639,32"/>
+<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="273,153,392,178"/>
+<area shape="poly" title=" " alt="" coords="590,31,519,50,442,81,395,112,357,144,353,140,392,108,439,77,517,45,589,26"/>
+<area shape="rect" href="../../d2/d5f/CommandLineHandler_8hpp.html" title="Responsible for the Command Line Interface." alt="" coords="572,226,746,252"/>
+<area shape="poly" title=" " alt="" coords="652,30,670,51,684,78,692,106,693,128,685,179,674,213,669,211,679,178,687,128,686,107,679,80,666,54,648,33"/>
+<area shape="rect" href="../../d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="24,153,132,178"/>
+<area shape="poly" title=" " alt="" coords="590,24,367,42,250,59,203,69,168,81,147,94,128,110,97,142,94,139,125,106,144,90,166,77,202,64,249,53,367,37,590,19"/>
+<area shape="rect" href="../../d7/d09/Utils_8hpp.html" title=" " alt="" coords="26,79,98,105"/>
+<area shape="poly" title=" " alt="" coords="590,26,384,46,117,82,114,82,113,77,116,76,383,41,590,21"/>
+<area shape="rect" href="../../d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="1061,79,1140,105"/>
+<area shape="poly" title=" " alt="" coords="686,22,842,43,1046,76,1045,81,842,48,685,28"/>
+<area shape="poly" title=" " alt="" coords="529,103,570,140,566,144,526,107"/>
+<area shape="poly" title=" " alt="" coords="516,105,507,211,502,211,510,105"/>
+<area shape="poly" title=" " alt="" coords="484,108,379,149,377,144,482,103"/>
+<area shape="rect" title=" " alt="" coords="416,153,484,178"/>
+<area shape="poly" title=" " alt="" coords="505,107,473,143,469,139,501,103"/>
+<area shape="poly" title=" " alt="" coords="530,250,620,291,617,296,528,255"/>
+<area shape="rect" title=" " alt="" coords="456,300,516,326"/>
+<area shape="poly" title=" " alt="" coords="502,253,495,285,489,284,497,252"/>
+<area shape="rect" title=" " alt="" coords="541,300,607,326"/>
+<area shape="poly" title=" " alt="" coords="516,250,553,287,549,291,512,254"/>
+<area shape="rect" title=" " alt="" coords="194,300,247,326"/>
+<area shape="poly" title=" " alt="" coords="456,255,263,303,262,298,454,250"/>
+<area shape="poly" title=" " alt="" coords="301,181,190,223,189,218,300,176"/>
+<area shape="poly" title=" " alt="" coords="328,180,306,214,302,211,323,177"/>
+<area shape="poly" title=" " alt="" coords="362,176,460,217,458,222,360,181"/>
+<area shape="rect" title=" " alt="" coords="364,226,432,252"/>
+<area shape="poly" title=" " alt="" coords="345,177,379,213,375,217,341,180"/>
+<area shape="poly" title=" " alt="" coords="662,252,662,284,657,284,657,252"/>
+<area shape="poly" title=" " alt="" coords="647,255,601,292,598,288,643,250"/>
+<area shape="poly" title=" " alt="" coords="585,255,263,307,262,302,584,250"/>
+<area shape="rect" title=" " alt="" coords="712,300,780,326"/>
+<area shape="poly" title=" " alt="" coords="676,250,722,288,718,292,672,255"/>
+<area shape="poly" title=" " alt="" coords="91,177,124,213,120,217,87,180"/>
+<area shape="poly" title=" " alt="" coords="73,179,59,214,58,233,64,251,88,274,117,290,149,300,179,306,178,311,148,305,115,295,84,278,60,253,53,234,54,213,68,177"/>
+<area shape="poly" title=" " alt="" coords="49,107,29,127,14,154,8,183,13,206,29,228,52,250,82,270,115,286,179,303,178,308,113,291,79,275,48,254,24,231,9,208,3,183,9,152,25,124,45,103"/>
+<area shape="poly" title=" " alt="" coords="67,104,74,137,69,138,62,105"/>
 </map>
 </div>
 </div>
@@ -175,10 +182,14 @@ Include dependency graph for main.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aad40abb24acce6a32218f42e80053e77" id="r_aad40abb24acce6a32218f42e80053e77"><td class="memItemLeft" align="right" valign="top">INITIALIZE_EASYLOGGINGPP std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77">validateFiles</a> (std::vector&lt; std::string &gt; files)</td></tr>
-<tr class="separator:aad40abb24acce6a32218f42e80053e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefaae33c8deff99024fbb1f547364e08" id="r_aefaae33c8deff99024fbb1f547364e08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#aefaae33c8deff99024fbb1f547364e08">parseFiles</a> (std::vector&lt; std::string &gt; files, std::string outDir)</td></tr>
-<tr class="separator:aefaae33c8deff99024fbb1f547364e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aea5a6644dca94106892dacbe05cd63" id="r_a2aea5a6644dca94106892dacbe05cd63"><td class="memItemLeft" align="right" valign="top">INITIALIZE_EASYLOGGINGPP void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a2aea5a6644dca94106892dacbe05cd63">checkConfigFile</a> ()</td></tr>
+<tr class="separator:a2aea5a6644dca94106892dacbe05cd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad612c95526cdd7ff2fa78563c0cd666f" id="r_ad612c95526cdd7ff2fa78563c0cd666f"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; std::vector&lt; std::string &gt;, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:ad612c95526cdd7ff2fa78563c0cd666f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229a422b4e4be967a1e02c69d8867c77" id="r_a229a422b4e4be967a1e02c69d8867c77"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a> (const std::vector&lt; std::string &gt; &amp;files)</td></tr>
+<tr class="separator:a229a422b4e4be967a1e02c69d8867c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f61acd0910d985bc7abe4af8c3bffe0" id="r_a0f61acd0910d985bc7abe4af8c3bffe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a0f61acd0910d985bc7abe4af8c3bffe0">parseFile</a> (const std::string &amp;file, const std::string &amp;outDir)</td></tr>
+<tr class="separator:a0f61acd0910d985bc7abe4af8c3bffe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function of the program.  <br /></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +204,38 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a2aea5a6644dca94106892dacbe05cd63" name="a2aea5a6644dca94106892dacbe05cd63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aea5a6644dca94106892dacbe05cd63">&#9670;&#160;</a></span>checkConfigFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkConfigFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00109">109</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00020">LOG_CONFIG</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d0a/main_8cpp_a2aea5a6644dca94106892dacbe05cd63_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a2aea5a6644dca94106892dacbe05cd63_icgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_a2aea5a6644dca94106892dacbe05cd63_icgraph" id="adf/d0a/main_8cpp_a2aea5a6644dca94106892dacbe05cd63_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,216,31"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
 
@@ -233,83 +276,156 @@ Functions</h2></td></tr>
 <p class="enddd">Refactoring </p>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00061">61</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00082">82</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00063">utilities::Utils::checkDirectory()</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00020">LOG_CONFIG</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00067">cli::CommandLineHandler::parseArguments()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00153">parseFiles()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">cli::CommandLineHandler::printHelp()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00026">utilities::Utils::setupEasyLogging()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00113">validateFiles()</a>, and <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html#l00032">exceptions::CustomException::what()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0a/main_8cpp_source.html#l00109">checkConfigFile()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00066">utilities::Utils::handleParseException()</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00020">LOG_CONFIG</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00121">parseAndValidateArgs()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00174">parseFile()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00026">utilities::Utils::setupEasyLogging()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00144">validateFiles()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="adf/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="adf/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="Main function of the program." alt="" coords="5,274,55,300"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4" title=" " alt="" coords="103,86,290,112"/>
-<area shape="poly" title=" " alt="" coords="31,273,37,242,50,202,70,159,101,122,107,118,110,122,105,126,75,162,55,204,42,244,36,274"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="112,136,281,177"/>
-<area shape="poly" title=" " alt="" coords="39,272,65,239,101,204,133,182,136,187,104,208,69,243,43,275"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960" title="Prints the help message." alt="" coords="349,136,518,177"/>
-<area shape="poly" title=" " alt="" coords="54,276,102,259,349,179,350,184,104,264,56,281"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#aefaae33c8deff99024fbb1f547364e08" title=" " alt="" coords="156,356,237,381"/>
-<area shape="poly" title=" " alt="" coords="56,296,156,346,153,351,54,301"/>
-<area shape="rect" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="338,496,528,537"/>
-<area shape="poly" title=" " alt="" coords="39,299,63,345,81,370,104,392,129,406,151,415,194,421,239,424,264,430,291,442,316,461,339,481,352,487,349,492,337,485,313,465,289,447,262,436,238,430,193,426,150,420,127,411,101,396,77,374,58,348,34,302"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0" title="Set up easylogging." alt="" coords="116,456,277,497"/>
-<area shape="poly" title=" " alt="" coords="37,299,58,364,78,402,105,436,117,446,114,450,101,440,73,405,53,366,32,301"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#aad40abb24acce6a32218f42e80053e77" title=" " alt="" coords="149,274,244,300"/>
-<area shape="poly" title=" " alt="" coords="55,284,134,284,134,290,55,290"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470" title="Prints the credits message." alt="" coords="349,5,518,46"/>
-<area shape="poly" title=" " alt="" coords="270,133,288,122,303,107,312,90,320,74,336,57,344,52,347,56,340,61,325,77,316,93,308,110,292,126,273,138"/>
-<area shape="poly" title=" " alt="" coords="282,154,333,154,333,159,282,159"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#a12afc8cab2af137f31c6aae2d1b27061" title="Prints the version message." alt="" coords="349,71,518,111"/>
-<area shape="poly" title=" " alt="" coords="272,133,342,113,343,119,273,138"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="339,332,527,357"/>
-<area shape="poly" title=" " alt="" coords="237,362,323,353,324,358,238,367"/>
-<area shape="rect" href="../../da/d1c/classBatchCreator.html#a508c78b70fa31f5c8a1a5b5c6995899c" title=" " alt="" coords="338,381,528,407"/>
-<area shape="poly" title=" " alt="" coords="238,370,323,379,323,385,237,375"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="362,431,504,471"/>
-<area shape="poly" title=" " alt="" coords="238,379,291,398,339,417,356,423,354,428,337,421,289,403,236,384"/>
-<area shape="poly" title=" " alt="" coords="238,373,266,383,292,398,309,420,317,441,324,461,340,481,346,486,343,490,336,485,319,464,312,443,304,422,288,402,264,388,237,378"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="576,431,719,471"/>
-<area shape="poly" title=" " alt="" coords="505,448,561,448,561,454,505,454"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="767,332,909,373"/>
-<area shape="poly" title=" " alt="" coords="684,428,765,383,777,378,779,382,768,388,686,432"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="767,397,909,438"/>
-<area shape="poly" title=" " alt="" coords="719,436,751,430,752,435,720,441"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="767,463,909,503"/>
-<area shape="poly" title=" " alt="" coords="720,460,752,466,751,471,719,466"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="767,528,909,569"/>
-<area shape="poly" title=" " alt="" coords="688,470,768,513,779,518,777,523,765,517,685,474"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="978,332,1120,373"/>
-<area shape="poly" title=" " alt="" coords="905,394,966,375,967,380,907,399"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="957,397,1141,438"/>
-<area shape="poly" title=" " alt="" coords="909,415,941,415,941,420,909,420"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="978,463,1120,503"/>
-<area shape="poly" title=" " alt="" coords="907,436,967,455,966,460,905,441"/>
-<area shape="poly" title=" " alt="" coords="245,296,363,325,362,330,243,301"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a1917c71b03a2a1bdf80a9ea6e544e86c" title="Checks if the file ending is &quot;.json&quot;." alt="" coords="355,201,512,242"/>
-<area shape="poly" title=" " alt="" coords="243,272,341,244,343,249,245,277"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a54995db8d1b951ac391ee881ddff2dc4" title="Check if a file exists." alt="" coords="361,267,505,307"/>
-<area shape="poly" title=" " alt="" coords="244,284,346,284,346,290,244,290"/>
+<area shape="rect" title="Main function of the program." alt="" coords="5,141,55,167"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a2aea5a6644dca94106892dacbe05cd63" title=" " alt="" coords="127,5,240,31"/>
+<area shape="poly" title=" " alt="" coords="34,140,57,91,77,64,101,40,111,34,114,38,104,44,81,67,62,94,39,142"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd" title=" " alt="" coords="114,105,253,145"/>
+<area shape="poly" title=" " alt="" coords="55,147,98,138,99,144,56,152"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="108,169,259,195"/>
+<area shape="poly" title=" " alt="" coords="56,156,95,163,94,169,55,161"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a0f61acd0910d985bc7abe4af8c3bffe0" title=" " alt="" coords="146,276,221,302"/>
+<area shape="poly" title=" " alt="" coords="48,166,157,263,154,267,45,170"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0" title="Set up easylogging." alt="" coords="103,326,264,367"/>
+<area shape="poly" title=" " alt="" coords="36,167,43,196,56,235,76,276,105,312,107,315,103,318,101,316,72,279,51,237,38,198,31,168"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77" title=" " alt="" coords="136,55,231,80"/>
+<area shape="poly" title=" " alt="" coords="41,139,68,115,101,91,120,82,123,86,104,95,71,119,45,143"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="313,55,501,80"/>
+<area shape="poly" title=" " alt="" coords="253,104,339,82,340,87,254,110"/>
+<area shape="rect" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="312,105,502,145"/>
+<area shape="poly" title=" " alt="" coords="253,122,296,122,296,128,253,128"/>
+<area shape="poly" title=" " alt="" coords="236,166,309,147,311,152,237,171"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4" title=" " alt="" coords="314,169,501,195"/>
+<area shape="poly" title=" " alt="" coords="259,180,298,180,298,185,259,185"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="323,219,492,260"/>
+<area shape="poly" title=" " alt="" coords="237,193,311,212,309,217,236,198"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960" title="Prints the help message." alt="" coords="550,281,720,321"/>
+<area shape="poly" title=" " alt="" coords="200,193,247,233,279,253,313,269,368,285,426,295,535,302,534,307,425,300,367,290,311,274,276,258,244,237,196,197"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470" title="Prints the credits message." alt="" coords="550,150,720,191"/>
+<area shape="poly" title=" " alt="" coords="476,216,550,193,552,198,477,221"/>
+<area shape="poly" title=" " alt="" coords="486,258,543,273,542,279,485,263"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#a12afc8cab2af137f31c6aae2d1b27061" title="Prints the version message." alt="" coords="550,215,720,256"/>
+<area shape="poly" title=" " alt="" coords="492,235,535,235,535,240,492,241"/>
+<area shape="rect" href="../../da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965" title=" " alt="" coords="312,335,502,360"/>
+<area shape="poly" title=" " alt="" coords="221,296,341,328,340,333,220,301"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="336,385,478,425"/>
+<area shape="poly" title=" " alt="" coords="222,293,244,301,266,312,281,327,290,342,299,357,314,371,323,377,320,381,310,375,295,360,286,345,277,330,262,316,242,306,220,298"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="564,385,706,425"/>
+<area shape="poly" title=" " alt="" coords="479,402,548,402,548,408,479,408"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="768,286,910,327"/>
+<area shape="poly" title=" " alt="" coords="676,382,766,337,779,331,781,336,769,342,679,386"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="768,351,910,392"/>
+<area shape="poly" title=" " alt="" coords="706,391,752,383,753,388,707,396"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="768,417,910,457"/>
+<area shape="poly" title=" " alt="" coords="707,413,753,421,752,426,706,419"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="768,482,910,523"/>
+<area shape="poly" title=" " alt="" coords="680,423,769,466,781,472,779,477,767,471,678,428"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="979,286,1121,327"/>
+<area shape="poly" title=" " alt="" coords="906,348,967,329,968,334,908,353"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="958,351,1142,392"/>
+<area shape="poly" title=" " alt="" coords="910,369,942,369,942,374,910,374"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="979,417,1121,457"/>
+<area shape="poly" title=" " alt="" coords="908,390,968,409,967,414,906,395"/>
+<area shape="poly" title=" " alt="" coords="231,65,297,65,297,70,231,70"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aefaae33c8deff99024fbb1f547364e08" name="aefaae33c8deff99024fbb1f547364e08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefaae33c8deff99024fbb1f547364e08">&#9670;&#160;</a></span>parseFiles()</h2>
+<a id="ad612c95526cdd7ff2fa78563c0cd666f" name="ad612c95526cdd7ff2fa78563c0cd666f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad612c95526cdd7ff2fa78563c0cd666f">&#9670;&#160;</a></span>parseAndValidateArgs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void parseFiles </td>
+          <td class="memname">std::tuple&lt; std::vector&lt; std::string &gt;, std::string &gt; parseAndValidateArgs </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
-          <td class="paramname"><em>files</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td></td></tr>
+    <tr><td class="paramname">argv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00121">121</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00055">utilities::Utils::checkDirectory()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00067">cli::CommandLineHandler::parseArguments()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">cli::CommandLineHandler::printHelp()</a>, and <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html#l00032">exceptions::CustomException::what()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph" id="adf/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,112,156,137"/>
+<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4" title=" " alt="" coords="205,25,393,51"/>
+<area shape="poly" title=" " alt="" coords="104,109,149,85,203,61,225,53,227,58,205,65,151,89,106,113"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="214,75,384,115"/>
+<area shape="poly" title=" " alt="" coords="156,112,198,106,199,111,156,117"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960" title="Prints the help message." alt="" coords="442,136,611,177"/>
+<area shape="poly" title=" " alt="" coords="156,127,427,147,426,152,156,132"/>
+<area shape="rect" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="204,189,394,230"/>
+<area shape="poly" title=" " alt="" coords="117,135,232,181,230,186,115,140"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470" title="Prints the credits message." alt="" coords="442,5,611,46"/>
+<area shape="poly" title=" " alt="" coords="368,71,442,49,444,54,369,77"/>
+<area shape="poly" title=" " alt="" coords="378,113,435,129,433,134,376,119"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#a12afc8cab2af137f31c6aae2d1b27061" title="Prints the version message." alt="" coords="442,71,611,111"/>
+<area shape="poly" title=" " alt="" coords="384,91,426,90,426,95,384,96"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph" id="adf/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,253,31"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f61acd0910d985bc7abe4af8c3bffe0" name="a0f61acd0910d985bc7abe4af8c3bffe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f61acd0910d985bc7abe4af8c3bffe0">&#9670;&#160;</a></span>parseFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parseFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>outDir</em>&#160;</td>
         </tr>
         <tr>
@@ -321,52 +437,48 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">files</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00153">153</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00174">174</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00042">utilities::Utils::askToContinue()</a>, <a class="el" href="../../d1/d03/BatchCreator_8hpp_source.html#l00037">BatchCreator::getDataStream()</a>, <a class="el" href="../../d0/d2b/JsonHandler_8cpp_source.html#l00048">parsing::JsonHandler::getFileData()</a>, and <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html#l00032">exceptions::CustomException::what()</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/d03/BatchCreator_8hpp_source.html#l00037">BatchCreator::getDataStream()</a>, and <a class="el" href="../../d0/d2b/JsonHandler_8cpp_source.html#l00047">parsing::JsonHandler::getFileData()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_cgraph" alt=""/></div>
-<map name="adf/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_cgraph" id="adf/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_cgraph">
-<area shape="rect" title=" " alt="" coords="5,84,87,110"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="136,5,324,31"/>
-<area shape="poly" title=" " alt="" coords="64,81,95,60,134,40,150,34,151,39,136,45,98,65,67,86"/>
-<area shape="rect" href="../../da/d1c/classBatchCreator.html#a508c78b70fa31f5c8a1a5b5c6995899c" title=" " alt="" coords="135,55,325,80"/>
-<area shape="poly" title=" " alt="" coords="87,88,130,81,131,86,88,93"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="159,105,301,145"/>
-<area shape="poly" title=" " alt="" coords="87,100,144,109,143,114,87,106"/>
-<area shape="rect" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="135,170,325,211"/>
-<area shape="poly" title=" " alt="" coords="65,108,97,131,136,154,149,161,147,166,133,159,94,136,62,112"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="373,105,515,145"/>
-<area shape="poly" title=" " alt="" coords="302,122,357,122,357,128,302,128"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="563,6,706,47"/>
-<area shape="poly" title=" " alt="" coords="481,102,562,57,573,51,576,56,565,62,483,106"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="563,71,706,112"/>
-<area shape="poly" title=" " alt="" coords="515,110,548,104,548,109,516,115"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="563,137,706,177"/>
-<area shape="poly" title=" " alt="" coords="516,134,548,140,548,145,515,139"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="563,202,706,243"/>
-<area shape="poly" title=" " alt="" coords="484,143,565,186,576,192,573,197,562,191,482,148"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="775,6,917,47"/>
-<area shape="poly" title=" " alt="" coords="702,68,762,49,764,54,703,73"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="754,71,938,112"/>
-<area shape="poly" title=" " alt="" coords="706,89,738,89,738,94,706,94"/>
-<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="775,137,917,177"/>
-<area shape="poly" title=" " alt="" coords="703,110,764,129,762,134,702,115"/>
+<div class="center"><img src="../../df/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_cgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_cgraph" id="adf/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,84,80,109"/>
+<area shape="rect" href="../../da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965" title=" " alt="" coords="128,54,318,80"/>
+<area shape="poly" title=" " alt="" coords="80,88,125,80,126,86,81,93"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="152,104,294,145"/>
+<area shape="poly" title=" " alt="" coords="81,99,136,108,136,114,80,105"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="366,104,508,145"/>
+<area shape="poly" title=" " alt="" coords="295,122,350,122,350,127,295,127"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="556,5,699,46"/>
+<area shape="poly" title=" " alt="" coords="474,101,555,57,566,51,569,56,558,61,476,106"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="556,71,699,111"/>
+<area shape="poly" title=" " alt="" coords="508,109,541,104,541,109,509,114"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="556,136,699,177"/>
+<area shape="poly" title=" " alt="" coords="509,134,541,139,541,144,508,139"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="556,201,699,242"/>
+<area shape="poly" title=" " alt="" coords="477,143,558,186,569,192,566,196,555,191,475,148"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="768,5,910,46"/>
+<area shape="poly" title=" " alt="" coords="695,68,755,49,757,54,696,73"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="747,71,931,111"/>
+<area shape="poly" title=" " alt="" coords="699,88,731,88,731,94,699,94"/>
+<area shape="rect" href="../../d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="768,136,910,177"/>
+<area shape="poly" title=" " alt="" coords="696,109,757,128,755,133,695,114"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_icgraph" alt=""/></div>
-<map name="adf/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_icgraph" id="adf/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_icgraph">
-<area shape="rect" title=" " alt="" coords="103,5,184,31"/>
+<div class="center"><img src="../../df/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_icgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_icgraph" id="adf/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,177,31"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -374,8 +486,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aad40abb24acce6a32218f42e80053e77" name="aad40abb24acce6a32218f42e80053e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad40abb24acce6a32218f42e80053e77">&#9670;&#160;</a></span>validateFiles()</h2>
+<a id="a229a422b4e4be967a1e02c69d8867c77" name="a229a422b4e4be967a1e02c69d8867c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229a422b4e4be967a1e02c69d8867c77">&#9670;&#160;</a></span>validateFiles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +495,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">std::vector&lt; std::string &gt; validateFiles </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>files</em></td><td>)</td>
           <td></td>
         </tr>
@@ -397,28 +509,24 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00113">113</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00144">144</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00042">utilities::Utils::askToContinue()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00039">utilities::Utils::checkFileEnding()</a>, and <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00034">utilities::Utils::checkIfFileExists()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00034">utilities::Utils::askToContinue()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_cgraph" alt=""/></div>
-<map name="adf/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_cgraph" id="adf/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_cgraph">
-<area shape="rect" title=" " alt="" coords="5,63,100,88"/>
+<div class="center"><img src="../../df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph" id="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,100,31"/>
 <area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="148,5,336,31"/>
-<area shape="poly" title=" " alt="" coords="91,60,147,41,174,33,176,38,148,46,92,65"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a1917c71b03a2a1bdf80a9ea6e544e86c" title="Checks if the file ending is &quot;.json&quot;." alt="" coords="163,55,321,96"/>
-<area shape="poly" title=" " alt="" coords="100,73,147,73,147,78,100,78"/>
-<area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a54995db8d1b951ac391ee881ddff2dc4" title="Check if a file exists." alt="" coords="170,121,314,161"/>
-<area shape="poly" title=" " alt="" coords="93,86,167,112,165,117,91,91"/>
+<area shape="poly" title=" " alt="" coords="100,16,132,16,132,21,100,21"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_icgraph" alt=""/></div>
-<map name="adf/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_icgraph" id="adf/d0a/main_8cpp_aad40abb24acce6a32218f42e80053e77_icgraph">
+<div class="center"><img src="../../df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph" id="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph">
 <area shape="rect" title=" " alt="" coords="103,5,197,31"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -433,7 +541,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../df/d0a/main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Thu Apr 25 2024 17:35:57 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 19:29:40 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

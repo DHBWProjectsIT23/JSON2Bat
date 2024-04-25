@@ -1,5 +1,10 @@
 <map id="src/include/Utils.hpp" name="src/include/Utils.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,145,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="48,79,102,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,31,78,63,72,63,72,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="79,5,218,31"/>
+<area shape="rect" id="Node000002" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="49,79,157,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,33,121,67,116,64,139,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="168,153,222,178"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="155,30,172,78,190,137,185,139,167,80,150,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,145,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,106,88,139,83,137,96,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="120,103,169,141,166,145,117,107"/>
 </map>
