@@ -41,8 +41,7 @@ std::vector<std::string> validateFiles(std::vector<std::string> files);
  *
  * @param files
  */
-void parseFiles(std::vector<std::string> files,
-                std::optional<std::string> outDir);
+void parseFiles(std::vector<std::string> files, std::string outDir);
 
 /**
  * @brief Main function of the program
@@ -83,7 +82,16 @@ int main(int argc, char *argv[]) {
     auto arguments = cli::CommandLineHandler::parseArguments(argc, argv);
 
     std::vector<std::string> files = std::get<1>(arguments);
-    std::optional<std::string> outDir = std::get<0>(arguments);
+    std::optional<std::string> outDirOption = std::get<0>(arguments);
+    std::string outDir;
+    if (outDirOption.has_value()) {
+        try {
+            outDir = utilities::Utils::checkDirectory(outDirOption.value());
+        } catch (const exceptions::CustomException &e) {
+            LOG_ERROR << e.what();
+            return 1;
+        }
+    }
 
     if (files.empty()) {
         LOG_ERROR << "No files were given as arguments!\n";
@@ -123,7 +131,8 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
         }
 
         if (!utilities::Utils::checkFileEnding(file)) {
-            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
+            LOG_WARNING << "The file \"" << file
+                        << "\" does not end in \".json\"\n";
             OUTPUT << "If the file is not in JSON Format, continuing may "
                    "result in\nunexpected behaviour!\n";
 
@@ -140,8 +149,7 @@ std::vector<std::string> validateFiles(std::vector<std::string> files) {
     return validFiles;
 }
 
-void parseFiles(std::vector<std::string> files,
-                std::optional<std::string> outDir) {
+void parseFiles(std::vector<std::string> files, std::string outDir) {
 
     for (auto file = files.begin(); file != files.end(); ++file) {
         OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
@@ -155,13 +163,7 @@ void parseFiles(std::vector<std::string> files,
             std::shared_ptr<std::stringstream> dataStream =
                 batchCreator.getDataStream();
             std::ofstream outFile;
-            std::string outValue;
-            if (outDir.has_value()) {
-                outValue = utilities::Utils::checkDirectory(outDir.value());
-            }
-            std::string fileName = outDir.has_value()
-                                   ? outDir.value() + fileData->getOutputFile()
-                                   : fileData->getOutputFile();
+            std::string fileName = outDir + fileData->getOutputFile();
             outFile.open(fileName);
             if (!outFile.good()) {
                 throw exceptions::FailedToOpenFileException(fileName);
