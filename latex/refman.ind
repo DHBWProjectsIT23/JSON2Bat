@@ -342,8 +342,7 @@
 		\hyperpage{106}
   \item {src/sources/FileData.cpp}, \hyperpage{107, 108}
   \item {src/sources/JsonHandler.cpp}, \hyperpage{109, 110}
-  \item {src/sources/KeyValidator.cpp}, \hyperpage{111}, 
-		\hyperpage{113}
+  \item {src/sources/KeyValidator.cpp}, \hyperpage{112, 113}
   \item {src/sources/Utils.cpp}, \hyperpage{115, 116}
   \item {StyleHelpers}, \hyperpage{15}
 
