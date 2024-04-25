@@ -25,7 +25,7 @@ static void \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c
 \begin{DoxyCompactList}\small\item\em Prints the version message. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{print\+Credits}} ()
 \begin{DoxyCompactList}\small\item\em Prints the credits message. \end{DoxyCompactList}\item 
-static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3}{parse\+Arguments}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+static std\+::tuple$<$ std\+::optional$<$ std\+::string $>$, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{parse\+Arguments}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Parses the Command Line Arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -48,7 +48,7 @@ Simon Blum
 \end{DoxySeeAlso}
 
 
-Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{CommandLineHandler_8hpp_source}{Command\+Line\+Handler.\+hpp}}.
+Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{CommandLineHandler_8hpp_source}{Command\+Line\+Handler.\+hpp}}.
 
 
 
@@ -82,11 +82,11 @@ As all functions are static it should not be used and as such is private.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3}\label{classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3} 
+\Hypertarget{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}\label{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8} 
 \index{cli::CommandLineHandler@{cli::CommandLineHandler}!parseArguments@{parseArguments}}
 \index{parseArguments@{parseArguments}!cli::CommandLineHandler@{cli::CommandLineHandler}}
 \doxysubsubsection{\texorpdfstring{parseArguments()}{parseArguments()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ cli\+::\+Command\+Line\+Handler\+::parse\+Arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily std\+::tuple$<$ std\+::optional$<$ std\+::string $>$, std\+::vector$<$ std\+::string $>$ $>$ cli\+::\+Command\+Line\+Handler\+::parse\+Arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -105,11 +105,13 @@ This function uses the "{}getopt.\+h"{} library to parse all options given and t
 \hline
 \end{DoxyExceptions}
 \begin{DoxyReturn}{Returns}
-Returns a vector of strings containing all filenames. 
+Returns a vector of strings containing all filenames.
 \end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Update documentation \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
 
 
 
@@ -120,7 +122,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_cgraph}
+\includegraphics[width=350pt]{d4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -128,7 +130,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=280pt]{d4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_icgraph}
+\includegraphics[width=280pt]{d4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}\label{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470} 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['batchfile_0',['batchFile',['../da/d1c/classBatchCreator.html#a98e00674d0c75c2cab313832a0e1d5fa',1,'BatchCreator']]]
+  ['commands_0',['commands',['../da/d06/classparsing_1_1FileData.html#a2ce4f1d868a8b6552ebf3e650263d79d',1,'parsing::FileData']]]
 ];

@@ -59,7 +59,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"df/d0a/main_8cpp_source.html"
+"de/da8/classexceptions_1_1FailedToOpenFileException.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

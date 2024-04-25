@@ -1,23 +1,25 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,226,106,252"/>
-<area shape="rect" id="Node000001" href="$dc/d56/classexceptions_1_1CustomException.html" title="Base class for all custom exceptions." alt="" coords="154,226,344,252"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="121,236,153,236,153,242,121,242"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,256,106,281"/>
+<area shape="rect" id="Node000001" href="$dc/d56/classexceptions_1_1CustomException.html" title="Base class for all custom exceptions." alt="" coords="154,256,344,281"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="121,266,153,266,153,271,121,271"/>
 <area shape="rect" id="Node000002" href="$de/da8/classexceptions_1_1FailedToOpenFileException.html" title=" " alt="" coords="416,5,586,46"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="262,211,282,176,311,134,348,92,390,55,414,43,417,47,394,60,352,95,316,137,287,179,266,214"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="259,240,278,199,307,149,344,99,390,56,414,42,417,47,394,60,348,102,311,152,283,202,263,242"/>
 <area shape="rect" id="Node000003" href="$df/d36/classexceptions_1_1FileExistsException.html" title="Exception for an already exisiting outputfile." alt="" coords="401,70,602,96"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="268,212,319,157,353,129,391,105,417,94,419,99,393,109,356,133,323,161,272,216"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="263,241,314,172,350,135,391,105,414,94,416,99,393,109,353,139,318,175,268,244"/>
 <area shape="rect" id="Node000004" href="$de/d9e/classexceptions_1_1InvalidKeyException.html" title="Exception for invalid keys." alt="" coords="399,120,604,145"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="279,215,330,183,391,154,424,143,426,148,393,159,333,188,282,220"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="272,242,324,197,356,174,391,154,419,143,421,148,393,159,359,178,327,201,275,246"/>
 <area shape="rect" id="Node000005" href="$d0/dad/classexceptions_1_1InvalidTypeException.html" title="Exception for invalid types." alt="" coords="396,169,607,195"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="323,220,441,193,442,198,324,225"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="290,246,391,204,434,193,435,198,393,210,292,251"/>
 <area shape="rect" id="Node000006" href="$d8/d1c/classexceptions_1_1InvalidValueException.html" title="Exception for an ivalid (usually empty) value field." alt="" coords="421,219,581,259"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="359,236,420,236,420,242,359,242"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="359,253,420,246,421,251,360,258"/>
 <area shape="rect" id="Node000007" href="$d4/d1d/classexceptions_1_1MissingKeyException.html" title="Exception for missing keys within entries." alt="" coords="395,284,607,309"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="324,253,442,280,441,285,323,258"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="360,278,395,282,394,287,359,283"/>
 <area shape="rect" id="Node000008" href="$d5/d67/classexceptions_1_1MissingTypeException.html" title="Exception for missing types of entries." alt="" coords="392,333,610,359"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="282,258,333,290,393,319,426,330,424,335,391,324,330,295,279,263"/>
-<area shape="rect" id="Node000009" href="$dc/de6/classexceptions_1_1ParsingException.html" title="Exception for syntax errors within the json file." alt="" coords="407,382,596,408"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="272,262,323,317,356,345,393,369,419,379,417,384,391,373,353,349,319,321,268,266"/>
-<area shape="rect" id="Node000010" href="$d9/d52/classexceptions_1_1UnreachableCodeException.html" title="Exception for when the application reaches code it shouldn&#39;t reach." alt="" coords="405,432,597,473"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="266,264,287,299,316,341,352,383,394,418,414,429,411,434,390,423,348,386,311,344,282,302,262,267"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="297,285,393,319,433,330,432,335,391,324,295,290"/>
+<area shape="rect" id="Node000009" href="$d9/d05/classexceptions_1_1NoSuchDirException.html" title=" " alt="" coords="397,382,605,408"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="277,290,329,330,360,351,393,369,422,379,421,384,391,373,357,356,326,335,274,294"/>
+<area shape="rect" id="Node000010" href="$dc/de6/classexceptions_1_1ParsingException.html" title="Exception for syntax errors within the json file." alt="" coords="407,432,596,457"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="269,293,320,357,354,390,393,418,417,428,414,433,391,423,351,394,316,360,265,296"/>
+<area shape="rect" id="Node000011" href="$d9/d52/classexceptions_1_1UnreachableCodeException.html" title="Exception for when the application reaches code it shouldn&#39;t reach." alt="" coords="405,481,597,522"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="264,294,284,333,313,380,349,427,394,468,412,478,410,483,390,472,345,431,308,383,279,336,260,297"/>
 </map>

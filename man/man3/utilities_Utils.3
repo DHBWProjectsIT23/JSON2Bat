@@ -1,4 +1,4 @@
-.TH "utilities::Utils" 3 "Thu Apr 25 2024 17:35:22" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.TH "utilities::Utils" 3 "Thu Apr 25 2024 17:35:57" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,6 +28,9 @@ utilities::Utils \- Responsible for utility function\&.
 .RI "static bool \fBaskToContinue\fP (const std::string &prompt='Do you want to continue? (Y/N)\\n')"
 .br
 .RI "Asks if the user wants to continue\&. "
+.ti -1c
+.RI "static std::string & \fBcheckDirectory\fP (std::string &directory)"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -55,7 +58,18 @@ Returns true if the user wants to continue and false otherwise\&.
 .PP
 
 .PP
-Definition at line \fB40\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB42\fP of file \fBUtils\&.cpp\fP\&.
+.SS "std::string & utilities::Utils::checkDirectory (std::string & directory)\fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+documentation 
+.RE
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBUtils\&.cpp\fP\&.
 .SS "bool utilities::Utils::checkFileEnding (const std::string_view & fileName)\fC [static]\fP"
 
 .PP
@@ -73,7 +87,7 @@ Returns true if the file ends with '\&.json' and false otherwise\&.
 .PP
 
 .PP
-Definition at line \fB37\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB39\fP of file \fBUtils\&.cpp\fP\&.
 .SS "bool utilities::Utils::checkIfFileExists (const std::string & fileName)\fC [static]\fP"
 
 .PP
@@ -91,7 +105,7 @@ Returns true if the file exists and false otherwise
 .PP
 
 .PP
-Definition at line \fB32\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB34\fP of file \fBUtils\&.cpp\fP\&.
 .SS "void utilities::Utils::setupEasyLogging (const std::string & configFile)\fC [static]\fP"
 
 .PP
@@ -104,7 +118,7 @@ Set up easylogging\&. This function sets up the easylogging library based on the
 .PP
 
 .PP
-Definition at line \fB24\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB26\fP of file \fBUtils\&.cpp\fP\&.
 .PP
 References \fBHOMEPAGE_URL\fP, \fBMAJOR_VERSION\fP, \fBMINOR_VERSION\fP, \fBPATCH_VERSION\fP, and \fBPROJECT_NAME\fP\&.
 

@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Thu Apr 25 2024 17:35:22" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Thu Apr 25 2024 17:35:57" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -39,7 +39,7 @@ src/main.cpp \- Contains the main function\&.
 .RI "INITIALIZE_EASYLOGGINGPP std::vector< std::string > \fBvalidateFiles\fP (std::vector< std::string > files)"
 .br
 .ti -1c
-.RI "void \fBparseFiles\fP (std::vector< std::string > files)"
+.RI "void \fBparseFiles\fP (std::vector< std::string > files, std::string outDir)"
 .br
 .ti -1c
 .RI "int \fBmain\fP (int argc, char *argv[])"
@@ -105,10 +105,10 @@ Refactoring
 .PP
 
 .PP
-Definition at line \fB60\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB61\fP of file \fBmain\&.cpp\fP\&.
 .PP
-References \fBLOG_CONFIG\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBparseFiles()\fP, \fBcli::CommandLineHandler::printHelp()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
-.SS "void parseFiles (std::vector< std::string > files)"
+References \fButilities::Utils::checkDirectory()\fP, \fBLOG_CONFIG\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBparseFiles()\fP, \fBcli::CommandLineHandler::printHelp()\fP, \fButilities::Utils::setupEasyLogging()\fP, \fBvalidateFiles()\fP, and \fBexceptions::CustomException::what()\fP\&.
+.SS "void parseFiles (std::vector< std::string > files, std::string outDir)"
 
 .PP
 \fBParameters\fP
@@ -118,9 +118,9 @@ References \fBLOG_CONFIG\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \f
 .PP
 
 .PP
-Definition at line \fB144\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB153\fP of file \fBmain\&.cpp\fP\&.
 .PP
-References \fButilities::Utils::askToContinue()\fP, \fBparsing::JsonHandler::getFileData()\fP, and \fBexceptions::CustomException::what()\fP\&.
+References \fButilities::Utils::askToContinue()\fP, \fBBatchCreator::getDataStream()\fP, \fBparsing::JsonHandler::getFileData()\fP, and \fBexceptions::CustomException::what()\fP\&.
 .SS "std::vector< std::string > validateFiles (std::vector< std::string > files)"
 
 .PP
@@ -135,7 +135,7 @@ References \fButilities::Utils::askToContinue()\fP, \fBparsing::JsonHandler::get
 .PP
 
 .PP
-Definition at line \fB106\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB113\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::askToContinue()\fP, \fButilities::Utils::checkFileEnding()\fP, and \fButilities::Utils::checkIfFileExists()\fP\&.
 .SH "Author"

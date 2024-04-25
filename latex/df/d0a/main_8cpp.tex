@@ -30,7 +30,7 @@ Include dependency graph for main.\+cpp\+:
 \item 
 INITIALIZE\+\_\+\+EASYLOGGINGPP std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{main_8cpp_aad40abb24acce6a32218f42e80053e77}{validate\+Files}} (std\+::vector$<$ std\+::string $>$ files)
 \item 
-void \mbox{\hyperlink{main_8cpp_ac620aa54df822ee1879995ac38062bc0}{parse\+Files}} (std\+::vector$<$ std\+::string $>$ files)
+void \mbox{\hyperlink{main_8cpp_aefaae33c8deff99024fbb1f547364e08}{parse\+Files}} (std\+::vector$<$ std\+::string $>$ files, std\+::string out\+Dir)
 \item 
 int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Main function of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -83,16 +83,16 @@ The main function is responsible for connection all parts of the programm. It ca
 Returns 0 on success, 1 on failure
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Documentation 
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Documentation 
 
 Refactoring \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{config_8hpp_source_l00020}{LOG\+\_\+\+CONFIG}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00066}{cli\+::\+Command\+Line\+Handler\+::parse\+Arguments()}}, \mbox{\hyperlink{main_8cpp_source_l00144}{parse\+Files()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{cli\+::\+Command\+Line\+Handler\+::print\+Help()}}, \mbox{\hyperlink{Utils_8cpp_source_l00024}{utilities\+::\+Utils\+::setup\+Easy\+Logging()}}, and \mbox{\hyperlink{main_8cpp_source_l00106}{validate\+Files()}}.
+References \mbox{\hyperlink{Utils_8cpp_source_l00063}{utilities\+::\+Utils\+::check\+Directory()}}, \mbox{\hyperlink{config_8hpp_source_l00020}{LOG\+\_\+\+CONFIG}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00067}{cli\+::\+Command\+Line\+Handler\+::parse\+Arguments()}}, \mbox{\hyperlink{main_8cpp_source_l00153}{parse\+Files()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{cli\+::\+Command\+Line\+Handler\+::print\+Help()}}, \mbox{\hyperlink{Utils_8cpp_source_l00026}{utilities\+::\+Utils\+::setup\+Easy\+Logging()}}, \mbox{\hyperlink{main_8cpp_source_l00113}{validate\+Files()}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00032}{exceptions\+::\+Custom\+Exception\+::what()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -102,11 +102,11 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{main_8cpp_ac620aa54df822ee1879995ac38062bc0}\label{main_8cpp_ac620aa54df822ee1879995ac38062bc0} 
+\Hypertarget{main_8cpp_aefaae33c8deff99024fbb1f547364e08}\label{main_8cpp_aefaae33c8deff99024fbb1f547364e08} 
 \index{main.cpp@{main.cpp}!parseFiles@{parseFiles}}
 \index{parseFiles@{parseFiles}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{parseFiles()}{parseFiles()}}
-{\footnotesize\ttfamily void parse\+Files (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{files }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void parse\+Files (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{files,  }\item[{std\+::string}]{out\+Dir }\end{DoxyParamCaption})}
 
 
 \begin{DoxyParams}{Parameters}
@@ -115,18 +115,18 @@ Here is the call graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{Utils_8cpp_source_l00040}{utilities\+::\+Utils\+::ask\+To\+Continue()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00048}{parsing\+::\+Json\+Handler\+::get\+File\+Data()}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00032}{exceptions\+::\+Custom\+Exception\+::what()}}.
+References \mbox{\hyperlink{Utils_8cpp_source_l00042}{utilities\+::\+Utils\+::ask\+To\+Continue()}}, \mbox{\hyperlink{BatchCreator_8hpp_source_l00037}{Batch\+Creator\+::get\+Data\+Stream()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00048}{parsing\+::\+Json\+Handler\+::get\+File\+Data()}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00032}{exceptions\+::\+Custom\+Exception\+::what()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{df/d0a/main_8cpp_ac620aa54df822ee1879995ac38062bc0_cgraph}
+\includegraphics[width=350pt]{df/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -134,7 +134,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=214pt]{df/d0a/main_8cpp_ac620aa54df822ee1879995ac38062bc0_icgraph}
+\includegraphics[width=214pt]{df/d0a/main_8cpp_aefaae33c8deff99024fbb1f547364e08_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{main_8cpp_aad40abb24acce6a32218f42e80053e77}\label{main_8cpp_aad40abb24acce6a32218f42e80053e77} 
@@ -153,11 +153,11 @@ Here is the caller graph for this function\+:
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{Utils_8cpp_source_l00040}{utilities\+::\+Utils\+::ask\+To\+Continue()}}, \mbox{\hyperlink{Utils_8cpp_source_l00037}{utilities\+::\+Utils\+::check\+File\+Ending()}}, and \mbox{\hyperlink{Utils_8cpp_source_l00032}{utilities\+::\+Utils\+::check\+If\+File\+Exists()}}.
+References \mbox{\hyperlink{Utils_8cpp_source_l00042}{utilities\+::\+Utils\+::ask\+To\+Continue()}}, \mbox{\hyperlink{Utils_8cpp_source_l00039}{utilities\+::\+Utils\+::check\+File\+Ending()}}, and \mbox{\hyperlink{Utils_8cpp_source_l00034}{utilities\+::\+Utils\+::check\+If\+File\+Exists()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

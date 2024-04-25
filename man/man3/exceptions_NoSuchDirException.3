@@ -1,0 +1,72 @@
+.TH "exceptions::NoSuchDirException" 3 "Thu Apr 25 2024 17:35:57" "Version 0.2.1" "JSON2Batch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+exceptions::NoSuchDirException
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exceptions\&.hpp>\fP
+.PP
+Inherits \fBexceptions::CustomException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNoSuchDirException\fP (const std::string &dir)"
+.br
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBexceptions::CustomException\fP
+.in +1c
+.ti -1c
+.RI "const char * \fBwhat\fP () const noexcept override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBmessage\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB261\fP of file \fBExceptions\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "exceptions::NoSuchDirException::NoSuchDirException (const std::string & dir)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+Documentation 
+.RE
+.PP
+
+.PP
+Definition at line \fB267\fP of file \fBExceptions\&.hpp\fP\&.
+.PP
+References \fBmessage\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * exceptions::NoSuchDirException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line \fB271\fP of file \fBExceptions\&.hpp\fP\&.
+.PP
+References \fBmessage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string exceptions::NoSuchDirException::message\fC [private]\fP"
+
+.PP
+Definition at line \fB263\fP of file \fBExceptions\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JSON2Batch from the source code\&.

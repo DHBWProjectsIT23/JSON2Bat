@@ -11,6 +11,7 @@ var hierarchy =
         [ "exceptions::InvalidValueException", "d8/d1c/classexceptions_1_1InvalidValueException.html", null ],
         [ "exceptions::MissingKeyException", "d4/d1d/classexceptions_1_1MissingKeyException.html", null ],
         [ "exceptions::MissingTypeException", "d5/d67/classexceptions_1_1MissingTypeException.html", null ],
+        [ "exceptions::NoSuchDirException", "d9/d05/classexceptions_1_1NoSuchDirException.html", null ],
         [ "exceptions::ParsingException", "dc/de6/classexceptions_1_1ParsingException.html", null ],
         [ "exceptions::UnreachableCodeException", "d9/d52/classexceptions_1_1UnreachableCodeException.html", null ]
       ] ]

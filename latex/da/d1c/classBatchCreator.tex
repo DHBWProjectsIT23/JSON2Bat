@@ -13,7 +13,9 @@ Erstellt Batch Datei.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classBatchCreator_ad2fe34f5fef34f26763558bc9c9949a3}{Batch\+Creator}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{parsing\+::\+File\+Data}} $>$ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{file\+Data}})
-\begin{DoxyCompactList}\small\item\em Initialisiert \doxylink{classBatchCreator}{Batch\+Creator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialisiert \doxylink{classBatchCreator}{Batch\+Creator}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ std\+::stringstream $>$ \mbox{\hyperlink{classBatchCreator_a508c78b70fa31f5c8a1a5b5c6995899c}{get\+Data\+Stream}} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,7 +38,7 @@ void \mbox{\hyperlink{classBatchCreator_a85b2442f045f1c91f09d776c5c7db8f2}{write
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ofstream \mbox{\hyperlink{classBatchCreator_a98e00674d0c75c2cab313832a0e1d5fa}{batch\+File}}
+std\+::shared\+\_\+ptr$<$ std\+::stringstream $>$ \mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{data\+Stream}}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparsing_1_1FileData}{parsing\+::\+File\+Data}} $>$ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{file\+Data}}
 \end{DoxyCompactItemize}
@@ -52,7 +54,7 @@ Wandelt Elemente aus JSON-\/\+Datei in Batch-\/\+Format um
 \end{DoxySeeAlso}
 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
 
 
 
@@ -78,7 +80,7 @@ Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00016}{16}} of fil
 
 
 
-References \mbox{\hyperlink{BatchCreator_8cpp_source_l00022}{create\+Batch()}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+References \mbox{\hyperlink{BatchCreator_8cpp_source_l00023}{create\+Batch()}}, \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{file\+Data}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -103,11 +105,11 @@ Setzt batch Datei zusammen.
 
 Beinhaltet Aufrufe der einzelnen Komponenten der batch Datei 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00081}{write\+App()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00056}{write\+Commands()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00094}{write\+End()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00064}{write\+Env\+Variables()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00045}{write\+Hide\+Shell()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00072}{write\+Path\+Variables()}}, and \mbox{\hyperlink{BatchCreator_8cpp_source_l00040}{write\+Start()}}.
+References \mbox{\hyperlink{BatchCreator_8cpp_source_l00076}{write\+App()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00051}{write\+Commands()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00089}{write\+End()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00059}{write\+Env\+Variables()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00040}{write\+Hide\+Shell()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00067}{write\+Path\+Variables()}}, and \mbox{\hyperlink{BatchCreator_8cpp_source_l00035}{write\+Start()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -125,6 +127,30 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{da/d1c/classBatchCreator_a2225babf16a473ba6722238c19d785ae_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{classBatchCreator_a508c78b70fa31f5c8a1a5b5c6995899c}\label{classBatchCreator_a508c78b70fa31f5c8a1a5b5c6995899c} 
+\index{BatchCreator@{BatchCreator}!getDataStream@{getDataStream}}
+\index{getDataStream@{getDataStream}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{getDataStream()}{getDataStream()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ std\+::stringstream $>$ Batch\+Creator\+::get\+Data\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Documentation \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+
+
+
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_a508c78b70fa31f5c8a1a5b5c6995899c_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classBatchCreator_ab3f5a63b795d0ce553b618e5b317c7bc}\label{classBatchCreator_ab3f5a63b795d0ce553b618e5b317c7bc} 
 \index{BatchCreator@{BatchCreator}!writeApp@{writeApp}}
 \index{writeApp@{writeApp}!BatchCreator@{BatchCreator}}
@@ -137,11 +163,11 @@ Here is the caller graph for this function\+:
 
 Öffnet Anwedung, falls unter "{}application"{} gegeben Wird unter dem Namen aus "{}outputfile"{} gestartet 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{file\+Data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -163,11 +189,11 @@ Befehle ausführen.
 
 Führt Befehle aus\+: Zu finden unter "{}\+EXE"{} als "{}command"{} 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{file\+Data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -192,11 +218,11 @@ Schreibt den teil der Batch Datei der immer gleich ist
 \item setzt ECHO OFF 
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -218,11 +244,11 @@ Umgebungsvariablen setzten.
 
 Setzt Umgebungsvariablen aus "{}\+ENV"{} nach folgender Syntax\+: Eintrag unter "{}key"{} = Eintrag unter "{}value"{} 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{file\+Data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -244,11 +270,11 @@ Sichtbarkeit Konsole.
 
 Zeigt bzw. versteckt Konsolenausgabe 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{file\+Data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -270,11 +296,11 @@ Pfade setzten.
 
 Verknüpft die unter "{}\+PATH"{} angegebenen Pfade mit dem Systempfad Setzt Pfad 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{file\+Data}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{file\+Data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -300,11 +326,11 @@ Schreibt den Teil der Batch Datei der immer gleich ist.
 \item startet cmd.\+exe 
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{batch\+File}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{data\+Stream}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -317,15 +343,15 @@ Here is the caller graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classBatchCreator_a98e00674d0c75c2cab313832a0e1d5fa}\label{classBatchCreator_a98e00674d0c75c2cab313832a0e1d5fa} 
-\index{BatchCreator@{BatchCreator}!batchFile@{batchFile}}
-\index{batchFile@{batchFile}!BatchCreator@{BatchCreator}}
-\doxysubsubsection{\texorpdfstring{batchFile}{batchFile}}
-{\footnotesize\ttfamily std\+::ofstream Batch\+Creator\+::batch\+File\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}\label{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04} 
+\index{BatchCreator@{BatchCreator}!dataStream@{dataStream}}
+\index{dataStream@{dataStream}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{dataStream}{dataStream}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::stringstream$>$ Batch\+Creator\+::data\+Stream\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
 
 \Hypertarget{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}\label{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2} 
 \index{BatchCreator@{BatchCreator}!fileData@{fileData}}
@@ -335,7 +361,7 @@ Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{39}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{BatchCreator_8hpp_source}{Batch\+Creator.\+hpp}}.
 
 
 
