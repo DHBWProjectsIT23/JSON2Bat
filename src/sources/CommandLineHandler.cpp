@@ -30,7 +30,7 @@ void CommandLineHandler::printHelp() {
            << "-o, --outdir\t [path]\t\tOutput the batch file to the given "
            "dir\n"
            << "-h, --help\t\t\tPrint this help message\n"
-           << "-V, --version\t\t\tPrint the version number\n"
+           << "-v, --version\t\t\tPrint the version number\n"
            << "-c, --credits\t\t\tPrint the credits\n\n"
            << "    --verbose\t\t\tStart the application in verbose mode\n"
            << ITALIC

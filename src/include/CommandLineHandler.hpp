@@ -111,7 +111,7 @@ public:
  */
 static const struct option options[] = {
     {"help", no_argument, nullptr, 'h'},
-    {"version", no_argument, nullptr, 'V'},
+    {"version", no_argument, nullptr, 'v'},
     {"credits", no_argument, nullptr, 'c'},
     {"verbose", no_argument, nullptr, 0},
     {"outdir", required_argument, nullptr, 'o'},
