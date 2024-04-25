@@ -78,8 +78,10 @@ int main(int argc, char *argv[]) {
     }
 
     // Vector of all inputted file names
-    std::vector<std::string> files =
-        cli::CommandLineHandler::parseArguments(argc, argv);
+    auto arguments = cli::CommandLineHandler::parseArguments(argc, argv);
+
+    std::vector<std::string> files = std::get<1>(arguments);
+    std::optional<std::string> outDir = std::get<0>(arguments);
 
     if (files.empty()) {
         LOG_ERROR << "No files were given as arguments!\n";
