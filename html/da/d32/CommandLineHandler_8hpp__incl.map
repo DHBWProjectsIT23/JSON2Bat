@@ -1,11 +1,9 @@
 <map id="src/include/CommandLineHandler.hpp" name="src/include/CommandLineHandler.hpp">
-<area shape="rect" id="Node000001" title="Responsible for the Command Line Interface." alt="" coords="50,5,292,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,73,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,34,76,74,73,69,147,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="97,79,163,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,33,147,67,142,64,162,30"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="187,79,240,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,30,201,64,196,67,176,33"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="265,79,322,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="193,29,261,69,259,73,190,34"/>
+<area shape="rect" id="Node000001" title="Responsible for the Command Line Interface." alt="" coords="5,5,247,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="8,79,76,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,34,69,71,66,67,110,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="99,79,153,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,31,129,63,123,63,123,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="177,79,235,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,30,183,67,180,71,138,34"/>
 </map>

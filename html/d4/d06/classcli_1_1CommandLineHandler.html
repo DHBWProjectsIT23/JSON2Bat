@@ -126,9 +126,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1613613eb4f4534ee55aba547a2a470" id="r_ac1613613eb4f4534ee55aba547a2a470"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470">printCredits</a> ()</td></tr>
 <tr class="memdesc:ac1613613eb4f4534ee55aba547a2a470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the credits message.  <br /></td></tr>
 <tr class="separator:ac1613613eb4f4534ee55aba547a2a470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb2f456a899bdbf41772b1ccf03d4ca8" id="r_acb2f456a899bdbf41772b1ccf03d4ca8"><td class="memItemLeft" align="right" valign="top">static std::tuple&lt; std::optional&lt; std::string &gt;, std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8">parseArguments</a> (int argc, char *argv[])</td></tr>
-<tr class="memdesc:acb2f456a899bdbf41772b1ccf03d4ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the Command Line Arguments.  <br /></td></tr>
-<tr class="separator:acb2f456a899bdbf41772b1ccf03d4ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd57e6cad0278639cdf1ffa9b19de8d3" id="r_abd57e6cad0278639cdf1ffa9b19de8d3"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html#abd57e6cad0278639cdf1ffa9b19de8d3">parseArguments</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:abd57e6cad0278639cdf1ffa9b19de8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the Command Line Arguments.  <br /></td></tr>
+<tr class="separator:abd57e6cad0278639cdf1ffa9b19de8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Responsible for the Command Line Interface. </p>
@@ -138,7 +138,7 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1.5 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d1/d38/structoptions.html" title="The struct containing all possible options.">options</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html">CommandLineHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html">CommandLineHandler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af35432870c7365cebcdf348d74f4bbb2" name="af35432870c7365cebcdf348d74f4bbb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af35432870c7365cebcdf348d74f4bbb2">&#9670;&#160;</a></span>CommandLineHandler()</h2>
@@ -197,8 +197,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acb2f456a899bdbf41772b1ccf03d4ca8" name="acb2f456a899bdbf41772b1ccf03d4ca8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb2f456a899bdbf41772b1ccf03d4ca8">&#9670;&#160;</a></span>parseArguments()</h2>
+<a id="abd57e6cad0278639cdf1ffa9b19de8d3" name="abd57e6cad0278639cdf1ffa9b19de8d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd57e6cad0278639cdf1ffa9b19de8d3">&#9670;&#160;</a></span>parseArguments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +207,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::tuple&lt; std::optional&lt; std::string &gt;, std::vector&lt; std::string &gt; &gt; cli::CommandLineHandler::parseArguments </td>
+          <td class="memname">std::vector&lt; std::string &gt; cli::CommandLineHandler::parseArguments </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -245,17 +245,16 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns a vector of strings containing all filenames.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>Update documentation </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a vector of strings containing all filenames. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00066">66</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00050">printCredits()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">printHelp()</a>, and <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00044">printVersion()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_cgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_cgraph" alt=""/></div>
-<map name="ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_cgraph" id="ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_cgraph">
+<div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_cgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_cgraph" alt=""/></div>
+<map name="ad4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_cgraph" id="ad4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_cgraph">
 <area shape="rect" title="Parses the Command Line Arguments." alt="" coords="5,71,175,111"/>
 <area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470" title="Prints the credits message." alt="" coords="223,5,392,46"/>
 <area shape="poly" title=" " alt="" coords="159,68,222,48,224,54,161,73"/>
@@ -268,8 +267,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph" alt=""/></div>
-<map name="ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph" id="ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph">
+<div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_icgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_icgraph" alt=""/></div>
+<map name="ad4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_icgraph" id="ad4/d06/classcli_1_1CommandLineHandler_abd57e6cad0278639cdf1ffa9b19de8d3_icgraph">
 <area shape="rect" title="Parses the Command Line Arguments." alt="" coords="103,5,272,46"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
@@ -314,7 +313,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470_icgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470_icgraph" alt=""/></div>
 <map name="ad4/d06/classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470_icgraph" id="ad4/d06/classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470_icgraph">
 <area shape="rect" title="Prints the credits message." alt="" coords="320,5,489,46"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="103,5,272,46"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#abd57e6cad0278639cdf1ffa9b19de8d3" title="Parses the Command Line Arguments." alt="" coords="103,5,272,46"/>
 <area shape="poly" title=" " alt="" coords="305,28,272,28,272,23,305,23"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
@@ -361,7 +360,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Prints the help message." alt="" coords="320,5,489,46"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="304,25,103,24,55,27,55,21,103,19,304,20"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="103,33,272,74"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#abd57e6cad0278639cdf1ffa9b19de8d3" title="Parses the Command Line Arguments." alt="" coords="103,33,272,74"/>
 <area shape="poly" title=" " alt="" coords="305,41,273,45,272,40,304,36"/>
 <area shape="poly" title=" " alt="" coords="87,38,55,33,56,27,88,33"/>
 </map>
@@ -405,7 +404,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061_icgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061_icgraph" alt=""/></div>
 <map name="ad4/d06/classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061_icgraph" id="ad4/d06/classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061_icgraph">
 <area shape="rect" title="Prints the version message." alt="" coords="320,5,489,46"/>
-<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="103,5,272,46"/>
+<area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#abd57e6cad0278639cdf1ffa9b19de8d3" title="Parses the Command Line Arguments." alt="" coords="103,5,272,46"/>
 <area shape="poly" title=" " alt="" coords="305,28,272,28,272,23,305,23"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
@@ -424,7 +423,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/dfa/namespacecli.html">cli</a></li><li class="navelem"><a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html">CommandLineHandler</a></li>
-    <li class="footer">Generated on Thu Apr 25 2024 12:27:29 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 17:35:22 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

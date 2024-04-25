@@ -1,0 +1,5 @@
+<map id="parsing::JsonHandler::assignOutputFile" name="parsing::JsonHandler::assignOutputFile">
+<area shape="rect" id="Node000001" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="5,5,148,46"/>
+<area shape="rect" id="Node000002" href="$d6/d9e/classutilities_1_1Utils.html#a54995db8d1b951ac391ee881ddff2dc4" title="Check if a file exists." alt="" coords="196,5,340,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,23,180,23,180,28,148,28"/>
+</map>

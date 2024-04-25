@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['environmentvariables_0',['environmentVariables',['../da/d06/classparsing_1_1FileData.html#a7bdf0ed29afed1aded0195a6ea7ae6b0',1,'parsing::FileData']]]
+  ['data_0',['data',['../d5/da0/classparsing_1_1JsonHandler.html#a2164f1fd6acacc76f06f766bd455934e',1,'parsing::JsonHandler']]]
 ];
