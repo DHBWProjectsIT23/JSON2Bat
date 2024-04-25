@@ -31,10 +31,10 @@ public:
      * @param filename
      *
      */
-    BatchCreator(std::shared_ptr<parsing::FileData> fileData);
+    explicit BatchCreator(std::shared_ptr<parsing::FileData> fileData);
 
     /** @todo Documentation */
-    std::shared_ptr<std::stringstream> getDataStream() {
+    [[nodiscard]] std::shared_ptr<std::stringstream> getDataStream() const {
         return dataStream;
     }
 
@@ -57,14 +57,14 @@ private:
      * - startet cmd.exe
      *
      */
-    void writeStart();
+    void writeStart() const;
 
     /**
      * @brief Sichtbarkeit Konsole
      * @details Zeigt bzw. versteckt Konsolenausgabe
      *
      */
-    void writeHideShell();
+    void writeHideShell() const;
 
     /**
      * @brief Befehle ausführen
@@ -72,7 +72,7 @@ private:
      * Zu finden unter "EXE" als "command"
      *
      */
-    void writeCommands();
+    void writeCommands() const;
 
     /**
      * @brief Umgebungsvariablen setzten
@@ -80,7 +80,7 @@ private:
      * Eintrag unter "key" = Eintrag unter "value"
      *
      */
-    void writeEnvVariables();
+    void writeEnvVariables() const;
 
     /**
      * @brief Pfade setzten
@@ -88,7 +88,7 @@ private:
      * Setzt Pfad
      *
      */
-    void writePathVariables();
+    void writePathVariables() const;
 
     /**
      * @brief Öffnet Anwednung falls gewünscht
@@ -96,7 +96,7 @@ private:
      * Wird unter dem Namen aus "outputfile" gestartet
      *
      */
-    void writeApp();
+    void writeApp() const;
 
     /**
      * @brief Ende der Batch Datei
@@ -104,5 +104,5 @@ private:
      * - setzt ECHO OFF
      *
      */
-    void writeEnd();
+    void writeEnd() const;
 };

@@ -16,6 +16,7 @@
 #ifndef UTILITIES_HPP
 #define UTILITIES_HPP
 
+#include "Exceptions.hpp"
 #include <string>
 
 /**
@@ -47,23 +48,9 @@ public:
      */
     static void setupEasyLogging(const std::string &configFile);
 
-    /**
-     * @brief Check if a file exists
-     * @details
-     * This function checks if a file exists by trying to open it using fstream.
-     * @param fileName The file which should be checked.
-     * @return Returns true if the file exists and false otherwise
-     */
-    static bool checkIfFileExists(const std::string &fileName);
-
-    /**
-     * @brief Checks if the file ending is ".json"
-     * @details
-     * This function checks if the given file ends with ".json".
-     * @param fileName The file which should be checked.
-     * @return Returns true if the file ends with ".json" and false otherwise.
-     */
-    static bool checkFileEnding(const std::string_view &fileName);
+    static bool handleParseException(const exceptions::CustomException &e,
+                                     const std::vector<std::string>::iterator &file,
+                                     const std::vector<std::string> &files);
 
     /**
      * @brief Asks if the user wants to continue

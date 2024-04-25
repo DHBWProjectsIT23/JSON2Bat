@@ -14,7 +14,6 @@
 #include "FileData.hpp"
 #include "KeyValidator.hpp"
 #include "LoggingWrapper.hpp"
-#include "Utils.hpp"
 
 namespace parsing {
 JsonHandler::JsonHandler(const std::string &filename) {

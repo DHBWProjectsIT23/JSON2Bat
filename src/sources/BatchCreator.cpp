@@ -10,12 +10,13 @@
  */
 
 #include "BatchCreator.hpp"
-#include "Exceptions.hpp"
-#include "LoggingWrapper.hpp"
 
-BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData) {
+#include "LoggingWrapper.hpp"
+#include <utility>
+
+BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData)
+    : fileData(std::move(fileData)) {
     LOG_INFO << "Initializing BatchCreator";
-    this->fileData = fileData;
     this->dataStream = std::make_shared<std::stringstream>();
     this->createBatch();
 }
@@ -32,12 +33,12 @@ void BatchCreator::createBatch() {
     this->writeEnd();
 }
 
-void BatchCreator::writeStart() {
+void BatchCreator::writeStart() const {
     LOG_INFO << "writing Start of Batch";
     *this->dataStream << "@ECHO OFF\r\nC:\\Windows\\System32\\cmd.exe ";
 }
 
-void BatchCreator::writeHideShell() {
+void BatchCreator::writeHideShell() const {
     if (this->fileData->getHideShell()) {
         LOG_INFO << "writing hide Shell";
         *this->dataStream << "/c ";
@@ -48,7 +49,7 @@ void BatchCreator::writeHideShell() {
     }
 }
 
-void BatchCreator::writeCommands() {
+void BatchCreator::writeCommands() const {
     LOG_INFO << "writing Commands";
     *this->dataStream << "\"";
     for (const std::string &command : this->fileData->getCommands()) {
@@ -56,15 +57,14 @@ void BatchCreator::writeCommands() {
     }
 }
 
-void BatchCreator::writeEnvVariables() {
+void BatchCreator::writeEnvVariables() const {
     LOG_INFO << "writing Environment Variables";
-    for (const std::tuple env : this->fileData->getEnvironmentVariables()) {
-        *this->dataStream << "set " << std::get<0>(env) << "=" << std::get<1>(env)
-                          << " && ";
+    for (const auto &[key, value] : this->fileData->getEnvironmentVariables()) {
+        *this->dataStream << "set " << key << "=" << value << " && ";
     }
 }
 
-void BatchCreator::writePathVariables() {
+void BatchCreator::writePathVariables() const {
     LOG_INFO << "writing Path Variables";
     *this->dataStream << "set path=";
     for (const std::string &path : this->fileData->getPathValues()) {
@@ -73,9 +73,9 @@ void BatchCreator::writePathVariables() {
     *this->dataStream << "%path%";
 }
 
-void BatchCreator::writeApp() {
+void BatchCreator::writeApp() const {
     std::string appName = this->fileData->getOutputFile();
-    appName = appName.substr(0, appName.find("."));
+    appName = appName.substr(0, appName.find('.'));
     if (this->fileData->getApplication().has_value()) {
         LOG_INFO << "writing start Application";
         *this->dataStream << " && start \"" << appName << "\" "
@@ -86,6 +86,6 @@ void BatchCreator::writeApp() {
     }
 }
 
-void BatchCreator::writeEnd() {
+void BatchCreator::writeEnd() const {
     *this->dataStream << "@ECHO ON";
 }

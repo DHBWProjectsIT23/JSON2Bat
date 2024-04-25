@@ -14,6 +14,7 @@
 
 #include "jsoncpp/value.h"
 #include <optional>
+#include <unordered_set>
 namespace parsing {
 /**
  * @class KeyValidator
@@ -62,8 +63,7 @@ private:
      * types.
      */
     std::vector<std::tuple<int, std::string>>
-    getWrongKeys(const Json::Value& root, const std::string &filename);
-
+    getWrongKeys(const Json::Value &root, const std::string &filename) const;
 
     /**
      * @brief Validates types from the entries array.
@@ -76,7 +76,7 @@ private:
      */
     static void validateTypes(const std::string &filename,
                               const Json::Value &entry,
-                              std::vector<std::string> &entryKeys);
+                              const std::unordered_set<std::string> &entryKeys);
 
     /**
      * @brief Validates that an entries 'type' key is valid
@@ -90,7 +90,7 @@ private:
      */
     std::vector<std::tuple<int, std::string>>
     validateEntries(const std::string &filename,
-                    const std::vector<std::string> &entryKeys);
+                    const std::unordered_set<std::string> &entryKeys) const;
 
     /**
      * @brief
@@ -105,11 +105,11 @@ private:
     static std::optional<int> getUnknownKeyLine(const std::string &filename,
             const std::string &wrongKey);
 
-    std::vector<std::string> validKeys = {"outputfile", "hideshell", "entries",
-        "application"
+    std::unordered_set<std::string> validKeys = {"outputfile", "hideshell",
+        "entries", "application"
     };
-    std::vector<std::string> validEntryKeys = {"type", "key", "value", "path",
-        "command"
+    std::unordered_set<std::string> validEntryKeys = {"type", "key", "value",
+        "path", "command"
     };
 };
 } // namespace parsing

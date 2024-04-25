@@ -12,8 +12,10 @@
  */
 #include <LoggingWrapper.hpp>
 #include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <jsoncpp/json.h>
+#include <tuple>
 #include <vector>
 
 #include "BatchCreator.hpp"
@@ -30,18 +32,37 @@ INITIALIZE_EASYLOGGINGPP
  * @brief
  * @details
  *
- * @param files
  * @return
  */
-std::vector<std::string> validateFiles(std::vector<std::string> files);
+void checkConfigFile();
+
+/**
+ * @brief
+ * @details
+ *
+ * @param argc
+ * @param argv
+ * @return
+ */
+std::tuple<std::vector<std::string>, std::string>
+parseAndValidateArgs(int argc, char *argv[]);
 
 /**
  * @brief
  * @details
  *
  * @param files
+ * @return
  */
-void parseFiles(std::vector<std::string> files, std::string outDir);
+std::vector<std::string> validateFiles(const std::vector<std::string> &files);
+
+/**
+ * @brief
+ * @details
+ *
+ * @param file
+ */
+void parseFile(const std::string &file, const std::string &outDir);
 
 /**
  * @brief Main function of the program
@@ -59,135 +80,107 @@ void parseFiles(std::vector<std::string> files, std::string outDir);
  * @todo Refactoring
  */
 int main(int argc, char *argv[]) {
-    std::ifstream configFile(LOG_CONFIG);
-    if (!configFile.good()) {
-        std::cerr << cli::RED << cli::BOLD
-                  << "Fatal: Easylogging configuration file not found at:\n"
-                  << cli::RESET << cli::ITALIC << "\n\t\"" << LOG_CONFIG << "\"\n\n"
-                  << cli::RESET;
 
-        std::cout << "Aborting...\n";
-        return 1;
-    }
-
+    checkConfigFile();
     utilities::Utils::setupEasyLogging(LOG_CONFIG);
-
-    // Check if any options/arguments were given
-    if (argc < 2) {
-        LOG_ERROR << "No options given!\n";
-        cli::CommandLineHandler::printHelp();
-    }
-
-    // Vector of all inputted file names
-    auto arguments = cli::CommandLineHandler::parseArguments(argc, argv);
-
-    std::vector<std::string> files = std::get<1>(arguments);
-    std::optional<std::string> outDirOption = std::get<0>(arguments);
-    std::string outDir;
-    if (outDirOption.has_value()) {
-        try {
-            outDir = utilities::Utils::checkDirectory(outDirOption.value());
-        } catch (const exceptions::CustomException &e) {
-            LOG_ERROR << e.what();
-            return 1;
-        }
-    }
-
-    if (files.empty()) {
-        LOG_ERROR << "No files were given as arguments!\n";
-        return 1;
-    }
+    auto [files, outDir] = parseAndValidateArgs(argc, argv);
     OUTPUT << cli::BOLD << "Parsing the following files:\n" << cli::RESET;
     for (const auto &file : files) {
         OUTPUT << "\t - " << file << "\n";
     }
 
-    // Replace the original files vector with the validFiles vector
-    files = std::move(validateFiles(files));
-    parseFiles(files, outDir);
-
+    files = validateFiles(files);
+    for (auto file = files.begin(); file != files.end(); ++file) {
+        OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
+               << cli::RESET;
+        try {
+            parseFile(*file, outDir);
+        } catch (const exceptions::CustomException &e) {
+            if (utilities::Utils::handleParseException(e, file, files)) {
+                continue;
+            }
+            exit(1);
+        }
+    }
     LOG_INFO << "Exiting...";
     return 0;
 }
 
-std::vector<std::string> validateFiles(std::vector<std::string> files) {
+void checkConfigFile() {
+    if (!std::filesystem::is_regular_file(LOG_CONFIG)) {
+        std::cerr << cli::RED << cli::BOLD
+                  << "Fatal: Easylogging configuration file not found at:\n"
+                  << cli::RESET << cli::ITALIC << "\n\t\"" << LOG_CONFIG << "\"\n\n"
+                  << cli::RESET;
+        std::cout << "Aborting...\n";
+        exit(1);
+    }
+}
+
+std::tuple<std::vector<std::string>, std::string>
+parseAndValidateArgs(int argc, char *argv[]) {
+    if (argc < 2) {
+        LOG_ERROR << "No options given!\n";
+        cli::CommandLineHandler::printHelp();
+        exit(1);
+    }
+    auto [outOption, files] = cli::CommandLineHandler::parseArguments(argc, argv);
+    std::string outDir = outOption.value_or("");
+    if (!outDir.empty()) {
+        try {
+            outDir = utilities::Utils::checkDirectory(outDir);
+        } catch (const exceptions::CustomException &e) {
+            LOG_ERROR << e.what();
+            exit(1);
+        }
+    }
+    if (files.empty()) {
+        LOG_ERROR << "No files were given as arguments!\n";
+        exit(1);
+    }
+    return {files, outDir};
+}
+
+std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
     std::vector<std::string> validFiles;
-
-    for (const auto &file : files) {
-        if (!utilities::Utils::checkIfFileExists(file)) {
+    validFiles.reserve(files.size());
+    for (const std::filesystem::path file : files) {
+        if (!std::filesystem::is_regular_file(file)) {
             LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
-
-            if (files.size() != 1 &&
+            if (files.size() > 1 &&
                     !utilities::Utils::askToContinue("Do you want to continue with the "
                             "remaining files? (y/n) ")) {
-                // Exit if it's the only file or the user does not want to
-                // continue
                 OUTPUT << "Aborting...\n";
                 LOG_INFO << "Application ended by user Input";
                 exit(1);
             }
-
             continue;
         }
-
-        if (!utilities::Utils::checkFileEnding(file)) {
-
-            LOG_WARNING << "The file \"" << file
-                        << "\" does not end in \".json\"\n";
+        if (file.extension() != ".json") {
+            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
             OUTPUT << "If the file is not in JSON Format, continuing may "
                    "result in\nunexpected behaviour!\n";
-
             if (!utilities::Utils::askToContinue()) {
                 OUTPUT << "Aborting...\n";
                 LOG_INFO << "Application ended by user Input";
                 exit(1);
             }
         }
-
         validFiles.push_back(file);
     }
-
     return validFiles;
 }
 
-void parseFiles(std::vector<std::string> files, std::string outDir) {
-
-    for (auto file = files.begin(); file != files.end(); ++file) {
-        OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
-               << cli::RESET;
-
-        std::shared_ptr<parsing::FileData> fileData;
-        try {
-            parsing::JsonHandler jsonHandler(*file);
-            fileData = jsonHandler.getFileData();
-            BatchCreator batchCreator = BatchCreator(fileData);
-            std::shared_ptr<std::stringstream> dataStream =
-                batchCreator.getDataStream();
-            std::ofstream outFile;
-            std::string fileName = outDir + fileData->getOutputFile();
-            outFile.open(fileName);
-            if (!outFile.good()) {
-                throw exceptions::FailedToOpenFileException(fileName);
-            }
-            outFile << dataStream->str();
-            outFile.close();
-        } catch (const exceptions::CustomException &e) {
-            OUTPUT << "\nThere has been a error while trying to parse \"" << *file
-                   << ":\n";
-            LOG_ERROR << e.what();
-
-            if (std::next(file) != files.end() &&
-                    !utilities::Utils::askToContinue(
-                        "Do you want to continue with the other files? (y/n) "
-                        "")) {
-                OUTPUT << "Aborting...";
-                LOG_INFO << "Application ended by user Input";
-                exit(1);
-            }
-
-            std::cout << "\n";
-            continue;
-        }
+void parseFile(const std::string &file, const std::string &outputDirectory) {
+    parsing::JsonHandler jsonHandler(file);
+    auto fileData = jsonHandler.getFileData();
+    BatchCreator batchCreator(fileData);
+    std::shared_ptr<std::stringstream> dataStream = batchCreator.getDataStream();
+    std::string outputFileName = outputDirectory + fileData->getOutputFile();
+    std::ofstream outFile(outputFileName);
+    if (!outFile.good()) {
+        throw exceptions::FailedToOpenFileException(outputFileName);
     }
+    outFile << dataStream->str();
     OUTPUT << "Done with files!\n";
 }
