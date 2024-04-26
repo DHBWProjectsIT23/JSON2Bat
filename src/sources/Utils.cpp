@@ -94,7 +94,7 @@ bool Utils::handleParseException(const exceptions::CustomException &e,
     return true;
 }
 
-const std::string Utils::escapeString(const std::string &str) {
+std::string Utils::escapeString(const std::string &str) {
     // Map of characters to their escape sequences
     static const std::unordered_map<char, std::string> escapeSequences = {
         {'\\', "\\\\"},    // Replace backslash with double backslash

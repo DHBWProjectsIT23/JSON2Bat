@@ -107,7 +107,7 @@ public:
     *
     * @return The processed string
     */
-    static const std::string escapeString(const std::string &str);
+    static std::string escapeString(const std::string &str);
 };
 } // namespace utilities
 
