@@ -95,31 +95,26 @@ bool Utils::handleParseException(const exceptions::CustomException &e,
 }
 
 const std::string Utils::escapeString(const std::string &str) {
-    // Replace each backslash with double backslash
-    std::string escapedStr;
+    const std::string Utils::escapeString(const std::string &str) {
+    // Map of characters to their escape sequences
+    static const std::unordered_map<char, std::string> escapeSequences = {
+        {'\\', "\\\\"}, // Replace backslash with double backslash
+        {'\n', "\\n"},  // Replace newline with backslash-n
+        {'\t', "\\t"},  // Replace tab with backslash-t
+        {'\x1A', "\\x1A"}, // Replace end of file with backslash-x1A
+        {'\r', "\\r"}   // Replace carriage return with backslash-r
+    };
+
+    std::ostringstream escapedStream;
     for (char c : str) {
-        switch (c) {
-            case '\\':
-                escapedStr += "\\\\"; // Replace backslash with double backslash
-                break;
-            case '\n':
-                escapedStr += "\\n"; // Replace newline with backslash-n
-                break;
-            case '\t':
-                escapedStr += "\\t"; // Replace tab with backslash-t
-                break;
-            case '\x1A':
-                escapedStr += "\\x1A"; // Replace end of file with backslash-x1A
-                break;
-            case '\r':
-                escapedStr += "\\r"; // Replace carriage return with backslash-r
-                break;
-            default:
-                escapedStr += c;
-                break;
+        if (escapeSequences.count(c)) {
+            escapedStream << escapeSequences.at(c);
+        } else {
+            escapedStream << c;
         }
     }
-    return escapedStr;
+    return escapedStream.str();
+}
 }
 
 } // namespace utilities
