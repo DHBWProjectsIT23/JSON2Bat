@@ -10,17 +10,15 @@ elseif(UNIX)
   target_compile_definitions(LoggingWrapper PRIVATE IS_UNIX)
 endif()
 
-
 # Linking necessary libraries
 target_link_libraries(${EXECUTABLE_NAME} PRIVATE
   jsoncpp
   LoggingWrapper)
-endif()
 
 if(WIN32)
   add_library(xgetopt ${PROJECT_SOURCE_DIR}/lib/xgetopt.c)
   target_include_directories(xgetopt PRIVATE ${PROJECT_SOURCE_DIR}/include)
-  target_link_libraries(${PROJECT_NAME} PRIVATE 
+  target_link_libraries(${PROJECT_NAME} PRIVATE
     ${PROJECT_SOURCE_DIR}/lib/compiled/libjsoncpp.a
     LoggingWrapper
     xgetopt)
