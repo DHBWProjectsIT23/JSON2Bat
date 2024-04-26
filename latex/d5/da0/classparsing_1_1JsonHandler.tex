@@ -103,7 +103,7 @@ Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00020}{20}} of file
 
 
 
-References \mbox{\hyperlink{JsonHandler_8cpp_source_l00025}{parse\+File()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00154}{root}}.
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00026}{parse\+File()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00164}{root}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -126,13 +126,16 @@ Here is the call graph for this function\+:
 
 Assigns application to this-\/\texorpdfstring{$>$}{>}data. 
 
-Retrieves the value of the application key from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and defaults to an empty string. 
+Retrieves the value of the application key from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and defaults to an empty string.
+\begin{DoxyItemize}
+\item \{Req\+Func16\} 
+\end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00154}{root}}.
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00164}{root}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -153,17 +156,20 @@ Here is the caller graph for this function\+:
 Assigns an command to this-\/\texorpdfstring{$>$}{>}data. 
 
 
+\begin{DoxyItemize}
+\item \{Req\+Func12\} 
 \begin{DoxyParams}{Parameters}
 {\em entry} & The entry with the command \\
 \hline
 \end{DoxyParams}
 
+\end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}.
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -184,6 +190,9 @@ Here is the caller graph for this function\+:
 Assigns entries to this-\/\texorpdfstring{$>$}{>}data. 
 
 Goes through each of the entries from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and calls the relevant method depending on it\textquotesingle{}s type. All "{}type"{} keys should be valid by this point.
+\begin{DoxyItemize}
+\item \{Req\+Func10\}
+\end{DoxyItemize}
 
 
 \begin{DoxyParams}{Parameters}
@@ -197,11 +206,11 @@ Goes through each of the entries from Json\+::\+Value this-\/\texorpdfstring{$>$
 \end{DoxyExceptions}
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8cpp_source_l00107}{assign\+Command()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00112}{assign\+Environment\+Variable()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00119}{assign\+Path\+Value()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00154}{root}}.
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00116}{assign\+Command()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00122}{assign\+Environment\+Variable()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00130}{assign\+Path\+Value()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00164}{root}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -230,17 +239,20 @@ Here is the caller graph for this function\+:
 Assigns an environment\+Variable to this-\/\texorpdfstring{$>$}{>}data. 
 
 
+\begin{DoxyItemize}
+\item \{Req\+Func11\} 
 \begin{DoxyParams}{Parameters}
 {\em entry} & The entry with the environment\+Variable \\
 \hline
 \end{DoxyParams}
 
+\end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}.
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -260,13 +272,16 @@ Here is the caller graph for this function\+:
 
 Assigns the hideshell value to this-\/\texorpdfstring{$>$}{>}data. 
 
-Retrieves the value of the hideshell key from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and defaults to negative. 
+Retrieves the value of the hideshell key from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and defaults to negative.
+\begin{DoxyItemize}
+\item \{Req\+Func9\} 
+\end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00154}{root}}.
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00164}{root}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -287,6 +302,9 @@ Here is the caller graph for this function\+:
 Assigns the outputfile to this-\/\texorpdfstring{$>$}{>}data. 
 
 Retrieves the outputfile from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root and makes sure, that the file doesn\textquotesingle{}t already exist.
+\begin{DoxyItemize}
+\item \{Req\+Func8\}
+\end{DoxyItemize}
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -295,11 +313,11 @@ Retrieves the outputfile from Json\+::\+Value this-\/\texorpdfstring{$>$}{>}root
 \end{DoxyExceptions}
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00154}{root}}.
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00164}{root}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -320,17 +338,20 @@ Here is the caller graph for this function\+:
 Assigns a path value to this-\/\texorpdfstring{$>$}{>}data. 
 
 
+\begin{DoxyItemize}
+\item \{Req\+Func13\} 
 \begin{DoxyParams}{Parameters}
 {\em entry} & The entry with the path value \\
 \hline
 \end{DoxyParams}
 
+\end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}.
+References \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -357,11 +378,11 @@ Pointer to the created instance of \doxylink{classparsing_1_1FileData}{File\+Dat
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8cpp_source_l00075}{assign\+Application()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00080}{assign\+Entries()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00069}{assign\+Hide\+Shell()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00063}{assign\+Output\+File()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{data}}.
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00082}{assign\+Application()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00088}{assign\+Entries()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00075}{assign\+Hide\+Shell()}}, \mbox{\hyperlink{JsonHandler_8cpp_source_l00068}{assign\+Output\+File()}}, and \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{data}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -396,11 +417,11 @@ Pointer to the \doxylink{classparsing_1_1FileData}{File\+Data} Object with the p
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{JsonHandler_8cpp_source_l00053}{create\+File\+Data()}}.
+References \mbox{\hyperlink{JsonHandler_8cpp_source_l00057}{create\+File\+Data()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -450,7 +471,7 @@ A shared pointer to the Json\+::\+Value instance
 \end{DoxyExceptions}
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{JsonHandler_8cpp_source}{Json\+Handler.\+cpp}}.
 
 
 
@@ -483,7 +504,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{155}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00165}{165}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
 
 \Hypertarget{classparsing_1_1JsonHandler_a457c12a64b46f26efbdef10d808870d0}\label{classparsing_1_1JsonHandler_a457c12a64b46f26efbdef10d808870d0} 
 \index{parsing::JsonHandler@{parsing::JsonHandler}!root@{root}}
@@ -493,7 +514,7 @@ Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00155}{155}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00154}{154}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
+Definition at line \mbox{\hyperlink{JsonHandler_8hpp_source_l00164}{164}} of file \mbox{\hyperlink{JsonHandler_8hpp_source}{Json\+Handler.\+hpp}}.
 
 
 

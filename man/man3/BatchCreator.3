@@ -1,4 +1,4 @@
-.TH "BatchCreator" 3 "Fri Apr 26 2024 13:59:39" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "BatchCreator" 3 "Fri Apr 26 2024 14:03:05" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,7 +25,7 @@ BatchCreator \- Creates a batch file from a FileData obeject\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBcreateBatch\fP () const"
+.RI "void \fBcreateBatch\fP ()"
 .br
 .RI "Creates the batch stream\&. "
 .ti -1c
@@ -49,7 +49,7 @@ BatchCreator \- Creates a batch file from a FileData obeject\&.
 .br
 .RI "Set's the path variables\&. "
 .ti -1c
-.RI "void \fBwriteApp\fP () const"
+.RI "void \fBwriteApplication\fP () const"
 .br
 .RI "If an application is given, it is started at the end\&. "
 .ti -1c
@@ -100,16 +100,16 @@ Definition at line \fB18\fP of file \fBBatchCreator\&.cpp\fP\&.
 References \fBcreateBatch()\fP, and \fBdataStream\fP\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void BatchCreator::createBatch () const\fC [private]\fP"
+.SS "void BatchCreator::createBatch ()\fC [private]\fP"
 
 .PP
 Creates the batch stream\&. < FileData object
 .PP
 The method calls all necessary functions to create the stream for the batch file\&. 
 .PP
-Definition at line \fB25\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB26\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
-References \fBwriteApp()\fP, \fBwriteCommands()\fP, \fBwriteEnd()\fP, \fBwriteEnvVariables()\fP, \fBwriteHideShell()\fP, \fBwritePathVariables()\fP, and \fBwriteStart()\fP\&.
+References \fBwriteApplication()\fP, \fBwriteCommands()\fP, \fBwriteEnd()\fP, \fBwriteEnvVariables()\fP, \fBwriteHideShell()\fP, \fBwritePathVariables()\fP, and \fBwriteStart()\fP\&.
 .SS "std::shared_ptr< std::stringstream > BatchCreator::getDataStream () const\fC [inline]\fP"
 
 .PP
@@ -125,20 +125,32 @@ A shared pointer to the stringstream
 Definition at line \fB46\fP of file \fBBatchCreator\&.hpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
-.SS "void BatchCreator::writeApp () const\fC [private]\fP"
+.SS "void BatchCreator::writeApplication () const\fC [private]\fP"
 
 .PP
-If an application is given, it is started at the end\&. If the key 'application' is given in the json file, the application is started at the end of the batch file\&. 
+If an application is given, it is started at the end\&. If the key 'application' is given in the json file, the application is started at the end of the batch file\&.
+.IP "\(bu" 2
+{ReqFunc16}
+.IP "\(bu" 2
+{ReqFunc25} 
 .PP
-Definition at line \fB80\fP of file \fBBatchCreator\&.cpp\fP\&.
+
+.PP
+Definition at line \fB88\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeCommands () const\fC [private]\fP"
 
 .PP
-Writes the commands to be executed\&. Writes the commands to be executed from the FileData object\&. Those originiate from the 'commands' entry in the json file 
+Writes the commands to be executed\&. Writes the commands to be executed from the FileData object\&. Those originiate from the 'commands' entry in the json file
+.IP "\(bu" 2
+{ReqFunc20}
+.IP "\(bu" 2
+{ReqFunc22} 
 .PP
-Definition at line \fB52\fP of file \fBBatchCreator\&.cpp\fP\&.
+
+.PP
+Definition at line \fB57\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeEnd () const\fC [private]\fP"
@@ -150,7 +162,7 @@ Writes the end of the batch file\&. Writes the end of the batch file, which is a
 .PP
 
 .PP
-Definition at line \fB95\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB107\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SS "void BatchCreator::writeEnvVariables () const\fC [private]\fP"
@@ -158,27 +170,41 @@ References \fBdataStream\fP\&.
 .PP
 Set's environment variables\&. Set's the envirment variables for the batch\&. Those originiate from the 'ENV' entry in the json file with the following syntax:
 .IP "\(bu" 2
-Entry under 'key' = Entry under 'value' 
+Entry under 'key' = Entry under 'value'
+.IP "\(bu" 2
+{ReqFunc20}
+.IP "\(bu" 2
+{ReqFunc21} 
 .PP
 
 .PP
-Definition at line \fB61\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB67\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeHideShell () const\fC [private]\fP"
 
 .PP
-Writes the visibility of the shell\&. This hides/shows the shell after the batch file has been executed 
+Writes the visibility of the shell\&. This hides/shows the shell after the batch file has been executed
+.IP "\(bu" 2
+{ReqFunc19} 
 .PP
-Definition at line \fB41\fP of file \fBBatchCreator\&.cpp\fP\&.
+
+.PP
+Definition at line \fB45\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writePathVariables () const\fC [private]\fP"
 
 .PP
-Set's the path variables\&. Set's the path variables for the batch\&. Those originiate from the 'PATH' entry in the json file 
+Set's the path variables\&. Set's the path variables for the batch\&. Those originiate from the 'PATH' entry in the json file
+.IP "\(bu" 2
+{ReqFunc20}
+.IP "\(bu" 2
+{ReqFunc23} 
 .PP
-Definition at line \fB69\fP of file \fBBatchCreator\&.cpp\fP\&.
+
+.PP
+Definition at line \fB76\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeStart () const\fC [private]\fP"
@@ -192,7 +218,7 @@ startet cmd\&.exe
 .PP
 
 .PP
-Definition at line \fB36\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB38\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SH "Member Data Documentation"

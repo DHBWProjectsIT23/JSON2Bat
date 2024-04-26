@@ -10,6 +10,5 @@ var searchData=
   ['printcredits_7',['printCredits',['../d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470',1,'cli::CommandLineHandler']]],
   ['printhelp_8',['printHelp',['../d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960',1,'cli::CommandLineHandler']]],
   ['printversion_9',['printVersion',['../d4/d06/classcli_1_1CommandLineHandler.html#a12afc8cab2af137f31c6aae2d1b27061',1,'cli::CommandLineHandler']]],
-  ['project_20structure_10',['Project Structure',['../index.html#autotoc_md9',1,'']]],
-  ['project_5fname_11',['PROJECT_NAME',['../d6/d7f/namespaceconfig.html#a8accb7729aee7de0de898b743634c86c',1,'config']]]
+  ['project_5fname_10',['PROJECT_NAME',['../d6/d7f/namespaceconfig.html#a8accb7729aee7de0de898b743634c86c',1,'config']]]
 ];
