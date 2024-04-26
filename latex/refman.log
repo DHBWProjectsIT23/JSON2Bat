@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.26)  26 APR 2024 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.26)  26 APR 2024 15:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2614,8 +2614,8 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: F309BE9A1BF146466747D2EE16CF47FC;59504.
  ) 
 Here is how much of TeX's memory you used:
- 21830 strings out of 476025
- 429874 string characters out of 5796497
+ 21833 strings out of 476025
+ 429967 string characters out of 5796497
  1875388 words of memory out of 5000000
  39549 multiletter control sequences out of 15000+600000
  572154 words of font info for 111 fonts, out of 8000000 for 9000
@@ -2632,10 +2632,10 @@ ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (142 pages, 1146281 bytes).
+Output written on refman.pdf (142 pages, 1146444 bytes).
 PDF statistics:
- 6841 PDF objects out of 7423 (max. 8388607)
- 6239 compressed objects within 63 object streams
- 2090 named destinations out of 2487 (max. 500000)
+ 6844 PDF objects out of 7423 (max. 8388607)
+ 6242 compressed objects within 63 object streams
+ 2093 named destinations out of 2487 (max. 500000)
  2763 words of extra memory for PDF output out of 10000 (max. 10000000)
 
