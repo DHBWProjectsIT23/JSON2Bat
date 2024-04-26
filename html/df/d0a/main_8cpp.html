@@ -179,9 +179,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad612c95526cdd7ff2fa78563c0cd666f" id="r_ad612c95526cdd7ff2fa78563c0cd666f"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; std::vector&lt; std::string &gt;, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a> (int argc, char *argv[])</td></tr>
 <tr class="memdesc:ad612c95526cdd7ff2fa78563c0cd666f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates and parses arguments.  <br /></td></tr>
 <tr class="separator:ad612c95526cdd7ff2fa78563c0cd666f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a229a422b4e4be967a1e02c69d8867c77" id="r_a229a422b4e4be967a1e02c69d8867c77"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a> (const std::vector&lt; std::string &gt; &amp;files)</td></tr>
-<tr class="memdesc:a229a422b4e4be967a1e02c69d8867c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the files are valid.  <br /></td></tr>
-<tr class="separator:a229a422b4e4be967a1e02c69d8867c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa58271e7839a07f94c9a614ca68af1da" id="r_aa58271e7839a07f94c9a614ca68af1da"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#aa58271e7839a07f94c9a614ca68af1da">validateFiles</a> (const std::vector&lt; std::string &gt; &amp;files)</td></tr>
+<tr class="memdesc:aa58271e7839a07f94c9a614ca68af1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the files are valid.  <br /></td></tr>
+<tr class="separator:aa58271e7839a07f94c9a614ca68af1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8a82e43100bc97b6aad59a7f7d2f13" id="r_a7c8a82e43100bc97b6aad59a7f7d2f13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a> (const std::string &amp;file, const std::string &amp;outputDirectory)</td></tr>
 <tr class="memdesc:a7c8a82e43100bc97b6aad59a7f7d2f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the given file and writes the output to the output directory.  <br /></td></tr>
 <tr class="separator:a7c8a82e43100bc97b6aad59a7f7d2f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,7 +194,21 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-04-26 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.2.2</dd></dl>
-<p>The main function is responsible for connection all parts of the programm. It calls all relevant classes and finishes when everything is done.</p>
+<p>The main function is responsible for connection all parts of the programm. It calls all relevant classes and finishes when everything is done.</p><ul>
+<li>{ReqOptFunc3} - Documentation is done using doxygen syntax</li>
+<li>{ReqOptFunc3} - All Classes, methods, funciton, namespaces and file are documented</li>
+<li>{ReqNonFunc5} - Source files are found under src/sources, header under src/include</li>
+<li>{ReqNonFunc6} - All header files can be included withou paths</li>
+<li>{ReqNonFunc7} - Non source files are included</li>
+<li>{ReqNonFunc8} - All header files include a "ifndef/define/endif" block</li>
+<li>{ReqOptFunc5} - Every file has a top comment including the authors</li>
+<li>{ReqOptFunc6} - Logging is done using easylogging++ library<ul>
+<li>A self written wrapper is used, to allow for parallel output to the stdout and the logfile. Though we don't consider this wrapper part of the project itself and as such is placed within the directorys for external libraries</li>
+</ul>
+</li>
+<li>Formatting is done via astyle</li>
+<li>!{ReqOptFunc7} - No unit tests are included</li>
+</ul>
 <dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
@@ -236,9 +250,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 on success, 1 on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00086">86</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00055">utilities::Utils::checkConfigFile()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00077">utilities::Utils::handleParseException()</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00026">config::LOG_CONFIG</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00103">parseAndValidateArgs()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00170">parseFile()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00025">utilities::Utils::setupEasyLogging()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00130">validateFiles()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00057">utilities::Utils::checkConfigFile()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00081">utilities::Utils::handleParseException()</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00026">config::LOG_CONFIG</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00123">parseAndValidateArgs()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00196">parseFile()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00025">utilities::Utils::setupEasyLogging()</a>, and <a class="el" href="../../df/d0a/main_8cpp_source.html#l00153">validateFiles()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -255,7 +269,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="50,165,171,264,168,268,46,170"/>
 <area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0" title="Set up easylogging." alt="" coords="119,326,280,367"/>
 <area shape="poly" title=" " alt="" coords="36,167,43,197,56,236,76,277,105,312,108,315,104,319,101,316,71,280,51,238,38,198,31,168"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77" title="Checks if the files are valid." alt="" coords="152,55,247,80"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#aa58271e7839a07f94c9a614ca68af1da" title="Checks if the files are valid." alt="" coords="152,55,247,80"/>
 <area shape="poly" title=" " alt="" coords="41,139,67,114,101,90,136,77,138,82,104,95,71,118,45,143"/>
 <area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="345,55,533,80"/>
 <area shape="poly" title=" " alt="" coords="269,106,367,82,368,87,270,111"/>
@@ -335,9 +349,9 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A tuple containing the files to be parsed and the output directory </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00103">103</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00065">utilities::Utils::checkDirectory()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00068">cli::CommandLineHandler::parseArguments()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">cli::CommandLineHandler::printHelp()</a>, and <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html#l00037">exceptions::CustomException::what()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00068">utilities::Utils::checkDirectory()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00071">cli::CommandLineHandler::parseArguments()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">cli::CommandLineHandler::printHelp()</a>, and <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html#l00033">exceptions::CustomException::what()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -406,9 +420,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00170">170</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00196">196</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d1/d03/BatchCreator_8hpp_source.html#l00046">BatchCreator::getDataStream()</a>, and <a class="el" href="../../d0/d2b/JsonHandler_8cpp_source.html#l00048">parsing::JsonHandler::getFileData()</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/d03/BatchCreator_8hpp_source.html#l00046">BatchCreator::getDataStream()</a>, and <a class="el" href="../../d0/d2b/JsonHandler_8cpp_source.html#l00051">parsing::JsonHandler::getFileData()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -450,14 +464,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a229a422b4e4be967a1e02c69d8867c77" name="a229a422b4e4be967a1e02c69d8867c77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a229a422b4e4be967a1e02c69d8867c77">&#9670;&#160;</a></span>validateFiles()</h2>
+<a id="aa58271e7839a07f94c9a614ca68af1da" name="aa58271e7839a07f94c9a614ca68af1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa58271e7839a07f94c9a614ca68af1da">&#9670;&#160;</a></span>validateFiles()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; validateFiles </td>
+          <td class="memname">const std::vector&lt; std::string &gt; validateFiles </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>files</em></td><td>)</td>
@@ -469,20 +483,23 @@ Here is the caller graph for this function:</div>
 <p>Checks if the files are valid. </p>
 <p>Makes sures, that provided files exists and checks their file ending </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">files</td><td>The files to be checked </td></tr>
+    <tr><td class="paramname">files</td><td>The files to be checked<ul>
+<li>{ReqFunc5}</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector containing the valid files </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00130">130</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00153">153</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00034">utilities::Utils::askToContinue()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00035">utilities::Utils::askToContinue()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph" alt=""/></div>
-<map name="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph" id="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph">
+<div class="center"><img src="../../df/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_cgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_cgraph" id="adf/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_cgraph">
 <area shape="rect" title="Checks if the files are valid." alt="" coords="5,5,100,31"/>
 <area shape="rect" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="148,5,336,31"/>
 <area shape="poly" title=" " alt="" coords="100,16,132,16,132,21,100,21"/>
@@ -491,8 +508,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph" alt=""/></div>
-<map name="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph" id="adf/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph">
+<div class="center"><img src="../../df/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_icgraph.png" border="0" usemap="#adf/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_icgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_icgraph" id="adf/d0a/main_8cpp_aa58271e7839a07f94c9a614ca68af1da_icgraph">
 <area shape="rect" title="Checks if the files are valid." alt="" coords="103,5,197,31"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -507,7 +524,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../df/d0a/main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 14:19:07 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 14:22:44 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

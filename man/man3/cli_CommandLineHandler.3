@@ -1,4 +1,4 @@
-.TH "cli::CommandLineHandler" 3 "Fri Apr 26 2024 14:19:07" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "cli::CommandLineHandler" 3 "Fri Apr 26 2024 14:22:44" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -100,6 +100,13 @@ As all functions are static it should not be used and as such is deleted\&.
 
 .PP
 Parses the Command Line Arguments\&. This function uses the 'getopt\&.h' library to parse all options given and then returns all files which are given as arguments\&.
+.IP "\(bu" 2
+{ReqFunc4}
+.IP "\(bu" 2
+{ReqFunc5}
+.IP "\(bu" 2
+{ReqNonFunc4}
+.PP
 .PP
 \fBParameters\fP
 .RS 4
@@ -115,13 +122,16 @@ Returns a tuple containing the output directory and the files
 .PP
 
 .PP
-Definition at line \fB68\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB71\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
 References \fBprintCredits()\fP, \fBprintHelp()\fP, and \fBprintVersion()\fP\&.
 .SS "void cli::CommandLineHandler::printCredits ()\fC [static]\fP"
 
 .PP
 Prints the credits message\&. 
+.IP "\(bu" 2
+{ReqFunc3}
+.PP
 .PP
 \fBNote\fP
 .RS 4
@@ -130,13 +140,18 @@ This function ends the application\&.
 .PP
 
 .PP
-Definition at line \fB50\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB52\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
 References \fBconfig::AUTHORS\fP, \fBconfig::DESCRIPTION\fP, \fBconfig::HOMEPAGE_URL\fP, \fBconfig::MAJOR_VERSION\fP, \fBconfig::MINOR_VERSION\fP, \fBconfig::PATCH_VERSION\fP, and \fBconfig::PROJECT_NAME\fP\&.
 .SS "void cli::CommandLineHandler::printHelp ()\fC [static]\fP"
 
 .PP
 Prints the help message\&. 
+.IP "\(bu" 2
+{ReqFunc1}
+.IP "\(bu" 2
+{ReqFunc2}
+.PP
 .PP
 \fBNote\fP
 .RS 4
@@ -160,7 +175,7 @@ This function ends the application\&.
 .PP
 
 .PP
-Definition at line \fB44\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB45\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
 References \fBconfig::MAJOR_VERSION\fP, \fBconfig::MINOR_VERSION\fP, \fBconfig::PATCH_VERSION\fP, and \fBconfig::PROJECT_NAME\fP\&.
 

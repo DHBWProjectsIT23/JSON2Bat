@@ -1,4 +1,4 @@
-.TH "parsing::FileData" 3 "Fri Apr 26 2024 14:19:07" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::FileData" 3 "Fri Apr 26 2024 14:22:44" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -87,9 +87,13 @@ parsing::FileData \- This class contains all data from the json file\&.
 .PP 
 This class contains all data from the json file\&. 
 
-The data from the json file is parsed by the \fBJsonHandler\fP and then assigned to the attributes of an instance of this class\&. This class also handles a part of the error handling\&. 
+The data from the json file is parsed by the \fBJsonHandler\fP and then assigned to the attributes of an instance of this class\&. This class also handles a part of the error handling\&.
+.IP "\(bu" 2
+{ReqFunc14} 
 .PP
-Definition at line \fB31\fP of file \fBFileData\&.hpp\fP\&.
+
+.PP
+Definition at line \fB32\fP of file \fBFileData\&.hpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void parsing::FileData::addCommand (const std::string & command)"
@@ -109,7 +113,7 @@ Adds a given command to this->commands\&. Makes sure, that the given command val
 .PP
 
 .PP
-Definition at line \fB56\fP of file \fBFileData\&.cpp\fP\&.
+Definition at line \fB58\fP of file \fBFileData\&.cpp\fP\&.
 .PP
 References \fBcommands\fP\&.
 .SS "void parsing::FileData::addEnvironmentVariable (const std::string & name, const std::string & value)"
@@ -131,7 +135,7 @@ Adds a given tuple to this->environmentVariables\&. Makes sure that neither the 
 .PP
 
 .PP
-Definition at line \fB67\fP of file \fBFileData\&.cpp\fP\&.
+Definition at line \fB70\fP of file \fBFileData\&.cpp\fP\&.
 .PP
 References \fBenvironmentVariables\fP\&.
 .SS "void parsing::FileData::addPathValue (const std::string & pathValue)"
@@ -151,7 +155,7 @@ Add's a given value to this->pathValues\&. Makes sure that the given value is no
 .PP
 
 .PP
-Definition at line \fB83\fP of file \fBFileData\&.cpp\fP\&.
+Definition at line \fB87\fP of file \fBFileData\&.cpp\fP\&.
 .PP
 References \fBpathValues\fP\&.
 .SS "const std::optional< std::string > & parsing::FileData::getApplication () const\fC [inline]\fP"
@@ -166,7 +170,7 @@ The assigned application
 .PP
 
 .PP
-Definition at line \fB121\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB122\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBapplication\fP\&.
 .SS "const std::vector< std::string > & parsing::FileData::getCommands () const\fC [inline]\fP"
@@ -181,7 +185,7 @@ The vector of assigned commands
 .PP
 
 .PP
-Definition at line \fB129\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB130\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBcommands\fP\&.
 .SS "const std::vector< std::tuple< std::string, std::string > > & parsing::FileData::getEnvironmentVariables () const\fC [inline]\fP"
@@ -196,7 +200,7 @@ The vector of assigned env variables
 .PP
 
 .PP
-Definition at line \fB138\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB139\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBenvironmentVariables\fP\&.
 .SS "bool parsing::FileData::getHideShell () const\fC [inline]\fP"
@@ -211,7 +215,7 @@ The assigned value for hideshell
 .PP
 
 .PP
-Definition at line \fB113\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB114\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBhideShell\fP\&.
 .SS "const std::string & parsing::FileData::getOutputFile () const\fC [inline]\fP"
@@ -226,7 +230,7 @@ The assigned outputfile
 .PP
 
 .PP
-Definition at line \fB105\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB106\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBoutputfile\fP\&.
 .SS "const std::vector< std::string > & parsing::FileData::getPathValues () const\fC [inline]\fP"
@@ -241,7 +245,7 @@ The vector of assigned pathValues
 .PP
 
 .PP
-Definition at line \fB146\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB147\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBpathValues\fP\&.
 .SS "void parsing::FileData::setApplication (const std::string & newApplication)"
@@ -256,7 +260,7 @@ Setter for this->application\&. Set's the application attribute\&. Return's if t
 .PP
 
 .PP
-Definition at line \fB46\fP of file \fBFileData\&.cpp\fP\&.
+Definition at line \fB47\fP of file \fBFileData\&.cpp\fP\&.
 .PP
 References \fBapplication\fP\&.
 .SS "void parsing::FileData::setHideShell (bool newHideShell)\fC [inline]\fP"
@@ -271,7 +275,7 @@ Setter for this->hideshell\&.
 .PP
 
 .PP
-Definition at line \fB49\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB50\fP of file \fBFileData\&.hpp\fP\&.
 .PP
 References \fBhideShell\fP\&.
 .SS "void parsing::FileData::setOutputFile (std::string & newOutputfile)"
@@ -299,27 +303,27 @@ References \fBoutputfile\fP\&.
 .SS "std::optional<std::string> parsing::FileData::application\fC [private]\fP"
 
 .PP
-Definition at line \fB153\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB154\fP of file \fBFileData\&.hpp\fP\&.
 .SS "std::vector<std::string> parsing::FileData::commands\fC [private]\fP"
 
 .PP
-Definition at line \fB154\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB156\fP of file \fBFileData\&.hpp\fP\&.
 .SS "std::vector<std::tuple<std::string, std::string> > parsing::FileData::environmentVariables\fC [private]\fP"
 
 .PP
-Definition at line \fB156\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB158\fP of file \fBFileData\&.hpp\fP\&.
 .SS "bool parsing::FileData::hideShell\fC [private]\fP"
 
 .PP
-Definition at line \fB152\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB153\fP of file \fBFileData\&.hpp\fP\&.
 .SS "std::string parsing::FileData::outputfile\fC [private]\fP"
 
 .PP
-Definition at line \fB151\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB152\fP of file \fBFileData\&.hpp\fP\&.
 .SS "std::vector<std::string> parsing::FileData::pathValues\fC [private]\fP"
 
 .PP
-Definition at line \fB157\fP of file \fBFileData\&.hpp\fP\&.
+Definition at line \fB160\fP of file \fBFileData\&.hpp\fP\&.
 
 .SH "Author"
 .PP 
