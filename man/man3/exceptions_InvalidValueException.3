@@ -1,4 +1,4 @@
-.TH "exceptions::InvalidValueException" 3 "Fri Apr 26 2024 14:23:02" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "exceptions::InvalidValueException" 3 "Fri Apr 26 2024 14:27:40" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -42,7 +42,7 @@ Public Member Functions inherited from \fBexceptions::CustomException\fP
 .PP 
 Exception for an ivalid (usually empty) value field\&. 
 .PP
-Definition at line \fB97\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB101\fP of file \fBExceptions\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "exceptions::InvalidValueException::InvalidValueException (const std::string & key, const std::string & issue)\fC [inline]\fP"
@@ -55,7 +55,7 @@ I planned to use std::format, however it seems that the required Compiler Versio
 .PP
 
 .PP
-Definition at line \fB103\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB107\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBkey\fP, and \fBmessage\fP\&.
 .SH "Member Function Documentation"
@@ -63,7 +63,7 @@ References \fBkey\fP, and \fBmessage\fP\&.
 .SS "const char * exceptions::InvalidValueException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
 
 .PP
-Definition at line \fB115\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB119\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP\&.
 .SH "Member Data Documentation"
@@ -71,11 +71,11 @@ References \fBmessage\fP\&.
 .SS "const std::string exceptions::InvalidValueException::key\fC [private]\fP"
 
 .PP
-Definition at line \fB99\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB103\fP of file \fBExceptions\&.hpp\fP\&.
 .SS "std::string exceptions::InvalidValueException::message\fC [private]\fP"
 
 .PP
-Definition at line \fB100\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB104\fP of file \fBExceptions\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

@@ -1,6 +1,6 @@
 <map id="BatchCreator::BatchCreator" name="BatchCreator::BatchCreator">
 <area shape="rect" id="Node000001" title="Initializes the BatchCreator." alt="" coords="5,153,185,179"/>
-<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#a2225babf16a473ba6722238c19d785ae" title="Creates the batch stream." alt="" coords="233,153,406,179"/>
+<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#aca15cd9ed3a90d1f43ac2fd16175c676" title="Creates the batch stream." alt="" coords="233,153,406,179"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,164,217,164,217,169,185,169"/>
 <area shape="rect" id="Node000003" href="$da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d" title="If an application is given, it is started at the end." alt="" coords="463,5,658,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,151,378,97,413,66,453,40,464,34,466,39,455,44,416,70,382,101,333,155"/>

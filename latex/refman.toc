@@ -1,278 +1,286 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \contentsline {chapter}{\numberline {1}JSON2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Build instructions}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Linux}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Windows}{1}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Documentation}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}License}{1}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Other}{1}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Todo List}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Topic Index}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Topics}{5}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Namespace Index}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Namespace List}{7}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Hierarchical Index}{9}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Class Hierarchy}{9}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Class Index}{11}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Class List}{11}{section.6.1}%
-\contentsline {chapter}{\numberline {7}File Index}{13}{chapter.7}%
-\contentsline {section}{\numberline {7.1}File List}{13}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Topic Documentation}{15}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Style\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Helpers}{15}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Namespace Documentation}{17}{chapter.9}%
-\contentsline {section}{\numberline {9.1}cli Namespace Reference}{17}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Detailed Description}{17}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Variable Documentation}{18}{subsection.9.1.2}%
-\contentsline {subsubsection}{\numberline {9.1.2.1}options}{18}{subsubsection.9.1.2.1}%
-\contentsline {section}{\numberline {9.2}config Namespace Reference}{18}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Detailed Description}{18}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Variable Documentation}{18}{subsection.9.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.2.1}AUTHORS}{18}{subsubsection.9.2.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2.2}DESCRIPTION}{19}{subsubsection.9.2.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.2.3}EXECUTABLE\_NAME}{19}{subsubsection.9.2.2.3}%
-\contentsline {subsubsection}{\numberline {9.2.2.4}HOMEPAGE\_URL}{19}{subsubsection.9.2.2.4}%
-\contentsline {subsubsection}{\numberline {9.2.2.5}LOG\_CONFIG}{19}{subsubsection.9.2.2.5}%
-\contentsline {subsubsection}{\numberline {9.2.2.6}MAJOR\_VERSION}{19}{subsubsection.9.2.2.6}%
-\contentsline {subsubsection}{\numberline {9.2.2.7}MINOR\_VERSION}{19}{subsubsection.9.2.2.7}%
-\contentsline {subsubsection}{\numberline {9.2.2.8}PATCH\_VERSION}{19}{subsubsection.9.2.2.8}%
-\contentsline {subsubsection}{\numberline {9.2.2.9}PROJECT\_NAME}{20}{subsubsection.9.2.2.9}%
-\contentsline {section}{\numberline {9.3}exceptions Namespace Reference}{20}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Detailed Description}{20}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}parsing Namespace Reference}{20}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Detailed Description}{21}{subsection.9.4.1}%
-\contentsline {section}{\numberline {9.5}utilities Namespace Reference}{21}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Detailed Description}{21}{subsection.9.5.1}%
-\contentsline {chapter}{\numberline {10}Class Documentation}{23}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator Class Reference}{23}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Detailed Description}{24}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}Constructor \& Destructor Documentation}{24}{subsection.10.1.2}%
-\contentsline {subsubsection}{\numberline {10.1.2.1}BatchCreator()}{24}{subsubsection.10.1.2.1}%
-\contentsline {subsection}{\numberline {10.1.3}Member Function Documentation}{25}{subsection.10.1.3}%
-\contentsline {subsubsection}{\numberline {10.1.3.1}createBatch()}{25}{subsubsection.10.1.3.1}%
-\contentsline {subsubsection}{\numberline {10.1.3.2}getDataStream()}{26}{subsubsection.10.1.3.2}%
-\contentsline {subsubsection}{\numberline {10.1.3.3}writeApplication()}{27}{subsubsection.10.1.3.3}%
-\contentsline {subsubsection}{\numberline {10.1.3.4}writeCommands()}{27}{subsubsection.10.1.3.4}%
-\contentsline {subsubsection}{\numberline {10.1.3.5}writeEnd()}{28}{subsubsection.10.1.3.5}%
-\contentsline {subsubsection}{\numberline {10.1.3.6}writeEnvVariables()}{28}{subsubsection.10.1.3.6}%
-\contentsline {subsubsection}{\numberline {10.1.3.7}writeHideShell()}{29}{subsubsection.10.1.3.7}%
-\contentsline {subsubsection}{\numberline {10.1.3.8}writePathVariables()}{29}{subsubsection.10.1.3.8}%
-\contentsline {subsubsection}{\numberline {10.1.3.9}writeStart()}{30}{subsubsection.10.1.3.9}%
-\contentsline {subsection}{\numberline {10.1.4}Member Data Documentation}{30}{subsection.10.1.4}%
-\contentsline {subsubsection}{\numberline {10.1.4.1}dataStream}{30}{subsubsection.10.1.4.1}%
-\contentsline {subsubsection}{\numberline {10.1.4.2}fileData}{30}{subsubsection.10.1.4.2}%
-\contentsline {section}{\numberline {10.2}cli\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{30}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Detailed Description}{31}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Constructor \& Destructor Documentation}{32}{subsection.10.2.2}%
-\contentsline {subsubsection}{\numberline {10.2.2.1}CommandLineHandler()}{32}{subsubsection.10.2.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2.2}$\sim $CommandLineHandler()}{32}{subsubsection.10.2.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Member Function Documentation}{32}{subsection.10.2.3}%
-\contentsline {subsubsection}{\numberline {10.2.3.1}parseArguments()}{32}{subsubsection.10.2.3.1}%
-\contentsline {subsubsection}{\numberline {10.2.3.2}printCredits()}{33}{subsubsection.10.2.3.2}%
-\contentsline {subsubsection}{\numberline {10.2.3.3}printHelp()}{34}{subsubsection.10.2.3.3}%
-\contentsline {subsubsection}{\numberline {10.2.3.4}printVersion()}{35}{subsubsection.10.2.3.4}%
-\contentsline {section}{\numberline {10.3}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{35}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Detailed Description}{36}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Member Function Documentation}{37}{subsection.10.3.2}%
-\contentsline {subsubsection}{\numberline {10.3.2.1}what()}{37}{subsubsection.10.3.2.1}%
-\contentsline {section}{\numberline {10.4}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Failed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}To\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{37}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Detailed Description}{38}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Constructor \& Destructor Documentation}{38}{subsection.10.4.2}%
-\contentsline {subsubsection}{\numberline {10.4.2.1}FailedToOpenFileException()}{38}{subsubsection.10.4.2.1}%
-\contentsline {subsection}{\numberline {10.4.3}Member Function Documentation}{39}{subsection.10.4.3}%
-\contentsline {subsubsection}{\numberline {10.4.3.1}what()}{39}{subsubsection.10.4.3.1}%
-\contentsline {subsection}{\numberline {10.4.4}Member Data Documentation}{39}{subsection.10.4.4}%
-\contentsline {subsubsection}{\numberline {10.4.4.1}message}{39}{subsubsection.10.4.4.1}%
-\contentsline {section}{\numberline {10.5}parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Class Reference}{39}{section.10.5}%
-\contentsline {subsection}{\numberline {10.5.1}Detailed Description}{40}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {10.5.2}Member Function Documentation}{40}{subsection.10.5.2}%
-\contentsline {subsubsection}{\numberline {10.5.2.1}addCommand()}{40}{subsubsection.10.5.2.1}%
-\contentsline {subsubsection}{\numberline {10.5.2.2}addEnvironmentVariable()}{40}{subsubsection.10.5.2.2}%
-\contentsline {subsubsection}{\numberline {10.5.2.3}addPathValue()}{41}{subsubsection.10.5.2.3}%
-\contentsline {subsubsection}{\numberline {10.5.2.4}getApplication()}{41}{subsubsection.10.5.2.4}%
-\contentsline {subsubsection}{\numberline {10.5.2.5}getCommands()}{42}{subsubsection.10.5.2.5}%
-\contentsline {subsubsection}{\numberline {10.5.2.6}getEnvironmentVariables()}{42}{subsubsection.10.5.2.6}%
-\contentsline {subsubsection}{\numberline {10.5.2.7}getHideShell()}{42}{subsubsection.10.5.2.7}%
-\contentsline {subsubsection}{\numberline {10.5.2.8}getOutputFile()}{42}{subsubsection.10.5.2.8}%
-\contentsline {subsubsection}{\numberline {10.5.2.9}getPathValues()}{43}{subsubsection.10.5.2.9}%
-\contentsline {subsubsection}{\numberline {10.5.2.10}setApplication()}{43}{subsubsection.10.5.2.10}%
-\contentsline {subsubsection}{\numberline {10.5.2.11}setHideShell()}{43}{subsubsection.10.5.2.11}%
-\contentsline {subsubsection}{\numberline {10.5.2.12}setOutputFile()}{43}{subsubsection.10.5.2.12}%
-\contentsline {subsection}{\numberline {10.5.3}Member Data Documentation}{44}{subsection.10.5.3}%
-\contentsline {subsubsection}{\numberline {10.5.3.1}application}{44}{subsubsection.10.5.3.1}%
-\contentsline {subsubsection}{\numberline {10.5.3.2}commands}{44}{subsubsection.10.5.3.2}%
-\contentsline {subsubsection}{\numberline {10.5.3.3}environmentVariables}{44}{subsubsection.10.5.3.3}%
-\contentsline {subsubsection}{\numberline {10.5.3.4}hideShell}{44}{subsubsection.10.5.3.4}%
-\contentsline {subsubsection}{\numberline {10.5.3.5}outputfile}{45}{subsubsection.10.5.3.5}%
-\contentsline {subsubsection}{\numberline {10.5.3.6}pathValues}{45}{subsubsection.10.5.3.6}%
-\contentsline {section}{\numberline {10.6}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exists\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{45}{section.10.6}%
-\contentsline {subsection}{\numberline {10.6.1}Detailed Description}{46}{subsection.10.6.1}%
-\contentsline {subsection}{\numberline {10.6.2}Constructor \& Destructor Documentation}{46}{subsection.10.6.2}%
-\contentsline {subsubsection}{\numberline {10.6.2.1}FileExistsException()}{46}{subsubsection.10.6.2.1}%
-\contentsline {subsection}{\numberline {10.6.3}Member Function Documentation}{47}{subsection.10.6.3}%
-\contentsline {subsubsection}{\numberline {10.6.3.1}what()}{47}{subsubsection.10.6.3.1}%
-\contentsline {subsection}{\numberline {10.6.4}Member Data Documentation}{47}{subsection.10.6.4}%
-\contentsline {subsubsection}{\numberline {10.6.4.1}file}{47}{subsubsection.10.6.4.1}%
-\contentsline {subsubsection}{\numberline {10.6.4.2}message}{47}{subsubsection.10.6.4.2}%
-\contentsline {section}{\numberline {10.7}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{47}{section.10.7}%
-\contentsline {subsection}{\numberline {10.7.1}Detailed Description}{48}{subsection.10.7.1}%
-\contentsline {subsection}{\numberline {10.7.2}Constructor \& Destructor Documentation}{49}{subsection.10.7.2}%
-\contentsline {subsubsection}{\numberline {10.7.2.1}InvalidKeyException()}{49}{subsubsection.10.7.2.1}%
-\contentsline {subsection}{\numberline {10.7.3}Member Function Documentation}{49}{subsection.10.7.3}%
-\contentsline {subsubsection}{\numberline {10.7.3.1}what()}{49}{subsubsection.10.7.3.1}%
-\contentsline {subsection}{\numberline {10.7.4}Member Data Documentation}{49}{subsection.10.7.4}%
-\contentsline {subsubsection}{\numberline {10.7.4.1}message}{49}{subsubsection.10.7.4.1}%
-\contentsline {section}{\numberline {10.8}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{49}{section.10.8}%
-\contentsline {subsection}{\numberline {10.8.1}Detailed Description}{51}{subsection.10.8.1}%
-\contentsline {subsection}{\numberline {10.8.2}Constructor \& Destructor Documentation}{51}{subsection.10.8.2}%
-\contentsline {subsubsection}{\numberline {10.8.2.1}InvalidTypeException()}{51}{subsubsection.10.8.2.1}%
-\contentsline {subsection}{\numberline {10.8.3}Member Function Documentation}{51}{subsection.10.8.3}%
-\contentsline {subsubsection}{\numberline {10.8.3.1}what()}{51}{subsubsection.10.8.3.1}%
-\contentsline {subsection}{\numberline {10.8.4}Member Data Documentation}{51}{subsection.10.8.4}%
-\contentsline {subsubsection}{\numberline {10.8.4.1}message}{51}{subsubsection.10.8.4.1}%
-\contentsline {subsubsection}{\numberline {10.8.4.2}type}{52}{subsubsection.10.8.4.2}%
-\contentsline {section}{\numberline {10.9}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Value\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{52}{section.10.9}%
-\contentsline {subsection}{\numberline {10.9.1}Detailed Description}{53}{subsection.10.9.1}%
-\contentsline {subsection}{\numberline {10.9.2}Constructor \& Destructor Documentation}{53}{subsection.10.9.2}%
-\contentsline {subsubsection}{\numberline {10.9.2.1}InvalidValueException()}{53}{subsubsection.10.9.2.1}%
-\contentsline {subsection}{\numberline {10.9.3}Member Function Documentation}{53}{subsection.10.9.3}%
-\contentsline {subsubsection}{\numberline {10.9.3.1}what()}{53}{subsubsection.10.9.3.1}%
-\contentsline {subsection}{\numberline {10.9.4}Member Data Documentation}{54}{subsection.10.9.4}%
-\contentsline {subsubsection}{\numberline {10.9.4.1}key}{54}{subsubsection.10.9.4.1}%
-\contentsline {subsubsection}{\numberline {10.9.4.2}message}{54}{subsubsection.10.9.4.2}%
-\contentsline {section}{\numberline {10.10}parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{54}{section.10.10}%
-\contentsline {subsection}{\numberline {10.10.1}Detailed Description}{55}{subsection.10.10.1}%
-\contentsline {subsection}{\numberline {10.10.2}Constructor \& Destructor Documentation}{55}{subsection.10.10.2}%
-\contentsline {subsubsection}{\numberline {10.10.2.1}JsonHandler()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{55}{subsubsection.10.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.10.2.2}JsonHandler()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{55}{subsubsection.10.10.2.2}%
-\contentsline {subsection}{\numberline {10.10.3}Member Function Documentation}{56}{subsection.10.10.3}%
-\contentsline {subsubsection}{\numberline {10.10.3.1}assignApplication()}{56}{subsubsection.10.10.3.1}%
-\contentsline {subsubsection}{\numberline {10.10.3.2}assignCommand()}{56}{subsubsection.10.10.3.2}%
-\contentsline {subsubsection}{\numberline {10.10.3.3}assignEntries()}{57}{subsubsection.10.10.3.3}%
-\contentsline {subsubsection}{\numberline {10.10.3.4}assignEnvironmentVariable()}{58}{subsubsection.10.10.3.4}%
-\contentsline {subsubsection}{\numberline {10.10.3.5}assignHideShell()}{59}{subsubsection.10.10.3.5}%
-\contentsline {subsubsection}{\numberline {10.10.3.6}assignOutputFile()}{59}{subsubsection.10.10.3.6}%
-\contentsline {subsubsection}{\numberline {10.10.3.7}assignPathValue()}{60}{subsubsection.10.10.3.7}%
-\contentsline {subsubsection}{\numberline {10.10.3.8}createFileData()}{60}{subsubsection.10.10.3.8}%
-\contentsline {subsubsection}{\numberline {10.10.3.9}getFileData()}{61}{subsubsection.10.10.3.9}%
-\contentsline {subsubsection}{\numberline {10.10.3.10}parseFile()}{62}{subsubsection.10.10.3.10}%
-\contentsline {subsection}{\numberline {10.10.4}Member Data Documentation}{63}{subsection.10.10.4}%
-\contentsline {subsubsection}{\numberline {10.10.4.1}data}{63}{subsubsection.10.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.10.4.2}root}{63}{subsubsection.10.10.4.2}%
-\contentsline {section}{\numberline {10.11}parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator Class Reference}{63}{section.10.11}%
-\contentsline {subsection}{\numberline {10.11.1}Detailed Description}{64}{subsection.10.11.1}%
-\contentsline {subsection}{\numberline {10.11.2}Member Function Documentation}{64}{subsection.10.11.2}%
-\contentsline {subsubsection}{\numberline {10.11.2.1}getInstance()}{64}{subsubsection.10.11.2.1}%
-\contentsline {subsubsection}{\numberline {10.11.2.2}getUnknownKeyLine()}{65}{subsubsection.10.11.2.2}%
-\contentsline {subsubsection}{\numberline {10.11.2.3}getWrongKeys()}{65}{subsubsection.10.11.2.3}%
-\contentsline {subsubsection}{\numberline {10.11.2.4}validateEntries()}{66}{subsubsection.10.11.2.4}%
-\contentsline {subsubsection}{\numberline {10.11.2.5}validateKeys()}{67}{subsubsection.10.11.2.5}%
-\contentsline {subsubsection}{\numberline {10.11.2.6}validateTypes()}{68}{subsubsection.10.11.2.6}%
-\contentsline {subsection}{\numberline {10.11.3}Member Data Documentation}{69}{subsection.10.11.3}%
-\contentsline {subsubsection}{\numberline {10.11.3.1}typeToKeys}{69}{subsubsection.10.11.3.1}%
-\contentsline {subsubsection}{\numberline {10.11.3.2}validEntryKeys}{69}{subsubsection.10.11.3.2}%
-\contentsline {subsubsection}{\numberline {10.11.3.3}validKeys}{70}{subsubsection.10.11.3.3}%
-\contentsline {section}{\numberline {10.12}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Missing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{70}{section.10.12}%
-\contentsline {subsection}{\numberline {10.12.1}Detailed Description}{71}{subsection.10.12.1}%
-\contentsline {subsection}{\numberline {10.12.2}Constructor \& Destructor Documentation}{72}{subsection.10.12.2}%
-\contentsline {subsubsection}{\numberline {10.12.2.1}MissingKeyException()}{72}{subsubsection.10.12.2.1}%
-\contentsline {subsection}{\numberline {10.12.3}Member Function Documentation}{72}{subsection.10.12.3}%
-\contentsline {subsubsection}{\numberline {10.12.3.1}what()}{72}{subsubsection.10.12.3.1}%
-\contentsline {subsection}{\numberline {10.12.4}Member Data Documentation}{72}{subsection.10.12.4}%
-\contentsline {subsubsection}{\numberline {10.12.4.1}key}{72}{subsubsection.10.12.4.1}%
-\contentsline {subsubsection}{\numberline {10.12.4.2}message}{72}{subsubsection.10.12.4.2}%
-\contentsline {subsubsection}{\numberline {10.12.4.3}type}{72}{subsubsection.10.12.4.3}%
-\contentsline {section}{\numberline {10.13}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Missing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{73}{section.10.13}%
-\contentsline {subsection}{\numberline {10.13.1}Detailed Description}{74}{subsection.10.13.1}%
-\contentsline {subsection}{\numberline {10.13.2}Constructor \& Destructor Documentation}{74}{subsection.10.13.2}%
-\contentsline {subsubsection}{\numberline {10.13.2.1}MissingTypeException()}{74}{subsubsection.10.13.2.1}%
-\contentsline {subsection}{\numberline {10.13.3}Member Function Documentation}{74}{subsection.10.13.3}%
-\contentsline {subsubsection}{\numberline {10.13.3.1}what()}{74}{subsubsection.10.13.3.1}%
-\contentsline {subsection}{\numberline {10.13.4}Member Data Documentation}{74}{subsection.10.13.4}%
-\contentsline {subsubsection}{\numberline {10.13.4.1}message}{74}{subsubsection.10.13.4.1}%
-\contentsline {section}{\numberline {10.14}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::No\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Such\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{75}{section.10.14}%
-\contentsline {subsection}{\numberline {10.14.1}Detailed Description}{76}{subsection.10.14.1}%
-\contentsline {subsection}{\numberline {10.14.2}Constructor \& Destructor Documentation}{76}{subsection.10.14.2}%
-\contentsline {subsubsection}{\numberline {10.14.2.1}NoSuchDirException()}{76}{subsubsection.10.14.2.1}%
-\contentsline {subsection}{\numberline {10.14.3}Member Function Documentation}{76}{subsection.10.14.3}%
-\contentsline {subsubsection}{\numberline {10.14.3.1}what()}{76}{subsubsection.10.14.3.1}%
-\contentsline {subsection}{\numberline {10.14.4}Member Data Documentation}{76}{subsection.10.14.4}%
-\contentsline {subsubsection}{\numberline {10.14.4.1}message}{76}{subsubsection.10.14.4.1}%
-\contentsline {section}{\numberline {10.15}options Struct Reference}{77}{section.10.15}%
-\contentsline {subsection}{\numberline {10.15.1}Detailed Description}{77}{subsection.10.15.1}%
-\contentsline {section}{\numberline {10.16}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{77}{section.10.16}%
-\contentsline {subsection}{\numberline {10.16.1}Detailed Description}{78}{subsection.10.16.1}%
-\contentsline {subsection}{\numberline {10.16.2}Constructor \& Destructor Documentation}{78}{subsection.10.16.2}%
-\contentsline {subsubsection}{\numberline {10.16.2.1}ParsingException()}{78}{subsubsection.10.16.2.1}%
-\contentsline {subsection}{\numberline {10.16.3}Member Function Documentation}{79}{subsection.10.16.3}%
-\contentsline {subsubsection}{\numberline {10.16.3.1}what()}{79}{subsubsection.10.16.3.1}%
-\contentsline {subsection}{\numberline {10.16.4}Member Data Documentation}{79}{subsection.10.16.4}%
-\contentsline {subsubsection}{\numberline {10.16.4.1}file}{79}{subsubsection.10.16.4.1}%
-\contentsline {subsubsection}{\numberline {10.16.4.2}message}{79}{subsubsection.10.16.4.2}%
-\contentsline {section}{\numberline {10.17}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unreachable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{79}{section.10.17}%
-\contentsline {subsection}{\numberline {10.17.1}Detailed Description}{80}{subsection.10.17.1}%
-\contentsline {subsection}{\numberline {10.17.2}Constructor \& Destructor Documentation}{80}{subsection.10.17.2}%
-\contentsline {subsubsection}{\numberline {10.17.2.1}UnreachableCodeException()}{80}{subsubsection.10.17.2.1}%
-\contentsline {subsection}{\numberline {10.17.3}Member Function Documentation}{81}{subsection.10.17.3}%
-\contentsline {subsubsection}{\numberline {10.17.3.1}what()}{81}{subsubsection.10.17.3.1}%
-\contentsline {subsection}{\numberline {10.17.4}Member Data Documentation}{81}{subsection.10.17.4}%
-\contentsline {subsubsection}{\numberline {10.17.4.1}message}{81}{subsubsection.10.17.4.1}%
-\contentsline {section}{\numberline {10.18}utilities\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Utils Class Reference}{81}{section.10.18}%
-\contentsline {subsection}{\numberline {10.18.1}Detailed Description}{81}{subsection.10.18.1}%
-\contentsline {subsection}{\numberline {10.18.2}Member Function Documentation}{81}{subsection.10.18.2}%
-\contentsline {subsubsection}{\numberline {10.18.2.1}askToContinue()}{81}{subsubsection.10.18.2.1}%
-\contentsline {subsubsection}{\numberline {10.18.2.2}checkConfigFile()}{82}{subsubsection.10.18.2.2}%
-\contentsline {subsubsection}{\numberline {10.18.2.3}checkDirectory()}{83}{subsubsection.10.18.2.3}%
-\contentsline {subsubsection}{\numberline {10.18.2.4}handleParseException()}{83}{subsubsection.10.18.2.4}%
-\contentsline {subsubsection}{\numberline {10.18.2.5}setupEasyLogging()}{84}{subsubsection.10.18.2.5}%
-\contentsline {chapter}{\numberline {11}File Documentation}{87}{chapter.11}%
-\contentsline {section}{\numberline {11.1}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{87}{section.11.1}%
-\contentsline {section}{\numberline {11.2}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.hpp File Reference}{87}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Detailed Description}{88}{subsection.11.2.1}%
-\contentsline {section}{\numberline {11.3}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{89}{section.11.3}%
-\contentsline {section}{\numberline {11.4}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.hpp File Reference}{89}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Detailed Description}{90}{subsection.11.4.1}%
-\contentsline {section}{\numberline {11.5}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{91}{section.11.5}%
-\contentsline {section}{\numberline {11.6}src/include/config.hpp File Reference}{91}{section.11.6}%
-\contentsline {subsection}{\numberline {11.6.1}Detailed Description}{92}{subsection.11.6.1}%
-\contentsline {section}{\numberline {11.7}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{93}{section.11.7}%
-\contentsline {section}{\numberline {11.8}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exceptions.hpp File Reference}{93}{section.11.8}%
-\contentsline {subsection}{\numberline {11.8.1}Detailed Description}{94}{subsection.11.8.1}%
-\contentsline {section}{\numberline {11.9}Exceptions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{95}{section.11.9}%
-\contentsline {section}{\numberline {11.10}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.hpp File Reference}{97}{section.11.10}%
-\contentsline {subsection}{\numberline {11.10.1}Detailed Description}{98}{subsection.11.10.1}%
-\contentsline {section}{\numberline {11.11}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{98}{section.11.11}%
-\contentsline {section}{\numberline {11.12}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.hpp File Reference}{99}{section.11.12}%
-\contentsline {subsection}{\numberline {11.12.1}Detailed Description}{100}{subsection.11.12.1}%
-\contentsline {section}{\numberline {11.13}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{101}{section.11.13}%
-\contentsline {section}{\numberline {11.14}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.hpp File Reference}{101}{section.11.14}%
-\contentsline {subsection}{\numberline {11.14.1}Detailed Description}{102}{subsection.11.14.1}%
-\contentsline {section}{\numberline {11.15}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{103}{section.11.15}%
-\contentsline {section}{\numberline {11.16}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utils.hpp File Reference}{103}{section.11.16}%
-\contentsline {section}{\numberline {11.17}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{105}{section.11.17}%
-\contentsline {section}{\numberline {11.18}src/main.cpp File Reference}{105}{section.11.18}%
-\contentsline {subsection}{\numberline {11.18.1}Detailed Description}{106}{subsection.11.18.1}%
-\contentsline {subsection}{\numberline {11.18.2}Function Documentation}{107}{subsection.11.18.2}%
-\contentsline {subsubsection}{\numberline {11.18.2.1}main()}{107}{subsubsection.11.18.2.1}%
-\contentsline {subsubsection}{\numberline {11.18.2.2}parseAndValidateArgs()}{107}{subsubsection.11.18.2.2}%
-\contentsline {subsubsection}{\numberline {11.18.2.3}parseFile()}{108}{subsubsection.11.18.2.3}%
-\contentsline {subsubsection}{\numberline {11.18.2.4}validateFiles()}{109}{subsubsection.11.18.2.4}%
-\contentsline {section}{\numberline {11.19}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{110}{section.11.19}%
-\contentsline {section}{\numberline {11.20}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.cpp File Reference}{112}{section.11.20}%
-\contentsline {subsection}{\numberline {11.20.1}Detailed Description}{113}{subsection.11.20.1}%
-\contentsline {section}{\numberline {11.21}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{113}{section.11.21}%
-\contentsline {section}{\numberline {11.22}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp File Reference}{114}{section.11.22}%
-\contentsline {subsection}{\numberline {11.22.1}Detailed Description}{115}{subsection.11.22.1}%
-\contentsline {section}{\numberline {11.23}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{116}{section.11.23}%
-\contentsline {section}{\numberline {11.24}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cpp File Reference}{117}{section.11.24}%
-\contentsline {subsection}{\numberline {11.24.1}Detailed Description}{118}{subsection.11.24.1}%
-\contentsline {section}{\numberline {11.25}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{118}{section.11.25}%
-\contentsline {section}{\numberline {11.26}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp File Reference}{119}{section.11.26}%
-\contentsline {subsection}{\numberline {11.26.1}Detailed Description}{120}{subsection.11.26.1}%
-\contentsline {section}{\numberline {11.27}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{121}{section.11.27}%
-\contentsline {section}{\numberline {11.28}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.cpp File Reference}{122}{section.11.28}%
-\contentsline {subsection}{\numberline {11.28.1}Detailed Description}{123}{subsection.11.28.1}%
-\contentsline {section}{\numberline {11.29}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{123}{section.11.29}%
-\contentsline {section}{\numberline {11.30}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utils.cpp File Reference}{125}{section.11.30}%
-\contentsline {subsection}{\numberline {11.30.1}Detailed Description}{125}{subsection.11.30.1}%
-\contentsline {section}{\numberline {11.31}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{126}{section.11.31}%
-\contentsline {chapter}{Index}{129}{section*.175}%
+\contentsline {section}{\numberline {1.1}JSON2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Table of Contents}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Build Instructions}{1}{subsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.1}Linux}{1}{subsubsection.1.1.2.1}%
+\contentsline {paragraph}{UNIX Compiler Compatibility}{2}{section*.1}%
+\contentsline {subsubsection}{\numberline {1.1.2.2}Windows}{2}{subsubsection.1.1.2.2}%
+\contentsline {paragraph}{Windows Compiler Compatibility}{2}{section*.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.3}Generating Documentation}{2}{subsubsection.1.1.2.3}%
+\contentsline {subsection}{\numberline {1.1.3}Documentation}{2}{subsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3.1}Project Structure}{2}{subsubsection.1.1.3.1}%
+\contentsline {subsection}{\numberline {1.1.4}External Libraries}{2}{subsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.4.1}easylogging++}{2}{subsubsection.1.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.1.4.2}Logging\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wrapper}{3}{subsubsection.1.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.1.4.3}jsoncpp}{3}{subsubsection.1.1.4.3}%
+\contentsline {subsection}{\numberline {1.1.5}License}{3}{subsection.1.1.5}%
+\contentsline {chapter}{\numberline {2}Topic Index}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Topics}{5}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Namespace Index}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Namespace List}{7}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Hierarchical Index}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class Hierarchy}{9}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Index}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Class List}{11}{section.5.1}%
+\contentsline {chapter}{\numberline {6}File Index}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}File List}{13}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Topic Documentation}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Style\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Helpers}{15}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Namespace Documentation}{17}{chapter.8}%
+\contentsline {section}{\numberline {8.1}cli Namespace Reference}{17}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{17}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Variable Documentation}{18}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}options}{18}{subsubsection.8.1.2.1}%
+\contentsline {section}{\numberline {8.2}config Namespace Reference}{18}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{18}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Variable Documentation}{18}{subsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.1}AUTHORS}{18}{subsubsection.8.2.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2.2}DESCRIPTION}{18}{subsubsection.8.2.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.3}EXECUTABLE\_NAME}{19}{subsubsection.8.2.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.2.4}HOMEPAGE\_URL}{19}{subsubsection.8.2.2.4}%
+\contentsline {subsubsection}{\numberline {8.2.2.5}LOG\_CONFIG}{19}{subsubsection.8.2.2.5}%
+\contentsline {subsubsection}{\numberline {8.2.2.6}MAJOR\_VERSION}{19}{subsubsection.8.2.2.6}%
+\contentsline {subsubsection}{\numberline {8.2.2.7}MINOR\_VERSION}{19}{subsubsection.8.2.2.7}%
+\contentsline {subsubsection}{\numberline {8.2.2.8}PATCH\_VERSION}{19}{subsubsection.8.2.2.8}%
+\contentsline {subsubsection}{\numberline {8.2.2.9}PROJECT\_NAME}{19}{subsubsection.8.2.2.9}%
+\contentsline {section}{\numberline {8.3}exceptions Namespace Reference}{20}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{20}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}parsing Namespace Reference}{20}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{21}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}utilities Namespace Reference}{21}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{21}{subsection.8.5.1}%
+\contentsline {chapter}{\numberline {9}Class Documentation}{23}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator Class Reference}{23}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Detailed Description}{24}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Constructor \& Destructor Documentation}{24}{subsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.2.1}BatchCreator()}{24}{subsubsection.9.1.2.1}%
+\contentsline {subsection}{\numberline {9.1.3}Member Function Documentation}{25}{subsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.3.1}createBatch()}{25}{subsubsection.9.1.3.1}%
+\contentsline {subsubsection}{\numberline {9.1.3.2}getDataStream()}{26}{subsubsection.9.1.3.2}%
+\contentsline {subsubsection}{\numberline {9.1.3.3}writeApplication()}{27}{subsubsection.9.1.3.3}%
+\contentsline {subsubsection}{\numberline {9.1.3.4}writeCommands()}{27}{subsubsection.9.1.3.4}%
+\contentsline {subsubsection}{\numberline {9.1.3.5}writeEnd()}{28}{subsubsection.9.1.3.5}%
+\contentsline {subsubsection}{\numberline {9.1.3.6}writeEnvVariables()}{28}{subsubsection.9.1.3.6}%
+\contentsline {subsubsection}{\numberline {9.1.3.7}writeHideShell()}{29}{subsubsection.9.1.3.7}%
+\contentsline {subsubsection}{\numberline {9.1.3.8}writePathVariables()}{29}{subsubsection.9.1.3.8}%
+\contentsline {subsubsection}{\numberline {9.1.3.9}writeStart()}{30}{subsubsection.9.1.3.9}%
+\contentsline {subsection}{\numberline {9.1.4}Member Data Documentation}{30}{subsection.9.1.4}%
+\contentsline {subsubsection}{\numberline {9.1.4.1}dataStream}{30}{subsubsection.9.1.4.1}%
+\contentsline {subsubsection}{\numberline {9.1.4.2}fileData}{30}{subsubsection.9.1.4.2}%
+\contentsline {section}{\numberline {9.2}cli\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{30}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Detailed Description}{31}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Constructor \& Destructor Documentation}{32}{subsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.2.1}CommandLineHandler()}{32}{subsubsection.9.2.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2.2}$\sim $CommandLineHandler()}{32}{subsubsection.9.2.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Member Function Documentation}{32}{subsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.3.1}parseArguments()}{32}{subsubsection.9.2.3.1}%
+\contentsline {subsubsection}{\numberline {9.2.3.2}printCredits()}{33}{subsubsection.9.2.3.2}%
+\contentsline {subsubsection}{\numberline {9.2.3.3}printHelp()}{34}{subsubsection.9.2.3.3}%
+\contentsline {subsubsection}{\numberline {9.2.3.4}printVersion()}{35}{subsubsection.9.2.3.4}%
+\contentsline {section}{\numberline {9.3}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Custom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{35}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Detailed Description}{36}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Member Function Documentation}{37}{subsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.2.1}what()}{37}{subsubsection.9.3.2.1}%
+\contentsline {section}{\numberline {9.4}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Failed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}To\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{37}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Detailed Description}{38}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Constructor \& Destructor Documentation}{38}{subsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.2.1}FailedToOpenFileException()}{38}{subsubsection.9.4.2.1}%
+\contentsline {subsection}{\numberline {9.4.3}Member Function Documentation}{39}{subsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.3.1}what()}{39}{subsubsection.9.4.3.1}%
+\contentsline {subsection}{\numberline {9.4.4}Member Data Documentation}{39}{subsection.9.4.4}%
+\contentsline {subsubsection}{\numberline {9.4.4.1}message}{39}{subsubsection.9.4.4.1}%
+\contentsline {section}{\numberline {9.5}parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Class Reference}{39}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Detailed Description}{40}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}Member Function Documentation}{40}{subsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.2.1}addCommand()}{40}{subsubsection.9.5.2.1}%
+\contentsline {subsubsection}{\numberline {9.5.2.2}addEnvironmentVariable()}{40}{subsubsection.9.5.2.2}%
+\contentsline {subsubsection}{\numberline {9.5.2.3}addPathValue()}{41}{subsubsection.9.5.2.3}%
+\contentsline {subsubsection}{\numberline {9.5.2.4}getApplication()}{41}{subsubsection.9.5.2.4}%
+\contentsline {subsubsection}{\numberline {9.5.2.5}getCommands()}{42}{subsubsection.9.5.2.5}%
+\contentsline {subsubsection}{\numberline {9.5.2.6}getEnvironmentVariables()}{42}{subsubsection.9.5.2.6}%
+\contentsline {subsubsection}{\numberline {9.5.2.7}getHideShell()}{42}{subsubsection.9.5.2.7}%
+\contentsline {subsubsection}{\numberline {9.5.2.8}getOutputFile()}{42}{subsubsection.9.5.2.8}%
+\contentsline {subsubsection}{\numberline {9.5.2.9}getPathValues()}{43}{subsubsection.9.5.2.9}%
+\contentsline {subsubsection}{\numberline {9.5.2.10}setApplication()}{43}{subsubsection.9.5.2.10}%
+\contentsline {subsubsection}{\numberline {9.5.2.11}setHideShell()}{43}{subsubsection.9.5.2.11}%
+\contentsline {subsubsection}{\numberline {9.5.2.12}setOutputFile()}{43}{subsubsection.9.5.2.12}%
+\contentsline {subsection}{\numberline {9.5.3}Member Data Documentation}{44}{subsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.3.1}application}{44}{subsubsection.9.5.3.1}%
+\contentsline {subsubsection}{\numberline {9.5.3.2}commands}{44}{subsubsection.9.5.3.2}%
+\contentsline {subsubsection}{\numberline {9.5.3.3}environmentVariables}{44}{subsubsection.9.5.3.3}%
+\contentsline {subsubsection}{\numberline {9.5.3.4}hideShell}{44}{subsubsection.9.5.3.4}%
+\contentsline {subsubsection}{\numberline {9.5.3.5}outputfile}{45}{subsubsection.9.5.3.5}%
+\contentsline {subsubsection}{\numberline {9.5.3.6}pathValues}{45}{subsubsection.9.5.3.6}%
+\contentsline {section}{\numberline {9.6}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exists\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{45}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Detailed Description}{46}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}Constructor \& Destructor Documentation}{46}{subsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.2.1}FileExistsException()}{46}{subsubsection.9.6.2.1}%
+\contentsline {subsection}{\numberline {9.6.3}Member Function Documentation}{47}{subsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.3.1}what()}{47}{subsubsection.9.6.3.1}%
+\contentsline {subsection}{\numberline {9.6.4}Member Data Documentation}{47}{subsection.9.6.4}%
+\contentsline {subsubsection}{\numberline {9.6.4.1}file}{47}{subsubsection.9.6.4.1}%
+\contentsline {subsubsection}{\numberline {9.6.4.2}message}{47}{subsubsection.9.6.4.2}%
+\contentsline {section}{\numberline {9.7}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{47}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Detailed Description}{48}{subsection.9.7.1}%
+\contentsline {subsection}{\numberline {9.7.2}Constructor \& Destructor Documentation}{49}{subsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.2.1}InvalidKeyException()}{49}{subsubsection.9.7.2.1}%
+\contentsline {subsection}{\numberline {9.7.3}Member Function Documentation}{49}{subsection.9.7.3}%
+\contentsline {subsubsection}{\numberline {9.7.3.1}what()}{49}{subsubsection.9.7.3.1}%
+\contentsline {subsection}{\numberline {9.7.4}Member Data Documentation}{49}{subsection.9.7.4}%
+\contentsline {subsubsection}{\numberline {9.7.4.1}message}{49}{subsubsection.9.7.4.1}%
+\contentsline {section}{\numberline {9.8}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{49}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}Detailed Description}{51}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}Constructor \& Destructor Documentation}{51}{subsection.9.8.2}%
+\contentsline {subsubsection}{\numberline {9.8.2.1}InvalidTypeException()}{51}{subsubsection.9.8.2.1}%
+\contentsline {subsection}{\numberline {9.8.3}Member Function Documentation}{51}{subsection.9.8.3}%
+\contentsline {subsubsection}{\numberline {9.8.3.1}what()}{51}{subsubsection.9.8.3.1}%
+\contentsline {subsection}{\numberline {9.8.4}Member Data Documentation}{51}{subsection.9.8.4}%
+\contentsline {subsubsection}{\numberline {9.8.4.1}message}{51}{subsubsection.9.8.4.1}%
+\contentsline {subsubsection}{\numberline {9.8.4.2}type}{52}{subsubsection.9.8.4.2}%
+\contentsline {section}{\numberline {9.9}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Value\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{52}{section.9.9}%
+\contentsline {subsection}{\numberline {9.9.1}Detailed Description}{53}{subsection.9.9.1}%
+\contentsline {subsection}{\numberline {9.9.2}Constructor \& Destructor Documentation}{53}{subsection.9.9.2}%
+\contentsline {subsubsection}{\numberline {9.9.2.1}InvalidValueException()}{53}{subsubsection.9.9.2.1}%
+\contentsline {subsection}{\numberline {9.9.3}Member Function Documentation}{53}{subsection.9.9.3}%
+\contentsline {subsubsection}{\numberline {9.9.3.1}what()}{53}{subsubsection.9.9.3.1}%
+\contentsline {subsection}{\numberline {9.9.4}Member Data Documentation}{54}{subsection.9.9.4}%
+\contentsline {subsubsection}{\numberline {9.9.4.1}key}{54}{subsubsection.9.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.9.4.2}message}{54}{subsubsection.9.9.4.2}%
+\contentsline {section}{\numberline {9.10}parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{54}{section.9.10}%
+\contentsline {subsection}{\numberline {9.10.1}Detailed Description}{55}{subsection.9.10.1}%
+\contentsline {subsection}{\numberline {9.10.2}Constructor \& Destructor Documentation}{55}{subsection.9.10.2}%
+\contentsline {subsubsection}{\numberline {9.10.2.1}JsonHandler()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{55}{subsubsection.9.10.2.1}%
+\contentsline {subsubsection}{\numberline {9.10.2.2}JsonHandler()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{55}{subsubsection.9.10.2.2}%
+\contentsline {subsection}{\numberline {9.10.3}Member Function Documentation}{56}{subsection.9.10.3}%
+\contentsline {subsubsection}{\numberline {9.10.3.1}assignApplication()}{56}{subsubsection.9.10.3.1}%
+\contentsline {subsubsection}{\numberline {9.10.3.2}assignCommand()}{56}{subsubsection.9.10.3.2}%
+\contentsline {subsubsection}{\numberline {9.10.3.3}assignEntries()}{57}{subsubsection.9.10.3.3}%
+\contentsline {subsubsection}{\numberline {9.10.3.4}assignEnvironmentVariable()}{58}{subsubsection.9.10.3.4}%
+\contentsline {subsubsection}{\numberline {9.10.3.5}assignHideShell()}{59}{subsubsection.9.10.3.5}%
+\contentsline {subsubsection}{\numberline {9.10.3.6}assignOutputFile()}{59}{subsubsection.9.10.3.6}%
+\contentsline {subsubsection}{\numberline {9.10.3.7}assignPathValue()}{60}{subsubsection.9.10.3.7}%
+\contentsline {subsubsection}{\numberline {9.10.3.8}createFileData()}{60}{subsubsection.9.10.3.8}%
+\contentsline {subsubsection}{\numberline {9.10.3.9}getFileData()}{61}{subsubsection.9.10.3.9}%
+\contentsline {subsubsection}{\numberline {9.10.3.10}parseFile()}{62}{subsubsection.9.10.3.10}%
+\contentsline {subsection}{\numberline {9.10.4}Member Data Documentation}{63}{subsection.9.10.4}%
+\contentsline {subsubsection}{\numberline {9.10.4.1}data}{63}{subsubsection.9.10.4.1}%
+\contentsline {subsubsection}{\numberline {9.10.4.2}root}{63}{subsubsection.9.10.4.2}%
+\contentsline {section}{\numberline {9.11}parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator Class Reference}{63}{section.9.11}%
+\contentsline {subsection}{\numberline {9.11.1}Detailed Description}{64}{subsection.9.11.1}%
+\contentsline {subsection}{\numberline {9.11.2}Member Function Documentation}{64}{subsection.9.11.2}%
+\contentsline {subsubsection}{\numberline {9.11.2.1}getInstance()}{64}{subsubsection.9.11.2.1}%
+\contentsline {subsubsection}{\numberline {9.11.2.2}getUnknownKeyLine()}{65}{subsubsection.9.11.2.2}%
+\contentsline {subsubsection}{\numberline {9.11.2.3}getWrongKeys()}{65}{subsubsection.9.11.2.3}%
+\contentsline {subsubsection}{\numberline {9.11.2.4}validateEntries()}{66}{subsubsection.9.11.2.4}%
+\contentsline {subsubsection}{\numberline {9.11.2.5}validateKeys()}{67}{subsubsection.9.11.2.5}%
+\contentsline {subsubsection}{\numberline {9.11.2.6}validateTypes()}{68}{subsubsection.9.11.2.6}%
+\contentsline {subsection}{\numberline {9.11.3}Member Data Documentation}{69}{subsection.9.11.3}%
+\contentsline {subsubsection}{\numberline {9.11.3.1}typeToKeys}{69}{subsubsection.9.11.3.1}%
+\contentsline {subsubsection}{\numberline {9.11.3.2}validEntryKeys}{69}{subsubsection.9.11.3.2}%
+\contentsline {subsubsection}{\numberline {9.11.3.3}validKeys}{70}{subsubsection.9.11.3.3}%
+\contentsline {section}{\numberline {9.12}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Missing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{70}{section.9.12}%
+\contentsline {subsection}{\numberline {9.12.1}Detailed Description}{71}{subsection.9.12.1}%
+\contentsline {subsection}{\numberline {9.12.2}Constructor \& Destructor Documentation}{72}{subsection.9.12.2}%
+\contentsline {subsubsection}{\numberline {9.12.2.1}MissingKeyException()}{72}{subsubsection.9.12.2.1}%
+\contentsline {subsection}{\numberline {9.12.3}Member Function Documentation}{72}{subsection.9.12.3}%
+\contentsline {subsubsection}{\numberline {9.12.3.1}what()}{72}{subsubsection.9.12.3.1}%
+\contentsline {subsection}{\numberline {9.12.4}Member Data Documentation}{72}{subsection.9.12.4}%
+\contentsline {subsubsection}{\numberline {9.12.4.1}key}{72}{subsubsection.9.12.4.1}%
+\contentsline {subsubsection}{\numberline {9.12.4.2}message}{72}{subsubsection.9.12.4.2}%
+\contentsline {subsubsection}{\numberline {9.12.4.3}type}{72}{subsubsection.9.12.4.3}%
+\contentsline {section}{\numberline {9.13}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Missing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{73}{section.9.13}%
+\contentsline {subsection}{\numberline {9.13.1}Detailed Description}{74}{subsection.9.13.1}%
+\contentsline {subsection}{\numberline {9.13.2}Constructor \& Destructor Documentation}{74}{subsection.9.13.2}%
+\contentsline {subsubsection}{\numberline {9.13.2.1}MissingTypeException()}{74}{subsubsection.9.13.2.1}%
+\contentsline {subsection}{\numberline {9.13.3}Member Function Documentation}{74}{subsection.9.13.3}%
+\contentsline {subsubsection}{\numberline {9.13.3.1}what()}{74}{subsubsection.9.13.3.1}%
+\contentsline {subsection}{\numberline {9.13.4}Member Data Documentation}{74}{subsection.9.13.4}%
+\contentsline {subsubsection}{\numberline {9.13.4.1}message}{74}{subsubsection.9.13.4.1}%
+\contentsline {section}{\numberline {9.14}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::No\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Such\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{75}{section.9.14}%
+\contentsline {subsection}{\numberline {9.14.1}Detailed Description}{76}{subsection.9.14.1}%
+\contentsline {subsection}{\numberline {9.14.2}Constructor \& Destructor Documentation}{76}{subsection.9.14.2}%
+\contentsline {subsubsection}{\numberline {9.14.2.1}NoSuchDirException()}{76}{subsubsection.9.14.2.1}%
+\contentsline {subsection}{\numberline {9.14.3}Member Function Documentation}{76}{subsection.9.14.3}%
+\contentsline {subsubsection}{\numberline {9.14.3.1}what()}{76}{subsubsection.9.14.3.1}%
+\contentsline {subsection}{\numberline {9.14.4}Member Data Documentation}{76}{subsection.9.14.4}%
+\contentsline {subsubsection}{\numberline {9.14.4.1}message}{76}{subsubsection.9.14.4.1}%
+\contentsline {section}{\numberline {9.15}options Struct Reference}{77}{section.9.15}%
+\contentsline {subsection}{\numberline {9.15.1}Detailed Description}{77}{subsection.9.15.1}%
+\contentsline {section}{\numberline {9.16}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Parsing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{77}{section.9.16}%
+\contentsline {subsection}{\numberline {9.16.1}Detailed Description}{78}{subsection.9.16.1}%
+\contentsline {subsection}{\numberline {9.16.2}Constructor \& Destructor Documentation}{78}{subsection.9.16.2}%
+\contentsline {subsubsection}{\numberline {9.16.2.1}ParsingException()}{78}{subsubsection.9.16.2.1}%
+\contentsline {subsection}{\numberline {9.16.3}Member Function Documentation}{79}{subsection.9.16.3}%
+\contentsline {subsubsection}{\numberline {9.16.3.1}what()}{79}{subsubsection.9.16.3.1}%
+\contentsline {subsection}{\numberline {9.16.4}Member Data Documentation}{79}{subsection.9.16.4}%
+\contentsline {subsubsection}{\numberline {9.16.4.1}file}{79}{subsubsection.9.16.4.1}%
+\contentsline {subsubsection}{\numberline {9.16.4.2}message}{79}{subsubsection.9.16.4.2}%
+\contentsline {section}{\numberline {9.17}exceptions\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unreachable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{79}{section.9.17}%
+\contentsline {subsection}{\numberline {9.17.1}Detailed Description}{80}{subsection.9.17.1}%
+\contentsline {subsection}{\numberline {9.17.2}Constructor \& Destructor Documentation}{80}{subsection.9.17.2}%
+\contentsline {subsubsection}{\numberline {9.17.2.1}UnreachableCodeException()}{80}{subsubsection.9.17.2.1}%
+\contentsline {subsection}{\numberline {9.17.3}Member Function Documentation}{81}{subsection.9.17.3}%
+\contentsline {subsubsection}{\numberline {9.17.3.1}what()}{81}{subsubsection.9.17.3.1}%
+\contentsline {subsection}{\numberline {9.17.4}Member Data Documentation}{81}{subsection.9.17.4}%
+\contentsline {subsubsection}{\numberline {9.17.4.1}message}{81}{subsubsection.9.17.4.1}%
+\contentsline {section}{\numberline {9.18}utilities\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Utils Class Reference}{81}{section.9.18}%
+\contentsline {subsection}{\numberline {9.18.1}Detailed Description}{81}{subsection.9.18.1}%
+\contentsline {subsection}{\numberline {9.18.2}Member Function Documentation}{81}{subsection.9.18.2}%
+\contentsline {subsubsection}{\numberline {9.18.2.1}askToContinue()}{81}{subsubsection.9.18.2.1}%
+\contentsline {subsubsection}{\numberline {9.18.2.2}checkConfigFile()}{82}{subsubsection.9.18.2.2}%
+\contentsline {subsubsection}{\numberline {9.18.2.3}checkDirectory()}{83}{subsubsection.9.18.2.3}%
+\contentsline {subsubsection}{\numberline {9.18.2.4}handleParseException()}{83}{subsubsection.9.18.2.4}%
+\contentsline {subsubsection}{\numberline {9.18.2.5}setupEasyLogging()}{84}{subsubsection.9.18.2.5}%
+\contentsline {chapter}{\numberline {10}File Documentation}{87}{chapter.10}%
+\contentsline {section}{\numberline {10.1}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{87}{section.10.1}%
+\contentsline {section}{\numberline {10.2}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.hpp File Reference}{87}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Detailed Description}{88}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.3}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{89}{section.10.3}%
+\contentsline {section}{\numberline {10.4}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.hpp File Reference}{89}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Detailed Description}{90}{subsection.10.4.1}%
+\contentsline {section}{\numberline {10.5}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{91}{section.10.5}%
+\contentsline {section}{\numberline {10.6}src/include/config.hpp File Reference}{91}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}Detailed Description}{92}{subsection.10.6.1}%
+\contentsline {section}{\numberline {10.7}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{93}{section.10.7}%
+\contentsline {section}{\numberline {10.8}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exceptions.hpp File Reference}{93}{section.10.8}%
+\contentsline {subsection}{\numberline {10.8.1}Detailed Description}{94}{subsection.10.8.1}%
+\contentsline {section}{\numberline {10.9}Exceptions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{95}{section.10.9}%
+\contentsline {section}{\numberline {10.10}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.hpp File Reference}{97}{section.10.10}%
+\contentsline {subsection}{\numberline {10.10.1}Detailed Description}{98}{subsection.10.10.1}%
+\contentsline {section}{\numberline {10.11}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{98}{section.10.11}%
+\contentsline {section}{\numberline {10.12}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.hpp File Reference}{99}{section.10.12}%
+\contentsline {subsection}{\numberline {10.12.1}Detailed Description}{100}{subsection.10.12.1}%
+\contentsline {section}{\numberline {10.13}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{101}{section.10.13}%
+\contentsline {section}{\numberline {10.14}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.hpp File Reference}{101}{section.10.14}%
+\contentsline {subsection}{\numberline {10.14.1}Detailed Description}{102}{subsection.10.14.1}%
+\contentsline {section}{\numberline {10.15}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{103}{section.10.15}%
+\contentsline {section}{\numberline {10.16}src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utils.hpp File Reference}{103}{section.10.16}%
+\contentsline {section}{\numberline {10.17}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{105}{section.10.17}%
+\contentsline {section}{\numberline {10.18}src/main.cpp File Reference}{105}{section.10.18}%
+\contentsline {subsection}{\numberline {10.18.1}Detailed Description}{106}{subsection.10.18.1}%
+\contentsline {subsection}{\numberline {10.18.2}Function Documentation}{107}{subsection.10.18.2}%
+\contentsline {subsubsection}{\numberline {10.18.2.1}main()}{107}{subsubsection.10.18.2.1}%
+\contentsline {subsubsection}{\numberline {10.18.2.2}parseAndValidateArgs()}{107}{subsubsection.10.18.2.2}%
+\contentsline {subsubsection}{\numberline {10.18.2.3}parseFile()}{108}{subsubsection.10.18.2.3}%
+\contentsline {subsubsection}{\numberline {10.18.2.4}validateFiles()}{109}{subsubsection.10.18.2.4}%
+\contentsline {section}{\numberline {10.19}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{110}{section.10.19}%
+\contentsline {section}{\numberline {10.20}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.cpp File Reference}{112}{section.10.20}%
+\contentsline {subsection}{\numberline {10.20.1}Detailed Description}{112}{subsection.10.20.1}%
+\contentsline {section}{\numberline {10.21}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{113}{section.10.21}%
+\contentsline {section}{\numberline {10.22}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp File Reference}{114}{section.10.22}%
+\contentsline {subsection}{\numberline {10.22.1}Detailed Description}{115}{subsection.10.22.1}%
+\contentsline {section}{\numberline {10.23}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{115}{section.10.23}%
+\contentsline {section}{\numberline {10.24}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cpp File Reference}{117}{section.10.24}%
+\contentsline {subsection}{\numberline {10.24.1}Detailed Description}{117}{subsection.10.24.1}%
+\contentsline {section}{\numberline {10.25}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{118}{section.10.25}%
+\contentsline {section}{\numberline {10.26}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp File Reference}{119}{section.10.26}%
+\contentsline {subsection}{\numberline {10.26.1}Detailed Description}{120}{subsection.10.26.1}%
+\contentsline {section}{\numberline {10.27}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{120}{section.10.27}%
+\contentsline {section}{\numberline {10.28}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.cpp File Reference}{122}{section.10.28}%
+\contentsline {subsection}{\numberline {10.28.1}Detailed Description}{122}{subsection.10.28.1}%
+\contentsline {section}{\numberline {10.29}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{123}{section.10.29}%
+\contentsline {section}{\numberline {10.30}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utils.cpp File Reference}{124}{section.10.30}%
+\contentsline {subsection}{\numberline {10.30.1}Detailed Description}{125}{subsection.10.30.1}%
+\contentsline {section}{\numberline {10.31}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{126}{section.10.31}%
+\contentsline {chapter}{Index}{129}{section*.177}%

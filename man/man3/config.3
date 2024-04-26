@@ -1,4 +1,4 @@
-.TH "config" 3 "Fri Apr 26 2024 14:23:02" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "config" 3 "Fri Apr 26 2024 14:27:40" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -32,7 +32,7 @@ config \- Namespace used for general project information\&.
 .RI "constexpr auto \fBPROJECT_NAME\fP = 'JSON2Batch'"
 .br
 .ti -1c
-.RI "constexpr auto \fBAUTHORS\fP"
+.RI "constexpr auto \fBAUTHORS\fP = '@AUTHORS'"
 .br
 .ti -1c
 .RI "constexpr auto \fBHOMEPAGE_URL\fP"
@@ -43,12 +43,7 @@ config \- Namespace used for general project information\&.
 Namespace used for general project information\&. 
 .SH "Variable Documentation"
 .PP 
-.SS "constexpr auto config::AUTHORS\fC [inline]\fP, \fC [constexpr]\fP"
-\fBInitial value:\fP.PP
-.nf
-=
-            "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci"
-.fi
+.SS "constexpr auto config::AUTHORS = '@AUTHORS'\fC [inline]\fP, \fC [constexpr]\fP"
 
 .PP
 Definition at line \fB34\fP of file \fBconfig\&.hpp\fP\&.
@@ -68,12 +63,12 @@ Definition at line \fB28\fP of file \fBconfig\&.hpp\fP\&.
 .fi
 
 .PP
-Definition at line \fB36\fP of file \fBconfig\&.hpp\fP\&.
+Definition at line \fB35\fP of file \fBconfig\&.hpp\fP\&.
 .SS "constexpr auto config::LOG_CONFIG\fC [inline]\fP, \fC [constexpr]\fP"
 \fBInitial value:\fP.PP
 .nf
-= "/home/simon/1_Coding/projectJsonToBat/"
-                                   "build/Release/config/easylogging\&.conf"
+=
+            "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging\&.conf"
 .fi
 
 .PP

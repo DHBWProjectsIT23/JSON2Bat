@@ -96,34 +96,104 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">JSON2Batch </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> <a href="https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml"><img src="https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml/badge.svg" alt="Building on Linux" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml"><img src="https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml/badge.svg" alt="Building on Windows" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml"><img src="https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml/badge.svg" alt="Deploy Documentation" style="pointer-events: none;" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+JSON2Batch</h1>
 <p>JSON2Batch was developed during a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.</p>
 <p>The project was carried out by <b>Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci</b>.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Build instructions</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Table of Contents</h2>
+<ul>
+<li>JSON2Batch<ol type="1">
+<li>Table of Contents</li>
+<li>Build Instructions<ul>
+<li>Linux</li>
+<li>Windows</li>
+<li>Generating Documentation</li>
+</ul>
+</li>
+<li>Documentation<ul>
+<li>Project Structure</li>
+</ul>
+</li>
+<li>External Libraries<ul>
+<li>easylogging++</li>
+<li>LoggingWrapper</li>
+<li>jsoncpp</li>
+</ul>
+</li>
+<li>License</li>
+</ol>
+</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
-Linux</h2>
+Build Instructions</h2>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Linux</h3>
 <div class="fragment"><div class="line">git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO</div>
 <div class="line">cmake -S . -B build --config Release</div>
 <div class="line">cmake --build build</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
-Windows</h2>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md4"></a>
+UNIX Compiler Compatibility</h4>
+<p>The project has been tested with GCC version &gt;= 10.5 and Clang version &gt; 14.</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Windows</h3>
 <p>@TODO Fix Windows</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Documentation</h1>
-<p>The documentation for this project can be found <a href="https://dhbwprojectsit23.github.io/JSON2Bat">here</a>.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-License</h1>
-<p>The project is published under the Apache License V2.0. Check the [license file](LICENSE) for more information!</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Other</h1>
+<h4><a class="anchor" id="autotoc_md6"></a>
+Windows Compiler Compatibility</h4>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Generating Documentation</h3>
+<p>If the <em>doxygen</em> executable is installed local documentation can be generated using:</p>
+<div class="fragment"><div class="line">git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO</div>
+<div class="line">cmake -S . -B build --config Release</div>
+<div class="line">cmake --build build --target doxygen_build</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Documentation</h2>
+<p>The documentation for this project can be found <a href="https://dhbwprojectsit23.github.io/JSON2Bat">here</a>. A PDF version can be found [here]() and a short man page can be found [here]().</p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+Project Structure</h3>
+<p>The project directory is structured as follows:</p>
+<ul>
+<li>assets &gt; <em>Includes files, not directly related to the code</em></li>
+<li>man &gt; <em>Includes the man page</em></li>
+<li>conf &gt; <em>Includes files which will be configured by CMake</em></li>
+<li>include &gt; <em>Includes header files for external libraries</em></li>
+<li>lib &gt; <em>Includes source/binary files for external libraries</em></li>
+<li>src &gt; <em>Includes the source code for the project</em><ul>
+<li>sources &gt; <em>Includes all ".cpp" files</em></li>
+<li>include &gt; <em>Includes all ".hpp" files</em></li>
+<li><a class="el" href="df/d0a/main_8cpp.html" title="Contains the main function.">main.cpp</a></li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+External Libraries</h2>
+<h3><a class="anchor" id="autotoc_md11"></a>
+easylogging++</h3>
+<p>The <a href="https://github.com/abumq/easyloggingpp">easylogging++</a> library is used for logging within the application. The configuration for the library is done via a logging file which can be found in <a href="conf/easylogging.in.conf">conf/easylogging.in.conf</a>. Cmake configures this file into the binary directory upon building. If the configuration file is removed, the application will no longer run.</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+LoggingWrapper</h3>
+<p>While easylogging++ is used for the logging back&ndash;end within the code there are little remains apart from the configuration. The logging and output of the application is done over a self written wrapper. Altough it is self written, due to it beeing not part of the project we consider it an external libraries. The wrapper is used to simplify parallel output to stdout and the logfile and also enables increased output to stdout for the verbose mode. A few macros are defined for use within the application:</p>
+<ul>
+<li>OUTPUT &gt; <em>Outputs to stdout and the logfile</em></li>
+<li>LOG_INFO &gt; <em>By default only outputs to the logfile</em></li>
+<li>LOG_WARNING &gt; <em>Formats text and outputs to stdout and the logfile</em></li>
+<li>LOG_ERROR &gt; <em>Same as LOG_WARNING but in red and bold</em></li>
+</ul>
+<p>The macros can be used with streaming in the same way as std::cout would be used. Furthermore, some rudimentary performance tests showed, that the use of the wrapper, does not affect performance in comparison to using both std::cout and easylogging itself.</p>
+<h3><a class="anchor" id="autotoc_md13"></a>
+jsoncpp</h3>
+<p>For parsing the JSON files, the <a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp</a> library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/Ubuntu and Arch). For Windows system a prebuild version is included - See Windows for more information.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+License</h2>
+<p>The project is published under the Apache License V2.0. Check the [license file](LICENSE) for more information! </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Apr 26 2024 14:23:02 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 14:27:40 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

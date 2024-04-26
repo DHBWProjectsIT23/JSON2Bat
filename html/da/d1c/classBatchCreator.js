@@ -1,7 +1,7 @@
 var classBatchCreator =
 [
     [ "BatchCreator", "da/d1c/classBatchCreator.html#ad2fe34f5fef34f26763558bc9c9949a3", null ],
-    [ "createBatch", "da/d1c/classBatchCreator.html#a2225babf16a473ba6722238c19d785ae", null ],
+    [ "createBatch", "da/d1c/classBatchCreator.html#aca15cd9ed3a90d1f43ac2fd16175c676", null ],
     [ "getDataStream", "da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965", null ],
     [ "writeApplication", "da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d", null ],
     [ "writeCommands", "da/d1c/classBatchCreator.html#a7ea2646254825e194f831d98ae703ec8", null ],

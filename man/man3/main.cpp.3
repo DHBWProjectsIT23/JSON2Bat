@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Fri Apr 26 2024 14:23:02" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Fri Apr 26 2024 14:27:40" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,7 +40,7 @@ src/main.cpp \- Contains the main function\&.
 .br
 .RI "Validates and parses arguments\&. "
 .ti -1c
-.RI "const std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
+.RI "std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
 .br
 .RI "Checks if the files are valid\&. "
 .ti -1c
@@ -129,7 +129,7 @@ Returns 0 on success, 1 on failure
 .PP
 
 .PP
-Definition at line \fB86\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB85\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkConfigFile()\fP, \fButilities::Utils::handleParseException()\fP, \fBconfig::LOG_CONFIG\fP, \fBparseAndValidateArgs()\fP, \fBparseFile()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
 .SS "std::tuple< std::vector< std::string >, std::string > parseAndValidateArgs (int argc, char * argv[])"
@@ -151,7 +151,7 @@ A tuple containing the files to be parsed and the output directory
 .PP
 
 .PP
-Definition at line \fB123\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB120\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkDirectory()\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBcli::CommandLineHandler::printHelp()\fP, and \fBexceptions::CustomException::what()\fP\&.
 .SS "void parseFile (const std::string & file, const std::string & outputDirectory)"
@@ -166,10 +166,10 @@ Parses the given file and writes the output to the output directory\&. Creates t
 .PP
 
 .PP
-Definition at line \fB196\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB188\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::getFileData()\fP\&.
-.SS "const std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
+.SS "std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
 
 .PP
 Checks if the files are valid\&. Makes sures, that provided files exists and checks their file ending 
@@ -189,7 +189,7 @@ A vector containing the valid files
 .PP
 
 .PP
-Definition at line \fB153\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB147\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::askToContinue()\fP\&.
 .SH "Author"

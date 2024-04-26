@@ -1,5 +1,4 @@
 \indexentry{JSON2Batch@{JSON2Batch}|hyperpage}{1}
-\indexentry{Todo List@{Todo List}|hyperpage}{3}
 \indexentry{StyleHelpers@{StyleHelpers}|hyperpage}{15}
 \indexentry{cli@{cli}|hyperpage}{17}
 \indexentry{cli@{cli}!options@{options}|hyperpage}{18}
@@ -9,8 +8,8 @@
 \indexentry{AUTHORS@{AUTHORS}!config@{config}|hyperpage}{18}
 \indexentry{config@{config}!DESCRIPTION@{DESCRIPTION}|hyperpage}{18}
 \indexentry{DESCRIPTION@{DESCRIPTION}!config@{config}|hyperpage}{18}
-\indexentry{config@{config}!EXECUTABLE\_NAME@{EXECUTABLE\_NAME}|hyperpage}{19}
-\indexentry{EXECUTABLE\_NAME@{EXECUTABLE\_NAME}!config@{config}|hyperpage}{19}
+\indexentry{config@{config}!EXECUTABLE\_NAME@{EXECUTABLE\_NAME}|hyperpage}{18}
+\indexentry{EXECUTABLE\_NAME@{EXECUTABLE\_NAME}!config@{config}|hyperpage}{18}
 \indexentry{config@{config}!HOMEPAGE\_URL@{HOMEPAGE\_URL}|hyperpage}{19}
 \indexentry{HOMEPAGE\_URL@{HOMEPAGE\_URL}!config@{config}|hyperpage}{19}
 \indexentry{config@{config}!LOG\_CONFIG@{LOG\_CONFIG}|hyperpage}{19}
@@ -276,12 +275,12 @@
 \indexentry{src/sources/BatchCreator.cpp@{src/sources/BatchCreator.cpp}|hyperpage}{112}
 \indexentry{src/sources/BatchCreator.cpp@{src/sources/BatchCreator.cpp}|hyperpage}{113}
 \indexentry{src/sources/CommandLineHandler.cpp@{src/sources/CommandLineHandler.cpp}|hyperpage}{114}
-\indexentry{src/sources/CommandLineHandler.cpp@{src/sources/CommandLineHandler.cpp}|hyperpage}{116}
+\indexentry{src/sources/CommandLineHandler.cpp@{src/sources/CommandLineHandler.cpp}|hyperpage}{115}
 \indexentry{src/sources/FileData.cpp@{src/sources/FileData.cpp}|hyperpage}{117}
 \indexentry{src/sources/FileData.cpp@{src/sources/FileData.cpp}|hyperpage}{118}
 \indexentry{src/sources/JsonHandler.cpp@{src/sources/JsonHandler.cpp}|hyperpage}{119}
-\indexentry{src/sources/JsonHandler.cpp@{src/sources/JsonHandler.cpp}|hyperpage}{121}
+\indexentry{src/sources/JsonHandler.cpp@{src/sources/JsonHandler.cpp}|hyperpage}{120}
 \indexentry{src/sources/KeyValidator.cpp@{src/sources/KeyValidator.cpp}|hyperpage}{122}
 \indexentry{src/sources/KeyValidator.cpp@{src/sources/KeyValidator.cpp}|hyperpage}{123}
-\indexentry{src/sources/Utils.cpp@{src/sources/Utils.cpp}|hyperpage}{125}
+\indexentry{src/sources/Utils.cpp@{src/sources/Utils.cpp}|hyperpage}{124}
 \indexentry{src/sources/Utils.cpp@{src/sources/Utils.cpp}|hyperpage}{126}

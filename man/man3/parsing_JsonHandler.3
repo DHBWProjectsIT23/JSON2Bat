@@ -1,4 +1,4 @@
-.TH "parsing::JsonHandler" 3 "Fri Apr 26 2024 14:23:02" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::JsonHandler" 3 "Fri Apr 26 2024 14:27:40" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -127,7 +127,7 @@ Assigns application to this->data\&. Retrieves the value of the application key 
 .PP
 
 .PP
-Definition at line \fB82\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB77\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP, and \fBroot\fP\&.
 .SS "void parsing::JsonHandler::assignCommand (const Json::Value & entry) const\fC [private]\fP"
@@ -146,7 +146,7 @@ Assigns an command to this->data\&.
 .PP
 
 .PP
-Definition at line \fB116\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB109\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP\&.
 .SS "void parsing::JsonHandler::assignEntries () const\fC [private]\fP"
@@ -169,7 +169,7 @@ Assigns entries to this->data\&. Goes through each of the entries from Json::Val
 .PP
 
 .PP
-Definition at line \fB88\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB82\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBassignCommand()\fP, \fBassignEnvironmentVariable()\fP, \fBassignPathValue()\fP, and \fBroot\fP\&.
 .SS "void parsing::JsonHandler::assignEnvironmentVariable (const Json::Value & entry) const\fC [private]\fP"
@@ -188,7 +188,7 @@ Assigns an environmentVariable to this->data\&.
 .PP
 
 .PP
-Definition at line \fB122\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB114\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP\&.
 .SS "void parsing::JsonHandler::assignHideShell () const\fC [private]\fP"
@@ -200,7 +200,7 @@ Assigns the hideshell value to this->data\&. Retrieves the value of the hideshel
 .PP
 
 .PP
-Definition at line \fB75\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB71\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP, and \fBroot\fP\&.
 .SS "void parsing::JsonHandler::assignOutputFile () const\fC [private]\fP"
@@ -218,7 +218,7 @@ Assigns the outputfile to this->data\&. Retrieves the outputfile from Json::Valu
 .PP
 
 .PP
-Definition at line \fB68\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB65\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP, and \fBroot\fP\&.
 .SS "void parsing::JsonHandler::assignPathValue (const Json::Value & entry) const\fC [private]\fP"
@@ -237,7 +237,7 @@ Assigns a path value to this->data\&.
 .PP
 
 .PP
-Definition at line \fB130\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB121\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP\&.
 .SS "std::shared_ptr< \fBFileData\fP > parsing::JsonHandler::createFileData ()\fC [private]\fP"
@@ -252,7 +252,7 @@ Pointer to the created instance of \fBFileData\fP
 .PP
 
 .PP
-Definition at line \fB57\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB55\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBassignApplication()\fP, \fBassignEntries()\fP, \fBassignHideShell()\fP, \fBassignOutputFile()\fP, and \fBdata\fP\&.
 .SS "std::shared_ptr< \fBFileData\fP > parsing::JsonHandler::getFileData ()"
@@ -267,7 +267,7 @@ Pointer to the \fBFileData\fP Object with the parsed data from json
 .PP
 
 .PP
-Definition at line \fB51\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB50\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBcreateFileData()\fP\&.
 .SS "std::shared_ptr< Json::Value > parsing::JsonHandler::parseFile (const std::string & filename)\fC [static]\fP, \fC [private]\fP"
@@ -299,7 +299,7 @@ A shared pointer to the Json::Value instance
 .PP
 
 .PP
-Definition at line \fB26\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB25\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBparsing::KeyValidator::getInstance()\fP\&.
 .SH "Member Data Documentation"
