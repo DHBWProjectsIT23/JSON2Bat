@@ -13,19 +13,18 @@ The project was carried out by **Elena Schwarzbach, Max Rodler, Simon Blum, Soni
 
 ## Table of Contents
 
-- JSON2Batch
-  1. [Table of Contents](#table-of-contents)
-  2. [Build Instructions](#build-instructions)
-    - [Linux](#linux)
-    - [Windows](#windows)
-    - [Generating Documentation](#generating-documentation)
-  3. [Documentation](#documentation)
-    - [Project Structure](#project-structure)
-  4. [External Libraries](#external-libraries)
-    - [easylogging++](#easylogging)
-    - [LoggingWrapper](#loggingwrapper)
-    - [jsoncpp](#jsoncpp)
-  5. [License](#license)
+1. [Table of Contents](#table-of-contents)
+2. [Build Instructions](#build-instructions)
+  - [Linux](#linux)
+  - [Windows](#windows)
+  - [Generating Documentation](#generating-documentation)
+3. [Documentation](#documentation)
+  - [Project Structure](#project-structure)
+4. [External Libraries](#external-libraries)
+  - [easylogging++](#easylogging)
+  - [LoggingWrapper](#loggingwrapper)
+  - [jsoncpp](#jsoncpp)
+5. [License](#license)
 
 ## Build Instructions
 
