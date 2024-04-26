@@ -1,0 +1,7 @@
+<map id="parsing::JsonHandler::assignCommand" name="parsing::JsonHandler::assignCommand">
+<area shape="rect" id="Node000001" title="Assigns an command to this&#45;&gt;data." alt="" coords="5,39,148,79"/>
+<area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a62e63826ca3646f6ed4b6722b2205e33" title="Check if a string contains a bad character." alt="" coords="196,5,351,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,44,180,39,181,44,148,50"/>
+<area shape="rect" id="Node000003" href="$d6/d9e/classutilities_1_1Utils.html#a42f254912eaecc78eeb04eaf3c32d150" title="Escape any unwanted escape sequences in a string." alt="" coords="202,71,345,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,68,187,74,186,80,147,73"/>
+</map>

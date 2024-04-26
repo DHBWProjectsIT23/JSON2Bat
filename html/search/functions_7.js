@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['jsonhandler_0',['jsonhandler',['../d5/da0/classparsing_1_1JsonHandler.html#aebaf4ed7a0dcca8082a648e2ef17f367',1,'parsing::JsonHandler::JsonHandler()'],['../d5/da0/classparsing_1_1JsonHandler.html#a678af0a2e0668f9e47b14dfdb4d954e4',1,'parsing::JsonHandler::JsonHandler(const std::string &amp;filename)']]]
+  ['invalidkeyexception_0',['InvalidKeyException',['../de/d9e/classexceptions_1_1InvalidKeyException.html#adfe58947e71f8e725968d937b9a4c778',1,'exceptions::InvalidKeyException']]],
+  ['invalidtypeexception_1',['InvalidTypeException',['../d0/dad/classexceptions_1_1InvalidTypeException.html#a3e98ad18bde51d272895d6b33bb19a5e',1,'exceptions::InvalidTypeException']]],
+  ['invalidvalueexception_2',['InvalidValueException',['../d8/d1c/classexceptions_1_1InvalidValueException.html#a495d4258d672805705aa82172d4bcc19',1,'exceptions::InvalidValueException']]]
 ];

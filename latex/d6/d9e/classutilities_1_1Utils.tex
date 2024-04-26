@@ -21,7 +21,9 @@ static bool \mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b688
 static void \mbox{\hyperlink{classutilities_1_1Utils_abf18cb6fd599bec6e8c55b62ee178640}{check\+Config\+File}} (const std\+::string \&config\+File)
 \begin{DoxyCompactList}\small\item\em Checks if the easylogging-\/config file exists. \end{DoxyCompactList}\item 
 static const std\+::string \& \mbox{\hyperlink{classutilities_1_1Utils_ac07ca745d24efb547beec94f1d6acc11}{check\+Directory}} (std\+::string \&directory)
-\begin{DoxyCompactList}\small\item\em Checks if the given directory exists and is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if the given directory exists and is valid. \end{DoxyCompactList}\item 
+static const std\+::string \mbox{\hyperlink{classutilities_1_1Utils_a42f254912eaecc78eeb04eaf3c32d150}{escape\+String}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Escape any unwanted escape sequences in a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -121,6 +123,38 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d6/d9e/classutilities_1_1Utils_ac07ca745d24efb547beec94f1d6acc11_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutilities_1_1Utils_a42f254912eaecc78eeb04eaf3c32d150}\label{classutilities_1_1Utils_a42f254912eaecc78eeb04eaf3c32d150} 
+\index{utilities::Utils@{utilities::Utils}!escapeString@{escapeString}}
+\index{escapeString@{escapeString}!utilities::Utils@{utilities::Utils}}
+\doxysubsubsection{\texorpdfstring{escapeString()}{escapeString()}}
+{\footnotesize\ttfamily const std\+::string utilities\+::\+Utils\+::escape\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Escape any unwanted escape sequences in a string. 
+
+This function takes a string and escapes already existing escape sequences. E.\+g. "{}\textbackslash{}n"{} would become "{}\textbackslash{}\textbackslash{}n"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be escaped\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The processed string 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Utils_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d9e/classutilities_1_1Utils_a42f254912eaecc78eeb04eaf3c32d150_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}\label{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd} 
