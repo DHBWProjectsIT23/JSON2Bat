@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.26)  26 APR 2024 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.26)  26 APR 2024 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -881,25 +881,25 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 9.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-5.
+2.
 (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 15.
+(Font)              scaled to size 8.99994pt on input line 12.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 31.
+(Font)              scaled to size 10.79993pt on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 46.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 46.
  [1
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 43.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 43.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 65.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 68.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 65.
+(Font)              scaled to size 6.29996pt on input line 68.
  [2]) [3] [4
 
 ]
@@ -2484,7 +2484,7 @@ Underfull \hbox (badness 10000) detected at line 41
 
 ) (./d2/dc5/FileData_8cpp_source.tex [118]) (./d0/d2b/JsonHandler_8cpp.tex <./d
 e/d03/JsonHandler_8cpp__incl.pdf>
-<de/d03/JsonHandler_8cpp__incl.pdf, id=5472, 892.33376pt x 265.99374pt>
+<de/d03/JsonHandler_8cpp__incl.pdf, id=5473, 892.33376pt x 265.99374pt>
 File: de/d03/JsonHandler_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d03/JsonHandler_8cpp__incl.pdf>
 Package pdftex.def Info: de/d03/JsonHandler_8cpp__incl.pdf  used on input line 
@@ -2517,7 +2517,7 @@ Underfull \hbox (badness 10000) detected at line 43
 
 ) (./d0/d2b/JsonHandler_8cpp_source.tex [120]) (./d4/d9d/KeyValidator_8cpp.tex
 [121] <./dd/d2f/KeyValidator_8cpp__incl.pdf>
-<dd/d2f/KeyValidator_8cpp__incl.pdf, id=5695, 692.5875pt x 210.7875pt>
+<dd/d2f/KeyValidator_8cpp__incl.pdf, id=5696, 692.5875pt x 210.7875pt>
 File: dd/d2f/KeyValidator_8cpp__incl.pdf Graphic file (type pdf)
 <use dd/d2f/KeyValidator_8cpp__incl.pdf>
 Package pdftex.def Info: dd/d2f/KeyValidator_8cpp__incl.pdf  used on input line
@@ -2550,7 +2550,7 @@ Underfull \hbox (badness 10000) detected at line 44
 
 ) (./d4/d9d/KeyValidator_8cpp_source.tex [122] [123]) (./df/d0c/Utils_8cpp.tex 
 <./de/d88/Utils_8cpp__incl.pdf>
-<de/d88/Utils_8cpp__incl.pdf, id=5834, 591.20876pt x 265.99374pt>
+<de/d88/Utils_8cpp__incl.pdf, id=5835, 591.20876pt x 265.99374pt>
 File: de/d88/Utils_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d88/Utils_8cpp__incl.pdf>
 Package pdftex.def Info: de/d88/Utils_8cpp__incl.pdf  used on input line 20.
@@ -2596,8 +2596,8 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: F309BE9A1BF146466747D2EE16CF47FC;59504.
  ) 
 Here is how much of TeX's memory you used:
- 21820 strings out of 476025
- 429506 string characters out of 5796497
+ 21821 strings out of 476025
+ 429543 string characters out of 5796497
  1876388 words of memory out of 5000000
  39549 multiletter control sequences out of 15000+600000
  572154 words of font info for 111 fonts, out of 8000000 for 9000
@@ -2614,10 +2614,10 @@ ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (142 pages, 1146000 bytes).
+Output written on refman.pdf (142 pages, 1146180 bytes).
 PDF statistics:
- 6828 PDF objects out of 7423 (max. 8388607)
- 6226 compressed objects within 63 object streams
- 2080 named destinations out of 2487 (max. 500000)
+ 6829 PDF objects out of 7423 (max. 8388607)
+ 6227 compressed objects within 63 object streams
+ 2081 named destinations out of 2487 (max. 500000)
  2763 words of extra memory for PDF output out of 10000 (max. 10000000)
 
