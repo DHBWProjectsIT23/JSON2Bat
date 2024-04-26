@@ -168,7 +168,7 @@ std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
 
         // Check if the file ends in .json
         if (file.extension() != ".json") {
-            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"";
+            LOG_WARNING << "The file \"" << file << R"(" does not end in ".json")";
             OUTPUT << "If the file is not in JSON Format, continuing may "
                    "result in\nunexpected behaviour!\n";
 
