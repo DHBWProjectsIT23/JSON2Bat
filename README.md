@@ -1,5 +1,5 @@
-[![Building on Windows](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml/badge.svg?branch=main)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml) 
 [![Building on Linux](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml/badge.svg?branch=main)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml)
+[![Building on Windows](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml/badge.svg?branch=main)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml) 
 [![Documentation Deployed](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml/badge.svg)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml)
 # JSON2Batch
 
