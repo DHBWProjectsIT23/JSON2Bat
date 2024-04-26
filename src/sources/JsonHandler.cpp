@@ -163,6 +163,6 @@ bool JsonHandler::containsBadCharacter(const std::string_view &str) {
         return badChars.contains(c);
     };
 
-    return std::any_of(str.begin(), str.end(), isBadCharacter);
+    return std::ranges::any_of(str, isBadCharacter);
 }
 } // namespace parsing
