@@ -40,7 +40,7 @@ namespace utilities {
  * which be used throughout the whole project.
  */
 class Utils {
-public:
+  public:
     /**
      * @brief Set up easylogging
      * @details

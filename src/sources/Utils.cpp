@@ -22,8 +22,7 @@
 #include <string>
 
 namespace utilities {
-void Utils::setupEasyLogging(const std::string &configFile)
-{
+void Utils::setupEasyLogging(const std::string &configFile) {
     el::Configurations conf(configFile);
     el::Loggers::reconfigureAllLoggers(conf);
     LOG_INFO << "Running " << config::PROJECT_NAME << " v"
@@ -32,8 +31,7 @@ void Utils::setupEasyLogging(const std::string &configFile)
     LOG_INFO << "For more Information checkout " << config::HOMEPAGE_URL;
     LOG_INFO << "EasyLogging has been setup!";
 }
-bool Utils::askToContinue(const std::string &prompt)
-{
+bool Utils::askToContinue(const std::string &prompt) {
     std::string userInput;
     LOG_INFO << "Asking for user Confirmation to continue...";
     OUTPUT << cli::BOLD << prompt << cli::RESET;
@@ -43,7 +41,7 @@ bool Utils::askToContinue(const std::string &prompt)
         std::ranges::transform(userInput, userInput.begin(), ::tolower);
 
         if (userInput != "y" && userInput != "yes" && userInput != "n" &&
-                userInput != "no") {
+            userInput != "no") {
             LOG_INFO << "Wrong user input!";
             OUTPUT << cli::ITALIC << "Please enter Y/Yes or N/No!\n" << cli::RESET;
             continue;
@@ -54,8 +52,7 @@ bool Utils::askToContinue(const std::string &prompt)
 
     return userInput == "y" || userInput == "yes";
 }
-void Utils::checkConfigFile(const std::string &configFile)
-{
+void Utils::checkConfigFile(const std::string &configFile) {
     if (!std::filesystem::is_regular_file(configFile)) {
         std::cerr << cli::RED << cli::BOLD
                   << "Fatal: Easylogging configuration file not found at:\n"
@@ -65,10 +62,9 @@ void Utils::checkConfigFile(const std::string &configFile)
         exit(1);
     }
 }
-const std::string &Utils::checkDirectory(std::string &directory)
-{
+const std::string &Utils::checkDirectory(std::string &directory) {
     if (!directory.empty() && directory.back() != '/' &&
-            directory.back() != '\\') {
+        directory.back() != '\\') {
         directory += '/';
     }
 
@@ -80,16 +76,15 @@ const std::string &Utils::checkDirectory(std::string &directory)
 }
 bool Utils::handleParseException(const exceptions::CustomException &e,
                                  const std::vector<std::string>::iterator &file,
-                                 const std::vector<std::string> &files)
-{
+                                 const std::vector<std::string> &files) {
     OUTPUT << "\nThere has been a error while trying to parse \"" << *file
            << ":\n";
     LOG_ERROR << e.what();
 
     if (std::next(file) != files.end() &&
-            !utilities::Utils::askToContinue(
-                "Do you want to continue with the other files? (y/n) "
-                "")) {
+        !utilities::Utils::askToContinue(
+                    "Do you want to continue with the other files? (y/n) "
+                    "")) {
         OUTPUT << "Aborting...";
         LOG_INFO << "Application ended by user Input";
         return false;

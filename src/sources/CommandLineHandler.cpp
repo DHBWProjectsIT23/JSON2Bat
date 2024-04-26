@@ -19,8 +19,7 @@
 #include <vector>
 
 namespace cli {
-void CommandLineHandler::printHelp()
-{
+void CommandLineHandler::printHelp() {
     LOG_INFO << "Printing help message...";
     OUTPUT << BOLD << "Usage:\n"
            << RESET << "----------\n"
@@ -42,15 +41,13 @@ void CommandLineHandler::printHelp()
            << "Multiple files should be seperated by spaces!\n\n";
     exit(0);
 }
-void CommandLineHandler::printVersion()
-{
+void CommandLineHandler::printVersion() {
     LOG_INFO << "Printing version number...";
     OUTPUT << config::PROJECT_NAME << " v" << config::MAJOR_VERSION << "."
            << config::MINOR_VERSION << "." << config::PATCH_VERSION << "\n";
     exit(0);
 }
-void CommandLineHandler::printCredits()
-{
+void CommandLineHandler::printCredits() {
     LOG_INFO << "Printing credits...";
     OUTPUT << BOLD << "Project information:\n"
            << RESET << "----------\n"
@@ -68,10 +65,8 @@ void CommandLineHandler::printCredits()
     exit(0);
 }
 
-std::tuple<std::optional<std::string>, std::vector<std::string>>
-CommandLineHandler::parseArguments(
-    int argc, char* argv[])
-{
+std::tuple<std::optional<std::string>, std::vector<std::string>> CommandLineHandler::parseArguments(
+            int argc, char* argv[]) {
     LOG_INFO << "Parsing arguments...";
     std::vector<std::string> files;
     std::optional<std::string> outDir;
@@ -87,42 +82,42 @@ CommandLineHandler::parseArguments(
         }
 
         switch (result) {
-        case '?':
-            LOG_ERROR << "Invalid Option (argument)\n";
-            CommandLineHandler::printHelp();
+            case '?':
+                LOG_ERROR << "Invalid Option (argument)\n";
+                CommandLineHandler::printHelp();
 
-        case 'h':
-            LOG_INFO << "Help option detected";
-            CommandLineHandler::printHelp();
+            case 'h':
+                LOG_INFO << "Help option detected";
+                CommandLineHandler::printHelp();
 
-        case 'v':
-            LOG_INFO << "Version option detected";
-            CommandLineHandler::printVersion();
+            case 'v':
+                LOG_INFO << "Version option detected";
+                CommandLineHandler::printVersion();
 
-        case 'c':
-            LOG_INFO << "Credit option detected";
-            CommandLineHandler::printCredits();
+            case 'c':
+                LOG_INFO << "Credit option detected";
+                CommandLineHandler::printCredits();
 
-        case 'o':
-            LOG_INFO << "Output option detected";
-            outDir = optarg;
-            break;
+            case 'o':
+                LOG_INFO << "Output option detected";
+                outDir = optarg;
+                break;
 
-        case 0:
-            LOG_INFO << "Long option without short version detected";
-            longOption = options[optIndex];
-            LOG_INFO << "Option: " << longOption.name << " given";
+            case 0:
+                LOG_INFO << "Long option without short version detected";
+                longOption = options[optIndex];
+                LOG_INFO << "Option: " << longOption.name << " given";
 
-            if (strcmp(longOption.name, "verbose") == 0) {
-                logging::setVerboseMode(true);
-                LOG_INFO << "Verbose mode activated";
-            }
+                if (strcmp(longOption.name, "verbose") == 0) {
+                    logging::setVerboseMode(true);
+                    LOG_INFO << "Verbose mode activated";
+                }
 
-            break;
+                break;
 
-        default:
-            LOG_ERROR << "Default case for options reached!";
-            break;
+            default:
+                LOG_ERROR << "Default case for options reached!";
+                break;
         }
     }
 

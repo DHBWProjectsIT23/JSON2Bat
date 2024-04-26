@@ -27,7 +27,7 @@
  * @see FileData
  */
 class BatchCreator {
-public:
+  public:
     /**
      * @brief Initializes the BatchCreator
      * @details
@@ -47,7 +47,7 @@ public:
         return dataStream;
     }
 
-private:
+  private:
     std::shared_ptr<std::stringstream>
     dataStream; /** < stringstream for the batch file */
 
@@ -60,7 +60,7 @@ private:
      * file.
      *
      */
-    void createBatch();
+    void createBatch() const;
 
     /**
      * @brief Wirtes the start of the batch file

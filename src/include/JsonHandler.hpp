@@ -45,7 +45,7 @@ namespace parsing {
  * @see https://github.com/open-source-parsers/jsoncpp
  */
 class JsonHandler {
-public:
+  public:
     /**
      * @brief Constructor without arguments
      * @details
@@ -74,7 +74,7 @@ public:
      */
     std::shared_ptr<FileData> getFileData();
 
-private:
+  private:
     /**
      * @brief Parses the given json file
      * @details

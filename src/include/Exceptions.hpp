@@ -4,6 +4,10 @@
  * @date 2024-04-26
  * @version 0.2.2
  * @brief Contains all the custom exceptions used in the project.
+ * @details
+ * The error handling within this project is exception based.
+ * This allows us to throw custom exceptions throughout any part
+ * of the process and allow us to deal with them when necessary.
  *
  * @copyright See LICENSE file
  */
@@ -29,7 +33,7 @@ namespace exceptions {
  * @see std::exception
  */
 class CustomException : public std::exception {
-public:
+  public:
     [[nodiscard]] const char* what() const noexcept override {
         return "Base Exception";
     }
@@ -40,11 +44,11 @@ public:
  * @brief Exception for syntax errors within the json file.
  */
 class ParsingException : public CustomException {
-private:
+  private:
     const std::string file;
     std::string message;
 
-public:
+  public:
     explicit ParsingException(const std::string &file) : file(file) {
         /**
          * @note I planned to use std::format, however it seems that the
@@ -68,11 +72,11 @@ public:
  * @brief Exception for an already exisiting outputfile
  */
 class FileExistsException : public CustomException {
-private:
+  private:
     const std::string file;
     std::string message;
 
-public:
+  public:
     explicit FileExistsException(const std::string &file) : file(file) {
         /**
          * @note I planned to use std::format, however it seems that the
@@ -95,11 +99,11 @@ public:
  * @brief Exception for an ivalid (usually empty) value field
  */
 class InvalidValueException : public CustomException {
-private:
+  private:
     const std::string key;
     std::string message;
 
-public:
+  public:
     InvalidValueException(const std::string &key, const std::string &issue)
         : key(key) {
         /**
@@ -129,12 +133,12 @@ public:
  * @see parsing::KeyValidator::validEntryKeys
  */
 class InvalidKeyException : public CustomException {
-private:
+  private:
     std::string message = "Invalid key found!";
 
-public:
+  public:
     explicit InvalidKeyException(
-        const std::vector<std::tuple<int, std::string>> &keys) {
+                const std::vector<std::tuple<int, std::string>> &keys) {
         LOG_INFO << "InvalidKeyException: " << message;
 
         for (const auto &[line, key] : keys) {
@@ -156,11 +160,11 @@ public:
  * the line of the invalid type.
  */
 class InvalidTypeException : public CustomException {
-private:
+  private:
     const std::string type;
     std::string message;
 
-public:
+  public:
     InvalidTypeException(const std::string &type, int line) : type(type) {
         /**
          * @note I planned to use std::format, however it seems that the
@@ -185,12 +189,12 @@ public:
  * from an entry. It also prints the type and which key it is missing.
  */
 class MissingKeyException : public CustomException {
-private:
+  private:
     std::string message;
     std::string type;
     std::string key;
 
-public:
+  public:
     MissingKeyException(const std::string &key, const std::string &type)
         : type(type), key(key) {
         /**
@@ -215,10 +219,10 @@ public:
  * This exception is thrown, when an entry is missing it's "type" key.
  */
 class MissingTypeException : public CustomException {
-private:
+  private:
     std::string message = "Missing \"type\" key for at least one entry!";
 
-public:
+  public:
     MissingTypeException() {
         LOG_INFO << "MissingTypeException: " << message;
     }
@@ -232,10 +236,10 @@ public:
  * @brief Exception for when the application reaches code it shouldn't reach
  */
 class UnreachableCodeException : public CustomException {
-private:
+  private:
     std::string message;
 
-public:
+  public:
     explicit UnreachableCodeException(const std::string &message)
         : message(message) {
         OUTPUT << "This exception happened due to a bug in the application!\n"
@@ -253,11 +257,10 @@ public:
  * @brief Exception for when a file can't be opened
  */
 class FailedToOpenFileException : public CustomException {
-private:
+  private:
     std::string message;
 
-    /** @todo Documentation*/
-public:
+  public:
     explicit FailedToOpenFileException(const std::string &file) {
         message = "Failed to open file: " + file;
         LOG_INFO << "FailedToOpenFileException: " << message;
@@ -272,11 +275,10 @@ public:
  * @brief Exception for when a directory does not exist
  */
 class NoSuchDirException : public CustomException {
-private:
+  private:
     std::string message;
 
-    /** @todo Documentation*/
-public:
+  public:
     explicit NoSuchDirException(const std::string &dir) {
         message = "No such directory: " + dir;
         LOG_INFO << "NoSuchDirException: " << message;
