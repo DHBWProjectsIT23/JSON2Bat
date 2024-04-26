@@ -48,7 +48,7 @@ Simon Blum
 \end{DoxySeeAlso}
 
 
-Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{CommandLineHandler_8hpp_source}{Command\+Line\+Handler.\+hpp}}.
+Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{CommandLineHandler_8hpp_source}{Command\+Line\+Handler.\+hpp}}.
 
 
 
@@ -64,7 +64,7 @@ Definition at line \mbox{\hyperlink{CommandLineHandler_8hpp_source_l00053}{53}} 
 The Constructor of the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class. 
 
 \begin{DoxyNote}{Note}
-As all functions are static it should not be used and as such is private. 
+As all functions are static it should not be used and as such is deleted. 
 \end{DoxyNote}
 \Hypertarget{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}\label{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce} 
 \index{cli::CommandLineHandler@{cli::CommandLineHandler}!````~CommandLineHandler@{\texorpdfstring{$\sim$}{\string~}CommandLineHandler}}
@@ -77,7 +77,7 @@ As all functions are static it should not be used and as such is private.
 The Destructor of the \doxylink{classcli_1_1CommandLineHandler}{Command\+Line\+Handler} Class. 
 
 \begin{DoxyNote}{Note}
-As all functions are static it should not be used and as such is private. 
+As all functions are static it should not be used and as such is deleted. 
 \end{DoxyNote}
 
 
@@ -92,30 +92,25 @@ As all functions are static it should not be used and as such is private.
 
 Parses the Command Line Arguments. 
 
-This function uses the "{}getopt.\+h"{} library to parse all options given and then returns all files which are given as arguments. 
+This function uses the "{}getopt.\+h"{} library to parse all options given and then returns all files which are given as arguments.
+
+
 \begin{DoxyParams}{Parameters}
 {\em argc} & The number of arguments given \\
 \hline
-{\em argv} & The arguments given \\
+{\em argv} & The arguments given\\
 \hline
 \end{DoxyParams}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em std\+::logic\+\_\+error} & \\
-\hline
-\end{DoxyExceptions}
 \begin{DoxyReturn}{Returns}
-Returns a vector of strings containing all filenames.
+Returns a tuple containing the output directory and the files 
 \end{DoxyReturn}
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Update documentation \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00050}{print\+Credits()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{print\+Help()}}, and \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00044}{print\+Version()}}.
+References \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00052}{print\+Credits()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{print\+Help()}}, and \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00045}{print\+Version()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -143,18 +138,16 @@ Here is the caller graph for this function\+:
 
 Prints the credits message. 
 
-Prints the credits message when called.
-
 \begin{DoxyNote}{Note}
 This function ends the application. 
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{config_8hpp_source_l00032}{config\+::\+AUTHORS}}, \mbox{\hyperlink{config_8hpp_source_l00030}{config\+::\+DESCRIPTION}}, \mbox{\hyperlink{config_8hpp_source_l00034}{config\+::\+HOMEPAGE\+\_\+\+URL}}, \mbox{\hyperlink{config_8hpp_source_l00027}{config\+::\+MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00028}{config\+::\+MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00029}{config\+::\+PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00031}{config\+::\+PROJECT\+\_\+\+NAME}}.
+References \mbox{\hyperlink{config_8hpp_source_l00034}{config\+::\+AUTHORS}}, \mbox{\hyperlink{config_8hpp_source_l00032}{config\+::\+DESCRIPTION}}, \mbox{\hyperlink{config_8hpp_source_l00036}{config\+::\+HOMEPAGE\+\_\+\+URL}}, \mbox{\hyperlink{config_8hpp_source_l00029}{config\+::\+MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00030}{config\+::\+MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00031}{config\+::\+PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00033}{config\+::\+PROJECT\+\_\+\+NAME}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -174,8 +167,6 @@ Here is the caller graph for this function\+:
 
 Prints the help message. 
 
-Prints the help message when called.
-
 \begin{DoxyNote}{Note}
 This function ends the application. 
 \end{DoxyNote}
@@ -185,7 +176,7 @@ Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{22}} 
 
 
 
-References \mbox{\hyperlink{config_8hpp_source_l00026}{config\+::\+EXECUTABLE\+\_\+\+NAME}}.
+References \mbox{\hyperlink{config_8hpp_source_l00028}{config\+::\+EXECUTABLE\+\_\+\+NAME}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -205,18 +196,16 @@ Here is the caller graph for this function\+:
 
 Prints the version message. 
 
-Prints the version message when called.
-
 \begin{DoxyNote}{Note}
 This function ends the application. 
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
+Definition at line \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{CommandLineHandler_8cpp_source}{Command\+Line\+Handler.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{config_8hpp_source_l00027}{config\+::\+MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00028}{config\+::\+MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00029}{config\+::\+PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00031}{config\+::\+PROJECT\+\_\+\+NAME}}.
+References \mbox{\hyperlink{config_8hpp_source_l00029}{config\+::\+MAJOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00030}{config\+::\+MINOR\+\_\+\+VERSION}}, \mbox{\hyperlink{config_8hpp_source_l00031}{config\+::\+PATCH\+\_\+\+VERSION}}, and \mbox{\hyperlink{config_8hpp_source_l00033}{config\+::\+PROJECT\+\_\+\+NAME}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak

@@ -1,8 +1,9 @@
-.TH "exceptions::FailedToOpenFileException" 3 "Fri Apr 26 2024 10:00:36" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "exceptions::FailedToOpenFileException" 3 "Fri Apr 26 2024 12:07:50" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-exceptions::FailedToOpenFileException
+exceptions::FailedToOpenFileException \- Exception for when a file can't be opened\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -36,7 +37,9 @@ Public Member Functions inherited from \fBexceptions::CustomException\fP
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line \fB246\fP of file \fBExceptions\&.hpp\fP\&.
+Exception for when a file can't be opened\&. 
+.PP
+Definition at line \fB255\fP of file \fBExceptions\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "exceptions::FailedToOpenFileException::FailedToOpenFileException (const std::string & file)\fC [inline]\fP, \fC [explicit]\fP"
@@ -49,7 +52,7 @@ Documentation
 .PP
 
 .PP
-Definition at line \fB252\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB261\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP\&.
 .SH "Member Function Documentation"
@@ -57,7 +60,7 @@ References \fBmessage\fP\&.
 .SS "const char * exceptions::FailedToOpenFileException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
 
 .PP
-Definition at line \fB256\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB265\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP\&.
 .SH "Member Data Documentation"
@@ -65,7 +68,7 @@ References \fBmessage\fP\&.
 .SS "std::string exceptions::FailedToOpenFileException::message\fC [private]\fP"
 
 .PP
-Definition at line \fB248\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB257\fP of file \fBExceptions\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

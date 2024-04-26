@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -99,41 +99,29 @@ $(document).ready(function(){initNavTree('d1/d03/BatchCreator_8hpp.html','../../
 </div><!--header-->
 <div class="contents">
 
-<p>Creates batch file.  
+<p>Contains the <a class="el" href="../../da/d1c/classBatchCreator.html" title="Creates a batch file from a FileData obeject.">BatchCreator</a> class.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d0/de1/FileData_8hpp_source.html">FileData.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d8/d7b/JsonHandler_8hpp_source.html">JsonHandler.hpp</a>&quot;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BatchCreator.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d34/BatchCreator_8hpp__incl.png" border="0" usemap="#asrc_2include_2BatchCreator_8hpp" alt=""/></div>
 <map name="asrc_2include_2BatchCreator_8hpp" id="asrc_2include_2BatchCreator_8hpp">
-<area shape="rect" title="Creates batch file." alt="" coords="268,5,456,31"/>
-<area shape="rect" href="../../d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="118,153,212,178"/>
-<area shape="poly" title=" " alt="" coords="327,34,281,53,236,81,206,110,182,141,178,138,202,107,233,77,279,49,324,29"/>
-<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="246,79,364,105"/>
-<area shape="poly" title=" " alt="" coords="355,33,326,68,322,65,351,30"/>
-<area shape="rect" title=" " alt="" coords="388,79,454,105"/>
-<area shape="poly" title=" " alt="" coords="374,30,403,65,399,69,370,33"/>
-<area shape="rect" title=" " alt="" coords="477,79,546,105"/>
-<area shape="poly" title=" " alt="" coords="389,29,474,70,471,74,386,34"/>
-<area shape="rect" title=" " alt="" coords="5,226,66,252"/>
-<area shape="poly" title=" " alt="" coords="144,181,72,221,70,216,142,177"/>
-<area shape="rect" title=" " alt="" coords="90,226,157,252"/>
-<area shape="poly" title=" " alt="" coords="160,180,140,214,136,211,156,177"/>
-<area shape="rect" title=" " alt="" coords="181,226,234,252"/>
-<area shape="poly" title=" " alt="" coords="174,177,195,211,190,214,170,180"/>
-<area shape="rect" title=" " alt="" coords="259,226,316,252"/>
-<area shape="poly" title=" " alt="" coords="187,177,255,216,253,221,184,181"/>
-<area shape="poly" title=" " alt="" coords="282,108,203,148,201,143,280,103"/>
-<area shape="rect" title=" " alt="" coords="235,153,375,178"/>
-<area shape="poly" title=" " alt="" coords="308,105,308,137,302,137,302,105"/>
-<area shape="rect" title=" " alt="" coords="398,153,502,178"/>
-<area shape="poly" title=" " alt="" coords="331,103,413,143,411,148,328,108"/>
-<area shape="rect" title=" " alt="" coords="526,153,593,178"/>
-<area shape="poly" title=" " alt="" coords="349,103,512,148,510,153,347,108"/>
+<area shape="rect" title="Contains the BatchCreator class." alt="" coords="132,5,321,31"/>
+<area shape="rect" href="../../d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="76,79,169,105"/>
+<area shape="poly" title=" " alt="" coords="210,34,154,72,151,68,207,29"/>
+<area shape="rect" title=" " alt="" coords="193,79,260,105"/>
+<area shape="poly" title=" " alt="" coords="229,31,229,63,224,63,224,31"/>
+<area shape="rect" title=" " alt="" coords="284,79,353,105"/>
+<area shape="poly" title=" " alt="" coords="244,29,293,67,290,72,240,34"/>
+<area shape="rect" title=" " alt="" coords="5,153,72,178"/>
+<area shape="poly" title=" " alt="" coords="110,107,66,144,63,140,107,103"/>
+<area shape="rect" title=" " alt="" coords="96,153,149,178"/>
+<area shape="poly" title=" " alt="" coords="125,105,125,137,120,137,120,105"/>
+<area shape="rect" title=" " alt="" coords="174,153,231,178"/>
+<area shape="poly" title=" " alt="" coords="138,103,180,140,176,144,134,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -141,10 +129,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d53/BatchCreator_8hpp__dep__incl.png" border="0" usemap="#asrc_2include_2BatchCreator_8hppdep" alt=""/></div>
 <map name="asrc_2include_2BatchCreator_8hppdep" id="asrc_2include_2BatchCreator_8hppdep">
-<area shape="rect" title="Creates batch file." alt="" coords="43,5,231,31"/>
+<area shape="rect" title="Contains the BatchCreator class." alt="" coords="43,5,231,31"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html" title="Contains the main function." alt="" coords="5,79,101,105"/>
 <area shape="poly" title=" " alt="" coords="113,43,69,81,65,77,110,39"/>
-<area shape="rect" href="../../dc/d85/BatchCreator_8cpp.html" title=" " alt="" coords="124,79,318,105"/>
+<area shape="rect" href="../../dc/d85/BatchCreator_8cpp.html" title="Contains the implementation of the BatchCreator class." alt="" coords="124,79,318,105"/>
 <area shape="poly" title=" " alt="" coords="164,39,209,77,205,81,161,43"/>
 </map>
 </div>
@@ -154,20 +142,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1c/classBatchCreator.html">BatchCreator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt Batch Datei.  <a href="../../da/d1c/classBatchCreator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a batch file from a FileData obeject.  <a href="../../da/d1c/classBatchCreator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Creates batch file. </p>
+<div class="textblock"><p>Contains the <a class="el" href="../../da/d1c/classBatchCreator.html" title="Creates a batch file from a FileData obeject.">BatchCreator</a> class. </p>
 <dl class="section author"><dt>Author</dt><dd>Maximilian Rodler </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>22.04.2024 </dd></dl>
-<dl class="section version"><dt>Version</dt><dd></dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>Documentation in english </dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Maximilian Rodler </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>22.04.2024 </dd></dl>
-<dl class="section version"><dt>Version</dt><dd></dd></dl>
-<p>Creates batch file from Arguments in JSON</p>
+<dl class="section date"><dt>Date</dt><dd>2024-04-22 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.2.1 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../da/d1c/classBatchCreator.html" title="Creates a batch file from a FileData obeject.">BatchCreator</a></dd>
+<dd>
+<a class="el" href="../../dc/d85/BatchCreator_8cpp.html" title="Contains the implementation of the BatchCreator class.">src/sources/BatchCreator.cpp</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d1/d03/BatchCreator_8hpp_source.html">BatchCreator.hpp</a>.</p>
@@ -177,7 +162,7 @@ Classes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d1/d03/BatchCreator_8hpp.html">BatchCreator.hpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 10:00:36 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 12:07:50 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

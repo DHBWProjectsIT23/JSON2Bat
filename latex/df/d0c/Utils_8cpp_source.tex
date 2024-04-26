@@ -13,76 +13,83 @@
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00023}00023\ }
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00024}00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceutilities}{utilities}}\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00025}\mbox{\hyperlink{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0}{Utils::setupEasyLogging}}(\textcolor{keyword}{const}\ std::string\ \&configFile)\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00026}00026\ \ \ el::Configurations\ conf(configFile);}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00027}00027\ \ \ el::Loggers::reconfigureAllLoggers(conf);}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00028}00028\ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Running\ "{}}\ <<\ \mbox{\hyperlink{namespaceconfig_a8accb7729aee7de0de898b743634c86c}{config::PROJECT\_NAME}}\ <<\ \textcolor{stringliteral}{"{}\ v"{}}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_ae2550a38c9e5b812cedd2136c14fa0a2}{config::MAJOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{namespaceconfig_acbd33eacebc6d8c4176d8320633464b9}{config::MINOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_a0c51d63e9e00bbad2796a5d33be13b3c}{config::PATCH\_VERSION}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00031}00031\ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}For\ more\ Information\ checkout\ "{}}\ <<\ \mbox{\hyperlink{namespaceconfig_af79d387019fba021d74f7819d79a612f}{config::HOMEPAGE\_URL}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00032}00032\ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}EasyLogging\ has\ been\ setup!"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00033}00033\ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00034}\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{00034}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{Utils::askToContinue}}(\textcolor{keyword}{const}\ std::string\ \&prompt)\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00035}00035\ \ \ std::string\ userInput;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00036}00036\ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Asking\ for\ user\ Confirmation\ to\ continue..."{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00037}00037\ \ \ OUTPUT\ <<\ cli::BOLD\ <<\ prompt\ <<\ cli::RESET;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00039}00039\ \ \ \textcolor{keywordflow}{do}\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00040}00040\ \ \ \ \ std::cin\ >>\ userInput;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00041}00041\ \ \ \ \ std::ranges::transform(userInput,\ userInput.begin(),\ ::tolower);}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ !=\ \textcolor{stringliteral}{"{}y"{}}\ \&\&\ userInput\ !=\ \textcolor{stringliteral}{"{}yes"{}}\ \&\&\ userInput\ !=\ \textcolor{stringliteral}{"{}n"{}}\ \&\&}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ userInput\ !=\ \textcolor{stringliteral}{"{}no"{}})\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00045}00045\ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Wrong\ user\ input!"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00046}00046\ \ \ \ \ \ \ OUTPUT\ <<\ cli::ITALIC\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ Y/Yes\ or\ N/No!\(\backslash\)n"{}}\ <<\ cli::RESET;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00047}00047\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00048}00048\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00051}00051\ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00053}00053\ \ \ \textcolor{keywordflow}{return}\ userInput\ ==\ \textcolor{stringliteral}{"{}y"{}}\ ||\ userInput\ ==\ \textcolor{stringliteral}{"{}yes"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00054}00054\ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00055}\mbox{\hyperlink{classutilities_1_1Utils_abf18cb6fd599bec6e8c55b62ee178640}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutilities_1_1Utils_abf18cb6fd599bec6e8c55b62ee178640}{Utils::checkConfigFile}}(\textcolor{keyword}{const}\ std::string\ \&configFile)\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00056}00056\ \ \ \textcolor{keywordflow}{if}\ (!std::filesystem::is\_regular\_file(configFile))\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00057}00057\ \ \ \ \ std::cerr\ <<\ cli::RED\ <<\ cli::BOLD}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Fatal:\ Easylogging\ configuration\ file\ not\ found\ at:\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ cli::RESET\ <<\ cli::ITALIC\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)t\(\backslash\)"{}"{}}\ <<\ configFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)n\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ cli::RESET;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00061}00061\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Aborting...\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00062}00062\ \ \ \ \ exit(1);}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00063}00063\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00064}00064\ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00065}\mbox{\hyperlink{classutilities_1_1Utils_af6c551d7c70f43171ab044af7451aee4}{00065}}\ std::string\ \&\mbox{\hyperlink{classutilities_1_1Utils_af6c551d7c70f43171ab044af7451aee4}{Utils::checkDirectory}}(std::string\ \&directory)\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00066}00066\ \ \ \textcolor{keywordflow}{if}\ (!directory.empty()\ \&\&\ directory.back()\ !=\ \textcolor{charliteral}{'/'}\ \&\&}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00067}00067\ \ \ \ \ \ \ directory.back()\ !=\ \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00068}00068\ \ \ \ \ directory\ +=\ \textcolor{charliteral}{'/'};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00069}00069\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00071}00071\ \ \ \textcolor{keywordflow}{if}\ (!std::filesystem::exists(directory))\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classexceptions_1_1NoSuchDirException}{exceptions::NoSuchDirException}}(directory);}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00073}00073\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00074}00074\ \ \ \textcolor{keywordflow}{return}\ directory;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00075}00075\ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00076}\mbox{\hyperlink{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}{00076}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}{Utils::handleParseException}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions::CustomException}}\ \&e,}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>::iterator\ \&file,}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ \&files)\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00079}00079\ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nThere\ has\ been\ a\ error\ while\ trying\ to\ parse\ \(\backslash\)"{}"{}}\ <<\ *file}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}:\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00081}00081\ \ \ LOG\_ERROR\ <<\ e.\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}}();}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00083}00083\ \ \ \textcolor{keywordflow}{if}\ (std::next(file)\ !=\ files.end()\ \&\&}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00084}00084\ \ \ \ \ \ \ !\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{utilities::Utils::askToContinue}}(}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Do\ you\ want\ to\ continue\ with\ the\ other\ files?\ (y/n)\ "{}}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}))\ \{}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00087}00087\ \ \ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}Aborting..."{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00088}00088\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Application\ ended\ by\ user\ Input"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00090}00090\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00091}00091\ \ \ std::cout\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00092}00092\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00093}00093\ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00095}00095\ \}\ \textcolor{comment}{//\ namespace\ utilities}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00025}\mbox{\hyperlink{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutilities_1_1Utils_aba875f8f5a9d060b28aabd965d3a5eb0}{Utils::setupEasyLogging}}(\textcolor{keyword}{const}\ std::string\ \&configFile)}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00027}00027\ \ \ \ \ el::Configurations\ conf(configFile);}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00028}00028\ \ \ \ \ el::Loggers::reconfigureAllLoggers(conf);}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00029}00029\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Running\ "{}}\ <<\ \mbox{\hyperlink{namespaceconfig_a8accb7729aee7de0de898b743634c86c}{config::PROJECT\_NAME}}\ <<\ \textcolor{stringliteral}{"{}\ v"{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_ae2550a38c9e5b812cedd2136c14fa0a2}{config::MAJOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{namespaceconfig_acbd33eacebc6d8c4176d8320633464b9}{config::MINOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_a0c51d63e9e00bbad2796a5d33be13b3c}{config::PATCH\_VERSION}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00032}00032\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}For\ more\ Information\ checkout\ "{}}\ <<\ \mbox{\hyperlink{namespaceconfig_af79d387019fba021d74f7819d79a612f}{config::HOMEPAGE\_URL}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00033}00033\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}EasyLogging\ has\ been\ setup!"{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00035}\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{00035}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{Utils::askToContinue}}(\textcolor{keyword}{const}\ std::string\ \&prompt)}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00037}00037\ \ \ \ \ std::string\ userInput;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00038}00038\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Asking\ for\ user\ Confirmation\ to\ continue..."{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00039}00039\ \ \ \ \ OUTPUT\ <<\ cli::BOLD\ <<\ prompt\ <<\ cli::RESET;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ std::cin\ >>\ userInput;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ std::ranges::transform(userInput,\ userInput.begin(),\ ::tolower);}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ !=\ \textcolor{stringliteral}{"{}y"{}}\ \&\&\ userInput\ !=\ \textcolor{stringliteral}{"{}yes"{}}\ \&\&\ userInput\ !=\ \textcolor{stringliteral}{"{}n"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ userInput\ !=\ \textcolor{stringliteral}{"{}no"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Wrong\ user\ input!"{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ OUTPUT\ <<\ cli::ITALIC\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ Y/Yes\ or\ N/No!\(\backslash\)n"{}}\ <<\ cli::RESET;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00053}00053\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ userInput\ ==\ \textcolor{stringliteral}{"{}y"{}}\ ||\ userInput\ ==\ \textcolor{stringliteral}{"{}yes"{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00057}\mbox{\hyperlink{classutilities_1_1Utils_abf18cb6fd599bec6e8c55b62ee178640}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutilities_1_1Utils_abf18cb6fd599bec6e8c55b62ee178640}{Utils::checkConfigFile}}(\textcolor{keyword}{const}\ std::string\ \&configFile)}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::filesystem::is\_regular\_file(configFile))\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ std::cerr\ <<\ cli::RED\ <<\ cli::BOLD}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Fatal:\ Easylogging\ configuration\ file\ not\ found\ at:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ cli::RESET\ <<\ cli::ITALIC\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)t\(\backslash\)"{}"{}}\ <<\ configFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)n\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ cli::RESET;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Aborting...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00068}\mbox{\hyperlink{classutilities_1_1Utils_ac07ca745d24efb547beec94f1d6acc11}{00068}}\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classutilities_1_1Utils_ac07ca745d24efb547beec94f1d6acc11}{Utils::checkDirectory}}(std::string\ \&directory)}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00069}00069\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (!directory.empty()\ \&\&\ directory.back()\ !=\ \textcolor{charliteral}{'/'}\ \&\&}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ directory.back()\ !=\ \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ directory\ +=\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::filesystem::exists(directory))\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classexceptions_1_1NoSuchDirException}{exceptions::NoSuchDirException}}(directory);}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ directory;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00081}\mbox{\hyperlink{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}{00081}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}{Utils::handleParseException}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions::CustomException}}\ \&e,}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>::iterator\ \&file,}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ \&files)}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00084}00084\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00085}00085\ \ \ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nThere\ has\ been\ a\ error\ while\ trying\ to\ parse\ \(\backslash\)"{}"{}}\ <<\ *file}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00087}00087\ \ \ \ \ LOG\_ERROR\ <<\ e.\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}}();}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (std::next(file)\ !=\ files.end()\ \&\&}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ !\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{utilities::Utils::askToContinue}}(}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Do\ you\ want\ to\ continue\ with\ the\ other\ files?\ (y/n)\ "{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}Aborting..."{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Application\ ended\ by\ user\ Input"{}};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00098}00098\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00102}00102\ \}\ \textcolor{comment}{//\ namespace\ utilities}}
 
 \end{DoxyCode}

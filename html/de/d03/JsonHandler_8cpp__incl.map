@@ -1,36 +1,36 @@
 <map id="src/sources/JsonHandler.cpp" name="src/sources/JsonHandler.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="326,5,516,31"/>
-<area shape="rect" id="Node000002" href="$d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="250,79,368,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,34,342,73,339,68,400,29"/>
-<area shape="rect" id="Node000003" href="$d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="30,153,124,178"/>
-<area shape="poly" id="edge13_Node000001_Node000003" title=" " alt="" coords="377,34,311,55,239,81,170,115,111,147,108,142,167,110,237,77,310,50,376,29"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="367,153,507,178"/>
-<area shape="poly" id="edge19_Node000001_Node000008" title=" " alt="" coords="425,31,437,137,431,138,419,32"/>
-<area shape="rect" id="Node000011" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="459,79,567,105"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="438,29,487,67,484,72,435,34"/>
-<area shape="rect" id="Node000012" href="$dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="663,79,781,105"/>
-<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="473,29,657,72,656,78,472,34"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,108,131,150,130,145,269,103"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="332,103,403,142,400,147,329,108"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="147,153,252,178"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="292,107,232,146,229,142,289,103"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="275,153,343,178"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="312,105,312,137,306,137,306,105"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,226,66,252"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="72,180,52,214,48,211,68,177"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="554,226,621,252"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="124,174,136,176,361,208,539,230,539,235,361,214,135,181,123,179"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="344,226,397,252"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="125,176,329,225,328,230,123,181"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="90,226,147,252"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="86,177,106,211,101,214,81,180"/>
-<area shape="poly" id="edge12_Node000011_Node000006" title=" " alt="" coords="520,104,529,140,528,160,520,180,498,203,471,219,441,230,413,236,412,231,439,225,468,214,495,199,516,177,523,159,523,140,515,105"/>
-<area shape="poly" id="edge11_Node000011_Node000008" title=" " alt="" coords="502,107,462,144,459,140,498,103"/>
-<area shape="poly" id="edge16_Node000012_Node000005" title=" " alt="" coords="724,105,718,141,710,161,699,180,670,206,636,224,634,219,666,202,695,177,706,159,713,139,719,104"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="760,153,871,178"/>
-<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="740,103,789,141,786,145,736,107"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="895,153,1005,178"/>
-<area shape="poly" id="edge17_Node000012_Node000014" title=" " alt="" coords="762,103,897,145,896,150,760,108"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="581,153,685,178"/>
-<area shape="poly" id="edge18_Node000012_Node000015" title=" " alt="" coords="709,107,661,145,658,141,705,103"/>
+<area shape="rect" id="Node000001" title="Implementation of the JsonHandler class." alt="" coords="317,5,507,31"/>
+<area shape="rect" id="Node000002" href="$d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="225,79,343,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,34,320,73,318,69,389,29"/>
+<area shape="rect" id="Node000003" href="$d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="5,153,99,178"/>
+<area shape="poly" id="edge13_Node000001_Node000003" title=" " alt="" coords="363,34,292,54,214,81,145,114,86,147,83,142,142,109,212,77,290,49,361,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="342,153,482,178"/>
+<area shape="poly" id="edge19_Node000001_Node000007" title=" " alt="" coords="415,31,415,137,409,137,409,31"/>
+<area shape="rect" id="Node000010" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="458,79,566,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="431,29,484,67,481,72,427,34"/>
+<area shape="rect" id="Node000012" href="$dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="786,79,905,105"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="486,29,771,76,770,81,486,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,108,107,150,105,145,244,103"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="307,103,378,142,376,147,304,108"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="123,153,227,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="267,107,207,146,204,142,264,103"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="250,153,318,178"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="287,105,287,137,281,137,281,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="639,226,705,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="100,174,111,176,401,211,623,231,623,237,401,217,110,181,99,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="299,226,352,252"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="99,176,285,225,283,230,98,181"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="23,226,81,252"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="55,179,55,211,49,211,49,179"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="515,105,513,141,507,162,495,180,467,204,434,220,399,231,368,237,367,232,398,226,432,215,464,199,491,177,502,160,507,140,510,105"/>
+<area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="497,107,443,145,440,141,493,103"/>
+<area shape="rect" id="Node000011" href="$d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="556,153,636,178"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="528,103,572,140,569,144,525,107"/>
+<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="867,103,888,118,907,137,917,158,917,169,911,180,899,191,880,201,830,216,721,235,720,230,829,211,878,196,896,187,907,177,912,168,912,159,902,140,884,122,864,107"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="972,153,1084,178"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="877,103,984,144,982,149,875,108"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="660,153,770,178"/>
+<area shape="poly" id="edge17_Node000012_Node000014" title=" " alt="" coords="824,108,751,147,749,143,822,103"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="794,153,897,178"/>
+<area shape="poly" id="edge18_Node000012_Node000015" title=" " alt="" coords="848,105,848,137,843,137,843,105"/>
 </map>

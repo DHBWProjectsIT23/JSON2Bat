@@ -1,7 +1,7 @@
 <map id="src/include/KeyValidator.hpp" name="src/include/KeyValidator.hpp">
 <area shape="rect" id="Node000001" title="This file contains the KeyValidator class." alt="" coords="115,5,300,31"/>
-<area shape="rect" id="Node000002" href="$d0/d2b/JsonHandler_8cpp.html" title=" " alt="" coords="5,79,196,105"/>
+<area shape="rect" id="Node000002" href="$d0/d2b/JsonHandler_8cpp.html" title="Implementation of the JsonHandler class." alt="" coords="5,79,196,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,42,120,81,117,76,175,38"/>
-<area shape="rect" id="Node000003" href="$d4/d9d/KeyValidator_8cpp.html" title=" " alt="" coords="220,79,410,105"/>
+<area shape="rect" id="Node000003" href="$d4/d9d/KeyValidator_8cpp.html" title="Implementation for the KeyValidator class." alt="" coords="220,79,410,105"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,38,298,76,295,81,237,42"/>
 </map>

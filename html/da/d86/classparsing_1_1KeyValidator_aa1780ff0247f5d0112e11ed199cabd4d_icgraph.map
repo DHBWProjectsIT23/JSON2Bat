@@ -1,5 +1,5 @@
 <map id="parsing::KeyValidator::validateEntries" name="parsing::KeyValidator::validateEntries">
-<area shape="rect" id="Node000001" title="Validates that an entries &#39;type&#39; key is valid." alt="" coords="196,5,338,46"/>
+<area shape="rect" id="Node000001" title="Validates that keys within the entries array are valid." alt="" coords="196,5,338,46"/>
 <area shape="rect" id="Node000002" href="$da/d86/classparsing_1_1KeyValidator.html#a8a3ffe788064f6b32be35870aeeb792c" title="Validate keys off a Json::Value object." alt="" coords="5,5,148,46"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,28,148,28,148,23,180,23"/>
 </map>

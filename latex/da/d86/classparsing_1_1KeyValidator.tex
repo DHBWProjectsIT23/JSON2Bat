@@ -27,12 +27,12 @@ std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{cla
 void \mbox{\hyperlink{classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e}{validate\+Types}} (const std\+::string \&filename, const Json\+::\+Value \&entry, const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&entry\+Keys)
 \begin{DoxyCompactList}\small\item\em Validates types from the entries array. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::tuple$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d}{validate\+Entries}} (const std\+::string \&filename, const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&entry\+Keys) const
-\begin{DoxyCompactList}\small\item\em Validates that an entries \textquotesingle{}type\textquotesingle{} key is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Validates that keys within the entries array are valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static std\+::optional$<$ int $>$ \mbox{\hyperlink{classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e}{get\+Unknown\+Key\+Line}} (const std\+::string \&filename, const std\+::string \&wrong\+Key)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the line of an unknown key. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,9 +47,9 @@ std\+::unordered\+\_\+map$<$ std\+::string\+\_\+view, std\+::vector$<$ std\+::st
 \doxysubsection{Detailed Description}
 Validates keys of a Json\+::\+Value object. 
 
-This class is singleton. That way when multiple files are parsed with the application, the valid\+Keys and valid\+Entry\+Keys field only have to be allocated once. 
+This class is singleton. That way when multiple files are parsed with the application, the maps for valid keys and the set for the type entries field only have to be allocated once when parsing multiple files. 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
 
 
 
@@ -69,7 +69,7 @@ Reference to the instance of this class
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -86,20 +86,24 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily std\+::optional$<$ int $>$ parsing\+::\+Key\+Validator\+::get\+Unknown\+Key\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{wrong\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
+
+Get the line of an unknown key. 
+
+This method goes through each line of the given file and checks if the line contains the given key. Returns std\+::nullopt if the file can\textquotesingle{}t be opened or the key was not found.
+
+
 \begin{DoxyParams}{Parameters}
-{\em filename} & \\
+{\em filename} & The filename which should contain the key \\
 \hline
-{\em wrong\+Key} & \\
+{\em wrong\+Key} & The key to be searched for\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+The line of the key, if it was found 
 \end{DoxyReturn}
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Documentation \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -137,7 +141,7 @@ Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00051}{51}} of fil
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00117}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00108}{valid\+Keys}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00129}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00130}{valid\+Keys}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -163,27 +167,27 @@ Here is the caller graph for this function\+:
 
 
 
-Validates that an entries \textquotesingle{}type\textquotesingle{} key is valid. 
+Validates that keys within the entries array are valid. 
+
+This mehthod goes through each of the entries, and validates, that the keys are part of the valid\+Entry\+Keys attribute.
 
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & \\
+{\em filename} & The filename from which the entries are from \\
 \hline
-{\em entry\+Keys} & \\
+{\em entry\+Keys} & The keys of the entries\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+A vector with tuples, containing the line and name of invalid entrie keys 
 \end{DoxyReturn}
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Documentation \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00117}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00110}{valid\+Entry\+Keys}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00129}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00137}{valid\+Entry\+Keys}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -217,7 +221,7 @@ This method goes through the Member\+Names of a Json\+::\+Value object and valid
 \begin{DoxyParams}{Parameters}
 {\em root} & The Json\+::\+Value object to be validated. \\
 \hline
-{\em filename} & The filename from which \textquotesingle{}root\textquotesingle{} is from. \\
+{\em filename} & The filename from which \textquotesingle{}root\textquotesingle{} is from.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -225,11 +229,11 @@ A vector with tuples, containing the line and name of invalid types.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00051}{get\+Wrong\+Keys()}}, \mbox{\hyperlink{KeyValidator_8cpp_source_l00071}{validate\+Entries()}}, and \mbox{\hyperlink{KeyValidator_8cpp_source_l00092}{validate\+Types()}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00051}{get\+Wrong\+Keys()}}, \mbox{\hyperlink{KeyValidator_8cpp_source_l00074}{validate\+Entries()}}, and \mbox{\hyperlink{KeyValidator_8cpp_source_l00096}{validate\+Types()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -249,24 +253,36 @@ Here is the call graph for this function\+:
 
 Validates types from the entries array. 
 
-Makes sure that each type has it\textquotesingle{}s according keys, needed to parse it.
+This method goes makes sure, that the type of the given entry is valid and that it contains it\textquotesingle{}s necessary keys. It will throw an exception if the type is missing, if the type is invalid or if the type is missing a key.
 
+\begin{DoxyNote}{Note}
+Unnecessary keys within a type entry, don\textquotesingle{}t cause an exception and are ignored.
+\end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
 {\em filename} & The filename from which \textquotesingle{}entry\textquotesingle{} is from \\
 \hline
-{\em entry} & \\
+{\em entry} & The entry to be validated \\
 \hline
-{\em entry\+Keys} & \\
+{\em entry\+Keys} & The keys of the entry\\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classexceptions_1_1MissingTypeException}{exceptions\+::\+Missing\+Type\+Exception}} & \\
+\hline
+{\em \doxylink{classexceptions_1_1InvalidTypeException}{exceptions\+::\+Invalid\+Type\+Exception}} & \\
+\hline
+{\em \doxylink{classexceptions_1_1MissingKeyException}{exceptions\+::\+Missing\+Key\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
 
-Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
+
+Definition at line \mbox{\hyperlink{KeyValidator_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{KeyValidator_8cpp_source}{Key\+Validator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{KeyValidator_8cpp_source_l00117}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00113}{type\+To\+Keys}}.
+References \mbox{\hyperlink{KeyValidator_8cpp_source_l00129}{get\+Unknown\+Key\+Line()}}, and \mbox{\hyperlink{KeyValidator_8hpp_source_l00144}{type\+To\+Keys}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -296,12 +312,16 @@ Here is the caller graph for this function\+:
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \{\textcolor{stringliteral}{"{}EXE"{}},\ \{\textcolor{stringliteral}{"{}command"{}}\}\},\ \{\textcolor{stringliteral}{"{}PATH"{}},\ \{\textcolor{stringliteral}{"{}path"{}}\}\},\ \{\textcolor{stringliteral}{"{}ENV"{}},\ \{\textcolor{stringliteral}{"{}key"{}},\ \textcolor{stringliteral}{"{}value"{}}\}\}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}EXE"{}},\ \{\textcolor{stringliteral}{"{}command"{}}\}\},\ \{\textcolor{stringliteral}{"{}PATH"{}},\ \{\textcolor{stringliteral}{"{}path"{}}\}\},\ \{\textcolor{stringliteral}{"{}ENV"{}},\ \{\textcolor{stringliteral}{"{}key"{}},\ \textcolor{stringliteral}{"{}value"{}}\}\}}
+\DoxyCodeLine{\ \ \ \ \}}
 
 \end{DoxyCode}
+\begin{DoxyNote}{Note}
+Changed from if/else clause within function to map in 0.\+2.\+1 
+\end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00113}{113}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00144}{144}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
 
 \Hypertarget{classparsing_1_1KeyValidator_aa4bc876b0f0e41f9ab4026174a5a3f20}\label{classparsing_1_1KeyValidator_aa4bc876b0f0e41f9ab4026174a5a3f20} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!validEntryKeys@{validEntryKeys}}
@@ -312,12 +332,16 @@ Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00113}{113}} of fi
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}type"{}},\ \textcolor{stringliteral}{"{}key"{}},\ \textcolor{stringliteral}{"{}value"{}},}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}path"{}},\ \textcolor{stringliteral}{"{}command"{}}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}path"{}},\ \textcolor{stringliteral}{"{}command"{}}}
+\DoxyCodeLine{\ \ \ \ \}}
 
 \end{DoxyCode}
+\begin{DoxyNote}{Note}
+Changed from vector to unordered\+\_\+set in 0.\+2.\+1 -\/ as this shoud improve lookup performance from O(n) to O(1) 
+\end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00137}{137}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
 
 \Hypertarget{classparsing_1_1KeyValidator_ad7b96e124aad0004e0f2273094fb2633}\label{classparsing_1_1KeyValidator_ad7b96e124aad0004e0f2273094fb2633} 
 \index{parsing::KeyValidator@{parsing::KeyValidator}!validKeys@{validKeys}}
@@ -328,12 +352,16 @@ Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00110}{110}} of fi
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}outputfile"{}},\ \textcolor{stringliteral}{"{}hideshell"{}},}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}entries"{}},\ \textcolor{stringliteral}{"{}application"{}}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}entries"{}},\ \textcolor{stringliteral}{"{}application"{}}}
+\DoxyCodeLine{\ \ \ \ \}}
 
 \end{DoxyCode}
+\begin{DoxyNote}{Note}
+Changed from vector to unordered\+\_\+set in 0.\+2.\+1 -\/ as this shoud improve lookup performance from O(n) to O(1) 
+\end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00108}{108}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
+Definition at line \mbox{\hyperlink{KeyValidator_8hpp_source_l00130}{130}} of file \mbox{\hyperlink{KeyValidator_8hpp_source}{Key\+Validator.\+hpp}}.
 
 
 

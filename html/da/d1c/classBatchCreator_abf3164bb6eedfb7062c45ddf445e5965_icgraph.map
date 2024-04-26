@@ -1,6 +1,6 @@
 <map id="BatchCreator::getDataStream" name="BatchCreator::getDataStream">
-<area shape="rect" id="Node000001" title=" " alt="" coords="225,5,415,31"/>
-<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13" title=" " alt="" coords="103,5,177,31"/>
+<area shape="rect" id="Node000001" title="Returns the stringstream." alt="" coords="225,5,415,31"/>
+<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13" title="Parses the given file and writes the output to the output directory." alt="" coords="103,5,177,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,21,178,21,178,16,210,16"/>
 <area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,5,55,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>

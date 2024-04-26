@@ -1,4 +1,4 @@
-.TH "exceptions::UnreachableCodeException" 3 "Fri Apr 26 2024 10:00:36" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "exceptions::UnreachableCodeException" 3 "Fri Apr 26 2024 12:07:50" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -39,21 +39,21 @@ Public Member Functions inherited from \fBexceptions::CustomException\fP
 .PP 
 Exception for when the application reaches code it shouldn't reach\&. 
 .PP
-Definition at line \fB232\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB234\fP of file \fBExceptions\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "exceptions::UnreachableCodeException::UnreachableCodeException (const std::string & message)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
-Definition at line \fB237\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB239\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
-References \fBmessage\fP\&.
+References \fBconfig::EXECUTABLE_NAME\fP, and \fBmessage\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "const char * exceptions::UnreachableCodeException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [noexcept]\fP"
 
 .PP
-Definition at line \fB241\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB246\fP of file \fBExceptions\&.hpp\fP\&.
 .PP
 References \fBmessage\fP\&.
 .SH "Member Data Documentation"
@@ -61,7 +61,7 @@ References \fBmessage\fP\&.
 .SS "std::string exceptions::UnreachableCodeException::message\fC [private]\fP"
 
 .PP
-Definition at line \fB234\fP of file \fBExceptions\&.hpp\fP\&.
+Definition at line \fB236\fP of file \fBExceptions\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

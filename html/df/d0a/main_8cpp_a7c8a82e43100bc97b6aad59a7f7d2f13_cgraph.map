@@ -1,6 +1,6 @@
 <map id="parseFile" name="parseFile">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,80,109"/>
-<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965" title=" " alt="" coords="128,54,318,80"/>
+<area shape="rect" id="Node000001" title="Parses the given file and writes the output to the output directory." alt="" coords="5,84,80,109"/>
+<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965" title="Returns the stringstream." alt="" coords="128,54,318,80"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,88,125,80,126,86,81,93"/>
 <area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="152,104,294,145"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="81,99,136,108,136,114,80,105"/>

@@ -1,9 +1,23 @@
 <map id="src/include/config.hpp" name="src/include/config.hpp">
-<area shape="rect" id="Node000001" title="Configures general project information." alt="" coords="175,5,321,31"/>
-<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html" title="Contains the main function." alt="" coords="5,79,101,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,39,87,81,85,76,199,34"/>
-<area shape="rect" id="Node000003" href="$dc/db7/CommandLineHandler_8cpp.html" title="Implementation for the Command Line Interface." alt="" coords="125,79,371,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,46,250,79,245,79,245,46"/>
-<area shape="rect" id="Node000004" href="$df/d0c/Utils_8cpp.html" title="Implementation for the Utils class." alt="" coords="396,79,540,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="300,34,431,76,429,81,299,39"/>
+<area shape="rect" id="Node000001" title="Configures general project information." alt="" coords="687,5,833,31"/>
+<area shape="rect" id="Node000002" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="474,79,649,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="713,39,596,81,594,76,711,34"/>
+<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html" title="Contains the main function." alt="" coords="861,226,956,252"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="798,37,828,57,860,83,889,115,912,152,918,172,919,192,914,227,909,226,913,192,912,172,907,154,885,118,856,87,824,61,795,42"/>
+<area shape="rect" id="Node000005" href="$df/d0c/Utils_8cpp.html" title="Implementation for the Utils class." alt="" coords="5,226,150,252"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="672,26,520,38,343,62,258,79,183,99,123,125,100,139,84,154,75,171,72,190,77,225,71,226,67,190,70,169,79,151,97,135,121,120,181,94,257,73,342,56,520,33,671,21"/>
+<area shape="rect" id="Node000009" href="$dc/db7/CommandLineHandler_8cpp.html" title="Implementation for the Command Line Interface." alt="" coords="996,79,1242,105"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="837,32,1058,76,1057,81,836,37"/>
+<area shape="rect" id="Node000003" href="$d7/d09/Utils_8hpp.html" title=" " alt="" coords="115,153,254,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,111,249,155,248,149,482,105"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="665,98,793,116,848,131,885,151,898,168,906,189,911,226,906,226,901,190,893,171,881,155,846,136,792,122,664,103"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="458,96,360,101,256,110,164,128,129,140,105,155,92,171,85,190,80,226,75,225,79,188,87,168,101,151,127,135,163,123,255,105,360,95,458,91"/>
+<area shape="rect" id="Node000006" href="$d2/dc5/FileData_8cpp.html" title="Implementation of the FileData class." alt="" coords="278,153,443,178"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="514,113,395,155,394,150,512,108"/>
+<area shape="rect" id="Node000007" href="$d0/d2b/JsonHandler_8cpp.html" title="Implementation of the JsonHandler class." alt="" coords="466,153,657,178"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="564,120,564,152,559,152,559,120"/>
+<area shape="rect" id="Node000008" href="$d4/d9d/KeyValidator_8cpp.html" title="Implementation for the KeyValidator class." alt="" coords="681,153,871,178"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="613,107,740,150,739,155,611,112"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="270,176,612,211,860,232,860,237,611,216,269,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="155,190,97,228,94,224,152,185"/>
 </map>

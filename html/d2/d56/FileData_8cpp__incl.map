@@ -1,19 +1,19 @@
 <map id="src/sources/FileData.cpp" name="src/sources/FileData.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="234,5,400,31"/>
-<area shape="rect" id="Node000002" href="$d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="145,79,238,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,34,227,73,225,69,294,29"/>
-<area shape="rect" id="Node000007" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="263,79,371,105"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="320,31,320,63,314,63,314,31"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="339,153,479,178"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="337,29,362,50,386,78,400,107,407,137,402,138,395,109,381,80,358,54,334,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,66,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,108,77,148,75,143,164,103"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="90,153,157,178"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="182,107,147,143,143,140,178,103"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="262,153,316,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="210,103,262,141,259,146,206,107"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="180,153,238,178"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="197,104,205,137,200,138,192,106"/>
-<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="315,106,302,139,297,137,310,104"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="334,103,383,141,380,145,331,107"/>
+<area shape="rect" id="Node000001" title="Implementation of the FileData class." alt="" coords="212,5,377,31"/>
+<area shape="rect" id="Node000002" href="$d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="100,79,193,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="271,34,187,74,184,69,268,29"/>
+<area shape="rect" id="Node000006" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="240,79,349,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="297,31,297,63,292,63,292,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="358,153,498,178"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="311,30,363,77,413,138,409,142,359,81,308,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,72,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,107,71,146,68,141,127,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="177,153,231,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="158,103,187,139,183,142,154,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="95,153,153,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="145,106,135,138,130,137,140,104"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="281,107,232,145,229,141,277,103"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="318,103,393,143,390,147,316,108"/>
+<area shape="rect" id="Node000008" href="$d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="255,153,334,178"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="297,105,297,137,292,137,292,105"/>
 </map>

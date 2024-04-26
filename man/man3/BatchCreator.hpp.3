@@ -1,17 +1,15 @@
-.TH "src/include/BatchCreator.hpp" 3 "Fri Apr 26 2024 10:00:36" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "src/include/BatchCreator.hpp" 3 "Fri Apr 26 2024 12:07:50" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-src/include/BatchCreator.hpp \- Creates batch file\&.  
+src/include/BatchCreator.hpp \- Contains the \fBBatchCreator\fP class\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 \fC#include 'FileData\&.hpp'\fP
 .br
-\fC#include 'JsonHandler\&.hpp'\fP
-.br
-\fC#include <fstream>\fP
+\fC#include <memory>\fP
 .br
 \fC#include <sstream>\fP
 .br
@@ -22,11 +20,11 @@ src/include/BatchCreator.hpp \- Creates batch file\&.
 .ti -1c
 .RI "class \fBBatchCreator\fP"
 .br
-.RI "Erstellt Batch Datei\&. "
+.RI "Creates a batch file from a FileData obeject\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Creates batch file\&. 
+Contains the \fBBatchCreator\fP class\&. 
 
 
 .PP
@@ -37,39 +35,20 @@ Maximilian Rodler
 .PP
 \fBDate\fP
 .RS 4
-22\&.04\&.2024 
+2024-04-22 
 .RE
 .PP
 \fBVersion\fP
 .RS 4
+0\&.2\&.1 
 .RE
 .PP
-\fBCopyright\fP
+\fBSee also\fP
 .RS 4
-See LICENSE file
+\fBBatchCreator\fP
+.PP
+\fBsrc/sources/BatchCreator\&.cpp\fP
 .RE
-.PP
-\fBTodo\fP
-.RS 4
-Documentation in english 
-.RE
-.PP
-.PP
-\fBAuthor\fP
-.RS 4
-Maximilian Rodler 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-22\&.04\&.2024 
-.RE
-.PP
-\fBVersion\fP
-.RS 4
-.RE
-.PP
-Creates batch file from Arguments in JSON
 .PP
 \fBCopyright\fP
 .RS 4

@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Fri Apr 26 2024 10:00:36" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Fri Apr 26 2024 12:07:50" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,14 +36,17 @@ src/main.cpp \- Contains the main function\&.
 
 .in +1c
 .ti -1c
-.RI "INITIALIZE_EASYLOGGINGPP std::tuple< std::vector< std::string >, std::string > \fBparseAndValidateArgs\fP (int argc, char *argv[])"
+.RI "std::tuple< std::vector< std::string >, std::string > \fBparseAndValidateArgs\fP (int argc, char *argv[])"
 .br
+.RI "Validates and parses arguments\&. "
 .ti -1c
-.RI "std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
+.RI "const std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
 .br
+.RI "Checks if the files are valid\&. "
 .ti -1c
 .RI "void \fBparseFile\fP (const std::string &file, const std::string &outputDirectory)"
 .br
+.RI "Parses the given file and writes the output to the output directory\&. "
 .ti -1c
 .RI "int \fBmain\fP (int argc, char *argv[])"
 .br
@@ -62,12 +65,12 @@ Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 .PP
 \fBDate\fP
 .RS 4
-2024-04-18 
+2024-04-26 
 .RE
 .PP
 \fBVersion\fP
 .RS 4
-0\&.1\&.5
+0\&.2\&.2
 .RE
 .PP
 The main function is responsible for connection all parts of the programm\&. It calls all relevant classes and finishes when everything is done\&.
@@ -91,73 +94,74 @@ Main function of the program\&. The main function is responsible for connection 
 .RS 4
 \fIargc\fP The number of arguments given 
 .br
-\fIargv\fP Th command line arguments given
+\fIargv\fP The command line arguments given
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Returns 0 on success, 1 on failure
-.RE
-.PP
-\fBTodo\fP
-.RS 4
-Documentation 
-.PP
-Refactoring 
+Returns 0 on success, 1 on failure 
 .RE
 .PP
 
 .PP
-Definition at line \fB72\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB68\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkConfigFile()\fP, \fButilities::Utils::handleParseException()\fP, \fBconfig::LOG_CONFIG\fP, \fBparseAndValidateArgs()\fP, \fBparseFile()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
 .SS "std::tuple< std::vector< std::string >, std::string > parseAndValidateArgs (int argc, char * argv[])"
 
 .PP
+Validates and parses arguments\&. 
+.PP
 \fBParameters\fP
 .RS 4
-\fIargc\fP 
+\fIargc\fP Number of arguments provided 
 .br
-\fIargv\fP 
+\fIargv\fP The arguments provided 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
+A tuple containing the files to be parsed and the output directory 
 .RE
 .PP
 
 .PP
-Definition at line \fB100\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB105\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkDirectory()\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBcli::CommandLineHandler::printHelp()\fP, and \fBexceptions::CustomException::what()\fP\&.
 .SS "void parseFile (const std::string & file, const std::string & outputDirectory)"
 
 .PP
+Parses the given file and writes the output to the output directory\&. Creates the Batch file from the given file 
+.PP
 \fBParameters\fP
 .RS 4
-\fIfile\fP 
+\fIfile\fP The file to be parsed 
 .RE
 .PP
 
 .PP
-Definition at line \fB150\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB177\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::getFileData()\fP\&.
-.SS "std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
+.SS "const std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
 
+.PP
+Checks if the files are valid\&. Makes sures, that provided files exists and checks their file ending 
 .PP
 \fBParameters\fP
 .RS 4
-\fIfiles\fP 
+\fIfiles\fP The files to be checked 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
+A vector containing the valid files 
 .RE
 .PP
 
 .PP
-Definition at line \fB122\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB135\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::askToContinue()\fP\&.
 .SH "Author"
