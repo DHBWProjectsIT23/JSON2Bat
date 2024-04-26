@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -102,7 +102,8 @@ $(document).ready(function(){initNavTree('d0/de1/FileData_8hpp.html','../../'); 
 
 <p>This file contains the FileData class.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;optional&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -110,13 +111,15 @@ Include dependency graph for FileData.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/dca/FileData_8hpp__incl.png" border="0" usemap="#asrc_2include_2FileData_8hpp" alt=""/></div>
 <map name="asrc_2include_2FileData_8hpp" id="asrc_2include_2FileData_8hpp">
-<area shape="rect" title="This file contains the FileData class." alt="" coords="42,5,203,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,72,105"/>
-<area shape="poly" title=" " alt="" coords="110,34,66,71,63,67,107,30"/>
-<area shape="rect" title=" " alt="" coords="96,79,149,105"/>
-<area shape="poly" title=" " alt="" coords="125,31,125,63,120,63,120,31"/>
-<area shape="rect" title=" " alt="" coords="174,79,231,105"/>
-<area shape="poly" title=" " alt="" coords="138,30,180,67,176,71,134,34"/>
+<area shape="rect" title="This file contains the FileData class." alt="" coords="85,5,245,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,66,105"/>
+<area shape="poly" title=" " alt="" coords="144,34,72,73,70,69,142,29"/>
+<area shape="rect" title=" " alt="" coords="90,79,157,105"/>
+<area shape="poly" title=" " alt="" coords="160,33,140,67,136,64,156,30"/>
+<area shape="rect" title=" " alt="" coords="181,79,234,105"/>
+<area shape="poly" title=" " alt="" coords="174,30,195,64,190,67,170,33"/>
+<area shape="rect" title=" " alt="" coords="259,79,316,105"/>
+<area shape="poly" title=" " alt="" coords="187,29,255,69,253,73,184,34"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -124,21 +127,23 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/da3/FileData_8hpp__dep__incl.png" border="0" usemap="#asrc_2include_2FileData_8hppdep" alt=""/></div>
 <map name="asrc_2include_2FileData_8hppdep" id="asrc_2include_2FileData_8hppdep">
-<area shape="rect" title="This file contains the FileData class." alt="" coords="298,5,458,31"/>
-<area shape="rect" href="../../d1/d03/BatchCreator_8hpp.html" title="Contains the BatchCreator class." alt="" coords="8,79,196,105"/>
-<area shape="poly" title=" " alt="" coords="317,38,150,81,148,76,316,33"/>
-<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="220,79,405,105"/>
-<area shape="poly" title=" " alt="" coords="359,44,326,80,322,77,355,40"/>
-<area shape="rect" href="../../d0/d2b/JsonHandler_8cpp.html" title="Implementation of the JsonHandler class." alt="" coords="346,153,536,178"/>
-<area shape="poly" title=" " alt="" coords="399,42,420,78,434,118,441,152,436,153,429,119,416,80,395,45"/>
-<area shape="rect" href="../../d2/dc5/FileData_8cpp.html" title="Implementation of the FileData class." alt="" coords="481,79,646,105"/>
-<area shape="poly" title=" " alt="" coords="424,34,533,76,531,81,423,39"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html" title="Contains the main function." alt="" coords="225,153,320,178"/>
-<area shape="poly" title=" " alt="" coords="146,108,245,150,243,155,144,113"/>
-<area shape="rect" href="../../dc/d85/BatchCreator_8cpp.html" title="Contains the implementation of the BatchCreator class." alt="" coords="5,153,199,178"/>
-<area shape="poly" title=" " alt="" coords="105,120,105,152,99,152,99,120"/>
-<area shape="poly" title=" " alt="" coords="301,120,282,153,277,151,296,117"/>
-<area shape="poly" title=" " alt="" coords="349,110,420,150,418,154,346,115"/>
+<area shape="rect" title="This file contains the FileData class." alt="" coords="302,5,462,31"/>
+<area shape="rect" href="../../d1/d03/BatchCreator_8hpp.html" title="Creates batch file." alt="" coords="25,153,214,178"/>
+<area shape="poly" title=" " alt="" coords="331,39,283,58,234,81,177,119,134,154,131,150,174,115,231,77,281,53,329,34"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html" title="Contains the main function." alt="" coords="222,226,318,252"/>
+<area shape="poly" title=" " alt="" coords="328,40,301,57,279,80,265,119,261,160,264,198,269,225,264,226,259,198,256,160,259,117,274,78,297,53,326,35"/>
+<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="289,79,475,105"/>
+<area shape="poly" title=" " alt="" coords="385,46,385,79,379,79,379,46"/>
+<area shape="rect" href="../../d0/d2b/JsonHandler_8cpp.html" title=" " alt="" coords="398,153,588,178"/>
+<area shape="poly" title=" " alt="" coords="438,35,466,53,490,78,498,97,500,117,498,152,493,152,495,118,492,98,485,80,463,57,435,40"/>
+<area shape="rect" href="../../d2/dc5/FileData_8cpp.html" title=" " alt="" coords="550,79,715,105"/>
+<area shape="poly" title=" " alt="" coords="439,33,591,76,589,81,438,38"/>
+<area shape="poly" title=" " alt="" coords="160,183,245,223,243,228,157,188"/>
+<area shape="rect" href="../../dc/d85/BatchCreator_8cpp.html" title=" " alt="" coords="5,226,199,252"/>
+<area shape="poly" title=" " alt="" coords="115,194,108,226,102,225,110,193"/>
+<area shape="poly" title=" " alt="" coords="324,112,165,155,163,149,322,106"/>
+<area shape="poly" title=" " alt="" coords="366,118,281,227,277,224,362,115"/>
+<area shape="poly" title=" " alt="" coords="415,111,475,150,472,154,412,116"/>
 </map>
 </div>
 </div>
@@ -161,9 +166,7 @@ Namespaces</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Sonia Sinacci, Elena Schwartzbach </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>16.04.2024 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1.5 </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../da/d06/classparsing_1_1FileData.html" title="This class contains all data from the json file.">parsing::FileData</a></dd>
-<dd>
-<a class="el" href="../../d2/dc5/FileData_8cpp.html" title="Implementation of the FileData class.">src/sources/FileData.cpp</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../da/d06/classparsing_1_1FileData.html" title="This class contains all data from the json file.">parsing::FileData</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d0/de1/FileData_8hpp_source.html">FileData.hpp</a>.</p>
@@ -173,7 +176,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d0/de1/FileData_8hpp.html">FileData.hpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:10 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

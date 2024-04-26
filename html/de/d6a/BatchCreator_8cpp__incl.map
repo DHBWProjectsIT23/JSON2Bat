@@ -1,21 +1,31 @@
 <map id="src/sources/BatchCreator.cpp" name="src/sources/BatchCreator.cpp">
-<area shape="rect" id="Node000001" title="Contains the implementation of the BatchCreator class." alt="" coords="285,5,478,31"/>
-<area shape="rect" id="Node000002" href="$d1/d03/BatchCreator_8hpp.html" title="Contains the BatchCreator class." alt="" coords="166,79,287,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="356,34,268,75,265,70,354,29"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="312,79,451,105"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="384,31,384,63,379,63,379,31"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="476,79,527,105"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="403,29,469,68,466,73,400,34"/>
-<area shape="rect" id="Node000003" href="$d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="76,153,169,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,107,154,146,151,141,207,103"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="193,153,260,178"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="229,105,229,137,224,137,224,105"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="284,153,353,178"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="244,103,293,141,290,145,240,107"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,226,72,252"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="110,181,66,218,63,214,107,177"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="96,226,149,252"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="125,179,125,211,120,211,120,179"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="174,226,231,252"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="138,177,180,214,176,218,134,181"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="463,5,656,31"/>
+<area shape="rect" id="Node000002" href="$d1/d03/BatchCreator_8hpp.html" title="Creates batch file." alt="" coords="336,79,458,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="533,34,440,75,437,70,531,29"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="473,226,612,252"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="561,31,547,211,542,211,556,31"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="597,79,648,105"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="572,29,603,65,599,69,568,33"/>
+<area shape="rect" id="Node000003" href="$d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="118,226,212,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,103,272,121,241,135,212,155,189,182,175,213,170,211,185,180,208,151,238,131,271,116,335,98"/>
+<area shape="rect" id="Node000008" href="$d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="222,153,340,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="379,107,315,147,312,142,376,103"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="364,153,430,178"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="400,105,400,137,394,137,394,105"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="453,153,522,178"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="414,103,462,141,459,145,411,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,300,66,326"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,255,72,294,70,290,142,250"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="90,300,157,326"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="160,254,140,288,136,285,156,251"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="181,300,234,326"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="174,251,195,285,190,288,170,254"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="259,300,316,326"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="187,250,255,290,253,294,184,255"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="263,181,199,220,196,216,260,177"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="326,176,484,219,483,224,324,181"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="235,226,340,252"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="285,178,288,211,282,211,279,179"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="363,226,431,252"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="302,177,366,216,363,220,299,181"/>
 </map>

@@ -1,8 +1,8 @@
-.TH "BatchCreator" 3 "Fri Apr 26 2024 13:01:11" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "BatchCreator" 3 "Fri Apr 26 2024 13:01:17" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-BatchCreator \- Creates a batch file from a FileData obeject\&.  
+BatchCreator \- Erstellt Batch Datei\&.  
 
 .SH SYNOPSIS
 .br
@@ -15,11 +15,10 @@ BatchCreator \- Creates a batch file from a FileData obeject\&.
 .ti -1c
 .RI "\fBBatchCreator\fP (std::shared_ptr< \fBparsing::FileData\fP > \fBfileData\fP)"
 .br
-.RI "Initializes the \fBBatchCreator\fP\&. "
+.RI "Initialisiert \fBBatchCreator\fP\&. "
 .ti -1c
 .RI "std::shared_ptr< std::stringstream > \fBgetDataStream\fP () const"
 .br
-.RI "Returns the stringstream\&. "
 .in -1c
 .SS "Private Member Functions"
 
@@ -27,35 +26,35 @@ BatchCreator \- Creates a batch file from a FileData obeject\&.
 .ti -1c
 .RI "void \fBcreateBatch\fP ()"
 .br
-.RI "Creates the batch stream\&. "
+.RI "Setzt batch Datei zusammen\&. "
 .ti -1c
 .RI "void \fBwriteStart\fP () const"
 .br
-.RI "Wirtes the start of the batch file\&. "
+.RI "Anfang der Batch Datei\&. "
 .ti -1c
 .RI "void \fBwriteHideShell\fP () const"
 .br
-.RI "Writes the visibility of the shell\&. "
+.RI "Sichtbarkeit Konsole\&. "
 .ti -1c
 .RI "void \fBwriteCommands\fP () const"
 .br
-.RI "Writes the commands to be executed\&. "
+.RI "Befehle ausführen\&. "
 .ti -1c
 .RI "void \fBwriteEnvVariables\fP () const"
 .br
-.RI "Set's environment variables\&. "
+.RI "Umgebungsvariablen setzten\&. "
 .ti -1c
 .RI "void \fBwritePathVariables\fP () const"
 .br
-.RI "Set's the path variables\&. "
+.RI "Pfade setzten\&. "
 .ti -1c
 .RI "void \fBwriteApp\fP () const"
 .br
-.RI "If an application is given, it is started at the end\&. "
+.RI "Öffnet Anwednung falls gewünscht\&. "
 .ti -1c
 .RI "void \fBwriteEnd\fP () const"
 .br
-.RI "Writes the end of the batch file\&. "
+.RI "Ende der Batch Datei\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -69,33 +68,32 @@ BatchCreator \- Creates a batch file from a FileData obeject\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Creates a batch file from a FileData obeject\&. 
+Erstellt Batch Datei\&. 
 
-Uses a FileData object to create a string stream, which can then be streamed into a batch file\&.
+Wandelt Elemente aus JSON-Datei in Batch-Format um
 .PP
 \fBSee also\fP
 .RS 4
-FileData 
 .RE
 .PP
 
 .PP
-Definition at line \fB29\fP of file \fBBatchCreator\&.hpp\fP\&.
+Definition at line \fB25\fP of file \fBBatchCreator\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "BatchCreator::BatchCreator (std::shared_ptr< \fBparsing::FileData\fP > fileData)\fC [explicit]\fP"
 
 .PP
-Initializes the \fBBatchCreator\fP\&. Creates a stringstream and calls the \fBcreateBatch()\fP function
+Initialisiert \fBBatchCreator\fP\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIfilenData\fP A shared pointer to the FileData object 
+\fIfilename\fP 
 .RE
 .PP
 
 .PP
-Definition at line \fB18\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB17\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBcreateBatch()\fP, and \fBdataStream\fP\&.
 .SH "Member Function Documentation"
@@ -103,88 +101,80 @@ References \fBcreateBatch()\fP, and \fBdataStream\fP\&.
 .SS "void BatchCreator::createBatch ()\fC [private]\fP"
 
 .PP
-Creates the batch stream\&. < FileData object
+Setzt batch Datei zusammen\&. Beinhaltet Aufrufe der einzelnen Komponenten der batch Datei 
 .PP
-The method calls all necessary functions to create the stream for the batch file\&. 
-.PP
-Definition at line \fB26\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB24\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBwriteApp()\fP, \fBwriteCommands()\fP, \fBwriteEnd()\fP, \fBwriteEnvVariables()\fP, \fBwriteHideShell()\fP, \fBwritePathVariables()\fP, and \fBwriteStart()\fP\&.
 .SS "std::shared_ptr< std::stringstream > BatchCreator::getDataStream () const\fC [inline]\fP"
 
 .PP
-Returns the stringstream\&. 
-.PP
-\fBReturns\fP
+\fBTodo\fP
 .RS 4
-A shared pointer to the stringstream 
+Documentation 
 .RE
 .PP
 
 .PP
-Definition at line \fB46\fP of file \fBBatchCreator\&.hpp\fP\&.
+Definition at line \fB37\fP of file \fBBatchCreator\&.hpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SS "void BatchCreator::writeApp () const\fC [private]\fP"
 
 .PP
-If an application is given, it is started at the end\&. If the key 'application' is given in the json file, the application is started at the end of the batch file\&. 
+Öffnet Anwednung falls gewünscht\&. Öffnet Anwedung, falls unter 'application' gegeben Wird unter dem Namen aus 'outputfile' gestartet 
 .PP
-Definition at line \fB87\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB76\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeCommands () const\fC [private]\fP"
 
 .PP
-Writes the commands to be executed\&. Writes the commands to be executed from the FileData object\&. Those originiate from the 'commands' entry in the json file 
+Befehle ausführen\&. Führt Befehle aus: Zu finden unter 'EXE' als 'command' 
 .PP
-Definition at line \fB56\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB52\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeEnd () const\fC [private]\fP"
 
 .PP
-Writes the end of the batch file\&. Writes the end of the batch file, which is always the same:
+Ende der Batch Datei\&. Schreibt den teil der Batch Datei der immer gleich ist
 .IP "\(bu" 2
-@ECHO ON 
+setzt ECHO OFF 
 .PP
 
 .PP
-Definition at line \fB103\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB89\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SS "void BatchCreator::writeEnvVariables () const\fC [private]\fP"
 
 .PP
-Set's environment variables\&. Set's the envirment variables for the batch\&. Those originiate from the 'ENV' entry in the json file with the following syntax:
-.IP "\(bu" 2
-Entry under 'key' = Entry under 'value' 
+Umgebungsvariablen setzten\&. Setzt Umgebungsvariablen aus 'ENV' nach folgender Syntax: Eintrag unter 'key' = Eintrag unter 'value' 
 .PP
-
-.PP
-Definition at line \fB66\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB60\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeHideShell () const\fC [private]\fP"
 
 .PP
-Writes the visibility of the shell\&. This hides/shows the shell after the batch file has been executed 
+Sichtbarkeit Konsole\&. Zeigt bzw\&. versteckt Konsolenausgabe 
 .PP
-Definition at line \fB44\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB41\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writePathVariables () const\fC [private]\fP"
 
 .PP
-Set's the path variables\&. Set's the path variables for the batch\&. Those originiate from the 'PATH' entry in the json file 
+Pfade setzten\&. Verknüpft die unter 'PATH' angegebenen Pfade mit dem Systempfad Setzt Pfad 
 .PP
-Definition at line \fB75\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB67\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeStart () const\fC [private]\fP"
 
 .PP
-Wirtes the start of the batch file\&. Writes the start of the batch file, which is always the same:
+Anfang der Batch Datei\&. Schreibt den Teil der Batch Datei der immer gleich ist\&.
 .IP "\(bu" 2
 setzt ECHO off
 .IP "\(bu" 2
@@ -192,7 +182,7 @@ startet cmd\&.exe
 .PP
 
 .PP
-Definition at line \fB38\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB36\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SH "Member Data Documentation"
@@ -200,11 +190,11 @@ References \fBdataStream\fP\&.
 .SS "std::shared_ptr<std::stringstream> BatchCreator::dataStream\fC [private]\fP"
 
 .PP
-Definition at line \fB52\fP of file \fBBatchCreator\&.hpp\fP\&.
+Definition at line \fB42\fP of file \fBBatchCreator\&.hpp\fP\&.
 .SS "std::shared_ptr<\fBparsing::FileData\fP> BatchCreator::fileData\fC [private]\fP"
-< stringstream for the batch file 
+
 .PP
-Definition at line \fB54\fP of file \fBBatchCreator\&.hpp\fP\&.
+Definition at line \fB44\fP of file \fBBatchCreator\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

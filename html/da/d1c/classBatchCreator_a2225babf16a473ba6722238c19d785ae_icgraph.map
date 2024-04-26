@@ -1,5 +1,5 @@
 <map id="BatchCreator::createBatch" name="BatchCreator::createBatch">
-<area shape="rect" id="Node000001" title="Creates the batch stream." alt="" coords="233,5,406,31"/>
-<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#ad2fe34f5fef34f26763558bc9c9949a3" title="Initializes the BatchCreator." alt="" coords="5,5,185,31"/>
+<area shape="rect" id="Node000001" title="Setzt batch Datei zusammen." alt="" coords="233,5,406,31"/>
+<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#ad2fe34f5fef34f26763558bc9c9949a3" title="Initialisiert BatchCreator." alt="" coords="5,5,185,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
 </map>

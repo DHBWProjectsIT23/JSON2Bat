@@ -1,52 +1,52 @@
 <map id="main" name="main">
 <area shape="rect" id="Node000001" title="Main function of the program." alt="" coords="5,141,55,167"/>
-<area shape="rect" id="Node000002" href="$d6/d9e/classutilities_1_1Utils.html#abf18cb6fd599bec6e8c55b62ee178640" title="Checks if the easylogging&#45;config file exists." alt="" coords="103,5,296,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,140,57,91,77,63,101,40,107,36,110,41,104,44,81,67,62,94,38,142"/>
-<area shape="rect" id="Node000003" href="$d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd" title="Handle an exception within the main parsing loop." alt="" coords="130,105,269,145"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,147,114,137,115,142,56,153"/>
-<area shape="rect" id="Node000006" href="$df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="124,169,275,195"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="56,156,109,165,108,170,55,161"/>
-<area shape="rect" id="Node000012" href="$df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13" title="Parses the given file and writes the output to the output directory." alt="" coords="162,276,237,302"/>
-<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="50,165,171,264,168,268,46,170"/>
-<area shape="rect" id="Node000023" href="$d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0" title="Set up easylogging." alt="" coords="119,326,280,367"/>
-<area shape="poly" id="edge24_Node000001_Node000023" title=" " alt="" coords="36,167,43,197,56,236,76,277,105,312,108,315,104,319,101,316,71,280,51,238,38,198,31,168"/>
-<area shape="rect" id="Node000024" href="$df/d0a/main_8cpp.html#aa58271e7839a07f94c9a614ca68af1da" title="Checks if the files are valid." alt="" coords="152,55,247,80"/>
-<area shape="poly" id="edge25_Node000001_Node000024" title=" " alt="" coords="41,139,67,114,101,90,136,77,138,82,104,95,71,118,45,143"/>
-<area shape="rect" id="Node000004" href="$d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="345,55,533,80"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="269,106,367,82,368,87,270,111"/>
-<area shape="rect" id="Node000005" href="$dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="344,105,534,145"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="269,122,328,122,328,128,269,128"/>
-<area shape="poly" id="edge12_Node000006_Node000005" title=" " alt="" coords="256,166,336,147,337,152,257,171"/>
-<area shape="rect" id="Node000007" href="$d6/d9e/classutilities_1_1Utils.html#ac07ca745d24efb547beec94f1d6acc11" title="Checks if the given directory exists and is valid." alt="" coords="346,169,533,195"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="275,180,330,180,330,185,275,185"/>
-<area shape="rect" id="Node000008" href="$d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="355,219,524,260"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="257,193,340,213,339,218,256,198"/>
-<area shape="rect" id="Node000010" href="$d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960" title="Prints the help message." alt="" coords="582,281,752,321"/>
-<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="218,193,272,233,307,253,345,269,401,284,458,294,567,301,566,306,458,299,399,289,343,274,305,258,269,237,215,198"/>
-<area shape="rect" id="Node000009" href="$d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470" title="Prints the credits message." alt="" coords="582,150,752,191"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="508,216,582,193,584,198,509,221"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="518,258,575,273,574,279,517,263"/>
-<area shape="rect" id="Node000011" href="$d4/d06/classcli_1_1CommandLineHandler.html#a12afc8cab2af137f31c6aae2d1b27061" title="Prints the version message." alt="" coords="582,215,752,256"/>
-<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="524,235,567,235,567,240,524,241"/>
-<area shape="rect" id="Node000013" href="$da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965" title="Returns the stringstream." alt="" coords="344,335,534,360"/>
-<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="237,295,369,328,368,333,236,300"/>
-<area shape="rect" id="Node000014" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="368,385,510,425"/>
-<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="237,290,268,298,297,312,314,327,323,342,331,356,346,371,355,377,352,381,342,375,327,360,318,344,309,330,295,316,266,303,236,296"/>
-<area shape="rect" id="Node000015" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="596,385,738,425"/>
-<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="511,402,580,402,580,408,511,408"/>
-<area shape="rect" id="Node000016" href="$d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="800,286,942,327"/>
-<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="708,382,798,337,811,331,813,336,801,342,711,386"/>
-<area shape="rect" id="Node000017" href="$d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="800,351,942,392"/>
-<area shape="poly" id="edge18_Node000015_Node000017" title=" " alt="" coords="738,391,784,383,785,388,739,396"/>
-<area shape="rect" id="Node000021" href="$d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="800,417,942,457"/>
-<area shape="poly" id="edge22_Node000015_Node000021" title=" " alt="" coords="739,413,785,421,784,426,738,419"/>
-<area shape="rect" id="Node000022" href="$d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="800,482,942,523"/>
-<area shape="poly" id="edge23_Node000015_Node000022" title=" " alt="" coords="712,423,801,466,813,472,811,477,799,471,710,428"/>
-<area shape="rect" id="Node000018" href="$d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="1011,286,1153,327"/>
-<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="938,348,999,329,1000,334,940,353"/>
-<area shape="rect" id="Node000019" href="$d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="990,351,1174,392"/>
-<area shape="poly" id="edge20_Node000017_Node000019" title=" " alt="" coords="942,369,974,369,974,374,942,374"/>
-<area shape="rect" id="Node000020" href="$d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="1011,417,1153,457"/>
-<area shape="poly" id="edge21_Node000017_Node000020" title=" " alt="" coords="940,390,1000,409,999,414,938,395"/>
-<area shape="poly" id="edge26_Node000024_Node000004" title=" " alt="" coords="247,65,329,65,329,70,247,70"/>
+<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html#a2aea5a6644dca94106892dacbe05cd63" title=" " alt="" coords="127,5,240,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,140,57,91,77,64,101,40,111,34,114,38,104,44,81,67,62,94,39,142"/>
+<area shape="rect" id="Node000003" href="$d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd" title=" " alt="" coords="114,105,253,145"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,147,98,138,99,144,56,152"/>
+<area shape="rect" id="Node000006" href="$df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="108,169,259,195"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="56,156,95,163,94,169,55,161"/>
+<area shape="rect" id="Node000012" href="$df/d0a/main_8cpp.html#a0f61acd0910d985bc7abe4af8c3bffe0" title=" " alt="" coords="146,276,221,302"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="48,166,157,263,154,267,45,170"/>
+<area shape="rect" id="Node000023" href="$d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0" title="Set up easylogging." alt="" coords="103,326,264,367"/>
+<area shape="poly" id="edge24_Node000001_Node000023" title=" " alt="" coords="36,167,43,196,56,235,76,276,105,312,107,315,103,318,101,316,72,279,51,237,38,198,31,168"/>
+<area shape="rect" id="Node000024" href="$df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77" title=" " alt="" coords="136,55,231,80"/>
+<area shape="poly" id="edge25_Node000001_Node000024" title=" " alt="" coords="41,139,68,115,101,91,120,82,123,86,104,95,71,119,45,143"/>
+<area shape="rect" id="Node000004" href="$d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff" title="Asks if the user wants to continue." alt="" coords="313,55,501,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="253,104,339,82,340,87,254,110"/>
+<area shape="rect" id="Node000005" href="$dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f" title=" " alt="" coords="312,105,502,145"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="253,122,296,122,296,128,253,128"/>
+<area shape="poly" id="edge12_Node000006_Node000005" title=" " alt="" coords="236,166,309,147,311,152,237,171"/>
+<area shape="rect" id="Node000007" href="$d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4" title=" " alt="" coords="314,169,501,195"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="259,180,298,180,298,185,259,185"/>
+<area shape="rect" id="Node000008" href="$d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="323,219,492,260"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="237,193,311,212,309,217,236,198"/>
+<area shape="rect" id="Node000010" href="$d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960" title="Prints the help message." alt="" coords="550,281,720,321"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="200,193,247,233,279,253,313,269,368,285,426,295,535,302,534,307,425,300,367,290,311,274,276,258,244,237,196,197"/>
+<area shape="rect" id="Node000009" href="$d4/d06/classcli_1_1CommandLineHandler.html#ac1613613eb4f4534ee55aba547a2a470" title="Prints the credits message." alt="" coords="550,150,720,191"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="476,216,550,193,552,198,477,221"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="486,258,543,273,542,279,485,263"/>
+<area shape="rect" id="Node000011" href="$d4/d06/classcli_1_1CommandLineHandler.html#a12afc8cab2af137f31c6aae2d1b27061" title="Prints the version message." alt="" coords="550,215,720,256"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="492,235,535,235,535,240,492,241"/>
+<area shape="rect" id="Node000013" href="$da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965" title=" " alt="" coords="312,335,502,360"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="221,296,341,328,340,333,220,301"/>
+<area shape="rect" id="Node000014" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="336,385,478,425"/>
+<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="222,293,244,301,266,312,281,327,290,342,299,357,314,371,323,377,320,381,310,375,295,360,286,345,277,330,262,316,242,306,220,298"/>
+<area shape="rect" id="Node000015" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="564,385,706,425"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="479,402,548,402,548,408,479,408"/>
+<area shape="rect" id="Node000016" href="$d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="768,286,910,327"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="676,382,766,337,779,331,781,336,769,342,679,386"/>
+<area shape="rect" id="Node000017" href="$d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="768,351,910,392"/>
+<area shape="poly" id="edge18_Node000015_Node000017" title=" " alt="" coords="706,391,752,383,753,388,707,396"/>
+<area shape="rect" id="Node000021" href="$d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="768,417,910,457"/>
+<area shape="poly" id="edge22_Node000015_Node000021" title=" " alt="" coords="707,413,753,421,752,426,706,419"/>
+<area shape="rect" id="Node000022" href="$d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="768,482,910,523"/>
+<area shape="poly" id="edge23_Node000015_Node000022" title=" " alt="" coords="680,423,769,466,781,472,779,477,767,471,678,428"/>
+<area shape="rect" id="Node000018" href="$d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="979,286,1121,327"/>
+<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="906,348,967,329,968,334,908,353"/>
+<area shape="rect" id="Node000019" href="$d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="958,351,1142,392"/>
+<area shape="poly" id="edge20_Node000017_Node000019" title=" " alt="" coords="910,369,942,369,942,374,910,374"/>
+<area shape="rect" id="Node000020" href="$d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="979,417,1121,457"/>
+<area shape="poly" id="edge21_Node000017_Node000020" title=" " alt="" coords="908,390,968,409,967,414,906,395"/>
+<area shape="poly" id="edge26_Node000024_Node000004" title=" " alt="" coords="231,65,297,65,297,70,231,70"/>
 </map>

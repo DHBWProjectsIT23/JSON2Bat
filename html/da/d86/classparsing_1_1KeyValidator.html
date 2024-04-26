@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -126,17 +126,16 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a09db69c8ae81267a330d6430dcc29378" id="r_a09db69c8ae81267a330d6430dcc29378"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; int, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378">getWrongKeys</a> (const Json::Value &amp;root, const std::string &amp;filename) const</td></tr>
 <tr class="memdesc:a09db69c8ae81267a330d6430dcc29378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the wrong keys from a Json::Value object.  <br /></td></tr>
 <tr class="separator:a09db69c8ae81267a330d6430dcc29378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7432c84eeeff231350e606612f3483e" id="r_aa7432c84eeeff231350e606612f3483e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#aa7432c84eeeff231350e606612f3483e">validateTypes</a> (const std::string &amp;filename, const Json::Value &amp;entry, const std::unordered_set&lt; std::string &gt; &amp;entryKeys)</td></tr>
-<tr class="memdesc:aa7432c84eeeff231350e606612f3483e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates types from the entries array.  <br /></td></tr>
-<tr class="separator:aa7432c84eeeff231350e606612f3483e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1780ff0247f5d0112e11ed199cabd4d" id="r_aa1780ff0247f5d0112e11ed199cabd4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; int, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d">validateEntries</a> (const std::string &amp;filename, const std::unordered_set&lt; std::string &gt; &amp;entryKeys) const</td></tr>
-<tr class="memdesc:aa1780ff0247f5d0112e11ed199cabd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates that keys within the entries array are valid.  <br /></td></tr>
+<tr class="memdesc:aa1780ff0247f5d0112e11ed199cabd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates that an entries 'type' key is valid.  <br /></td></tr>
 <tr class="separator:aa1780ff0247f5d0112e11ed199cabd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
+<tr class="memitem:aa7432c84eeeff231350e606612f3483e" id="r_aa7432c84eeeff231350e606612f3483e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#aa7432c84eeeff231350e606612f3483e">validateTypes</a> (const std::string &amp;filename, const Json::Value &amp;entry, const std::unordered_set&lt; std::string &gt; &amp;entryKeys)</td></tr>
+<tr class="memdesc:aa7432c84eeeff231350e606612f3483e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates types from the entries array.  <br /></td></tr>
+<tr class="separator:aa7432c84eeeff231350e606612f3483e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac74432064cff4fd80b3c54fa588da65e" id="r_ac74432064cff4fd80b3c54fa588da65e"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e">getUnknownKeyLine</a> (const std::string &amp;filename, const std::string &amp;wrongKey)</td></tr>
-<tr class="memdesc:ac74432064cff4fd80b3c54fa588da65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the line of an unknown key.  <br /></td></tr>
 <tr class="separator:ac74432064cff4fd80b3c54fa588da65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -145,14 +144,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ad7b96e124aad0004e0f2273094fb2633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4bc876b0f0e41f9ab4026174a5a3f20" id="r_aa4bc876b0f0e41f9ab4026174a5a3f20"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#aa4bc876b0f0e41f9ab4026174a5a3f20">validEntryKeys</a></td></tr>
 <tr class="separator:aa4bc876b0f0e41f9ab4026174a5a3f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22a649521322467a8ac2dee887db4717" id="r_a22a649521322467a8ac2dee887db4717"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string_view, std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html#a22a649521322467a8ac2dee887db4717">typeToKeys</a></td></tr>
-<tr class="separator:a22a649521322467a8ac2dee887db4717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Validates keys of a Json::Value object. </p>
-<p>This class is singleton. That way when multiple files are parsed with the application, the maps for valid keys and the set for the type entries field only have to be allocated once when parsing multiple files. </p>
+<p>This class is singleton. That way when multiple files are parsed with the application, the validKeys and validEntryKeys field only have to be allocated once. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aba12d17ab5dc7faacdcb3cd85b696fda" name="aba12d17ab5dc7faacdcb3cd85b696fda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba12d17ab5dc7faacdcb3cd85b696fda">&#9670;&#160;</a></span>getInstance()</h2>
@@ -180,7 +177,7 @@ Private Attributes</h2></td></tr>
 <p>Get the instance of this class. </p>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the instance of this class </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00020">20</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -229,28 +226,26 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the line of an unknown key. </p>
-<p>This method goes through each line of the given file and checks if the line contains the given key. Returns std::nullopt if the file can't be opened or the key was not found.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>The filename which should contain the key </td></tr>
-    <tr><td class="paramname">wrongKey</td><td>The key to be searched for</td></tr>
+    <tr><td class="paramname">filename</td><td></td></tr>
+    <tr><td class="paramname">wrongKey</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The line of the key, if it was found </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>Documentation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00129">129</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00121">121</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d86/classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e_icgraph.png" border="0" usemap="#ada/d86/classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e_icgraph" alt=""/></div>
 <map name="ada/d86/classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e_icgraph" id="ada/d86/classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e_icgraph">
-<area shape="rect" title="Get the line of an unknown key." alt="" coords="386,71,533,111"/>
+<area shape="rect" title=" " alt="" coords="386,71,533,111"/>
 <area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378" title="Retrieve the wrong keys from a Json::Value object." alt="" coords="196,5,338,46"/>
 <area shape="poly" title=" " alt="" coords="383,68,328,49,330,44,384,63"/>
-<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d" title="Validates that keys within the entries array are valid." alt="" coords="196,71,338,111"/>
+<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d" title="Validates that an entries &#39;type&#39; key is valid." alt="" coords="196,71,338,111"/>
 <area shape="poly" title=" " alt="" coords="370,94,338,94,338,88,370,88"/>
 <area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#aa7432c84eeeff231350e606612f3483e" title="Validates types from the entries array." alt="" coords="196,136,338,177"/>
 <area shape="poly" title=" " alt="" coords="384,119,330,138,328,133,383,114"/>
@@ -310,14 +305,14 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00051">51</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00129">getUnknownKeyLine()</a>, and <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00130">validKeys</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00121">getUnknownKeyLine()</a>, and <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00108">validKeys</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d86/classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378_cgraph.png" border="0" usemap="#ada/d86/classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378_cgraph" alt=""/></div>
 <map name="ada/d86/classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378_cgraph" id="ada/d86/classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378_cgraph">
 <area shape="rect" title="Retrieve the wrong keys from a Json::Value object." alt="" coords="5,5,148,46"/>
-<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title="Get the line of an unknown key." alt="" coords="196,5,343,46"/>
+<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title=" " alt="" coords="196,5,343,46"/>
 <area shape="poly" title=" " alt="" coords="148,23,180,23,180,28,148,28"/>
 </map>
 </div>
@@ -368,27 +363,27 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Validates that keys within the entries array are valid. </p>
-<p>This mehthod goes through each of the entries, and validates, that the keys are part of the validEntryKeys attribute.</p>
+<p>Validates that an entries 'type' key is valid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>The filename from which the entries are from </td></tr>
-    <tr><td class="paramname">entryKeys</td><td>The keys of the entries</td></tr>
+    <tr><td class="paramname">filename</td><td></td></tr>
+    <tr><td class="paramname">entryKeys</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector with tuples, containing the line and name of invalid entrie keys </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>Documentation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00074">74</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00071">71</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00129">getUnknownKeyLine()</a>, and <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00137">validEntryKeys</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00121">getUnknownKeyLine()</a>, and <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00111">validEntryKeys</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_cgraph.png" border="0" usemap="#ada/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_cgraph" alt=""/></div>
 <map name="ada/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_cgraph" id="ada/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_cgraph">
-<area shape="rect" title="Validates that keys within the entries array are valid." alt="" coords="5,5,148,46"/>
-<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title="Get the line of an unknown key." alt="" coords="196,5,343,46"/>
+<area shape="rect" title="Validates that an entries &#39;type&#39; key is valid." alt="" coords="5,5,148,46"/>
+<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title=" " alt="" coords="196,5,343,46"/>
 <area shape="poly" title=" " alt="" coords="148,23,180,23,180,28,148,28"/>
 </map>
 </div>
@@ -397,7 +392,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_icgraph.png" border="0" usemap="#ada/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_icgraph" alt=""/></div>
 <map name="ada/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_icgraph" id="ada/d86/classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d_icgraph">
-<area shape="rect" title="Validates that keys within the entries array are valid." alt="" coords="196,5,338,46"/>
+<area shape="rect" title="Validates that an entries &#39;type&#39; key is valid." alt="" coords="196,5,338,46"/>
 <area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#a8a3ffe788064f6b32be35870aeeb792c" title="Validate keys off a Json::Value object." alt="" coords="5,5,148,46"/>
 <area shape="poly" title=" " alt="" coords="180,28,148,28,148,23,180,23"/>
 </map>
@@ -436,15 +431,15 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">root</td><td>The Json::Value object to be validated. </td></tr>
-    <tr><td class="paramname">filename</td><td>The filename from which 'root' is from.</td></tr>
+    <tr><td class="paramname">filename</td><td>The filename from which 'root' is from. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector with tuples, containing the line and name of invalid types. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00051">getWrongKeys()</a>, <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00074">validateEntries()</a>, and <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00096">validateTypes()</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00051">getWrongKeys()</a>, <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00071">validateEntries()</a>, and <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00092">validateTypes()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -453,11 +448,11 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Validate keys off a Json::Value object." alt="" coords="5,71,148,111"/>
 <area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378" title="Retrieve the wrong keys from a Json::Value object." alt="" coords="196,5,338,46"/>
 <area shape="poly" title=" " alt="" coords="137,68,191,49,192,54,139,73"/>
-<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d" title="Validates that keys within the entries array are valid." alt="" coords="196,71,338,111"/>
+<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d" title="Validates that an entries &#39;type&#39; key is valid." alt="" coords="196,71,338,111"/>
 <area shape="poly" title=" " alt="" coords="148,88,180,88,180,94,148,94"/>
 <area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#aa7432c84eeeff231350e606612f3483e" title="Validates types from the entries array." alt="" coords="196,136,338,177"/>
 <area shape="poly" title=" " alt="" coords="139,109,192,128,191,133,137,114"/>
-<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title="Get the line of an unknown key." alt="" coords="386,71,533,111"/>
+<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title=" " alt="" coords="386,71,533,111"/>
 <area shape="poly" title=" " alt="" coords="330,44,384,63,382,68,328,49"/>
 <area shape="poly" title=" " alt="" coords="338,88,371,88,371,94,338,94"/>
 <area shape="poly" title=" " alt="" coords="328,133,382,114,384,119,330,138"/>
@@ -501,41 +496,32 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Validates types from the entries array. </p>
-<p>This method goes makes sure, that the type of the given entry is valid and that it contains it's necessary keys. It will throw an exception if the type is missing, if the type is invalid or if the type is missing a key.</p>
-<dl class="section note"><dt>Note</dt><dd>Unnecessary keys within a type entry, don't cause an exception and are ignored.</dd></dl>
+<p>Makes sure that each type has it's according keys, needed to parse it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The filename from which 'entry' is from </td></tr>
-    <tr><td class="paramname">entry</td><td>The entry to be validated </td></tr>
-    <tr><td class="paramname">entryKeys</td><td>The keys of the entry</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="../../d5/d67/classexceptions_1_1MissingTypeException.html" title="Exception for missing types of entries.">exceptions::MissingTypeException</a></td><td></td></tr>
-    <tr><td class="paramname"><a class="el" href="../../d0/dad/classexceptions_1_1InvalidTypeException.html" title="Exception for invalid types.">exceptions::InvalidTypeException</a></td><td></td></tr>
-    <tr><td class="paramname"><a class="el" href="../../d4/d1d/classexceptions_1_1MissingKeyException.html" title="Exception for missing keys within entries.">exceptions::MissingKeyException</a></td><td></td></tr>
+    <tr><td class="paramname">entry</td><td></td></tr>
+    <tr><td class="paramname">entryKeys</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00096">96</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00092">92</a> of file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00129">getUnknownKeyLine()</a>, and <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00144">typeToKeys</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html#l00121">getUnknownKeyLine()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d86/classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e_cgraph.png" border="0" usemap="#ada/d86/classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e_cgraph" alt=""/></div>
 <map name="ada/d86/classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e_cgraph" id="ada/d86/classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e_cgraph">
 <area shape="rect" title="Validates types from the entries array." alt="" coords="5,5,148,46"/>
-<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title="Get the line of an unknown key." alt="" coords="196,5,343,46"/>
+<area shape="rect" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e" title=" " alt="" coords="196,5,343,46"/>
 <area shape="poly" title=" " alt="" coords="148,23,180,23,180,28,148,28"/>
 </map>
 </div>
@@ -553,34 +539,6 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a22a649521322467a8ac2dee887db4717" name="a22a649521322467a8ac2dee887db4717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22a649521322467a8ac2dee887db4717">&#9670;&#160;</a></span>typeToKeys</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string_view, std::vector&lt;std::string&gt; &gt; parsing::KeyValidator::typeToKeys</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">        {<span class="stringliteral">&quot;EXE&quot;</span>, {<span class="stringliteral">&quot;command&quot;</span>}}, {<span class="stringliteral">&quot;PATH&quot;</span>, {<span class="stringliteral">&quot;path&quot;</span>}}, {<span class="stringliteral">&quot;ENV&quot;</span>, {<span class="stringliteral">&quot;key&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>}}</div>
-<div class="line">    }</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Changed from if/else clause within function to map in 0.2.1 </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
-
-</div>
-</div>
 <a id="aa4bc876b0f0e41f9ab4026174a5a3f20" name="aa4bc876b0f0e41f9ab4026174a5a3f20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4bc876b0f0e41f9ab4026174a5a3f20">&#9670;&#160;</a></span>validEntryKeys</h2>
 
@@ -603,9 +561,8 @@ Here is the caller graph for this function:</div>
 <b>Initial value:</b><div class="fragment"><div class="line">= {<span class="stringliteral">&quot;type&quot;</span>, <span class="stringliteral">&quot;key&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>,</div>
 <div class="line">        <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;command&quot;</span></div>
 <div class="line">    }</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Changed from vector to unordered_set in 0.2.1 - as this shoud improve lookup performance from O(n) to O(1) </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00137">137</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,9 +588,8 @@ Here is the caller graph for this function:</div>
 <b>Initial value:</b><div class="fragment"><div class="line">= {<span class="stringliteral">&quot;outputfile&quot;</span>, <span class="stringliteral">&quot;hideshell&quot;</span>,</div>
 <div class="line">        <span class="stringliteral">&quot;entries&quot;</span>, <span class="stringliteral">&quot;application&quot;</span></div>
 <div class="line">    }</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Changed from vector to unordered_set in 0.2.1 - as this shoud improve lookup performance from O(n) to O(1) </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00130">130</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html#l00108">108</a> of file <a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +603,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/da5/namespaceparsing.html">parsing</a></li><li class="navelem"><a class="el" href="../../da/d86/classparsing_1_1KeyValidator.html">KeyValidator</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:11 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

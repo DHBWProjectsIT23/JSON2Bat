@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -102,43 +102,39 @@ $(document).ready(function(){initNavTree('d7/d09/Utils_8hpp_source.html','../../
 </div><!--header-->
 <div class="contents">
 <a href="../../d7/d09/Utils_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef UTILITIES_HPP</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define UTILITIES_HPP</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/d96/namespaceutilities.html">utilities</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d6/d9e/classutilities_1_1Utils.html">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d9e/classutilities_1_1Utils.html">Utils</a> {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">setupEasyLogging</a>(<span class="keyword">const</span> std::string &amp;configFile);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">handleParseException</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                         <span class="keyword">const</span> std::vector&lt;std::string&gt;::iterator &amp;file,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                         <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;files);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">askToContinue</a>(<span class="keyword">const</span> std::string &amp;prompt = <span class="stringliteral">&quot;Do you want to continue? (Y/N)\n&quot;</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#abf18cb6fd599bec6e8c55b62ee178640">checkConfigFile</a>(<span class="keyword">const</span> std::string &amp;configFile);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ac07ca745d24efb547beec94f1d6acc11">checkDirectory</a>(std::string &amp;directory);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef UTILITIES_HPP</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define UTILITIES_HPP</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/d96/namespaceutilities.html">utilities</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d6/d9e/classutilities_1_1Utils.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d9e/classutilities_1_1Utils.html">Utils</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">setupEasyLogging</a>(<span class="keyword">const</span> std::string &amp;configFile);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">handleParseException</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                     <span class="keyword">const</span> std::vector&lt;std::string&gt;::iterator &amp;file,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                     <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;files);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">askToContinue</a>(<span class="keyword">const</span> std::string &amp;prompt = <span class="stringliteral">&quot;Do you want to continue? (Y/N)\n&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">static</span> std::string &amp;<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4">checkDirectory</a>(std::string &amp;directory);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <span class="comment">// namespace utilities</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">// UTILITIES_HPP</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace utilities</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">// UTILITIES_HPP</span></div>
 <div class="ttc" id="aExceptions_8hpp_html"><div class="ttname"><a href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a></div><div class="ttdoc">Contains all the custom exceptions used in the project.</div></div>
-<div class="ttc" id="aclassexceptions_1_1CustomException_html"><div class="ttname"><a href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a></div><div class="ttdoc">Base class for all custom exceptions.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/de9/Exceptions_8hpp_source.html#l00031">Exceptions.hpp:31</a></div></div>
-<div class="ttc" id="aclassutilities_1_1Utils_html"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html">utilities::Utils</a></div><div class="ttdoc">Responsible for utility function.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d09/Utils_8hpp_source.html#l00042">Utils.hpp:42</a></div></div>
-<div class="ttc" id="aclassutilities_1_1Utils_html_a982a6227fd42d6437eaea4b6887df4ff"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a></div><div class="ttdeci">static bool askToContinue(const std::string &amp;prompt=&quot;Do you want to continue? (Y/N)\n&quot;)</div><div class="ttdoc">Asks if the user wants to continue.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00035">Utils.cpp:35</a></div></div>
-<div class="ttc" id="aclassutilities_1_1Utils_html_aba875f8f5a9d060b28aabd965d3a5eb0"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">utilities::Utils::setupEasyLogging</a></div><div class="ttdeci">static void setupEasyLogging(const std::string &amp;configFile)</div><div class="ttdoc">Set up easylogging.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00025">Utils.cpp:25</a></div></div>
-<div class="ttc" id="aclassutilities_1_1Utils_html_abf18cb6fd599bec6e8c55b62ee178640"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#abf18cb6fd599bec6e8c55b62ee178640">utilities::Utils::checkConfigFile</a></div><div class="ttdeci">static void checkConfigFile(const std::string &amp;configFile)</div><div class="ttdoc">Checks if the easylogging-config file exists.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00057">Utils.cpp:57</a></div></div>
-<div class="ttc" id="aclassutilities_1_1Utils_html_ac07ca745d24efb547beec94f1d6acc11"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#ac07ca745d24efb547beec94f1d6acc11">utilities::Utils::checkDirectory</a></div><div class="ttdeci">static const std::string &amp; checkDirectory(std::string &amp;directory)</div><div class="ttdoc">Checks if the given directory exists and is valid.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00068">Utils.cpp:68</a></div></div>
-<div class="ttc" id="aclassutilities_1_1Utils_html_ad0ae5e5ca3f40a7c2de1667856f5e0bd"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">utilities::Utils::handleParseException</a></div><div class="ttdeci">static bool handleParseException(const exceptions::CustomException &amp;e, const std::vector&lt; std::string &gt;::iterator &amp;file, const std::vector&lt; std::string &gt; &amp;files)</div><div class="ttdoc">Handle an exception within the main parsing loop.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00081">Utils.cpp:81</a></div></div>
+<div class="ttc" id="aclassexceptions_1_1CustomException_html"><div class="ttname"><a href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a></div><div class="ttdoc">Base class for all custom exceptions.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/de9/Exceptions_8hpp_source.html#l00030">Exceptions.hpp:30</a></div></div>
+<div class="ttc" id="aclassutilities_1_1Utils_html"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html">utilities::Utils</a></div><div class="ttdoc">Responsible for utility function.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d09/Utils_8hpp_source.html#l00040">Utils.hpp:40</a></div></div>
+<div class="ttc" id="aclassutilities_1_1Utils_html_a982a6227fd42d6437eaea4b6887df4ff"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a></div><div class="ttdeci">static bool askToContinue(const std::string &amp;prompt=&quot;Do you want to continue? (Y/N)\n&quot;)</div><div class="ttdoc">Asks if the user wants to continue.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00034">Utils.cpp:34</a></div></div>
+<div class="ttc" id="aclassutilities_1_1Utils_html_aba875f8f5a9d060b28aabd965d3a5eb0"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">utilities::Utils::setupEasyLogging</a></div><div class="ttdeci">static void setupEasyLogging(const std::string &amp;configFile)</div><div class="ttdoc">Set up easylogging.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00026">Utils.cpp:26</a></div></div>
+<div class="ttc" id="aclassutilities_1_1Utils_html_ad0ae5e5ca3f40a7c2de1667856f5e0bd"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">utilities::Utils::handleParseException</a></div><div class="ttdeci">static bool handleParseException(const exceptions::CustomException &amp;e, const std::vector&lt; std::string &gt;::iterator &amp;file, const std::vector&lt; std::string &gt; &amp;files)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00066">Utils.cpp:66</a></div></div>
+<div class="ttc" id="aclassutilities_1_1Utils_html_af6c551d7c70f43171ab044af7451aee4"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4">utilities::Utils::checkDirectory</a></div><div class="ttdeci">static std::string &amp; checkDirectory(std::string &amp;directory)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00055">Utils.cpp:55</a></div></div>
 <div class="ttc" id="anamespaceutilities_html"><div class="ttname"><a href="../../d2/d96/namespaceutilities.html">utilities</a></div><div class="ttdoc">Includes all utilities.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -146,7 +142,7 @@ $(document).ready(function(){initNavTree('d7/d09/Utils_8hpp_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d7/d09/Utils_8hpp.html">Utils.hpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:10 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

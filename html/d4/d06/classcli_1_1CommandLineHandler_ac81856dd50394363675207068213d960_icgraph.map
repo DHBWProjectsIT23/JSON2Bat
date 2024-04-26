@@ -1,6 +1,6 @@
 <map id="cli::CommandLineHandler::printHelp" name="cli::CommandLineHandler::printHelp">
 <area shape="rect" id="Node000001" title="Prints the help message." alt="" coords="518,5,688,46"/>
-<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="103,13,253,39"/>
+<area shape="rect" id="Node000002" href="$df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,13,253,39"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="503,25,470,24,301,24,253,26,253,20,301,19,470,19,503,20"/>
 <area shape="rect" id="Node000004" href="$d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="301,33,470,74"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="503,41,471,45,470,40,503,36"/>

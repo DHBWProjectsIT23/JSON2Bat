@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,256,106,281"/>
 <area shape="rect" id="Node000001" href="$dc/d56/classexceptions_1_1CustomException.html" title="Base class for all custom exceptions." alt="" coords="154,256,344,281"/>
 <area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="121,266,153,266,153,271,121,271"/>
-<area shape="rect" id="Node000002" href="$de/da8/classexceptions_1_1FailedToOpenFileException.html" title="Exception for when a file can&#39;t be opened." alt="" coords="416,5,586,46"/>
+<area shape="rect" id="Node000002" href="$de/da8/classexceptions_1_1FailedToOpenFileException.html" title=" " alt="" coords="416,5,586,46"/>
 <area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="259,240,278,199,307,149,344,99,390,56,414,42,417,47,394,60,348,102,311,152,283,202,263,242"/>
 <area shape="rect" id="Node000003" href="$df/d36/classexceptions_1_1FileExistsException.html" title="Exception for an already exisiting outputfile." alt="" coords="401,70,602,96"/>
 <area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="263,241,314,172,350,135,391,105,414,94,416,99,393,109,353,139,318,175,268,244"/>
@@ -16,7 +16,7 @@
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="360,278,395,282,394,287,359,283"/>
 <area shape="rect" id="Node000008" href="$d5/d67/classexceptions_1_1MissingTypeException.html" title="Exception for missing types of entries." alt="" coords="392,333,610,359"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="297,285,393,319,433,330,432,335,391,324,295,290"/>
-<area shape="rect" id="Node000009" href="$d9/d05/classexceptions_1_1NoSuchDirException.html" title="Exception for when a directory does not exist." alt="" coords="397,382,605,408"/>
+<area shape="rect" id="Node000009" href="$d9/d05/classexceptions_1_1NoSuchDirException.html" title=" " alt="" coords="397,382,605,408"/>
 <area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="277,290,329,330,360,351,393,369,422,379,421,384,391,373,357,356,326,335,274,294"/>
 <area shape="rect" id="Node000010" href="$dc/de6/classexceptions_1_1ParsingException.html" title="Exception for syntax errors within the json file." alt="" coords="407,432,596,457"/>
 <area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="269,293,320,357,354,390,393,418,417,428,414,433,391,423,351,394,316,360,265,296"/>

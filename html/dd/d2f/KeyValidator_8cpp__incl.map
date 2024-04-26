@@ -1,27 +1,23 @@
 <map id="src/sources/KeyValidator.cpp" name="src/sources/KeyValidator.cpp">
-<area shape="rect" id="Node000001" title="Implementation for the KeyValidator class." alt="" coords="466,5,656,31"/>
-<area shape="rect" id="Node000002" href="$dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="227,79,346,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="515,34,348,77,347,72,514,29"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,153,72,178"/>
-<area shape="poly" id="edge11_Node000001_Node000004" title=" " alt="" coords="466,31,346,50,280,64,217,82,138,113,73,147,70,142,136,108,215,76,279,59,345,45,465,26"/>
-<area shape="rect" id="Node000007" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="554,79,662,105"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="571,30,594,64,589,67,567,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="493,153,632,178"/>
-<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="558,32,546,65,543,85,544,104,554,138,548,139,539,105,538,84,541,64,553,31"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="686,79,738,105"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="588,29,674,70,671,74,586,34"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="762,79,819,105"/>
-<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="601,29,747,74,746,79,599,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="96,153,208,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,108,189,147,187,143,262,103"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="245,108,87,153,86,148,244,103"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="231,153,342,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="289,105,289,137,284,137,284,105"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="366,153,469,178"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="310,103,383,143,381,147,307,108"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="603,106,580,141,576,138,598,103"/>
-<area shape="rect" id="Node000009" href="$d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="656,153,736,178"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="624,103,671,141,668,145,621,107"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="760,153,813,178"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="639,103,746,145,745,150,637,108"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="303,5,494,31"/>
+<area shape="rect" id="Node000002" href="$dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="141,79,259,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="366,34,249,76,247,71,364,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="269,153,336,178"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="393,33,321,141,317,138,388,30"/>
+<area shape="rect" id="Node000006" href="$d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="391,79,499,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="408,30,431,64,427,67,404,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="359,153,499,178"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="394,32,381,65,378,85,381,104,391,123,405,140,401,143,387,126,376,106,372,85,375,64,389,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="523,79,575,105"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="425,29,511,70,508,74,423,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="599,79,656,105"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="438,29,585,74,583,79,436,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,117,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,108,99,147,97,143,175,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="219,103,274,141,271,146,216,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="141,153,245,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="201,105,198,137,193,137,196,105"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="445,105,438,138,432,137,440,104"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="522,153,576,178"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="464,103,520,141,517,146,461,107"/>
 </map>
