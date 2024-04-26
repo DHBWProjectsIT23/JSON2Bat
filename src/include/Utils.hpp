@@ -39,31 +39,37 @@ namespace utilities {
  */
 class Utils {
 public:
-    /**
-     * @brief Set up easylogging
-     * @details
-     * This function sets up the easylogging library based on the given
-     * config file.
-     * @param configFile The config file which is used
-     */
-    static void setupEasyLogging(const std::string &configFile);
+  /**
+   * @brief Set up easylogging
+   * @details
+   * This function sets up the easylogging library based on the given
+   * config file.
+   * @param configFile The config file which is used
+   */
+  static void setupEasyLogging(const std::string &configFile);
 
-    static bool handleParseException(const exceptions::CustomException &e,
-                                     const std::vector<std::string>::iterator &file,
-                                     const std::vector<std::string> &files);
+  static bool
+  handleParseException(const exceptions::CustomException &e,
+                       const std::vector<std::string>::iterator &file,
+                       const std::vector<std::string> &files);
 
-    /**
-     * @brief Asks if the user wants to continue
-     * @details
-     * Asks the user if they want to continue and prompts them for a response.
-     * @param prompt (Optional) A custom prompt to be used.
-     * @return Returns true if the user wants to continue and false otherwise.
-     */
-    static bool
-    askToContinue(const std::string &prompt = "Do you want to continue? (Y/N)\n");
+  /**
+   * @brief Asks if the user wants to continue
+   * @details
+   * Asks the user if they want to continue and prompts them for a response.
+   * @param prompt (Optional) A custom prompt to be used.
+   * @return Returns true if the user wants to continue and false otherwise.
+   */
+  static bool
+  askToContinue(const std::string &prompt = "Do you want to continue? (Y/N)\n");
 
-    /** @todo documentation */
-    static std::string &checkDirectory(std::string &directory);
+  /**
+   * @brief Checks if the easylogging-config file exists
+   */
+  static void checkConfigFile(const std::string &configFile);
+
+  /** @todo documentation */
+  static std::string &checkDirectory(std::string &directory);
 };
 } // namespace utilities
 
