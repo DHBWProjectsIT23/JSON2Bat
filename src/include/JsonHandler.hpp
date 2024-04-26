@@ -46,123 +46,125 @@ namespace parsing {
  */
 class JsonHandler {
 public:
-  /**
-   * @brief Constructor without arguments
-   * @details
-   * This constructor can be used to initialise an instance in an outer scope
-   * and then assign it values from an inner scope.
-   */
-  JsonHandler() { LOG_INFO << "Initialising empty JsonHandler"; }
-  /**
-   * @brief The constructor
-   * @details
-   * This constructor calls this->parseFile() when called.
-   *
-   * @param filename Name of the json file
-   */
-  explicit JsonHandler(const std::string &filename);
-  /**
-   * @brief Retrieve the data from the json file
-   * @details
-   * This method calls this->createFileData() needed to retrieve the values from
-   * the Json::Value this->root and then returns a shared pointer to the
-   * created FileData object.
-   *
-   * @return Pointer to the FileData Object with the parsed data from json
-   */
-  std::shared_ptr<FileData> getFileData();
+    /**
+     * @brief Constructor without arguments
+     * @details
+     * This constructor can be used to initialise an instance in an outer scope
+     * and then assign it values from an inner scope.
+     */
+    JsonHandler() {
+        LOG_INFO << "Initialising empty JsonHandler";
+    }
+    /**
+     * @brief The constructor
+     * @details
+     * This constructor calls this->parseFile() when called.
+     *
+     * @param filename Name of the json file
+     */
+    explicit JsonHandler(const std::string &filename);
+    /**
+     * @brief Retrieve the data from the json file
+     * @details
+     * This method calls this->createFileData() needed to retrieve the values from
+     * the Json::Value this->root and then returns a shared pointer to the
+     * created FileData object.
+     *
+     * @return Pointer to the FileData Object with the parsed data from json
+     */
+    std::shared_ptr<FileData> getFileData();
 
 private:
-  /**
-   * @brief Parses the given json file
-   * @details
-   * This method first creates a new Json::Value instance and then tries to
-   * parse the given json file.
-   * It then validates the keys of the instance using the KeyValidator class.
-   *
-   * @param filename The name of the file wich should be parsed
-   * @return A shared pointer to the Json::Value instance
-   *
-   * @see KeyValidator::validateKeys()
-   *
-   * @throw exceptions::ParsingException
-   * @throw exceptions::InvalidKeyException
-   */
-  [[nodiscard]] static std::shared_ptr<Json::Value>
-  parseFile(const std::string &filename);
-  /**
-   * @brief Assigns the outputfile to this->data
-   * @details
-   * Retrieves the outputfile from Json::Value this->root and makes sure, that
-   * the file doesn't already exist.
-   * - {ReqFunc8}
-   *
-   * @throw exceptions::FileExistsException
-   */
-  void assignOutputFile() const;
-  /**
-   * @brief Assigns the hideshell value to this->data
-   * @details
-   * Retrieves the value of the hideshell key from Json::Value this->root and
-   * defaults to negative.
-   * - {ReqFunc9}
-   */
-  void assignHideShell() const;
-  /**
-   * @brief Assigns application to this->data
-   * @details
-   * Retrieves the value of the application key from Json::Value this->root and
-   * defaults to an empty string.
-   * - {ReqFunc16}
-   */
-  void assignApplication() const;
-  /**
-   * @brief Assigns entries to this->data
-   * @details
-   * Goes through each of the entries from Json::Value this->root and
-   * calls the relevant method depending on it's type.
-   * All "type" keys should be valid by this point.
-   * - {ReqFunc10}
-   *
-   * @param entry Json::Value containing an array with entries
-   *
-   * @throw exceptions::UnreachableCodeException
-   */
-  void assignEntries() const;
-  /**
-   * @brief Assigns an command to this->data
-   * @details
-   * - {ReqFunc12}
-   * @param entry The entry with the command
-   */
-  void assignCommand(const Json::Value &entry) const;
-  /**
-   * @brief Assigns an environmentVariable to this->data
-   * @details
-   * - {ReqFunc11}
-   * @param entry The entry with the environmentVariable
-   */
-  void assignEnvironmentVariable(const Json::Value &entry) const;
-  /**
-   * @brief Assigns a path value to this->data
-   * @details
-   * - {ReqFunc13}
-   * @param entry The entry with the path value
-   */
-  void assignPathValue(const Json::Value &entry) const;
-  /**
-   * @brief Creates the FileData instance
-   * @details
-   * Instantiates the FileData instance, calls all nessecary functions and
-   * returns a shared pointer to it.
-   *
-   * @return Pointer to the created instance of FileData
-   */
-  std::shared_ptr<FileData> createFileData();
+    /**
+     * @brief Parses the given json file
+     * @details
+     * This method first creates a new Json::Value instance and then tries to
+     * parse the given json file.
+     * It then validates the keys of the instance using the KeyValidator class.
+     *
+     * @param filename The name of the file wich should be parsed
+     * @return A shared pointer to the Json::Value instance
+     *
+     * @see KeyValidator::validateKeys()
+     *
+     * @throw exceptions::ParsingException
+     * @throw exceptions::InvalidKeyException
+     */
+    [[nodiscard]] static std::shared_ptr<Json::Value>
+    parseFile(const std::string &filename);
+    /**
+     * @brief Assigns the outputfile to this->data
+     * @details
+     * Retrieves the outputfile from Json::Value this->root and makes sure, that
+     * the file doesn't already exist.
+     * - {ReqFunc8}
+     *
+     * @throw exceptions::FileExistsException
+     */
+    void assignOutputFile() const;
+    /**
+     * @brief Assigns the hideshell value to this->data
+     * @details
+     * Retrieves the value of the hideshell key from Json::Value this->root and
+     * defaults to negative.
+     * - {ReqFunc9}
+     */
+    void assignHideShell() const;
+    /**
+     * @brief Assigns application to this->data
+     * @details
+     * Retrieves the value of the application key from Json::Value this->root and
+     * defaults to an empty string.
+     * - {ReqFunc16}
+     */
+    void assignApplication() const;
+    /**
+     * @brief Assigns entries to this->data
+     * @details
+     * Goes through each of the entries from Json::Value this->root and
+     * calls the relevant method depending on it's type.
+     * All "type" keys should be valid by this point.
+     * - {ReqFunc10}
+     *
+     * @param entry Json::Value containing an array with entries
+     *
+     * @throw exceptions::UnreachableCodeException
+     */
+    void assignEntries() const;
+    /**
+     * @brief Assigns an command to this->data
+     * @details
+     * - {ReqFunc12}
+     * @param entry The entry with the command
+     */
+    void assignCommand(const Json::Value &entry) const;
+    /**
+     * @brief Assigns an environmentVariable to this->data
+     * @details
+     * - {ReqFunc11}
+     * @param entry The entry with the environmentVariable
+     */
+    void assignEnvironmentVariable(const Json::Value &entry) const;
+    /**
+     * @brief Assigns a path value to this->data
+     * @details
+     * - {ReqFunc13}
+     * @param entry The entry with the path value
+     */
+    void assignPathValue(const Json::Value &entry) const;
+    /**
+     * @brief Creates the FileData instance
+     * @details
+     * Instantiates the FileData instance, calls all nessecary functions and
+     * returns a shared pointer to it.
+     *
+     * @return Pointer to the created instance of FileData
+     */
+    std::shared_ptr<FileData> createFileData();
 
-  static bool containsBadCharacter(const std::string &str);
-  std::shared_ptr<Json::Value> root;
-  std::shared_ptr<FileData> data;
+    static bool containsBadCharacter(const std::string &str);
+    std::shared_ptr<Json::Value> root;
+    std::shared_ptr<FileData> data;
 };
 } // namespace parsing
 
