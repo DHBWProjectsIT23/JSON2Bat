@@ -1,8 +1,7 @@
-[![Building on Linux](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml/badge.svg)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml)
-[![Building on Windows](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml/badge.svg)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml)
-[![Deploy Documentation](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml/badge.svg)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml)
 
 # JSON2Batch
+
+0.2.3
 
 JSON2Batch was developed during a project during our first and second
 semester of university.
@@ -14,8 +13,7 @@ The project was carried out by **Elena Schwarzbach, Max Rodler, Simon Blum, Soni
 
 ## Table of Contents
 
-<!--toc:start-->
-- [JSON2Batch](#projectname)
+- JSON2Batch
   1. [Table of Contents](#table-of-contents)
   2. [Build Instructions](#build-instructions)
     - [Linux](#linux)
@@ -28,8 +26,6 @@ The project was carried out by **Elena Schwarzbach, Max Rodler, Simon Blum, Soni
     - [LoggingWrapper](#loggingwrapper)
     - [jsoncpp](#jsoncpp)
   5. [License](#license)
-<!--toc:end-->
-
 
 ## Build Instructions
 

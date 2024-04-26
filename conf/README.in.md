@@ -1,8 +1,7 @@
 
 # @PROJECT_NAME@
 
-
-@VERSION@
+@PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
 
 @PROJECT_NAME@ was developed during a project during our first and second
 semester of university.
@@ -14,8 +13,7 @@ The project was carried out by **@AUTHORS@**.
 
 ## Table of Contents
 
-<!--toc:start-->
-- [@PROJECT_NAME@](#projectname)
+- @PROJECT_NAME@
   1. [Table of Contents](#table-of-contents)
   2. [Build Instructions](#build-instructions)
     - [Linux](#linux)
@@ -28,8 +26,6 @@ The project was carried out by **@AUTHORS@**.
     - [LoggingWrapper](#loggingwrapper)
     - [jsoncpp](#jsoncpp)
   5. [License](#license)
-<!--toc:end-->
-
 
 ## Build Instructions
 

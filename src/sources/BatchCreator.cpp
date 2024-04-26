@@ -78,8 +78,7 @@ void BatchCreator::writePathVariables() const {
     *this->dataStream << "%path%";
 }
 
-void BatchCreator::writeApplication() const
-{
+void BatchCreator::writeApplication() const {
     std::string appName = this->fileData->getOutputFile();
     appName = appName.substr(0, appName.find('.'));
 
