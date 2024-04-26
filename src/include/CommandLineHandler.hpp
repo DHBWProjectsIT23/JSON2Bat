@@ -56,6 +56,9 @@ class CommandLineHandler {
   public:
     /**
      * @brief Prints the help message.
+     * @details
+     * - {ReqFunc1}
+     * - {ReqFunc2}
      *
      * @note This function ends the application.
      */
@@ -68,6 +71,8 @@ class CommandLineHandler {
     [[noreturn]] static void printVersion();
     /**
      * @brief Prints the credits message.
+     * @details
+     * - {ReqFunc3}
      *
      * @note This function ends the application.
      */
@@ -77,6 +82,9 @@ class CommandLineHandler {
      * @details
      * This function uses the "getopt.h" library to parse all options given
      * and then returns all files which are given as arguments.
+     * - {ReqFunc4}
+     * - {ReqFunc5}
+     * - {ReqNonFunc4}
      *
      * @param argc The number of arguments given
      * @param argv The arguments given
@@ -105,6 +113,7 @@ class CommandLineHandler {
  * @details
  * This struct contains all long and short options which can be used and will be
  * parsed using "getopt.h"
+ * - {ReqNonFunc4}
  *
  * @see CommandLineHandler
  */

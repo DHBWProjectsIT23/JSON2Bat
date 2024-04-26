@@ -27,6 +27,8 @@ std::shared_ptr<Json::Value> JsonHandler::parseFile(const std::string &filename)
 
 {
     LOG_INFO << "Parsing file: " << filename << "\n";
+    // Can open files anywhere with relative/absolute path
+    // - {ReqFunc5}
     std::ifstream file(filename);
     Json::Value newRoot;
 

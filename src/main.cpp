@@ -7,6 +7,22 @@
  * @details
  * The main function is responsible for connection all parts of the programm.
  * It calls all relevant classes and finishes when everything is done.
+ * - {ReqOptFunc3} - Documentation is done using doxygen syntax
+ * - {ReqOptFunc3} - All Classes, methods, funciton, namespaces and file are
+ * documented
+ * - {ReqNonFunc5} - Source files are found under src/sources, header under
+ * src/include
+ * - {ReqNonFunc6} - All header files can be included withou paths
+ * - {ReqNonFunc7} - Non source files are included
+ * - {ReqNonFunc8} - All header files include a "ifndef/define/endif" block
+ * - {ReqOptFunc5} - Every file has a top comment including the authors
+ * - {ReqOptFunc6} - Logging is done using easylogging++ library
+ *                 - A self written wrapper is used, to allow for parallel
+ * output to the stdout and the logfile. Though we don't consider this wrapper
+ * part of the project itself and as such is placed within the directorys for
+ * external libraries
+ * - Formatting is done via astyle
+ * - !{ReqOptFunc7} - No unit tests are included
  *
  * @copyright See LICENSE file
  */
@@ -39,6 +55,8 @@ parseAndValidateArgs(int argc, char* argv[]);
  * @details
  * Makes sures, that provided files exists and checks their file ending
  * @param files The files to be checked
+ * - {ReqFunc5}
+ *
  * @return A vector containing the valid files
  */
 const std::vector<std::string>
@@ -80,7 +98,7 @@ int main(int argc, char* argv[])
 
     files = validateFiles(files);
 
-    // Main parsing loop
+    // Loop for {ReqFunc7}
     for (auto file = files.begin(); file != files.end(); ++file) {
         OUTPUT << cli::ITALIC << "\nParsing file: " << *file << "...\n"
                << cli::RESET;
@@ -141,6 +159,7 @@ const std::vector<std::string> validateFiles(const std::vector<std::string>
 
     for (const std::filesystem::path file : files) {
         // Check that the file exists
+        // - {ReqFunc5}
         if (!std::filesystem::is_regular_file(file)) {
             LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
 
@@ -181,6 +200,7 @@ void parseFile(const std::string &file, const std::string &outputDirectory)
     BatchCreator batchCreator(fileData);
     const std::shared_ptr<std::stringstream> dataStream =
                 batchCreator.getDataStream();
+    // {ReqFunc18}
     // Full filename is output directory + output file
     const std::string outputFileName =
                 outputDirectory + fileData->getOutputFile();

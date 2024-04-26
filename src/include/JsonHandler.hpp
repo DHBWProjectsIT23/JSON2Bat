@@ -97,6 +97,7 @@ class JsonHandler {
      * @details
      * Retrieves the outputfile from Json::Value this->root and makes sure, that
      * the file doesn't already exist.
+     * - {ReqFunc8}
      *
      * @throw exceptions::FileExistsException
      */
@@ -106,6 +107,7 @@ class JsonHandler {
      * @details
      * Retrieves the value of the hideshell key from Json::Value this->root and
      * defaults to negative.
+     * - {ReqFunc9}
      */
     void assignHideShell() const;
     /**
@@ -113,6 +115,7 @@ class JsonHandler {
      * @details
      * Retrieves the value of the application key from Json::Value this->root and
      * defaults to an empty string.
+     * - {ReqFunc16}
      */
     void assignApplication() const;
     /**
@@ -121,6 +124,7 @@ class JsonHandler {
      * Goes through each of the entries from Json::Value this->root and
      * calls the relevant method depending on it's type.
      * All "type" keys should be valid by this point.
+     * - {ReqFunc10}
      *
      * @param entry Json::Value containing an array with entries
      *
@@ -129,16 +133,22 @@ class JsonHandler {
     void assignEntries() const;
     /**
      * @brief Assigns an command to this->data
+     * @details
+     * - {ReqFunc12}
      * @param entry The entry with the command
      */
     void assignCommand(const Json::Value &entry) const;
     /**
      * @brief Assigns an environmentVariable to this->data
+     * @details
+     * - {ReqFunc11}
      * @param entry The entry with the environmentVariable
      */
     void assignEnvironmentVariable(const Json::Value &entry) const;
     /**
      * @brief Assigns a path value to this->data
+     * @details
+     * - {ReqFunc13}
      * @param entry The entry with the path value
      */
     void assignPathValue(const Json::Value &entry) const;

@@ -1,3 +1,16 @@
+# - {ReqNonFunc1} - Tested with gcc version >=10.5.0
+#                 - 11.2.0 is part of Ubuntu 22.04LTS
+# - {ReqOptFunc1} - Not working with MingGW64 yet
+# - Working with clang version >=14.0.0
+#
+# - {ReqNonFunc2} - Tested in:
+# - WSL Ubuntu
+# - GitHub Actions - Ubuntu-Latest
+# - Arch Linux
+#
+# - {ReqOptFunc3} - Not running on Windows yet
+# - {ReqNonFunc3}
+
 cmake_minimum_required(VERSION 3.16)
 
 # Currently not supported on Windows
@@ -34,9 +47,9 @@ if(ASTYLE_EXECUTABLE)
   add_custom_target(
     astyle
     # TODO: Fix astyle
-    COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
-    # COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
-    #        ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+    #COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+     COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
+            ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     VERBATIM)
   set_target_properties(astyle PROPERTIES EXCLUDE_FROM_ALL FALSE)
 else()
