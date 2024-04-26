@@ -1,7 +1,7 @@
 <map id="BatchCreator::createBatch" name="BatchCreator::createBatch">
 <area shape="rect" id="Node000001" title="Creates the batch stream." alt="" coords="5,153,179,179"/>
-<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d" title="If an application is given, it is started at the end." alt="" coords="235,5,431,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,151,151,97,186,66,225,40,237,34,239,39,228,44,189,70,154,101,105,155"/>
+<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#af9bfc052ff3ee90beff0f35b56aed5bc" title="If an application is given, it is started at the end." alt="" coords="256,5,410,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,151,151,97,186,66,225,40,240,33,242,38,228,44,189,70,154,101,105,155"/>
 <area shape="rect" id="Node000003" href="$da/d1c/classBatchCreator.html#a7ea2646254825e194f831d98ae703ec8" title="Writes the commands to be executed." alt="" coords="234,55,432,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,151,162,120,226,89,245,82,247,88,228,94,164,125,114,155"/>
 <area shape="rect" id="Node000004" href="$da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319" title="Writes the end of the batch file." alt="" coords="256,104,410,130"/>

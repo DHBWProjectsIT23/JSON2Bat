@@ -19,7 +19,7 @@ std\+::shared\+\_\+ptr$<$ std\+::stringstream $>$ \mbox{\hyperlink{classBatchCre
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classBatchCreator_a2225babf16a473ba6722238c19d785ae}{create\+Batch}} ()
+void \mbox{\hyperlink{classBatchCreator_aca15cd9ed3a90d1f43ac2fd16175c676}{create\+Batch}} () const
 \begin{DoxyCompactList}\small\item\em Creates the batch stream. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBatchCreator_a5b0d5ddd55e65bdce910a010deb7847d}{write\+Start}} () const
 \begin{DoxyCompactList}\small\item\em Wirtes the start of the batch file. \end{DoxyCompactList}\item 
@@ -31,7 +31,7 @@ void \mbox{\hyperlink{classBatchCreator_a31d22f486b3608cdae0b7488fb3857a8}{write
 \begin{DoxyCompactList}\small\item\em Set\textquotesingle{}s environment variables. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBatchCreator_a0d08fe331105e1f2dd0ea56d12e86887}{write\+Path\+Variables}} () const
 \begin{DoxyCompactList}\small\item\em Set\textquotesingle{}s the path variables. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d}{write\+Application}} () const
+void \mbox{\hyperlink{classBatchCreator_af9bfc052ff3ee90beff0f35b56aed5bc}{write\+App}} () const
 \begin{DoxyCompactList}\small\item\em If an application is given, it is started at the end. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{write\+End}} () const
 \begin{DoxyCompactList}\small\item\em Writes the end of the batch file. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -69,7 +69,7 @@ Definition at line \mbox{\hyperlink{BatchCreator_8hpp_source_l00029}{29}} of fil
 
 Initializes the \doxylink{classBatchCreator}{Batch\+Creator}. 
 
-Creates a stringstream and calls the \doxylink{classBatchCreator_a2225babf16a473ba6722238c19d785ae}{create\+Batch()} function
+Creates a stringstream and calls the \doxylink{classBatchCreator_aca15cd9ed3a90d1f43ac2fd16175c676}{create\+Batch()} function
 
 
 \begin{DoxyParams}{Parameters}
@@ -82,7 +82,7 @@ Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00018}{18}} of fil
 
 
 
-References \mbox{\hyperlink{BatchCreator_8cpp_source_l00026}{create\+Batch()}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00052}{data\+Stream}}.
+References \mbox{\hyperlink{BatchCreator_8cpp_source_l00025}{create\+Batch()}}, and \mbox{\hyperlink{BatchCreator_8hpp_source_l00052}{data\+Stream}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -95,11 +95,11 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classBatchCreator_a2225babf16a473ba6722238c19d785ae}\label{classBatchCreator_a2225babf16a473ba6722238c19d785ae} 
+\Hypertarget{classBatchCreator_aca15cd9ed3a90d1f43ac2fd16175c676}\label{classBatchCreator_aca15cd9ed3a90d1f43ac2fd16175c676} 
 \index{BatchCreator@{BatchCreator}!createBatch@{createBatch}}
 \index{createBatch@{createBatch}!BatchCreator@{BatchCreator}}
 \doxysubsubsection{\texorpdfstring{createBatch()}{createBatch()}}
-{\footnotesize\ttfamily void Batch\+Creator\+::create\+Batch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Batch\+Creator\+::create\+Batch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -109,18 +109,18 @@ Creates the batch stream.
 
 The method calls all necessary functions to create the stream for the batch file. 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8cpp_source_l00088}{write\+Application()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00057}{write\+Commands()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00107}{write\+End()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00067}{write\+Env\+Variables()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00045}{write\+Hide\+Shell()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00076}{write\+Path\+Variables()}}, and \mbox{\hyperlink{BatchCreator_8cpp_source_l00038}{write\+Start()}}.
+References \mbox{\hyperlink{BatchCreator_8cpp_source_l00080}{write\+App()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00052}{write\+Commands()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00095}{write\+End()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00061}{write\+Env\+Variables()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00041}{write\+Hide\+Shell()}}, \mbox{\hyperlink{BatchCreator_8cpp_source_l00069}{write\+Path\+Variables()}}, and \mbox{\hyperlink{BatchCreator_8cpp_source_l00036}{write\+Start()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/d1c/classBatchCreator_a2225babf16a473ba6722238c19d785ae_cgraph}
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_aca15cd9ed3a90d1f43ac2fd16175c676_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -128,7 +128,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/d1c/classBatchCreator_a2225babf16a473ba6722238c19d785ae_icgraph}
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_aca15cd9ed3a90d1f43ac2fd16175c676_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}\label{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965} 
@@ -160,23 +160,19 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{da/d1c/classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d}\label{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d} 
-\index{BatchCreator@{BatchCreator}!writeApplication@{writeApplication}}
-\index{writeApplication@{writeApplication}!BatchCreator@{BatchCreator}}
-\doxysubsubsection{\texorpdfstring{writeApplication()}{writeApplication()}}
-{\footnotesize\ttfamily void Batch\+Creator\+::write\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{classBatchCreator_af9bfc052ff3ee90beff0f35b56aed5bc}\label{classBatchCreator_af9bfc052ff3ee90beff0f35b56aed5bc} 
+\index{BatchCreator@{BatchCreator}!writeApp@{writeApp}}
+\index{writeApp@{writeApp}!BatchCreator@{BatchCreator}}
+\doxysubsubsection{\texorpdfstring{writeApp()}{writeApp()}}
+{\footnotesize\ttfamily void Batch\+Creator\+::write\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 If an application is given, it is started at the end. 
 
-If the key "{}application"{} is given in the json file, the application is started at the end of the batch file.
-\begin{DoxyItemize}
-\item \{Req\+Func16\}
-\item \{Req\+Func25\} 
-\end{DoxyItemize}
+If the key "{}application"{} is given in the json file, the application is started at the end of the batch file. 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
@@ -187,7 +183,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/d1c/classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d_icgraph}
+\includegraphics[width=350pt]{da/d1c/classBatchCreator_af9bfc052ff3ee90beff0f35b56aed5bc_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classBatchCreator_a7ea2646254825e194f831d98ae703ec8}\label{classBatchCreator_a7ea2646254825e194f831d98ae703ec8} 
@@ -200,13 +196,9 @@ Here is the caller graph for this function\+:
 
 Writes the commands to be executed. 
 
-Writes the commands to be executed from the File\+Data object. Those originiate from the "{}commands"{} entry in the json file
-\begin{DoxyItemize}
-\item \{Req\+Func20\}
-\item \{Req\+Func22\} 
-\end{DoxyItemize}
+Writes the commands to be executed from the File\+Data object. Those originiate from the "{}commands"{} entry in the json file 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
@@ -235,7 +227,7 @@ Writes the end of the batch file, which is always the same\+:
 \item @\+ECHO ON 
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
@@ -261,12 +253,10 @@ Set\textquotesingle{}s environment variables.
 
 Set\textquotesingle{}s the envirment variables for the batch. Those originiate from the "{}\+ENV"{} entry in the json file with the following syntax\+:
 \begin{DoxyItemize}
-\item Entry under "{}key"{} = Entry under "{}value"{}
-\item \{Req\+Func20\}
-\item \{Req\+Func21\} 
+\item Entry under "{}key"{} = Entry under "{}value"{} 
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
@@ -290,12 +280,9 @@ Here is the caller graph for this function\+:
 
 Writes the visibility of the shell. 
 
-This hides/shows the shell after the batch file has been executed
-\begin{DoxyItemize}
-\item \{Req\+Func19\} 
-\end{DoxyItemize}
+This hides/shows the shell after the batch file has been executed 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
@@ -319,13 +306,9 @@ Here is the caller graph for this function\+:
 
 Set\textquotesingle{}s the path variables. 
 
-Set\textquotesingle{}s the path variables for the batch. Those originiate from the "{}\+PATH"{} entry in the json file
-\begin{DoxyItemize}
-\item \{Req\+Func20\}
-\item \{Req\+Func23\} 
-\end{DoxyItemize}
+Set\textquotesingle{}s the path variables for the batch. Those originiate from the "{}\+PATH"{} entry in the json file 
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
@@ -355,7 +338,7 @@ Writes the start of the batch file, which is always the same\+:
 \item startet cmd.\+exe 
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
+Definition at line \mbox{\hyperlink{BatchCreator_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{BatchCreator_8cpp_source}{Batch\+Creator.\+cpp}}.
 
 
 
