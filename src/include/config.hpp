@@ -18,8 +18,10 @@
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
 
-#include <string>
-
+/**
+ * @namespace config
+ * @brief Namespace used for general project information
+ */
 namespace config {
 inline constexpr auto LOG_CONFIG = "/home/simon/1_Coding/projectJsonToBat/"
                                    "build/Release/config/easylogging.conf";
@@ -30,9 +32,9 @@ inline constexpr auto PATCH_VERSION = "2";
 inline constexpr auto DESCRIPTION = "A simple tool to convert json to batch.";
 inline constexpr auto PROJECT_NAME = "JSON2Batch";
 inline constexpr auto AUTHORS =
-    "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci";
+            "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci";
 inline constexpr auto HOMEPAGE_URL =
-    "https://dhbwprojectsit23.github.io/JSON2Bat";
+            "https://dhbwprojectsit23.github.io/JSON2Bat";
 } // namespace config
 
 #endif

@@ -18,8 +18,10 @@
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
 
-#include <string>
-
+/**
+ * @namespace config
+ * @brief Namespace used for general project information
+ */
 namespace config {
 inline constexpr auto LOG_CONFIG = "/home/simon/1_Coding/projectJsonToBat/"
                                    "build/Release/config/easylogging.conf";

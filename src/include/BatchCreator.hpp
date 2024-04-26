@@ -1,110 +1,128 @@
 /**
  * @file BatchCreator.hpp
  * @author Maximilian Rodler
- * @date 22.04.2024
- * @version
- * @brief
- * @details
+ * @date 2024-04-22
+ * @version 0.2.1
+ * @brief Contains the BatchCreator class.
+ *
+ * @see BatchCreator
+ *
+ * @see src/sources/BatchCreator.cpp
  *
  * @copyright See LICENSE file
  *
- * @todo Documentation in english
  */
 
 #include "FileData.hpp"
-#include "JsonHandler.hpp"
-#include <fstream>
+#include <memory>
 #include <sstream>
 
 /**
  * @class BatchCreator
- * @brief Erstellt Batch Datei
- * @details Wandelt Elemente aus JSON-Datei in Batch-Format um
+ * @brief Creates a batch file from a FileData obeject
+ * @details
+ * Uses a FileData object to create a string stream, which can then
+ * be streamed into a batch file.
  *
- * @see
- *
+ * @see FileData
  */
 class BatchCreator {
-public:
-  /**
-   * @brief Initialisiert BatchCreator
-   * @details
-   *
-   * @param filename
-   *
-   */
-  explicit BatchCreator(std::shared_ptr<parsing::FileData> fileData);
+  public:
+    /**
+     * @brief Initializes the BatchCreator
+     * @details
+     * Creates a stringstream and calls the createBatch() function
+     *
+     * @param filenData A shared pointer to the FileData object
+     *
+     */
+    explicit BatchCreator(std::shared_ptr<parsing::FileData> fileData);
 
-  /** @todo Documentation */
-  [[nodiscard]] std::shared_ptr<std::stringstream> getDataStream() const {
-    return dataStream;
-  }
+    /**
+     * @brief Returns the stringstream
+     *
+     * @return A shared pointer to the stringstream
+     */
+    [[nodiscard]] std::shared_ptr<std::stringstream> getDataStream() const {
+        return dataStream;
+    }
 
-private:
-  std::shared_ptr<std::stringstream> dataStream;
+  private:
+    std::shared_ptr<std::stringstream>
+    dataStream; /** < stringstream for the batch file */
 
-  std::shared_ptr<parsing::FileData> fileData;
+    std::shared_ptr<parsing::FileData> fileData; /** < FileData object */
 
-  /**
-   * @brief Setzt batch Datei zusammen
-   * @details Beinhaltet Aufrufe der einzelnen Komponenten der batch Datei
-   *
-   */
-  void createBatch();
+    /**
+     * @brief Creates the batch stream
+     * @details
+     * The method calls all necessary functions to create the stream for the batch
+     * file.
+     *
+     */
+    void createBatch();
 
-  /**
-   * @brief Anfang der Batch Datei
-   * @details Schreibt den Teil der Batch Datei der immer gleich ist.
-   * - setzt ECHO off
-   * - startet cmd.exe
-   *
-   */
-  void writeStart() const;
+    /**
+     * @brief Wirtes the start of the batch file
+     * @details
+     * Writes the start of the batch file, which is always the same:
+     * - setzt ECHO off
+     * - startet cmd.exe
+     *
+     */
+    void writeStart() const;
 
-  /**
-   * @brief Sichtbarkeit Konsole
-   * @details Zeigt bzw. versteckt Konsolenausgabe
-   *
-   */
-  void writeHideShell() const;
+    /**
+     * @brief Writes the visibility of the shell
+     * @details
+     * This hides/shows the shell after the batch file has been executed
+     *
+     */
+    void writeHideShell() const;
 
-  /**
-   * @brief Befehle ausführen
-   * @details Führt Befehle aus:
-   * Zu finden unter "EXE" als "command"
-   *
-   */
-  void writeCommands() const;
+    /**
+     * @brief Writes the commands to be executed
+     * @details
+     * Writes the commands to be executed from the FileData object.
+     * Those originiate from the "commands" entry in the json file
+     *
+     */
+    void writeCommands() const;
 
-  /**
-   * @brief Umgebungsvariablen setzten
-   * @details Setzt Umgebungsvariablen aus "ENV" nach folgender Syntax:
-   * Eintrag unter "key" = Eintrag unter "value"
-   *
-   */
-  void writeEnvVariables() const;
+    /**
+     * @brief Set's environment variables
+     * @details
+     * Set's the envirment variables for the batch.
+     * Those originiate from the "ENV" entry in the json file with
+     * the following syntax:
+     * - Entry under "key" = Entry under "value"
+     *
+     */
+    void writeEnvVariables() const;
 
-  /**
-   * @brief Pfade setzten
-   * @details Verknüpft die unter "PATH" angegebenen Pfade mit dem Systempfad
-   * Setzt Pfad
-   *
-   */
-  void writePathVariables() const;
+    /**
+     * @brief Set's the path variables
+     * @details Set's the path variables for the batch.
+     * Those originiate from the "PATH" entry in the json file
+     *
+     */
+    void writePathVariables() const;
 
-  /**
-   * @brief Öffnet Anwednung falls gewünscht
-   * @details Öffnet Anwedung, falls unter "application" gegeben
-   * Wird unter dem Namen aus "outputfile" gestartet
-   *
-   */
-  void writeApp() const;
+    /**
+     * @brief If an application is given, it is started at the end
+     * @details
+     * If the key "application" is given in the json file, the application
+     * is started at the end of the batch file.
+     *
+     */
+    void writeApp() const;
 
-  /**
-   * @brief Ende der Batch Datei
-   * @details Schreibt den teil der Batch Datei der immer gleich ist
-   * - setzt ECHO OFF
-   *
-   */
-  void writeEnd() const;
+    /**
+     * @brief Writes the end of the batch file
+     * @details
+     * Writes the end of the batch file, which is always the same:
+     * - @ECHO ON
+     *
+     */
+    void writeEnd() const;
 };
