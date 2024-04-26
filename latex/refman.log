@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.26)  26 APR 2024 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.26)  26 APR 2024 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,27 +879,27 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 9.
+(Font)              scaled to size 12.9599pt on input line 5.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 8.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-2.
+1.
 (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 34.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 46.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 46.
+(Font)              scaled to size 8.99994pt on input line 11.
  [1
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 68.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 45.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 68.
+(Font)              scaled to size 8.99994pt on input line 45.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 67.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 67.
  [2]) [3] [4
 
 ]
@@ -1315,7 +1315,7 @@ T1/pcr/m/n/8 parsing[]::[]File[]Data[]::environment[]Variables
 
 ) (./df/d36/classexceptions_1_1FileExistsException.tex <./d5/d44/classexception
 s_1_1FileExistsException__inherit__graph.pdf>
-<d5/d44/classexceptions_1_1FileExistsException__inherit__graph.pdf, id=2436, 23
+<d5/d44/classexceptions_1_1FileExistsException__inherit__graph.pdf, id=2437, 23
 1.86626pt x 210.7875pt>
 File: d5/d44/classexceptions_1_1FileExistsException__inherit__graph.pdf Graphic
  file (type pdf)
@@ -1785,7 +1785,7 @@ Underfull \hbox (badness 10000) detected at line 71
 
 [70]) (./d5/d67/classexceptions_1_1MissingTypeException.tex <./d7/dd6/classexce
 ptions_1_1MissingTypeException__inherit__graph.pdf>
-<d7/dd6/classexceptions_1_1MissingTypeException__inherit__graph.pdf, id=3269, 2
+<d7/dd6/classexceptions_1_1MissingTypeException__inherit__graph.pdf, id=3270, 2
 44.915pt x 210.7875pt>
 File: d7/dd6/classexceptions_1_1MissingTypeException__inherit__graph.pdf Graphi
 c file (type pdf)
@@ -2583,11 +2583,11 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 2AA5694AF1F00D6EE9FB3FB29EFD2138;59464.
+(rerunfilecheck)             Checksum: D80D52413FC098FDEDB9BD5C176324BB;59289.
  ) 
 Here is how much of TeX's memory you used:
- 21802 strings out of 476025
- 429070 string characters out of 5796497
+ 21804 strings out of 476025
+ 429186 string characters out of 5796497
  1875388 words of memory out of 5000000
  39549 multiletter control sequences out of 15000+600000
  572154 words of font info for 111 fonts, out of 8000000 for 9000
@@ -2604,10 +2604,10 @@ ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (138 pages, 1140957 bytes).
+Output written on refman.pdf (138 pages, 1141050 bytes).
 PDF statistics:
  6790 PDF objects out of 7423 (max. 8388607)
  6193 compressed objects within 62 object streams
- 2062 named destinations out of 2073 (max. 500000)
- 2763 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2064 named destinations out of 2073 (max. 500000)
+ 2755 words of extra memory for PDF output out of 10000 (max. 10000000)
 
