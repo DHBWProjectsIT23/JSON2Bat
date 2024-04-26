@@ -71,7 +71,7 @@
   \item {config}, \hyperpage{18}
     \subitem {AUTHORS}, \hyperpage{18}
     \subitem {DESCRIPTION}, \hyperpage{18}
-    \subitem {EXECUTABLE\_NAME}, \hyperpage{18}
+    \subitem {EXECUTABLE\_NAME}, \hyperpage{19}
     \subitem {HOMEPAGE\_URL}, \hyperpage{19}
     \subitem {LOG\_CONFIG}, \hyperpage{19}
     \subitem {MAJOR\_VERSION}, \hyperpage{19}
@@ -146,7 +146,7 @@
     \subitem {UnreachableCodeException}, \hyperpage{80}
     \subitem {what}, \hyperpage{81}
   \item {EXECUTABLE\_NAME}
-    \subitem {config}, \hyperpage{18}
+    \subitem {config}, \hyperpage{19}
 
   \indexspace
 
