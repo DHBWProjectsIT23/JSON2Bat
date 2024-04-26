@@ -1,9 +1,7 @@
 [![CMake on windows](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml/badge.svg?branch=main)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-windows.yml) 
 [![CMake on linux](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml/badge.svg?branch=main)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/cmake-linux.yml)
+[![Documentation Deployed](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml/badge.svg)](https://github.com/DHBWProjectsIT23/JSON2Bat/actions/workflows/doxygenPages.yml)
 # JSON2Batch
-
-
-
 
 JSON2Batch was developed during a project during our first and second
 semester of university.
