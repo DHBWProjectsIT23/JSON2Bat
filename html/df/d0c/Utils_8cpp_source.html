@@ -194,13 +194,37 @@ $(document).ready(function(){initNavTree('df/d0c/Utils_8cpp_source.html','../../
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
 </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>} <span class="comment">// namespace utilities</span></div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../d6/d9e/classutilities_1_1Utils.html#a42f254912eaecc78eeb04eaf3c32d150">   97</a></span><span class="keyword">const</span> std::string <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a42f254912eaecc78eeb04eaf3c32d150">Utils::escapeString</a>(<span class="keyword">const</span> std::string &amp;str) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// Map of characters to their escape sequences</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::unordered_map&lt;char, std::string&gt; escapeSequences = {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {<span class="charliteral">&#39;\\&#39;</span>, <span class="stringliteral">&quot;\\\\&quot;</span>},    <span class="comment">// Replace backslash with double backslash</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        {<span class="charliteral">&#39;\n&#39;</span>, <span class="stringliteral">&quot;\\n&quot;</span>},     <span class="comment">// Replace newline with backslash-n</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        {<span class="charliteral">&#39;\t&#39;</span>, <span class="stringliteral">&quot;\\t&quot;</span>},     <span class="comment">// Replace tab with backslash-t</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        {<span class="stringliteral">&#39;\x1A&#39;</span>, <span class="stringliteral">&quot;\\x1A&quot;</span>}, <span class="comment">// Replace end of file with backslash-x1A</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {<span class="charliteral">&#39;\r&#39;</span>, <span class="stringliteral">&quot;\\r&quot;</span>}      <span class="comment">// Replace carriage return with backslash-r</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    };</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    std::ostringstream escapedStream;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c : str) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> (escapeSequences.count(c)) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            escapedStream &lt;&lt; escapeSequences.at(c);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            escapedStream &lt;&lt; c;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> escapedStream.str();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>} <span class="comment">// namespace utilities</span></div>
 <div class="ttc" id="aCommandLineHandler_8hpp_html"><div class="ttname"><a href="../../d2/d5f/CommandLineHandler_8hpp.html">CommandLineHandler.hpp</a></div><div class="ttdoc">Responsible for the Command Line Interface.</div></div>
 <div class="ttc" id="aExceptions_8hpp_html"><div class="ttname"><a href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a></div><div class="ttdoc">Contains all the custom exceptions used in the project.</div></div>
 <div class="ttc" id="aUtils_8hpp_html"><div class="ttname"><a href="../../d7/d09/Utils_8hpp.html">Utils.hpp</a></div></div>
 <div class="ttc" id="aclassexceptions_1_1CustomException_html"><div class="ttname"><a href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a></div><div class="ttdoc">Base class for all custom exceptions.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/de9/Exceptions_8hpp_source.html#l00035">Exceptions.hpp:35</a></div></div>
 <div class="ttc" id="aclassexceptions_1_1CustomException_html_a128c3c054a385cda67e271d2064b0d1f"><div class="ttname"><a href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f">exceptions::CustomException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdef"><b>Definition</b> <a href="../../d2/de9/Exceptions_8hpp_source.html#l00037">Exceptions.hpp:37</a></div></div>
 <div class="ttc" id="aclassexceptions_1_1NoSuchDirException_html"><div class="ttname"><a href="../../d9/d05/classexceptions_1_1NoSuchDirException.html">exceptions::NoSuchDirException</a></div><div class="ttdoc">Exception for when a directory does not exist.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/de9/Exceptions_8hpp_source.html#l00277">Exceptions.hpp:277</a></div></div>
+<div class="ttc" id="aclassutilities_1_1Utils_html_a42f254912eaecc78eeb04eaf3c32d150"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#a42f254912eaecc78eeb04eaf3c32d150">utilities::Utils::escapeString</a></div><div class="ttdeci">static const std::string escapeString(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00097">Utils.cpp:97</a></div></div>
 <div class="ttc" id="aclassutilities_1_1Utils_html_a982a6227fd42d6437eaea4b6887df4ff"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a></div><div class="ttdeci">static bool askToContinue(const std::string &amp;prompt=&quot;Do you want to continue? (Y/N)\n&quot;)</div><div class="ttdoc">Asks if the user wants to continue.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00034">Utils.cpp:34</a></div></div>
 <div class="ttc" id="aclassutilities_1_1Utils_html_aba875f8f5a9d060b28aabd965d3a5eb0"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">utilities::Utils::setupEasyLogging</a></div><div class="ttdeci">static void setupEasyLogging(const std::string &amp;configFile)</div><div class="ttdoc">Set up easylogging.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00025">Utils.cpp:25</a></div></div>
 <div class="ttc" id="aclassutilities_1_1Utils_html_abf18cb6fd599bec6e8c55b62ee178640"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#abf18cb6fd599bec6e8c55b62ee178640">utilities::Utils::checkConfigFile</a></div><div class="ttdeci">static void checkConfigFile(const std::string &amp;configFile)</div><div class="ttdoc">Checks if the easylogging-config file exists.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00055">Utils.cpp:55</a></div></div>
@@ -219,7 +243,7 @@ $(document).ready(function(){initNavTree('df/d0c/Utils_8cpp_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1615da3a94339053b2ab44db3685f5d0.html">sources</a></li><li class="navelem"><a class="el" href="../../df/d0c/Utils_8cpp.html">Utils.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 15:53:58 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 17:45:24 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

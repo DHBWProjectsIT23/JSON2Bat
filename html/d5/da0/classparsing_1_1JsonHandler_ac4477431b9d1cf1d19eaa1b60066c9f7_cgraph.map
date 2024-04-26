@@ -2,8 +2,16 @@
 <area shape="rect" id="Node000001" title="Assigns entries to this&#45;&gt;data." alt="" coords="5,71,148,111"/>
 <area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="217,5,359,46"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,68,204,49,206,54,145,73"/>
-<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="196,71,380,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,88,180,88,180,94,148,94"/>
-<area shape="rect" id="Node000004" href="$d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="217,136,359,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="145,109,206,128,204,133,144,114"/>
+<area shape="rect" id="Node000005" href="$d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="196,71,380,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="148,88,180,88,180,94,148,94"/>
+<area shape="rect" id="Node000006" href="$d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="217,136,359,177"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="145,109,206,128,204,133,144,114"/>
+<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a62e63826ca3646f6ed4b6722b2205e33" title=" " alt="" coords="428,39,583,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,34,413,42,412,47,359,39"/>
+<area shape="rect" id="Node000004" href="$d6/d9e/classutilities_1_1Utils.html#a42f254912eaecc78eeb04eaf3c32d150" title=" " alt="" coords="434,104,577,145"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="353,44,381,57,406,73,429,89,441,95,438,99,427,93,403,77,379,61,351,49"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="380,75,412,70,413,75,381,80"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="381,103,419,108,418,114,380,108"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="350,133,379,121,403,106,427,90,438,84,441,89,429,95,406,110,381,125,353,138"/>
+<area shape="poly" id="edge9_Node000006_Node000004" title=" " alt="" coords="359,143,418,134,419,140,360,148"/>
 </map>

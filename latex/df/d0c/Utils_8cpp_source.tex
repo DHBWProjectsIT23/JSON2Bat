@@ -85,6 +85,27 @@
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00095}00095\ \}}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00096}00096\ }
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00097}00097\ \}\ \textcolor{comment}{//\ namespace\ utilities}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00097}\mbox{\hyperlink{classutilities_1_1Utils_a42f254912eaecc78eeb04eaf3c32d150}{00097}}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classutilities_1_1Utils_a42f254912eaecc78eeb04eaf3c32d150}{Utils::escapeString}}(\textcolor{keyword}{const}\ std::string\ \&str)\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Map\ of\ characters\ to\ their\ escape\ sequences}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::unordered\_map<char,\ std::string>\ escapeSequences\ =\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'},\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"{}}\},\ \ \ \ \textcolor{comment}{//\ Replace\ backslash\ with\ double\ backslash}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\(\backslash\)n'},\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)n"{}}\},\ \ \ \ \ \textcolor{comment}{//\ Replace\ newline\ with\ backslash-\/n}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\(\backslash\)t'},\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)t"{}}\},\ \ \ \ \ \textcolor{comment}{//\ Replace\ tab\ with\ backslash-\/t}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{'\(\backslash\)x1A'},\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)x1A"{}}\},\ \textcolor{comment}{//\ Replace\ end\ of\ file\ with\ backslash-\/x1A}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \{\textcolor{charliteral}{'\(\backslash\)r'},\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)r"{}}\}\ \ \ \ \ \ \textcolor{comment}{//\ Replace\ carriage\ return\ with\ backslash-\/r}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00105}00105\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00107}00107\ \ \ \ \ std::ostringstream\ escapedStream;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ :\ str)\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (escapeSequences.count(c))\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ escapedStream\ <<\ escapeSequences.at(c);}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ escapedStream\ <<\ c;}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{return}\ escapedStream.str();}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00118}00118\ \}\ \textcolor{comment}{//\ namespace\ utilities}}
 
 \end{DoxyCode}

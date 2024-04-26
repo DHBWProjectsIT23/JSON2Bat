@@ -10,5 +10,6 @@ var Exceptions_8hpp =
     [ "exceptions::MissingTypeException", "d5/d67/classexceptions_1_1MissingTypeException.html", "d5/d67/classexceptions_1_1MissingTypeException" ],
     [ "exceptions::UnreachableCodeException", "d9/d52/classexceptions_1_1UnreachableCodeException.html", "d9/d52/classexceptions_1_1UnreachableCodeException" ],
     [ "exceptions::FailedToOpenFileException", "de/da8/classexceptions_1_1FailedToOpenFileException.html", "de/da8/classexceptions_1_1FailedToOpenFileException" ],
-    [ "exceptions::NoSuchDirException", "d9/d05/classexceptions_1_1NoSuchDirException.html", "d9/d05/classexceptions_1_1NoSuchDirException" ]
+    [ "exceptions::NoSuchDirException", "d9/d05/classexceptions_1_1NoSuchDirException.html", "d9/d05/classexceptions_1_1NoSuchDirException" ],
+    [ "exceptions::ContainsBadCharacterException", "d8/d32/classexceptions_1_1ContainsBadCharacterException.html", "d8/d32/classexceptions_1_1ContainsBadCharacterException" ]
 ];

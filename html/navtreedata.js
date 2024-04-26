@@ -44,6 +44,7 @@ var NAVTREE =
       [ "jsoncpp", "index.html#autotoc_md13", null ]
     ] ],
     [ "License", "index.html#autotoc_md14", null ],
+    [ "Todo List", "dd/da0/todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -75,7 +76,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dc/de6/classexceptions_1_1ParsingException.html#af94c6543ac42256ca52c4d2c9765f5fa"
+"dc/d85/BatchCreator_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

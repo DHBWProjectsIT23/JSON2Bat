@@ -4,6 +4,7 @@ var hierarchy =
     [ "cli::CommandLineHandler", "d4/d06/classcli_1_1CommandLineHandler.html", null ],
     [ "std::exception", null, [
       [ "exceptions::CustomException", "dc/d56/classexceptions_1_1CustomException.html", [
+        [ "exceptions::ContainsBadCharacterException", "d8/d32/classexceptions_1_1ContainsBadCharacterException.html", null ],
         [ "exceptions::FailedToOpenFileException", "de/da8/classexceptions_1_1FailedToOpenFileException.html", null ],
         [ "exceptions::FileExistsException", "df/d36/classexceptions_1_1FileExistsException.html", null ],
         [ "exceptions::InvalidKeyException", "de/d9e/classexceptions_1_1InvalidKeyException.html", null ],
