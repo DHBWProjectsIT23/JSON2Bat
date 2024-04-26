@@ -1,0 +1,43 @@
+.TH JSON2Batch 1 27.04.2024
+
+.SH NAME
+.B JSON2Batch
+\- 0.2.4
+
+.SH SYNOPSIS
+.B json2batch
+[\fIOPTIONS\fR]
+.IR "file1 file2 ... "
+
+.SH DESCRIPTION
+.B json2batch
+A simple tool to convert json to batch.
+
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Print this help message and exit.
+.TP
+.B \-v, \-\-version
+Print the version number and exit.
+.TP
+.B \-o, \-\-outdir [path]
+Specify the output directory for the batch file.
+.TP
+.B \-c, \-\-credits
+Print the credits and exit.
+.TP
+.B \-\-verbose
+Start the application in verbose mode. This flag should be passed first.
+
+.SH AUTHORS
+The project was created by Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci.
+
+.SH COPYRIGHT
+JSON2Batch is distributed under the Apache License, Version 2.0.
+
+.SH DOCUMENTATION
+The documentation can be found at:
+.RS 
+.B https://dhbwprojectsit23.github.io/JSON2Bat
+.RE
