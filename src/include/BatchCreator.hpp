@@ -76,6 +76,7 @@ class BatchCreator {
      * @brief Writes the visibility of the shell
      * @details
      * This hides/shows the shell after the batch file has been executed
+     * - {ReqFunc19}
      *
      */
     void writeHideShell() const;
@@ -85,6 +86,8 @@ class BatchCreator {
      * @details
      * Writes the commands to be executed from the FileData object.
      * Those originiate from the "commands" entry in the json file
+     * - {ReqFunc20}
+     * - {ReqFunc22}
      *
      */
     void writeCommands() const;
@@ -96,6 +99,8 @@ class BatchCreator {
      * Those originiate from the "ENV" entry in the json file with
      * the following syntax:
      * - Entry under "key" = Entry under "value"
+     * - {ReqFunc20}
+     * - {ReqFunc21}
      *
      */
     void writeEnvVariables() const;
@@ -104,6 +109,8 @@ class BatchCreator {
      * @brief Set's the path variables
      * @details Set's the path variables for the batch.
      * Those originiate from the "PATH" entry in the json file
+     * - {ReqFunc20}
+     * - {ReqFunc23}
      *
      */
     void writePathVariables() const;
@@ -113,9 +120,11 @@ class BatchCreator {
      * @details
      * If the key "application" is given in the json file, the application
      * is started at the end of the batch file.
+     * - {ReqFunc16}
+     * - {ReqFunc25}
      *
      */
-    void writeApp() const;
+    void writeApplication() const;
 
     /**
      * @brief Writes the end of the batch file

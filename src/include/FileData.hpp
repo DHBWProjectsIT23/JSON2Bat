@@ -27,6 +27,7 @@ namespace parsing {
  * The data from the json file is parsed by the JsonHandler and then assigned
  * to the attributes of an instance of this class.
  * This class also handles a part of the error handling.
+ * - {ReqFunc14}
  */
 class FileData {
   public:
@@ -151,9 +152,11 @@ class FileData {
     std::string outputfile;
     bool hideShell;
     std::optional<std::string> application;
+    // {ReqFunc15}
     std::vector<std::string> commands;
-    // Tuple<Name, Value>
+    // Tuple<key, value> - {ReqFunc15}
     std::vector<std::tuple<std::string, std::string>> environmentVariables;
+    // {ReqFunc15}
     std::vector<std::string> pathValues;
 };
 } // namespace parsing

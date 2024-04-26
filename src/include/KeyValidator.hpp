@@ -26,6 +26,7 @@ namespace parsing {
  * This class is singleton. That way when multiple files are parsed
  * with the application, the maps for valid keys and the set for the type
  * entries field only have to be allocated once when parsing multiple files.
+ * - {ReqFunc17}
  */
 class KeyValidator {
   public:
