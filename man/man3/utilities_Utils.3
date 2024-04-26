@@ -1,4 +1,4 @@
-.TH "utilities::Utils" 3 "Fri Apr 26 2024 17:50:57" "Version 0.2.5" "JSON2Batch" \" -*- nroff -*-
+.TH "utilities::Utils" 3 "Fri Apr 26 2024 18:24:04" "Version 0.2.5" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,7 +33,7 @@ utilities::Utils \- Responsible for utility function\&.
 .br
 .RI "Checks if the given directory exists and is valid\&. "
 .ti -1c
-.RI "static const std::string \fBescapeString\fP (const std::string &str)"
+.RI "static std::string \fBescapeString\fP (const std::string &str)"
 .br
 .RI "Escape any unwanted escape sequences in a string\&. "
 .in -1c
@@ -95,7 +95,7 @@ The checked directory
 
 .PP
 Definition at line \fB65\fP of file \fBUtils\&.cpp\fP\&.
-.SS "const std::string utilities::Utils::escapeString (const std::string & str)\fC [static]\fP"
+.SS "std::string utilities::Utils::escapeString (const std::string & str)\fC [static]\fP"
 
 .PP
 Escape any unwanted escape sequences in a string\&. This function takes a string and escapes already existing escape sequences\&. E\&.g\&. '\\n' would become '\\\\n'\&.

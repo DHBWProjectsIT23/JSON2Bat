@@ -1,4 +1,4 @@
-.TH "parsing::JsonHandler" 3 "Fri Apr 26 2024 17:50:57" "Version 0.2.5" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::JsonHandler" 3 "Fri Apr 26 2024 18:24:04" "Version 0.2.5" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -69,7 +69,7 @@ parsing::JsonHandler \- This file reads all data from the json file\&.
 .br
 .RI "Parses the given json file\&. "
 .ti -1c
-.RI "static bool \fBcontainsBadCharacter\fP (const std::string &str)"
+.RI "static bool \fBcontainsBadCharacter\fP (const std::string_view &str)"
 .br
 .RI "Check if a string contains a bad character\&. "
 .in -1c
@@ -244,7 +244,7 @@ Assigns a path value to this->data\&.
 Definition at line \fB144\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBcontainsBadCharacter()\fP, \fBdata\fP, and \fButilities::Utils::escapeString()\fP\&.
-.SS "bool parsing::JsonHandler::containsBadCharacter (const std::string & str)\fC [static]\fP, \fC [private]\fP"
+.SS "bool parsing::JsonHandler::containsBadCharacter (const std::string_view & str)\fC [static]\fP, \fC [private]\fP"
 
 .PP
 Check if a string contains a bad character\&. This method checks if a given string contains a bad character\&. Bad characters are declared in a set within the function\&. This is done to ensure, that no characters such as line breaks, break the later generated batch file\&.
