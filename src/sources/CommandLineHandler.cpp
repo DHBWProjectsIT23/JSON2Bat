@@ -131,7 +131,6 @@ CommandLineHandler::parseArguments(int argc, char *argv[]) {
         files.emplace_back(argv[optind++]);
     }
 
-    LOG_DEBUG << files.size();
     LOG_INFO << "Arguments and options have been parsed";
     return {outDir, files};
 }

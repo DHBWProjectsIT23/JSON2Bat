@@ -85,17 +85,29 @@ public:
     static void checkConfigFile(const std::string &configFile);
 
     /**
-    * @brief Checks if the given directory exists and is valid
-    *
-    * @details
-    * This function checks if the given directory exists and is valid. If the
-    * directory does not end with a '/' or a '\', it will be added.
-    *
-    * @param directory The directory to be checked
-    *
-    * @return The checked directory
-    */
+     * @brief Checks if the given directory exists and is valid
+     *
+     * @details
+     * This function checks if the given directory exists and is valid. If the
+     * directory does not end with a '/' or a '\', it will be added.
+     *
+     * @param directory The directory to be checked
+     *
+     * @return The checked directory
+     */
     static const std::string &checkDirectory(std::string &directory);
+
+    /**
+    * @brief Escape any unwanted escape sequences in a string.
+    * @details
+    * This function takes a string and escapes already existing escape
+    * sequences. E.g. "\n" would become "\\n".
+    *
+    * @param str The string to be escaped
+    *
+    * @return The processed string
+    */
+    static const std::string escapeString(const std::string &str);
 };
 } // namespace utilities
 

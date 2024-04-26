@@ -23,7 +23,7 @@
  * @brief Namespace used for general project information
  */
 namespace config {
-inline constexpr auto LOG_CONFIG = "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging.conf";
+inline constexpr auto LOG_CONFIG = "/home/simon/1_Coding/projectJsonToBat/build/Debug/config/easylogging.conf";
 inline constexpr auto EXECUTABLE_NAME = "json2batch";
 inline constexpr auto MAJOR_VERSION = "0";
 inline constexpr auto MINOR_VERSION = "2";
