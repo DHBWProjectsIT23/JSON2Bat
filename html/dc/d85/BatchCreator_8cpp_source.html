@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
+   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.3</span>
    </div>
    <div id="projectbrief">A simple tool to convert json to batch.</div>
   </td>
@@ -185,30 +185,29 @@ $(document).ready(function(){initNavTree('dc/d85/BatchCreator_8cpp_source.html',
 </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d">BatchCreator::writeApplication</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::string appName = this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">fileData</a>-&gt;getOutputFile();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    appName = appName.substr(0, appName.find(<span class="charliteral">&#39;.&#39;</span>));</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">fileData</a>-&gt;getApplication().has_value()) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        LOG_INFO &lt;&lt; <span class="stringliteral">&quot;writing start Application&quot;</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        *this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">dataStream</a> &lt;&lt; <span class="stringliteral">&quot; &amp;&amp; start \&quot;&quot;</span> &lt;&lt; appName</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                          &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                          <span class="comment">// {ReqFunc24} - \r\n</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                          &lt;&lt; this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">fileData</a>-&gt;getApplication().value() &lt;&lt; <span class="stringliteral">&quot;\&quot;\r\n&quot;</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        LOG_INFO &lt;&lt; <span class="stringliteral">&quot;writing not start Application&quot;</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// {ReqFunc24} - \r\n</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        *this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">dataStream</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;\r\n&quot;</span>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d">BatchCreator::writeApplication</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::string appName = this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">fileData</a>-&gt;getOutputFile();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    appName = appName.substr(0, appName.find(<span class="charliteral">&#39;.&#39;</span>));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">fileData</a>-&gt;getApplication().has_value()) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        LOG_INFO &lt;&lt; <span class="stringliteral">&quot;writing start Application&quot;</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        *this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">dataStream</a> &lt;&lt; <span class="stringliteral">&quot; &amp;&amp; start \&quot;&quot;</span> &lt;&lt; appName</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                          &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                          <span class="comment">// {ReqFunc24} - \r\n</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                          &lt;&lt; this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">fileData</a>-&gt;getApplication().value() &lt;&lt; <span class="stringliteral">&quot;\&quot;\r\n&quot;</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        LOG_INFO &lt;&lt; <span class="stringliteral">&quot;writing not start Application&quot;</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment">// {ReqFunc24} - \r\n</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        *this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">dataStream</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;\r\n&quot;</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
 </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319">  100</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319">BatchCreator::writeEnd</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    *this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">dataStream</a> &lt;&lt; <span class="stringliteral">&quot;@ECHO ON&quot;</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319">   99</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319">BatchCreator::writeEnd</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    *this-&gt;<a class="code hl_variable" href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">dataStream</a> &lt;&lt; <span class="stringliteral">&quot;@ECHO ON&quot;</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
 </div>
 <div class="ttc" id="aBatchCreator_8hpp_html"><div class="ttname"><a href="../../d1/d03/BatchCreator_8hpp.html">BatchCreator.hpp</a></div><div class="ttdoc">Contains the BatchCreator class.</div></div>
 <div class="ttc" id="aclassBatchCreator_html_a0d08fe331105e1f2dd0ea56d12e86887"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#a0d08fe331105e1f2dd0ea56d12e86887">BatchCreator::writePathVariables</a></div><div class="ttdeci">void writePathVariables() const</div><div class="ttdoc">Set's the path variables.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00070">BatchCreator.cpp:70</a></div></div>
@@ -216,7 +215,7 @@ $(document).ready(function(){initNavTree('dc/d85/BatchCreator_8cpp_source.html',
 <div class="ttc" id="aclassBatchCreator_html_a31d22f486b3608cdae0b7488fb3857a8"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#a31d22f486b3608cdae0b7488fb3857a8">BatchCreator::writeEnvVariables</a></div><div class="ttdeci">void writeEnvVariables() const</div><div class="ttdoc">Set's environment variables.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00062">BatchCreator.cpp:62</a></div></div>
 <div class="ttc" id="aclassBatchCreator_html_a5b0d5ddd55e65bdce910a010deb7847d"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#a5b0d5ddd55e65bdce910a010deb7847d">BatchCreator::writeStart</a></div><div class="ttdeci">void writeStart() const</div><div class="ttdoc">Wirtes the start of the batch file.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00036">BatchCreator.cpp:36</a></div></div>
 <div class="ttc" id="aclassBatchCreator_html_a7ea2646254825e194f831d98ae703ec8"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#a7ea2646254825e194f831d98ae703ec8">BatchCreator::writeCommands</a></div><div class="ttdeci">void writeCommands() const</div><div class="ttdoc">Writes the commands to be executed.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00053">BatchCreator.cpp:53</a></div></div>
-<div class="ttc" id="aclassBatchCreator_html_a8d7aab76f68225bc13cdcb41035f5319"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319">BatchCreator::writeEnd</a></div><div class="ttdeci">void writeEnd() const</div><div class="ttdoc">Writes the end of the batch file.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00100">BatchCreator.cpp:100</a></div></div>
+<div class="ttc" id="aclassBatchCreator_html_a8d7aab76f68225bc13cdcb41035f5319"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319">BatchCreator::writeEnd</a></div><div class="ttdeci">void writeEnd() const</div><div class="ttdoc">Writes the end of the batch file.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00099">BatchCreator.cpp:99</a></div></div>
 <div class="ttc" id="aclassBatchCreator_html_ab03dc9e260a30504e294c83c433b3a04"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#ab03dc9e260a30504e294c83c433b3a04">BatchCreator::dataStream</a></div><div class="ttdeci">std::shared_ptr&lt; std::stringstream &gt; dataStream</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d03/BatchCreator_8hpp_source.html#l00052">BatchCreator.hpp:52</a></div></div>
 <div class="ttc" id="aclassBatchCreator_html_ab0c64cf4f8d3bf824bff2762a125315d"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d">BatchCreator::writeApplication</a></div><div class="ttdeci">void writeApplication() const</div><div class="ttdoc">If an application is given, it is started at the end.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d85/BatchCreator_8cpp_source.html#l00081">BatchCreator.cpp:81</a></div></div>
 <div class="ttc" id="aclassBatchCreator_html_ac3dc7fdd464bf52538a8fcbd181a82b2"><div class="ttname"><a href="../../da/d1c/classBatchCreator.html#ac3dc7fdd464bf52538a8fcbd181a82b2">BatchCreator::fileData</a></div><div class="ttdeci">std::shared_ptr&lt; parsing::FileData &gt; fileData</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d03/BatchCreator_8hpp_source.html#l00054">BatchCreator.hpp:54</a></div></div>
@@ -228,7 +227,7 @@ $(document).ready(function(){initNavTree('dc/d85/BatchCreator_8cpp_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1615da3a94339053b2ab44db3685f5d0.html">sources</a></li><li class="navelem"><a class="el" href="../../dc/d85/BatchCreator_8cpp.html">BatchCreator.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 14:27:40 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 14:32:10 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

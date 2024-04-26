@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
+   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.3</span>
    </div>
    <div id="projectbrief">A simple tool to convert json to batch.</div>
   </td>
@@ -117,147 +117,149 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/dfd/config_8hpp.html">config.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>std::tuple&lt;std::vector&lt;std::string&gt;, std::string&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><a class="code hl_function" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><a class="code hl_function" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>std::vector&lt;std::string&gt; <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;files);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a>(<span class="keyword">const</span> std::string &amp;file, <span class="keyword">const</span> std::string &amp;outputDirectory);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   85</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="comment">// Setup logging</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#abf18cb6fd599bec6e8c55b62ee178640">utilities::Utils::checkConfigFile</a>(<a class="code hl_variable" href="../../d6/d7f/namespaceconfig.html#ad2cd02465961e3f34def073f6de5043f">config::LOG_CONFIG</a>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">utilities::Utils::setupEasyLogging</a>(<a class="code hl_variable" href="../../d6/d7f/namespaceconfig.html#ad2cd02465961e3f34def073f6de5043f">config::LOG_CONFIG</a>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">// Parse and validate arguments</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keyword">auto</span> [files, outDir] = <a class="code hl_function" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a>(argc, argv);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  OUTPUT &lt;&lt; cli::BOLD &lt;&lt; <span class="stringliteral">&quot;Parsing the following files:\n&quot;</span> &lt;&lt; cli::RESET;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   85</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Setup logging</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#abf18cb6fd599bec6e8c55b62ee178640">utilities::Utils::checkConfigFile</a>(<a class="code hl_variable" href="../../d6/d7f/namespaceconfig.html#ad2cd02465961e3f34def073f6de5043f">config::LOG_CONFIG</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#aba875f8f5a9d060b28aabd965d3a5eb0">utilities::Utils::setupEasyLogging</a>(<a class="code hl_variable" href="../../d6/d7f/namespaceconfig.html#ad2cd02465961e3f34def073f6de5043f">config::LOG_CONFIG</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// Parse and validate arguments</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">auto</span> [files, outDir] = <a class="code hl_function" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a>(argc, argv);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    OUTPUT &lt;&lt; cli::BOLD &lt;&lt; <span class="stringliteral">&quot;Parsing the following files:\n&quot;</span> &lt;&lt; cli::RESET;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;file : files) {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    OUTPUT &lt;&lt; <span class="stringliteral">&quot;\t - &quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;file : files) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        OUTPUT &lt;&lt; <span class="stringliteral">&quot;\t - &quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  files = <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a>(files);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    files = <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a>(files);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="comment">// Loop for {ReqFunc7}</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> file = files.begin(); file != files.end(); ++file) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    OUTPUT &lt;&lt; cli::ITALIC &lt;&lt; <span class="stringliteral">&quot;\nParsing file: &quot;</span> &lt;&lt; *file &lt;&lt; <span class="stringliteral">&quot;...\n&quot;</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>           &lt;&lt; cli::RESET;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// Loop for {ReqFunc7}</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> file = files.begin(); file != files.end(); ++file) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        OUTPUT &lt;&lt; cli::ITALIC &lt;&lt; <span class="stringliteral">&quot;\nParsing file: &quot;</span> &lt;&lt; *file &lt;&lt; <span class="stringliteral">&quot;...\n&quot;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>               &lt;&lt; cli::RESET;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a>(*file, outDir);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="comment">// Only catch custom exceptions, other exceptions are fatal</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e) {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">utilities::Utils::handleParseException</a>(e, file, files)) {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      exit(1);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Exiting...&quot;</span>;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a>(*file, outDir);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment">// Only catch custom exceptions, other exceptions are fatal</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">utilities::Utils::handleParseException</a>(e, file, files)) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            exit(1);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Exiting...&quot;</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
 </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>std::tuple&lt;std::vector&lt;std::string&gt;, std::string&gt;</div>
-<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">  120</a></span><a class="code hl_function" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordflow">if</span> (argc &lt; 2) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;No options given!\n&quot;</span>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_function" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960">cli::CommandLineHandler::printHelp</a>();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keyword">auto</span> [outOption, files] = <a class="code hl_function" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8">cli::CommandLineHandler::parseArguments</a>(argc, argv);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="comment">// Set the output directory if given</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  std::string outDir = outOption.value_or(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordflow">if</span> (!outDir.empty()) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      outDir = <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ac07ca745d24efb547beec94f1d6acc11">utilities::Utils::checkDirectory</a>(outDir);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e) {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      LOG_ERROR &lt;&lt; e.<a class="code hl_function" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f">what</a>();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      exit(1);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordflow">if</span> (files.empty()) {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;No files were given as arguments!\n&quot;</span>;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    exit(1);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keywordflow">return</span> {files, outDir};</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>}</div>
-</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">  121</a></span>std::tuple&lt;std::vector&lt;std::string&gt;, std::string&gt; <a class="code hl_function" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a>(<span class="keywordtype">int</span> argc,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">if</span> (argc &lt; 2) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;No options given!\n&quot;</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_function" href="../../d4/d06/classcli_1_1CommandLineHandler.html#ac81856dd50394363675207068213d960">cli::CommandLineHandler::printHelp</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">auto</span> [outOption, files] = <a class="code hl_function" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8">cli::CommandLineHandler::parseArguments</a>(argc, argv);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// Set the output directory if given</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    std::string outDir = outOption.value_or(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">if</span> (!outDir.empty()) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            outDir = <a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#ac07ca745d24efb547beec94f1d6acc11">utilities::Utils::checkDirectory</a>(outDir);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d56/classexceptions_1_1CustomException.html">exceptions::CustomException</a> &amp;e) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            LOG_ERROR &lt;&lt; e.<a class="code hl_function" href="../../dc/d56/classexceptions_1_1CustomException.html#a128c3c054a385cda67e271d2064b0d1f">what</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            exit(1);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (files.empty()) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;No files were given as arguments!\n&quot;</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        exit(1);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">  147</a></span>std::vector&lt;std::string&gt; <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;files) {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  std::vector&lt;std::string&gt; validFiles;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="comment">// Reserve space, to avaid reallocating with each valid file</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  validFiles.reserve(files.size());</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> std::filesystem::path file : files) {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// Check that the file exists</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">// {ReqFunc5}</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> (!std::filesystem::is_regular_file(file)) {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;The file \&quot;&quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;\&quot; does not exist!\n&quot;</span>;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordflow">if</span> (files.size() &gt; 1 &amp;&amp; !<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a>()) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        OUTPUT &lt;&lt; <span class="stringliteral">&quot;Aborting...\n&quot;</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Application ended by user Input&quot;</span>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        exit(1);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> {files, outDir};</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">  150</a></span>std::vector&lt;std::string&gt; <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;files) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    std::vector&lt;std::string&gt; validFiles;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">// Reserve space, to avaid reallocating with each valid file</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    validFiles.reserve(files.size());</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::filesystem::path file : files) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="comment">// Check that the file exists</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// {ReqFunc5}</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> (!std::filesystem::is_regular_file(file)) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            LOG_ERROR &lt;&lt; <span class="stringliteral">&quot;The file \&quot;&quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;\&quot; does not exist!\n&quot;</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">if</span> (files.size() &gt; 1 &amp;&amp; !<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a>()) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                OUTPUT &lt;&lt; <span class="stringliteral">&quot;Aborting...\n&quot;</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Application ended by user Input&quot;</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                exit(1);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// Check if the file ends in .json</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">if</span> (file.extension() != <span class="stringliteral">&quot;.json&quot;</span>) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      LOG_WARNING &lt;&lt; <span class="stringliteral">&quot;The file \&quot;&quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;\&quot; does not end in \&quot;.json\&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      OUTPUT &lt;&lt; <span class="stringliteral">&quot;If the file is not in JSON Format, continuing may &quot;</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="stringliteral">&quot;result in\nunexpected behaviour!\n&quot;</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a>()) {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        OUTPUT &lt;&lt; <span class="stringliteral">&quot;Aborting...\n&quot;</span>;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Application ended by user Input&quot;</span>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        exit(1);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    validFiles.push_back(file);</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  }</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="comment">// Shrinks the vector if invalid files were found</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  validFiles.shrink_to_fit();</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordflow">return</span> validFiles;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="comment">// Check if the file ends in .json</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">if</span> (file.extension() != <span class="stringliteral">&quot;.json&quot;</span>) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            LOG_WARNING &lt;&lt; <span class="stringliteral">&quot;The file \&quot;&quot;</span> &lt;&lt; file &lt;&lt; <span class="stringliteral">&quot;\&quot; does not end in \&quot;.json\&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            OUTPUT &lt;&lt; <span class="stringliteral">&quot;If the file is not in JSON Format, continuing may &quot;</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                   <span class="stringliteral">&quot;result in\nunexpected behaviour!\n&quot;</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a>()) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                OUTPUT &lt;&lt; <span class="stringliteral">&quot;Aborting...\n&quot;</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Application ended by user Input&quot;</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                exit(1);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        validFiles.push_back(file);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="comment">// Shrinks the vector if invalid files were found</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    validFiles.shrink_to_fit();</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">return</span> validFiles;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
 </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">  188</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a>(<span class="keyword">const</span> std::string &amp;file, <span class="keyword">const</span> std::string &amp;outputDirectory) {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <a class="code hl_class" href="../../d5/da0/classparsing_1_1JsonHandler.html">parsing::JsonHandler</a> jsonHandler(file);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fileData = jsonHandler.<a class="code hl_function" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7">getFileData</a>();</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_class" href="../../da/d1c/classBatchCreator.html">BatchCreator</a> batchCreator(fileData);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">const</span> std::shared_ptr&lt;std::stringstream&gt; dataStream =</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      batchCreator.<a class="code hl_function" href="../../da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965">getDataStream</a>();</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// Full filename is output directory + output file</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">// {ReqFunc18}</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keyword">const</span> std::string outputFileName =</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      outputDirectory + fileData-&gt;getOutputFile();</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  std::ofstream outFile(outputFileName);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <span class="keywordflow">if</span> (!outFile.good()) {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="../../de/da8/classexceptions_1_1FailedToOpenFileException.html">exceptions::FailedToOpenFileException</a>(outputFileName);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  outFile &lt;&lt; dataStream-&gt;str();</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  OUTPUT &lt;&lt; <span class="stringliteral">&quot;Done with files!\n&quot;</span>;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="foldopen" id="foldopen00191" data-start="{" data-end="}">
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">  191</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a>(<span class="keyword">const</span> std::string &amp;file, <span class="keyword">const</span> std::string &amp;outputDirectory) {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_class" href="../../d5/da0/classparsing_1_1JsonHandler.html">parsing::JsonHandler</a> jsonHandler(file);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">const</span> <span class="keyword">auto</span> fileData = jsonHandler.<a class="code hl_function" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7">getFileData</a>();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_class" href="../../da/d1c/classBatchCreator.html">BatchCreator</a> batchCreator(fileData);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keyword">const</span> std::shared_ptr&lt;std::stringstream&gt; dataStream =</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                batchCreator.<a class="code hl_function" href="../../da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965">getDataStream</a>();</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// Full filename is output directory + output file</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="comment">// {ReqFunc18}</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">const</span> std::string outputFileName =</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                outputDirectory + fileData-&gt;getOutputFile();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    std::ofstream outFile(outputFileName);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">if</span> (!outFile.good()) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../de/da8/classexceptions_1_1FailedToOpenFileException.html">exceptions::FailedToOpenFileException</a>(outputFileName);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    outFile &lt;&lt; dataStream-&gt;str();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    OUTPUT &lt;&lt; <span class="stringliteral">&quot;Done with files!\n&quot;</span>;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>}</div>
 </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">// Initialize easylogging++</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">// Moved to bottom because it messed with doxygen</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>INITIALIZE_EASYLOGGINGPP</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment">// Initialize easylogging++</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">// Moved to bottom because it messed with doxygen</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>INITIALIZE_EASYLOGGINGPP</div>
 <div class="ttc" id="aBatchCreator_8hpp_html"><div class="ttname"><a href="../../d1/d03/BatchCreator_8hpp.html">BatchCreator.hpp</a></div><div class="ttdoc">Contains the BatchCreator class.</div></div>
 <div class="ttc" id="aCommandLineHandler_8hpp_html"><div class="ttname"><a href="../../d2/d5f/CommandLineHandler_8hpp.html">CommandLineHandler.hpp</a></div><div class="ttdoc">Responsible for the Command Line Interface.</div></div>
 <div class="ttc" id="aExceptions_8hpp_html"><div class="ttname"><a href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a></div><div class="ttdoc">Contains all the custom exceptions used in the project.</div></div>
@@ -279,9 +281,9 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="ttc" id="aclassutilities_1_1Utils_html_ad0ae5e5ca3f40a7c2de1667856f5e0bd"><div class="ttname"><a href="../../d6/d9e/classutilities_1_1Utils.html#ad0ae5e5ca3f40a7c2de1667856f5e0bd">utilities::Utils::handleParseException</a></div><div class="ttdeci">static bool handleParseException(const exceptions::CustomException &amp;e, const std::vector&lt; std::string &gt;::iterator &amp;file, const std::vector&lt; std::string &gt; &amp;files)</div><div class="ttdoc">Handle an exception within the main parsing loop.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0c/Utils_8cpp_source.html#l00077">Utils.cpp:77</a></div></div>
 <div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="../../d8/dfd/config_8hpp.html">config.hpp</a></div><div class="ttdoc">Configures general project information.</div></div>
 <div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">Main function of the program.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00085">main.cpp:85</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a229a422b4e4be967a1e02c69d8867c77"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; validateFiles(const std::vector&lt; std::string &gt; &amp;files)</div><div class="ttdoc">Checks if the files are valid.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00147">main.cpp:147</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a7c8a82e43100bc97b6aad59a7f7d2f13"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a></div><div class="ttdeci">void parseFile(const std::string &amp;file, const std::string &amp;outputDirectory)</div><div class="ttdoc">Parses the given file and writes the output to the output directory.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00188">main.cpp:188</a></div></div>
-<div class="ttc" id="amain_8cpp_html_ad612c95526cdd7ff2fa78563c0cd666f"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a></div><div class="ttdeci">std::tuple&lt; std::vector&lt; std::string &gt;, std::string &gt; parseAndValidateArgs(int argc, char *argv[])</div><div class="ttdoc">Validates and parses arguments.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00120">main.cpp:120</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a229a422b4e4be967a1e02c69d8867c77"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a229a422b4e4be967a1e02c69d8867c77">validateFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; validateFiles(const std::vector&lt; std::string &gt; &amp;files)</div><div class="ttdoc">Checks if the files are valid.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00150">main.cpp:150</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a7c8a82e43100bc97b6aad59a7f7d2f13"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13">parseFile</a></div><div class="ttdeci">void parseFile(const std::string &amp;file, const std::string &amp;outputDirectory)</div><div class="ttdoc">Parses the given file and writes the output to the output directory.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00191">main.cpp:191</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ad612c95526cdd7ff2fa78563c0cd666f"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f">parseAndValidateArgs</a></div><div class="ttdeci">std::tuple&lt; std::vector&lt; std::string &gt;, std::string &gt; parseAndValidateArgs(int argc, char *argv[])</div><div class="ttdoc">Validates and parses arguments.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d0a/main_8cpp_source.html#l00121">main.cpp:121</a></div></div>
 <div class="ttc" id="anamespaceconfig_html_ad2cd02465961e3f34def073f6de5043f"><div class="ttname"><a href="../../d6/d7f/namespaceconfig.html#ad2cd02465961e3f34def073f6de5043f">config::LOG_CONFIG</a></div><div class="ttdeci">constexpr auto LOG_CONFIG</div><div class="ttdef"><b>Definition</b> <a href="../../d8/dfd/config_8hpp_source.html#l00026">config.hpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -289,7 +291,7 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../df/d0a/main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 14:27:40 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 14:32:10 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

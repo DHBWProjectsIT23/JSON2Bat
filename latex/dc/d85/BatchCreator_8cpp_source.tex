@@ -71,27 +71,26 @@
 \DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00078}00078\ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}\%path\%"{}};}
 \DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00079}00079\ \}}
 \DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00080}00080\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00081}\mbox{\hyperlink{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d}{BatchCreator::writeApplication}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00082}00082\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00083}00083\ \ \ \ \ std::string\ appName\ =\ this-\/>\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}}-\/>getOutputFile();}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00084}00084\ \ \ \ \ appName\ =\ appName.substr(0,\ appName.find(\textcolor{charliteral}{'.'}));}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}}-\/>getApplication().has\_value())\ \{}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}writing\ start\ Application"{}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}\ \&\&\ start\ \(\backslash\)"{}"{}}\ <<\ appName}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ "{}}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{ReqFunc24\}\ -\/\ \(\backslash\)r\(\backslash\)n}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ this-\/>\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}}-\/>getApplication().value()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)r\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00092}00092\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}writing\ not\ start\ Application"{}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{ReqFunc24\}\ -\/\ \(\backslash\)r\(\backslash\)n}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)r\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00097}00097\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00098}00098\ \}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00100}\mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{00100}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{BatchCreator::writeEnd}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00101}00101\ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}@ECHO\ ON"{}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00081}\mbox{\hyperlink{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_ab0c64cf4f8d3bf824bff2762a125315d}{BatchCreator::writeApplication}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00082}00082\ \ \ \ \ std::string\ appName\ =\ this-\/>\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}}-\/>getOutputFile();}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00083}00083\ \ \ \ \ appName\ =\ appName.substr(0,\ appName.find(\textcolor{charliteral}{'.'}));}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}}-\/>getApplication().has\_value())\ \{}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}writing\ start\ Application"{}};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}\ \&\&\ start\ \(\backslash\)"{}"{}}\ <<\ appName}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ "{}}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{ReqFunc24\}\ -\/\ \(\backslash\)r\(\backslash\)n}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ this-\/>\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}}-\/>getApplication().value()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)r\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}writing\ not\ start\ Application"{}};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{ReqFunc24\}\ -\/\ \(\backslash\)r\(\backslash\)n}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)r\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00099}\mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{00099}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{BatchCreator::writeEnd}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00100}00100\ \ \ \ \ *this-\/>\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}}\ <<\ \textcolor{stringliteral}{"{}@ECHO\ ON"{}};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8cpp_source_l00101}00101\ \}}
 
 \end{DoxyCode}

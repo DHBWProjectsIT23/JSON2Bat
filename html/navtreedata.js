@@ -25,27 +25,25 @@
 var NAVTREE =
 [
   [ "JSON2Batch", "index.html", [
-    [ "JSON2Batch", "index.html#autotoc_md0", [
-      [ "Table of Contents", "index.html#autotoc_md1", null ],
-      [ "Build Instructions", "index.html#autotoc_md2", [
-        [ "Linux", "index.html#autotoc_md3", [
-          [ "UNIX Compiler Compatibility", "index.html#autotoc_md4", null ]
-        ] ],
-        [ "Windows", "index.html#autotoc_md5", [
-          [ "Windows Compiler Compatibility", "index.html#autotoc_md6", null ]
-        ] ],
-        [ "Generating Documentation", "index.html#autotoc_md7", null ]
+    [ "Table of Contents", "index.html#autotoc_md1", null ],
+    [ "Build Instructions", "index.html#autotoc_md2", [
+      [ "Linux", "index.html#autotoc_md3", [
+        [ "UNIX Compiler Compatibility", "index.html#autotoc_md4", null ]
       ] ],
-      [ "Documentation", "index.html#autotoc_md8", [
-        [ "Project Structure", "index.html#autotoc_md9", null ]
+      [ "Windows", "index.html#autotoc_md5", [
+        [ "Windows Compiler Compatibility", "index.html#autotoc_md6", null ]
       ] ],
-      [ "External Libraries", "index.html#autotoc_md10", [
-        [ "easylogging++", "index.html#autotoc_md11", null ],
-        [ "LoggingWrapper", "index.html#autotoc_md12", null ],
-        [ "jsoncpp", "index.html#autotoc_md13", null ]
-      ] ],
-      [ "License", "index.html#autotoc_md14", null ]
+      [ "Generating Documentation", "index.html#autotoc_md7", null ]
     ] ],
+    [ "Documentation", "index.html#autotoc_md8", [
+      [ "Project Structure", "index.html#autotoc_md9", null ]
+    ] ],
+    [ "External Libraries", "index.html#autotoc_md10", [
+      [ "easylogging++", "index.html#autotoc_md11", null ],
+      [ "LoggingWrapper", "index.html#autotoc_md12", null ],
+      [ "jsoncpp", "index.html#autotoc_md13", null ]
+    ] ],
+    [ "License", "index.html#autotoc_md14", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
