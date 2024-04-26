@@ -95,14 +95,13 @@ bool Utils::handleParseException(const exceptions::CustomException &e,
 }
 
 const std::string Utils::escapeString(const std::string &str) {
-    const std::string Utils::escapeString(const std::string &str) {
     // Map of characters to their escape sequences
     static const std::unordered_map<char, std::string> escapeSequences = {
-        {'\\', "\\\\"}, // Replace backslash with double backslash
-        {'\n', "\\n"},  // Replace newline with backslash-n
-        {'\t', "\\t"},  // Replace tab with backslash-t
+        {'\\', "\\\\"},    // Replace backslash with double backslash
+        {'\n', "\\n"},     // Replace newline with backslash-n
+        {'\t', "\\t"},     // Replace tab with backslash-t
         {'\x1A', "\\x1A"}, // Replace end of file with backslash-x1A
-        {'\r', "\\r"}   // Replace carriage return with backslash-r
+        {'\r', "\\r"}      // Replace carriage return with backslash-r
     };
 
     std::ostringstream escapedStream;
@@ -114,7 +113,6 @@ const std::string Utils::escapeString(const std::string &str) {
         }
     }
     return escapedStream.str();
-}
 }
 
 } // namespace utilities
