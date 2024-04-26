@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Fri Apr 26 2024 14:03:05" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Fri Apr 26 2024 14:04:35" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,7 +40,7 @@ src/main.cpp \- Contains the main function\&.
 .br
 .RI "Validates and parses arguments\&. "
 .ti -1c
-.RI "const std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
+.RI "std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
 .br
 .RI "Checks if the files are valid\&. "
 .ti -1c
@@ -74,31 +74,6 @@ Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci
 .RE
 .PP
 The main function is responsible for connection all parts of the programm\&. It calls all relevant classes and finishes when everything is done\&.
-.IP "\(bu" 2
-{ReqOptFunc3} - Documentation is done using doxygen syntax
-.IP "\(bu" 2
-{ReqOptFunc3} - All Classes, methods, funciton, namespaces and file are documented
-.IP "\(bu" 2
-{ReqNonFunc5} - Source files are found under src/sources, header under src/include
-.IP "\(bu" 2
-{ReqNonFunc6} - All header files can be included withou paths
-.IP "\(bu" 2
-{ReqNonFunc7} - Non source files are included
-.IP "\(bu" 2
-{ReqNonFunc8} - All header files include a 'ifndef/define/endif' block
-.IP "\(bu" 2
-{ReqOptFunc5} - Every file has a top comment including the authors
-.IP "\(bu" 2
-{ReqOptFunc6} - Logging is done using easylogging++ library
-.IP "  \(bu" 4
-A self written wrapper is used, to allow for parallel output to the stdout and the logfile\&. Though we don't consider this wrapper part of the project itself and as such is placed within the directorys for external libraries
-.PP
-
-.IP "\(bu" 2
-Formatting is done via astyle
-.IP "\(bu" 2
-!{ReqOptFunc7} - No unit tests are included
-.PP
 .PP
 \fBCopyright\fP
 .RS 4
@@ -129,7 +104,7 @@ Returns 0 on success, 1 on failure
 .PP
 
 .PP
-Definition at line \fB86\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB67\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkConfigFile()\fP, \fButilities::Utils::handleParseException()\fP, \fBconfig::LOG_CONFIG\fP, \fBparseAndValidateArgs()\fP, \fBparseFile()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
 .SS "std::tuple< std::vector< std::string >, std::string > parseAndValidateArgs (int argc, char * argv[])"
@@ -151,7 +126,7 @@ A tuple containing the files to be parsed and the output directory
 .PP
 
 .PP
-Definition at line \fB123\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB103\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkDirectory()\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBcli::CommandLineHandler::printHelp()\fP, and \fBexceptions::CustomException::what()\fP\&.
 .SS "void parseFile (const std::string & file, const std::string & outputDirectory)"
@@ -166,20 +141,17 @@ Parses the given file and writes the output to the output directory\&. Creates t
 .PP
 
 .PP
-Definition at line \fB196\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB170\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::getFileData()\fP\&.
-.SS "const std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
+.SS "std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
 
 .PP
 Checks if the files are valid\&. Makes sures, that provided files exists and checks their file ending 
 .PP
 \fBParameters\fP
 .RS 4
-\fIfiles\fP The files to be checked
-.IP "\(bu" 2
-{ReqFunc5}
-.PP
+\fIfiles\fP The files to be checked 
 .RE
 .PP
 \fBReturns\fP
@@ -189,7 +161,7 @@ A vector containing the valid files
 .PP
 
 .PP
-Definition at line \fB153\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB130\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::askToContinue()\fP\&.
 .SH "Author"
