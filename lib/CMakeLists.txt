@@ -1,5 +1,5 @@
 # Add LoggingWrapper Library
- add_library(LoggingWrapper LoggingWrapper.cpp easylogging++.cc)
+add_library(LoggingWrapper LoggingWrapper.cpp easylogging++.cc)
 
 # Check OS to define necessary macros (for Styling)
 target_include_directories(LoggingWrapper PRIVATE ${PROJECT_SOURCE_DIR}/include)
@@ -12,8 +12,7 @@ endif()
 
 
 # Linking necessary libraries
-if(UNIX)
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${EXECUTABLE_NAME} PRIVATE
   jsoncpp
   LoggingWrapper)
 endif()

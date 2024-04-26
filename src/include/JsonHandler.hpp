@@ -1,14 +1,15 @@
 /**
  * @file JsonHandler.hpp
- * @author
- * @date
- * @version
- * @brief
- * @details
+ * @author Sonia Sinacci, Elena Schwartzbach
+ * @date 23.04.2024
+ * @version 0.1.5
+ * @brief This file contains the JsonHandler class
+ *
+ * @see parsing::JsonHandler
+ *
+ * @see src/sources/JsonHandler.cpp
  *
  * @copyright See LICENSE file
- *
- * @todo Documentation
  */
 
 #ifndef JSONHANDLER_HPP
@@ -22,132 +23,142 @@
 
 /**
  * @namespace parsing
- * @brief
+ * @brief The namespace containing everything relevant to parsing
  * @details
+ * This namespace contains all relevant classes to parsing the json file
+ * and creating the batch output.
  *
- * @see
- *
- * @todo Documentation
+ * @see JsonHandler
+ * @see FileData
+ * @see KeyValidator
+ * @see BatchCreator
  */
 namespace parsing {
 
 /**
  * @class JsonHandler
- * @brief
+ * @brief This file reads all data from the json file.
  * @details
+ * This file uses the jsoncpp library to parse all data from a json
+ * file, validate it to some degree.
  *
- * @see
- *
- * @todo Documentation
+ * @see https://github.com/open-source-parsers/jsoncpp
  */
 class JsonHandler {
-public:
+  public:
     /**
-     * @brief
+     * @brief Constructor without arguments
      * @details
-     *
-     * @todo Documentation
+     * This constructor can be used to initialise an instance in an outer scope
+     * and then assign it values from an inner scope.
      */
     JsonHandler() {
         LOG_INFO << "Initialising empty JsonHandler";
     }
     /**
-     * @brief
+     * @brief The constructor
      * @details
+     * This constructor calls this->parseFile() when called.
      *
-     * @param filename
-     *
-     * @todo Documentation
+     * @param filename Name of the json file
      */
     explicit JsonHandler(const std::string &filename);
     /**
-     * @brief
+     * @brief Retrieve the data from the json file
      * @details
+     * This method calls this->createFileData() needed to retrieve the values from
+     * the Json::Value this->root and then returns a shared pointer to the
+     * created FileData object.
      *
-     * @return
-     *
-     * @todo Documentation
+     * @return Pointer to the FileData Object with the parsed data from json
      */
     std::shared_ptr<FileData> getFileData();
 
-private:
+  private:
     /**
-     * @brief
+     * @brief Parses the given json file
      * @details
+     * This method first creates a new Json::Value instance and then tries to
+     * parse the given json file.
+     * It then validates the keys of the instance using the KeyValidator class.
      *
-     * @param filename
-     * @return
+     * @param filename The name of the file wich should be parsed
+     * @return A shared pointer to the Json::Value instance
      *
-     * @todo Documentation
+     * @see KeyValidator::validateKeys()
+     *
+     * @throw exceptions::ParsingException
+     * @throw exceptions::InvalidKeyException
      */
     [[nodiscard]] static std::shared_ptr<Json::Value>
     parseFile(const std::string &filename);
     /**
-     * @brief
+     * @brief Assigns the outputfile to this->data
      * @details
+     * Retrieves the outputfile from Json::Value this->root and makes sure, that
+     * the file doesn't already exist.
+     * - {ReqFunc8}
      *
-     *
-     * @todo Documentation
+     * @throw exceptions::FileExistsException
      */
     void assignOutputFile() const;
     /**
-     * @brief
+     * @brief Assigns the hideshell value to this->data
      * @details
-     *
-     *
-     * @todo Documentation
+     * Retrieves the value of the hideshell key from Json::Value this->root and
+     * defaults to negative.
+     * - {ReqFunc9}
      */
     void assignHideShell() const;
     /**
-     * @brief
+     * @brief Assigns application to this->data
      * @details
-     *
-     *
-     * @todo Documentation
+     * Retrieves the value of the application key from Json::Value this->root and
+     * defaults to an empty string.
+     * - {ReqFunc16}
      */
     void assignApplication() const;
     /**
-     * @brief
+     * @brief Assigns entries to this->data
      * @details
+     * Goes through each of the entries from Json::Value this->root and
+     * calls the relevant method depending on it's type.
+     * All "type" keys should be valid by this point.
+     * - {ReqFunc10}
      *
+     * @param entry Json::Value containing an array with entries
      *
-     * @todo Documentation
+     * @throw exceptions::UnreachableCodeException
      */
     void assignEntries() const;
     /**
-     * @brief
+     * @brief Assigns an command to this->data
      * @details
-     *
-     * @param entry
-     *
-     * @todo Documentation
+     * - {ReqFunc12}
+     * @param entry The entry with the command
      */
     void assignCommand(const Json::Value &entry) const;
     /**
-     * @brief
+     * @brief Assigns an environmentVariable to this->data
      * @details
-     *
-     * @param entry
-     *
-     * @todo Documentation
+     * - {ReqFunc11}
+     * @param entry The entry with the environmentVariable
      */
     void assignEnvironmentVariable(const Json::Value &entry) const;
     /**
-     * @brief
+     * @brief Assigns a path value to this->data
      * @details
-     *
-     * @param entry
-     *
-     * @todo Documentation
+     * - {ReqFunc13}
+     * @param entry The entry with the path value
      */
     void assignPathValue(const Json::Value &entry) const;
     /**
-     * @brief
+     * @brief Creates the FileData instance
      * @details
+     * Instantiates the FileData instance, calls all nessecary functions and
+     * returns a shared pointer to it.
      *
-     * @return
-     *
-     * @todo Documentation
+     * @return Pointer to the created instance of FileData
      */
     std::shared_ptr<FileData> createFileData();
     std::shared_ptr<Json::Value> root;

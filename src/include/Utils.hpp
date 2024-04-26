@@ -11,18 +11,21 @@
  * @see utilities
  * @see Utils
  *
+ * @see src/sources/Utils.cpp
+ *
  * @copyright See LICENSE file
  */
 #ifndef UTILITIES_HPP
 #define UTILITIES_HPP
 
+#include "Exceptions.hpp"
 #include <string>
 
 /**
  * @namespace utilities
  * @brief Includes all utilities
  * @details
- * This namespace includes the utility class with utility functions which can be
+ * This namespace includes the Utils class with utility functions which can be
  * used throughout the project.
  *
  * @see Utils
@@ -37,7 +40,7 @@ namespace utilities {
  * which be used throughout the whole project.
  */
 class Utils {
-public:
+  public:
     /**
      * @brief Set up easylogging
      * @details
@@ -48,22 +51,22 @@ public:
     static void setupEasyLogging(const std::string &configFile);
 
     /**
-     * @brief Check if a file exists
+     * @brief Handle an exception within the main parsing loop
      * @details
-     * This function checks if a file exists by trying to open it using fstream.
-     * @param fileName The file which should be checked.
-     * @return Returns true if the file exists and false otherwise
+     * This function handles an exception within the main parsing loop. It
+     * displays the error message and asks the user if they want to continue.
+     * - Moved to Utils in 0.2.2 to improve readibility in main.cpp
+     *
+     * @param e The exception to be handled
+     * @param file The file which caused the exception
+     * @param files The list of files
+     *
+     * @return Returns true if the user wants to continue and false otherwise
      */
-    static bool checkIfFileExists(const std::string &fileName);
-
-    /**
-     * @brief Checks if the file ending is ".json"
-     * @details
-     * This function checks if the given file ends with ".json".
-     * @param fileName The file which should be checked.
-     * @return Returns true if the file ends with ".json" and false otherwise.
-     */
-    static bool checkFileEnding(const std::string_view &fileName);
+    static bool
+    handleParseException(const exceptions::CustomException &e,
+                         const std::vector<std::string>::iterator &file,
+                         const std::vector<std::string> &files);
 
     /**
      * @brief Asks if the user wants to continue
@@ -74,6 +77,25 @@ public:
      */
     static bool
     askToContinue(const std::string &prompt = "Do you want to continue? (Y/N)\n");
+
+    /**
+     * @brief Checks if the easylogging-config file exists
+     * @param configFile The config file to be checked
+     */
+    static void checkConfigFile(const std::string &configFile);
+
+    /**
+    * @brief Checks if the given directory exists and is valid
+    *
+    * @details
+    * This function checks if the given directory exists and is valid. If the
+    * directory does not end with a '/' or a '\', it will be added.
+    *
+    * @param directory The directory to be checked
+    *
+    * @return The checked directory
+    */
+    static const std::string &checkDirectory(std::string &directory);
 };
 } // namespace utilities
 

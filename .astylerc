@@ -1,5 +1,5 @@
 # Codingstyle - TBD
---style=stroustrup
+--style=java
 --indent=spaces=4
 --attach-inlines
 --attach-inlines

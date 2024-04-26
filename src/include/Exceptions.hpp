@@ -1,63 +1,54 @@
 /**
  * @file Exceptions.hpp
- * @author
- * @date
- * @version
- * @brief
+ * @author Simon Blum
+ * @date 2024-04-26
+ * @version 0.2.2
+ * @brief Contains all the custom exceptions used in the project.
  * @details
+ * The error handling within this project is exception based.
+ * This allows us to throw custom exceptions throughout any part
+ * of the process and allow us to deal with them when necessary.
  *
  * @copyright See LICENSE file
- *
- * @todo Documentation
  */
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
 
 #include "LoggingWrapper.hpp"
+#include "config.hpp"
 #include <string>
-#include <utility>
 
 /**
  * @namespace exceptions
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Namespace used for customized exceptions
  */
 namespace exceptions {
 /**
  * @class CustomException
- * @brief
+ * @brief Base class for all custom exceptions
  * @details
+ * This class is the base class which is inherited by all custom exceptions.
+ * It can be used to catch all exceptions that are thrown by us.
  *
- * @see
- *
- * @todo Documentation
+ * @see std::exception
  */
 class CustomException : public std::exception {
-public:
-    [[nodiscard]] const char *what() const noexcept override {
+  public:
+    [[nodiscard]] const char* what() const noexcept override {
         return "Base Exception";
     }
 };
 
 /**
  * @class ParsingException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Exception for syntax errors within the json file.
  */
 class ParsingException : public CustomException {
-private:
+  private:
     const std::string file;
     std::string message;
 
-public:
+  public:
     explicit ParsingException(const std::string &file) : file(file) {
         /**
          * @note I planned to use std::format, however it seems that the
@@ -71,27 +62,22 @@ public:
         LOG_INFO << "ParsingException: " << message;
     }
 
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
- * @class BatchExistsException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @class FileExistsException
+ * @brief Exception for an already exisiting outputfile
  */
-class BatchExistsException : public CustomException {
-private:
+class FileExistsException : public CustomException {
+  private:
     const std::string file;
     std::string message;
 
-public:
-    explicit BatchExistsException(const std::string &file) : file(file) {
+  public:
+    explicit FileExistsException(const std::string &file) : file(file) {
         /**
          * @note I planned to use std::format, however it seems that the
          * required Compiler Version is not yet available in the stable Ubuntu
@@ -103,26 +89,21 @@ public:
         LOG_INFO << "BatchExistsException: " << message;
     }
 
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
  * @class InvalidValueException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Exception for an ivalid (usually empty) value field
  */
 class InvalidValueException : public CustomException {
-private:
+  private:
     const std::string key;
     std::string message;
 
-public:
+  public:
     InvalidValueException(const std::string &key, const std::string &issue)
         : key(key) {
         /**
@@ -135,48 +116,55 @@ public:
         this->message = ss.str();
         LOG_INFO << "InvalidValueException: " << message;
     }
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
  * @class InvalidKeyException
- * @brief
+ * @brief Exception for invalid keys
  * @details
+ * This exception is thrown when a key is found within the json file,
+ * that is not part of the valid keys. It will also display the name
+ * and the line of the invalid key.
  *
- * @see
- *
- * @todo Documentation
+ * @see parsing::KeyValidator::validKeys
+ * @see parsing::KeyValidator::validEntryKeys
  */
 class InvalidKeyException : public CustomException {
-private:
+  private:
     std::string message = "Invalid key found!";
 
-public:
-    InvalidKeyException() {
+  public:
+    explicit InvalidKeyException(
+                const std::vector<std::tuple<int, std::string>> &keys) {
         LOG_INFO << "InvalidKeyException: " << message;
+
+        for (const auto &[line, key] : keys) {
+            LOG_WARNING << "Invalid key found at line " << line << ": \"" << key
+                        << "\"!";
+        }
     }
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
  * @class InvalidTypeException
- * @brief
+ * @brief Exception for invalid types.
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This exception is thrown when the value of the "type" field within the
+ * entries is invalid (not "EXE", "PATH", "ENV"). It also prints the type and
+ * the line of the invalid type.
  */
 class InvalidTypeException : public CustomException {
-private:
+  private:
     const std::string type;
     std::string message;
 
-public:
+  public:
     InvalidTypeException(const std::string &type, int line) : type(type) {
         /**
          * @note I planned to use std::format, however it seems that the
@@ -188,27 +176,25 @@ public:
         this->message = ss.str();
         LOG_INFO << "InvalidTypeException: " << message;
     }
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
  * @class MissingKeyException
- * @brief
+ * @brief Exception for missing keys within entries.
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This exception is thrown when a key (such as "path" or "command") is missing
+ * from an entry. It also prints the type and which key it is missing.
  */
 class MissingKeyException : public CustomException {
-private:
+  private:
     std::string message;
     std::string type;
     std::string key;
 
-public:
+  public:
     MissingKeyException(const std::string &key, const std::string &type)
         : type(type), key(key) {
         /**
@@ -221,52 +207,83 @@ public:
         this->message = ss.str();
         LOG_INFO << "MissingKeyException: " << message;
     }
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
  * @class MissingTypeException
- * @brief
+ * @brief Exception for missing types of entries
  * @details
- *
- * @see
- *
- * @todo Documentation
+ * This exception is thrown, when an entry is missing it's "type" key.
  */
 class MissingTypeException : public CustomException {
-private:
+  private:
     std::string message = "Missing \"type\" key for at least one entry!";
 
-public:
+  public:
     MissingTypeException() {
         LOG_INFO << "MissingTypeException: " << message;
     }
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };
 
 /**
  * @class UnreachableCodeException
- * @brief
- * @details
- *
- * @see
- *
- * @todo Documentation
+ * @brief Exception for when the application reaches code it shouldn't reach
  */
 class UnreachableCodeException : public CustomException {
-private:
+  private:
     std::string message;
 
-public:
+  public:
     explicit UnreachableCodeException(const std::string &message)
         : message(message) {
+        OUTPUT << "This exception happened due to a bug in the application!\n"
+               << "Please report this bug! See " << config::EXECUTABLE_NAME
+               << " -c for contact information.\n";
         LOG_INFO << "UnreachableCodeException: " << message;
     }
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override {
+        return message.c_str();
+    }
+};
+
+/**
+ * @class FailedToOpenFileException
+ * @brief Exception for when a file can't be opened
+ */
+class FailedToOpenFileException : public CustomException {
+  private:
+    std::string message;
+
+  public:
+    explicit FailedToOpenFileException(const std::string &file) {
+        message = "Failed to open file: " + file;
+        LOG_INFO << "FailedToOpenFileException: " << message;
+    }
+    [[nodiscard]] const char* what() const noexcept override {
+        return message.c_str();
+    }
+};
+
+/**
+ * @class NoSuchDirException
+ * @brief Exception for when a directory does not exist
+ */
+class NoSuchDirException : public CustomException {
+  private:
+    std::string message;
+
+  public:
+    explicit NoSuchDirException(const std::string &dir) {
+        message = "No such directory: " + dir;
+        LOG_INFO << "NoSuchDirException: " << message;
+    }
+    [[nodiscard]] const char* what() const noexcept override {
         return message.c_str();
     }
 };

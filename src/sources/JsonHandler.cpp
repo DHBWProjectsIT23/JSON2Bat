@@ -1,24 +1,23 @@
 /**
  * @file JsonHandler.cpp
- * @author
- * @date
- * @version
- * @brief
- * @details
+ * @author Elena Schwarzbach, Sonia Sinacci
+ * @date 2024-04-16
+ * @version 0.1.6
+ * @brief Implementation of the JsonHandler class.
+ *
+ * @see src/include/JsonHandler.hpp
  *
  * @copyright See LICENSE file
  */
 
 #include "JsonHandler.hpp"
-#include "ErrorHandler.hpp"
+#include "Exceptions.hpp"
 #include "FileData.hpp"
 #include "KeyValidator.hpp"
 #include "LoggingWrapper.hpp"
-#include "Utils.hpp"
 
 namespace parsing {
-JsonHandler::JsonHandler(const std::string &filename)
-{
+JsonHandler::JsonHandler(const std::string &filename) {
     LOG_INFO << "Initializing JSONHandler with filename: " << filename << "\n";
     this->root = parseFile(filename);
 }
@@ -27,33 +26,33 @@ std::shared_ptr<Json::Value> JsonHandler::parseFile(const std::string &filename)
 
 {
     LOG_INFO << "Parsing file: " << filename << "\n";
+    // Can open files anywhere with relative/absolute path
+    // - {ReqFunc5}
     std::ifstream file(filename);
     Json::Value newRoot;
 
     // Json::Reader.parse() returns false if parsing fails
     if (Json::Reader reader; !reader.parse(file, newRoot)) {
-        errors::ErrorHandler::parsingError(filename);
+        throw exceptions::ParsingException(filename);
     }
 
     // Validate keys
     // Check for errors
     if (auto errors = KeyValidator::getInstance().validateKeys(newRoot, filename);
-            !errors.empty()) {
-        errors::ErrorHandler::invalidKeys(errors);
+        !errors.empty()) {
+        throw exceptions::InvalidKeyException(errors);
     }
 
     LOG_INFO << "File \"" << filename << "\" has been parsed\n";
     return std::make_shared<Json::Value>(newRoot);
 }
 
-std::shared_ptr<FileData> JsonHandler::getFileData()
-{
+std::shared_ptr<FileData> JsonHandler::getFileData() {
     LOG_INFO << "Creating FileData object for return...\n";
     return this->createFileData();
 }
 
-std::shared_ptr<FileData> JsonHandler::createFileData()
-{
+std::shared_ptr<FileData> JsonHandler::createFileData() {
     LOG_INFO << "Creating FileData object...\n";
     this->data = std::make_shared<FileData>();
     this->assignOutputFile();
@@ -63,35 +62,24 @@ std::shared_ptr<FileData> JsonHandler::createFileData()
     return this->data;
 }
 
-void JsonHandler::assignOutputFile() const
-{
+void JsonHandler::assignOutputFile() const {
     LOG_INFO << "Assigning outputfile...\n";
     std::string outputFile = this->root->get("outputfile", "").asString();
-
-    if (utilities::Utils::checkIfFileExists(outputFile)) {
-        errors::ErrorHandler::batchFileExists(outputFile);
-    }
-
     this->data->setOutputFile(outputFile);
 }
 
-void JsonHandler::assignHideShell() const
-{
+void JsonHandler::assignHideShell() const {
     LOG_INFO << "Assigning hide shell...\n";
     // If the 'hideshell' key is not given, it defaults to false
-    bool hideShell = this->root->get("hideshell", false).asBool();
-    this->data->setHideShell(hideShell);
+    this->data->setHideShell(this->root->get("hideshell", false).asBool());
 }
 
-void JsonHandler::assignApplication() const
-{
+void JsonHandler::assignApplication() const {
     LOG_INFO << "Assigning application...\n";
-    std::string application = this->root->get("application", "").asString();
-    this->data->setApplication(application);
+    this->data->setApplication(this->root->get("application", "").asString());
 }
 
-void JsonHandler::assignEntries() const
-{
+void JsonHandler::assignEntries() const {
     LOG_INFO << "Assigning entries...\n";
 
     for (const auto &entry : this->root->get("entries", "")) {
@@ -111,31 +99,27 @@ void JsonHandler::assignEntries() const
         }
         else {
             // Due to validation beforehand - this should never be reached!
-            errors::ErrorHandler::unreachableCode(
-                "Unknown entries should be caught by KeyValidator!");
+            throw exceptions::UnreachableCodeException(
+                        "Unknown entries should be caught by KeyValidator!\nPlease report "
+                        "this bug!");
         }
     }
 }
 
-void JsonHandler::assignCommand(const Json::Value &entry) const
-{
+void JsonHandler::assignCommand(const Json::Value &entry) const {
     LOG_INFO << "Assigning command...\n";
-    std::string command = entry.get("command", "").asString();
-    this->data->addCommand(command);
+    this->data->addCommand(entry.get("command", "").asString());
 }
 
-void JsonHandler::assignEnvironmentVariable(const Json::Value &entry) const
-{
+void JsonHandler::assignEnvironmentVariable(const Json::Value &entry) const {
     LOG_INFO << "Assigning environment variable...\n";
     std::string key = entry.get("key", "").asString();
     std::string value = entry.get("value", "").asString();
     this->data->addEnvironmentVariable(key, value);
 }
 
-void JsonHandler::assignPathValue(const Json::Value &entry) const
-{
+void JsonHandler::assignPathValue(const Json::Value &entry) const {
     LOG_INFO << "Assigning path value...\n";
-    std::string pathValue = entry.get("path", "").asString();
-    this->data->addPathValue(pathValue);
+    this->data->addPathValue(entry.get("path", "").asString());
 }
 } // namespace parsing
