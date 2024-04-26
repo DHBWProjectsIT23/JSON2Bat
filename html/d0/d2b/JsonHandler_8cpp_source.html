@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('d0/d2b/JsonHandler_8cpp_source.html','
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// Validate keys</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Check for errors</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> errors = <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#aba12d17ab5dc7faacdcb3cd85b696fda">KeyValidator::getInstance</a>().validateKeys(newRoot, filename);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        !errors.empty()) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            !errors.empty()) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../de/d9e/classexceptions_1_1InvalidKeyException.html">exceptions::InvalidKeyException</a>(errors);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
@@ -207,8 +207,8 @@ $(document).ready(function(){initNavTree('d0/d2b/JsonHandler_8cpp_source.html','
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="comment">// Due to validation beforehand - this should never be reached!</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d9/d52/classexceptions_1_1UnreachableCodeException.html">exceptions::UnreachableCodeException</a>(</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        <span class="stringliteral">&quot;Unknown entries should be caught by KeyValidator!\nPlease report &quot;</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                        <span class="stringliteral">&quot;this bug!&quot;</span>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="stringliteral">&quot;Unknown entries should be caught by KeyValidator!\nPlease report &quot;</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="stringliteral">&quot;this bug!&quot;</span>);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
@@ -265,7 +265,7 @@ $(document).ready(function(){initNavTree('d0/d2b/JsonHandler_8cpp_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1615da3a94339053b2ab44db3685f5d0.html">sources</a></li><li class="navelem"><a class="el" href="../../d0/d2b/JsonHandler_8cpp.html">JsonHandler.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 15:08:01 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 15:22:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

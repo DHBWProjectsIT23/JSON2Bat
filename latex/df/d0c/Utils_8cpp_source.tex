@@ -32,7 +32,7 @@
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ std::ranges::transform(userInput,\ userInput.begin(),\ ::tolower);}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00042}00042\ }
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ !=\ \textcolor{stringliteral}{"{}y"{}}\ \&\&\ userInput\ !=\ \textcolor{stringliteral}{"{}yes"{}}\ \&\&\ userInput\ !=\ \textcolor{stringliteral}{"{}n"{}}\ \&\&}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ userInput\ !=\ \textcolor{stringliteral}{"{}no"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userInput\ !=\ \textcolor{stringliteral}{"{}no"{}})\ \{}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Wrong\ user\ input!"{}};}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ OUTPUT\ <<\ cli::ITALIC\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ Y/Yes\ or\ N/No!\(\backslash\)n"{}}\ <<\ cli::RESET;}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
@@ -55,7 +55,7 @@
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00064}00064\ \}}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00065}\mbox{\hyperlink{classutilities_1_1Utils_ac07ca745d24efb547beec94f1d6acc11}{00065}}\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classutilities_1_1Utils_ac07ca745d24efb547beec94f1d6acc11}{Utils::checkDirectory}}(std::string\ \&directory)\ \{}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (!directory.empty()\ \&\&\ directory.back()\ !=\ \textcolor{charliteral}{'/'}\ \&\&}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ directory.back()\ !=\ \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ directory.back()\ !=\ \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ \{}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ directory\ +=\ \textcolor{charliteral}{'/'};}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00069}00069\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00070}00070\ }
@@ -73,9 +73,9 @@
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00082}00082\ \ \ \ \ LOG\_ERROR\ <<\ e.\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}}();}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00083}00083\ }
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (std::next(file)\ !=\ files.end()\ \&\&}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ !\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{utilities::Utils::askToContinue}}(}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Do\ you\ want\ to\ continue\ with\ the\ other\ files?\ (y/n)\ "{}}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ !\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{utilities::Utils::askToContinue}}(}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Do\ you\ want\ to\ continue\ with\ the\ other\ files?\ (y/n)\ "{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}))\ \{}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}Aborting..."{}};}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Application\ ended\ by\ user\ Input"{}};}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}

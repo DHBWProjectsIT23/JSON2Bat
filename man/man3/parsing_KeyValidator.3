@@ -1,4 +1,4 @@
-.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 15:08:01" "Version 0.2.4" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 15:22:17" "Version 0.2.4" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -107,7 +107,7 @@ The line of the key, if it was found
 .PP
 
 .PP
-Definition at line \fB124\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB133\fP of file \fBKeyValidator\&.cpp\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::getWrongKeys (const Json::Value & root, const std::string & filename) const\fC [private]\fP"
 
 .PP
@@ -127,7 +127,7 @@ A vector with tuples, containing the line and name of invalid types\&.
 .PP
 
 .PP
-Definition at line \fB49\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB55\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetUnknownKeyLine()\fP, and \fBvalidKeys\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::validateEntries (const std::string & filename, const std::unordered_set< std::string > & entryKeys) const\fC [private]\fP"
@@ -149,7 +149,7 @@ A vector with tuples, containing the line and name of invalid entrie keys
 .PP
 
 .PP
-Definition at line \fB71\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB78\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetUnknownKeyLine()\fP, and \fBvalidEntryKeys\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::validateKeys (const Json::Value & root, const std::string & filename)"
@@ -171,7 +171,7 @@ A vector with tuples, containing the line and name of invalid types\&.
 .PP
 
 .PP
-Definition at line \fB26\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB27\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetWrongKeys()\fP, \fBvalidateEntries()\fP, and \fBvalidateTypes()\fP\&.
 .SS "void parsing::KeyValidator::validateTypes (const std::string & filename, const Json::Value & entry, const std::unordered_set< std::string > & entryKeys)\fC [private]\fP"
@@ -204,7 +204,7 @@ Unnecessary keys within a type entry, don't cause an exception and are ignored\&
 .PP
 
 .PP
-Definition at line \fB92\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB100\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetUnknownKeyLine()\fP, and \fBtypeToKeys\fP\&.
 .SH "Member Data Documentation"
