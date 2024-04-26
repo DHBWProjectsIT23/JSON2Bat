@@ -3,7 +3,7 @@
 
 0.2.3
 
-JSON2Batch was developed during a project during our first and second
+JSON2Batch was developed during a project in our first and second
 semester of university.
 It generates batch files from JSON files, which can spawn terminals or
 applications, that run under certain parameters specified within the
