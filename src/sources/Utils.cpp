@@ -41,7 +41,7 @@ bool Utils::askToContinue(const std::string &prompt) {
         std::ranges::transform(userInput, userInput.begin(), ::tolower);
 
         if (userInput != "y" && userInput != "yes" && userInput != "n" &&
-            userInput != "no") {
+                userInput != "no") {
             LOG_INFO << "Wrong user input!";
             OUTPUT << cli::ITALIC << "Please enter Y/Yes or N/No!\n" << cli::RESET;
             continue;
@@ -64,7 +64,7 @@ void Utils::checkConfigFile(const std::string &configFile) {
 }
 const std::string &Utils::checkDirectory(std::string &directory) {
     if (!directory.empty() && directory.back() != '/' &&
-        directory.back() != '\\') {
+            directory.back() != '\\') {
         directory += '/';
     }
 
@@ -82,9 +82,9 @@ bool Utils::handleParseException(const exceptions::CustomException &e,
     LOG_ERROR << e.what();
 
     if (std::next(file) != files.end() &&
-        !utilities::Utils::askToContinue(
-                    "Do you want to continue with the other files? (y/n) "
-                    "")) {
+            !utilities::Utils::askToContinue(
+                "Do you want to continue with the other files? (y/n) "
+                "")) {
         OUTPUT << "Aborting...";
         LOG_INFO << "Application ended by user Input";
         return false;

@@ -30,7 +30,7 @@ namespace parsing {
  * - {ReqFunc14}
  */
 class FileData {
-  public:
+public:
     /**
      * @brief Setter for this->outputfile
      * @details
@@ -148,7 +148,7 @@ class FileData {
         return pathValues;
     }
 
-  private:
+private:
     std::string outputfile;
     bool hideShell;
     std::optional<std::string> application;

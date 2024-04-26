@@ -23,36 +23,43 @@ KeyValidator &KeyValidator::getInstance() {
     return keyValidator;
 }
 
-std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
-            const Json::Value &root,
-            const std::string &filename) {
+std::vector<std::tuple<int, std::string>>
+KeyValidator::validateKeys(const Json::Value &root,
+                           const std::string &filename) {
+    LOG_INFO << "Validating keys for file " << filename;
     std::vector<std::tuple<int, std::string>> wrongKeys =
-                getWrongKeys(root, filename);
+        getWrongKeys(root, filename);
 
     // Inline declaration to prevent leaking in outer scope
     for (Json::Value entries = root.get("entries", "");
-         const auto &entry : entries) {
+            const auto &entry : entries) {
+        LOG_INFO << "Validating entry";
         const auto entryKeys = entry.getMemberNames();
         // Create a set of the entry keys for faster lookup (O(1) instead of O(n))
         std::unordered_set<std::string> entryKeysSet(entryKeys.begin(),
-                                                     entryKeys.end());
+                entryKeys.end());
+
         const auto wrongEntries = validateEntries(filename, entryKeysSet);
+
         // Combine wrong keys
         wrongKeys.insert(wrongKeys.end(), wrongEntries.begin(), wrongEntries.end());
-        // Validate that each entry has it's necessary keys
+
+        LOG_INFO << "Validating types for entry";
         validateTypes(filename, entry, entryKeysSet);
     }
 
     return wrongKeys;
 }
 
-std::vector<std::tuple<int, std::string>> KeyValidator::getWrongKeys(
-            const Json::Value &root,
-            const std::string &filename) const {
+std::vector<std::tuple<int, std::string>>
+KeyValidator::getWrongKeys(const Json::Value &root,
+                           const std::string &filename) const {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
+    LOG_INFO << "Checcking for wrong keys in file " << filename << "!";
     for (const auto &key : root.getMemberNames()) {
         if (!validKeys.contains(key)) {
+            LOG_WARNING << "Found wrong key " << key << "!";
             const auto error = getUnknownKeyLine(filename, key);
 
             if (!error.has_value()) {
@@ -69,11 +76,12 @@ std::vector<std::tuple<int, std::string>> KeyValidator::getWrongKeys(
 }
 
 std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
-            const std::string &filename,
-            const std::unordered_set<std::string> &entryKeys) const {
+    const std::string &filename,
+    const std::unordered_set<std::string> &entryKeys) const {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
     for (const auto &key : entryKeys) {
+        LOG_INFO << "Checking key " << key << "!";
         if (!validEntryKeys.contains(key)) {
             const auto error = getUnknownKeyLine(filename, key);
 
@@ -90,20 +98,20 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
 }
 
 void KeyValidator::validateTypes(
-            const std::string &filename, const Json::Value &entry,
-            const std::unordered_set<std::string> &entryKeys) {
+    const std::string &filename, const Json::Value &entry,
+    const std::unordered_set<std::string> &entryKeys) {
     // Gett the type of the entry - error if not found
     const std::string type = entry.get("type", "ERROR").asString();
+    LOG_INFO << "Validating type " << type;
 
     // If the type is not found, throw an exception
     if (type == "ERROR") {
         throw exceptions::MissingTypeException();
         // If the type is not known, throw an exception
         // @note This should already have been checked
-    }
-    else if (typeToKeys.contains(type)) {
+    } else if (!typeToKeys.contains(type)) {
         const std::optional<int> line =
-                    getUnknownKeyLine(filename, std::string(type));
+            getUnknownKeyLine(filename, std::string(type));
 
         if (!line.has_value()) {
             LOG_INFO << "Unable to find line of wrong type!";
@@ -111,19 +119,21 @@ void KeyValidator::validateTypes(
 
         throw exceptions::InvalidTypeException(std::string(type), line.value());
         // If the type is known, check if all necessary keys are present
-    }
-    else {
+    } else {
         for (const auto &key : typeToKeys[type]) {
-            if (entryKeys.contains(key)) {
-                throw exceptions::MissingKeyException(key, std::string(type));
+            LOG_INFO << "Checking key " << key << " for type " << type;
+            if (!entryKeys.contains(key)) {
+                throw exceptions::MissingKeyException(key, type);
             }
         }
     }
 }
 
-std::optional<int> KeyValidator::getUnknownKeyLine(const std::string &filename,
-                                                   const std::string &wrongKey) {
+std::optional<int>
+KeyValidator::getUnknownKeyLine(const std::string &filename,
+                                const std::string &wrongKey) {
     std::ifstream file(filename);
+    LOG_INFO << "Checking for key " << wrongKey << " in file " << filename;
 
     if (!file.is_open()) {
         LOG_ERROR << "File not open!";
@@ -136,6 +146,8 @@ std::optional<int> KeyValidator::getUnknownKeyLine(const std::string &filename,
 
     for (int lineNumber = 1; std::getline(file, line); ++lineNumber) {
         if (std::regex_search(line, wrongKeyPattern)) {
+            LOG_INFO << "Found key " << wrongKey << " in line " << lineNumber;
+
             return lineNumber;
         }
     }
