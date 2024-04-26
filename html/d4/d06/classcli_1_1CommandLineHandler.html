@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -138,7 +138,7 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1.5 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d1/d38/structoptions.html" title="The struct containing all possible options.">options</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html">CommandLineHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d2/d5f/CommandLineHandler_8hpp_source.html">CommandLineHandler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af35432870c7365cebcdf348d74f4bbb2" name="af35432870c7365cebcdf348d74f4bbb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af35432870c7365cebcdf348d74f4bbb2">&#9670;&#160;</a></span>CommandLineHandler()</h2>
@@ -164,7 +164,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The Constructor of the <a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html" title="Responsible for the Command Line Interface.">CommandLineHandler</a> Class. </p>
-<dl class="section note"><dt>Note</dt><dd>As all functions are static it should not be used and as such is private. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>As all functions are static it should not be used and as such is deleted. </dd></dl>
 
 </div>
 </div>
@@ -192,7 +192,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The Destructor of the <a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html" title="Responsible for the Command Line Interface.">CommandLineHandler</a> Class. </p>
-<dl class="section note"><dt>Note</dt><dd>As all functions are static it should not be used and as such is private. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>As all functions are static it should not be used and as such is deleted. </dd></dl>
 
 </div>
 </div>
@@ -232,25 +232,19 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Parses the Command Line Arguments. </p>
-<p>This function uses the "getopt.h" library to parse all options given and then returns all files which are given as arguments. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This function uses the "getopt.h" library to parse all options given and then returns all files which are given as arguments.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">argc</td><td>The number of arguments given </td></tr>
-    <tr><td class="paramname">argv</td><td>The arguments given </td></tr>
+    <tr><td class="paramname">argv</td><td>The arguments given</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns a vector of strings containing all filenames.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>Update documentation </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a tuple containing the output directory and the files </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00050">printCredits()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">printHelp()</a>, and <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00044">printVersion()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00052">printCredits()</a>, <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">printHelp()</a>, and <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00045">printVersion()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -271,7 +265,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph" alt=""/></div>
 <map name="ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph" id="ad4/d06/classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8_icgraph">
 <area shape="rect" title="Parses the Command Line Arguments." alt="" coords="301,5,470,46"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,13,253,39"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="103,13,253,39"/>
 <area shape="poly" title=" " alt="" coords="286,28,253,28,253,23,286,23"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
@@ -304,12 +298,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Prints the credits message. </p>
-<p>Prints the credits message when called.</p>
 <dl class="section note"><dt>Note</dt><dd>This function ends the application. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00052">52</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00027">AUTHORS</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00025">DESCRIPTION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00028">HOMEPAGE_URL</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00022">MAJOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00023">MINOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00024">PATCH_VERSION</a>, and <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00026">PROJECT_NAME</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00034">config::AUTHORS</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00032">config::DESCRIPTION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00036">config::HOMEPAGE_URL</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00029">config::MAJOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00030">config::MINOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00031">config::PATCH_VERSION</a>, and <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00033">config::PROJECT_NAME</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -318,7 +311,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Prints the credits message." alt="" coords="518,5,688,46"/>
 <area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="301,5,470,46"/>
 <area shape="poly" title=" " alt="" coords="503,28,471,28,471,23,503,23"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,13,253,39"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="103,13,253,39"/>
 <area shape="poly" title=" " alt="" coords="286,28,253,28,253,23,286,23"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
@@ -351,19 +344,18 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Prints the help message. </p>
-<p>Prints the help message when called.</p>
 <dl class="section note"><dt>Note</dt><dd>This function ends the application. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00021">EXECUTABLE_NAME</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00028">config::EXECUTABLE_NAME</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d06/classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960_icgraph.png" border="0" usemap="#ad4/d06/classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960_icgraph" alt=""/></div>
 <map name="ad4/d06/classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960_icgraph" id="ad4/d06/classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960_icgraph">
 <area shape="rect" title="Prints the help message." alt="" coords="518,5,688,46"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,13,253,39"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="103,13,253,39"/>
 <area shape="poly" title=" " alt="" coords="503,25,470,24,301,24,253,26,253,20,301,19,470,19,503,20"/>
 <area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="301,33,470,74"/>
 <area shape="poly" title=" " alt="" coords="503,41,471,45,470,40,503,36"/>
@@ -399,12 +391,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Prints the version message. </p>
-<p>Prints the version message when called.</p>
 <dl class="section note"><dt>Note</dt><dd>This function ends the application. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../dc/db7/CommandLineHandler_8cpp_source.html">CommandLineHandler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00022">MAJOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00023">MINOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00024">PATCH_VERSION</a>, and <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00026">PROJECT_NAME</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00029">config::MAJOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00030">config::MINOR_VERSION</a>, <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00031">config::PATCH_VERSION</a>, and <a class="el" href="../../d8/dfd/config_8hpp_source.html#l00033">config::PROJECT_NAME</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -413,7 +404,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Prints the version message." alt="" coords="518,5,688,46"/>
 <area shape="rect" href="../../d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="301,5,470,46"/>
 <area shape="poly" title=" " alt="" coords="503,28,471,28,471,23,503,23"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,13,253,39"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="103,13,253,39"/>
 <area shape="poly" title=" " alt="" coords="286,28,253,28,253,23,286,23"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
@@ -432,7 +423,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/dfa/namespacecli.html">cli</a></li><li class="navelem"><a class="el" href="../../d4/d06/classcli_1_1CommandLineHandler.html">CommandLineHandler</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:02:13 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

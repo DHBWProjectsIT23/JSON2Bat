@@ -1,4 +1,4 @@
-.TH "cli::CommandLineHandler" 3 "Fri Apr 26 2024 13:01:17" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "cli::CommandLineHandler" 3 "Fri Apr 26 2024 13:02:13" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -69,7 +69,7 @@ Simon Blum
 .PP
 
 .PP
-Definition at line \fB53\fP of file \fBCommandLineHandler\&.hpp\fP\&.
+Definition at line \fB55\fP of file \fBCommandLineHandler\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "cli::CommandLineHandler::CommandLineHandler ()\fC [delete]\fP"
@@ -79,7 +79,7 @@ The Constructor of the \fBCommandLineHandler\fP Class\&.
 .PP
 \fBNote\fP
 .RS 4
-As all functions are static it should not be used and as such is private\&. 
+As all functions are static it should not be used and as such is deleted\&. 
 .RE
 .PP
 
@@ -90,7 +90,7 @@ The Destructor of the \fBCommandLineHandler\fP Class\&.
 .PP
 \fBNote\fP
 .RS 4
-As all functions are static it should not be used and as such is private\&. 
+As all functions are static it should not be used and as such is deleted\&. 
 .RE
 .PP
 
@@ -99,39 +99,29 @@ As all functions are static it should not be used and as such is private\&.
 .SS "std::tuple< std::optional< std::string >, std::vector< std::string > > cli::CommandLineHandler::parseArguments (int argc, char * argv[])\fC [static]\fP"
 
 .PP
-Parses the Command Line Arguments\&. This function uses the 'getopt\&.h' library to parse all options given and then returns all files which are given as arguments\&. 
+Parses the Command Line Arguments\&. This function uses the 'getopt\&.h' library to parse all options given and then returns all files which are given as arguments\&.
 .PP
 \fBParameters\fP
 .RS 4
 \fIargc\fP The number of arguments given 
 .br
-\fIargv\fP The arguments given 
-.RE
-.PP
-\fBExceptions\fP
-.RS 4
-\fIstd::logic_error\fP 
+\fIargv\fP The arguments given
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Returns a vector of strings containing all filenames\&.
-.RE
-.PP
-\fBTodo\fP
-.RS 4
-Update documentation 
+Returns a tuple containing the output directory and the files 
 .RE
 .PP
 
 .PP
-Definition at line \fB67\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB72\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
 References \fBprintCredits()\fP, \fBprintHelp()\fP, and \fBprintVersion()\fP\&.
 .SS "void cli::CommandLineHandler::printCredits ()\fC [static]\fP"
 
 .PP
-Prints the credits message\&. Prints the credits message when called\&.
+Prints the credits message\&. 
 .PP
 \fBNote\fP
 .RS 4
@@ -140,13 +130,13 @@ This function ends the application\&.
 .PP
 
 .PP
-Definition at line \fB50\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB52\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
-References \fBAUTHORS\fP, \fBDESCRIPTION\fP, \fBHOMEPAGE_URL\fP, \fBMAJOR_VERSION\fP, \fBMINOR_VERSION\fP, \fBPATCH_VERSION\fP, and \fBPROJECT_NAME\fP\&.
+References \fBconfig::AUTHORS\fP, \fBconfig::DESCRIPTION\fP, \fBconfig::HOMEPAGE_URL\fP, \fBconfig::MAJOR_VERSION\fP, \fBconfig::MINOR_VERSION\fP, \fBconfig::PATCH_VERSION\fP, and \fBconfig::PROJECT_NAME\fP\&.
 .SS "void cli::CommandLineHandler::printHelp ()\fC [static]\fP"
 
 .PP
-Prints the help message\&. Prints the help message when called\&.
+Prints the help message\&. 
 .PP
 \fBNote\fP
 .RS 4
@@ -157,11 +147,11 @@ This function ends the application\&.
 .PP
 Definition at line \fB22\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
-References \fBEXECUTABLE_NAME\fP\&.
+References \fBconfig::EXECUTABLE_NAME\fP\&.
 .SS "void cli::CommandLineHandler::printVersion ()\fC [static]\fP"
 
 .PP
-Prints the version message\&. Prints the version message when called\&.
+Prints the version message\&. 
 .PP
 \fBNote\fP
 .RS 4
@@ -170,9 +160,9 @@ This function ends the application\&.
 .PP
 
 .PP
-Definition at line \fB44\fP of file \fBCommandLineHandler\&.cpp\fP\&.
+Definition at line \fB45\fP of file \fBCommandLineHandler\&.cpp\fP\&.
 .PP
-References \fBMAJOR_VERSION\fP, \fBMINOR_VERSION\fP, \fBPATCH_VERSION\fP, and \fBPROJECT_NAME\fP\&.
+References \fBconfig::MAJOR_VERSION\fP, \fBconfig::MINOR_VERSION\fP, \fBconfig::PATCH_VERSION\fP, and \fBconfig::PROJECT_NAME\fP\&.
 
 .SH "Author"
 .PP 

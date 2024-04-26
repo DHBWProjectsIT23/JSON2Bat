@@ -3,67 +3,67 @@
 \mbox{\hyperlink{FileData_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ FILEDATA\_HPP}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#define\ FILEDATA\_HPP}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <cstdint>}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <optional>}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00021}\mbox{\hyperlink{namespaceparsing}{00021}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceparsing}{parsing}}\ \{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00030}\mbox{\hyperlink{classparsing_1_1FileData}{00030}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classparsing_1_1FileData}{FileData}}\ \{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00031}00031\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_a3428f3de9f6b8e63293f5dd2b7661239}{setOutputFile}}(std::string\ \&newOutputfile);}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00048}\mbox{\hyperlink{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77}{setHideShell}}(\textcolor{keywordtype}{bool}\ newHideShell)\ \{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hideShell}}\ =\ newHideShell;}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00050}00050\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_aeaad2a084141933062f5c8edc24667a9}{setApplication}}(\textcolor{keyword}{const}\ std::string\ \&newApplication);}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_a5567a691f41e1e16c07adce031dc3e3d}{addCommand}}(\textcolor{keyword}{const}\ std::string\ \&command);}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_ad2e4a0d45368843ded71b54a7dc27ced}{addEnvironmentVariable}}(\textcolor{keyword}{const}\ std::string\ \&name,}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&value);}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_ac4621697042bf1d0b1596235bf2a16a0}{addPathValue}}(\textcolor{keyword}{const}\ std::string\ \&pathValue);}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00104}\mbox{\hyperlink{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9}{00104}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9}{getOutputFile}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{outputfile}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00106}00106\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00107}00107\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00112}\mbox{\hyperlink{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad}{00112}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad}{getHideShell}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hideShell}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00114}00114\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00120}\mbox{\hyperlink{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f}{00120}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::optional<std::string>\ \&\mbox{\hyperlink{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f}{getApplication}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{application}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00122}00122\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00123}00123\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00128}\mbox{\hyperlink{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080}{00128}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::string>\ \&\mbox{\hyperlink{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080}{getCommands}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{commands}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00130}00130\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00131}00131\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00136}00136\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::tuple<std::string,\ std::string>>\ \&}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00137}\mbox{\hyperlink{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1}{00137}}\ \ \ \ \ \mbox{\hyperlink{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1}{getEnvironmentVariables}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{environmentVariables}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00139}00139\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00145}\mbox{\hyperlink{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f}{00145}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::string>\ \&\mbox{\hyperlink{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f}{getPathValues}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{pathValues}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00147}00147\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00148}00148\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00149}00149\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00150}\mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{00150}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{outputfile}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00151}\mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{00151}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hideShell}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00152}\mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{00152}}\ \ \ \ \ std::optional<std::string>\ \mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{application}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00153}\mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{00153}}\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{commands}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00154}\mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{00154}}\ \ \ \ \ std::vector<std::tuple<std::string,\ std::string>>\ \mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{environmentVariables}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00155}\mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{00155}}\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{pathValues}};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00156}00156\ \};}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00157}00157\ \}\ \textcolor{comment}{//\ namespace\ parsing}}
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00159}00159\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILEDATA\_HPP}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#ifndef\ FILEDATA\_HPP}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#define\ FILEDATA\_HPP}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00022}\mbox{\hyperlink{namespaceparsing}{00022}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceparsing}{parsing}}\ \{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00031}\mbox{\hyperlink{classparsing_1_1FileData}{00031}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classparsing_1_1FileData}{FileData}}\ \{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00032}00032\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_a3428f3de9f6b8e63293f5dd2b7661239}{setOutputFile}}(std::string\ \&newOutputfile);}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00049}\mbox{\hyperlink{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77}{00049}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_a576470a516a1d4fb281db3d7173a0e77}{setHideShell}}(\textcolor{keywordtype}{bool}\ newHideShell)\ \{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hideShell}}\ =\ newHideShell;}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_aeaad2a084141933062f5c8edc24667a9}{setApplication}}(\textcolor{keyword}{const}\ std::string\ \&newApplication);}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_a5567a691f41e1e16c07adce031dc3e3d}{addCommand}}(\textcolor{keyword}{const}\ std::string\ \&command);}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_ad2e4a0d45368843ded71b54a7dc27ced}{addEnvironmentVariable}}(\textcolor{keyword}{const}\ std::string\ \&name,}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&value);}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1FileData_ac4621697042bf1d0b1596235bf2a16a0}{addPathValue}}(\textcolor{keyword}{const}\ std::string\ \&pathValue);}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00105}\mbox{\hyperlink{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9}{00105}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classparsing_1_1FileData_a604a0156e296d2187f96146573f55bb9}{getOutputFile}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{outputfile}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00113}\mbox{\hyperlink{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad}{00113}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparsing_1_1FileData_a55f4017c558da672905bc932e74d1cad}{getHideShell}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hideShell}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00121}\mbox{\hyperlink{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f}{00121}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::optional<std::string>\ \&\mbox{\hyperlink{classparsing_1_1FileData_ad1b7f1f806d599399576792bc62c0f1f}{getApplication}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{application}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00129}\mbox{\hyperlink{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080}{00129}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::string>\ \&\mbox{\hyperlink{classparsing_1_1FileData_af2b305d9f8ac82fd71dcbd9d7e073080}{getCommands}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{commands}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00137}00137\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::tuple<std::string,\ std::string>>\ \&}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00138}\mbox{\hyperlink{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1}{00138}}\ \ \ \ \ \mbox{\hyperlink{classparsing_1_1FileData_a35ec9fbaaf2341cd9b2dd6c86de1f3a1}{getEnvironmentVariables}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{environmentVariables}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00140}00140\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00146}\mbox{\hyperlink{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f}{00146}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::string>\ \&\mbox{\hyperlink{classparsing_1_1FileData_a0e127f297276d087a3852c707490380f}{getPathValues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{pathValues}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00150}00150\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00151}\mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{00151}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classparsing_1_1FileData_a512ec5915338a9f8e1884bc5dc543abf}{outputfile}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00152}\mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{00152}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparsing_1_1FileData_a1c52134304b28bd70b16393892f4c478}{hideShell}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00153}\mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{00153}}\ \ \ \ \ std::optional<std::string>\ \mbox{\hyperlink{classparsing_1_1FileData_a5de3c79cc4751538c6c967cfcd552f26}{application}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00154}\mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{00154}}\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classparsing_1_1FileData_a2ce4f1d868a8b6552ebf3e650263d79d}{commands}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00155}00155\ \ \ \ \ \textcolor{comment}{//\ Tuple<Name,\ Value>}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00156}\mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{00156}}\ \ \ \ \ std::vector<std::tuple<std::string,\ std::string>>\ \mbox{\hyperlink{classparsing_1_1FileData_a7bdf0ed29afed1aded0195a6ea7ae6b0}{environmentVariables}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00157}\mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{00157}}\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classparsing_1_1FileData_aa8099fcd9e148bcc6de39f82dff8a03b}{pathValues}};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00158}00158\ \};}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00159}00159\ \}\ \textcolor{comment}{//\ namespace\ parsing}}
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{FileData_8hpp_source_l00161}00161\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILEDATA\_HPP}}
 
 \end{DoxyCode}

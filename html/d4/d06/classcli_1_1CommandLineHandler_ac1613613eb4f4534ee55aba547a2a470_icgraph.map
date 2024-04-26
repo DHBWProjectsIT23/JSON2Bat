@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Prints the credits message." alt="" coords="518,5,688,46"/>
 <area shape="rect" id="Node000002" href="$d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="301,5,470,46"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="503,28,471,28,471,23,503,23"/>
-<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title=" " alt="" coords="103,13,253,39"/>
+<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#ad612c95526cdd7ff2fa78563c0cd666f" title="Validates and parses arguments." alt="" coords="103,13,253,39"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,28,253,28,253,23,286,23"/>
 <area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>

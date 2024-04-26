@@ -1,19 +1,19 @@
 <map id="BatchCreator::BatchCreator" name="BatchCreator::BatchCreator">
-<area shape="rect" id="Node000001" title="Initialisiert BatchCreator." alt="" coords="5,153,185,179"/>
-<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#a2225babf16a473ba6722238c19d785ae" title="Setzt batch Datei zusammen." alt="" coords="233,153,406,179"/>
+<area shape="rect" id="Node000001" title="Initializes the BatchCreator." alt="" coords="5,153,185,179"/>
+<area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#a2225babf16a473ba6722238c19d785ae" title="Creates the batch stream." alt="" coords="233,153,406,179"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,164,217,164,217,169,185,169"/>
-<area shape="rect" id="Node000003" href="$da/d1c/classBatchCreator.html#af9bfc052ff3ee90beff0f35b56aed5bc" title="Öffnet Anwednung falls gewünscht." alt="" coords="483,5,637,31"/>
+<area shape="rect" id="Node000003" href="$da/d1c/classBatchCreator.html#af9bfc052ff3ee90beff0f35b56aed5bc" title="If an application is given, it is started at the end." alt="" coords="483,5,637,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,151,378,97,413,66,453,40,467,33,470,38,455,44,416,70,382,101,333,155"/>
-<area shape="rect" id="Node000004" href="$da/d1c/classBatchCreator.html#a7ea2646254825e194f831d98ae703ec8" title="Befehle ausführen." alt="" coords="462,55,659,80"/>
+<area shape="rect" id="Node000004" href="$da/d1c/classBatchCreator.html#a7ea2646254825e194f831d98ae703ec8" title="Writes the commands to be executed." alt="" coords="462,55,659,80"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="339,151,389,120,453,89,472,82,474,88,455,94,392,125,342,155"/>
-<area shape="rect" id="Node000005" href="$da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319" title="Ende der Batch Datei." alt="" coords="484,104,637,130"/>
+<area shape="rect" id="Node000005" href="$da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319" title="Writes the end of the batch file." alt="" coords="484,104,637,130"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="385,150,478,131,479,136,386,155"/>
-<area shape="rect" id="Node000006" href="$da/d1c/classBatchCreator.html#a31d22f486b3608cdae0b7488fb3857a8" title="Umgebungsvariablen setzten." alt="" coords="457,153,664,179"/>
+<area shape="rect" id="Node000006" href="$da/d1c/classBatchCreator.html#a31d22f486b3608cdae0b7488fb3857a8" title="Set&#39;s environment variables." alt="" coords="457,153,664,179"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="407,164,441,164,441,169,407,169"/>
-<area shape="rect" id="Node000007" href="$da/d1c/classBatchCreator.html#a163015c1e797677466c7cf1c19662b35" title="Sichtbarkeit Konsole." alt="" coords="467,203,654,228"/>
+<area shape="rect" id="Node000007" href="$da/d1c/classBatchCreator.html#a163015c1e797677466c7cf1c19662b35" title="Writes the visibility of the shell." alt="" coords="467,203,654,228"/>
 <area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="386,177,479,196,478,202,385,182"/>
-<area shape="rect" id="Node000008" href="$da/d1c/classBatchCreator.html#a0d08fe331105e1f2dd0ea56d12e86887" title="Pfade setzten." alt="" coords="454,252,666,278"/>
+<area shape="rect" id="Node000008" href="$da/d1c/classBatchCreator.html#a0d08fe331105e1f2dd0ea56d12e86887" title="Set&#39;s the path variables." alt="" coords="454,252,666,278"/>
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="342,177,392,208,455,238,474,245,472,250,453,243,389,213,339,182"/>
-<area shape="rect" id="Node000009" href="$da/d1c/classBatchCreator.html#a5b0d5ddd55e65bdce910a010deb7847d" title="Anfang der Batch Datei." alt="" coords="481,301,640,327"/>
+<area shape="rect" id="Node000009" href="$da/d1c/classBatchCreator.html#a5b0d5ddd55e65bdce910a010deb7847d" title="Wirtes the start of the batch file." alt="" coords="481,301,640,327"/>
 <area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="333,178,382,232,416,262,455,288,467,293,465,298,453,292,413,266,378,236,329,181"/>
 </map>

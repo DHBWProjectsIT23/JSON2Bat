@@ -1,4 +1,4 @@
-.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 13:01:17" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 13:02:13" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,20 +33,21 @@ parsing::KeyValidator \- Validates keys of a Json::Value object\&.
 .br
 .RI "Retrieve the wrong keys from a Json::Value object\&. "
 .ti -1c
+.RI "void \fBvalidateTypes\fP (const std::string &filename, const Json::Value &entry, const std::unordered_set< std::string > &entryKeys)"
+.br
+.RI "Validates types from the entries array\&. "
+.ti -1c
 .RI "std::vector< std::tuple< int, std::string > > \fBvalidateEntries\fP (const std::string &filename, const std::unordered_set< std::string > &entryKeys) const"
 .br
-.RI "Validates that an entries 'type' key is valid\&. "
+.RI "Validates that keys within the entries array are valid\&. "
 .in -1c
 .SS "Static Private Member Functions"
 
 .in +1c
 .ti -1c
-.RI "static void \fBvalidateTypes\fP (const std::string &filename, const Json::Value &entry, const std::unordered_set< std::string > &entryKeys)"
-.br
-.RI "Validates types from the entries array\&. "
-.ti -1c
 .RI "static std::optional< int > \fBgetUnknownKeyLine\fP (const std::string &filename, const std::string &wrongKey)"
 .br
+.RI "Get the line of an unknown key\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -57,14 +58,17 @@ parsing::KeyValidator \- Validates keys of a Json::Value object\&.
 .ti -1c
 .RI "std::unordered_set< std::string > \fBvalidEntryKeys\fP"
 .br
+.ti -1c
+.RI "std::unordered_map< std::string_view, std::vector< std::string > > \fBtypeToKeys\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
 Validates keys of a Json::Value object\&. 
 
-This class is singleton\&. That way when multiple files are parsed with the application, the validKeys and validEntryKeys field only have to be allocated once\&. 
+This class is singleton\&. That way when multiple files are parsed with the application, the maps for valid keys and the set for the type entries field only have to be allocated once when parsing multiple files\&. 
 .PP
-Definition at line \fB27\fP of file \fBKeyValidator\&.hpp\fP\&.
+Definition at line \fB30\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBKeyValidator\fP & parsing::KeyValidator::getInstance ()\fC [static]\fP"
@@ -79,29 +83,27 @@ Reference to the instance of this class
 .PP
 
 .PP
-Definition at line \fB21\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB20\fP of file \fBKeyValidator\&.cpp\fP\&.
 .SS "std::optional< int > parsing::KeyValidator::getUnknownKeyLine (const std::string & filename, const std::string & wrongKey)\fC [static]\fP, \fC [private]\fP"
 
 .PP
+Get the line of an unknown key\&. This method goes through each line of the given file and checks if the line contains the given key\&. Returns std::nullopt if the file can't be opened or the key was not found\&.
+.PP
 \fBParameters\fP
 .RS 4
-\fIfilename\fP 
+\fIfilename\fP The filename which should contain the key 
 .br
-\fIwrongKey\fP 
+\fIwrongKey\fP The key to be searched for
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-.RE
-.PP
-\fBTodo\fP
-.RS 4
-Documentation 
+The line of the key, if it was found 
 .RE
 .PP
 
 .PP
-Definition at line \fB121\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB129\fP of file \fBKeyValidator\&.cpp\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::getWrongKeys (const Json::Value & root, const std::string & filename) const\fC [private]\fP"
 
 .PP
@@ -127,27 +129,23 @@ References \fBgetUnknownKeyLine()\fP, and \fBvalidKeys\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::validateEntries (const std::string & filename, const std::unordered_set< std::string > & entryKeys) const\fC [private]\fP"
 
 .PP
-Validates that an entries 'type' key is valid\&. 
+Validates that keys within the entries array are valid\&. This mehthod goes through each of the entries, and validates, that the keys are part of the validEntryKeys attribute\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIfilename\fP 
+\fIfilename\fP The filename from which the entries are from 
 .br
-\fIentryKeys\fP 
+\fIentryKeys\fP The keys of the entries
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-.RE
-.PP
-\fBTodo\fP
-.RS 4
-Documentation 
+A vector with tuples, containing the line and name of invalid entrie keys 
 .RE
 .PP
 
 .PP
-Definition at line \fB71\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB74\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetUnknownKeyLine()\fP, and \fBvalidEntryKeys\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::validateKeys (const Json::Value & root, const std::string & filename)"
@@ -159,7 +157,7 @@ Validate keys off a Json::Value object\&. This method goes through the MemberNam
 .RS 4
 \fIroot\fP The Json::Value object to be validated\&. 
 .br
-\fIfilename\fP The filename from which 'root' is from\&. 
+\fIfilename\fP The filename from which 'root' is from\&.
 .RE
 .PP
 \fBReturns\fP
@@ -169,30 +167,61 @@ A vector with tuples, containing the line and name of invalid types\&.
 .PP
 
 .PP
-Definition at line \fB28\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB27\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetWrongKeys()\fP, \fBvalidateEntries()\fP, and \fBvalidateTypes()\fP\&.
-.SS "void parsing::KeyValidator::validateTypes (const std::string & filename, const Json::Value & entry, const std::unordered_set< std::string > & entryKeys)\fC [static]\fP, \fC [private]\fP"
+.SS "void parsing::KeyValidator::validateTypes (const std::string & filename, const Json::Value & entry, const std::unordered_set< std::string > & entryKeys)\fC [private]\fP"
 
 .PP
-Validates types from the entries array\&. Makes sure that each type has it's according keys, needed to parse it\&.
+Validates types from the entries array\&. This method goes makes sure, that the type of the given entry is valid and that it contains it's necessary keys\&. It will throw an exception if the type is missing, if the type is invalid or if the type is missing a key\&.
+.PP
+\fBNote\fP
+.RS 4
+Unnecessary keys within a type entry, don't cause an exception and are ignored\&.
+.RE
 .PP
 \fBParameters\fP
 .RS 4
 \fIfilename\fP The filename from which 'entry' is from 
 .br
-\fIentry\fP 
+\fIentry\fP The entry to be validated 
 .br
-\fIentryKeys\fP 
+\fIentryKeys\fP The keys of the entry
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexceptions::MissingTypeException\fP\fP 
+.br
+\fI\fBexceptions::InvalidTypeException\fP\fP 
+.br
+\fI\fBexceptions::MissingKeyException\fP\fP 
 .RE
 .PP
 
 .PP
-Definition at line \fB92\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB96\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
-References \fBgetUnknownKeyLine()\fP\&.
+References \fBgetUnknownKeyLine()\fP, and \fBtypeToKeys\fP\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "std::unordered_map<std::string_view, std::vector<std::string> > parsing::KeyValidator::typeToKeys\fC [private]\fP"
+\fBInitial value:\fP.PP
+.nf
+= {
+        {"EXE", {"command"}}, {"PATH", {"path"}}, {"ENV", {"key", "value"}}
+    }
+.fi
+
+.PP
+\fBNote\fP
+.RS 4
+Changed from if/else clause within function to map in 0\&.2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line \fB144\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SS "std::unordered_set<std::string> parsing::KeyValidator::validEntryKeys\fC [private]\fP"
 \fBInitial value:\fP.PP
 .nf
@@ -202,7 +231,14 @@ References \fBgetUnknownKeyLine()\fP\&.
 .fi
 
 .PP
-Definition at line \fB111\fP of file \fBKeyValidator\&.hpp\fP\&.
+\fBNote\fP
+.RS 4
+Changed from vector to unordered_set in 0\&.2\&.1 - as this shoud improve lookup performance from O(n) to O(1) 
+.RE
+.PP
+
+.PP
+Definition at line \fB137\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SS "std::unordered_set<std::string> parsing::KeyValidator::validKeys\fC [private]\fP"
 \fBInitial value:\fP.PP
 .nf
@@ -212,7 +248,14 @@ Definition at line \fB111\fP of file \fBKeyValidator\&.hpp\fP\&.
 .fi
 
 .PP
-Definition at line \fB108\fP of file \fBKeyValidator\&.hpp\fP\&.
+\fBNote\fP
+.RS 4
+Changed from vector to unordered_set in 0\&.2\&.1 - as this shoud improve lookup performance from O(n) to O(1) 
+.RE
+.PP
+
+.PP
+Definition at line \fB130\fP of file \fBKeyValidator\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

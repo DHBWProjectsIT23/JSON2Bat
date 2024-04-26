@@ -6,7 +6,7 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="590,28,558,28,558,23,590,23"/>
 <area shape="rect" id="Node000004" href="$d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7" title="Retrieve the data from the json file." alt="" coords="225,5,367,46"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="400,28,368,28,368,23,400,23"/>
-<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html#a0f61acd0910d985bc7abe4af8c3bffe0" title=" " alt="" coords="103,13,177,39"/>
+<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html#a7c8a82e43100bc97b6aad59a7f7d2f13" title="Parses the given file and writes the output to the output directory." alt="" coords="103,13,177,39"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,28,178,28,178,23,209,23"/>
 <area shape="rect" id="Node000006" href="$df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function of the program." alt="" coords="5,13,55,39"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>

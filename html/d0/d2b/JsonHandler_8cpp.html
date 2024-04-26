@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('d0/d2b/JsonHandler_8cpp.html','../../'
   <div class="headertitle"><div class="title">JsonHandler.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation of the JsonHandler class.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d8/d7b/JsonHandler_8hpp_source.html">JsonHandler.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/de9/Exceptions_8hpp_source.html">Exceptions.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/de1/FileData_8hpp_source.html">FileData.hpp</a>&quot;</code><br />
@@ -108,38 +111,40 @@ Include dependency graph for JsonHandler.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d03/JsonHandler_8cpp__incl.png" border="0" usemap="#asrc_2sources_2JsonHandler_8cpp" alt=""/></div>
 <map name="asrc_2sources_2JsonHandler_8cpp" id="asrc_2sources_2JsonHandler_8cpp">
-<area shape="rect" title=" " alt="" coords="315,5,505,31"/>
-<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="231,79,349,105"/>
-<area shape="poly" title=" " alt="" coords="391,34,325,73,322,68,388,29"/>
-<area shape="rect" href="../../d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="30,153,124,178"/>
-<area shape="poly" title=" " alt="" coords="361,34,293,54,221,81,160,113,108,146,105,141,157,109,218,77,292,49,360,29"/>
-<area shape="rect" title=" " alt="" coords="366,153,505,178"/>
-<area shape="poly" title=" " alt="" coords="415,31,433,137,428,138,410,32"/>
-<area shape="rect" href="../../d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="448,79,556,105"/>
-<area shape="poly" title=" " alt="" coords="427,29,477,67,473,72,424,34"/>
-<area shape="rect" href="../../dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="603,79,721,105"/>
-<area shape="poly" title=" " alt="" coords="454,29,606,72,604,77,452,34"/>
-<area shape="poly" title=" " alt="" coords="255,108,128,150,127,145,253,103"/>
-<area shape="poly" title=" " alt="" coords="316,103,398,143,396,148,314,108"/>
-<area shape="rect" title=" " alt="" coords="238,153,342,178"/>
-<area shape="poly" title=" " alt="" coords="293,105,293,137,288,137,288,105"/>
-<area shape="rect" title=" " alt="" coords="147,153,215,178"/>
-<area shape="poly" title=" " alt="" coords="273,107,213,146,210,142,270,103"/>
-<area shape="rect" title=" " alt="" coords="5,226,66,252"/>
-<area shape="poly" title=" " alt="" coords="72,180,52,214,48,211,68,177"/>
-<area shape="rect" title=" " alt="" coords="481,226,547,252"/>
-<area shape="poly" title=" " alt="" coords="124,174,136,176,466,228,465,233,135,181,123,179"/>
-<area shape="rect" title=" " alt="" coords="326,226,380,252"/>
-<area shape="poly" title=" " alt="" coords="124,176,312,225,310,230,123,181"/>
-<area shape="rect" title=" " alt="" coords="90,226,147,252"/>
-<area shape="poly" title=" " alt="" coords="86,177,106,211,101,214,81,180"/>
-<area shape="poly" title=" " alt="" coords="512,104,525,139,526,160,519,180,493,205,461,222,427,233,395,238,395,233,426,228,459,217,490,201,515,177,521,159,520,140,507,106"/>
-<area shape="poly" title=" " alt="" coords="493,107,459,143,455,139,489,103"/>
-<area shape="poly" title=" " alt="" coords="652,107,539,217,535,213,648,103"/>
-<area shape="rect" title=" " alt="" coords="631,153,742,178"/>
-<area shape="poly" title=" " alt="" coords="669,104,680,137,675,139,664,106"/>
-<area shape="rect" title=" " alt="" coords="767,153,870,178"/>
-<area shape="poly" title=" " alt="" coords="690,103,779,143,777,148,688,108"/>
+<area shape="rect" title="Implementation of the JsonHandler class." alt="" coords="317,5,507,31"/>
+<area shape="rect" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class." alt="" coords="225,79,343,105"/>
+<area shape="poly" title=" " alt="" coords="392,34,320,73,318,69,389,29"/>
+<area shape="rect" href="../../d0/de1/FileData_8hpp.html" title="This file contains the FileData class." alt="" coords="5,153,99,178"/>
+<area shape="poly" title=" " alt="" coords="363,34,292,54,214,81,145,114,86,147,83,142,142,109,212,77,290,49,361,29"/>
+<area shape="rect" title=" " alt="" coords="342,153,482,178"/>
+<area shape="poly" title=" " alt="" coords="415,31,415,137,409,137,409,31"/>
+<area shape="rect" href="../../d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="458,79,566,105"/>
+<area shape="poly" title=" " alt="" coords="431,29,484,67,481,72,427,34"/>
+<area shape="rect" href="../../dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="786,79,905,105"/>
+<area shape="poly" title=" " alt="" coords="486,29,771,76,770,81,486,34"/>
+<area shape="poly" title=" " alt="" coords="245,108,107,150,105,145,244,103"/>
+<area shape="poly" title=" " alt="" coords="307,103,378,142,376,147,304,108"/>
+<area shape="rect" title=" " alt="" coords="123,153,227,178"/>
+<area shape="poly" title=" " alt="" coords="267,107,207,146,204,142,264,103"/>
+<area shape="rect" title=" " alt="" coords="250,153,318,178"/>
+<area shape="poly" title=" " alt="" coords="287,105,287,137,281,137,281,105"/>
+<area shape="rect" title=" " alt="" coords="639,226,705,252"/>
+<area shape="poly" title=" " alt="" coords="100,174,111,176,401,211,623,231,623,237,401,217,110,181,99,179"/>
+<area shape="rect" title=" " alt="" coords="299,226,352,252"/>
+<area shape="poly" title=" " alt="" coords="99,176,285,225,283,230,98,181"/>
+<area shape="rect" title=" " alt="" coords="23,226,81,252"/>
+<area shape="poly" title=" " alt="" coords="55,179,55,211,49,211,49,179"/>
+<area shape="poly" title=" " alt="" coords="515,105,513,141,507,162,495,180,467,204,434,220,399,231,368,237,367,232,398,226,432,215,464,199,491,177,502,160,507,140,510,105"/>
+<area shape="poly" title=" " alt="" coords="497,107,443,145,440,141,493,103"/>
+<area shape="rect" href="../../d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="556,153,636,178"/>
+<area shape="poly" title=" " alt="" coords="528,103,572,140,569,144,525,107"/>
+<area shape="poly" title=" " alt="" coords="867,103,888,118,907,137,917,158,917,169,911,180,899,191,880,201,830,216,721,235,720,230,829,211,878,196,896,187,907,177,912,168,912,159,902,140,884,122,864,107"/>
+<area shape="rect" title=" " alt="" coords="972,153,1084,178"/>
+<area shape="poly" title=" " alt="" coords="877,103,984,144,982,149,875,108"/>
+<area shape="rect" title=" " alt="" coords="660,153,770,178"/>
+<area shape="poly" title=" " alt="" coords="824,108,751,147,749,143,822,103"/>
+<area shape="rect" title=" " alt="" coords="794,153,897,178"/>
+<area shape="poly" title=" " alt="" coords="848,105,848,137,843,137,843,105"/>
 </map>
 </div>
 </div>
@@ -152,9 +157,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd></dd></dl>
-<dl class="section version"><dt>Version</dt><dd></dd></dl>
+<div class="textblock"><p>Implementation of the JsonHandler class. </p>
+<dl class="section author"><dt>Author</dt><dd>Elena Schwarzbach, Sonia Sinacci </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-04-16 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1.6 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d7b/JsonHandler_8hpp.html" title="This file contains the JsonHandler class.">src/include/JsonHandler.hpp</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d0/d2b/JsonHandler_8cpp_source.html">JsonHandler.cpp</a>.</p>
@@ -164,7 +171,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1615da3a94339053b2ab44db3685f5d0.html">sources</a></li><li class="navelem"><a class="el" href="../../d0/d2b/JsonHandler_8cpp.html">JsonHandler.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:02:13 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -25,7 +25,13 @@
 var NAVTREE =
 [
   [ "JSON2Batch", "index.html", [
-    [ "JSON2Batch", "index.html#autotoc_md0", null ],
+    [ "Build instructions", "index.html#autotoc_md1", [
+      [ "Linux", "index.html#autotoc_md2", null ],
+      [ "Windows", "index.html#autotoc_md3", null ]
+    ] ],
+    [ "Documentation", "index.html#autotoc_md4", null ],
+    [ "License", "index.html#autotoc_md5", null ],
+    [ "Other", "index.html#autotoc_md6", null ],
     [ "Todo List", "dd/da0/todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
@@ -49,8 +55,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -59,7 +64,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"de/da8/classexceptions_1_1FailedToOpenFileException.html#a2326bd6214b095243ddacf578de0c5e7"
+"dc/de6/classexceptions_1_1ParsingException.html#af94c6543ac42256ca52c4d2c9765f5fa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

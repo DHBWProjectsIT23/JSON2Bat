@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp.html','../../
   <div class="headertitle"><div class="title">KeyValidator.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation for the KeyValidator class.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d66/KeyValidator_8hpp_source.html">KeyValidator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/de9/Exceptions_8hpp_source.html">Exceptions.hpp</a>&quot;</code><br />
 <code>#include &quot;LoggingWrapper.hpp&quot;</code><br />
@@ -109,27 +112,31 @@ Include dependency graph for KeyValidator.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d2f/KeyValidator_8cpp__incl.png" border="0" usemap="#asrc_2sources_2KeyValidator_8cpp" alt=""/></div>
 <map name="asrc_2sources_2KeyValidator_8cpp" id="asrc_2sources_2KeyValidator_8cpp">
-<area shape="rect" title=" " alt="" coords="303,5,494,31"/>
-<area shape="rect" href="../../dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="141,79,259,105"/>
-<area shape="poly" title=" " alt="" coords="366,34,249,76,247,71,364,29"/>
-<area shape="rect" title=" " alt="" coords="269,153,336,178"/>
-<area shape="poly" title=" " alt="" coords="393,33,321,141,317,138,388,30"/>
-<area shape="rect" href="../../d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="391,79,499,105"/>
-<area shape="poly" title=" " alt="" coords="408,30,431,64,427,67,404,33"/>
-<area shape="rect" title=" " alt="" coords="359,153,499,178"/>
-<area shape="poly" title=" " alt="" coords="394,32,381,65,378,85,381,104,391,123,405,140,401,143,387,126,376,106,372,85,375,64,389,30"/>
-<area shape="rect" title=" " alt="" coords="523,79,575,105"/>
-<area shape="poly" title=" " alt="" coords="425,29,511,70,508,74,423,34"/>
-<area shape="rect" title=" " alt="" coords="599,79,656,105"/>
-<area shape="poly" title=" " alt="" coords="438,29,585,74,583,79,436,34"/>
-<area shape="rect" title=" " alt="" coords="5,153,117,178"/>
-<area shape="poly" title=" " alt="" coords="177,108,99,147,97,143,175,103"/>
-<area shape="poly" title=" " alt="" coords="219,103,274,141,271,146,216,107"/>
-<area shape="rect" title=" " alt="" coords="141,153,245,178"/>
-<area shape="poly" title=" " alt="" coords="201,105,198,137,193,137,196,105"/>
-<area shape="poly" title=" " alt="" coords="445,105,438,138,432,137,440,104"/>
-<area shape="rect" title=" " alt="" coords="522,153,576,178"/>
-<area shape="poly" title=" " alt="" coords="464,103,520,141,517,146,461,107"/>
+<area shape="rect" title="Implementation for the KeyValidator class." alt="" coords="466,5,656,31"/>
+<area shape="rect" href="../../dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class." alt="" coords="227,79,346,105"/>
+<area shape="poly" title=" " alt="" coords="515,34,348,77,347,72,514,29"/>
+<area shape="rect" title=" " alt="" coords="5,153,72,178"/>
+<area shape="poly" title=" " alt="" coords="466,31,346,50,280,64,217,82,138,113,73,147,70,142,136,108,215,76,279,59,345,45,465,26"/>
+<area shape="rect" href="../../d2/de9/Exceptions_8hpp.html" title="Contains all the custom exceptions used in the project." alt="" coords="554,79,662,105"/>
+<area shape="poly" title=" " alt="" coords="571,30,594,64,589,67,567,33"/>
+<area shape="rect" title=" " alt="" coords="493,153,632,178"/>
+<area shape="poly" title=" " alt="" coords="558,32,546,65,543,85,544,104,554,138,548,139,539,105,538,84,541,64,553,31"/>
+<area shape="rect" title=" " alt="" coords="686,79,738,105"/>
+<area shape="poly" title=" " alt="" coords="588,29,674,70,671,74,586,34"/>
+<area shape="rect" title=" " alt="" coords="762,79,819,105"/>
+<area shape="poly" title=" " alt="" coords="601,29,747,74,746,79,599,34"/>
+<area shape="rect" title=" " alt="" coords="96,153,208,178"/>
+<area shape="poly" title=" " alt="" coords="265,108,189,147,187,143,262,103"/>
+<area shape="poly" title=" " alt="" coords="245,108,87,153,86,148,244,103"/>
+<area shape="rect" title=" " alt="" coords="231,153,342,178"/>
+<area shape="poly" title=" " alt="" coords="289,105,289,137,284,137,284,105"/>
+<area shape="rect" title=" " alt="" coords="366,153,469,178"/>
+<area shape="poly" title=" " alt="" coords="310,103,383,143,381,147,307,108"/>
+<area shape="poly" title=" " alt="" coords="603,106,580,141,576,138,598,103"/>
+<area shape="rect" href="../../d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="656,153,736,178"/>
+<area shape="poly" title=" " alt="" coords="624,103,671,141,668,145,621,107"/>
+<area shape="rect" title=" " alt="" coords="760,153,813,178"/>
+<area shape="poly" title=" " alt="" coords="639,103,746,145,745,150,637,108"/>
 </map>
 </div>
 </div>
@@ -142,9 +149,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd></dd></dl>
-<dl class="section version"><dt>Version</dt><dd></dd></dl>
+<div class="textblock"><p>Implementation for the KeyValidator class. </p>
+<dl class="section author"><dt>Author</dt><dd>Simon Blum </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-04-26 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.2.2 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dc/d66/KeyValidator_8hpp.html" title="This file contains the KeyValidator class.">src/include/KeyValidator.hpp</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d4/d9d/KeyValidator_8cpp_source.html">KeyValidator.cpp</a>.</p>
@@ -154,7 +163,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1615da3a94339053b2ab44db3685f5d0.html">sources</a></li><li class="navelem"><a class="el" href="../../d4/d9d/KeyValidator_8cpp.html">KeyValidator.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:02:13 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

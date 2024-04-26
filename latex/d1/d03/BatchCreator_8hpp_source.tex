@@ -3,39 +3,37 @@
 \mbox{\hyperlink{BatchCreator_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FileData_8hpp}{FileData.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonHandler_8hpp}{JsonHandler.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <fstream>}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <sstream>}}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00025}\mbox{\hyperlink{classBatchCreator}{00025}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBatchCreator}{BatchCreator}}\ \{}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00026}00026\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classBatchCreator}{BatchCreator}}(std::shared\_ptr<parsing::FileData>\ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}});}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00037}\mbox{\hyperlink{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}{00037}}\ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::stringstream>\ \mbox{\hyperlink{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}{getDataStream}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FileData_8hpp}{FileData.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00029}\mbox{\hyperlink{classBatchCreator}{00029}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBatchCreator}{BatchCreator}}\ \{}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00030}00030\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classBatchCreator}{BatchCreator}}(std::shared\_ptr<parsing::FileData>\ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}});}
 \DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00041}00041\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00042}\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{00042}}\ \ \ \ \ std::shared\_ptr<std::stringstream>\ \mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00044}\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{00044}}\ \ \ \ \ std::shared\_ptr<parsing::FileData>\ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a2225babf16a473ba6722238c19d785ae}{createBatch}}();}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a5b0d5ddd55e65bdce910a010deb7847d}{writeStart}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a163015c1e797677466c7cf1c19662b35}{writeHideShell}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00068}00068\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a7ea2646254825e194f831d98ae703ec8}{writeCommands}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00076}00076\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a31d22f486b3608cdae0b7488fb3857a8}{writeEnvVariables}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00084}00084\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a0d08fe331105e1f2dd0ea56d12e86887}{writePathVariables}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_af9bfc052ff3ee90beff0f35b56aed5bc}{writeApp}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00100}00100\ }
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{writeEnd}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00108}00108\ \};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00046}\mbox{\hyperlink{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}{00046}}\ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::stringstream>\ \mbox{\hyperlink{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}{getDataStream}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00050}00050\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00051}00051\ \ \ \ \ std::shared\_ptr<std::stringstream>}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00052}\mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{00052}}\ \ \ \ \ \mbox{\hyperlink{classBatchCreator_ab03dc9e260a30504e294c83c433b3a04}{dataStream}};\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00054}\mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{00054}}\ \ \ \ \ std::shared\_ptr<parsing::FileData>\ \mbox{\hyperlink{classBatchCreator_ac3dc7fdd464bf52538a8fcbd181a82b2}{fileData}};\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a2225babf16a473ba6722238c19d785ae}{createBatch}}();}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a5b0d5ddd55e65bdce910a010deb7847d}{writeStart}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a163015c1e797677466c7cf1c19662b35}{writeHideShell}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a7ea2646254825e194f831d98ae703ec8}{writeCommands}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a31d22f486b3608cdae0b7488fb3857a8}{writeEnvVariables}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a0d08fe331105e1f2dd0ea56d12e86887}{writePathVariables}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00118}00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_af9bfc052ff3ee90beff0f35b56aed5bc}{writeApp}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBatchCreator_a8d7aab76f68225bc13cdcb41035f5319}{writeEnd}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{BatchCreator_8hpp_source_l00128}00128\ \};}
 
 \end{DoxyCode}

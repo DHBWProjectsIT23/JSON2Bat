@@ -12,123 +12,125 @@
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00021}00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecli}{cli}}\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00022}\mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{CommandLineHandler::printHelp}}()\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00023}00023\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Printing\ help\ message..."{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00024}00024\ \ \ \ \ OUTPUT\ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Usage:\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{config_8hpp_a144a7fbd73eb6c6e72603286ecb0d56b}{EXECUTABLE\_NAME}}\ <<\ \textcolor{stringliteral}{"{}\ [options]\ [filenames]\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Options:\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/o,\ -\/-\/outdir\(\backslash\)t\ [path]\(\backslash\)t\(\backslash\)tOutput\ the\ batch\ file\ to\ the\ given\ "{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dir\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/h,\ -\/-\/help\(\backslash\)t\(\backslash\)t\(\backslash\)tPrint\ this\ help\ message\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/v,\ -\/-\/version\(\backslash\)t\(\backslash\)t\(\backslash\)tPrint\ the\ version\ number\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/c,\ -\/-\/credits\(\backslash\)t\(\backslash\)t\(\backslash\)tPrint\ the\ credits\(\backslash\)n\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ \ \ \ -\/-\/verbose\(\backslash\)t\(\backslash\)t\(\backslash\)tStart\ the\ application\ in\ verbose\ mode\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ <<\ ITALIC}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \(\backslash\)t\(\backslash\)t\(\backslash\)tNote:\ Verbose\ flag\ should\ be\ passed\ first!\(\backslash\)n\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Filenames:\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}The\ json\ files\ to\ be\ processed\ into\ batch\ files.\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Multiple\ files\ should\ be\ seperated\ by\ spaces!\(\backslash\)n\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00042}00042\ \ \ \ \ exit(0);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00043}00043\ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00044}\mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{00044}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{CommandLineHandler::printVersion}}()\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00045}00045\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Printing\ version\ number..."{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00046}00046\ \ \ \ \ OUTPUT\ <<\ \mbox{\hyperlink{config_8hpp_ae73053051efbb45c3a39751f5ce9fb36}{PROJECT\_NAME}}\ <<\ \textcolor{stringliteral}{"{}\ v"{}}\ <<\ \mbox{\hyperlink{config_8hpp_aa9e8f3bb466bb421d13913df7aeaa20c}{MAJOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{config_8hpp_a320988aa2655ee094f3a34a52da10831}{MINOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{config_8hpp_aed5f6b4b087292b1f6579952fc7c14eb}{PATCH\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00048}00048\ \ \ \ \ exit(0);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00049}00049\ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00050}\mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{00050}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{CommandLineHandler::printCredits}}()\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00051}00051\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Printing\ credits..."{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00052}00052\ \ \ \ \ OUTPUT\ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Project\ information:\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ <<\ CYAN\ <<\ BOLD\ <<\ \mbox{\hyperlink{config_8hpp_ae73053051efbb45c3a39751f5ce9fb36}{PROJECT\_NAME}}\ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}\ v"{}}\ <<\ \mbox{\hyperlink{config_8hpp_aa9e8f3bb466bb421d13913df7aeaa20c}{MAJOR\_VERSION}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{config_8hpp_a320988aa2655ee094f3a34a52da10831}{MINOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{config_8hpp_aed5f6b4b087292b1f6579952fc7c14eb}{PATCH\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{config_8hpp_a5f024226e6b8e20da1226b39ce384857}{DESCRIPTION}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ <<\ GREEN\ <<\ \textcolor{stringliteral}{"{}Authors:\ "{}}\ <<\ RESET\ <<\ ITALIC\ <<\ \mbox{\hyperlink{config_8hpp_a7e5da39fd3a4d5e827323372d91723aa}{AUTHORS}}\ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ <<\ GREEN\ <<\ \textcolor{stringliteral}{"{}Documentation:\ "{}}\ <<\ RESET\ <<\ ITALIC\ <<\ \mbox{\hyperlink{config_8hpp_ae187143f00da5044c3100a87fcc3d5f1}{HOMEPAGE\_URL}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ GREEN\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nContact:\ "{}}\ <<\ RESET\ <<\ ITALIC}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}simon21.blum@gmail.com"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00063}00063\ \ \ \ \ exit(0);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00064}00064\ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00066}00066\ std::tuple<std::optional<std::string>,\ std::vector<std::string>>}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00067}\mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{00067}}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{CommandLineHandler::parseArguments}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00068}00068\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Parsing\ arguments..."{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00070}00070\ \ \ \ \ std::vector<std::string>\ files;}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00071}00071\ \ \ \ \ std::optional<std::string>\ outDir;}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ optIndex\ =\ -\/1;}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }option\ longOption\ =\ \{\};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ result\ =\ getopt\_long(argc,\ argv,\ \textcolor{stringliteral}{"{}hvco:"{}},\ \mbox{\hyperlink{structoptions}{options}},\ \&optIndex);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00077}00077\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ -\/1)\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}End\ of\ options\ reached"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (result)\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'?'}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_ERROR\ <<\ \textcolor{stringliteral}{"{}Invalid\ Option\ (argument)\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{CommandLineHandler::printHelp}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'h'}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Help\ option\ detected"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{CommandLineHandler::printHelp}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'v'}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Version\ option\ detected"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{CommandLineHandler::printVersion}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00095}00095\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'c'}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Credit\ option\ detected"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{CommandLineHandler::printCredits}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'o'}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Output\ option\ detected"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ outDir\ =\ optarg;}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00104}00104\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Long\ option\ without\ short\ version\ detected"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ longOption\ =\ \mbox{\hyperlink{structoptions}{options}}[optIndex];}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Option:\ "{}}\ <<\ longOption.name\ <<\ \textcolor{stringliteral}{"{}\ given"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00109}00109\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (longOption.has\_arg)\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}\ \ Argument:\ "{}}\ <<\ optarg;}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00113}00113\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(longOption.name,\ \textcolor{stringliteral}{"{}verbose"{}})\ ==\ 0)\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ logging::setVerboseMode(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Verbose\ mode\ activated"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00022}\mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{CommandLineHandler::printHelp}}()}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00024}00024\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Printing\ help\ message..."{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00025}00025\ \ \ \ \ OUTPUT\ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Usage:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_a0a9a5a6b8a8fd06f35345a337cfcf287}{config::EXECUTABLE\_NAME}}\ <<\ \textcolor{stringliteral}{"{}\ [options]\ [filenames]\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Options:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/o,\ -\/-\/outdir\(\backslash\)t\ [path]\(\backslash\)t\(\backslash\)tOutput\ the\ batch\ file\ to\ the\ given\ "{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dir\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/h,\ -\/-\/help\(\backslash\)t\(\backslash\)t\(\backslash\)tPrint\ this\ help\ message\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/v,\ -\/-\/version\(\backslash\)t\(\backslash\)t\(\backslash\)tPrint\ the\ version\ number\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/c,\ -\/-\/credits\(\backslash\)t\(\backslash\)t\(\backslash\)tPrint\ the\ credits\(\backslash\)n\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ \ \ \ -\/-\/verbose\(\backslash\)t\(\backslash\)t\(\backslash\)tStart\ the\ application\ in\ verbose\ mode\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ <<\ ITALIC}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \(\backslash\)t\(\backslash\)t\(\backslash\)tNote:\ Verbose\ flag\ should\ be\ passed\ first!\(\backslash\)n\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Filenames:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}The\ json\ files\ to\ be\ processed\ into\ batch\ files.\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Multiple\ files\ should\ be\ seperated\ by\ spaces!\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00043}00043\ \ \ \ \ exit(0);}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00045}\mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{CommandLineHandler::printVersion}}()}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00047}00047\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Printing\ version\ number..."{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00048}00048\ \ \ \ \ OUTPUT\ <<\ \mbox{\hyperlink{namespaceconfig_a8accb7729aee7de0de898b743634c86c}{config::PROJECT\_NAME}}\ <<\ \textcolor{stringliteral}{"{}\ v"{}}\ <<\ \mbox{\hyperlink{namespaceconfig_ae2550a38c9e5b812cedd2136c14fa0a2}{config::MAJOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_acbd33eacebc6d8c4176d8320633464b9}{config::MINOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{namespaceconfig_a0c51d63e9e00bbad2796a5d33be13b3c}{config::PATCH\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00050}00050\ \ \ \ \ exit(0);}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00052}\mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{CommandLineHandler::printCredits}}()}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00054}00054\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Printing\ credits..."{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00055}00055\ \ \ \ \ OUTPUT\ <<\ BOLD\ <<\ \textcolor{stringliteral}{"{}Project\ information:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ <<\ CYAN\ <<\ BOLD\ <<\ \mbox{\hyperlink{namespaceconfig_a8accb7729aee7de0de898b743634c86c}{config::PROJECT\_NAME}}\ <<\ RESET\ <<\ \textcolor{stringliteral}{"{}\ v"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_ae2550a38c9e5b812cedd2136c14fa0a2}{config::MAJOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ \mbox{\hyperlink{namespaceconfig_acbd33eacebc6d8c4176d8320633464b9}{config::MINOR\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}."{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_a0c51d63e9e00bbad2796a5d33be13b3c}{config::PATCH\_VERSION}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_a459c2afc9bd41945e0955d3aa5b02d4a}{config::DESCRIPTION}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ <<\ GREEN\ <<\ \textcolor{stringliteral}{"{}Authors:\ "{}}\ <<\ RESET\ <<\ ITALIC\ <<\ \mbox{\hyperlink{namespaceconfig_aa1ef7af17570b56112af4df8ac4b8717}{config::AUTHORS}}\ <<\ RESET}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ <<\ GREEN\ <<\ \textcolor{stringliteral}{"{}Documentation:\ "{}}\ <<\ RESET\ <<\ ITALIC}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{namespaceconfig_af79d387019fba021d74f7819d79a612f}{config::HOMEPAGE\_URL}}\ <<\ RESET\ <<\ GREEN\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nContact:\ "{}}\ <<\ RESET}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ <<\ ITALIC\ <<\ \textcolor{stringliteral}{"{}simon21.blum@gmail.com"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00068}00068\ \ \ \ \ exit(0);}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00071}00071\ std::tuple<std::optional<std::string>,\ std::vector<std::string>>}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00072}\mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{00072}}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{CommandLineHandler::parseArguments}}(}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[])}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00074}00074\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00075}00075\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Parsing\ arguments..."{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00076}00076\ \ \ \ \ std::vector<std::string>\ files;}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00077}00077\ \ \ \ \ std::optional<std::string>\ outDir;}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ optIndex\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }option\ longOption\ =\ \{\};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ result\ =\ getopt\_long(argc,\ argv,\ \textcolor{stringliteral}{"{}hvco:"{}},\ \mbox{\hyperlink{structoptions}{options}},\ \&optIndex);}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}End\ of\ options\ reached"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (result)\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'?'}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_ERROR\ <<\ \textcolor{stringliteral}{"{}Invalid\ Option\ (argument)\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{CommandLineHandler::printHelp}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'h'}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Help\ option\ detected"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{CommandLineHandler::printHelp}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'v'}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Version\ option\ detected"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{CommandLineHandler::printVersion}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'c'}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Credit\ option\ detected"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{CommandLineHandler::printCredits}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'o'}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Output\ option\ detected"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outDir\ =\ optarg;}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Long\ option\ without\ short\ version\ detected"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ longOption\ =\ \mbox{\hyperlink{structoptions}{options}}[optIndex];}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Option:\ "{}}\ <<\ longOption.name\ <<\ \textcolor{stringliteral}{"{}\ given"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(longOption.name,\ \textcolor{stringliteral}{"{}verbose"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ logging::setVerboseMode(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Verbose\ mode\ activated"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00120}00120\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_ERROR\ <<\ \textcolor{stringliteral}{"{}Default\ case\ for\ options\ reached!"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00125}00125\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00126}00126\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00127}00127\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Options\ have\ been\ parsed"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00128}00128\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Checking\ for\ arguments..."{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00129}00129\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{while}\ (optind\ <\ argc)\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Adding\ file:\ "{}}\ <<\ argv[optind];}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ files.emplace\_back(argv[optind++]);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00133}00133\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00134}00134\ \ \ \ \ LOG\_DEBUG\ <<\ files.size();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00135}00135\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00136}00136\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Arguments\ and\ options\ have\ been\ parsed"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_tuple(outDir,\ files);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00138}00138\ \}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00139}00139\ \}\ \textcolor{comment}{//\ namespace\ cli}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_ERROR\ <<\ \textcolor{stringliteral}{"{}Default\ case\ for\ options\ reached!"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00129}00129\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Options\ have\ been\ parsed"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00130}00130\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Checking\ for\ arguments..."{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{while}\ (optind\ <\ argc)\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Adding\ file:\ "{}}\ <<\ argv[optind];}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ files.emplace\_back(argv[optind++]);}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00137}00137\ \ \ \ \ LOG\_DEBUG\ <<\ files.size();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00138}00138\ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Arguments\ and\ options\ have\ been\ parsed"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00139}00139\ \ \ \ \ \textcolor{keywordflow}{return}\ \{outDir,\ files\};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00140}00140\ \}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8cpp_source_l00141}00141\ \}\ \textcolor{comment}{//\ namespace\ cli}}
 
 \end{DoxyCode}

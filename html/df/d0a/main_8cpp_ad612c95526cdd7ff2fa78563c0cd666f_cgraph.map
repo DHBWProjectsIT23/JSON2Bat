@@ -1,6 +1,6 @@
 <map id="parseAndValidateArgs" name="parseAndValidateArgs">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,112,156,137"/>
-<area shape="rect" id="Node000002" href="$d6/d9e/classutilities_1_1Utils.html#af6c551d7c70f43171ab044af7451aee4" title=" " alt="" coords="205,25,393,51"/>
+<area shape="rect" id="Node000001" title="Validates and parses arguments." alt="" coords="5,112,156,137"/>
+<area shape="rect" id="Node000002" href="$d6/d9e/classutilities_1_1Utils.html#ac07ca745d24efb547beec94f1d6acc11" title="Checks if the given directory exists and is valid." alt="" coords="205,25,393,51"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,109,149,85,203,61,225,53,227,58,205,65,151,89,106,113"/>
 <area shape="rect" id="Node000003" href="$d4/d06/classcli_1_1CommandLineHandler.html#acb2f456a899bdbf41772b1ccf03d4ca8" title="Parses the Command Line Arguments." alt="" coords="214,75,384,115"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,112,198,106,199,111,156,117"/>

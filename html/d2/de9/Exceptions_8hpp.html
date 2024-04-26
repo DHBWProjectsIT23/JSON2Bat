@@ -26,7 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../gittempplate.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.2</span>
    </div>
@@ -103,17 +103,20 @@ $(document).ready(function(){initNavTree('d2/de9/Exceptions_8hpp.html','../../')
 <p>Contains all the custom exceptions used in the project.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;LoggingWrapper.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/dfd/config_8hpp_source.html">config.hpp</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Exceptions.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/dce/Exceptions_8hpp__incl.png" border="0" usemap="#asrc_2include_2Exceptions_8hpp" alt=""/></div>
 <map name="asrc_2include_2Exceptions_8hpp" id="asrc_2include_2Exceptions_8hpp">
-<area shape="rect" title="Contains all the custom exceptions used in the project." alt="" coords="47,5,223,31"/>
+<area shape="rect" title="Contains all the custom exceptions used in the project." alt="" coords="121,5,296,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,145,105"/>
-<area shape="poly" title=" " alt="" coords="127,33,97,69,93,65,123,30"/>
-<area shape="rect" title=" " alt="" coords="168,79,222,105"/>
-<area shape="poly" title=" " alt="" coords="147,30,177,65,173,69,143,33"/>
+<area shape="poly" title=" " alt="" coords="187,34,112,74,110,69,184,29"/>
+<area shape="rect" href="../../d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="169,79,248,105"/>
+<area shape="poly" title=" " alt="" coords="211,31,211,63,206,63,206,31"/>
+<area shape="rect" title=" " alt="" coords="272,79,326,105"/>
+<area shape="poly" title=" " alt="" coords="225,29,274,67,270,72,222,34"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -128,11 +131,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="189,34,101,52,67,65,46,81,39,97,39,116,49,151,44,153,33,117,33,96,42,77,64,61,100,47,188,29"/>
 <area shape="rect" href="../../df/d0c/Utils_8cpp.html" title="Implementation for the Utils class." alt="" coords="142,153,287,178"/>
 <area shape="poly" title=" " alt="" coords="279,46,259,80,222,154,218,151,255,78,274,43"/>
-<area shape="rect" href="../../d2/dc5/FileData_8cpp.html" title=" " alt="" coords="269,79,434,105"/>
+<area shape="rect" href="../../d2/dc5/FileData_8cpp.html" title="Implementation of the FileData class." alt="" coords="269,79,434,105"/>
 <area shape="poly" title=" " alt="" coords="313,41,344,77,340,80,309,44"/>
-<area shape="rect" href="../../d0/d2b/JsonHandler_8cpp.html" title=" " alt="" coords="458,79,648,105"/>
+<area shape="rect" href="../../d0/d2b/JsonHandler_8cpp.html" title="Implementation of the JsonHandler class." alt="" coords="458,79,648,105"/>
 <area shape="poly" title=" " alt="" coords="351,33,509,76,508,81,350,38"/>
-<area shape="rect" href="../../d4/d9d/KeyValidator_8cpp.html" title=" " alt="" coords="673,79,863,105"/>
+<area shape="rect" href="../../d4/d9d/KeyValidator_8cpp.html" title="Implementation for the KeyValidator class." alt="" coords="673,79,863,105"/>
 <area shape="poly" title=" " alt="" coords="388,31,687,76,686,81,387,36"/>
 <area shape="poly" title=" " alt="" coords="104,117,67,154,63,150,100,114"/>
 <area shape="poly" title=" " alt="" coords="153,112,201,150,198,154,150,116"/>
@@ -171,8 +174,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception for when the application reaches code it shouldn't reach.  <a href="../../d9/d52/classexceptions_1_1UnreachableCodeException.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da8/classexceptions_1_1FailedToOpenFileException.html">exceptions::FailedToOpenFileException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception for when a file can't be opened.  <a href="../../de/da8/classexceptions_1_1FailedToOpenFileException.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classexceptions_1_1NoSuchDirException.html">exceptions::NoSuchDirException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception for when a directory does not exist.  <a href="../../d9/d05/classexceptions_1_1NoSuchDirException.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -184,8 +189,8 @@ Namespaces</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains all the custom exceptions used in the project. </p>
 <dl class="section author"><dt>Author</dt><dd>Simon Blum </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>23.04.2024 </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1.6 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-04-26 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.2.2 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>See LICENSE file </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d2/de9/Exceptions_8hpp_source.html">Exceptions.hpp</a>.</p>
@@ -195,7 +200,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d2/de9/Exceptions_8hpp.html">Exceptions.hpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 13:01:17 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 13:02:13 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
