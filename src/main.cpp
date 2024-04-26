@@ -48,7 +48,7 @@
  * @return A tuple containing the files to be parsed and the output directory
  */
 std::tuple<std::vector<std::string>, std::string>
-parseAndValidateArgs(int argc, char* argv[]);
+parseAndValidateArgs(int argc, char *argv[]);
 
 /**
  * @brief Checks if the files are valid
@@ -82,7 +82,7 @@ void parseFile(const std::string &file, const std::string &outputDirectory);
  * @return Returns 0 on success, 1 on failure
  *
  */
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     // Setup logging
     utilities::Utils::checkConfigFile(config::LOG_CONFIG);
     utilities::Utils::setupEasyLogging(config::LOG_CONFIG);
@@ -104,8 +104,7 @@ int main(int argc, char* argv[]) {
         try {
             parseFile(*file, outDir);
             // Only catch custom exceptions, other exceptions are fatal
-        }
-        catch (const exceptions::CustomException &e) {
+        } catch (const exceptions::CustomException &e) {
             if (utilities::Utils::handleParseException(e, file, files)) {
                 continue;
             }
@@ -118,10 +117,10 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-std::tuple<std::vector<std::string>, std::string> parseAndValidateArgs(int argc,
-        char* argv[]) {
+std::tuple<std::vector<std::string>, std::string>
+parseAndValidateArgs(int argc, char *argv[]) {
     if (argc < 2) {
-        LOG_ERROR << "No options given!\n";
+        LOG_ERROR << "No options given!";
         cli::CommandLineHandler::printHelp();
     }
 
@@ -132,15 +131,14 @@ std::tuple<std::vector<std::string>, std::string> parseAndValidateArgs(int argc,
     if (!outDir.empty()) {
         try {
             outDir = utilities::Utils::checkDirectory(outDir);
-        }
-        catch (const exceptions::CustomException &e) {
+        } catch (const exceptions::CustomException &e) {
             LOG_ERROR << e.what();
             exit(1);
         }
     }
 
     if (files.empty()) {
-        LOG_ERROR << "No files were given as arguments!\n";
+        LOG_ERROR << "No files were given as arguments!";
         exit(1);
     }
 
@@ -156,7 +154,7 @@ std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
         // Check that the file exists
         // {ReqFunc5}
         if (!std::filesystem::is_regular_file(file)) {
-            LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
+            LOG_ERROR << "The file \"" << file << "\" does not exist!";
 
             if (files.size() > 1 && !utilities::Utils::askToContinue()) {
                 OUTPUT << "Aborting...\n";
@@ -169,7 +167,7 @@ std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
 
         // Check if the file ends in .json
         if (file.extension() != ".json") {
-            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"\n";
+            LOG_WARNING << "The file \"" << file << "\" does not end in \".json\"";
             OUTPUT << "If the file is not in JSON Format, continuing may "
                    "result in\nunexpected behaviour!\n";
 
@@ -193,11 +191,11 @@ void parseFile(const std::string &file, const std::string &outputDirectory) {
     const auto fileData = jsonHandler.getFileData();
     BatchCreator batchCreator(fileData);
     const std::shared_ptr<std::stringstream> dataStream =
-                batchCreator.getDataStream();
+        batchCreator.getDataStream();
     // Full filename is output directory + output file
     // {ReqFunc18}
     const std::string outputFileName =
-                outputDirectory + fileData->getOutputFile();
+        outputDirectory + fileData->getOutputFile();
     std::ofstream outFile(outputFileName);
 
     if (!outFile.good()) {

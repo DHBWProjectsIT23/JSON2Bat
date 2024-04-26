@@ -23,8 +23,7 @@
  * @brief Namespace used for general project information
  */
 namespace config {
-inline constexpr auto LOG_CONFIG =
-            "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging.conf";
+inline constexpr auto LOG_CONFIG = "/home/simon/1_Coding/cpp/JsonToBat/build/Debug/config/easylogging.conf";
 inline constexpr auto EXECUTABLE_NAME = "json2batch";
 inline constexpr auto MAJOR_VERSION = "0";
 inline constexpr auto MINOR_VERSION = "2";
@@ -32,8 +31,7 @@ inline constexpr auto PATCH_VERSION = "4";
 inline constexpr auto DESCRIPTION = "A simple tool to convert json to batch.";
 inline constexpr auto PROJECT_NAME = "JSON2Batch";
 inline constexpr auto AUTHORS = "@AUTHORS";
-inline constexpr auto HOMEPAGE_URL =
-            "https://dhbwprojectsit23.github.io/JSON2Bat";
+inline constexpr auto HOMEPAGE_URL = "https://dhbwprojectsit23.github.io/JSON2Bat";
 } // namespace config
 
 #endif

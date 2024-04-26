@@ -20,44 +20,46 @@ void setVerboseMode(bool mode) { verboseMode = mode; }
 
 namespace libLogging {
 LoggingWrapper::~LoggingWrapper() {
-    switch (this->level) {
-    case LogLevel::OUT:
-        std::cout << this->buffer.str();
-        LOG(INFO) << this->prefix << this->buffer.str();
-        break;
-    case LogLevel::INFO:
-        if (logging::verboseMode) {
-            std::cout << libLogging::GRAY_FG << this->prefix
-                      << this->buffer.str() << libLogging::RESET << std::endl;
-        }
-        LOG(INFO) << this->prefix << this->buffer.str();
-        break;
-    case LogLevel::WARNING:
-        std::cout << libLogging::YELLOW_FG << this->buffer.str()
-                  << libLogging::RESET << std::endl;
-        LOG(WARNING) << this->prefix << this->buffer.str();
-        break;
-    case LogLevel::ERROR:
-        std::cerr << libLogging::ERROR << this->prefix << this->buffer.str()
-                  << libLogging::RESET << std::endl;
-        LOG(ERROR) << this->prefix << this->buffer.str();
-        break;
-    case LogLevel::FATAL:
-        std::cerr << libLogging::BLACK_FG << libLogging::RED_BG << this->prefix
-                  << this->buffer.str() << libLogging::RESET << std::endl;
-        LOG(FATAL) << this->prefix << this->buffer.str();
-        break;
-    case LogLevel::DEBUG:
-        std::cout << libLogging::ITALIC << libLogging::CYAN_FG << this->prefix
-                  << this->buffer.str() << libLogging::RESET << std::endl;
-        LOG(DEBUG) << this->prefix << this->buffer.str();
-        break;
+  switch (this->level) {
+  case LogLevel::OUT:
+    std::cout << this->buffer.str();
+    LOG(INFO) << this->prefix << this->buffer.str();
+    break;
+  case LogLevel::INFO:
+    if (logging::verboseMode) {
+      std::cout << libLogging::GRAY_FG << this->prefix << this->buffer.str()
+                << libLogging::RESET << std::endl;
     }
+    LOG(INFO) << this->prefix << this->buffer.str();
+    break;
+  case LogLevel::WARNING:
+    std::cout << libLogging::YELLOW_FG << this->buffer.str()
+              << libLogging::RESET << "\n"
+              << std::endl;
+    LOG(WARNING) << this->prefix << this->buffer.str();
+    break;
+  case LogLevel::ERROR:
+    std::cerr << libLogging::ERROR << this->prefix << this->buffer.str()
+              << libLogging::RESET << "\n"
+              << std::endl;
+    LOG(ERROR) << this->prefix << this->buffer.str();
+    break;
+  case LogLevel::FATAL:
+    std::cerr << libLogging::BLACK_FG << libLogging::RED_BG << this->prefix
+              << this->buffer.str() << libLogging::RESET << std::endl;
+    LOG(FATAL) << this->prefix << this->buffer.str();
+    break;
+  case LogLevel::DEBUG:
+    std::cout << libLogging::ITALIC << libLogging::CYAN_FG << this->prefix
+              << this->buffer.str() << libLogging::RESET << std::endl;
+    LOG(DEBUG) << this->prefix << this->buffer.str();
+    break;
+  }
 }
-LoggingWrapper& LoggingWrapper::operator<<(Manipulator manipulator) {
-    manipulator(std::cout);
-    this->buffer << manipulator;
-    return *this;
+LoggingWrapper &LoggingWrapper::operator<<(Manipulator manipulator) {
+  manipulator(std::cout);
+  this->buffer << manipulator;
+  return *this;
 }
 
 } // namespace libLogging
