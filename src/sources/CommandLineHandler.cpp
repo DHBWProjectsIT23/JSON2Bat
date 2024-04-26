@@ -19,8 +19,7 @@
 #include <vector>
 
 namespace cli {
-void CommandLineHandler::printHelp()
-{
+void CommandLineHandler::printHelp() {
     LOG_INFO << "Printing help message...";
     OUTPUT << BOLD << "Usage:\n"
            << RESET << "----------\n"
@@ -42,15 +41,13 @@ void CommandLineHandler::printHelp()
            << "Multiple files should be seperated by spaces!\n\n";
     exit(0);
 }
-void CommandLineHandler::printVersion()
-{
+void CommandLineHandler::printVersion() {
     LOG_INFO << "Printing version number...";
     OUTPUT << config::PROJECT_NAME << " v" << config::MAJOR_VERSION << "."
            << config::MINOR_VERSION << "." << config::PATCH_VERSION << "\n";
     exit(0);
 }
-void CommandLineHandler::printCredits()
-{
+void CommandLineHandler::printCredits() {
     LOG_INFO << "Printing credits...";
     OUTPUT << BOLD << "Project information:\n"
            << RESET << "----------\n"
@@ -69,8 +66,7 @@ void CommandLineHandler::printCredits()
 }
 
 std::tuple<std::optional<std::string>, std::vector<std::string>> CommandLineHandler::parseArguments(
-            int argc, char* argv[])
-{
+            int argc, char* argv[]) {
     LOG_INFO << "Parsing arguments...";
     std::vector<std::string> files;
     std::optional<std::string> outDir;

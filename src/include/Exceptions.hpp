@@ -4,6 +4,10 @@
  * @date 2024-04-26
  * @version 0.2.2
  * @brief Contains all the custom exceptions used in the project.
+ * @details
+ * The error handling within this project is exception based.
+ * This allows us to throw custom exceptions throughout any part
+ * of the process and allow us to deal with them when necessary.
  *
  * @copyright See LICENSE file
  */
@@ -256,7 +260,6 @@ class FailedToOpenFileException : public CustomException {
   private:
     std::string message;
 
-    /** @todo Documentation*/
   public:
     explicit FailedToOpenFileException(const std::string &file) {
         message = "Failed to open file: " + file;
@@ -275,7 +278,6 @@ class NoSuchDirException : public CustomException {
   private:
     std::string message;
 
-    /** @todo Documentation*/
   public:
     explicit NoSuchDirException(const std::string &dir) {
         message = "No such directory: " + dir;

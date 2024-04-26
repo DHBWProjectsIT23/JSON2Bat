@@ -17,8 +17,7 @@
 #include <vector>
 
 namespace parsing {
-KeyValidator &KeyValidator::getInstance()
-{
+KeyValidator &KeyValidator::getInstance() {
     static KeyValidator keyValidator;
     LOG_INFO << "Returning KeyValidator instance!";
     return keyValidator;
@@ -26,8 +25,7 @@ KeyValidator &KeyValidator::getInstance()
 
 std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
             const Json::Value &root,
-            const std::string &filename)
-{
+            const std::string &filename) {
     std::vector<std::tuple<int, std::string>> wrongKeys =
                 getWrongKeys(root, filename);
 
@@ -50,8 +48,7 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
 
 std::vector<std::tuple<int, std::string>> KeyValidator::getWrongKeys(
             const Json::Value &root,
-            const std::string &filename) const
-{
+            const std::string &filename) const {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
     for (const auto &key : root.getMemberNames()) {
@@ -73,8 +70,7 @@ std::vector<std::tuple<int, std::string>> KeyValidator::getWrongKeys(
 
 std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
             const std::string &filename,
-            const std::unordered_set<std::string> &entryKeys) const
-{
+            const std::unordered_set<std::string> &entryKeys) const {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
     for (const auto &key : entryKeys) {
@@ -95,8 +91,7 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
 
 void KeyValidator::validateTypes(
             const std::string &filename, const Json::Value &entry,
-            const std::unordered_set<std::string> &entryKeys)
-{
+            const std::unordered_set<std::string> &entryKeys) {
     // Gett the type of the entry - error if not found
     const std::string type = entry.get("type", "ERROR").asString();
 
@@ -127,8 +122,7 @@ void KeyValidator::validateTypes(
 }
 
 std::optional<int> KeyValidator::getUnknownKeyLine(const std::string &filename,
-                                                   const std::string &wrongKey)
-{
+                                                   const std::string &wrongKey) {
     std::ifstream file(filename);
 
     if (!file.is_open()) {

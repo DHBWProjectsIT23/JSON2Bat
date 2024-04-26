@@ -59,8 +59,7 @@ parseAndValidateArgs(int argc, char* argv[]);
  *
  * @return A vector containing the valid files
  */
-const std::vector<std::string>
-validateFiles(const std::vector<std::string> &files);
+std::vector<std::string> validateFiles(const std::vector<std::string> &files);
 
 /**
  * @brief Parses the given file and writes the output to the output directory
@@ -83,8 +82,7 @@ void parseFile(const std::string &file, const std::string &outputDirectory);
  * @return Returns 0 on success, 1 on failure
  *
  */
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     // Setup logging
     utilities::Utils::checkConfigFile(config::LOG_CONFIG);
     utilities::Utils::setupEasyLogging(config::LOG_CONFIG);
@@ -121,8 +119,7 @@ int main(int argc, char* argv[])
 }
 
 std::tuple<std::vector<std::string>, std::string> parseAndValidateArgs(int argc,
-        char* argv[])
-{
+        char* argv[]) {
     if (argc < 2) {
         LOG_ERROR << "No options given!\n";
         cli::CommandLineHandler::printHelp();
@@ -150,16 +147,14 @@ std::tuple<std::vector<std::string>, std::string> parseAndValidateArgs(int argc,
     return {files, outDir};
 }
 
-const std::vector<std::string> validateFiles(const std::vector<std::string>
-                                             &files)
-{
+std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
     std::vector<std::string> validFiles;
     // Reserve space, to avaid reallocating with each valid file
     validFiles.reserve(files.size());
 
     for (const std::filesystem::path file : files) {
         // Check that the file exists
-        // - {ReqFunc5}
+        // {ReqFunc5}
         if (!std::filesystem::is_regular_file(file)) {
             LOG_ERROR << "The file \"" << file << "\" does not exist!\n";
 
@@ -193,15 +188,14 @@ const std::vector<std::string> validateFiles(const std::vector<std::string>
     return validFiles;
 }
 
-void parseFile(const std::string &file, const std::string &outputDirectory)
-{
+void parseFile(const std::string &file, const std::string &outputDirectory) {
     parsing::JsonHandler jsonHandler(file);
     const auto fileData = jsonHandler.getFileData();
     BatchCreator batchCreator(fileData);
     const std::shared_ptr<std::stringstream> dataStream =
                 batchCreator.getDataStream();
-    // {ReqFunc18}
     // Full filename is output directory + output file
+    // {ReqFunc18}
     const std::string outputFileName =
                 outputDirectory + fileData->getOutputFile();
     std::ofstream outFile(outputFileName);

@@ -1,6 +1,6 @@
 # This starter workflow is for a CMake project running on multiple platforms. There is a different starter workflow if you just want a single platform.
 # See: https://github.com/actions/starter-workflows/blob/main/ci/cmake-single-platform.yml
-name: CMake on multiple platforms
+name: Building on Linux
 
 on:
   push:
@@ -49,15 +49,10 @@ jobs:
       - name: Install jsonlib
         run: sudo apt install libjsoncpp-dev
 
-          #- name: Install Clang
-          #  uses: egor-tensin/setup-clang@v1
-          #  with:
-          #    version: '17'
-
       - name: Install GCC
         uses: egor-tensin/setup-gcc@v1.3
         with:
-          #  # GCC version to install
+          #GCC version to install
           version: '10'
 
       - name: Set reusable strings

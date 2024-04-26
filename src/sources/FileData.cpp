@@ -15,8 +15,7 @@
 #include "LoggingWrapper.hpp"
 
 namespace parsing {
-void FileData::setOutputFile(std::string &newOutputfile)
-{
+void FileData::setOutputFile(std::string &newOutputfile) {
     LOG_INFO << "Setting outputfile to...";
 
     // If no value for key "outputfile"
@@ -44,8 +43,7 @@ void FileData::setOutputFile(std::string &newOutputfile)
     LOG_INFO << "Outputfile set to: " << this->outputfile << "\n";
 }
 
-void FileData::setApplication(const std::string &newApplication)
-{
+void FileData::setApplication(const std::string &newApplication) {
     if (newApplication.empty()) {
         LOG_INFO << "newApplication empty, returning";
         return;
@@ -55,8 +53,7 @@ void FileData::setApplication(const std::string &newApplication)
     this->application.emplace(newApplication);
 }
 
-void FileData::addCommand(const std::string &command)
-{
+void FileData::addCommand(const std::string &command) {
     if (command.empty()) {
         LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
         throw exceptions::InvalidValueException("command",
@@ -68,8 +65,7 @@ void FileData::addCommand(const std::string &command)
 }
 
 void FileData::addEnvironmentVariable(const std::string &name,
-                                      const std::string &value)
-{
+                                      const std::string &value) {
     if (name.empty()) {
         LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
         throw exceptions::InvalidValueException("name", "Name value is empty!");
@@ -84,8 +80,7 @@ void FileData::addEnvironmentVariable(const std::string &name,
     this->environmentVariables.emplace_back(name, value);
 }
 
-void FileData::addPathValue(const std::string &pathValue)
-{
+void FileData::addPathValue(const std::string &pathValue) {
     if (pathValue.empty()) {
         LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
         throw exceptions::InvalidValueException("path", "Path value is empty");

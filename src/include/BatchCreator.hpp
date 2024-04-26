@@ -60,7 +60,7 @@ class BatchCreator {
      * file.
      *
      */
-    void createBatch();
+    void createBatch() const;
 
     /**
      * @brief Wirtes the start of the batch file

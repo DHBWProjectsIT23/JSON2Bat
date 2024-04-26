@@ -34,7 +34,7 @@ set(AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci")
 # Initialize the project This information is also used to generate files
 project(
   ${PROJECT_NAME}
-  VERSION 0.2.2
+  VERSION 0.2.3
   DESCRIPTION "A simple tool to convert json to batch."
   HOMEPAGE_URL "https://dhbwprojectsit23.github.io/JSON2Bat")
 
@@ -47,9 +47,8 @@ if(ASTYLE_EXECUTABLE)
   add_custom_target(
     astyle
     # TODO: Fix astyle
-    #COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
-     COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r
-            ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+    # COMMAND astyle -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
+    COMMAND astyle --project=${PROJECT_SOURCE_DIR}/.astylerc -r ${PROJECT_SOURCE_DIR}/src/*.cpp,*.hpp
     VERBATIM)
   set_target_properties(astyle PROPERTIES EXCLUDE_FROM_ALL FALSE)
 else()

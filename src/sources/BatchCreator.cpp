@@ -16,15 +16,13 @@
 #include <utility>
 
 BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData)
-    : fileData(std::move(fileData))
-{
+    : fileData(std::move(fileData)) {
     LOG_INFO << "Initializing BatchCreator";
     this->dataStream = std::make_shared<std::stringstream>();
     this->createBatch();
 }
 
-void BatchCreator::createBatch()
-{
+void BatchCreator::createBatch() const {
     LOG_INFO << "Creating Batch file";
     this->writeStart();
     this->writeHideShell();
@@ -35,15 +33,13 @@ void BatchCreator::createBatch()
     this->writeEnd();
 }
 
-void BatchCreator::writeStart() const
-{
+void BatchCreator::writeStart() const {
     LOG_INFO << "writing Start of Batch";
     // {ReqFunc24} - \r\n
     *this->dataStream << "@ECHO OFF\r\nC:\\Windows\\System32\\cmd.exe ";
 }
 
-void BatchCreator::writeHideShell() const
-{
+void BatchCreator::writeHideShell() const {
     if (this->fileData->getHideShell()) {
         LOG_INFO << "writing hide Shell";
         *this->dataStream << "/c ";
@@ -54,8 +50,7 @@ void BatchCreator::writeHideShell() const
     }
 }
 
-void BatchCreator::writeCommands() const
-{
+void BatchCreator::writeCommands() const {
     LOG_INFO << "writing Commands";
     *this->dataStream << "\"";
 
@@ -64,8 +59,7 @@ void BatchCreator::writeCommands() const
     }
 }
 
-void BatchCreator::writeEnvVariables() const
-{
+void BatchCreator::writeEnvVariables() const {
     LOG_INFO << "writing Environment Variables";
 
     for (const auto &[key, value] : this->fileData->getEnvironmentVariables()) {
@@ -73,8 +67,7 @@ void BatchCreator::writeEnvVariables() const
     }
 }
 
-void BatchCreator::writePathVariables() const
-{
+void BatchCreator::writePathVariables() const {
     LOG_INFO << "writing Path Variables";
     *this->dataStream << "set path=";
 
@@ -85,8 +78,7 @@ void BatchCreator::writePathVariables() const
     *this->dataStream << "%path%";
 }
 
-void BatchCreator::writeApplication() const
-{
+void BatchCreator::writeApplication() const {
     std::string appName = this->fileData->getOutputFile();
     appName = appName.substr(0, appName.find('.'));
 
@@ -104,7 +96,6 @@ void BatchCreator::writeApplication() const
     }
 }
 
-void BatchCreator::writeEnd() const
-{
+void BatchCreator::writeEnd() const {
     *this->dataStream << "@ECHO ON";
 }
