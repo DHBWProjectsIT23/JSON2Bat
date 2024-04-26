@@ -1,0 +1,43 @@
+.TH @PROJECT_NAME@ 1 27.04.2024
+
+.SH NAME
+.B @PROJECT_NAME@
+\- @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+
+.SH SYNOPSIS
+.B @EXECUTABLE_NAME@
+[\fIOPTIONS\fR]
+.IR "file1 file2 ... "
+
+.SH DESCRIPTION
+.B @EXECUTABLE_NAME@
+@PROJECT_DESCRIPTION@
+
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Print this help message and exit.
+.TP
+.B \-v, \-\-version
+Print the version number and exit.
+.TP
+.B \-o, \-\-outdir [path]
+Specify the output directory for the batch file.
+.TP
+.B \-c, \-\-credits
+Print the credits and exit.
+.TP
+.B \-\-verbose
+Start the application in verbose mode. This flag should be passed first.
+
+.SH AUTHORS
+The project was created by @AUTHORS@.
+
+.SH COPYRIGHT
+@PROJECT_NAME@ is distributed under the Apache License, Version 2.0.
+
+.SH DOCUMENTATION
+The documentation can be found at:
+.RS 
+.B @PROJECT_HOMEPAGE_URL@
+.RE

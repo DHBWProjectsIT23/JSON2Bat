@@ -62,7 +62,7 @@ cmake --build build --target doxygen_build
 
 The documentation for this project can be found
 [here](@PROJECT_HOMEPAGE_URL@).
-A PDF version can be found [here]() and a short man page can be found [here]().
+A PDF version can be found [here]() and a short man page can be found [here](man/@EXECUTABLE_NAME@.troff).
 
 ### Project Structure
 

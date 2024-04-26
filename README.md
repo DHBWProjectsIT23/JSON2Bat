@@ -62,7 +62,7 @@ cmake --build build --target doxygen_build
 
 The documentation for this project can be found
 [here](https://dhbwprojectsit23.github.io/JSON2Bat).
-A PDF version can be found [here]() and a short man page can be found [here]().
+A PDF version can be found [here]() and a short man page can be found [here](man/json2batch.troff).
 
 ### Project Structure
 
