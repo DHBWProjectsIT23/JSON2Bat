@@ -1,23 +1,22 @@
 <map id="src/sources/CommandLineHandler.cpp" name="src/sources/CommandLineHandler.cpp">
-<area shape="rect" id="Node000001" title="Implementation for the Command Line Interface." alt="" coords="275,5,521,31"/>
-<area shape="rect" id="Node000002" href="$d2/d5f/CommandLineHandler_8hpp.html" title="Responsible for the Command Line Interface." alt="" coords="80,79,254,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="359,34,221,77,220,71,358,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,73,178"/>
-<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="275,31,153,50,103,64,70,81,60,93,52,107,44,138,39,137,47,105,55,90,67,77,101,59,152,45,274,26"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="265,153,322,178"/>
-<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="375,34,345,53,319,81,305,109,299,138,294,136,300,107,314,77,342,49,372,29"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="328,79,467,105"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="400,31,400,63,395,63,395,31"/>
-<area shape="rect" id="Node000008" href="$d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="491,79,571,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="422,29,496,69,494,74,419,34"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="595,79,654,105"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="437,29,580,74,579,79,435,34"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="678,79,739,105"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="456,29,663,76,662,81,455,34"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,108,75,147,73,142,144,103"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="97,153,163,178"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="163,106,145,140,141,138,158,104"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="187,153,240,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="177,103,200,138,195,141,172,106"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="190,103,260,142,258,147,187,108"/>
+<area shape="rect" id="Node000001" title="Implementation for the Command Line Interface." alt="" coords="346,5,593,31"/>
+<area shape="rect" id="Node000002" href="$d2/d5f/CommandLineHandler_8hpp.html" title="Responsible for the Command Line Interface." alt="" coords="18,79,193,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="408,34,182,78,181,73,407,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="191,153,249,178"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="354,34,302,52,278,65,257,81,237,108,227,138,222,137,232,106,253,77,275,60,300,47,353,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="266,79,406,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="448,34,373,74,371,69,445,29"/>
+<area shape="rect" id="Node000007" href="$d8/dfd/config_8hpp.html" title="Configures general project information." alt="" coords="430,79,509,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="472,31,472,63,467,63,467,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="533,79,592,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="487,29,537,67,533,72,484,34"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="617,79,677,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="500,29,603,70,602,75,498,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="701,79,768,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="515,29,687,75,685,80,514,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,59,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,107,57,144,53,140,91,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="126,103,189,142,186,146,123,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="83,153,149,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="110,104,115,137,109,138,104,105"/>
 </map>
