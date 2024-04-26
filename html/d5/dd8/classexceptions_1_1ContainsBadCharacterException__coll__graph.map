@@ -1,7 +1,0 @@
-<map id="exceptions::ContainsBadCharacterException" name="exceptions::ContainsBadCharacterException">
-<area shape="rect" id="Node000001" title="Exception for when a string contains bad characters." alt="" coords="5,153,225,193"/>
-<area shape="rect" id="Node000002" href="$dc/d56/classexceptions_1_1CustomException.html" title="Base class for all custom exceptions." alt="" coords="20,79,210,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,120,118,152,112,152,112,120"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="65,5,165,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,46,118,79,112,79,112,46"/>
-</map>

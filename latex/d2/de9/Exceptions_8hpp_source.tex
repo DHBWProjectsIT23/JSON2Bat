@@ -13,7 +13,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00025}00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceexceptions}{exceptions}}\ \{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00035}\mbox{\hyperlink{classexceptions_1_1CustomException}{00035}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classexceptions_1_1CustomException}{CustomException}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00036}00036\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00037}\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{00037}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00037}\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{00037}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Base\ Exception"{}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00039}00039\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00040}00040\ \};}
@@ -32,7 +32,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}ParsingException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1ParsingException_a73d7b013f463e211eec2390af4eee95d}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00063}00063\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00065}\mbox{\hyperlink{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff}{00065}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00065}\mbox{\hyperlink{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff}{00065}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1ParsingException_a1b8890d2c5ad46883f585722a59744ff}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1ParsingException_a73d7b013f463e211eec2390af4eee95d}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00067}00067\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00068}00068\ \};}
@@ -50,7 +50,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}BatchExistsException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1FileExistsException_a2959257eeb0d89151679ba126ca48e91}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00090}00090\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00092}\mbox{\hyperlink{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138}{00092}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00092}\mbox{\hyperlink{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138}{00092}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1FileExistsException_a2278f2f2f4189370c623e3ef81346138}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1FileExistsException_a2959257eeb0d89151679ba126ca48e91}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00094}00094\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00095}00095\ \};}
@@ -68,7 +68,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00116}00116\ \ \ \ \ \ \ \ \ this-\/>message\ =\ ss.str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00117}00117\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}InvalidValueException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1InvalidValueException_a946f2acb8c094b85a131d179326088e8}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00118}00118\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00119}\mbox{\hyperlink{classexceptions_1_1InvalidValueException_aa7a3b70afeb9fbd4bf4ef07747cfb525}{00119}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1InvalidValueException_aa7a3b70afeb9fbd4bf4ef07747cfb525}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00119}\mbox{\hyperlink{classexceptions_1_1InvalidValueException_aa7a3b70afeb9fbd4bf4ef07747cfb525}{00119}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1InvalidValueException_aa7a3b70afeb9fbd4bf4ef07747cfb525}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1InvalidValueException_a946f2acb8c094b85a131d179326088e8}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00121}00121\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00122}00122\ \};}
@@ -87,7 +87,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}!"{}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00148}00148\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00149}\mbox{\hyperlink{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7}{00149}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00149}\mbox{\hyperlink{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7}{00149}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1InvalidKeyException_af501b048e76b1213f9a3b8e9a79033a7}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1InvalidKeyException_aee0400fbb877f848f29e6dd508fb69a3}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00151}00151\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00152}00152\ \};}
@@ -104,7 +104,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00176}00176\ \ \ \ \ \ \ \ \ this-\/>message\ =\ ss.str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00177}00177\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}InvalidTypeException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1b800c57ec70982fdf45d4016b4aafdc}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00178}00178\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00179}\mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7}{00179}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00179}\mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7}{00179}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1019a9a7b6fad24ab8678761607efea7}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1InvalidTypeException_a1b800c57ec70982fdf45d4016b4aafdc}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00181}00181\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00182}00182\ \};}
@@ -123,7 +123,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00207}00207\ \ \ \ \ \ \ \ \ this-\/>message\ =\ ss.str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00208}00208\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}MissingKeyException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1MissingKeyException_ad32028e15794c599084a215cc72c7400}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00209}00209\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00210}\mbox{\hyperlink{classexceptions_1_1MissingKeyException_a339f7b5c1134d057d2d3d135d89a0c45}{00210}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1MissingKeyException_a339f7b5c1134d057d2d3d135d89a0c45}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00210}\mbox{\hyperlink{classexceptions_1_1MissingKeyException_a339f7b5c1134d057d2d3d135d89a0c45}{00210}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1MissingKeyException_a339f7b5c1134d057d2d3d135d89a0c45}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1MissingKeyException_ad32028e15794c599084a215cc72c7400}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00212}00212\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00213}00213\ \};}
@@ -136,7 +136,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00226}\mbox{\hyperlink{classexceptions_1_1MissingTypeException_a54134660a18fa09f9be9f0da89a71d36}{00226}}\ \ \ \ \ \mbox{\hyperlink{classexceptions_1_1MissingTypeException_a54134660a18fa09f9be9f0da89a71d36}{MissingTypeException}}()\ \{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00227}00227\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}MissingTypeException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1MissingTypeException_a45cd965fe7f632949e78568693d13fcd}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00228}00228\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00229}\mbox{\hyperlink{classexceptions_1_1MissingTypeException_a8bb0cff0fd7d2d8654812fe7861dbbfb}{00229}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1MissingTypeException_a8bb0cff0fd7d2d8654812fe7861dbbfb}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00229}\mbox{\hyperlink{classexceptions_1_1MissingTypeException_a8bb0cff0fd7d2d8654812fe7861dbbfb}{00229}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1MissingTypeException_a8bb0cff0fd7d2d8654812fe7861dbbfb}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1MissingTypeException_a45cd965fe7f632949e78568693d13fcd}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00231}00231\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00232}00232\ \};}
@@ -153,7 +153,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ -\/c\ for\ contact\ information.\(\backslash\)n"{}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00248}00248\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}UnreachableCodeException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1UnreachableCodeException_a0120a5c680c6fa7f9054dbd40b9f6f1f}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00249}00249\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00250}\mbox{\hyperlink{classexceptions_1_1UnreachableCodeException_a63f2a1b3d55b4bd9f4192d08c55e288c}{00250}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1UnreachableCodeException_a63f2a1b3d55b4bd9f4192d08c55e288c}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00250}\mbox{\hyperlink{classexceptions_1_1UnreachableCodeException_a63f2a1b3d55b4bd9f4192d08c55e288c}{00250}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1UnreachableCodeException_a63f2a1b3d55b4bd9f4192d08c55e288c}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1UnreachableCodeException_a0120a5c680c6fa7f9054dbd40b9f6f1f}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00252}00252\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00253}00253\ \};}
@@ -167,7 +167,7 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00265}00265\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_ac35f0204e6b7bec4e448d5e76c47c56e}{message}}\ =\ \textcolor{stringliteral}{"{}Failed\ to\ open\ file:\ "{}}\ +\ file;}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00266}00266\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}FailedToOpenFileException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_ac35f0204e6b7bec4e448d5e76c47c56e}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00267}00267\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00268}\mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_a2326bd6214b095243ddacf578de0c5e7}{00268}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_a2326bd6214b095243ddacf578de0c5e7}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00268}\mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_a2326bd6214b095243ddacf578de0c5e7}{00268}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_a2326bd6214b095243ddacf578de0c5e7}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00269}00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1FailedToOpenFileException_ac35f0204e6b7bec4e448d5e76c47c56e}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00270}00270\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00271}00271\ \};}
@@ -181,27 +181,13 @@
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classexceptions_1_1NoSuchDirException_aa08c08b1e861e4ef3d0adfc805a0e681}{message}}\ =\ \textcolor{stringliteral}{"{}No\ such\ directory:\ "{}}\ +\ dir;}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00284}00284\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}NoSuchDirException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1NoSuchDirException_aa08c08b1e861e4ef3d0adfc805a0e681}{message}};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00285}00285\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00286}\mbox{\hyperlink{classexceptions_1_1NoSuchDirException_ae366579e7e2b4179b3be32e279e22297}{00286}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1NoSuchDirException_ae366579e7e2b4179b3be32e279e22297}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00286}\mbox{\hyperlink{classexceptions_1_1NoSuchDirException_ae366579e7e2b4179b3be32e279e22297}{00286}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classexceptions_1_1NoSuchDirException_ae366579e7e2b4179b3be32e279e22297}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00287}00287\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1NoSuchDirException_aa08c08b1e861e4ef3d0adfc805a0e681}{message}}.c\_str();}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00288}00288\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00289}00289\ \};}
 \DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00290}00290\ }
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00295}\mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException}{00295}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException}{ContainsBadCharacterException}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classexceptions_1_1CustomException}{CustomException}}\ \{}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00296}00296\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00297}\mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a2041b5cae60ccc465e4911f308b70e0e}{00297}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a2041b5cae60ccc465e4911f308b70e0e}{message}};}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00298}00298\ }
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00299}00299\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00300}\mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a0fcd7e8408ea0e55ae8dcacef3fd2770}{00300}}\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a0fcd7e8408ea0e55ae8dcacef3fd2770}{ContainsBadCharacterException}}(\textcolor{keyword}{const}\ std::string\ \&value)\ \{}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00301}00301\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a2041b5cae60ccc465e4911f308b70e0e}{message}}\ =\ \textcolor{stringliteral}{"{}The\ value\ \(\backslash\)"{}"{}}\ +\ value\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ contains\ bad\ characters!"{}};}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00302}00302\ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}ContainsBadCharacterException:\ "{}}\ <<\ \mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a2041b5cae60ccc465e4911f308b70e0e}{message}};}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00303}00303\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00304}\mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a137ef422cc4b8ccad97c0f9c08300441}{00304}}\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a137ef422cc4b8ccad97c0f9c08300441}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00305}00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classexceptions_1_1ContainsBadCharacterException_a2041b5cae60ccc465e4911f308b70e0e}{message}}.c\_str();}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00306}00306\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00307}00307\ \};}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00308}00308\ }
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00309}00309\ \}\ \textcolor{comment}{//\ namespace\ exceptions}}
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00310}00310\ }
-\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00311}00311\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00291}00291\ \}\ \textcolor{comment}{//\ namespace\ exceptions}}
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{Exceptions_8hpp_source_l00293}00293\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

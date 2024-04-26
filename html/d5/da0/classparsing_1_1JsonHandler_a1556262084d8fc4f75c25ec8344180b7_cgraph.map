@@ -1,31 +1,19 @@
 <map id="parsing::JsonHandler::getFileData" name="parsing::JsonHandler::getFileData">
-<area shape="rect" id="Node000001" title="Retrieve the data from the json file." alt="" coords="5,165,148,206"/>
-<area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="196,165,338,206"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,183,180,183,180,188,148,188"/>
-<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="597,5,740,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="303,163,385,122,488,81,584,49,586,54,490,86,387,127,306,167"/>
-<area shape="rect" id="Node000006" href="$d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="386,136,528,177"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="338,172,370,167,371,172,339,177"/>
-<area shape="rect" id="Node000010" href="$d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="386,251,528,291"/>
-<area shape="poly" id="edge15_Node000002_Node000010" title=" " alt="" coords="315,204,397,241,395,246,313,209"/>
-<area shape="rect" id="Node000011" href="$d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="597,267,740,307"/>
-<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="339,195,430,213,529,236,599,259,597,264,528,242,429,218,338,200"/>
-<area shape="rect" id="Node000004" href="$d5/da0/classparsing_1_1JsonHandler.html#a62e63826ca3646f6ed4b6722b2205e33" title=" " alt="" coords="809,104,964,145"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="731,44,762,57,836,94,834,99,760,61,729,49"/>
-<area shape="rect" id="Node000005" href="$d6/d9e/classutilities_1_1Utils.html#a42f254912eaecc78eeb04eaf3c32d150" title=" " alt="" coords="815,169,958,210"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="741,43,763,57,781,82,788,107,794,130,811,155,815,158,811,162,807,158,789,133,782,108,776,84,759,61,738,47"/>
-<area shape="rect" id="Node000007" href="$d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="597,71,740,111"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="524,133,585,114,587,119,526,138"/>
-<area shape="rect" id="Node000008" href="$d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="576,136,761,177"/>
-<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="529,154,561,154,561,159,529,159"/>
-<area shape="rect" id="Node000009" href="$d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="597,201,740,242"/>
-<area shape="poly" id="edge12_Node000006_Node000009" title=" " alt="" coords="526,175,587,194,585,199,524,180"/>
-<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="741,99,794,107,793,113,740,105"/>
-<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="734,109,762,122,786,138,810,154,822,160,819,165,807,159,783,142,759,127,732,114"/>
-<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="761,140,793,135,794,141,761,145"/>
-<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="761,168,800,174,799,179,761,173"/>
-<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="731,198,759,186,783,171,807,155,819,149,822,154,810,160,786,176,762,191,733,203"/>
-<area shape="poly" id="edge14_Node000009_Node000005" title=" " alt="" coords="740,209,799,200,800,205,741,214"/>
-<area shape="poly" id="edge17_Node000011_Node000004" title=" " alt="" coords="738,265,759,252,776,229,782,205,789,181,807,156,811,152,815,156,811,159,794,183,788,207,781,231,763,256,741,270"/>
-<area shape="poly" id="edge18_Node000011_Node000005" title=" " alt="" coords="729,264,760,251,833,215,835,220,762,256,731,269"/>
+<area shape="rect" id="Node000001" title="Retrieve the data from the json file." alt="" coords="5,104,148,145"/>
+<area shape="rect" id="Node000002" href="$d5/da0/classparsing_1_1JsonHandler.html#a9e765c81ea918e5eb84811ac929d8f24" title="Creates the FileData instance." alt="" coords="196,104,338,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,122,180,122,180,127,148,127"/>
+<area shape="rect" id="Node000003" href="$d5/da0/classparsing_1_1JsonHandler.html#a6c3c29dc32baa0d2391bab88f48113ab" title="Assigns application to this&#45;&gt;data." alt="" coords="386,5,528,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="303,101,385,57,396,51,398,56,387,61,306,106"/>
+<area shape="rect" id="Node000004" href="$d5/da0/classparsing_1_1JsonHandler.html#ac4477431b9d1cf1d19eaa1b60066c9f7" title="Assigns entries to this&#45;&gt;data." alt="" coords="386,71,528,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="338,109,370,104,371,109,339,114"/>
+<area shape="rect" id="Node000008" href="$d5/da0/classparsing_1_1JsonHandler.html#a525768e8f0f99da0aec60bc2ebfabdf6" title="Assigns the hideshell value to this&#45;&gt;data." alt="" coords="386,136,528,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="339,134,371,139,370,144,338,139"/>
+<area shape="rect" id="Node000009" href="$d5/da0/classparsing_1_1JsonHandler.html#a5a3ad5a6d39261a60bfd1f1ee827a378" title="Assigns the outputfile to this&#45;&gt;data." alt="" coords="386,201,528,242"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="307,143,387,186,398,192,396,196,385,191,304,148"/>
+<area shape="rect" id="Node000005" href="$d5/da0/classparsing_1_1JsonHandler.html#a07f65d3a7c307cc78416fa5eaaf32301" title="Assigns an command to this&#45;&gt;data." alt="" coords="597,5,740,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="524,68,585,49,587,54,526,73"/>
+<area shape="rect" id="Node000006" href="$d5/da0/classparsing_1_1JsonHandler.html#a12eaca263d111378d01254a5ec54a011" title="Assigns an environmentVariable to this&#45;&gt;data." alt="" coords="576,71,761,111"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="529,88,561,88,561,94,529,94"/>
+<area shape="rect" id="Node000007" href="$d5/da0/classparsing_1_1JsonHandler.html#af760051928630de9de67760cfd70fa4e" title="Assigns a path value to this&#45;&gt;data." alt="" coords="597,136,740,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="526,109,587,128,585,133,524,114"/>
 </map>

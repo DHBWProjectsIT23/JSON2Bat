@@ -4,7 +4,6 @@ var annotated_dup =
       [ "CommandLineHandler", "d4/d06/classcli_1_1CommandLineHandler.html", "d4/d06/classcli_1_1CommandLineHandler" ]
     ] ],
     [ "exceptions", "d0/d6e/namespaceexceptions.html", [
-      [ "ContainsBadCharacterException", "d8/d32/classexceptions_1_1ContainsBadCharacterException.html", "d8/d32/classexceptions_1_1ContainsBadCharacterException" ],
       [ "CustomException", "dc/d56/classexceptions_1_1CustomException.html", "dc/d56/classexceptions_1_1CustomException" ],
       [ "FailedToOpenFileException", "de/da8/classexceptions_1_1FailedToOpenFileException.html", "de/da8/classexceptions_1_1FailedToOpenFileException" ],
       [ "FileExistsException", "df/d36/classexceptions_1_1FileExistsException.html", "df/d36/classexceptions_1_1FileExistsException" ],
