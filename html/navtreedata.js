@@ -25,7 +25,13 @@
 var NAVTREE =
 [
   [ "JSON2Batch", "index.html", [
-    [ "JSON2Batch", "index.html#autotoc_md0", null ],
+    [ "Build instructions", "index.html#autotoc_md1", [
+      [ "Linux", "index.html#autotoc_md2", null ],
+      [ "Windows", "index.html#autotoc_md3", null ]
+    ] ],
+    [ "Documentation", "index.html#autotoc_md4", null ],
+    [ "License", "index.html#autotoc_md5", null ],
+    [ "Other", "index.html#autotoc_md6", null ],
     [ "Todo List", "dd/da0/todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
