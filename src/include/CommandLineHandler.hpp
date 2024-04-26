@@ -1,8 +1,8 @@
 /**
  * @file CommandLineHandler.hpp
  * @author Simon Blum
- * @date 2024-04-18
- * @version 0.1.5
+ * @date 2024-04-26
+ * @version 0.2.2
  * @brief Responsible for the Command Line Interface.
  * @details
  * This file is responsible for the Command Line Interface.
@@ -13,6 +13,8 @@
  * @see CommandLineHandler
  * @see options
  * @see StyleHelpers
+ *
+ * @see src/sources/CommandLineHandler.cpp
  *
  * @copyright See LICENSE file
  */
@@ -51,27 +53,21 @@ namespace cli {
  * @see options
  */
 class CommandLineHandler {
-public:
+  public:
     /**
      * @brief Prints the help message.
-     * @details
-     * Prints the help message when called.
      *
      * @note This function ends the application.
      */
     [[noreturn]] static void printHelp();
     /**
      * @brief Prints the version message.
-     * @details
-     * Prints the version message when called.
      *
      * @note This function ends the application.
      */
     [[noreturn]] static void printVersion();
     /**
      * @brief Prints the credits message.
-     * @details
-     * Prints the credits message when called.
      *
      * @note This function ends the application.
      */
@@ -81,26 +77,24 @@ public:
      * @details
      * This function uses the "getopt.h" library to parse all options given
      * and then returns all files which are given as arguments.
+     *
      * @param argc The number of arguments given
      * @param argv The arguments given
-     * @throws std::logic_error
-     * @return Returns a vector of strings containing all filenames.
      *
-     *
-     * @todo Update documentation
+     * @return Returns a tuple containing the output directory and the files
      */
     static std::tuple<std::optional<std::string>, std::vector<std::string>>
-    parseArguments(int argc, char *argv[]);
+    parseArguments(int argc, char* argv[]);
     /**
      * @brief The Constructor of the CommandLineHandler Class
      * @note As all functions are static it should not be used and as such
-     * is private.
+     * is deleted.
      */
     CommandLineHandler() = delete;
     /**
      * @brief The Destructor of the CommandLineHandler Class
      * @note As all functions are static it should not be used and as such
-     * is private.
+     * is deleted.
      */
     ~CommandLineHandler() = delete;
 };
@@ -115,14 +109,12 @@ public:
  * @see CommandLineHandler
  */
 static const struct option options[] = {
-    {"help", no_argument, nullptr, 'h'},
-    {"version", no_argument, nullptr, 'v'},
-    {"credits", no_argument, nullptr, 'c'},
-    {"verbose", no_argument, nullptr, 0},
-    {"outdir", required_argument, nullptr, 'o'},
+    {"help", no_argument, nullptr, 'h'}, /** < Help */
+    {"version", no_argument, nullptr, 'v'}, /** < Version */
+    {"credits", no_argument, nullptr, 'c'}, /** < Credits */
+    {"verbose", no_argument, nullptr, 0}, /** < Verbose */
+    {"outdir", required_argument, nullptr, 'o'}, /** < Output directory */
     nullptr
-    // Brief/verbose
-    // Output dir
 };
 
 /**
@@ -149,8 +141,8 @@ static const std::string WHITE = "\033[0;37m";
 static const std::string BOLD = "\033[1m";
 static const std::string UNDERLINE = "\033[4m";
 static const std::string ITALIC = "\033[3m";
-#elif defined(                                                                 \
-    IS_WINDOWS) // Windows doesn't support ANSI escape codes the same way
+//@note Windows doesn't support ANSI escape codes the same way
+#elif defined(IS_WINDOWS)
 static const std::string CLEAR_TERMINAL = "";
 static const std::string RESET = "";
 static const std::string RED = "";

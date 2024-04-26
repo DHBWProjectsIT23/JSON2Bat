@@ -1,10 +1,11 @@
 /**
  * @file FileData.cpp
- * @author
- * @date
- * @version
- * @brief
- * @details
+ * @author Elena Schwarzbach, Sonia Sinacci
+ * @date 2024-04-26
+ * @version 0.1.6
+ * @brief Implementation of the FileData class.
+ *
+ * @see src/include/FileData.hpp
  *
  * @copyright See LICENSE file
  */
@@ -21,13 +22,15 @@ void FileData::setOutputFile(std::string &newOutputfile)
     // If no value for key "outputfile"
     if (newOutputfile.empty()) {
         LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
-        throw exceptions::InvalidValueException("outputfile", "Outputfile can't be empty!");
+        throw exceptions::InvalidValueException("outputfile",
+                                                "Outputfile can't be empty!");
     }
 
     // If outputfile is already set
     if (!this->outputfile.empty()) {
         LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
-        throw exceptions::InvalidValueException("outputfile", "Outputfile is already set!");
+        throw exceptions::InvalidValueException("outputfile",
+                                                "Outputfile is already set!");
     }
 
     // If outputfile does not end with ".bat"
@@ -56,7 +59,8 @@ void FileData::addCommand(const std::string &command)
 {
     if (command.empty()) {
         LOG_INFO << "Escalating error to ErrorHandler::invalidValue!";
-        throw exceptions::InvalidValueException("command", "Command value is empty!");
+        throw exceptions::InvalidValueException("command",
+                                                "Command value is empty!");
     }
 
     LOG_INFO << "Adding command: " << command << "\n";

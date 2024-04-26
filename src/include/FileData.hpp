@@ -7,13 +7,14 @@
  *
  * @see parsing::FileData
  *
+ * @see src/sources/FileData.cpp
+ *
  * @copyright See LICENSE file
  */
 
 #ifndef FILEDATA_HPP
 #define FILEDATA_HPP
 
-#include <cstdint>
 #include <optional>
 #include <string>
 #include <vector>
@@ -28,7 +29,7 @@ namespace parsing {
  * This class also handles a part of the error handling.
  */
 class FileData {
-public:
+  public:
     /**
      * @brief Setter for this->outputfile
      * @details
@@ -146,11 +147,12 @@ public:
         return pathValues;
     }
 
-private:
+  private:
     std::string outputfile;
     bool hideShell;
     std::optional<std::string> application;
     std::vector<std::string> commands;
+    // Tuple<Name, Value>
     std::vector<std::tuple<std::string, std::string>> environmentVariables;
     std::vector<std::string> pathValues;
 };

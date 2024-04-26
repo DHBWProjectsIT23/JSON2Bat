@@ -54,11 +54,11 @@ jobs:
           #  with:
           #    version: '17'
 
-          #- name: Install GCC
-          #  uses: egor-tensin/setup-gcc@v1.3
-          #  with:
+      - name: Install GCC
+        uses: egor-tensin/setup-gcc@v1.3
+        with:
           #  # GCC version to install
-          #    version: '13'
+          version: '10'
 
       - name: Set reusable strings
         # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
