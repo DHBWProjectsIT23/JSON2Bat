@@ -162,7 +162,18 @@ private:
      */
     std::shared_ptr<FileData> createFileData();
 
-    /** @todo Document this */
+    /**
+    * @brief Check if a string contains a bad character
+    * @details
+    * This method checks if a given string contains a bad character.
+    * Bad characters are declared in a set within the function. This is done
+    * to ensure, that no characters such as line breaks, break the later
+    * generated batch file.
+    *
+    * @param str The string to be checked
+    *
+    * @bool If the string contains a bad char or not
+    */
     [[nodiscard]] static bool containsBadCharacter(const std::string &str);
     std::shared_ptr<Json::Value> root;
     std::shared_ptr<FileData> data;

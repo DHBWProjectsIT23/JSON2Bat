@@ -97,7 +97,16 @@ public:
      */
     static const std::string &checkDirectory(std::string &directory);
 
-    /** @todo Add documentation */
+    /**
+    * @brief Escape any unwanted escape sequences in a string.
+    * @details
+    * This function takes a string and escapes already existing escape
+    * sequences. E.g. "\n" would become "\\n".
+    *
+    * @param str The string to be escaped
+    *
+    * @return The processed string
+    */
     static const std::string escapeString(const std::string &str);
 };
 } // namespace utilities

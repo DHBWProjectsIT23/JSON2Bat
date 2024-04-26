@@ -106,7 +106,8 @@ const std::string Utils::escapeString(const std::string &str) {
 
     std::ostringstream escapedStream;
     for (char c : str) {
-        if (escapeSequences.count(c)) {
+        // Replace a character with it's counterpart, if it is in the map
+        if (escapeSequences.contains(c)) {
             escapedStream << escapeSequences.at(c);
         } else {
             escapedStream << c;

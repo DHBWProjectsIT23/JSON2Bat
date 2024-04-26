@@ -151,15 +151,16 @@ void JsonHandler::assignPathValue(const Json::Value &entry) const {
     this->data->addPathValue(path);
 }
 
-/** @todo documentation */
 bool JsonHandler::containsBadCharacter(const std::string &str) {
 
+    // Set of characters which may not be in the string
     static const std::unordered_set<char> badChars = {
         '\n', '\t', '\r', '\0', '\x1A', '|', ';', '<', '>', '!', '%', '"', '\''
     };
 
+    // Lambda function which returns true, if the char is bad
     auto isBadCharacter = [](char c) {
-        return badChars.find(c) != badChars.end();
+        return badChars.contains(c);
     };
 
     return std::any_of(str.begin(), str.end(), isBadCharacter);
