@@ -1,4 +1,4 @@
-.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 13:19:44" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 13:21:47" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -66,9 +66,13 @@ parsing::KeyValidator \- Validates keys of a Json::Value object\&.
 .PP 
 Validates keys of a Json::Value object\&. 
 
-This class is singleton\&. That way when multiple files are parsed with the application, the maps for valid keys and the set for the type entries field only have to be allocated once when parsing multiple files\&. 
+This class is singleton\&. That way when multiple files are parsed with the application, the maps for valid keys and the set for the type entries field only have to be allocated once when parsing multiple files\&.
+.IP "\(bu" 2
+{ReqFunc17} 
 .PP
-Definition at line \fB30\fP of file \fBKeyValidator\&.hpp\fP\&.
+
+.PP
+Definition at line \fB31\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBKeyValidator\fP & parsing::KeyValidator::getInstance ()\fC [static]\fP"
@@ -221,7 +225,7 @@ Changed from if/else clause within function to map in 0\&.2\&.1
 .PP
 
 .PP
-Definition at line \fB144\fP of file \fBKeyValidator\&.hpp\fP\&.
+Definition at line \fB145\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SS "std::unordered_set<std::string> parsing::KeyValidator::validEntryKeys\fC [private]\fP"
 \fBInitial value:\fP.PP
 .nf
@@ -238,7 +242,7 @@ Changed from vector to unordered_set in 0\&.2\&.1 - as this shoud improve lookup
 .PP
 
 .PP
-Definition at line \fB137\fP of file \fBKeyValidator\&.hpp\fP\&.
+Definition at line \fB138\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SS "std::unordered_set<std::string> parsing::KeyValidator::validKeys\fC [private]\fP"
 \fBInitial value:\fP.PP
 .nf
@@ -255,7 +259,7 @@ Changed from vector to unordered_set in 0\&.2\&.1 - as this shoud improve lookup
 .PP
 
 .PP
-Definition at line \fB130\fP of file \fBKeyValidator\&.hpp\fP\&.
+Definition at line \fB131\fP of file \fBKeyValidator\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

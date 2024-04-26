@@ -2,8 +2,8 @@
 <area shape="rect" id="Node000001" title="Initializes the BatchCreator." alt="" coords="5,153,185,179"/>
 <area shape="rect" id="Node000002" href="$da/d1c/classBatchCreator.html#a2225babf16a473ba6722238c19d785ae" title="Creates the batch stream." alt="" coords="233,153,406,179"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,164,217,164,217,169,185,169"/>
-<area shape="rect" id="Node000003" href="$da/d1c/classBatchCreator.html#af9bfc052ff3ee90beff0f35b56aed5bc" title="If an application is given, it is started at the end." alt="" coords="483,5,637,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,151,378,97,413,66,453,40,467,33,470,38,455,44,416,70,382,101,333,155"/>
+<area shape="rect" id="Node000003" href="$da/d1c/classBatchCreator.html#ab0c64cf4f8d3bf824bff2762a125315d" title="If an application is given, it is started at the end." alt="" coords="463,5,658,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,151,378,97,413,66,453,40,464,34,466,39,455,44,416,70,382,101,333,155"/>
 <area shape="rect" id="Node000004" href="$da/d1c/classBatchCreator.html#a7ea2646254825e194f831d98ae703ec8" title="Writes the commands to be executed." alt="" coords="462,55,659,80"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="339,151,389,120,453,89,472,82,474,88,455,94,392,125,342,155"/>
 <area shape="rect" id="Node000005" href="$da/d1c/classBatchCreator.html#a8d7aab76f68225bc13cdcb41035f5319" title="Writes the end of the batch file." alt="" coords="484,104,637,130"/>
