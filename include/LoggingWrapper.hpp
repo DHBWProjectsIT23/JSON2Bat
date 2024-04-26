@@ -115,7 +115,7 @@ const static std::string MAGENTA_BG = "\x1b[45m";
 const static std::string CYAN_BG = "\x1b[46m";
 const static std::string WHITE_BG = "\x1b[47m";
 const static std::string ERROR = "\x1b[31m\x1b[1m";
-#elif IS_WINDOWS
+#else
 const static std::string CLEAR_TERMINAL = "";
 const static std::string RESET = "";
 const static std::string BOLD = "";

@@ -11,9 +11,9 @@
  */
 
 #include "BatchCreator.hpp"
-
 #include "LoggingWrapper.hpp"
 #include <utility>
+
 
 BatchCreator::BatchCreator(std::shared_ptr<parsing::FileData> fileData)
     : fileData(std::move(fileData)) {

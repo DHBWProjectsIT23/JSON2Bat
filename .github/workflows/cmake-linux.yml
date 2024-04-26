@@ -48,7 +48,7 @@ jobs:
 
       - name: Install jsonlib
         run: sudo apt install libjsoncpp-dev
-
+        
       - name: Install GCC
         uses: egor-tensin/setup-gcc@v1.3
         with:

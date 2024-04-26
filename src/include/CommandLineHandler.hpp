@@ -21,10 +21,15 @@
 #ifndef COMMANDLINEHANDLER_HPP
 #define COMMANDLINEHANDLER_HPP
 
+#ifdef IS_UNIX
 #include <getopt.h>
-#include <optional>
+#endif
+#ifdef IS_WINDOWS
+#include "xgetopt.h"
+#endif
 #include <string>
 #include <vector>
+#include <optional>
 
 /**
  * @namespace cli
