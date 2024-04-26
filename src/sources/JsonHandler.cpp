@@ -151,7 +151,7 @@ void JsonHandler::assignPathValue(const Json::Value &entry) const {
     this->data->addPathValue(path);
 }
 
-bool JsonHandler::containsBadCharacter(const std::string &str) {
+bool JsonHandler::containsBadCharacter(const std::string_view &str) {
 
     // Set of characters which may not be in the string
     static const std::unordered_set<char> badChars = {
@@ -163,6 +163,6 @@ bool JsonHandler::containsBadCharacter(const std::string &str) {
         return badChars.contains(c);
     };
 
-    return std::any_of(str.begin(), str.end(), isBadCharacter);
+    return std::ranges::any_of(str, isBadCharacter);
 }
 } // namespace parsing

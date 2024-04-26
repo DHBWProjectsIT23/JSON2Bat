@@ -174,7 +174,7 @@ private:
     *
     * @bool If the string contains a bad char or not
     */
-    [[nodiscard]] static bool containsBadCharacter(const std::string &str);
+    [[nodiscard]] static bool containsBadCharacter(const std::string_view &str);
     std::shared_ptr<Json::Value> root;
     std::shared_ptr<FileData> data;
 };
