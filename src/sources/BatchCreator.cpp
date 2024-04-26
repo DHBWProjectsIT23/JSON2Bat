@@ -31,13 +31,14 @@ void BatchCreator::createBatch()
     this->writeCommands();
     this->writeEnvVariables();
     this->writePathVariables();
-    this->writeApp();
+    this->writeApplication();
     this->writeEnd();
 }
 
 void BatchCreator::writeStart() const
 {
     LOG_INFO << "writing Start of Batch";
+    // {ReqFunc24} - \r\n
     *this->dataStream << "@ECHO OFF\r\nC:\\Windows\\System32\\cmd.exe ";
 }
 
@@ -84,18 +85,21 @@ void BatchCreator::writePathVariables() const
     *this->dataStream << "%path%";
 }
 
-void BatchCreator::writeApp() const
+void BatchCreator::writeApplication() const
 {
     std::string appName = this->fileData->getOutputFile();
     appName = appName.substr(0, appName.find('.'));
 
     if (this->fileData->getApplication().has_value()) {
         LOG_INFO << "writing start Application";
-        *this->dataStream << " && start \"" << appName << "\" "
+        *this->dataStream << " && start \"" << appName
+                          << "\" "
+                          // {ReqFunc24} - \r\n
                           << this->fileData->getApplication().value() << "\"\r\n";
     }
     else {
         LOG_INFO << "writing not start Application";
+        // {ReqFunc24} - \r\n
         *this->dataStream << "\"\r\n";
     }
 }

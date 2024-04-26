@@ -68,8 +68,7 @@ void CommandLineHandler::printCredits()
     exit(0);
 }
 
-std::tuple<std::optional<std::string>, std::vector<std::string>>
-CommandLineHandler::parseArguments(
+std::tuple<std::optional<std::string>, std::vector<std::string>> CommandLineHandler::parseArguments(
             int argc, char* argv[])
 {
     LOG_INFO << "Parsing arguments...";
@@ -129,8 +128,10 @@ CommandLineHandler::parseArguments(
     LOG_INFO << "Options have been parsed";
     LOG_INFO << "Checking for arguments...";
 
+    // Loop for {reqFunc5}
     while (optind < argc) {
         LOG_INFO << "Adding file: " << argv[optind];
+        // Vector for {reqFunc7}
         files.emplace_back(argv[optind++]);
     }
 
