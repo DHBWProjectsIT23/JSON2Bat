@@ -162,7 +162,8 @@ private:
      */
     std::shared_ptr<FileData> createFileData();
 
-    static bool containsBadCharacter(const std::string &str);
+    /** @todo Document this */
+    [[nodiscard]] static bool containsBadCharacter(const std::string &str);
     std::shared_ptr<Json::Value> root;
     std::shared_ptr<FileData> data;
 };

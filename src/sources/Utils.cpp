@@ -94,4 +94,32 @@ bool Utils::handleParseException(const exceptions::CustomException &e,
     return true;
 }
 
+const std::string Utils::escapeString(const std::string &str) {
+    // Replace each backslash with double backslash
+    std::string escapedStr;
+    for (char c : str) {
+        switch (c) {
+            case '\\':
+                escapedStr += "\\\\"; // Replace backslash with double backslash
+                break;
+            case '\n':
+                escapedStr += "\\n"; // Replace newline with backslash-n
+                break;
+            case '\t':
+                escapedStr += "\\t"; // Replace tab with backslash-t
+                break;
+            case '\x1A':
+                escapedStr += "\\x1A"; // Replace end of file with backslash-x1A
+                break;
+            case '\r':
+                escapedStr += "\\r"; // Replace carriage return with backslash-r
+                break;
+            default:
+                escapedStr += c;
+                break;
+        }
+    }
+    return escapedStr;
+}
+
 } // namespace utilities

@@ -15,6 +15,7 @@
 #include "FileData.hpp"
 #include "KeyValidator.hpp"
 #include "LoggingWrapper.hpp"
+#include "Utils.hpp"
 
 #include <algorithm>
 
@@ -68,6 +69,7 @@ void JsonHandler::assignOutputFile() const {
     LOG_INFO << "Assigning outputfile...\n";
     std::string outputFile = this->root->get("outputfile", "").asString();
     if (containsBadCharacter(outputFile)) {
+        outputFile = utilities::Utils::escapeString(outputFile);
         throw exceptions::ContainsBadCharacterException(outputFile);
     }
     this->data->setOutputFile(outputFile);
@@ -83,6 +85,7 @@ void JsonHandler::assignApplication() const {
     LOG_INFO << "Assigning application...\n";
     std::string application = this->root->get("application", "").asString();
     if (containsBadCharacter(application)) {
+        application = utilities::Utils::escapeString(application);
         throw exceptions::ContainsBadCharacterException(application);
     }
     this->data->setApplication(application);
@@ -116,6 +119,7 @@ void JsonHandler::assignCommand(const Json::Value &entry) const {
     LOG_INFO << "Assigning command...\n";
     std::string command = entry.get("command", "").asString();
     if (containsBadCharacter(command)) {
+        command = utilities::Utils::escapeString(command);
         throw exceptions::ContainsBadCharacterException(command);
     }
     this->data->addCommand(command);
@@ -126,8 +130,13 @@ void JsonHandler::assignEnvironmentVariable(const Json::Value &entry) const {
     std::string key = entry.get("key", "").asString();
     std::string value = entry.get("value", "").asString();
 
-    if (containsBadCharacter(key) || containsBadCharacter(value)) {
-        throw exceptions::ContainsBadCharacterException(key + " " + value);
+    if (containsBadCharacter(key)) {
+        key = utilities::Utils::escapeString(key);
+        throw exceptions::ContainsBadCharacterException(key);
+    }
+    if (containsBadCharacter(value)) {
+        value = utilities::Utils::escapeString(value);
+        throw exceptions::ContainsBadCharacterException(value);
     }
     this->data->addEnvironmentVariable(key, value);
 }
@@ -136,15 +145,17 @@ void JsonHandler::assignPathValue(const Json::Value &entry) const {
     LOG_INFO << "Assigning path value...\n";
     std::string path = entry.get("path", "").asString();
     if (containsBadCharacter(path)) {
+        path = utilities::Utils::escapeString(path);
         throw exceptions::ContainsBadCharacterException(path);
     }
     this->data->addPathValue(path);
 }
 
+/** @todo documentation */
 bool JsonHandler::containsBadCharacter(const std::string &str) {
 
     static const std::unordered_set<char> badChars = {
-        '\n', '\t', '\r', '\0', '\x1A', // Control characters
+        '\n', '\t', '\r', '\0', '\x1A', '|', ';', '<', '>', '!', '%', '"', '\''
     };
 
     auto isBadCharacter = [](char c) {

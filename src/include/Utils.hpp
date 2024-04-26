@@ -85,17 +85,20 @@ public:
     static void checkConfigFile(const std::string &configFile);
 
     /**
-    * @brief Checks if the given directory exists and is valid
-    *
-    * @details
-    * This function checks if the given directory exists and is valid. If the
-    * directory does not end with a '/' or a '\', it will be added.
-    *
-    * @param directory The directory to be checked
-    *
-    * @return The checked directory
-    */
+     * @brief Checks if the given directory exists and is valid
+     *
+     * @details
+     * This function checks if the given directory exists and is valid. If the
+     * directory does not end with a '/' or a '\', it will be added.
+     *
+     * @param directory The directory to be checked
+     *
+     * @return The checked directory
+     */
     static const std::string &checkDirectory(std::string &directory);
+
+    /** @todo Add documentation */
+    static const std::string escapeString(const std::string &str);
 };
 } // namespace utilities
 
