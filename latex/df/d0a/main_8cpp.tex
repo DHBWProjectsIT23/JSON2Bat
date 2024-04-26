@@ -9,13 +9,11 @@ Contains the main function.
 {\ttfamily \#include $<$cstdlib$>$}\newline
 {\ttfamily \#include $<$filesystem$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
-{\ttfamily \#include $<$jsoncpp/json.\+h$>$}\newline
 {\ttfamily \#include $<$tuple$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include "{}Batch\+Creator.\+hpp"{}}\newline
 {\ttfamily \#include "{}Command\+Line\+Handler.\+hpp"{}}\newline
 {\ttfamily \#include "{}Exceptions.\+hpp"{}}\newline
-{\ttfamily \#include "{}File\+Data.\+hpp"{}}\newline
 {\ttfamily \#include "{}Json\+Handler.\+hpp"{}}\newline
 {\ttfamily \#include "{}Utils.\+hpp"{}}\newline
 {\ttfamily \#include "{}config.\+hpp"{}}\newline
@@ -30,13 +28,11 @@ Include dependency graph for main.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-INITIALIZE\+\_\+\+EASYLOGGINGPP void \mbox{\hyperlink{main_8cpp_a2aea5a6644dca94106892dacbe05cd63}{check\+Config\+File}} ()
-\item 
-std\+::tuple$<$ std\+::vector$<$ std\+::string $>$, std\+::string $>$ \mbox{\hyperlink{main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f}{parse\+And\+Validate\+Args}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+INITIALIZE\+\_\+\+EASYLOGGINGPP std\+::tuple$<$ std\+::vector$<$ std\+::string $>$, std\+::string $>$ \mbox{\hyperlink{main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f}{parse\+And\+Validate\+Args}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{main_8cpp_a229a422b4e4be967a1e02c69d8867c77}{validate\+Files}} (const std\+::vector$<$ std\+::string $>$ \&files)
 \item 
-void \mbox{\hyperlink{main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0}{parse\+File}} (const std\+::string \&file, const std\+::string \&out\+Dir)
+void \mbox{\hyperlink{main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13}{parse\+File}} (const std\+::string \&file, const std\+::string \&output\+Directory)
 \item 
 int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Main function of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -66,31 +62,6 @@ Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{main_8cpp_a2aea5a6644dca94106892dacbe05cd63}\label{main_8cpp_a2aea5a6644dca94106892dacbe05cd63} 
-\index{main.cpp@{main.cpp}!checkConfigFile@{checkConfigFile}}
-\index{checkConfigFile@{checkConfigFile}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{checkConfigFile()}{checkConfigFile()}}
-{\footnotesize\ttfamily void check\+Config\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-
-References \mbox{\hyperlink{config_8hpp_source_l00020}{LOG\+\_\+\+CONFIG}}.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=238pt]{df/d0a/main_8cpp_a2aea5a6644dca94106892dacbe05cd63_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
@@ -114,16 +85,16 @@ The main function is responsible for connection all parts of the programm. It ca
 Returns 0 on success, 1 on failure
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Documentation 
+\item[\mbox{\hyperlink{todo__todo000009}{Todo}}]Documentation 
 
 Refactoring \end{DoxyRefDesc}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{main_8cpp_source_l00109}{check\+Config\+File()}}, \mbox{\hyperlink{Utils_8cpp_source_l00066}{utilities\+::\+Utils\+::handle\+Parse\+Exception()}}, \mbox{\hyperlink{config_8hpp_source_l00020}{LOG\+\_\+\+CONFIG}}, \mbox{\hyperlink{main_8cpp_source_l00121}{parse\+And\+Validate\+Args()}}, \mbox{\hyperlink{main_8cpp_source_l00174}{parse\+File()}}, \mbox{\hyperlink{Utils_8cpp_source_l00026}{utilities\+::\+Utils\+::setup\+Easy\+Logging()}}, and \mbox{\hyperlink{main_8cpp_source_l00144}{validate\+Files()}}.
+References \mbox{\hyperlink{Utils_8cpp_source_l00055}{utilities\+::\+Utils\+::check\+Config\+File()}}, \mbox{\hyperlink{Utils_8cpp_source_l00076}{utilities\+::\+Utils\+::handle\+Parse\+Exception()}}, \mbox{\hyperlink{config_8hpp_source_l00024}{config\+::\+LOG\+\_\+\+CONFIG}}, \mbox{\hyperlink{main_8cpp_source_l00100}{parse\+And\+Validate\+Args()}}, \mbox{\hyperlink{main_8cpp_source_l00150}{parse\+File()}}, \mbox{\hyperlink{Utils_8cpp_source_l00025}{utilities\+::\+Utils\+::setup\+Easy\+Logging()}}, and \mbox{\hyperlink{main_8cpp_source_l00122}{validate\+Files()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -151,11 +122,11 @@ Here is the call graph for this function\+:
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{Utils_8cpp_source_l00055}{utilities\+::\+Utils\+::check\+Directory()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00067}{cli\+::\+Command\+Line\+Handler\+::parse\+Arguments()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{cli\+::\+Command\+Line\+Handler\+::print\+Help()}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00032}{exceptions\+::\+Custom\+Exception\+::what()}}.
+References \mbox{\hyperlink{Utils_8cpp_source_l00065}{utilities\+::\+Utils\+::check\+Directory()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00070}{cli\+::\+Command\+Line\+Handler\+::parse\+Arguments()}}, \mbox{\hyperlink{CommandLineHandler_8cpp_source_l00022}{cli\+::\+Command\+Line\+Handler\+::print\+Help()}}, and \mbox{\hyperlink{Exceptions_8hpp_source_l00032}{exceptions\+::\+Custom\+Exception\+::what()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -173,11 +144,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=266pt]{df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0}\label{main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0} 
+\Hypertarget{main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13}\label{main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13} 
 \index{main.cpp@{main.cpp}!parseFile@{parseFile}}
 \index{parseFile@{parseFile}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}}
-{\footnotesize\ttfamily void parse\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const std\+::string \&}]{out\+Dir }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void parse\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const std\+::string \&}]{output\+Directory }\end{DoxyParamCaption})}
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,18 +157,18 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{BatchCreator_8hpp_source_l00037}{Batch\+Creator\+::get\+Data\+Stream()}}, and \mbox{\hyperlink{JsonHandler_8cpp_source_l00047}{parsing\+::\+Json\+Handler\+::get\+File\+Data()}}.
+References \mbox{\hyperlink{BatchCreator_8hpp_source_l00039}{Batch\+Creator\+::get\+Data\+Stream()}}, and \mbox{\hyperlink{JsonHandler_8cpp_source_l00047}{parsing\+::\+Json\+Handler\+::get\+File\+Data()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{df/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_cgraph}
+\includegraphics[width=350pt]{df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -205,7 +176,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=209pt]{df/d0a/main_8cpp_a0f61acd0910d985bc7abe4af8c3bffe0_icgraph}
+\includegraphics[width=209pt]{df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{main_8cpp_a229a422b4e4be967a1e02c69d8867c77}\label{main_8cpp_a229a422b4e4be967a1e02c69d8867c77} 
@@ -224,7 +195,7 @@ Here is the caller graph for this function\+:
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 

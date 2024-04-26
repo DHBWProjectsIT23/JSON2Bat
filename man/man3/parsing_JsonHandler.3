@@ -1,4 +1,4 @@
-.TH "parsing::JsonHandler" 3 "Fri Apr 26 2024 09:29:06" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::JsonHandler" 3 "Fri Apr 26 2024 10:00:12" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -123,7 +123,7 @@ References \fBparseFile()\fP, and \fBroot\fP\&.
 .PP
 Assigns application to this->data\&. Retrieves the value of the application key from Json::Value this->root and defaults to an empty string\&. 
 .PP
-Definition at line \fB76\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB75\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP, and \fBroot\fP\&.
 .SS "void parsing::JsonHandler::assignCommand (const Json::Value & entry) const\fC [private]\fP"
@@ -138,7 +138,7 @@ Assigns an command to this->data\&.
 .PP
 
 .PP
-Definition at line \fB106\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB104\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP\&.
 .SS "void parsing::JsonHandler::assignEntries () const\fC [private]\fP"
@@ -158,7 +158,7 @@ Assigns entries to this->data\&. Goes through each of the entries from Json::Val
 .PP
 
 .PP
-Definition at line \fB82\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB80\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBassignCommand()\fP, \fBassignEnvironmentVariable()\fP, \fBassignPathValue()\fP, and \fBroot\fP\&.
 .SS "void parsing::JsonHandler::assignEnvironmentVariable (const Json::Value & entry) const\fC [private]\fP"
@@ -173,7 +173,7 @@ Assigns an environmentVariable to this->data\&.
 .PP
 
 .PP
-Definition at line \fB112\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB109\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP\&.
 .SS "void parsing::JsonHandler::assignHideShell () const\fC [private]\fP"
@@ -211,7 +211,7 @@ Assigns a path value to this->data\&.
 .PP
 
 .PP
-Definition at line \fB119\fP of file \fBJsonHandler\&.cpp\fP\&.
+Definition at line \fB116\fP of file \fBJsonHandler\&.cpp\fP\&.
 .PP
 References \fBdata\fP\&.
 .SS "std::shared_ptr< \fBFileData\fP > parsing::JsonHandler::createFileData ()\fC [private]\fP"

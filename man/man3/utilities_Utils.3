@@ -1,4 +1,4 @@
-.TH "utilities::Utils" 3 "Fri Apr 26 2024 09:29:06" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "utilities::Utils" 3 "Fri Apr 26 2024 10:00:12" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,6 +23,10 @@ utilities::Utils \- Responsible for utility function\&.
 .RI "static bool \fBaskToContinue\fP (const std::string &prompt='Do you want to continue? (Y/N)\\n')"
 .br
 .RI "Asks if the user wants to continue\&. "
+.ti -1c
+.RI "static void \fBcheckConfigFile\fP (const std::string &configFile)"
+.br
+.RI "Checks if the easylogging-config file exists\&. "
 .ti -1c
 .RI "static std::string & \fBcheckDirectory\fP (std::string &directory)"
 .br
@@ -54,6 +58,12 @@ Returns true if the user wants to continue and false otherwise\&.
 
 .PP
 Definition at line \fB34\fP of file \fBUtils\&.cpp\fP\&.
+.SS "void utilities::Utils::checkConfigFile (const std::string & configFile)\fC [static]\fP"
+
+.PP
+Checks if the easylogging-config file exists\&. 
+.PP
+Definition at line \fB55\fP of file \fBUtils\&.cpp\fP\&.
 .SS "std::string & utilities::Utils::checkDirectory (std::string & directory)\fC [static]\fP"
 
 .PP
@@ -64,11 +74,11 @@ documentation
 .PP
 
 .PP
-Definition at line \fB55\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB65\fP of file \fBUtils\&.cpp\fP\&.
 .SS "bool utilities::Utils::handleParseException (const \fBexceptions::CustomException\fP & e, const std::vector< std::string >::iterator & file, const std::vector< std::string > & files)\fC [static]\fP"
 
 .PP
-Definition at line \fB66\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB76\fP of file \fBUtils\&.cpp\fP\&.
 .PP
 References \fBaskToContinue()\fP, and \fBexceptions::CustomException::what()\fP\&.
 .SS "void utilities::Utils::setupEasyLogging (const std::string & configFile)\fC [static]\fP"
@@ -83,9 +93,9 @@ Set up easylogging\&. This function sets up the easylogging library based on the
 .PP
 
 .PP
-Definition at line \fB26\fP of file \fBUtils\&.cpp\fP\&.
+Definition at line \fB25\fP of file \fBUtils\&.cpp\fP\&.
 .PP
-References \fBHOMEPAGE_URL\fP, \fBMAJOR_VERSION\fP, \fBMINOR_VERSION\fP, \fBPATCH_VERSION\fP, and \fBPROJECT_NAME\fP\&.
+References \fBconfig::HOMEPAGE_URL\fP, \fBconfig::MAJOR_VERSION\fP, \fBconfig::MINOR_VERSION\fP, \fBconfig::PATCH_VERSION\fP, and \fBconfig::PROJECT_NAME\fP\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Fri Apr 26 2024 09:29:06" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Fri Apr 26 2024 10:00:12" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,8 +15,6 @@ src/main.cpp \- Contains the main function\&.
 .br
 \fC#include <fstream>\fP
 .br
-\fC#include <jsoncpp/json\&.h>\fP
-.br
 \fC#include <tuple>\fP
 .br
 \fC#include <vector>\fP
@@ -26,8 +24,6 @@ src/main.cpp \- Contains the main function\&.
 \fC#include 'CommandLineHandler\&.hpp'\fP
 .br
 \fC#include 'Exceptions\&.hpp'\fP
-.br
-\fC#include 'FileData\&.hpp'\fP
 .br
 \fC#include 'JsonHandler\&.hpp'\fP
 .br
@@ -40,16 +36,13 @@ src/main.cpp \- Contains the main function\&.
 
 .in +1c
 .ti -1c
-.RI "INITIALIZE_EASYLOGGINGPP void \fBcheckConfigFile\fP ()"
-.br
-.ti -1c
-.RI "std::tuple< std::vector< std::string >, std::string > \fBparseAndValidateArgs\fP (int argc, char *argv[])"
+.RI "INITIALIZE_EASYLOGGINGPP std::tuple< std::vector< std::string >, std::string > \fBparseAndValidateArgs\fP (int argc, char *argv[])"
 .br
 .ti -1c
 .RI "std::vector< std::string > \fBvalidateFiles\fP (const std::vector< std::string > &files)"
 .br
 .ti -1c
-.RI "void \fBparseFile\fP (const std::string &file, const std::string &outDir)"
+.RI "void \fBparseFile\fP (const std::string &file, const std::string &outputDirectory)"
 .br
 .ti -1c
 .RI "int \fBmain\fP (int argc, char *argv[])"
@@ -89,19 +82,6 @@ See LICENSE file
 Definition in file \fBmain\&.cpp\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void checkConfigFile ()"
-
-.PP
-\fBReturns\fP
-.RS 4
-
-.RE
-.PP
-
-.PP
-Definition at line \fB109\fP of file \fBmain\&.cpp\fP\&.
-.PP
-References \fBLOG_CONFIG\fP\&.
 .SS "int main (int argc, char * argv[])"
 
 .PP
@@ -128,9 +108,9 @@ Refactoring
 .PP
 
 .PP
-Definition at line \fB82\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB72\fP of file \fBmain\&.cpp\fP\&.
 .PP
-References \fBcheckConfigFile()\fP, \fButilities::Utils::handleParseException()\fP, \fBLOG_CONFIG\fP, \fBparseAndValidateArgs()\fP, \fBparseFile()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
+References \fButilities::Utils::checkConfigFile()\fP, \fButilities::Utils::handleParseException()\fP, \fBconfig::LOG_CONFIG\fP, \fBparseAndValidateArgs()\fP, \fBparseFile()\fP, \fButilities::Utils::setupEasyLogging()\fP, and \fBvalidateFiles()\fP\&.
 .SS "std::tuple< std::vector< std::string >, std::string > parseAndValidateArgs (int argc, char * argv[])"
 
 .PP
@@ -147,10 +127,10 @@ References \fBcheckConfigFile()\fP, \fButilities::Utils::handleParseException()\
 .PP
 
 .PP
-Definition at line \fB121\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB100\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkDirectory()\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBcli::CommandLineHandler::printHelp()\fP, and \fBexceptions::CustomException::what()\fP\&.
-.SS "void parseFile (const std::string & file, const std::string & outDir)"
+.SS "void parseFile (const std::string & file, const std::string & outputDirectory)"
 
 .PP
 \fBParameters\fP
@@ -160,7 +140,7 @@ References \fButilities::Utils::checkDirectory()\fP, \fBcli::CommandLineHandler:
 .PP
 
 .PP
-Definition at line \fB174\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB150\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::getFileData()\fP\&.
 .SS "std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
@@ -177,7 +157,7 @@ References \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::get
 .PP
 
 .PP
-Definition at line \fB144\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB122\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::askToContinue()\fP\&.
 .SH "Author"

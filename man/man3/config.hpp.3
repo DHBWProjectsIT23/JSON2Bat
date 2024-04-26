@@ -1,4 +1,4 @@
-.TH "src/include/config.hpp" 3 "Fri Apr 26 2024 09:29:06" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "src/include/config.hpp" 3 "Fri Apr 26 2024 10:00:12" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,35 +7,45 @@ src/include/config.hpp \- Configures general project information\&.
 .SH SYNOPSIS
 .br
 .PP
-.SS "Macros"
+\fC#include <string>\fP
+.br
+
+.SS "Namespaces"
 
 .in +1c
 .ti -1c
-.RI "#define \fBLOG_CONFIG\fP   '/home/simon/1_Coding/projectJsonToBat/build/Debug/config/easylogging\&.conf'"
+.RI "namespace \fBconfig\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr auto \fBconfig::LOG_CONFIG\fP"
 .br
 .ti -1c
-.RI "#define \fBEXECUTABLE_NAME\fP   'json2batch'"
+.RI "constexpr auto \fBconfig::EXECUTABLE_NAME\fP = 'json2batch'"
 .br
 .ti -1c
-.RI "#define \fBMAJOR_VERSION\fP   '0'"
+.RI "constexpr auto \fBconfig::MAJOR_VERSION\fP = '0'"
 .br
 .ti -1c
-.RI "#define \fBMINOR_VERSION\fP   '2'"
+.RI "constexpr auto \fBconfig::MINOR_VERSION\fP = '2'"
 .br
 .ti -1c
-.RI "#define \fBPATCH_VERSION\fP   '2'"
+.RI "constexpr auto \fBconfig::PATCH_VERSION\fP = '2'"
 .br
 .ti -1c
-.RI "#define \fBDESCRIPTION\fP   'A simple tool to convert json to batch\&.'"
+.RI "constexpr auto \fBconfig::DESCRIPTION\fP = 'A simple tool to convert json to batch\&.'"
 .br
 .ti -1c
-.RI "#define \fBPROJECT_NAME\fP   'JSON2Batch'"
+.RI "constexpr auto \fBconfig::PROJECT_NAME\fP = 'JSON2Batch'"
 .br
 .ti -1c
-.RI "#define \fBAUTHORS\fP   'Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci'"
+.RI "constexpr auto \fBconfig::AUTHORS\fP"
 .br
 .ti -1c
-.RI "#define \fBHOMEPAGE_URL\fP   'https://dhbwprojectsit23\&.github\&.io/JSON2Bat'"
+.RI "constexpr auto \fBconfig::HOMEPAGE_URL\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -74,44 +84,6 @@ See LICENSE file
 
 .PP
 Definition in file \fBconfig\&.hpp\fP\&.
-.SH "Macro Definition Documentation"
-.PP 
-.SS "#define AUTHORS   'Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci'"
-
-.PP
-Definition at line \fB27\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define DESCRIPTION   'A simple tool to convert json to batch\&.'"
-
-.PP
-Definition at line \fB25\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define EXECUTABLE_NAME   'json2batch'"
-
-.PP
-Definition at line \fB21\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define HOMEPAGE_URL   'https://dhbwprojectsit23\&.github\&.io/JSON2Bat'"
-
-.PP
-Definition at line \fB28\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define LOG_CONFIG   '/home/simon/1_Coding/projectJsonToBat/build/Debug/config/easylogging\&.conf'"
-
-.PP
-Definition at line \fB20\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define MAJOR_VERSION   '0'"
-
-.PP
-Definition at line \fB22\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define MINOR_VERSION   '2'"
-
-.PP
-Definition at line \fB23\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define PATCH_VERSION   '2'"
-
-.PP
-Definition at line \fB24\fP of file \fBconfig\&.hpp\fP\&.
-.SS "#define PROJECT_NAME   'JSON2Batch'"
-
-.PP
-Definition at line \fB26\fP of file \fBconfig\&.hpp\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JSON2Batch from the source code\&.

@@ -1,4 +1,4 @@
-.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 09:29:06" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
+.TH "parsing::KeyValidator" 3 "Fri Apr 26 2024 10:00:12" "Version 0.2.2" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,6 +33,10 @@ parsing::KeyValidator \- Validates keys of a Json::Value object\&.
 .br
 .RI "Retrieve the wrong keys from a Json::Value object\&. "
 .ti -1c
+.RI "void \fBvalidateTypes\fP (const std::string &filename, const Json::Value &entry, const std::unordered_set< std::string > &entryKeys)"
+.br
+.RI "Validates types from the entries array\&. "
+.ti -1c
 .RI "std::vector< std::tuple< int, std::string > > \fBvalidateEntries\fP (const std::string &filename, const std::unordered_set< std::string > &entryKeys) const"
 .br
 .RI "Validates that an entries 'type' key is valid\&. "
@@ -40,10 +44,6 @@ parsing::KeyValidator \- Validates keys of a Json::Value object\&.
 .SS "Static Private Member Functions"
 
 .in +1c
-.ti -1c
-.RI "static void \fBvalidateTypes\fP (const std::string &filename, const Json::Value &entry, const std::unordered_set< std::string > &entryKeys)"
-.br
-.RI "Validates types from the entries array\&. "
 .ti -1c
 .RI "static std::optional< int > \fBgetUnknownKeyLine\fP (const std::string &filename, const std::string &wrongKey)"
 .br
@@ -57,6 +57,9 @@ parsing::KeyValidator \- Validates keys of a Json::Value object\&.
 .ti -1c
 .RI "std::unordered_set< std::string > \fBvalidEntryKeys\fP"
 .br
+.ti -1c
+.RI "std::unordered_map< std::string_view, std::vector< std::string > > \fBtypeToKeys\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -64,7 +67,7 @@ Validates keys of a Json::Value object\&.
 
 This class is singleton\&. That way when multiple files are parsed with the application, the validKeys and validEntryKeys field only have to be allocated once\&. 
 .PP
-Definition at line \fB27\fP of file \fBKeyValidator\&.hpp\fP\&.
+Definition at line \fB28\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBKeyValidator\fP & parsing::KeyValidator::getInstance ()\fC [static]\fP"
@@ -101,7 +104,7 @@ Documentation
 .PP
 
 .PP
-Definition at line \fB121\fP of file \fBKeyValidator\&.cpp\fP\&.
+Definition at line \fB117\fP of file \fBKeyValidator\&.cpp\fP\&.
 .SS "std::vector< std::tuple< int, std::string > > parsing::KeyValidator::getWrongKeys (const Json::Value & root, const std::string & filename) const\fC [private]\fP"
 
 .PP
@@ -172,7 +175,7 @@ A vector with tuples, containing the line and name of invalid types\&.
 Definition at line \fB28\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
 References \fBgetWrongKeys()\fP, \fBvalidateEntries()\fP, and \fBvalidateTypes()\fP\&.
-.SS "void parsing::KeyValidator::validateTypes (const std::string & filename, const Json::Value & entry, const std::unordered_set< std::string > & entryKeys)\fC [static]\fP, \fC [private]\fP"
+.SS "void parsing::KeyValidator::validateTypes (const std::string & filename, const Json::Value & entry, const std::unordered_set< std::string > & entryKeys)\fC [private]\fP"
 
 .PP
 Validates types from the entries array\&. Makes sure that each type has it's according keys, needed to parse it\&.
@@ -190,25 +193,32 @@ Validates types from the entries array\&. Makes sure that each type has it's acc
 .PP
 Definition at line \fB92\fP of file \fBKeyValidator\&.cpp\fP\&.
 .PP
-References \fBgetUnknownKeyLine()\fP\&.
+References \fBgetUnknownKeyLine()\fP, and \fBtypeToKeys\fP\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "std::unordered_map<std::string_view, std::vector<std::string> > parsing::KeyValidator::typeToKeys\fC [private]\fP"
+\fBInitial value:\fP.PP
+.nf
+= {
+      {"EXE", {"command"}}, {"PATH", {"path"}}, {"ENV", {"key", "value"}}}
+.fi
+
+.PP
+Definition at line \fB113\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SS "std::unordered_set<std::string> parsing::KeyValidator::validEntryKeys\fC [private]\fP"
 \fBInitial value:\fP.PP
 .nf
 = {"type", "key", "value",
-        "path", "command"
-    }
+                                                    "path", "command"}
 .fi
 
 .PP
-Definition at line \fB111\fP of file \fBKeyValidator\&.hpp\fP\&.
+Definition at line \fB110\fP of file \fBKeyValidator\&.hpp\fP\&.
 .SS "std::unordered_set<std::string> parsing::KeyValidator::validKeys\fC [private]\fP"
 \fBInitial value:\fP.PP
 .nf
 = {"outputfile", "hideshell",
-        "entries", "application"
-    }
+                                               "entries", "application"}
 .fi
 
 .PP
