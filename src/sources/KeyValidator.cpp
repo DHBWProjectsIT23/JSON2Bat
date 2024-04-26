@@ -133,6 +133,7 @@ std::optional<int>
 KeyValidator::getUnknownKeyLine(const std::string &filename,
                                 const std::string &wrongKey) {
     std::ifstream file(filename);
+    LOG_INFO << "Checking for key " << wrongKey << " in file " << filename;
 
     if (!file.is_open()) {
         LOG_ERROR << "File not open!";
@@ -145,6 +146,8 @@ KeyValidator::getUnknownKeyLine(const std::string &filename,
 
     for (int lineNumber = 1; std::getline(file, line); ++lineNumber) {
         if (std::regex_search(line, wrongKeyPattern)) {
+            LOG_INFO << "Found key " << wrongKey << " in line " << lineNumber;
+
             return lineNumber;
         }
     }
