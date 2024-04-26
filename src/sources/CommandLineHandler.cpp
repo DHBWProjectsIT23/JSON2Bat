@@ -65,7 +65,8 @@ void CommandLineHandler::printCredits() {
     exit(0);
 }
 
-std::tuple<std::optional<std::string>, std::vector<std::string>> CommandLineHandler::parseArguments(
+std::tuple<std::optional<std::string>, std::vector<std::string>>
+CommandLineHandler::parseArguments(
             int argc, char* argv[]) {
     LOG_INFO << "Parsing arguments...";
     std::vector<std::string> files;

@@ -1,9 +1,9 @@
 
 # JSON2Batch
 
-0.2.3
+0.2.4
 
-JSON2Batch was developed during a project in our first and second
+JSON2Batch was developed during a project during our first and second
 semester of university.
 It generates batch files from JSON files, which can spawn terminals or
 applications, that run under certain parameters specified within the
@@ -13,18 +13,19 @@ The project was carried out by **Elena Schwarzbach, Max Rodler, Simon Blum, Soni
 
 ## Table of Contents
 
-1. [Table of Contents](#table-of-contents)
-2. [Build Instructions](#build-instructions)
+- JSON2Batch
+  1. [Table of Contents](#table-of-contents)
+  2. [Build Instructions](#build-instructions)
     - [Linux](#linux)
     - [Windows](#windows)
     - [Generating Documentation](#generating-documentation)
-3. [Documentation](#documentation)
+  3. [Documentation](#documentation)
     - [Project Structure](#project-structure)
-4. [External Libraries](#external-libraries)
+  4. [External Libraries](#external-libraries)
     - [easylogging++](#easylogging)
     - [LoggingWrapper](#loggingwrapper)
     - [jsoncpp](#jsoncpp)
-5. [License](#license)
+  5. [License](#license)
 
 ## Build Instructions
 
