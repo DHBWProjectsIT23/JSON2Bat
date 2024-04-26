@@ -28,7 +28,7 @@ namespace parsing {
  * entries field only have to be allocated once when parsing multiple files.
  */
 class KeyValidator {
-  public:
+public:
     /**
      * @brief Get the instance of this class
      *
@@ -53,7 +53,7 @@ class KeyValidator {
     std::vector<std::tuple<int, std::string>>
     validateKeys(const Json::Value &root, const std::string &filename);
 
-  private:
+private:
     /**
      * @brief Retrieve the wrong keys from a Json::Value object
      * @details
@@ -121,7 +121,7 @@ class KeyValidator {
      * @return The line of the key, if it was found
      */
     static std::optional<int> getUnknownKeyLine(const std::string &filename,
-                                                const std::string &wrongKey);
+            const std::string &wrongKey);
 
     /**
      * @note Changed from vector to unordered_set in 0.2.1 - as this shoud improve

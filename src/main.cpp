@@ -133,7 +133,7 @@ std::tuple<std::vector<std::string>, std::string> parseAndValidateArgs(int argc,
 }
 
 const std::vector<std::string> validateFiles(const std::vector<std::string>
-                                             &files)
+        &files)
 {
     std::vector<std::string> validFiles;
     // Reserve space, to avaid reallocating with each valid file
@@ -180,10 +180,10 @@ void parseFile(const std::string &file, const std::string &outputDirectory)
     const auto fileData = jsonHandler.getFileData();
     BatchCreator batchCreator(fileData);
     const std::shared_ptr<std::stringstream> dataStream =
-                batchCreator.getDataStream();
+        batchCreator.getDataStream();
     // Full filename is output directory + output file
     const std::string outputFileName =
-                outputDirectory + fileData->getOutputFile();
+        outputDirectory + fileData->getOutputFile();
     std::ofstream outFile(outputFileName);
 
     if (!outFile.good()) {

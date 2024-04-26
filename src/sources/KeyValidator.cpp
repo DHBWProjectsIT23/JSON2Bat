@@ -25,19 +25,19 @@ KeyValidator &KeyValidator::getInstance()
 }
 
 std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
-            const Json::Value &root,
-            const std::string &filename)
+    const Json::Value &root,
+    const std::string &filename)
 {
     std::vector<std::tuple<int, std::string>> wrongKeys =
-                getWrongKeys(root, filename);
+        getWrongKeys(root, filename);
 
     // Inline declaration to prevent leaking in outer scope
     for (Json::Value entries = root.get("entries", "");
-         const auto &entry : entries) {
+            const auto &entry : entries) {
         const auto entryKeys = entry.getMemberNames();
         // Create a set of the entry keys for faster lookup (O(1) instead of O(n))
         std::unordered_set<std::string> entryKeysSet(entryKeys.begin(),
-                                                     entryKeys.end());
+                entryKeys.end());
         const auto wrongEntries = validateEntries(filename, entryKeysSet);
         // Combine wrong keys
         wrongKeys.insert(wrongKeys.end(), wrongEntries.begin(), wrongEntries.end());
@@ -49,8 +49,8 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateKeys(
 }
 
 std::vector<std::tuple<int, std::string>> KeyValidator::getWrongKeys(
-            const Json::Value &root,
-            const std::string &filename) const
+    const Json::Value &root,
+    const std::string &filename) const
 {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
@@ -72,8 +72,8 @@ std::vector<std::tuple<int, std::string>> KeyValidator::getWrongKeys(
 }
 
 std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
-            const std::string &filename,
-            const std::unordered_set<std::string> &entryKeys) const
+    const std::string &filename,
+    const std::unordered_set<std::string> &entryKeys) const
 {
     std::vector<std::tuple<int, std::string>> wrongKeys = {};
 
@@ -94,8 +94,8 @@ std::vector<std::tuple<int, std::string>> KeyValidator::validateEntries(
 }
 
 void KeyValidator::validateTypes(
-            const std::string &filename, const Json::Value &entry,
-            const std::unordered_set<std::string> &entryKeys)
+    const std::string &filename, const Json::Value &entry,
+    const std::unordered_set<std::string> &entryKeys)
 {
     // Gett the type of the entry - error if not found
     const std::string type = entry.get("type", "ERROR").asString();
@@ -108,7 +108,7 @@ void KeyValidator::validateTypes(
     }
     else if (typeToKeys.contains(type)) {
         const std::optional<int> line =
-                    getUnknownKeyLine(filename, std::string(type));
+            getUnknownKeyLine(filename, std::string(type));
 
         if (!line.has_value()) {
             LOG_INFO << "Unable to find line of wrong type!";
@@ -127,7 +127,7 @@ void KeyValidator::validateTypes(
 }
 
 std::optional<int> KeyValidator::getUnknownKeyLine(const std::string &filename,
-                                                   const std::string &wrongKey)
+        const std::string &wrongKey)
 {
     std::ifstream file(filename);
 

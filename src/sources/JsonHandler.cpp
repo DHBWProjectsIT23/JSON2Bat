@@ -38,7 +38,7 @@ std::shared_ptr<Json::Value> JsonHandler::parseFile(const std::string &filename)
     // Validate keys
     // Check for errors
     if (auto errors = KeyValidator::getInstance().validateKeys(newRoot, filename);
-        !errors.empty()) {
+            !errors.empty()) {
         throw exceptions::InvalidKeyException(errors);
     }
 
@@ -105,8 +105,8 @@ void JsonHandler::assignEntries() const
         else {
             // Due to validation beforehand - this should never be reached!
             throw exceptions::UnreachableCodeException(
-                        "Unknown entries should be caught by KeyValidator!\nPlease report "
-                        "this bug!");
+                "Unknown entries should be caught by KeyValidator!\nPlease report "
+                "this bug!");
         }
     }
 }

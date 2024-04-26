@@ -53,7 +53,7 @@ namespace cli {
  * @see options
  */
 class CommandLineHandler {
-  public:
+public:
     /**
      * @brief Prints the help message.
      *
