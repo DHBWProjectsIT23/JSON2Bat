@@ -18,18 +18,18 @@
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00024}00024\ \}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00026}\mbox{\hyperlink{classparsing_1_1KeyValidator_a8a3ffe788064f6b32be35870aeeb792c}{00026}}\ std::vector<std::tuple<int,\ std::string>>\ \mbox{\hyperlink{classparsing_1_1KeyValidator_a8a3ffe788064f6b32be35870aeeb792c}{KeyValidator::validateKeys}}(}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{const}\ Json::Value\ \&root,}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename)\ \{}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Json::Value\ \&root,}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename)\ \{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00029}00029\ \ \ \ \ std::vector<std::tuple<int,\ std::string>>\ wrongKeys\ =}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378}{getWrongKeys}}(root,\ filename);}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378}{getWrongKeys}}(root,\ filename);}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00031}00031\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Inline\ declaration\ to\ prevent\ leaking\ in\ outer\ scope}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (Json::Value\ entries\ =\ root.get(\textcolor{stringliteral}{"{}entries"{}},\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&entry\ :\ entries)\ \{}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&entry\ :\ entries)\ \{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ entryKeys\ =\ entry.getMemberNames();}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ a\ set\ of\ the\ entry\ keys\ for\ faster\ lookup\ (O(1)\ instead\ of\ O(n))}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ std::unordered\_set<std::string>\ entryKeysSet(entryKeys.begin(),}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entryKeys.end());}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entryKeys.end());}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ wrongEntries\ =\ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d}{validateEntries}}(filename,\ entryKeysSet);}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Combine\ wrong\ keys}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ wrongKeys.insert(wrongKeys.end(),\ wrongEntries.begin(),\ wrongEntries.end());}
@@ -41,8 +41,8 @@
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00047}00047\ \}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00048}00048\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00049}\mbox{\hyperlink{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378}{00049}}\ std::vector<std::tuple<int,\ std::string>>\ \mbox{\hyperlink{classparsing_1_1KeyValidator_a09db69c8ae81267a330d6430dcc29378}{KeyValidator::getWrongKeys}}(}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{const}\ Json::Value\ \&root,}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Json::Value\ \&root,}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename)\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00052}00052\ \ \ \ \ std::vector<std::tuple<int,\ std::string>>\ wrongKeys\ =\ \{\};}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00053}00053\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&key\ :\ root.getMemberNames())\ \{}
@@ -63,8 +63,8 @@
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00069}00069\ \}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00070}00070\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00071}\mbox{\hyperlink{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d}{00071}}\ std::vector<std::tuple<int,\ std::string>>\ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa1780ff0247f5d0112e11ed199cabd4d}{KeyValidator::validateEntries}}(}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename,}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_set<std::string>\ \&entryKeys)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename,}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_set<std::string>\ \&entryKeys)\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00074}00074\ \ \ \ \ std::vector<std::tuple<int,\ std::string>>\ wrongKeys\ =\ \{\};}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00075}00075\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&key\ :\ entryKeys)\ \{}
@@ -84,8 +84,8 @@
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00090}00090\ \}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00091}00091\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00092}\mbox{\hyperlink{classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparsing_1_1KeyValidator_aa7432c84eeeff231350e606612f3483e}{KeyValidator::validateTypes}}(}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename,\ \textcolor{keyword}{const}\ Json::Value\ \&entry,}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_set<std::string>\ \&entryKeys)\ \{}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename,\ \textcolor{keyword}{const}\ Json::Value\ \&entry,}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_set<std::string>\ \&entryKeys)\ \{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{comment}{//\ Gett\ the\ type\ of\ the\ entry\ -\/\ error\ if\ not\ found}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ type\ =\ entry.get(\textcolor{stringliteral}{"{}type"{}},\ \textcolor{stringliteral}{"{}ERROR"{}}).asString();}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00097}00097\ }
@@ -97,7 +97,7 @@
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00103}00103\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classparsing_1_1KeyValidator_a22a649521322467a8ac2dee887db4717}{typeToKeys}}.contains(type))\ \{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::optional<int>\ line\ =}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e}{getUnknownKeyLine}}(filename,\ std::string(type));}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e}{getUnknownKeyLine}}(filename,\ std::string(type));}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00107}00107\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!line.has\_value())\ \{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ LOG\_INFO\ <<\ \textcolor{stringliteral}{"{}Unable\ to\ find\ line\ of\ wrong\ type!"{}};}
@@ -116,7 +116,7 @@
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00122}00122\ \}}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00123}00123\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00124}\mbox{\hyperlink{classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e}{00124}}\ std::optional<int>\ \mbox{\hyperlink{classparsing_1_1KeyValidator_ac74432064cff4fd80b3c54fa588da65e}{KeyValidator::getUnknownKeyLine}}(\textcolor{keyword}{const}\ std::string\ \&filename,}
-\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&wrongKey)\ \{}
+\DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&wrongKey)\ \{}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00126}00126\ \ \ \ \ std::ifstream\ file(filename);}
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00127}00127\ }
 \DoxyCodeLine{\Hypertarget{KeyValidator_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}

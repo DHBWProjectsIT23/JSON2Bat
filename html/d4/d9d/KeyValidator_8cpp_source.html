@@ -120,18 +120,18 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../da/d86/classparsing_1_1KeyValidator.html#a8a3ffe788064f6b32be35870aeeb792c">   26</a></span>std::vector&lt;std::tuple&lt;int, std::string&gt;&gt; <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#a8a3ffe788064f6b32be35870aeeb792c">KeyValidator::validateKeys</a>(</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">const</span> Json::Value &amp;root,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">const</span> std::string &amp;filename) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keyword">const</span> Json::Value &amp;root,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keyword">const</span> std::string &amp;filename) {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::vector&lt;std::tuple&lt;int, std::string&gt;&gt; wrongKeys =</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378">getWrongKeys</a>(root, filename);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378">getWrongKeys</a>(root, filename);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Inline declaration to prevent leaking in outer scope</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">for</span> (Json::Value entries = root.get(<span class="stringliteral">&quot;entries&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;entry : entries) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>         <span class="keyword">const</span> <span class="keyword">auto</span> &amp;entry : entries) {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">const</span> <span class="keyword">auto</span> entryKeys = entry.getMemberNames();</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// Create a set of the entry keys for faster lookup (O(1) instead of O(n))</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::unordered_set&lt;std::string&gt; entryKeysSet(entryKeys.begin(),</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                entryKeys.end());</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                                                     entryKeys.end());</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">const</span> <span class="keyword">auto</span> wrongEntries = <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d">validateEntries</a>(filename, entryKeysSet);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// Combine wrong keys</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        wrongKeys.insert(wrongKeys.end(), wrongEntries.begin(), wrongEntries.end());</div>
@@ -145,8 +145,8 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378">   49</a></span>std::vector&lt;std::tuple&lt;int, std::string&gt;&gt; <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#a09db69c8ae81267a330d6430dcc29378">KeyValidator::getWrongKeys</a>(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> Json::Value &amp;root,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> std::string &amp;filename)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keyword">const</span> Json::Value &amp;root,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keyword">const</span> std::string &amp;filename)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::vector&lt;std::tuple&lt;int, std::string&gt;&gt; wrongKeys = {};</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;key : root.getMemberNames()) {</div>
@@ -169,8 +169,8 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d">   71</a></span>std::vector&lt;std::tuple&lt;int, std::string&gt;&gt; <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#aa1780ff0247f5d0112e11ed199cabd4d">KeyValidator::validateEntries</a>(</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">const</span> std::string &amp;filename,</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">const</span> std::unordered_set&lt;std::string&gt; &amp;entryKeys)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keyword">const</span> std::string &amp;filename,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keyword">const</span> std::unordered_set&lt;std::string&gt; &amp;entryKeys)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::vector&lt;std::tuple&lt;int, std::string&gt;&gt; wrongKeys = {};</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;key : entryKeys) {</div>
@@ -192,8 +192,8 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../da/d86/classparsing_1_1KeyValidator.html#aa7432c84eeeff231350e606612f3483e">   92</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#aa7432c84eeeff231350e606612f3483e">KeyValidator::validateTypes</a>(</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">const</span> std::string &amp;filename, <span class="keyword">const</span> Json::Value &amp;entry,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">const</span> std::unordered_set&lt;std::string&gt; &amp;entryKeys) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keyword">const</span> std::string &amp;filename, <span class="keyword">const</span> Json::Value &amp;entry,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keyword">const</span> std::unordered_set&lt;std::string&gt; &amp;entryKeys) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">// Gett the type of the entry - error if not found</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">const</span> std::string type = entry.get(<span class="stringliteral">&quot;type&quot;</span>, <span class="stringliteral">&quot;ERROR&quot;</span>).asString();</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
@@ -205,7 +205,7 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d86/classparsing_1_1KeyValidator.html#a22a649521322467a8ac2dee887db4717">typeToKeys</a>.contains(type)) {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">const</span> std::optional&lt;int&gt; line =</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e">getUnknownKeyLine</a>(filename, std::string(type));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e">getUnknownKeyLine</a>(filename, std::string(type));</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">if</span> (!line.has_value()) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            LOG_INFO &lt;&lt; <span class="stringliteral">&quot;Unable to find line of wrong type!&quot;</span>;</div>
@@ -226,7 +226,7 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e">  124</a></span>std::optional&lt;int&gt; <a class="code hl_function" href="../../da/d86/classparsing_1_1KeyValidator.html#ac74432064cff4fd80b3c54fa588da65e">KeyValidator::getUnknownKeyLine</a>(<span class="keyword">const</span> std::string &amp;filename,</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keyword">const</span> std::string &amp;wrongKey) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                                   <span class="keyword">const</span> std::string &amp;wrongKey) {</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    std::ifstream file(filename);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (!file.is_open()) {</div>
@@ -271,7 +271,7 @@ $(document).ready(function(){initNavTree('d4/d9d/KeyValidator_8cpp_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1615da3a94339053b2ab44db3685f5d0.html">sources</a></li><li class="navelem"><a class="el" href="../../d4/d9d/KeyValidator_8cpp.html">KeyValidator.cpp</a></li>
-    <li class="footer">Generated on Fri Apr 26 2024 15:07:47 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Apr 26 2024 15:08:01 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
