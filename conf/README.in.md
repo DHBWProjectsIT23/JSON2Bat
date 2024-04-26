@@ -15,11 +15,11 @@ The project was carried out by **@AUTHORS@**.
 
 ### Linux
 
-`sh
+```sh
 git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO
 cmake -S . -B build --config Release
 cmake --build build
-`
+```
 
 ### Windows
 

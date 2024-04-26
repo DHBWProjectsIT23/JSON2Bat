@@ -15,11 +15,11 @@ The project was carried out by **Elena Schwarzbach, Max Rodler, Simon Blum, Soni
 
 ### Linux
 
-`sh
-git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO <br>
-cmake -S . -B build --config Release <br>
-cmake --build build <br>
-`
+```sh
+git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO
+cmake -S . -B build --config Release
+cmake --build build
+```
 
 ### Windows
 
