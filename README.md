@@ -1,7 +1,7 @@
 
 # JSON2Batch
 
-0.2.5
+0.3.0
 
 JSON2Batch was developed during a project during our first and second
 semester of university.

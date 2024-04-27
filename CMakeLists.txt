@@ -3,14 +3,16 @@
 #   - Clang 14.00+
 #
 # - {ReqOptFunc1} - Can be built using:
-#   - "MinGW Makefiles" - gcc/g++ built by MSYS2 project
-#   - "Ninja" 1.12.0
+#   - "MinGW Makefiles" - gcc/g++
+#   - "Ninja" 1.10.0+
 #
 # - {ReqNonFunc2} - Runs on Unix/WSL, tested with:
+#   - GitHub Actions - Ubuntu Latest
 #   - WSL Ubuntu
 #   - Arch Linux
 #
 # - {ReqOptFunc3} - Runs on Windows, tested with:
+#   - GitHub Actions - Windows Latest
 #   - Windows 11
 #
 # - {ReqNonFunc3} - Software is configured/build using CMake
@@ -51,7 +53,7 @@ set(AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci")
 # Initialize the project This information is also used to generate files
 project(
   ${PROJECT_NAME}
-  VERSION 0.2.5
+  VERSION 0.3.0
   DESCRIPTION "A simple tool to convert json to batch."
   HOMEPAGE_URL "https://dhbwprojectsit23.github.io/JSON2Bat")
 
