@@ -6,69 +6,65 @@
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#ifndef\ COMMANDLINEHANDLER\_HPP}}
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#define\ COMMANDLINEHANDLER\_HPP}}
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\#ifdef\ IS\_UNIX}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00025}00025\ \textcolor{preprocessor}{\#include\ <getopt.h>}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00026}00026\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00027}00027\ \textcolor{preprocessor}{\#ifdef\ IS\_WINDOWS}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}xgetopt.h"{}}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00029}00029\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00030}00030\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00031}00031\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\#include\ <optional>}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00046}00046\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecli}{cli}}\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00060}\mbox{\hyperlink{classcli_1_1CommandLineHandler}{00060}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcli_1_1CommandLineHandler}{CommandLineHandler}}\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00061}00061\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00070}00070\ \ \ \ \ [[noreturn]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{printHelp}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00076}00076\ \ \ \ \ [[noreturn]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{printVersion}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00084}00084\ \ \ \ \ [[noreturn]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{printCredits}}();}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00099}00099\ \ \ \ \ \textcolor{keyword}{static}\ std::tuple<std::optional<std::string>,\ std::vector<std::string>>}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00100}00100\ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{parseArguments}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[]);}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00106}\mbox{\hyperlink{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2}{00106}}\ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2}{CommandLineHandler}}()\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00112}\mbox{\hyperlink{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}{00112}}\ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}{\string~CommandLineHandler}}()\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00113}00113\ \};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00125}\mbox{\hyperlink{namespacecli_a28a7c34e9990a8cc28324ac926bb9be5}{00125}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }option\ \mbox{\hyperlink{structoptions}{options}}[]\ =\ \{}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00126}00126\ \ \ \ \ \{\textcolor{stringliteral}{"{}help"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'h'}\},\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00127}00127\ \ \ \ \ \{\textcolor{stringliteral}{"{}version"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'v'}\},\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00128}00128\ \ \ \ \ \{\textcolor{stringliteral}{"{}credits"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'c'}\},\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00129}00129\ \ \ \ \ \{\textcolor{stringliteral}{"{}verbose"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ 0\},\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00130}00130\ \ \ \ \ \{\textcolor{stringliteral}{"{}outdir"{}},\ required\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'o'}\},\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00131}00131\ \ \ \ \ \textcolor{keyword}{nullptr}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00132}00132\ \};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00133}00133\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00145}00145\ \textcolor{preprocessor}{\#ifdef\ IS\_UNIX\ }\textcolor{comment}{//\ CLI\ Formatting\ for\ Linux}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00146}00146\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CLEAR\_TERMINAL\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[2J\(\backslash\)033[1;1H"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00147}00147\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RESET\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00148}00148\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;31m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00149}00149\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ GREEN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;32m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00150}00150\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ YELLOW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;33m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00151}00151\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BLUE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;34m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00152}00152\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ MAGENTA\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;35m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00153}00153\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CYAN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;36m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00154}00154\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ WHITE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;37m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00155}00155\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BOLD\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[1m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00156}00156\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ UNDERLINE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[4m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00157}00157\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ ITALIC\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[3m"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00158}00158\ \textcolor{comment}{//@note\ Windows\ doesn't\ support\ ANSI\ escape\ codes\ the\ same\ way}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00159}00159\ \textcolor{preprocessor}{\#elif\ defined(IS\_WINDOWS)}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00160}00160\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CLEAR\_TERMINAL\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00161}00161\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RESET\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00162}00162\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RED\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00163}00163\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ GREEN\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00164}00164\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ YELLOW\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00165}00165\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BLUE\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00166}00166\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ MAGENTA\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00167}00167\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CYAN\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00168}00168\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ WHITE\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00169}00169\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BOLD\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00170}00170\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ UNDERLINE\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00171}00171\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ ITALIC\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00172}00172\ \textcolor{preprocessor}{\#endif}}
- \textcolor{comment}{// end of group StyleHelpers}\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00174}00174\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00175}00175\ \}\ \textcolor{comment}{//\ namespace\ cli}}
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00176}00176\ }
-\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00177}00177\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMANDLINEHANDLER\_HPP}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00042}00042\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecli}{cli}}\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00056}\mbox{\hyperlink{classcli_1_1CommandLineHandler}{00056}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcli_1_1CommandLineHandler}{CommandLineHandler}}\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00057}00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00066}00066\ \ \ \ \ [[noreturn]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac81856dd50394363675207068213d960}{printHelp}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00072}00072\ \ \ \ \ [[noreturn]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a12afc8cab2af137f31c6aae2d1b27061}{printVersion}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00080}00080\ \ \ \ \ [[noreturn]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcli_1_1CommandLineHandler_ac1613613eb4f4534ee55aba547a2a470}{printCredits}}();}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{static}\ std::tuple<std::optional<std::string>,\ std::vector<std::string>>}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00096}00096\ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_acb2f456a899bdbf41772b1ccf03d4ca8}{parseArguments}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[]);}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00102}\mbox{\hyperlink{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2}{00102}}\ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_af35432870c7365cebcdf348d74f4bbb2}{CommandLineHandler}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00108}\mbox{\hyperlink{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}{00108}}\ \ \ \ \ \mbox{\hyperlink{classcli_1_1CommandLineHandler_a7e2965120271d24a4ba619ef697febce}{\string~CommandLineHandler}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00109}00109\ \};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00121}\mbox{\hyperlink{namespacecli_a28a7c34e9990a8cc28324ac926bb9be5}{00121}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }option\ \mbox{\hyperlink{structoptions}{options}}[]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00122}00122\ \ \ \ \ \{\textcolor{stringliteral}{"{}help"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'h'}\},\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00123}00123\ \ \ \ \ \{\textcolor{stringliteral}{"{}version"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'v'}\},\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00124}00124\ \ \ \ \ \{\textcolor{stringliteral}{"{}credits"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'c'}\},\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00125}00125\ \ \ \ \ \{\textcolor{stringliteral}{"{}verbose"{}},\ no\_argument,\ \textcolor{keyword}{nullptr},\ 0\},\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00126}00126\ \ \ \ \ \{\textcolor{stringliteral}{"{}outdir"{}},\ required\_argument,\ \textcolor{keyword}{nullptr},\ \textcolor{charliteral}{'o'}\},\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00128}00128\ \};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00141}00141\ \textcolor{preprocessor}{\#ifdef\ IS\_UNIX\ }\textcolor{comment}{//\ CLI\ Formatting\ for\ Linux}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00142}00142\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CLEAR\_TERMINAL\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[2J\(\backslash\)033[1;1H"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00143}00143\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RESET\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00144}00144\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;31m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00145}00145\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ GREEN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;32m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00146}00146\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ YELLOW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;33m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00147}00147\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BLUE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;34m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00148}00148\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ MAGENTA\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;35m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00149}00149\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CYAN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;36m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00150}00150\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ WHITE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;37m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00151}00151\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BOLD\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[1m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00152}00152\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ UNDERLINE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[4m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00153}00153\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ ITALIC\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[3m"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00154}00154\ \textcolor{comment}{//@note\ Windows\ doesn't\ support\ ANSI\ escape\ codes\ the\ same\ way}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00155}00155\ \textcolor{preprocessor}{\#elif\ defined(IS\_WINDOWS)}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00156}00156\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CLEAR\_TERMINAL\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00157}00157\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RESET\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00158}00158\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ RED\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00159}00159\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ GREEN\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00160}00160\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ YELLOW\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00161}00161\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BLUE\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00162}00162\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ MAGENTA\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00163}00163\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ CYAN\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00164}00164\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ WHITE\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00165}00165\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ BOLD\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00166}00166\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ UNDERLINE\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00167}00167\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ ITALIC\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00168}00168\ \textcolor{preprocessor}{\#endif}}
+ \textcolor{comment}{// end of group StyleHelpers}\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00171}00171\ \}\ \textcolor{comment}{//\ namespace\ cli}}
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{CommandLineHandler_8hpp_source_l00173}00173\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMANDLINEHANDLER\_HPP}}
 
 \end{DoxyCode}

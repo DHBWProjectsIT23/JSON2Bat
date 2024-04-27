@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.27)  27 APR 2024 12:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.27)  27 APR 2024 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,6 +940,12 @@ Underfull \hbox (badness 10000) detected at line 25
  []
 
 ) (./d6/d7f/namespaceconfig.tex [17]
+Overfull \hbox (30.3491pt too wide) in paragraph at lines 11--13
+[]\T1/phv/m/n/10 constexpr auto [] = "C[]:/Users/Clean/Documents/Uni/JSON2[]Bat
+/build/debug-ninja/config/easylogging.[]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 \T1/pcr/m/n/8 constexpr auto config[]::[]DESCRIPTION = "A simple tool to conver
 t json to batch." [inline],
@@ -952,9 +958,9 @@ ojectsit23.[]github.[]io/JSON2[]Bat" [inline],
  []
 
 [18]
-Overfull \hbox (62.53772pt too wide) in paragraph at lines 79--80
-\T1/pcr/m/n/8 constexpr auto config[]::[]LOG[]_[][]CONFIG = "/home/simon/1[]_[]
-[]Coding/project[]Json[]To[]Bat/build/Debug/config/easylogging.[]
+Overfull \hbox (91.33774pt too wide) in paragraph at lines 79--80
+\T1/pcr/m/n/8 constexpr auto config[]::[]LOG[]_[][]CONFIG = "C[]:/Users/Clean/D
+ocuments/Uni/JSON2[]Bat/build/debug-ninja/config/easylogging.[]
  []
 
 ) (./d0/d6e/namespaceexceptions.tex [19]
@@ -2141,42 +2147,42 @@ Underfull \hbox (badness 10000) detected at line 51
 ) (./d1/d03/BatchCreator_8hpp_source.tex [92])
 (./d2/d5f/CommandLineHandler_8hpp.tex <./da/d32/CommandLineHandler_8hpp__incl.p
 df>
-<da/d32/CommandLineHandler_8hpp__incl.pdf, id=3917, 261.97874pt x 155.58125pt>
+<da/d32/CommandLineHandler_8hpp__incl.pdf, id=3917, 318.18875pt x 155.58125pt>
 File: da/d32/CommandLineHandler_8hpp__incl.pdf Graphic file (type pdf)
 <use da/d32/CommandLineHandler_8hpp__incl.pdf>
 Package pdftex.def Info: da/d32/CommandLineHandler_8hpp__incl.pdf  used on inpu
-t line 16.
-(pdftex.def)             Requested size: 261.0pt x 155.00397pt.
+t line 17.
+(pdftex.def)             Requested size: 317.0pt x 154.99922pt.
  <./d4/dcd/CommandLineHandler_8hpp__dep__incl.pdf>
 <d4/dcd/CommandLineHandler_8hpp__dep__incl.pdf, id=3925, 482.80376pt x 155.5812
 5pt>
 File: d4/dcd/CommandLineHandler_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use d4/dcd/CommandLineHandler_8hpp__dep__incl.pdf>
 Package pdftex.def Info: d4/dcd/CommandLineHandler_8hpp__dep__incl.pdf  used on
- input line 24.
+ input line 25.
 (pdftex.def)             Requested size: 350.0pt x 112.78995pt.
  [93]
-Underfull \hbox (badness 10000) detected at line 47
+Underfull \hbox (badness 10000) detected at line 48
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 50
+Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 53
+Underfull \hbox (badness 10000) detected at line 54
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 58
+Underfull \hbox (badness 10000) detected at line 59
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 69
+Underfull \hbox (badness 10000) detected at line 70
 [][][]
  []
 
@@ -2189,9 +2195,9 @@ Package pdftex.def Info: d4/d28/config_8hpp__dep__incl.pdf  used on input line
 13.
 (pdftex.def)             Requested size: 350.0pt x 104.32971pt.
  [95]
-Overfull \hbox (32.79707pt too wide) in paragraph at lines 24--26
-[]\T1/phv/m/n/10 constexpr auto [] = "/home/simon/1[]_[][]Coding/project[]Json[
-]To[]Bat/build/Debug/config/easylogging.[]
+Overfull \hbox (59.36455pt too wide) in paragraph at lines 24--26
+[]\T1/phv/m/n/10 constexpr auto [] = "C[]:/Users/Clean/Documents/Uni/JSON2[]Bat
+/build/debug-ninja/config/easylogging.[]
  []
 
 
@@ -2221,14 +2227,14 @@ Underfull \hbox (badness 10000) detected at line 61
 
 ) (./d8/dfd/config_8hpp_source.tex [96]) (./d2/de9/Exceptions_8hpp.tex <./d4/dc
 e/Exceptions_8hpp__incl.pdf>
-<d4/dce/Exceptions_8hpp__incl.pdf, id=4126, 321.2pt x 155.58125pt>
+<d4/dce/Exceptions_8hpp__incl.pdf, id=4122, 321.2pt x 155.58125pt>
 File: d4/dce/Exceptions_8hpp__incl.pdf Graphic file (type pdf)
 <use d4/dce/Exceptions_8hpp__incl.pdf>
 Package pdftex.def Info: d4/dce/Exceptions_8hpp__incl.pdf  used on input line 1
 6.
 (pdftex.def)             Requested size: 320.0pt x 155.00397pt.
  <./d6/d29/Exceptions_8hpp__dep__incl.pdf>
-<d6/d29/Exceptions_8hpp__dep__incl.pdf, id=4141, 661.47125pt x 210.7875pt>
+<d6/d29/Exceptions_8hpp__dep__incl.pdf, id=4137, 661.47125pt x 210.7875pt>
 File: d6/d29/Exceptions_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use d6/d29/Exceptions_8hpp__dep__incl.pdf>
 Package pdftex.def Info: d6/d29/Exceptions_8hpp__dep__incl.pdf  used on input l
@@ -2256,14 +2262,14 @@ Underfull \hbox (badness 10000) detected at line 75
 
 ) (./d2/de9/Exceptions_8hpp_source.tex [98] [99] [100])
 (./d0/de1/FileData_8hpp.tex <./d8/dca/FileData_8hpp__incl.pdf>
-<d8/dca/FileData_8hpp__incl.pdf, id=4495, 249.93375pt x 155.58125pt>
+<d8/dca/FileData_8hpp__incl.pdf, id=4491, 249.93375pt x 155.58125pt>
 File: d8/dca/FileData_8hpp__incl.pdf Graphic file (type pdf)
 <use d8/dca/FileData_8hpp__incl.pdf>
 Package pdftex.def Info: d8/dca/FileData_8hpp__incl.pdf  used on input line 16.
 
 (pdftex.def)             Requested size: 249.0pt x 155.00635pt.
  <./dd/da3/FileData_8hpp__dep__incl.pdf>
-<dd/da3/FileData_8hpp__dep__incl.pdf, id=4503, 563.10374pt x 210.7875pt>
+<dd/da3/FileData_8hpp__dep__incl.pdf, id=4499, 563.10374pt x 210.7875pt>
 File: dd/da3/FileData_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use dd/da3/FileData_8hpp__dep__incl.pdf>
 Package pdftex.def Info: dd/da3/FileData_8hpp__dep__incl.pdf  used on input lin
@@ -2296,14 +2302,14 @@ Underfull \hbox (badness 10000) detected at line 56
 
 ) (./d0/de1/FileData_8hpp_source.tex [102]) (./d8/d7b/JsonHandler_8hpp.tex <./d
 a/d68/JsonHandler_8hpp__incl.pdf>
-<da/d68/JsonHandler_8hpp__incl.pdf, id=4598, 490.83376pt x 210.7875pt>
+<da/d68/JsonHandler_8hpp__incl.pdf, id=4594, 490.83376pt x 210.7875pt>
 File: da/d68/JsonHandler_8hpp__incl.pdf Graphic file (type pdf)
 <use da/d68/JsonHandler_8hpp__incl.pdf>
 Package pdftex.def Info: da/d68/JsonHandler_8hpp__incl.pdf  used on input line 
 17.
 (pdftex.def)             Requested size: 350.0pt x 150.30988pt.
  [103] <./da/d5f/JsonHandler_8hpp__dep__incl.pdf>
-<da/d5f/JsonHandler_8hpp__dep__incl.pdf, id=4662, 313.17pt x 155.58125pt>
+<da/d5f/JsonHandler_8hpp__dep__incl.pdf, id=4658, 313.17pt x 155.58125pt>
 File: da/d5f/JsonHandler_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use da/d5f/JsonHandler_8hpp__dep__incl.pdf>
 Package pdftex.def Info: da/d5f/JsonHandler_8hpp__dep__incl.pdf  used on input 
@@ -2336,14 +2342,14 @@ Underfull \hbox (badness 10000) detected at line 57
 
 ) (./d8/d7b/JsonHandler_8hpp_source.tex) (./dc/d66/KeyValidator_8hpp.tex <./d3/
 d4a/KeyValidator_8hpp__incl.pdf>
-<d3/d4a/KeyValidator_8hpp__incl.pdf, id=4707, 429.605pt x 155.58125pt>
+<d3/d4a/KeyValidator_8hpp__incl.pdf, id=4703, 429.605pt x 155.58125pt>
 File: d3/d4a/KeyValidator_8hpp__incl.pdf Graphic file (type pdf)
 <use d3/d4a/KeyValidator_8hpp__incl.pdf>
 Package pdftex.def Info: d3/d4a/KeyValidator_8hpp__incl.pdf  used on input line
  17.
 (pdftex.def)             Requested size: 350.0pt x 126.75366pt.
  [105] <./dc/d96/KeyValidator_8hpp__dep__incl.pdf>
-<dc/d96/KeyValidator_8hpp__dep__incl.pdf, id=4756, 385.44pt x 155.58125pt>
+<dc/d96/KeyValidator_8hpp__dep__incl.pdf, id=4752, 385.44pt x 155.58125pt>
 File: dc/d96/KeyValidator_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use dc/d96/KeyValidator_8hpp__dep__incl.pdf>
 Package pdftex.def Info: dc/d96/KeyValidator_8hpp__dep__incl.pdf  used on input
@@ -2376,13 +2382,13 @@ Underfull \hbox (badness 10000) detected at line 57
 
 ) (./dc/d66/KeyValidator_8hpp_source.tex) (./d7/d09/Utils_8hpp.tex <./dd/dda/Ut
 ils_8hpp__incl.pdf>
-<dd/dda/Utils_8hpp__incl.pdf, id=4795, 321.2pt x 210.7875pt>
+<dd/dda/Utils_8hpp__incl.pdf, id=4791, 321.2pt x 210.7875pt>
 File: dd/dda/Utils_8hpp__incl.pdf Graphic file (type pdf)
 <use dd/dda/Utils_8hpp__incl.pdf>
 Package pdftex.def Info: dd/dda/Utils_8hpp__incl.pdf  used on input line 10.
 (pdftex.def)             Requested size: 320.0pt x 210.0054pt.
  [107] <./d3/d79/Utils_8hpp__dep__incl.pdf>
-<d3/d79/Utils_8hpp__dep__incl.pdf, id=4855, 440.64626pt x 155.58125pt>
+<d3/d79/Utils_8hpp__dep__incl.pdf, id=4851, 440.64626pt x 155.58125pt>
 File: d3/d79/Utils_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use d3/d79/Utils_8hpp__dep__incl.pdf>
 Package pdftex.def Info: d3/d79/Utils_8hpp__dep__incl.pdf  used on input line 1
@@ -2391,11 +2397,11 @@ Package pdftex.def Info: d3/d79/Utils_8hpp__dep__incl.pdf  used on input line 1
 )
 (./d7/d09/Utils_8hpp_source.tex [108]) (./df/d0a/main_8cpp.tex <./da/dce/main_8
 cpp__incl.pdf>
-<da/dce/main_8cpp__incl.pdf, id=4886, 854.19125pt x 265.99374pt>
+<da/dce/main_8cpp__incl.pdf, id=4882, 843.15pt x 265.99374pt>
 File: da/dce/main_8cpp__incl.pdf Graphic file (type pdf)
 <use da/dce/main_8cpp__incl.pdf>
 Package pdftex.def Info: da/dce/main_8cpp__incl.pdf  used on input line 25.
-(pdftex.def)             Requested size: 350.0pt x 108.98914pt.
+(pdftex.def)             Requested size: 350.0pt x 110.4178pt.
  [109]
 Underfull \hbox (badness 10000) detected at line 44
 [][][]
@@ -2427,7 +2433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
  []
 
  <./df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
-<df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=4961, 1113.1
+<df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=4957, 1113.1
 5875pt x 487.8225pt>
 File: df/d0a/main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic fil
 e (type pdf)
@@ -2446,7 +2452,7 @@ Overfull \hbox (55.77852pt too wide) in paragraph at lines 144--145
  []
 
  <./df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph.pdf>
-<df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph.pdf, id=4994, 537.00
+<df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph.pdf, id=4990, 537.00
 626pt x 249.93375pt>
 File: df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgraph.pdf Graphic fil
 e (type pdf)
@@ -2455,7 +2461,7 @@ Package pdftex.def Info: df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_cgr
 aph.pdf  used on input line 151.
 (pdftex.def)             Requested size: 350.0pt x 162.89738pt.
  <./df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph.pdf>
-<df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph.pdf, id=5002, 266.9
+<df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph.pdf, id=4998, 266.9
 975pt x 99.37125pt>
 File: df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icgraph.pdf Graphic fi
 le (type pdf)
@@ -2464,7 +2470,7 @@ Package pdftex.def Info: df/d0a/main_8cpp_ad612c95526cdd7ff2fa78563c0cd666f_icg
 raph.pdf  used on input line 159.
 (pdftex.def)             Requested size: 266.0pt x 99.01012pt.
  [112] <./df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_cgraph.pdf>
-<df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_cgraph.pdf, id=5023, 930.47
+<df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_cgraph.pdf, id=5019, 930.47
 626pt x 308.15125pt>
 File: df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_cgraph.pdf Graphic fil
 e (type pdf)
@@ -2473,7 +2479,7 @@ Package pdftex.def Info: df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_cgr
 aph.pdf  used on input line 190.
 (pdftex.def)             Requested size: 350.0pt x 115.90907pt.
  <./df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_icgraph.pdf>
-<df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_icgraph.pdf, id=5032, 209.7
+<df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_icgraph.pdf, id=5027, 209.7
 8375pt x 99.37125pt>
 File: df/d0a/main_8cpp_a7c8a82e43100bc97b6aad59a7f7d2f13_icgraph.pdf Graphic fi
 le (type pdf)
@@ -2487,7 +2493,7 @@ Underfull \hbox (badness 10000) detected at line 219
  []
 
  <./df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph.pdf>
-<df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph.pdf, id=5052, 329.23
+<df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph.pdf, id=5048, 329.23
 pt x 99.37125pt>
 File: df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgraph.pdf Graphic fil
 e (type pdf)
@@ -2496,7 +2502,7 @@ Package pdftex.def Info: df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_cgr
 aph.pdf  used on input line 235.
 (pdftex.def)             Requested size: 328.0pt x 99.00253pt.
  <./df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph.pdf>
-<df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph.pdf, id=5060, 224.8
+<df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph.pdf, id=5056, 224.8
 4pt x 99.37125pt>
 File: df/d0a/main_8cpp_a229a422b4e4be967a1e02c69d8867c77_icgraph.pdf Graphic fi
 le (type pdf)
@@ -2507,7 +2513,7 @@ raph.pdf  used on input line 243.
 )
 (./df/d0a/main_8cpp_source.tex [114] [115]) (./dc/d85/BatchCreator_8cpp.tex <./
 de/d6a/BatchCreator_8cpp__incl.pdf>
-<de/d6a/BatchCreator_8cpp__incl.pdf, id=5234, 472.76625pt x 265.99374pt>
+<de/d6a/BatchCreator_8cpp__incl.pdf, id=5230, 472.76625pt x 265.99374pt>
 File: de/d6a/BatchCreator_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d6a/BatchCreator_8cpp__incl.pdf>
 Package pdftex.def Info: de/d6a/BatchCreator_8cpp__incl.pdf  used on input line
@@ -2541,12 +2547,12 @@ Underfull \hbox (badness 10000) detected at line 36
 ) (./dc/d85/BatchCreator_8cpp_source.tex [117])
 (./dc/db7/CommandLineHandler_8cpp.tex <./dc/d9c/CommandLineHandler_8cpp__incl.p
 df>
-<dc/d9c/CommandLineHandler_8cpp__incl.pdf, id=5380, 654.445pt x 210.7875pt>
+<dc/d9c/CommandLineHandler_8cpp__incl.pdf, id=5374, 632.3625pt x 210.7875pt>
 File: dc/d9c/CommandLineHandler_8cpp__incl.pdf Graphic file (type pdf)
 <use dc/d9c/CommandLineHandler_8cpp__incl.pdf>
 Package pdftex.def Info: dc/d9c/CommandLineHandler_8cpp__incl.pdf  used on inpu
 t line 20.
-(pdftex.def)             Requested size: 350.0pt x 112.73pt.
+(pdftex.def)             Requested size: 350.0pt x 116.66681pt.
  [118]
 Underfull \hbox (badness 10000) detected at line 33
 [][][]
@@ -2574,7 +2580,7 @@ Underfull \hbox (badness 10000) detected at line 45
 
 ) (./dc/db7/CommandLineHandler_8cpp_source.tex [119] [120])
 (./d2/dc5/FileData_8cpp.tex <./d2/d56/FileData_8cpp__incl.pdf>
-<d2/d56/FileData_8cpp__incl.pdf, id=5573, 450.68375pt x 210.7875pt>
+<d2/d56/FileData_8cpp__incl.pdf, id=5567, 450.68375pt x 210.7875pt>
 File: d2/d56/FileData_8cpp__incl.pdf Graphic file (type pdf)
 <use d2/d56/FileData_8cpp__incl.pdf>
 Package pdftex.def Info: d2/d56/FileData_8cpp__incl.pdf  used on input line 16.
@@ -2607,7 +2613,7 @@ Underfull \hbox (badness 10000) detected at line 41
 
 ) (./d2/dc5/FileData_8cpp_source.tex [122]) (./d0/d2b/JsonHandler_8cpp.tex <./d
 e/d03/JsonHandler_8cpp__incl.pdf>
-<de/d03/JsonHandler_8cpp__incl.pdf, id=5697, 941.5175pt x 265.99374pt>
+<de/d03/JsonHandler_8cpp__incl.pdf, id=5691, 941.5175pt x 265.99374pt>
 File: de/d03/JsonHandler_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d03/JsonHandler_8cpp__incl.pdf>
 Package pdftex.def Info: de/d03/JsonHandler_8cpp__incl.pdf  used on input line 
@@ -2640,7 +2646,7 @@ Underfull \hbox (badness 10000) detected at line 45
 
 ) (./d0/d2b/JsonHandler_8cpp_source.tex [124] [125])
 (./d4/d9d/KeyValidator_8cpp.tex <./dd/d2f/KeyValidator_8cpp__incl.pdf>
-<dd/d2f/KeyValidator_8cpp__incl.pdf, id=5936, 692.5875pt x 210.7875pt>
+<dd/d2f/KeyValidator_8cpp__incl.pdf, id=5930, 692.5875pt x 210.7875pt>
 File: dd/d2f/KeyValidator_8cpp__incl.pdf Graphic file (type pdf)
 <use dd/d2f/KeyValidator_8cpp__incl.pdf>
 Package pdftex.def Info: dd/d2f/KeyValidator_8cpp__incl.pdf  used on input line
@@ -2673,11 +2679,11 @@ Underfull \hbox (badness 10000) detected at line 44
 
 ) (./d4/d9d/KeyValidator_8cpp_source.tex [127] [128]) (./df/d0c/Utils_8cpp.tex 
 <./de/d88/Utils_8cpp__incl.pdf>
-<de/d88/Utils_8cpp__incl.pdf, id=6151, 582.175pt x 265.99374pt>
+<de/d88/Utils_8cpp__incl.pdf, id=6145, 591.20876pt x 265.99374pt>
 File: de/d88/Utils_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d88/Utils_8cpp__incl.pdf>
 Package pdftex.def Info: de/d88/Utils_8cpp__incl.pdf  used on input line 20.
-(pdftex.def)             Requested size: 350.0pt x 159.9181pt.
+(pdftex.def)             Requested size: 350.0pt x 157.47475pt.
  [129]
 Underfull \hbox (badness 10000) detected at line 33
 [][][]
@@ -2718,8 +2724,8 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: 74714AC0E54ADF1FFA2FC86D2DAA616D;61931.
  ) 
 Here is how much of TeX's memory you used:
- 22068 strings out of 476025
- 441135 string characters out of 5796497
+ 22062 strings out of 476025
+ 440941 string characters out of 5796497
  1875388 words of memory out of 5000000
  39642 multiletter control sequences out of 15000+600000
  572154 words of font info for 111 fonts, out of 8000000 for 9000
@@ -2736,10 +2742,10 @@ ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (146 pages, 1231269 bytes).
+Output written on refman.pdf (146 pages, 1231776 bytes).
 PDF statistics:
- 7217 PDF objects out of 7423 (max. 8388607)
- 6582 compressed objects within 66 object streams
- 2221 named destinations out of 2487 (max. 500000)
+ 7210 PDF objects out of 7423 (max. 8388607)
+ 6575 compressed objects within 66 object streams
+ 2215 named destinations out of 2487 (max. 500000)
  2888 words of extra memory for PDF output out of 10000 (max. 10000000)
 
