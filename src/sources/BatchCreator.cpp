@@ -61,7 +61,7 @@ void BatchCreator::writeEnvVariables() const {
   LOG_INFO << "writing Environment Variables";
 
   for (const auto &[key, value] : this->fileData->getEnvironmentVariables()) {
-    *this->dataStream << "set \"" << key << "\"=\"" << value << "\" && ";
+    *this->dataStream << "set \"" << key << "=" << value << "\" && ";
   }
 }
 
