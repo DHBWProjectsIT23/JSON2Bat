@@ -80,7 +80,7 @@ generated using:
 git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/
 cd JSON2Bat
 cmake -S . -B build
-cmake --build build --target doxygen_build
+cmake --build build --target doxygen_generate
 ```
 
 ## Documentation

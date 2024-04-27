@@ -1,7 +1,7 @@
 
 # JSON2Batch
 
-0.3.0
+0.3.1
 
 JSON2Batch was developed for a project during our first and second
 semester of university.
@@ -80,7 +80,7 @@ generated using:
 git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/
 cd JSON2Bat
 cmake -S . -B build
-cmake --build build --target doxygen_build
+cmake --build build --target doxygen_generate
 ```
 
 ## Documentation
@@ -135,7 +135,7 @@ comparison to using both std::cout and easylogging itself.
 
 For parsing the JSON files, the [jsoncpp](https://github.com/open-source-parsers/jsoncpp) library is used.
 On UNIX system this library can simply be installed using the systems package manager (tested with WSL/Ubuntu and Arch).
-For Windows system a prebuild version is included - See [Windows](#windows) for more information.
+For Windows system a prebuild version is included.
 
 ## License
 

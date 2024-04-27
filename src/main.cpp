@@ -192,15 +192,15 @@ void parseFile(const std::string &file, const std::string &outputDirectory) {
     const auto fileData = jsonHandler.getFileData();
     BatchCreator batchCreator(fileData);
     const std::shared_ptr<std::stringstream> dataStream =
-            batchCreator.getDataStream();
+        batchCreator.getDataStream();
     // Full filename is output directory + output file
     // {ReqFunc18}
     const std::string outputFileName =
-            outputDirectory + fileData->getOutputFile();
+        outputDirectory + fileData->getOutputFile();
 
     if (std::filesystem::is_regular_file(outputFileName)) {
         if (!utilities::Utils::askToContinue(
-                "The file already exists, do you want to overwrite it? (y/n) ")) {
+                    "The file already exists, do you want to overwrite it? (y/n) ")) {
             OUTPUT << "Skipping file...\n";
             return;
         }
