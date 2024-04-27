@@ -74,7 +74,7 @@ const std::string &Utils::checkDirectory(std::string &directory) {
 
     return directory;
 }
-bool Utils::handleParseException(const exceptions::CustomException &e,
+bool Utils::handleParseException(const std::exception &e,
                                  const std::vector<std::string>::iterator &file,
                                  const std::vector<std::string> &files) {
     OUTPUT << "\nThere has been a error while trying to parse \"" << *file

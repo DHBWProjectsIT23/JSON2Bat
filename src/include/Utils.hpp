@@ -64,7 +64,7 @@ public:
      * @return Returns true if the user wants to continue and false otherwise
      */
     static bool
-    handleParseException(const exceptions::CustomException &e,
+    handleParseException(const std::exception &e,
                          const std::vector<std::string>::iterator &file,
                          const std::vector<std::string> &files);
 

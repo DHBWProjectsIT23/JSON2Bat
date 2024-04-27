@@ -105,12 +105,21 @@ int main(int argc, char *argv[]) {
             parseFile(*file, outDir);
             // Only catch custom exceptions, other exceptions are fatal
         } catch (const exceptions::CustomException &e) {
+            LOG_INFO << "Caught custom exception: " << typeid(e).name();
+            if (utilities::Utils::handleParseException(e, file, files)) {
+                continue;
+            }
+
+            exit(1);
+        } catch (const Json::Exception &e) {
+            LOG_INFO << "Caught Json exception: " << typeid(e).name();
             if (utilities::Utils::handleParseException(e, file, files)) {
                 continue;
             }
 
             exit(1);
         }
+
     }
     OUTPUT << "Done parsing files!\n";
 
