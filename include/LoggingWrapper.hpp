@@ -36,7 +36,7 @@ namespace libLogging {
 #define LOG_ERROR libLogging::log(libLogging::LogLevel::ERROR)
 #define LOG_WARNING libLogging::log(libLogging::LogLevel::WARNING)
 #define LOG_DEBUG libLogging::log(libLogging::LogLevel::DEBUG)
-#define OUTPUT libLogging::log(libLogging::LogLevel::OUT, "Output: ")
+#define OUTPUT libLogging::log(libLogging::LogLevel::OUTP, "Output: ")
 
 enum class LogLevel {
     INFO,
@@ -44,7 +44,7 @@ enum class LogLevel {
     ERROR,
     FATAL,
     DEBUG,
-    OUT,
+    OUTP,
 };
 
 /**
