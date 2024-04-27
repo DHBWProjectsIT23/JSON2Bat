@@ -34,7 +34,7 @@ namespace exceptions {
  */
 class CustomException : public std::exception {
 public:
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return "Base Exception";
     }
 };
@@ -62,7 +62,7 @@ public:
         LOG_INFO << "ParsingException: " << message;
     }
 
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -89,7 +89,7 @@ public:
         LOG_INFO << "BatchExistsException: " << message;
     }
 
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -116,7 +116,7 @@ public:
         this->message = ss.str();
         LOG_INFO << "InvalidValueException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -146,7 +146,7 @@ public:
                         << "\"!";
         }
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -176,7 +176,7 @@ public:
         this->message = ss.str();
         LOG_INFO << "InvalidTypeException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -207,7 +207,7 @@ public:
         this->message = ss.str();
         LOG_INFO << "MissingKeyException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -226,7 +226,7 @@ public:
     MissingTypeException() {
         LOG_INFO << "MissingTypeException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -247,7 +247,7 @@ public:
                << " -c for contact information.\n";
         LOG_INFO << "UnreachableCodeException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -265,7 +265,7 @@ public:
         message = "Failed to open file: " + file;
         LOG_INFO << "FailedToOpenFileException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };
@@ -283,7 +283,25 @@ public:
         message = "No such directory: " + dir;
         LOG_INFO << "NoSuchDirException: " << message;
     }
-    [[nodiscard]] const char* what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
+        return message.c_str();
+    }
+};
+
+/**
+ * @class ContainsBadCharacterException
+ * @brief Exception for when a string contains bad characters
+ */
+class ContainsBadCharacterException : public CustomException {
+private:
+    std::string message;
+
+public:
+    explicit ContainsBadCharacterException(const std::string &value) {
+        message = "The value \"" + value + "\" contains bad characters!";
+        LOG_INFO << "ContainsBadCharacterException: " << message;
+    }
+    [[nodiscard]] const char *what() const noexcept override {
         return message.c_str();
     }
 };

@@ -15,6 +15,9 @@
 #include "FileData.hpp"
 #include "KeyValidator.hpp"
 #include "LoggingWrapper.hpp"
+#include "Utils.hpp"
+
+#include <algorithm>
 
 namespace parsing {
 JsonHandler::JsonHandler(const std::string &filename) {
@@ -65,6 +68,10 @@ std::shared_ptr<FileData> JsonHandler::createFileData() {
 void JsonHandler::assignOutputFile() const {
     LOG_INFO << "Assigning outputfile...\n";
     std::string outputFile = this->root->get("outputfile", "").asString();
+    if (containsBadCharacter(outputFile)) {
+        outputFile = utilities::Utils::escapeString(outputFile);
+        throw exceptions::ContainsBadCharacterException(outputFile);
+    }
     this->data->setOutputFile(outputFile);
 }
 
@@ -76,7 +83,12 @@ void JsonHandler::assignHideShell() const {
 
 void JsonHandler::assignApplication() const {
     LOG_INFO << "Assigning application...\n";
-    this->data->setApplication(this->root->get("application", "").asString());
+    std::string application = this->root->get("application", "").asString();
+    if (containsBadCharacter(application)) {
+        application = utilities::Utils::escapeString(application);
+        throw exceptions::ContainsBadCharacterException(application);
+    }
+    this->data->setApplication(application);
 }
 
 void JsonHandler::assignEntries() const {
@@ -88,16 +100,13 @@ void JsonHandler::assignEntries() const {
         if (entryType == "EXE") {
             LOG_INFO << "Calling function to assign command...\n";
             this->assignCommand(entry);
-        }
-        else if (entryType == "ENV") {
+        } else if (entryType == "ENV") {
             LOG_INFO << "Calling function to assign environment variable...\n";
             this->assignEnvironmentVariable(entry);
-        }
-        else if (entryType == "PATH") {
+        } else if (entryType == "PATH") {
             LOG_INFO << "Calling function to assign path value...\n";
             this->assignPathValue(entry);
-        }
-        else {
+        } else {
             // Due to validation beforehand - this should never be reached!
             throw exceptions::UnreachableCodeException(
                 "Unknown entries should be caught by KeyValidator!\nPlease report "
@@ -108,18 +117,52 @@ void JsonHandler::assignEntries() const {
 
 void JsonHandler::assignCommand(const Json::Value &entry) const {
     LOG_INFO << "Assigning command...\n";
-    this->data->addCommand(entry.get("command", "").asString());
+    std::string command = entry.get("command", "").asString();
+    if (containsBadCharacter(command)) {
+        command = utilities::Utils::escapeString(command);
+        throw exceptions::ContainsBadCharacterException(command);
+    }
+    this->data->addCommand(command);
 }
 
 void JsonHandler::assignEnvironmentVariable(const Json::Value &entry) const {
     LOG_INFO << "Assigning environment variable...\n";
     std::string key = entry.get("key", "").asString();
     std::string value = entry.get("value", "").asString();
+
+    if (containsBadCharacter(key)) {
+        key = utilities::Utils::escapeString(key);
+        throw exceptions::ContainsBadCharacterException(key);
+    }
+    if (containsBadCharacter(value)) {
+        value = utilities::Utils::escapeString(value);
+        throw exceptions::ContainsBadCharacterException(value);
+    }
     this->data->addEnvironmentVariable(key, value);
 }
 
 void JsonHandler::assignPathValue(const Json::Value &entry) const {
     LOG_INFO << "Assigning path value...\n";
-    this->data->addPathValue(entry.get("path", "").asString());
+    std::string path = entry.get("path", "").asString();
+    if (containsBadCharacter(path)) {
+        path = utilities::Utils::escapeString(path);
+        throw exceptions::ContainsBadCharacterException(path);
+    }
+    this->data->addPathValue(path);
+}
+
+bool JsonHandler::containsBadCharacter(const std::string_view &str) {
+
+    // Set of characters which may not be in the string
+    static const std::unordered_set<char> badChars = {
+        '\n', '\t', '\r', '\0', '\x1A', '|', ';', '<', '>', '!', '%', '"', '\''
+    };
+
+    // Lambda function which returns true, if the char is bad
+    auto isBadCharacter = [](char c) {
+        return badChars.contains(c);
+    };
+
+    return std::ranges::any_of(str, isBadCharacter);
 }
 } // namespace parsing

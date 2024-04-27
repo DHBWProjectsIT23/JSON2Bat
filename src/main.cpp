@@ -112,9 +112,11 @@ int main(int argc, char *argv[]) {
       exit(1);
     }
   }
+  OUTPUT << "Done parsing files!\n";
 
   LOG_INFO << "Exiting...";
   return 0;
+
 }
 
 std::tuple<std::vector<std::string>, std::string>
@@ -176,6 +178,7 @@ std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
         LOG_INFO << "Application ended by user Input";
         exit(1);
       }
+
     }
 
     validFiles.push_back(file);
@@ -212,8 +215,7 @@ void parseFile(const std::string &file, const std::string &outputDirectory) {
     throw exceptions::FailedToOpenFileException(outputFileName);
   }
 
-  outFile << dataStream->str();
-  OUTPUT << "Done with files!\n";
+    outFile << dataStream->str();
 }
 
 // Initialize easylogging++
