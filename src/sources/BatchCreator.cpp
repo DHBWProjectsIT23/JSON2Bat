@@ -53,7 +53,7 @@ void BatchCreator::writeCommands() const {
   *this->dataStream << "\"";
 
   for (const std::string &command : this->fileData->getCommands()) {
-    *this->dataStream << "\"" << command << "\" && ";
+    *this->dataStream << command << " && ";
   }
 }
 
@@ -61,7 +61,7 @@ void BatchCreator::writeEnvVariables() const {
   LOG_INFO << "writing Environment Variables";
 
   for (const auto &[key, value] : this->fileData->getEnvironmentVariables()) {
-    *this->dataStream << "set \"" << key << "=" << value << "\" && ";
+    *this->dataStream << "set " << key << "=" << value << " && ";
   }
 }
 
@@ -70,7 +70,7 @@ void BatchCreator::writePathVariables() const {
   *this->dataStream << "set path=";
 
   for (const std::string &path : this->fileData->getPathValues()) {
-    *this->dataStream << "\"" << path << "\";";
+    *this->dataStream << path << ";";
   }
 
   *this->dataStream << "%path%";
@@ -85,8 +85,7 @@ void BatchCreator::writeApplication() const {
     *this->dataStream << " && start \"" << appName
                       << "\" "
                       // {ReqFunc24} - \r\n
-                      << "\"" << this->fileData->getApplication().value_or("")
-                      << "\"\"\r\n";
+                      << this->fileData->getApplication().value() << "\"\r\n";
   } else {
     LOG_INFO << "writing not start Application";
     // {ReqFunc24} - \r\n

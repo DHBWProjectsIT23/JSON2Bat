@@ -19,19 +19,19 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-######## WINDOWS CHECK ########
+# ####### WINDOWS CHECK ########
 
 if(WIN32)
   if(CMAKE_GENERATOR MATCHES "MinGW" OR CMAKE_GENERATOR MATCHES "Ninja")
-      message(STATUS "MinGW or Ninja generator detected")
+    message(STATUS "MinGW or Ninja generator detected")
   else()
-      # Other generators such as MSVC don't work/are not tested
-      message(FATAL_ERROR "Generator other than MinGW or Ninja detected!\n"
+    # Other generators such as MSVC don't work/are not tested
+    message(FATAL_ERROR "Generator other than MinGW or Ninja detected!\n"
               "Please use \"MinGW Makefiles\" or \"Ninja\" on Windows!")
   endif()
 endif()
 
-######## SETUP ########
+# ####### SETUP ########
 
 # Set Name for project and executable
 set(PROJECT_NAME JSON2Batch)
@@ -53,11 +53,11 @@ set(AUTHORS "Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci")
 # Initialize the project This information is also used to generate files
 project(
   ${PROJECT_NAME}
-  VERSION 0.3.1
+  VERSION 1.0.1
   DESCRIPTION "A simple tool to convert json to batch."
   HOMEPAGE_URL "https://dhbwprojectsit23.github.io/JSON2Bat")
 
-######## MAIN EXECUTABLE ########
+# ####### MAIN EXECUTABLE ########
 
 # Configure Files
 add_subdirectory(conf)
@@ -93,7 +93,7 @@ else()
   target_compile_definitions(${EXECUTABLE_NAME} PRIVATE IS_WINDOWS)
 endif()
 
-######## OTHER TARGETS ########
+# ####### OTHER TARGETS ########
 
 # Astyle will autoformat when building
 find_program(ASTYLE_EXECUTABLE NAMES astyle)
