@@ -1,4 +1,4 @@
-.TH "BatchCreator" 3 "Sat Apr 27 2024 13:51:21" "Version 0.3.1" "JSON2Batch" \" -*- nroff -*-
+.TH "BatchCreator" 3 "Sat Apr 27 2024 14:29:42" "Version 0.3.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -95,7 +95,7 @@ Initializes the \fBBatchCreator\fP\&. Creates a stringstream and calls the \fBcr
 .PP
 
 .PP
-Definition at line \fB18\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB17\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBcreateBatch()\fP, and \fBdataStream\fP\&.
 .SH "Member Function Documentation"
@@ -107,7 +107,7 @@ Creates the batch stream\&. < FileData object
 .PP
 The method calls all necessary functions to create the stream for the batch file\&. 
 .PP
-Definition at line \fB25\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB24\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBwriteApplication()\fP, \fBwriteCommands()\fP, \fBwriteEnd()\fP, \fBwriteEnvVariables()\fP, \fBwriteHideShell()\fP, \fBwritePathVariables()\fP, and \fBwriteStart()\fP\&.
 .SS "std::shared_ptr< std::stringstream > BatchCreator::getDataStream () const\fC [inline]\fP"
@@ -136,7 +136,7 @@ If an application is given, it is started at the end\&. If the key 'application'
 .PP
 
 .PP
-Definition at line \fB81\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB79\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeCommands () const\fC [private]\fP"
@@ -150,7 +150,7 @@ Writes the commands to be executed\&. Writes the commands to be executed from th
 .PP
 
 .PP
-Definition at line \fB53\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB51\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeEnd () const\fC [private]\fP"
@@ -162,7 +162,7 @@ Writes the end of the batch file\&. Writes the end of the batch file, which is a
 .PP
 
 .PP
-Definition at line \fB99\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB97\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SS "void BatchCreator::writeEnvVariables () const\fC [private]\fP"
@@ -178,7 +178,7 @@ Entry under 'key' = Entry under 'value'
 .PP
 
 .PP
-Definition at line \fB62\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB60\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeHideShell () const\fC [private]\fP"
@@ -190,7 +190,7 @@ Writes the visibility of the shell\&. This hides/shows the shell after the batch
 .PP
 
 .PP
-Definition at line \fB42\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB41\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writePathVariables () const\fC [private]\fP"
@@ -204,7 +204,7 @@ Set's the path variables\&. Set's the path variables for the batch\&. Those orig
 .PP
 
 .PP
-Definition at line \fB70\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB68\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP, and \fBfileData\fP\&.
 .SS "void BatchCreator::writeStart () const\fC [private]\fP"
@@ -218,7 +218,7 @@ startet cmd\&.exe
 .PP
 
 .PP
-Definition at line \fB36\fP of file \fBBatchCreator\&.cpp\fP\&.
+Definition at line \fB35\fP of file \fBBatchCreator\&.cpp\fP\&.
 .PP
 References \fBdataStream\fP\&.
 .SH "Member Data Documentation"
