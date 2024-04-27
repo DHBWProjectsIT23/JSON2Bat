@@ -1,0 +1,15 @@
+{
+    "outputfile": "Example4.bat",
+    "hideshell": true,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable1.exe"
+        },
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable2.exe"
+        }
+    ],
+    "application": "Yet Another Application"
+}

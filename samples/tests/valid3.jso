@@ -1,0 +1,10 @@
+{
+    "outputfile": "Example3.bat",
+    "hideshell": false,
+    "entries": [
+        {"type": "ENV", "key": "VAR1", "value": "value1"},
+        {"type": "ENV", "key": "VAR2", "value": "value2"}
+    ],
+    "application": "Another Application"
+}
+

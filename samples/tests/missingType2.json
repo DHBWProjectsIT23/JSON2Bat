@@ -1,0 +1,14 @@
+{
+    "outputfile": "MissingKey2.bat",
+    "hideshell": true,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        },
+        {
+            "type": "PATH"
+        }
+    ],
+    "application": null
+}

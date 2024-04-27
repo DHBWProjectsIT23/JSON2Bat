@@ -1,0 +1,11 @@
+{
+    "outputfile": "SpellingMistake1.bat",
+    "hideshel": false,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        }
+    ],
+    "application": "Spelling Mistake Application"
+}

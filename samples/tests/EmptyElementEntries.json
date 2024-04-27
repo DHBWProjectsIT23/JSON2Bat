@@ -1,0 +1,13 @@
+{
+    "outputfile": "EmptyEntries.bat",
+    "hideshell": false,
+    "entries": [
+        {},
+        {
+            "type": "EXE",
+            "command": "TEST"
+        },
+        {}
+    ],
+    "application": null
+}

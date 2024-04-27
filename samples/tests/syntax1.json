@@ -1,0 +1,10 @@
+{
+    "outputfile": "Invalid1.bat",
+    "hideshell": false,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        }
+    ],
+    "application": "Invalid Application"

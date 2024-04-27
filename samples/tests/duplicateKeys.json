@@ -1,0 +1,17 @@
+{
+    "outputfile": "DuplicateKeys.bat",
+    "hideshell": true,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        }
+    ],
+    "entries": [],
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        }
+    ]
+}

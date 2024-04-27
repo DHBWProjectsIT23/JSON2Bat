@@ -1,0 +1,14 @@
+{
+    "outputfile": "MissingTypeKey.bat",
+    "hideshell": false,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        },
+        {
+            "command": "invalid entry"
+        }
+    ],
+    "application": "Missing Type Key Application"
+}

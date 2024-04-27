@@ -1,0 +1,21 @@
+{
+    "outputfile": "NestedJSON.bat",
+    "hideshell": true,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        },
+        {
+            "type": "ENV",
+            "variables": {
+                "VAR1": "value1",
+                "VAR2": "value2"
+            }
+        }
+    ],
+    "application": {
+        "name": "Nested Application",
+        "version": "1.0"
+    }
+}

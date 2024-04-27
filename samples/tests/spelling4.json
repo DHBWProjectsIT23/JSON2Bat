@@ -1,0 +1,11 @@
+{
+    "outputfile": "SpellingMistake4.bat",
+    "hideshell": treu,
+    "entries": [
+        {
+            "type": "EXE",
+            "command": "C:\\path\\to\\executable.exe"
+        }
+    ],
+    "application": null
+}

@@ -1,0 +1,14 @@
+{
+    "outputfile": "MissingKey1.bat",
+    "hideshell": false,
+    "entries": [
+        {
+            "type": "EXE"
+        },
+        {
+            "type": "PATH",
+            "path": "C:\\path\\to\\bin"
+        }
+    ],
+    "application": "Missing Key Application"
+}
