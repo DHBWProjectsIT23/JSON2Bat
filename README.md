@@ -3,7 +3,7 @@
 
 0.3.0
 
-JSON2Batch was developed during a project during our first and second
+JSON2Batch was developed for a project during our first and second
 semester of university.
 It generates batch files from JSON files, which can spawn terminals or
 applications, that run under certain parameters specified within the
@@ -13,39 +13,63 @@ The project was carried out by **Elena Schwarzbach, Max Rodler, Simon Blum, Soni
 
 ## Table of Contents
 
-- JSON2Batch
-  1. [Table of Contents](#table-of-contents)
-  2. [Build Instructions](#build-instructions)
-    - [Linux](#linux)
-    - [Windows](#windows)
-    - [Generating Documentation](#generating-documentation)
-  3. [Documentation](#documentation)
-    - [Project Structure](#project-structure)
-  4. [External Libraries](#external-libraries)
-    - [easylogging++](#easylogging)
-    - [LoggingWrapper](#loggingwrapper)
-    - [jsoncpp](#jsoncpp)
-  5. [License](#license)
+
+1. [Build Instructions](#build-instructions)
+   - [Linux](#linux)
+   - [Windows](#windows)
+   - [Generating Documentation](#generating-documentation)
+2. [Documentation](#documentation)
+   - [Project Structure](#project-structure)
+3. [External Libraries](#external-libraries)
+   - [easylogging++](#easylogging)
+   - [LoggingWrapper](#loggingwrapper)
+   - [jsoncpp](#jsoncpp)
+4. [License](#license)
 
 ## Build Instructions
 
 ### Linux
 
 ```sh
-git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO
-cmake -S . -B build --config Release
+git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/
+cd JSON2Bat
+cmake -S . -B build
 cmake --build build
 ```
 
 #### UNIX Compiler Compatibility
 
-The project has been tested with GCC version >= 10.5 and Clang version > 14.
+The project has been tested with GCC version 10.5+ and Clang version 14+.
 
 ### Windows
 
-@TODO Fix Windows
+The project has been tested on windows using MinGW and Ninja.
 
-#### Windows Compiler Compatibility
+### Build with MinGW
+
+MinGW can be installed by following Steps 1 through 7 in this [tutorial](https://code.visualstudio.com/docs/cpp/config-mingw)
+
+```powershell
+git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/
+cd JSON2Bat
+cmake -S . -B build -G "MinGW Makefiles"
+cmake --build build
+```
+*The project was tested using MinGW with the above mentioned installation and
+using [this](https://github.com/marketplace/actions/install-mingw) GitHub Action.*
+
+### Build with Ninja
+
+The Ninja binary can be found [here](https://github.com/ninja-build/ninja/releases). Alternatively Ninja can be build from [source](https://github.com/ninja-build/ninja).
+
+```powershell
+git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/
+cd JSON2Bat
+cmake -S . -B build -G "Ninja"
+cmake --build build
+```
+
+*The project was tested using Ninja v1.12.0 on a local machine and using v1.10 using [this](https://github.com/marketplace/actions/setup-ninja) GitHub Action.*
 
 ### Generating Documentation
 
@@ -53,8 +77,9 @@ If the *doxygen* executable is installed local documentation can be
 generated using:
 
 ```sh
-git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO
-cmake -S . -B build --config Release
+git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/
+cd JSON2Bat
+cmake -S . -B build
 cmake --build build --target doxygen_build
 ```
 
@@ -62,14 +87,13 @@ cmake --build build --target doxygen_build
 
 The documentation for this project can be found
 [here](https://dhbwprojectsit23.github.io/JSON2Bat).
-A PDF version can be found [here]() and a short man page can be found [here](man/json2batch.troff).
+A PDF version can be found [here](assets/JSON2Batch.pdf) and a short man page can be found [here](assets/man/json2batch.troff).
 
 ### Project Structure
 
 The project directory is structured as follows:
 
 - assets > *Includes files, not directly related to the code*
-- man > *Includes the man page*
 - conf > *Includes files which will be configured by CMake*
 - include > *Includes header files for external libraries*
 - lib > *Includes source/binary files for external libraries*
