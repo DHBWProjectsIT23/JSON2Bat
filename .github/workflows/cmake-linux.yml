@@ -85,7 +85,3 @@ jobs:
       - name: Run app
         run: |
           ./build/json2batch -h
-
-      - name: Show log
-        run: |
-          cat logs/*
