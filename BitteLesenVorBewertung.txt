@@ -1,0 +1,18 @@
+Entlang der gegebenen Beispiel Batch Dateien werden aktuell keine
+Anführungszeichen um gegebene Einträge gesetzt.
+Dies führt jedoch dann zu Problemen, wenn Werte Leerzeichen 
+beinhalten (wie beispielswiese das Verzeichnis "Program Files").
+
+Dies zu berichtigen ist relativ simpel, indem in der BatchCreator.cpp
+Datei vor und nach die Werte von command/path/env/application
+jeweils ein '\"'' gesetzt wird. Das allerdings führt dazu, dass
+Einträge unter "EXE", welche System Befehle anstelle von
+Anwendung/Batch Dateien ausführen sollen nicht länger valide sind.
+
+Eine mögliche Lösung wäre hierbei reguläre Befehle und
+unter Pfadangaben angebene auszuührende Dateien in 2 Einträge
+zu trennen.
+Da dies allerdings nicht den Anforderungen entspricht,
+haben wir uns, wie auch in den Beispiel Dateien sichtbar,
+dafür entschieden, keine Anführungszeichen zu setzen.
+
