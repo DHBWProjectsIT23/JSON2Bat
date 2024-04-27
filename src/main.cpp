@@ -179,7 +179,7 @@ std::vector<std::string> validateFiles(const std::vector<std::string> &files) {
             }
         }
 
-        validFiles.push_back(file);
+        validFiles.push_back(file.string());
     }
 
     // Shrinks the vector if invalid files were found
