@@ -1,4 +1,4 @@
-.TH "utilities::Utils" 3 "Sat Apr 27 2024 13:10:39" "Version 0.3.1" "JSON2Batch" \" -*- nroff -*-
+.TH "utilities::Utils" 3 "Sat Apr 27 2024 13:51:21" "Version 0.3.1" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ utilities::Utils \- Responsible for utility function\&.
 .br
 .RI "Set up easylogging\&. "
 .ti -1c
-.RI "static bool \fBhandleParseException\fP (const \fBexceptions::CustomException\fP &e, const std::vector< std::string >::iterator &file, const std::vector< std::string > &files)"
+.RI "static bool \fBhandleParseException\fP (const std::exception &e, const std::vector< std::string >::iterator &file, const std::vector< std::string > &files)"
 .br
 .RI "Handle an exception within the main parsing loop\&. "
 .ti -1c
@@ -113,7 +113,7 @@ The processed string
 
 .PP
 Definition at line \fB97\fP of file \fBUtils\&.cpp\fP\&.
-.SS "bool utilities::Utils::handleParseException (const \fBexceptions::CustomException\fP & e, const std::vector< std::string >::iterator & file, const std::vector< std::string > & files)\fC [static]\fP"
+.SS "bool utilities::Utils::handleParseException (const std::exception & e, const std::vector< std::string >::iterator & file, const std::vector< std::string > & files)\fC [static]\fP"
 
 .PP
 Handle an exception within the main parsing loop\&. This function handles an exception within the main parsing loop\&. It displays the error message and asks the user if they want to continue\&.
@@ -139,7 +139,7 @@ Returns true if the user wants to continue and false otherwise
 .PP
 Definition at line \fB77\fP of file \fBUtils\&.cpp\fP\&.
 .PP
-References \fBaskToContinue()\fP, and \fBexceptions::CustomException::what()\fP\&.
+References \fBaskToContinue()\fP\&.
 .SS "void utilities::Utils::setupEasyLogging (const std::string & configFile)\fC [static]\fP"
 
 .PP

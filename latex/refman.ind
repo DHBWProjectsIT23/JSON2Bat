@@ -369,11 +369,11 @@
   \item {src/include/KeyValidator.hpp}, \hyperpage{106, 107}
   \item {src/include/Utils.hpp}, \hyperpage{108, 109}
   \item {src/main.cpp}, \hyperpage{109}, \hyperpage{114}
-  \item {src/sources/BatchCreator.cpp}, \hyperpage{116, 117}
-  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{118}, 
-		\hyperpage{120}
-  \item {src/sources/FileData.cpp}, \hyperpage{121, 122}
-  \item {src/sources/JsonHandler.cpp}, \hyperpage{123}, \hyperpage{125}
+  \item {src/sources/BatchCreator.cpp}, \hyperpage{116}, 
+		\hyperpage{118}
+  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{119, 120}
+  \item {src/sources/FileData.cpp}, \hyperpage{121}, \hyperpage{123}
+  \item {src/sources/JsonHandler.cpp}, \hyperpage{124, 125}
   \item {src/sources/KeyValidator.cpp}, \hyperpage{126}, 
 		\hyperpage{128}
   \item {src/sources/Utils.cpp}, \hyperpage{129}, \hyperpage{131}

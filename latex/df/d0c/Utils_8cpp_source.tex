@@ -65,12 +65,12 @@
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00074}00074\ }
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ directory;}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00076}00076\ \}}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00077}\mbox{\hyperlink{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}{00077}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classutilities_1_1Utils_ad0ae5e5ca3f40a7c2de1667856f5e0bd}{Utils::handleParseException}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classexceptions_1_1CustomException}{exceptions::CustomException}}\ \&e,}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00077}\mbox{\hyperlink{classutilities_1_1Utils_a98c61b6977dfc9988f08a3866f685251}{00077}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classutilities_1_1Utils_a98c61b6977dfc9988f08a3866f685251}{Utils::handleParseException}}(\textcolor{keyword}{const}\ std::exception\ \&e,}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>::iterator\ \&file,}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ \&files)\ \{}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00080}00080\ \ \ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nThere\ has\ been\ a\ error\ while\ trying\ to\ parse\ \(\backslash\)"{}"{}}\ <<\ *file}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}:\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00082}00082\ \ \ \ \ LOG\_ERROR\ <<\ e.\mbox{\hyperlink{classexceptions_1_1CustomException_a128c3c054a385cda67e271d2064b0d1f}{what}}();}
+\DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00082}00082\ \ \ \ \ LOG\_ERROR\ <<\ e.what();}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00083}00083\ }
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (std::next(file)\ !=\ files.end()\ \&\&}
 \DoxyCodeLine{\Hypertarget{Utils_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ !\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{utilities::Utils::askToContinue}}(}
