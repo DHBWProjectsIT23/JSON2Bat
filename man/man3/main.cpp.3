@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Fri Apr 26 2024 18:24:04" "Version 0.2.5" "JSON2Batch" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Sat Apr 27 2024 12:01:33" "Version 0.2.5" "JSON2Batch" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -151,7 +151,7 @@ A tuple containing the files to be parsed and the output directory
 .PP
 
 .PP
-Definition at line \fB122\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB123\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::checkDirectory()\fP, \fBcli::CommandLineHandler::parseArguments()\fP, \fBcli::CommandLineHandler::printHelp()\fP, and \fBexceptions::CustomException::what()\fP\&.
 .SS "void parseFile (const std::string & file, const std::string & outputDirectory)"
@@ -166,9 +166,9 @@ Parses the given file and writes the output to the output directory\&. Creates t
 .PP
 
 .PP
-Definition at line \fB190\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB192\fP of file \fBmain\&.cpp\fP\&.
 .PP
-References \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::getFileData()\fP\&.
+References \fButilities::Utils::askToContinue()\fP, \fBBatchCreator::getDataStream()\fP, and \fBparsing::JsonHandler::getFileData()\fP\&.
 .SS "std::vector< std::string > validateFiles (const std::vector< std::string > & files)"
 
 .PP
@@ -189,7 +189,7 @@ A vector containing the valid files
 .PP
 
 .PP
-Definition at line \fB149\fP of file \fBmain\&.cpp\fP\&.
+Definition at line \fB150\fP of file \fBmain\&.cpp\fP\&.
 .PP
 References \fButilities::Utils::askToContinue()\fP\&.
 .SH "Author"

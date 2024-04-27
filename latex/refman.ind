@@ -370,11 +370,13 @@
   \item {src/include/Utils.hpp}, \hyperpage{108, 109}
   \item {src/main.cpp}, \hyperpage{109}, \hyperpage{114}
   \item {src/sources/BatchCreator.cpp}, \hyperpage{116, 117}
-  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{118, 119}
+  \item {src/sources/CommandLineHandler.cpp}, \hyperpage{118}, 
+		\hyperpage{120}
   \item {src/sources/FileData.cpp}, \hyperpage{121, 122}
-  \item {src/sources/JsonHandler.cpp}, \hyperpage{123, 124}
-  \item {src/sources/KeyValidator.cpp}, \hyperpage{126, 127}
-  \item {src/sources/Utils.cpp}, \hyperpage{129, 130}
+  \item {src/sources/JsonHandler.cpp}, \hyperpage{123}, \hyperpage{125}
+  \item {src/sources/KeyValidator.cpp}, \hyperpage{126}, 
+		\hyperpage{128}
+  \item {src/sources/Utils.cpp}, \hyperpage{129}, \hyperpage{131}
   \item {StyleHelpers}, \hyperpage{15}
 
   \indexspace

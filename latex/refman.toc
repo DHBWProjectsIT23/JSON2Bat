@@ -275,21 +275,21 @@
 \contentsline {subsubsection}{\numberline {10.18.2.4}validateFiles()}{113}{subsubsection.10.18.2.4}%
 \contentsline {section}{\numberline {10.19}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{114}{section.10.19}%
 \contentsline {section}{\numberline {10.20}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.cpp File Reference}{116}{section.10.20}%
-\contentsline {subsection}{\numberline {10.20.1}Detailed Description}{116}{subsection.10.20.1}%
+\contentsline {subsection}{\numberline {10.20.1}Detailed Description}{117}{subsection.10.20.1}%
 \contentsline {section}{\numberline {10.21}Batch\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{117}{section.10.21}%
 \contentsline {section}{\numberline {10.22}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp File Reference}{118}{section.10.22}%
 \contentsline {subsection}{\numberline {10.22.1}Detailed Description}{119}{subsection.10.22.1}%
-\contentsline {section}{\numberline {10.23}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{119}{section.10.23}%
+\contentsline {section}{\numberline {10.23}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{120}{section.10.23}%
 \contentsline {section}{\numberline {10.24}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cpp File Reference}{121}{section.10.24}%
-\contentsline {subsection}{\numberline {10.24.1}Detailed Description}{121}{subsection.10.24.1}%
+\contentsline {subsection}{\numberline {10.24.1}Detailed Description}{122}{subsection.10.24.1}%
 \contentsline {section}{\numberline {10.25}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{122}{section.10.25}%
 \contentsline {section}{\numberline {10.26}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp File Reference}{123}{section.10.26}%
 \contentsline {subsection}{\numberline {10.26.1}Detailed Description}{124}{subsection.10.26.1}%
-\contentsline {section}{\numberline {10.27}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{124}{section.10.27}%
+\contentsline {section}{\numberline {10.27}Json\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{125}{section.10.27}%
 \contentsline {section}{\numberline {10.28}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.cpp File Reference}{126}{section.10.28}%
 \contentsline {subsection}{\numberline {10.28.1}Detailed Description}{127}{subsection.10.28.1}%
-\contentsline {section}{\numberline {10.29}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{127}{section.10.29}%
+\contentsline {section}{\numberline {10.29}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Validator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{128}{section.10.29}%
 \contentsline {section}{\numberline {10.30}src/sources/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utils.cpp File Reference}{129}{section.10.30}%
 \contentsline {subsection}{\numberline {10.30.1}Detailed Description}{130}{subsection.10.30.1}%
-\contentsline {section}{\numberline {10.31}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{130}{section.10.31}%
+\contentsline {section}{\numberline {10.31}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{131}{section.10.31}%
 \contentsline {chapter}{Index}{133}{section*.187}%
