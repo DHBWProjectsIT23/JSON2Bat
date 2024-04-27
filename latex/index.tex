@@ -2,16 +2,13 @@
 \hypertarget{index}{}\label{index}\index{JSON2Batch@{JSON2Batch}}
 \label{index_md_README}%
 \Hypertarget{index_md_README}%
- 0.\+2.\+5
+ 0.\+3.\+0
 
-JSON2\+Batch was developed during a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.
+JSON2\+Batch was developed for a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.
 
 The project was carried out by {\bfseries{Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci}}.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{index_autotoc_md1}
 
-\begin{DoxyItemize}
-\item JSON2\+Batch
 \begin{DoxyEnumerate}
-\item Table of Contents
 \item Build Instructions
 \begin{DoxyItemize}
 \item Linux
@@ -29,37 +26,60 @@ The project was carried out by {\bfseries{Elena Schwarzbach, Max Rodler, Simon B
 \item jsoncpp
 \end{DoxyItemize}
 \item License
-\end{DoxyEnumerate}
-\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Build Instructions}{Build Instructions}}\label{index_autotoc_md2}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Build Instructions}{Build Instructions}}\label{index_autotoc_md2}
 \hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Linux}{Linux}}\label{index_autotoc_md3}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{git\ clone\ https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO}
-\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build\ -\/-\/config\ Release}
+\DoxyCodeLine{git\ clone\ -\/b\ release\ https://github.com/DHBWProjectsIT23/JSON2Bat/}
+\DoxyCodeLine{cd\ JSON2Bat}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
 \DoxyCodeLine{cmake\ -\/-\/build\ build}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{UNIX Compiler Compatibility}{UNIX Compiler Compatibility}}\label{index_autotoc_md4}
-The project has been tested with GCC version \texorpdfstring{$>$}{>}= 10.\+5 and Clang version \texorpdfstring{$>$}{>} 14.\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Windows}{Windows}}\label{index_autotoc_md5}
-@\+TODO Fix Windows\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Windows Compiler Compatibility}{Windows Compiler Compatibility}}\label{index_autotoc_md6}
-\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Generating Documentation}{Generating Documentation}}\label{index_autotoc_md7}
+The project has been tested with GCC version 10.\+5+ and Clang version 14+.\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Windows}{Windows}}\label{index_autotoc_md5}
+The project has been tested on windows using Min\+GW and Ninja.\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Build with Min\+GW}{Build with MinGW}}\label{index_autotoc_md6}
+Min\+GW can be installed by following Steps 1 through 7 in this \href{https://code.visualstudio.com/docs/cpp/config-mingw}{\texttt{ tutorial}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ -\/b\ release\ https://github.com/DHBWProjectsIT23/JSON2Bat/}
+\DoxyCodeLine{cd\ JSON2Bat}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build\ -\/G\ "{}MinGW\ Makefiles"{}}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+
+\end{DoxyCode}
+ {\itshape The project was tested using Min\+GW with the above mentioned installation and using \href{https://github.com/marketplace/actions/install-mingw}{\texttt{ this}} Git\+Hub Action.}\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Build with Ninja}{Build with Ninja}}\label{index_autotoc_md7}
+The Ninja binary can be found \href{https://github.com/ninja-build/ninja/releases}{\texttt{ here}}. Alternatively Ninja can be build from \href{https://github.com/ninja-build/ninja}{\texttt{ source}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ -\/b\ release\ https://github.com/DHBWProjectsIT23/JSON2Bat/}
+\DoxyCodeLine{cd\ JSON2Bat}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build\ -\/G\ "{}Ninja"{}}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+
+\end{DoxyCode}
+
+
+{\itshape The project was tested using Ninja v1.\+12.\+0 on a local machine and using v1.\+10 using \href{https://github.com/marketplace/actions/setup-ninja}{\texttt{ this}} Git\+Hub Action.}\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Generating Documentation}{Generating Documentation}}\label{index_autotoc_md8}
 If the {\itshape doxygen} executable is installed local documentation can be generated using\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{git\ clone\ https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO}
-\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build\ -\/-\/config\ Release}
+\DoxyCodeLine{git\ clone\ -\/b\ release\ https://github.com/DHBWProjectsIT23/JSON2Bat/}
+\DoxyCodeLine{cd\ JSON2Bat}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
 \DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/target\ doxygen\_build}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md8}
-The documentation for this project can be found \href{https://dhbwprojectsit23.github.io/JSON2Bat}{\texttt{ here}}. A PDF version can be found \mbox{[}here\mbox{]}() and a short man page can be found \href{man/json2batch.troff}{\texttt{ here}}.\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Project Structure}{Project Structure}}\label{index_autotoc_md9}
+\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md9}
+The documentation for this project can be found \href{https://dhbwprojectsit23.github.io/JSON2Bat}{\texttt{ here}}. A PDF version can be found \href{assets/JSON2Batch.pdf}{\texttt{ here}} and a short man page can be found \href{assets/man/json2batch.troff}{\texttt{ here}}.\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Project Structure}{Project Structure}}\label{index_autotoc_md10}
 The project directory is structured as follows\+:
 
 
 \begin{DoxyItemize}
 \item assets \texorpdfstring{$>$}{>} {\itshape Includes files, not directly related to the code}
-\item man \texorpdfstring{$>$}{>} {\itshape Includes the man page}
 \item conf \texorpdfstring{$>$}{>} {\itshape Includes files which will be configured by CMake}
 \item include \texorpdfstring{$>$}{>} {\itshape Includes header files for external libraries}
 \item lib \texorpdfstring{$>$}{>} {\itshape Includes source/binary files for external libraries}
@@ -69,9 +89,9 @@ The project directory is structured as follows\+:
 \item include \texorpdfstring{$>$}{>} {\itshape Includes all "{}.\+hpp"{} files}
 \item \doxylink{main_8cpp}{main.\+cpp}
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{External Libraries}{External Libraries}}\label{index_autotoc_md10}
-\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{easylogging++}{easylogging++}}\label{index_autotoc_md11}
-The \href{https://github.com/abumq/easyloggingpp}{\texttt{ easylogging++}} library is used for logging within the application. The configuration for the library is done via a logging file which can be found in \href{conf/easylogging.in.conf}{\texttt{ conf/easylogging.\+in.\+conf}}. Cmake configures this file into the binary directory upon building. If the configuration file is removed, the application will no longer run.\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Logging\+Wrapper}{LoggingWrapper}}\label{index_autotoc_md12}
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{External Libraries}{External Libraries}}\label{index_autotoc_md11}
+\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{easylogging++}{easylogging++}}\label{index_autotoc_md12}
+The \href{https://github.com/abumq/easyloggingpp}{\texttt{ easylogging++}} library is used for logging within the application. The configuration for the library is done via a logging file which can be found in \href{conf/easylogging.in.conf}{\texttt{ conf/easylogging.\+in.\+conf}}. Cmake configures this file into the binary directory upon building. If the configuration file is removed, the application will no longer run.\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{Logging\+Wrapper}{LoggingWrapper}}\label{index_autotoc_md13}
 While easylogging++ is used for the logging back--end within the code there are little remains apart from the configuration. The logging and output of the application is done over a self written wrapper. Altough it is self written, due to it beeing not part of the project we consider it an external libraries. The wrapper is used to simplify parallel output to stdout and the logfile and also enables increased output to stdout for the verbose mode. A few macros are defined for use within the application\+:
 
 
@@ -82,6 +102,6 @@ While easylogging++ is used for the logging back--end within the code there are 
 \item LOG\+\_\+\+ERROR \texorpdfstring{$>$}{>} {\itshape Same as LOG\+\_\+\+WARNING but in red and bold}
 \end{DoxyItemize}
 
-The macros can be used with streaming in the same way as std\+::cout would be used. Furthermore, some rudimentary performance tests showed, that the use of the wrapper, does not affect performance in comparison to using both std\+::cout and easylogging itself.\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{jsoncpp}{jsoncpp}}\label{index_autotoc_md13}
-For parsing the JSON files, the \href{https://github.com/open-source-parsers/jsoncpp}{\texttt{ jsoncpp}} library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/\+Ubuntu and Arch). For Windows system a prebuild version is included -\/ See Windows for more information.\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md14}
+The macros can be used with streaming in the same way as std\+::cout would be used. Furthermore, some rudimentary performance tests showed, that the use of the wrapper, does not affect performance in comparison to using both std\+::cout and easylogging itself.\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{jsoncpp}{jsoncpp}}\label{index_autotoc_md14}
+For parsing the JSON files, the \href{https://github.com/open-source-parsers/jsoncpp}{\texttt{ jsoncpp}} library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/\+Ubuntu and Arch). For Windows system a prebuild version is included -\/ See Windows for more information.\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md15}
 The project is published under the Apache License V2.\+0. Check the \mbox{[}license file\mbox{]}(LICENSE) for more information! 

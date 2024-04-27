@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.2.5</span>
+   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.3.0</span>
    </div>
    <div id="projectbrief">A simple tool to convert json to batch.</div>
   </td>
@@ -96,14 +96,12 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">JSON2Batch </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> 0.2.5</p>
-<p>JSON2Batch was developed during a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> 0.3.0</p>
+<p>JSON2Batch was developed for a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.</p>
 <p>The project was carried out by <b>Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci</b>.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Table of Contents</h1>
-<ul>
-<li>JSON2Batch<ol type="1">
-<li>Table of Contents</li>
+<ol type="1">
 <li>Build Instructions<ul>
 <li>Linux</li>
 <li>Windows</li>
@@ -122,38 +120,51 @@ Table of Contents</h1>
 </li>
 <li>License</li>
 </ol>
-</li>
-</ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Build Instructions</h1>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Linux</h2>
-<div class="fragment"><div class="line">git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO</div>
-<div class="line">cmake -S . -B build --config Release</div>
+<div class="fragment"><div class="line">git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/</div>
+<div class="line">cd JSON2Bat</div>
+<div class="line">cmake -S . -B build</div>
 <div class="line">cmake --build build</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md4"></a>
 UNIX Compiler Compatibility</h3>
-<p>The project has been tested with GCC version &gt;= 10.5 and Clang version &gt; 14.</p>
+<p>The project has been tested with GCC version 10.5+ and Clang version 14+.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Windows</h2>
-<p>@TODO Fix Windows</p>
-<h3><a class="anchor" id="autotoc_md6"></a>
-Windows Compiler Compatibility</h3>
+<p>The project has been tested on windows using MinGW and Ninja.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Build with MinGW</h2>
+<p>MinGW can be installed by following Steps 1 through 7 in this <a href="https://code.visualstudio.com/docs/cpp/config-mingw">tutorial</a></p>
+<div class="fragment"><div class="line">git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/</div>
+<div class="line">cd JSON2Bat</div>
+<div class="line">cmake -S . -B build -G &quot;MinGW Makefiles&quot;</div>
+<div class="line">cmake --build build</div>
+</div><!-- fragment --><p> <em>The project was tested using MinGW with the above mentioned installation and using <a href="https://github.com/marketplace/actions/install-mingw">this</a> GitHub Action.</em></p>
 <h2><a class="anchor" id="autotoc_md7"></a>
+Build with Ninja</h2>
+<p>The Ninja binary can be found <a href="https://github.com/ninja-build/ninja/releases">here</a>. Alternatively Ninja can be build from <a href="https://github.com/ninja-build/ninja">source</a>.</p>
+<div class="fragment"><div class="line">git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/</div>
+<div class="line">cd JSON2Bat</div>
+<div class="line">cmake -S . -B build -G &quot;Ninja&quot;</div>
+<div class="line">cmake --build build</div>
+</div><!-- fragment --><p><em>The project was tested using Ninja v1.12.0 on a local machine and using v1.10 using <a href="https://github.com/marketplace/actions/setup-ninja">this</a> GitHub Action.</em></p>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Generating Documentation</h2>
 <p>If the <em>doxygen</em> executable is installed local documentation can be generated using:</p>
-<div class="fragment"><div class="line">git clone https://github.com/DHBWProjectsIT23/JSON2Bat/!TODO</div>
-<div class="line">cmake -S . -B build --config Release</div>
+<div class="fragment"><div class="line">git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/</div>
+<div class="line">cd JSON2Bat</div>
+<div class="line">cmake -S . -B build</div>
 <div class="line">cmake --build build --target doxygen_build</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 Documentation</h1>
-<p>The documentation for this project can be found <a href="https://dhbwprojectsit23.github.io/JSON2Bat">here</a>. A PDF version can be found [here]() and a short man page can be found <a href="man/json2batch.troff">here</a>.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<p>The documentation for this project can be found <a href="https://dhbwprojectsit23.github.io/JSON2Bat">here</a>. A PDF version can be found <a href="assets/JSON2Batch.pdf">here</a> and a short man page can be found <a href="assets/man/json2batch.troff">here</a>.</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Project Structure</h2>
 <p>The project directory is structured as follows:</p>
 <ul>
 <li>assets &gt; <em>Includes files, not directly related to the code</em></li>
-<li>man &gt; <em>Includes the man page</em></li>
 <li>conf &gt; <em>Includes files which will be configured by CMake</em></li>
 <li>include &gt; <em>Includes header files for external libraries</em></li>
 <li>lib &gt; <em>Includes source/binary files for external libraries</em></li>
@@ -164,12 +175,12 @@ Project Structure</h2>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 External Libraries</h1>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 easylogging++</h2>
 <p>The <a href="https://github.com/abumq/easyloggingpp">easylogging++</a> library is used for logging within the application. The configuration for the library is done via a logging file which can be found in <a href="conf/easylogging.in.conf">conf/easylogging.in.conf</a>. Cmake configures this file into the binary directory upon building. If the configuration file is removed, the application will no longer run.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 LoggingWrapper</h2>
 <p>While easylogging++ is used for the logging back&ndash;end within the code there are little remains apart from the configuration. The logging and output of the application is done over a self written wrapper. Altough it is self written, due to it beeing not part of the project we consider it an external libraries. The wrapper is used to simplify parallel output to stdout and the logfile and also enables increased output to stdout for the verbose mode. A few macros are defined for use within the application:</p>
 <ul>
@@ -179,10 +190,10 @@ LoggingWrapper</h2>
 <li>LOG_ERROR &gt; <em>Same as LOG_WARNING but in red and bold</em></li>
 </ul>
 <p>The macros can be used with streaming in the same way as std::cout would be used. Furthermore, some rudimentary performance tests showed, that the use of the wrapper, does not affect performance in comparison to using both std::cout and easylogging itself.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 jsoncpp</h2>
 <p>For parsing the JSON files, the <a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp</a> library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/Ubuntu and Arch). For Windows system a prebuild version is included - See Windows for more information.</p>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 License</h1>
 <p>The project is published under the Apache License V2.0. Check the [license file](LICENSE) for more information! </p>
 </div></div><!-- PageDoc -->
@@ -191,7 +202,7 @@ License</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 27 2024 12:23:43 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Apr 27 2024 12:51:37 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

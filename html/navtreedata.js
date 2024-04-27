@@ -30,20 +30,20 @@ var NAVTREE =
       [ "Linux", "index.html#autotoc_md3", [
         [ "UNIX Compiler Compatibility", "index.html#autotoc_md4", null ]
       ] ],
-      [ "Windows", "index.html#autotoc_md5", [
-        [ "Windows Compiler Compatibility", "index.html#autotoc_md6", null ]
-      ] ],
-      [ "Generating Documentation", "index.html#autotoc_md7", null ]
+      [ "Windows", "index.html#autotoc_md5", null ],
+      [ "Build with MinGW", "index.html#autotoc_md6", null ],
+      [ "Build with Ninja", "index.html#autotoc_md7", null ],
+      [ "Generating Documentation", "index.html#autotoc_md8", null ]
     ] ],
-    [ "Documentation", "index.html#autotoc_md8", [
-      [ "Project Structure", "index.html#autotoc_md9", null ]
+    [ "Documentation", "index.html#autotoc_md9", [
+      [ "Project Structure", "index.html#autotoc_md10", null ]
     ] ],
-    [ "External Libraries", "index.html#autotoc_md10", [
-      [ "easylogging++", "index.html#autotoc_md11", null ],
-      [ "LoggingWrapper", "index.html#autotoc_md12", null ],
-      [ "jsoncpp", "index.html#autotoc_md13", null ]
+    [ "External Libraries", "index.html#autotoc_md11", [
+      [ "easylogging++", "index.html#autotoc_md12", null ],
+      [ "LoggingWrapper", "index.html#autotoc_md13", null ],
+      [ "jsoncpp", "index.html#autotoc_md14", null ]
     ] ],
-    [ "License", "index.html#autotoc_md14", null ],
+    [ "License", "index.html#autotoc_md15", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
