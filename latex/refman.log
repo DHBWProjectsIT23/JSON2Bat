@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.27)  27 APR 2024 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Alpine Linux) (preloaded format=pdflatex 2024.4.27)  27 APR 2024 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,9 +954,9 @@ ojectsit23.[]github.[]io/JSON2[]Bat" [inline],
  []
 
 [18]
-Overfull \hbox (62.53772pt too wide) in paragraph at lines 79--80
+Overfull \hbox (48.13771pt too wide) in paragraph at lines 79--80
 \T1/pcr/m/n/8 constexpr auto config[]::[]LOG[]_[][]CONFIG = "/home/simon/1[]_[]
-[]Coding/project[]Json[]To[]Bat/build/Debug/config/easylogging.[]
+[]Coding/cpp/Json[]To[]Bat/build/Debug/config/easylogging.[]
  []
 
 ) (./d0/d6e/namespaceexceptions.tex [19]
@@ -2191,9 +2191,9 @@ Package pdftex.def Info: d4/d28/config_8hpp__dep__incl.pdf  used on input line
 13.
 (pdftex.def)             Requested size: 350.0pt x 104.32971pt.
  [95]
-Overfull \hbox (32.79707pt too wide) in paragraph at lines 24--26
-[]\T1/phv/m/n/10 constexpr auto [] = "/home/simon/1[]_[][]Coding/project[]Json[
-]To[]Bat/build/Debug/config/easylogging.[]
+Overfull \hbox (22.79828pt too wide) in paragraph at lines 24--26
+[]\T1/phv/m/n/10 constexpr auto [] = "/home/simon/1[]_[][]Coding/cpp/Json[]To[]
+Bat/build/Debug/config/easylogging.[]
  []
 
 
@@ -2576,7 +2576,7 @@ Underfull \hbox (badness 10000) detected at line 45
 
 ) (./dc/db7/CommandLineHandler_8cpp_source.tex [119] [120])
 (./d2/dc5/FileData_8cpp.tex <./d2/d56/FileData_8cpp__incl.pdf>
-<d2/d56/FileData_8cpp__incl.pdf, id=5581, 450.68375pt x 210.7875pt>
+<d2/d56/FileData_8cpp__incl.pdf, id=5580, 450.68375pt x 210.7875pt>
 File: d2/d56/FileData_8cpp__incl.pdf Graphic file (type pdf)
 <use d2/d56/FileData_8cpp__incl.pdf>
 Package pdftex.def Info: d2/d56/FileData_8cpp__incl.pdf  used on input line 16.
@@ -2609,7 +2609,7 @@ Underfull \hbox (badness 10000) detected at line 41
 
 ) (./d2/dc5/FileData_8cpp_source.tex [122]) (./d0/d2b/JsonHandler_8cpp.tex <./d
 e/d03/JsonHandler_8cpp__incl.pdf>
-<de/d03/JsonHandler_8cpp__incl.pdf, id=5705, 941.5175pt x 265.99374pt>
+<de/d03/JsonHandler_8cpp__incl.pdf, id=5704, 941.5175pt x 265.99374pt>
 File: de/d03/JsonHandler_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d03/JsonHandler_8cpp__incl.pdf>
 Package pdftex.def Info: de/d03/JsonHandler_8cpp__incl.pdf  used on input line 
@@ -2642,7 +2642,7 @@ Underfull \hbox (badness 10000) detected at line 45
 
 ) (./d0/d2b/JsonHandler_8cpp_source.tex [124] [125])
 (./d4/d9d/KeyValidator_8cpp.tex <./dd/d2f/KeyValidator_8cpp__incl.pdf>
-<dd/d2f/KeyValidator_8cpp__incl.pdf, id=5944, 692.5875pt x 210.7875pt>
+<dd/d2f/KeyValidator_8cpp__incl.pdf, id=5943, 692.5875pt x 210.7875pt>
 File: dd/d2f/KeyValidator_8cpp__incl.pdf Graphic file (type pdf)
 <use dd/d2f/KeyValidator_8cpp__incl.pdf>
 Package pdftex.def Info: dd/d2f/KeyValidator_8cpp__incl.pdf  used on input line
@@ -2675,7 +2675,7 @@ Underfull \hbox (badness 10000) detected at line 44
 
 ) (./d4/d9d/KeyValidator_8cpp_source.tex [127] [128]) (./df/d0c/Utils_8cpp.tex 
 <./de/d88/Utils_8cpp__incl.pdf>
-<de/d88/Utils_8cpp__incl.pdf, id=6159, 591.20876pt x 265.99374pt>
+<de/d88/Utils_8cpp__incl.pdf, id=6158, 591.20876pt x 265.99374pt>
 File: de/d88/Utils_8cpp__incl.pdf Graphic file (type pdf)
 <use de/d88/Utils_8cpp__incl.pdf>
 Package pdftex.def Info: de/d88/Utils_8cpp__incl.pdf  used on input line 20.
@@ -2720,8 +2720,8 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: 1DC25528E5B3932A22B2236391CE98B0;62023.
  ) 
 Here is how much of TeX's memory you used:
- 22073 strings out of 476025
- 441115 string characters out of 5796497
+ 22072 strings out of 476025
+ 441084 string characters out of 5796497
  1875388 words of memory out of 5000000
  39646 multiletter control sequences out of 15000+600000
  572891 words of font info for 113 fonts, out of 8000000 for 9000
@@ -2738,10 +2738,10 @@ ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (146 pages, 1231994 bytes).
+Output written on refman.pdf (146 pages, 1231672 bytes).
 PDF statistics:
- 7223 PDF objects out of 7423 (max. 8388607)
- 6588 compressed objects within 66 object streams
- 2221 named destinations out of 2487 (max. 500000)
+ 7221 PDF objects out of 7423 (max. 8388607)
+ 6586 compressed objects within 66 object streams
+ 2220 named destinations out of 2487 (max. 500000)
  2896 words of extra memory for PDF output out of 10000 (max. 10000000)
 
