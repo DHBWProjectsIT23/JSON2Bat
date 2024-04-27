@@ -134,15 +134,15 @@
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00192}00192\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ fileData\ =\ jsonHandler.\mbox{\hyperlink{classparsing_1_1JsonHandler_a1556262084d8fc4f75c25ec8344180b7}{getFileData}}();}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00193}00193\ \ \ \ \ \mbox{\hyperlink{classBatchCreator}{BatchCreator}}\ batchCreator(fileData);}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00194}00194\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<std::stringstream>\ dataStream\ =}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ batchCreator.\mbox{\hyperlink{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}{getDataStream}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ batchCreator.\mbox{\hyperlink{classBatchCreator_abf3164bb6eedfb7062c45ddf445e5965}{getDataStream}}();}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00196}00196\ \ \ \ \ \textcolor{comment}{//\ Full\ filename\ is\ output\ directory\ +\ output\ file}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00197}00197\ \ \ \ \ \textcolor{comment}{//\ \{ReqFunc18\}}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00198}00198\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ outputFileName\ =}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ outputDirectory\ +\ fileData-\/>getOutputFile();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ outputDirectory\ +\ fileData-\/>getOutputFile();}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00200}00200\ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00201}00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (std::filesystem::is\_regular\_file(outputFileName))\ \{}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classutilities_1_1Utils_a982a6227fd42d6437eaea4b6887df4ff}{utilities::Utils::askToContinue}}(}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}The\ file\ already\ exists,\ do\ you\ want\ to\ overwrite\ it?\ (y/n)\ "{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}The\ file\ already\ exists,\ do\ you\ want\ to\ overwrite\ it?\ (y/n)\ "{}}))\ \{}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ OUTPUT\ <<\ \textcolor{stringliteral}{"{}Skipping\ file...\(\backslash\)n"{}};}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \}}

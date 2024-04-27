@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.3.0</span>
+   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.3.1</span>
    </div>
    <div id="projectbrief">A simple tool to convert json to batch.</div>
   </td>
@@ -240,15 +240,15 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keyword">const</span> <span class="keyword">auto</span> fileData = jsonHandler.<a class="code hl_function" href="../../d5/da0/classparsing_1_1JsonHandler.html#a1556262084d8fc4f75c25ec8344180b7">getFileData</a>();</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <a class="code hl_class" href="../../da/d1c/classBatchCreator.html">BatchCreator</a> batchCreator(fileData);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">const</span> std::shared_ptr&lt;std::stringstream&gt; dataStream =</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            batchCreator.<a class="code hl_function" href="../../da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965">getDataStream</a>();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        batchCreator.<a class="code hl_function" href="../../da/d1c/classBatchCreator.html#abf3164bb6eedfb7062c45ddf445e5965">getDataStream</a>();</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="comment">// Full filename is output directory + output file</span></div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// {ReqFunc18}</span></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keyword">const</span> std::string outputFileName =</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            outputDirectory + fileData-&gt;getOutputFile();</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        outputDirectory + fileData-&gt;getOutputFile();</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">if</span> (std::filesystem::is_regular_file(outputFileName)) {</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d6/d9e/classutilities_1_1Utils.html#a982a6227fd42d6437eaea4b6887df4ff">utilities::Utils::askToContinue</a>(</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="stringliteral">&quot;The file already exists, do you want to overwrite it? (y/n) &quot;</span>)) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                    <span class="stringliteral">&quot;The file already exists, do you want to overwrite it? (y/n) &quot;</span>)) {</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            OUTPUT &lt;&lt; <span class="stringliteral">&quot;Skipping file...\n&quot;</span>;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
@@ -299,7 +299,7 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../df/d0a/main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Sat Apr 27 2024 12:57:56 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Apr 27 2024 13:06:24 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

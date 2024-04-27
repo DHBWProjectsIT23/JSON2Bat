@@ -2,7 +2,7 @@
 \hypertarget{index}{}\label{index}\index{JSON2Batch@{JSON2Batch}}
 \label{index_md_README}%
 \Hypertarget{index_md_README}%
- 0.\+3.\+0
+ 0.\+3.\+1
 
 JSON2\+Batch was developed for a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.
 
@@ -70,7 +70,7 @@ If the {\itshape doxygen} executable is installed local documentation can be gen
 \DoxyCodeLine{git\ clone\ -\/b\ release\ https://github.com/DHBWProjectsIT23/JSON2Bat/}
 \DoxyCodeLine{cd\ JSON2Bat}
 \DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
-\DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/target\ doxygen\_build}
+\DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/target\ doxygen\_generate}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md9}
@@ -103,5 +103,5 @@ While easylogging++ is used for the logging back--end within the code there are 
 \end{DoxyItemize}
 
 The macros can be used with streaming in the same way as std\+::cout would be used. Furthermore, some rudimentary performance tests showed, that the use of the wrapper, does not affect performance in comparison to using both std\+::cout and easylogging itself.\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{jsoncpp}{jsoncpp}}\label{index_autotoc_md14}
-For parsing the JSON files, the \href{https://github.com/open-source-parsers/jsoncpp}{\texttt{ jsoncpp}} library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/\+Ubuntu and Arch). For Windows system a prebuild version is included -\/ See Windows for more information.\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md15}
+For parsing the JSON files, the \href{https://github.com/open-source-parsers/jsoncpp}{\texttt{ jsoncpp}} library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/\+Ubuntu and Arch). For Windows system a prebuild version is included.\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md15}
 The project is published under the Apache License V2.\+0. Check the \mbox{[}license file\mbox{]}(LICENSE) for more information! 

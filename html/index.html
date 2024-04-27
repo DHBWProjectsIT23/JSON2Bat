@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.3.0</span>
+   <div id="projectname">JSON2Batch<span id="projectnumber">&#160;0.3.1</span>
    </div>
    <div id="projectbrief">A simple tool to convert json to batch.</div>
   </td>
@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">JSON2Batch </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> 0.3.0</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> 0.3.1</p>
 <p>JSON2Batch was developed for a project during our first and second semester of university. It generates batch files from JSON files, which can spawn terminals or applications, that run under certain parameters specified within the JSON file.</p>
 <p>The project was carried out by <b>Elena Schwarzbach, Max Rodler, Simon Blum, Sonia Sinaci</b>.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
@@ -156,7 +156,7 @@ Generating Documentation</h2>
 <div class="fragment"><div class="line">git clone -b release https://github.com/DHBWProjectsIT23/JSON2Bat/</div>
 <div class="line">cd JSON2Bat</div>
 <div class="line">cmake -S . -B build</div>
-<div class="line">cmake --build build --target doxygen_build</div>
+<div class="line">cmake --build build --target doxygen_generate</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 Documentation</h1>
 <p>The documentation for this project can be found <a href="https://dhbwprojectsit23.github.io/JSON2Bat">here</a>. A PDF version can be found <a href="assets/JSON2Batch.pdf">here</a> and a short man page can be found <a href="assets/man/json2batch.troff">here</a>.</p>
@@ -192,7 +192,7 @@ LoggingWrapper</h2>
 <p>The macros can be used with streaming in the same way as std::cout would be used. Furthermore, some rudimentary performance tests showed, that the use of the wrapper, does not affect performance in comparison to using both std::cout and easylogging itself.</p>
 <h2><a class="anchor" id="autotoc_md14"></a>
 jsoncpp</h2>
-<p>For parsing the JSON files, the <a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp</a> library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/Ubuntu and Arch). For Windows system a prebuild version is included - See Windows for more information.</p>
+<p>For parsing the JSON files, the <a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp</a> library is used. On UNIX system this library can simply be installed using the systems package manager (tested with WSL/Ubuntu and Arch). For Windows system a prebuild version is included.</p>
 <h1><a class="anchor" id="autotoc_md15"></a>
 License</h1>
 <p>The project is published under the Apache License V2.0. Check the [license file](LICENSE) for more information! </p>
@@ -202,7 +202,7 @@ License</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 27 2024 12:57:56 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Apr 27 2024 13:06:25 for JSON2Batch by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
