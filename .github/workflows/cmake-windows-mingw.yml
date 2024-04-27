@@ -36,19 +36,10 @@ jobs:
       # Build your program with the given configuration
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-    - name: Debug ls
-      run: ls
-
-    - name: Debug ls2
-      run: ls ${{ github.workspace }}
-
-    - name: Debug ls3
-      run: ls ${{ github.workspace }}/build
-
     - name: Run app
       run: |
-        ./${{ github.workspace }}/build/json2batch.exe -h
+        ./build/json2batch.exe -h
 
     - name: Show log
       run: |
-        cat ${{ github.workspace }}/logs/*
+        cat logs/*

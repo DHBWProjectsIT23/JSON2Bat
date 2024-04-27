@@ -84,8 +84,8 @@ jobs:
 
       - name: Run app
         run: |
-          ./${{ github.workspace }}/build/json2batch -h
+          ./build/json2batch -h
 
       - name: Show log
         run: |
-          cat ${{ github.workspace }}/logs/*
+          cat logs/*
